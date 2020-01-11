@@ -14,6 +14,7 @@ import android.media.RingtoneManager;
 import androidx.core.app.NotificationCompat;
 import android.app.AlertDialog;
 import android.view.View;
+import android.webkit.WebView;
 import com.neko.R;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -23,13 +24,22 @@ import java.net.URL;
 
 class UtilsDisplay {
 
-    static AlertDialog showUpdateAvailableDialog(final Context context, String title, String content, String btnNegative, String btnPositive, String btnNeutral, final DialogInterface.OnClickListener updateClickListener, final DialogInterface.OnClickListener dismissClickListener, final DialogInterface.OnClickListener disableClickListener) {
-        return new AlertDialog.Builder(context)
+    static AlertDialog showUpdateAvailableDialog(final Context context, String title, String content, String btnNegative, String btnPositive, String btnNeutral, final DialogInterface.OnClickListener updateClickListener, final DialogInterface.OnClickListener dismissClickListener, final DialogInterface.OnClickListener disableClickListener, Boolean useWebview) {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(context)
                 .setTitle(title)
-                .setMessage(content)
                 .setPositiveButton(btnPositive, updateClickListener)
                 .setNegativeButton(btnNegative, dismissClickListener)
-                .setNeutralButton(btnNeutral, disableClickListener).create();
+                .setNeutralButton(btnNeutral, disableClickListener);
+
+        if(useWebview) {
+            WebView webView = new WebView(context);
+            webView.loadUrl(content);
+            alertDialog.setView(webView);
+        }else{
+            alertDialog.setMessage(content);
+        }
+
+        return alertDialog.create();
     }
 
     static AlertDialog showUpdateNotAvailableDialog(final Context context, String title, String content) {
