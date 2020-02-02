@@ -39,7 +39,6 @@ public class AppUpdater implements IAppUpdater {
     private AlertDialog alertDialog;
     private Snackbar snackbar;
     private Boolean isDialogCancelable;
-    private String webviewChangelogUrl;
 
     public AppUpdater(Context context) {
         this.context = context;
@@ -331,7 +330,7 @@ public class AppUpdater implements IAppUpdater {
     @Override
     public AppUpdater setWebviewChangelog(Boolean useWebview, String changelogURL) {
         Update.getInstance().setwebview(useWebview);
-        this.webviewChangelogUrl = changelogURL;
+        Update.getInstance().setChangelogUrl(changelogURL);
         return this;
     }
 
@@ -429,9 +428,7 @@ public class AppUpdater implements IAppUpdater {
         if (descriptionUpdate == null || TextUtils.isEmpty(descriptionUpdate)) {
             switch (display) {
                 case DIALOG:
-                    if(update.useWebview() && webviewChangelogUrl != null && !TextUtils.isEmpty(webviewChangelogUrl)) {
-                        return webviewChangelogUrl;
-                    }else if(update.getChangelogUrl() != null && !TextUtils.isEmpty(update.getChangelogUrl()) && update.useWebview()) {
+                    if(update.getChangelogUrl() != null && !TextUtils.isEmpty(update.getChangelogUrl()) && update.useWebview()) {
                         return update.getChangelogUrl();
                     }else if (update.getReleaseNotes() != null && !TextUtils.isEmpty(update.getReleaseNotes())) {
                         if (TextUtils.isEmpty(descriptionUpdate)) //w
