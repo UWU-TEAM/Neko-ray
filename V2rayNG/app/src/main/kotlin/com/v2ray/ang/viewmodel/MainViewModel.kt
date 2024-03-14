@@ -66,7 +66,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         } else {
             getApplication<AngApplication>().registerReceiver(
                 mMsgReceiver,
-                IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY)
+                IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY),
+                Context.RECEIVER_NOT_EXPORTED
             )
         }
         MessageUtil.sendMsg2Service(getApplication(), AppConfig.MSG_REGISTER_CLIENT, "")

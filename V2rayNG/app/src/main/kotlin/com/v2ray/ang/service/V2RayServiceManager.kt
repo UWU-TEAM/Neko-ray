@@ -136,7 +136,7 @@ object V2RayServiceManager {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
                     service.registerReceiver(mMsgReceive, mFilter, Context.RECEIVER_EXPORTED)
                 } else {
-                    service.registerReceiver(mMsgReceive, mFilter)
+                    service.registerReceiver(mMsgReceive, mFilter, Context.RECEIVER_NOT_EXPORTED)
                 }
             } catch (e: Exception) {
                 Log.d(ANG_PACKAGE, e.toString())
