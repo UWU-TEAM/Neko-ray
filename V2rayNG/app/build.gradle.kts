@@ -73,6 +73,10 @@ android {
             }
     }
 
+    lintOptions {
+        disable("MissingTranslation")
+    }
+
     buildFeatures {
         viewBinding = true
         buildConfig = true
