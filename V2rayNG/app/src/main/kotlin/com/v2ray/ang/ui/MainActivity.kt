@@ -43,6 +43,8 @@ import kotlinx.coroutines.*
 import me.drakeet.support.toast.ToastCompat
 import java.io.File
 import java.io.FileOutputStream
+import com.neko.themeengine.ThemeChooserDialogBuilder
+import com.neko.themeengine.ThemeEngine
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -225,6 +227,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
+        R.id.theme_settings -> {
+            SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
+            true
+        }
         R.id.import_qrcode -> {
             importQRcode(true)
             true

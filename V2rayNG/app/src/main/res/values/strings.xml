@@ -277,4 +277,7 @@
         <item>Proxy only</item>
     </string-array>
 
+    <string name="title_theme_settings">Theme Settings</string>
+    <string name="title_choose_theme">Choose Color Theme</string>
+
 </resources>

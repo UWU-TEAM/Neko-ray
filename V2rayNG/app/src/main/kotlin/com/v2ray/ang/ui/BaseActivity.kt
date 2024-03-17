@@ -10,9 +10,16 @@ import androidx.core.view.WindowCompat
 import com.v2ray.ang.util.MyContextWrapper
 import com.v2ray.ang.util.Utils
 
+import com.google.android.material.color.DynamicColors
+import com.neko.themeengine.ThemeEngine
+
 abstract class BaseActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        ThemeEngine.applyToActivity(this)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+            DynamicColors.applyToActivityIfAvailable(this)
+        }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         if (!Utils.getDarkModeStatus(this)) {
             WindowCompat.getInsetsController(window, window.decorView).apply {

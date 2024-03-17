@@ -69,6 +69,10 @@
         android:title="@string/title_filter_config"
         app:showAsAction="ifRoom" />
     <item
+        android:id="@+id/theme_settings"
+        android:title="@string/title_theme_settings"
+        app:showAsAction="never" />
+    <item
         android:id="@+id/service_restart"
         android:title="@string/title_service_restart"
         app:showAsAction="never" />
