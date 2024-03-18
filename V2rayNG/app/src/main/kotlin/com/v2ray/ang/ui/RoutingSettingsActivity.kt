@@ -1,8 +1,11 @@
 package com.v2ray.ang.ui
 
+import android.content.Intent
 import android.os.Bundle
 import com.v2ray.ang.R
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.v2ray.ang.AppConfig
 import com.v2ray.ang.databinding.ActivityRoutingSettingsBinding
@@ -20,7 +23,10 @@ class RoutingSettingsActivity : BaseActivity() {
         val view = binding.root
         setContentView(view)
 
-        title = getString(R.string.title_pref_routing_custom)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val fragments = ArrayList<Fragment>()
         fragments.add(RoutingSettingsFragment().newInstance(AppConfig.PREF_V2RAY_ROUTING_AGENT))

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple
+    android:color="?android:colorControlHighlight"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background"
+        android:left="0.0dip"
+        android:right="0.0dip">
+        <shape
+            android:shape="rectangle">
+            <solid
+                android:color="@color/uwu_bg_card" />
+            <corners
+                android:topLeftRadius="24.0dip"
+                android:topRightRadius="24.0dip"
+                android:bottomLeftRadius="24.0dip"
+                android:bottomRightRadius="24.0dip" />
+        </shape>
+    </item>
+</ripple>

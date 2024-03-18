@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
 import com.v2ray.ang.util.MyContextWrapper
 import com.v2ray.ang.util.Utils
 
@@ -21,11 +20,6 @@ abstract class BaseActivity : AppCompatActivity() {
             DynamicColors.applyToActivityIfAvailable(this)
         }
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        if (!Utils.getDarkModeStatus(this)) {
-            WindowCompat.getInsetsController(window, window.decorView).apply {
-                isAppearanceLightStatusBars = true
-            }
-        }
     }
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {

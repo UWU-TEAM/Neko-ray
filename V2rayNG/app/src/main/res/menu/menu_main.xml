@@ -2,9 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:icon="@drawable/uwu_thememode"
+        android:id="@+id/theme_settings"
+        android:title="@string/title_theme_settings"
+        app:showAsAction="always" />
+    <item
         android:icon="@drawable/ic_add_24dp"
         android:title="@string/menu_item_add_config"
-        app:showAsAction="ifRoom">
+        app:showAsAction="always">
         <menu>
             <item
                 android:id="@+id/import_qrcode"
@@ -67,10 +72,6 @@
         android:id="@+id/filter_config"
         android:icon="@drawable/ic_outline_filter_alt_24"
         android:title="@string/title_filter_config"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@+id/theme_settings"
-        android:title="@string/title_theme_settings"
         app:showAsAction="never" />
     <item
         android:id="@+id/service_restart"

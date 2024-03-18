@@ -7,13 +7,23 @@
     <color name="color_switch_fab_grey">#CDCDCD</color>
     <color name="color_fab_grey">#9C9C9C</color>
     <color name="color_secondary">#727272</color>
-    <color name="colorSelected">#000000</color>
-    <color name="colorUnselected">#FFFFFF</color>
+    <color name="colorSelected">#ffffffff</color>
+    <color name="colorUnselected">@android:color/transparent</color>
 
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#000000</color>
-    <color name="colorBg">#FFFFFF</color>
+    <color name="colorBg">#ffffffff</color>
     <color name="colorText">#000000</color>
     <color name="colorMainTestBg">#F0F1F6</color>
+
+    <color name="colorText_ActionBar">#ffffffff</color>
+    <color name="fab_orange_bright">@android:color/transparent</color>
+    <color name="fab_orange_dark">@android:color/transparent</color>
+    <color name="fab_orange_light">@android:color/transparent</color>
+    <color name="uwu_accent">#ff7a80d0</color>
+    <color name="uwu_bg">#ffe5e8f5</color>
+    <color name="uwu_bg_card">#ffffffff</color>
+    <color name="uwu_primary">#ff51599a</color>
+    <color name="uwu_transparent">@android:color/transparent</color>
 </resources>

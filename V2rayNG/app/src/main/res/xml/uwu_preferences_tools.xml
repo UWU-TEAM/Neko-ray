@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:layout="@layout/uwu_banner_tools"
+        android:selectable="false" />
+    <Preference
+        android:layout="@layout/uwu_menu_tools"
+        android:selectable="false" />
+</PreferenceScreen>

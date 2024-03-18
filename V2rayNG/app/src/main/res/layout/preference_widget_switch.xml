@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kyleduo.switchbutton.SwitchButton
+    android:id="@android:id/switch_widget"
+    android:focusable="false"
+    android:clickable="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:kswAnimationDuration="300"
+    app:kswBackDrawable="@drawable/uwu_back_drawable"
+    app:kswThumbDrawable="@drawable/uwu_thumb"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:res-auto="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />

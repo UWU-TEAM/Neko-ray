@@ -1,126 +1,337 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.drawerlayout.widget.DrawerLayout
     android:id="@+id/drawer_layout"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
         <com.google.android.material.appbar.AppBarLayout
+            android:theme="@style/AppTheme.AppBarOverlay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="?attr/actionBarSize" />
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         </com.google.android.material.appbar.AppBarLayout>
 
         <RelativeLayout
+            android:background="?attr/colorPrimary"
+            android:paddingBottom="16.0dip"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fitsSystemWindows="true">
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="0.0dip"
+            android:paddingStart="16.0dip"
+            android:paddingEnd="16.0dip">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/uwu_banner"
+                android:layout_width="170.0dip"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/uwu_title"
+                android:layout_alignParentTop="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8.0dip"
+                android:layout_alignParentStart="true"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="24.0dip"
+                app:cardElevation="0.0dip"
+                app:rippleColor="#00000000"
+                app:strokeColor="@color/uwu_bg_card"
+                app:strokeWidth="3.0dip">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/uwu_banner_image"
+                    android:scaleType="centerCrop" />
+
+                <View
+                    android:background="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2" />
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextClock
+                        android:textSize="56.0sp"
+                        android:typeface="monospace"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="-12.0dip"
+                        android:fontFamily="sans-serif"
+                        android:format12Hour="hh"
+                        android:format24Hour="kk"
+                        android:fontFeatureSettings="tnum, cv03, cv04" />
+
+                    <TextClock
+                        android:textSize="56.0sp"
+                        android:typeface="monospace"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-12.0dip"
+                        android:fontFamily="sans-serif"
+                        android:format12Hour="mm"
+                        android:format24Hour="mm"
+                        android:fontFeatureSettings="tnum, cv03, cv04" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/uwu_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/uwu_banner">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8.0dip"
+                    app:cardBackgroundColor="@color/uwu_bg_card"
+                    app:cardCornerRadius="24.0dip"
+                    app:cardElevation="0.0dip">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:padding="16.0dip"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:onClick="UwuTools">
+
+                        <TextView
+                            android:textSize="17.0sp"
+                            android:textColor="?attr/colorMainText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tools" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingTop="10.0dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.neko.marquee.text.AutoMarqueeTextView
+                                android:textSize="14.0sp"
+                                android:textColor="?attr/colorPrimary"
+                                android:ellipsize="marquee"
+                                android:gravity="start|center"
+                                android:layout_gravity="start|center"
+                                android:fadingEdge="horizontal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="Extra fitures"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:layout_weight="1.0"
+                                android:marqueeRepeatLimit="marquee_forever" />
+
+                            <LinearLayout
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:layout_width="28.0dip"
+                                android:layout_height="28.0dip">
+
+                                <ImageView
+                                    android:layout_width="25.0dip"
+                                    android:layout_height="25.0dip"
+                                    android:layout_marginTop="1.0dip"
+                                    android:src="@drawable/uwu_arrow"
+                                    app:tint="?attr/colorMainText"
+                                    android:layout_marginStart="2.0dip" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16.0dip"
+                    android:layout_marginStart="8.0dip"
+                    app:cardBackgroundColor="@color/uwu_bg_card"
+                    app:cardCornerRadius="24.0dip"
+                    app:cardElevation="0.0dip">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:id="@+id/layout_test"
+                        android:padding="16.0dip"
+                        android:clickable="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:foreground="?attr/selectableItemBackground">
+
+                        <TextView
+                            android:textSize="17.0sp"
+                            android:textColor="?attr/colorMainText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Status" />
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingTop="10.0dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.neko.marquee.text.AutoMarqueeTextView
+                                android:textSize="14.0sp"
+                                android:textColor="?attr/colorPrimary"
+                                android:ellipsize="marquee"
+                                android:gravity="start|center"
+                                android:layout_gravity="start|center"
+                                android:id="@+id/tv_test_state"
+                                android:fadingEdge="horizontal"
+                                android:layout_width="0.0dip"
+                                android:layout_height="wrap_content"
+                                android:text="@string/connection_test_pending"
+                                android:scrollHorizontally="true"
+                                android:singleLine="true"
+                                android:layout_weight="1.0"
+                                android:marqueeRepeatLimit="marquee_forever" />
+
+                            <LinearLayout
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:layout_width="28.0dip"
+                                android:layout_height="28.0dip">
+
+                                <ImageView
+                                    android:layout_width="25.0dip"
+                                    android:layout_height="25.0dip"
+                                    android:layout_marginTop="1.0dip"
+                                    android:src="@drawable/uwu_arrow"
+                                    app:tint="?attr/colorMainText"
+                                    android:layout_marginStart="2.0dip" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <androidx.coordinatorlayout.widget.CoordinatorLayout
                 android:id="@+id/main_content"
+                android:background="@drawable/uwu_background_lengkung"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="match_parent">
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:nextFocusRight="@+id/fab" />
-
-                    <LinearLayout
-                        android:id="@+id/layout_test"
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/connection_test_height"
-                        android:background="@color/colorMainTestBg"
-                        android:gravity="center|start"
                         android:nextFocusRight="@+id/fab"
-                        android:clickable="true"
-                        android:focusable="true"
-                        android:nextFocusLeft="@+id/recycler_view">
+                        android:layout_width="match_parent"
+                        android:layout_height="0.0dip"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_weight="1.0" />
 
-                        <TextView
-                            android:id="@+id/tv_test_state"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:maxLines="2"
-                            android:minLines="1"
-                            android:paddingStart="16dp"
-                            android:text="@string/connection_test_pending"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                            android:textColor="@color/colorText" />
-
-                    </LinearLayout>
                 </LinearLayout>
 
-
                 <com.github.jorgecastilloprz.FABProgressCircle
+                    android:layout_gravity="end|bottom|center"
                     android:id="@+id/fabProgressCircle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|end"
-                    android:layout_marginBottom="24dp">
+                    android:layout_marginBottom="24.0dip">
 
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:layout_gravity="end|bottom|center"
                         android:id="@+id/fab"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_gravity="bottom|end"
-                        android:layout_marginLeft="16dp"
-                        android:layout_marginTop="16dp"
-                        android:layout_marginRight="16dp"
-                        android:layout_marginBottom="16dp"
-                        android:clickable="true"
                         android:focusable="true"
                         android:nextFocusLeft="@+id/layout_test"
-                        android:src="@drawable/ic_stat_name"
-                        app:layout_anchorGravity="bottom|right|end" />
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginTop="16.0dip"
+                        android:layout_marginRight="16.0dip"
+                        android:layout_marginBottom="16.0dip"
+                        android:src="@drawable/uwu_ic_service_idle"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        app:tint="@color/colorText_ActionBar"
+                        app:layout_anchorGravity="end|bottom|center"
+                        app:shapeAppearanceOverlay="@style/fab_square"
+                        style="@style/Widget.Design.FloatingActionButton" />
 
                 </com.github.jorgecastilloprz.FABProgressCircle>
+
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
         </RelativeLayout>
+
     </LinearLayout>
 
     <com.google.android.material.navigation.NavigationView
+        android:layout_gravity="start"
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
-        app:headerLayout="@layout/nav_header"
-        app:itemIconTint="@color/colorAccent"
-        app:menu="@menu/menu_drawer" >
+        app:headerLayout="@null"
+        app:itemIconTint="@null"
+        app:menu="@null">
+
+        <include
+            layout="@layout/uwu_drawer_main" />
 
         <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:padding="2dp">
+            android:layout_gravity="bottom"
+            android:padding="2.0dip"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
-                    android:id="@+id/version"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center" />
+                android:gravity="center"
+                android:id="@+id/version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
         </LinearLayout>
+
     </com.google.android.material.navigation.NavigationView>
 
 </androidx.drawerlayout.widget.DrawerLayout>
-

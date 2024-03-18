@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">v2rayNG</string>
+
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -50,8 +50,6 @@
     <string name="server_lab_request_host">request host(host/ws host/httpupgrade host/h2 host)/QUIC security/gRPC Authority</string>
     <string name="server_lab_path">path(ws path/httpupgrade path/h2 path)/QUIC key/kcp seed/gRPC serviceName</string>
     <string name="server_lab_stream_security">TLS</string>
-    <string name="server_lab_stream_fingerprint" translatable="false">Fingerprint</string>
-    <string name="server_lab_stream_alpn" translatable="false">Alpn</string>
     <string name="server_lab_allow_insecure">allowInsecure</string>
     <string name="server_lab_sni">SNI</string>
     <string name="server_lab_address3">address</string>
@@ -62,10 +60,6 @@
     <string name="server_lab_security4">User(Optional)</string>
     <string name="server_lab_encryption">encryption</string>
     <string name="server_lab_flow">flow</string>
-    <string name="server_lab_public_key" translatable="false">PublicKey</string>
-    <string name="server_lab_short_id" translatable="false">ShortId</string>
-    <string name="server_lab_spider_x" translatable="false">SpiderX</string>
-    <string name="server_lab_secret_key" translatable="false">SecretKey</string>
     <string name="server_lab_reserved">Reserved(Optional)</string>
     <string name="server_lab_local_address">Local address (optional IPv4/IPv6, separated by commas)</string>
     <string name="server_lab_local_mtu">Mtu(optional, default 1420)</string>
@@ -88,7 +82,6 @@
     <string name="menu_item_add_asset">Add asset</string>
     <string name="menu_item_add_file">Add files</string>
     <string name="menu_item_add_url">Add URL</string>
-    <string name="title_url" translatable="false">URL</string>
     <string name="menu_item_download_file">Download files</string>
     <string name="title_user_asset_add_url">Add asset URL</string>
     <string name="msg_file_not_found">File not found</string>
@@ -279,5 +272,20 @@
 
     <string name="title_theme_settings">Theme Settings</string>
     <string name="title_choose_theme">Choose Color Theme</string>
+    <string name="uwu_header_title">Hi, <b>onii-chan</b></string>
+    <string name="uwu_edit">Edit</string>
+    <string name="uwu_credits">Credits</string>
+    <string name="uwu_about">About Apps</string>
+    <string name="uwu_tools">Tools</string>
+    <string name="uwu_information_cat">Information</string>
+    <string name="uwu_neko_version">App Version</string>
+    <string name="uwu_build_type">Build Type</string>
+    <string name="uwu_build_date">Build Date</string>
+    <string name="uwu_recommended_os_cat">Recommended OS</string>
+    <string name="uwu_version_sdk_minimum">Min SDK Version</string>
+    <string name="uwu_version_sdk_target">Target SDK Version</string>
+    <string name="uwu_package_name">Package name</string>
+    <string name="uwu_title_dashboard_tools">Hello there...</string>
+    <string name="uwu_summary_dashboard_tools">Welcome to the Neko v2raynG tools menu.</string>
 
 </resources>

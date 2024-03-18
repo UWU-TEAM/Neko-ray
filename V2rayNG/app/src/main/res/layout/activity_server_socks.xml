@@ -1,130 +1,325 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:orientation="vertical"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ServerActivity">
-
-    <LinearLayout
+    android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="@dimen/layout_margin_top_height">
-
-        <LinearLayout
+        android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:theme="@style/Uwu.Material3.CollapsingToolbar"
+            android:id="@+id/collapsing_toolbar"
+            android:background="?attr/colorPrimary"
+            android:clipToPadding="false"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/title_server"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/server_lab_remarks" />
-
-            <EditText
-                android:id="@+id/et_remarks"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
+            app:extraMultilineHeightEnabled="true"
+            app:forceApplySystemWindowInsetTop="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:maxLines="3"
+            app:scrimAnimationDuration="50"
+            app:statusBarScrim="@null"
+            app:title="@string/uwu_edit"
+            app:titleCollapseMode="fade"
+            app:toolbarId="@+id/toolbar">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:inputType="text" />
-
-        </LinearLayout>
-
-        <LinearLayout
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"/>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <androidx.appcompat.widget.ActionBarContextView
+            android:theme="?attr/actionModeTheme"
+            android:id="@+id/action_context_bar"
+            android:visibility="gone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/server_lab_address3" />
-
-            <EditText
-                android:id="@+id/et_address"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:inputType="text" />
-
-        </LinearLayout>
-
-        <LinearLayout
+            android:layout_height="wrap_content"/>
+        <FrameLayout
+            android:layout_gravity="bottom"
+            android:background="@drawable/uwu_background_lengkung"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/server_lab_port3" />
-
-            <EditText
-                android:id="@+id/et_port"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:inputType="number" />
-        </LinearLayout>
-
-        <LinearLayout
+            android:layout_height="25.0dip"
+            app:layout_anchorGravity="bottom"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/uwu_background_material"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ScrollView
+            android:background="@drawable/uwu_background_material"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/server_lab_security4" />
-
-
-            <EditText
-                android:id="@+id/et_security"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:inputType="text" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/server_lab_id4" />
-
-            <EditText
-                android:id="@+id/et_id"
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/edit_height"
-                android:inputType="text" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/layout_margin_top_height"
-            android:layout_marginTop="@dimen/layout_margin_top_height"
-            android:orientation="vertical" />
-
-    </LinearLayout>
-</ScrollView>
+                android:layout_height="wrap_content">
+                <com.google.android.material.card.MaterialCardView
+                    android:clipToPadding="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="0.0dip"
+                    android:layout_marginBottom="16.0dip"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="16.0dip"
+                    app:strokeWidth="0.0dip"
+                    app:cardBackgroundColor="@color/uwu_bg_card"
+                    app:cardCornerRadius="24.0dip"
+                    app:cardElevation="0.0dip">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.neko.elasticview.ElasticView
+                            android:layout_width="match_parent"
+                            android:layout_height="150.0dip"
+                            android:layout_marginTop="12.0dip"
+                            android:layout_marginStart="12.0dip"
+                            android:layout_marginEnd="12.0dip"
+                            app:cardBackgroundColor="#00000000"
+                            app:cardCornerRadius="19.0dip"
+                            app:cardElevation="0.0dip"
+                            app:rippleColor="#00000000">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/uwu_banner_image_3"
+                                android:scaleType="centerCrop"
+                                android:elevation="0.0dip"/>
+                            <View
+                                android:background="@android:color/black"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:alpha="0.2"/>
+                            <LinearLayout
+                                android:gravity="start|center"
+                                android:layout_gravity="start|center"
+                                android:orientation="vertical"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0.0dip"
+                                android:layout_marginBottom="2.0dip"
+                                android:layout_marginStart="20.0dip">
+                                <TextView
+                                    android:textSize="30.0sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@android:color/white"
+                                    android:gravity="start|center"
+                                    android:layout_gravity="start|center"
+                                    android:fadingEdge="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:text="@string/title_server"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"/>
+                                <TextView
+                                    android:textSize="21.0sp"
+                                    android:textColor="@android:color/white"
+                                    android:ellipsize="end"
+                                    android:gravity="start|center"
+                                    android:layout_gravity="start|center"
+                                    android:fadingEdge="horizontal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="2.0dip"
+                                    android:text="socks"
+                                    android:maxLines="1"
+                                    android:scrollHorizontally="true"/>
+                            </LinearLayout>
+                        </com.neko.elasticview.ElasticView>
+                        <LinearLayout
+                            android:gravity="center_vertical"
+                            android:clipToPadding="false"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16.0dip"
+                                android:layout_marginBottom="16.0dip"
+                                android:layout_marginStart="16.0dip"
+                                android:layout_marginEnd="8.0dip">
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="60.0dip"
+                                    android:layout_height="60.0dip"
+                                    android:src="@drawable/uwu_banner_profile"
+                                    app:civ_border_color="?attr/colorPrimary"
+                                    app:civ_border_overlay="true"
+                                    app:civ_border_width="3.0dip"
+                                    app:civ_circle_background_color="@color/uwu_bg"/>
+                            </LinearLayout>
+                            <RelativeLayout
+                                android:paddingTop="16.0dip"
+                                android:paddingBottom="16.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:layout_marginStart="8.0dip"
+                                android:layout_marginEnd="5.0dip">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TextView
+                                        android:textSize="17.0sp"
+                                        android:textColor="?android:textColorPrimary"
+                                        android:ellipsize="marquee"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/uwu_header_title"
+                                        android:singleLine="false"/>
+                                    <TextView
+                                        android:textSize="14.0sp"
+                                        android:textColor="?android:textColorSecondary"
+                                        android:ellipsize="marquee"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Let's focus on today!"
+                                        android:singleLine="false"/>
+                                </LinearLayout>
+                            </RelativeLayout>
+                            <LinearLayout
+                                android:gravity="center"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16.0dip"
+                                android:layout_marginBottom="16.0dip"
+                                android:layout_marginStart="0.0dip"
+                                android:layout_marginEnd="16.0dip">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="100.0dip"
+                                    android:layout_height="60.0dip"
+                                    app:cardBackgroundColor="?attr/colorPrimary"
+                                    app:cardCornerRadius="19.0dip"
+                                    app:cardElevation="0.0dip">
+                                    <LinearLayout
+                                        android:layout_gravity="center"
+                                        android:orientation="horizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TextClock
+                                            android:textSize="21.0sp"
+                                            android:textStyle="bold"
+                                            android:textColor="?attr/colorText"
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:format12Hour="hh:mm"
+                                            android:format24Hour="kk:mm"/>
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:background="@drawable/uwu_card_view_rounded"
+                    android:paddingTop="0.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="16.0dip"
+                    android:paddingEnd="16.0dip"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="16.0dip">
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip"
+                        android:layout_marginBottom="8.0dip">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/server_lab_remarks"
+                            style="@style/Outline_TextInputLayout">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_remarks"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_marginBottom="8.0dip">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="200.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10.0dip"
+                            android:hint="@string/server_lab_address3"
+                            style="@style/Outline_TextInputLayout">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_address"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/server_lab_port3"
+                            style="@style/Outline_TextInputLayout">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_port"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_marginBottom="8.0dip">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/server_lab_security4"
+                            style="@style/Outline_TextInputLayout">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_security"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_marginBottom="16.0dip">
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/server_lab_id4"
+                            style="@style/Outline_TextInputLayout">
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/et_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="text"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -9,7 +9,10 @@
     <color name="colorPrimary">#222222</color>
     <color name="colorPrimaryDark">#000000</color>
     <color name="colorAccent">#FFFFFF</color>
-    <color name="colorBg">#000000</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorMainTestBg">#222222</color>
+
+    <color name="colorText_ActionBar">#aa000000</color>
+    <color name="uwu_bg">#ff151419</color>
+    <color name="uwu_bg_card">#ff212227</color>
 </resources>

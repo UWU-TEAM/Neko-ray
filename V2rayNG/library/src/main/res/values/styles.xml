@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base library theme. -->
+    <style name="LibChangelog">
+        <item name="changelogWindowStyle">@style/LibChangelog.Window</item>
+        <item name="changelogTitleStyle">@style/LibChangelog.DialogTitle</item>
+        <item name="changelogHeaderTitleStyle">@style/LibChangelog.HeaderTitle</item>
+        <item name="changelogHeaderDateStyle">@style/LibChangelog.HeaderDate</item>
+        <item name="changelogHeaderSummaryStyle">@style/LibChangelog.HeaderSummary</item>
+        <item name="changelogBulletStyle">@style/LibChangelog.CellBullet</item>
+        <item name="changelogTextStyle">@style/LibChangelog.CellText</item>
+    </style>
+
+    <style name="LibChangelog.DialogTitle">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+        <item name="android:textColor">?android:colorPrimary</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+    <style name="LibChangelog.Window" parent="LibChangelog">
+    </style>
+
+    <style name="LibChangelog.HeaderTitle" parent="LibChangelog">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
+    </style>
+
+    <style name="LibChangelog.HeaderDate" parent="LibChangelog">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Caption</item>
+    </style>
+
+    <style name="LibChangelog.HeaderSummary" parent="LibChangelog">
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+    </style>
+
+    <style name="LibChangelog.CellBullet" parent="LibChangelog">
+        <item name="android:layout_width">15dp</item>
+        <item name="android:layout_height">15dp</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:background">@drawable/ic_bullet</item>
+        <item name="android:backgroundTint">?android:colorAccent</item>
+    </style>
+
+    <style name="LibChangelog.CellText" parent="LibChangelog"></style>
+
+</resources>

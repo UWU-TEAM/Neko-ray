@@ -2,4 +2,15 @@
 <resources>
     <attr name="colorMainBg" format="color"/>
     <attr name="colorMainText" format="color"/>
+    <attr name="colorIcon" format="color" />
+    <attr name="colorText" format="color" />
+    <attr name="colorBg" format="color" />
+
+    <declare-styleable name="ExpandableView">
+        <attr name="expandable_visibilityMode">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="expandable_visibilityDuration" format="integer" />
+    </declare-styleable>
 </resources>

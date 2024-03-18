@@ -14,4 +14,5 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "V2rayNG"
+include(":library")
 include(":app")

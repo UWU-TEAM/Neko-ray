@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:layout="@layout/uwu_banner_about"
+        android:selectable="false"/>
+    <Preference
+        android:layout="@layout/uwu_menu_about"
+        android:selectable="false"/>
+    <Preference
+        android:layout="@layout/uwu_menu_expanded"
+        android:selectable="false"/>
+    <PreferenceCategory android:title="@string/uwu_information_cat">
+        <Preference
+            android:icon="@drawable/uwu_neko"
+            android:layout="@layout/uwu_top_no_arrow"
+            android:title="@string/uwu_neko_version"
+            android:summary="@string/neko_app_version"/>
+        <Preference
+            android:icon="@drawable/uwu_build_type"
+            android:layout="@layout/uwu_mid_no_arrow"
+            android:title="@string/uwu_build_type"
+            android:summary="@string/neko_build_type"/>
+        <Preference
+            android:icon="@drawable/uwu_package"
+            android:layout="@layout/uwu_mid_no_arrow"
+            android:title="@string/uwu_package_name"
+            android:summary="@string/neko_packagename" />
+        <Preference
+            android:icon="@drawable/uwu_build_date"
+            android:layout="@layout/uwu_bot_no_arrow"
+            android:title="@string/uwu_build_date"
+            android:summary="@string/neko_build_date"/>
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/uwu_recommended_os_cat">
+        <Preference
+            android:icon="@drawable/uwu_android"
+            android:layout="@layout/uwu_top_no_arrow"
+            android:title="@string/uwu_version_sdk_minimum"
+            android:summary="@string/neko_min_sdk_version"/>
+        <Preference
+            android:icon="@drawable/uwu_android"
+            android:layout="@layout/uwu_bot_no_arrow"
+            android:title="@string/uwu_version_sdk_target"
+            android:summary="@string/neko_target_sdk_version"/>
+    </PreferenceCategory>
+</PreferenceScreen>

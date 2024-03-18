@@ -1,11 +1,13 @@
 package com.v2ray.ang.ui
 
 import android.content.Intent
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import com.v2ray.ang.R
 import android.os.Bundle
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.v2ray.ang.databinding.ActivitySubSettingBinding
 import com.v2ray.ang.dto.SubscriptionItem
 import com.v2ray.ang.util.MmkvManager
@@ -22,7 +24,10 @@ class SubSettingActivity : BaseActivity() {
         val view = binding.root
         setContentView(view)
 
-        title = getString(R.string.title_sub_setting)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)

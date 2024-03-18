@@ -7,6 +7,7 @@ import android.net.VpnService
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import com.tbruyelle.rxpermissions.RxPermissions
 import com.v2ray.ang.R
 import android.os.Bundle
@@ -22,6 +23,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
@@ -65,13 +67,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        title = getString(R.string.title_server)
+        title = getString(R.string.app_name)
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
-            } else if (settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN" == "VPN") {
+            } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()
@@ -119,6 +121,17 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                         toast(R.string.toast_permission_denied)
                 }
         }
+
+        onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                    binding.drawerLayout.closeDrawer(GravityCompat.START)
+                } else {
+                    //super.onBackPressed()
+                    onBackPressedDispatcher.onBackPressed()
+                }
+            }
+        })
     }
 
     private fun setupViewModel() {
@@ -133,17 +146,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         mainViewModel.isRunning.observe(this) { isRunning ->
             adapter.isRunning = isRunning
             if (isRunning) {
-                if (!Utils.getDarkModeStatus(this)) {
-                    binding.fab.setImageResource(R.drawable.ic_stat_name)
-                }
-                binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_orange))
+                binding.fab.setImageResource(R.drawable.uwu_ic_service_busy)
+                // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_orange))
                 setTestState(getString(R.string.connection_connected))
                 binding.layoutTest.isFocusable = true
             } else {
-                if (!Utils.getDarkModeStatus(this)) {
-                    binding.fab.setImageResource(R.drawable.ic_stat_name)
-                }
-                binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_grey))
+                binding.fab.setImageResource(R.drawable.uwu_ic_service_idle)
+                // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_grey))
                 setTestState(getString(R.string.connection_not_connected))
                 binding.layoutTest.isFocusable = false
             }
@@ -662,13 +671,41 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
 
-    override fun onBackPressed() {
-        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            binding.drawerLayout.closeDrawer(GravityCompat.START)
-        } else {
-            super.onBackPressed()
-            //onBackPressedDispatcher.onBackPressed()
-        }
+//    override fun onBackPressed() {
+//        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
+//            binding.drawerLayout.closeDrawer(GravityCompat.START)
+//        } else {
+//            super.onBackPressed()
+//            //onBackPressedDispatcher.onBackPressed()
+//        }
+//    }
+
+    fun UwuTools(view: View) {
+        startActivity(Intent(this, ToolsActivity::class.java))
+    }
+
+    fun logcat(view: View) {
+        startActivity(Intent(this, LogcatActivity::class.java))
+    }
+
+    fun settings(view: View) {
+        startActivity(Intent(this, SettingsActivity::class.java))
+    }
+
+    fun subSetting(view: View) {
+        startActivity(Intent(this, SubSettingActivity::class.java))
+    }
+
+    fun userAssetSetting(view: View) {
+        startActivity(Intent(this, UserAssetActivity::class.java))
+    }
+
+    fun UwuAbout(view: View) {
+        startActivity(Intent(this, AboutActivity::class.java))
+    }
+
+    fun uwuExitApp(view: View) {
+        finishAffinity()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

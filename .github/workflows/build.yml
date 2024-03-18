@@ -5,10 +5,6 @@ on:
   workflow_dispatch:
     branches:
       - dev
-    inputs:
-      XRAY_CORE_VERSION:
-        description: 'Xray core version or commit hash'
-        required: false
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -38,7 +34,7 @@ jobs:
     - name: Setup Golang
       uses: actions/setup-go@v5
       with:
-        go-version: '1.21.4'
+        go-version: '1.22.1'
         cache: false
 
     - name: Install gomobile
@@ -91,18 +87,6 @@ jobs:
           fi
         done
 
-    - name: Build dependencies
-      run: |
-        mkdir ${{ github.workspace }}/build
-        cd ${{ github.workspace }}/build
-        git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
-        cd AndroidLibXrayLite
-        go get github.com/xtls/xray-core@${{ github.event.inputs.XRAY_CORE_VERSION }} || true
-        gomobile init
-        go mod tidy -v
-        gomobile bind -v -androidapi 27 -ldflags='-s -w' ./
-        cp *.aar ${{ github.workspace }}/V2rayNG/app/libs/
-
     - name: Build project
       run: |
         cd ${{ github.workspace }}/V2rayNG
@@ -117,56 +101,32 @@ jobs:
         sed -i 's/org.gradle.jvmargs=-Xmx2048m -XX:MaxPermSize=512m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8/org.gradle.jvmargs=-Xmx2048m -XX:+HeapDumpOnOutOfMemoryError -Dfile.encoding=UTF-8/' ${{ github.workspace }}/V2rayNG/gradle.properties
         ./gradlew assembleRelease
 
-    - name: Upload APK
+    - name: Sign APK
+      run: |
+        echo "=============================="
+        ls ${{ github.workspace }}/V2rayNG/
+        echo "=============================="
+        ls ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/
+        sudo apt-get -y install apksigner
+        cd V2rayNG
+        apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*all.apk
+        apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*arm64-v8a.apk
+        apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*armeabi-v7a.apk
+
+    - name: Upload APK all variant
       uses: actions/upload-artifact@v4
       with:
         name: all
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*all.apk
 
-    - name: Upload APK
+    - name: Upload APK variant arm64
       uses: actions/upload-artifact@v4
       with:
         name: arm64
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
 
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: armeabi
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi.apk
-
-    - name: Upload APK
+    - name: Upload APK variant armeabi-v7a
       uses: actions/upload-artifact@v4
       with:
         name: armeabi-v7a
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: mips
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*mips.apk
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: mips64
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*mips64.apk
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: riscv64
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*riscv64.apk
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: x86
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86.apk
-
-    - name: Upload APK
-      uses: actions/upload-artifact@v4
-      with:
-        name: x86_64
-        path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86_64.apk

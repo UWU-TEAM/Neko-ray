@@ -1,0 +1,16 @@
+<resources>
+    <declare-styleable name="BlurImageView">
+        <attr name="radius" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="Theme">
+        <attr name="changelogStyle" format="reference" />
+        <attr name="changelogWindowStyle" format="reference" />
+        <attr name="changelogTitleStyle" format="reference" />
+        <attr name="changelogHeaderTitleStyle" format="reference" />
+        <attr name="changelogHeaderDateStyle" format="reference" />
+        <attr name="changelogHeaderSummaryStyle" format="reference" />
+        <attr name="changelogBulletStyle" format="reference" />
+        <attr name="changelogTextStyle" format="reference" />
+    </declare-styleable>
+</resources>

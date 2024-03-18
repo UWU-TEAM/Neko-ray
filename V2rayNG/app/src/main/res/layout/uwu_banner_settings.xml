@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:clickable="true"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8.0dip"
+    android:layout_marginHorizontal="16.0dip"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="180.0dip"
+        android:paddingStart="4.0dip"
+        android:paddingEnd="4.0dip"
+        app:strokeWidth="0.0dip"
+        app:cardBackgroundColor="@color/uwu_bg_card"
+        app:cardCornerRadius="24.0dip"
+        app:cardElevation="0.0dip">
+        <com.neko.elasticview.ElasticView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12.0dip"
+            android:layout_marginBottom="12.0dip"
+            android:layerType="software"
+            android:layout_marginHorizontal="12.0dip"
+            app:cardBackgroundColor="@android:color/transparent"
+            app:cardCornerRadius="19.0dip"
+            app:cardElevation="0.0dip"
+            app:rippleColor="#00000000">
+            <com.neko.blur.BlurImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/uwu_banner_image_3"
+                android:scaleType="centerCrop"
+                android:elevation="0.0dip"
+                app:radius="2" />
+            <View
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2" />
+            <ImageView
+                android:gravity="center"
+                android:layout_gravity="bottom|center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="-40.0dip"
+                android:src="@drawable/uwu_fluid_bg"
+                android:scaleType="centerCrop" />
+            <TextView
+                android:textSize="40.0sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-20.0dip"
+                android:text=" v2rayng "
+                android:maxLines="2"
+                android:singleLine="false"
+                android:textAllCaps="true"
+                android:fontFamily="@font/uwu_font_typography"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.neko.elasticview.ElasticView>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

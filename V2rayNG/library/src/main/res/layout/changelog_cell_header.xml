@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="8dp"
+    android:paddingTop="15dp">
+
+    <TextView
+        android:id="@+id/text"
+        style="?attr/changelogHeaderTitleStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/date"
+        style="?attr/changelogHeaderDateStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="12/23/2015"
+        app:layout_constraintBaseline_toBaselineOf="@id/text"
+        app:layout_constraintStart_toEndOf="@id/text" />
+
+    <TextView
+        android:id="@+id/summary"
+        style="?attr/changelogHeaderSummaryStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="this is a summary"
+        app:layout_constraintTop_toBottomOf="@id/text" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

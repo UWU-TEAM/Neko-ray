@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelog>
+    <release version="v1.0.0" versioncode="2000100" summary="Neko v2rayNG" date="2024-03-28">
+        <change>Initial commit</change>
+        <change>More small layout changes</change>
+    </release>
+</changelog>

@@ -44,7 +44,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDayNight"
         android:usesCleartextTraffic="true"
-        tools:targetApi="m">
+        tools:targetApi="r">
 
         <activity
             android:name=".ui.MainActivity"
@@ -65,33 +65,41 @@
         </activity>
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.ServerActivity"
-            android:windowSoftInputMode="stateUnchanged" />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:exported="false"
             android:name=".ui.ServerCustomConfigActivity"
-            android:windowSoftInputMode="stateUnchanged" />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.SettingsActivity" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.PerAppProxyActivity" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.ScannerActivity" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.LogcatActivity" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.RoutingSettingsActivity"
-            android:windowSoftInputMode="stateUnchanged" />
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.SubSettingActivity" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.UserAssetActivity" />
         <activity
             android:exported="false"
@@ -99,7 +107,9 @@
 
         <activity
             android:exported="false"
-            android:name=".ui.SubEditActivity" />
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name=".ui.SubEditActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:exported="false"
             android:name=".ui.ScScannerActivity" />
@@ -127,6 +137,28 @@
                 <data android:host="install-sub"/>
             </intent-filter>
         </activity>
+
+        <activity
+            android:label="@string/uwu_credits"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.v2ray.ang.ui.CreditsActivity"
+            android:exported="false" />
+
+        <activity
+            android:label="@string/uwu_about"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.v2ray.ang.ui.AboutActivity"
+            android:exported="false" />
+
+        <activity
+            android:label="@string/uwu_tools"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.v2ray.ang.ui.ToolsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.neko.tools.NetworkSwitcher"
+            android:exported="false" />
 
         <service
             android:name=".service.V2RayVpnService"
