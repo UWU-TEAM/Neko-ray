@@ -8,11 +8,16 @@ import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.neko.tools.NetworkSwitcher
+import com.neko.tools.SpeedTestActivity
 import com.v2ray.ang.R
 
 class ToolsActivity : UwuCollapsingToolbarActivity() {
     override fun getFragment(): Fragment {
         return AsFragment()
+    }
+
+    fun uwuSpeedTest(view: View) {
+        startActivity(Intent(this, SpeedTestActivity::class.java))
     }
 
     fun uwuNetworkSwitcher(view: View) {

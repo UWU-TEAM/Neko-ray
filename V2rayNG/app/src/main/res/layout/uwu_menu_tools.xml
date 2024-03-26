@@ -230,7 +230,7 @@
                 android:layout_height="220.0dip"
                 android:layout_weight="1.0"
                 app:strokeWidth="0.0dip"
-                
+                android:onClick="uwuSpeedTest"
                 android:layout_marginEnd="8.0dip"
                 app:cardBackgroundColor="#00000000"
                 app:cardCornerRadius="24.0dip"

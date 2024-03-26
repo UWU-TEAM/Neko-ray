@@ -1,13 +1,16 @@
 package com.v2ray.ang.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.Toolbar
 import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.gson.*
 import com.tencent.mmkv.MMKV
 import com.v2ray.ang.R
@@ -37,7 +40,11 @@ class ServerCustomConfigActivity : BaseActivity() {
         binding = ActivityServerCustomConfigBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        title = getString(R.string.title_server)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         if (!Utils.getDarkModeStatus(this)) {
             binding.editor.colorScheme = EditorTheme.INTELLIJ_LIGHT

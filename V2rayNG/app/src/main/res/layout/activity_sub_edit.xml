@@ -73,6 +73,7 @@
                     android:layout_marginBottom="16.0dip"
                     android:layout_marginStart="16.0dip"
                     android:layout_marginEnd="16.0dip"
+                    app:strokeWidth="0.0dip"
                     app:cardBackgroundColor="@color/uwu_bg_card"
                     app:cardCornerRadius="24.0dip"
                     app:cardElevation="0.0dip">

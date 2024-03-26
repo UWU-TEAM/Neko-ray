@@ -47,6 +47,8 @@ import java.io.File
 import java.io.FileOutputStream
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
+import com.neko.tools.NetworkSwitcher
+import com.neko.tools.SpeedTestActivity
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -702,6 +704,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun UwuAbout(view: View) {
         startActivity(Intent(this, AboutActivity::class.java))
+    }
+
+    fun uwuSpeedTest(view: View) {
+        startActivity(Intent(this, SpeedTestActivity::class.java))
+    }
+
+    fun uwuNetworkSwitcher(view: View) {
+        startActivity(Intent(this, NetworkSwitcher::class.java))
     }
 
     fun uwuExitApp(view: View) {

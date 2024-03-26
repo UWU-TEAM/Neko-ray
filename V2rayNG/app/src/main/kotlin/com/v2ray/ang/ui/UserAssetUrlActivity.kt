@@ -1,12 +1,15 @@
 package com.v2ray.ang.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import androidx.appcompat.app.AlertDialog
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.v2ray.ang.R
 import com.v2ray.ang.databinding.ActivityUserAssetUrlBinding
 import com.v2ray.ang.dto.AssetUrlItem
@@ -30,7 +33,11 @@ class UserAssetUrlActivity : BaseActivity() {
         binding = ActivityUserAssetUrlBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        title = getString(R.string.title_user_asset_add_url)
+
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val json = assetStorage?.decodeString(editAssetId)
         if (!json.isNullOrBlank()) {

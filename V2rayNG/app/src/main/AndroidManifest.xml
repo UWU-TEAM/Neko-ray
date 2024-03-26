@@ -70,6 +70,7 @@
             android:windowSoftInputMode="adjustPan" />
         <activity
             android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.ServerCustomConfigActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity
@@ -103,7 +104,9 @@
             android:name=".ui.UserAssetActivity" />
         <activity
             android:exported="false"
-            android:name=".ui.UserAssetUrlActivity" />
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name=".ui.UserAssetUrlActivity"
+            android:windowSoftInputMode="adjustPan" />
 
         <activity
             android:exported="false"
@@ -159,6 +162,12 @@
         <activity
             android:name="com.neko.tools.NetworkSwitcher"
             android:exported="false" />
+
+        <activity
+            android:theme="@style/uwu_splash_theme"
+            android:name="com.neko.tools.SpeedTestActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
 
         <service
             android:name=".service.V2RayVpnService"
