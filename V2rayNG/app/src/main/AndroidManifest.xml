@@ -169,6 +169,14 @@
             android:exported="false"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:label="Host To IP"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.ipgeolocationhosttoip.net.HostToIpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.v2ray.ang.ui.MainActivity" />
+
         <service
             android:name=".service.V2RayVpnService"
             android:enabled="true"

@@ -79,10 +79,10 @@
                 app:layout_anchorGravity="bottom" />
         </LinearLayout>
         <RelativeLayout
+            android:background="@drawable/uwu_background_material"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.core.widget.NestedScrollView
-                android:background="@drawable/uwu_background_material"
                 android:fillViewport="true"
                 android:layout_above="@+id/uwu_exit"
                 android:layout_width="match_parent"
@@ -251,14 +251,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10.0dip"
-                        android:onClick="UwuAbout">
+                        android:onClick="uwuNetworkSwitcher">
                         <ImageView
                             android:background="@drawable/uwu_google_shape"
                             android:padding="12.0dip"
                             android:layout_width="45.0dip"
                             android:layout_height="45.0dip"
                             android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_about"
+                            android:src="@drawable/uwu_icon_network_switcher"
                             android:scaleType="fitCenter"
                             android:backgroundTint="?attr/colorPrimary"
                             app:tint="?attr/colorIcon"/>
@@ -268,7 +268,7 @@
                             android:gravity="left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/uwu_about"
+                            android:text="Network Switcher"
                             android:layout_weight="1.0"/>
                         <ImageView
                             android:background="@drawable/uwu_bg_circle_arrow"
@@ -288,14 +288,14 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10.0dip"
-                        android:onClick="uwuNetworkSwitcher">
+                        android:onClick="uwuHostToIp">
                         <ImageView
                             android:background="@drawable/uwu_google_shape"
                             android:padding="12.0dip"
                             android:layout_width="45.0dip"
                             android:layout_height="45.0dip"
                             android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_icon_network_switcher"
+                            android:src="@drawable/uwu_icon_host_to_ip"
                             android:scaleType="fitCenter"
                             android:backgroundTint="?attr/colorPrimary"
                             app:tint="?attr/colorIcon"/>
@@ -305,7 +305,44 @@
                             android:gravity="left"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Network Switcher"
+                            android:text="Host to ip"
+                            android:layout_weight="1.0"/>
+                        <ImageView
+                            android:background="@drawable/uwu_bg_circle_arrow"
+                            android:padding="2.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10.0dip"
+                            android:src="@drawable/uwu_arrow"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            app:tint="?android:textColorPrimary"/>
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center|right"
+                        android:orientation="horizontal"
+                        android:background="@drawable/uwu_layout_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:onClick="UwuAbout">
+                        <ImageView
+                            android:background="@drawable/uwu_google_shape"
+                            android:padding="12.0dip"
+                            android:layout_width="45.0dip"
+                            android:layout_height="45.0dip"
+                            android:layout_margin="10.0dip"
+                            android:src="@drawable/uwu_about"
+                            android:scaleType="fitCenter"
+                            android:backgroundTint="?attr/colorPrimary"
+                            app:tint="?attr/colorIcon"/>
+                        <TextView
+                            android:textSize="14.0sp"
+                            android:textColor="?android:textColorPrimary"
+                            android:gravity="left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uwu_about"
                             android:layout_weight="1.0"/>
                         <ImageView
                             android:background="@drawable/uwu_bg_circle_arrow"

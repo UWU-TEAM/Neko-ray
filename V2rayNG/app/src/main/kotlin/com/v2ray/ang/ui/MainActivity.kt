@@ -49,6 +49,7 @@ import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
 import com.neko.tools.SpeedTestActivity
+import com.ipgeolocationhosttoip.net.HostToIpActivity
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -655,7 +656,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun settings(view: View) {
         startActivity(Intent(this, SettingsActivity::class.java))
-            .putExtra("isRunning", mainViewModel.isRunning.value == true))
     }
 
     fun subSetting(view: View) {
@@ -676,6 +676,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun uwuNetworkSwitcher(view: View) {
         startActivity(Intent(this, NetworkSwitcher::class.java))
+    }
+
+    fun uwuHostToIp(view: View) {
+        startActivity(Intent(this, HostToIpActivity::class.java))
     }
 
     fun uwuExitApp(view: View) {
