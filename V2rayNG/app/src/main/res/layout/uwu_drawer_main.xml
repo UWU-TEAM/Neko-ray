@@ -349,7 +349,7 @@
                         app:tint="?attr/colorIcon"/>
                     <TextView
                         android:textSize="14.0sp"
-                        android:textColor="#ffffffff"
+                        android:textColor="?attr/colorText"
                         android:paddingLeft="8.0dip"
                         android:paddingTop="8.0dip"
                         android:paddingRight="60.0dip"

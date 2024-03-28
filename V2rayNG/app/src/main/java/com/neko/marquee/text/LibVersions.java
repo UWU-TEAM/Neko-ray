@@ -7,13 +7,13 @@ import android.view.View;
 import androidx.appcompat.widget.AppCompatTextView;
 import com.v2ray.ang.util.SpeedtestUtil;
 
-public class Test extends AppCompatTextView {
+public class LibVersions extends AppCompatTextView {
     private String memekVersion;
 
     private void JupokInfoSlur() {
-        String stringBuilder = new intent();
-        stringBuilder.append(SpeedtestUtil.INSTANCE.getLibVersion()).toString();
-        setText(stringBuilder);
+        StringBuilder sb = new StringBuilder();
+        sb.append(SpeedtestUtil.INSTANCE.getLibVersion()).toString();
+        setText(sb);
     }
 
     @Override
@@ -21,17 +21,17 @@ public class Test extends AppCompatTextView {
         return true;
     }
 
-    public Test(Context context) {
+    public LibVersions(Context context) {
         super(context);
         JupokInfoSlur();
     }
 
-    public Test(Context context, AttributeSet attrs) {
+    public LibVersions(Context context, AttributeSet attrs) {
         super(context, attrs);
         JupokInfoSlur();
     }
 
-    public Test(Context context, AttributeSet attrs, int defStyleAttr) {
+    public LibVersions(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         JupokInfoSlur();
     }

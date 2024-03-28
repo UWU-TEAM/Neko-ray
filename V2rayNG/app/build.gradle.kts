@@ -44,7 +44,6 @@ dependencies {
     implementation("io.reactivex:rxjava:1.3.8")
     implementation("io.reactivex:rxandroid:1.2.1")
     implementation("com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar")
-    implementation("com.github.jorgecastilloprz:fabprogresscircle:1.01@aar")
     implementation("me.drakeet.support:toastcompat:1.1.0")
     implementation("com.blacksquircle.ui:editorkit:2.9.0")
     implementation("com.blacksquircle.ui:language-base:2.9.0")

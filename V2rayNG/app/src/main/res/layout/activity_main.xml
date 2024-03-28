@@ -252,14 +252,14 @@
                         android:layout_marginLeft="16.0dip"
                         android:layout_marginTop="16.0dip"
                         android:layout_marginRight="16.0dip"
-                        android:layout_marginBottom="16.0dip"
+                        android:layout_marginBottom="35.0dip"
                         android:src="@drawable/uwu_ic_service_idle"
                         android:layout_alignParentBottom="true"
                         android:layout_alignParentEnd="true"
                         app:tint="@color/colorText_ActionBar"
                         app:layout_anchorGravity="end|bottom|center"
                         app:shapeAppearanceOverlay="@style/fab_square"
-                        style="@style/Widget.MaterialComponents.FloatingActionButton" />
+                        style="@style/Widget.Design.FloatingActionButton" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

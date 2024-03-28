@@ -28,6 +28,10 @@
             android:title="@string/uwu_package_name"
             android:summary="@string/neko_packagename" />
         <Preference
+            android:icon="@drawable/uwu_core"
+            android:layout="@layout/uwu_versi_lib"
+            android:title="Version core"/>
+        <Preference
             android:icon="@drawable/uwu_build_date"
             android:layout="@layout/uwu_bot_no_arrow"
             android:title="@string/uwu_build_date"
