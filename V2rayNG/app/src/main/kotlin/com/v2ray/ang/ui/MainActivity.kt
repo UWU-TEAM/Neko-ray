@@ -655,6 +655,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun settings(view: View) {
         startActivity(Intent(this, SettingsActivity::class.java))
+            .putExtra("isRunning", mainViewModel.isRunning.value == true))
     }
 
     fun subSetting(view: View) {
