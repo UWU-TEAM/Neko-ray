@@ -8,6 +8,7 @@ import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import com.neko.changelog.Changelog
+import com.v2ray.ang.util.SpeedtestUtil
 import com.v2ray.ang.R
 
 class AboutActivity : UwuCollapsingToolbarActivity() {

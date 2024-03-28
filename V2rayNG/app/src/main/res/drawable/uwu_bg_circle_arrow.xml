@@ -3,7 +3,7 @@
     android:shape="rectangle"
     xmlns:android="http://schemas.android.com/apk/res/android">
     <solid
-        android:color="@color/uwu_bg" />
+        android:color="@color/uwu_bg_color" />
     <corners
         android:radius="1000.0dip" />
 </shape>

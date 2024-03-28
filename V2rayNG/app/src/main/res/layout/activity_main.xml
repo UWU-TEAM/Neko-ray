@@ -121,14 +121,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:foreground="?attr/selectableItemBackground"
-                        android:onClick="UwuTools">
+                        android:onClick="uwuSpeedTest">
 
                         <TextView
                             android:textSize="17.0sp"
                             android:textColor="?attr/colorMainText"
+                            android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Tools" />
+                            android:text="SpeedTest" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -136,35 +137,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.neko.marquee.text.AutoMarqueeTextView
+                            <TextView
                                 android:textSize="14.0sp"
                                 android:textColor="?attr/colorPrimary"
                                 android:ellipsize="marquee"
-                                android:gravity="start|center"
+                                android:gravity="center"
                                 android:layout_gravity="start|center"
                                 android:fadingEdge="horizontal"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
-                                android:text="Extra fitures"
+                                android:text="Speed Network"
                                 android:scrollHorizontally="true"
                                 android:singleLine="true"
-                                android:layout_weight="1.0"
-                                android:marqueeRepeatLimit="marquee_forever" />
-
-                            <LinearLayout
-                                android:background="@drawable/uwu_bg_circle_arrow"
-                                android:layout_width="28.0dip"
-                                android:layout_height="28.0dip">
-
-                                <ImageView
-                                    android:layout_width="25.0dip"
-                                    android:layout_height="25.0dip"
-                                    android:layout_marginTop="1.0dip"
-                                    android:src="@drawable/uwu_arrow"
-                                    app:tint="?attr/colorMainText"
-                                    android:layout_marginStart="2.0dip" />
-
-                            </LinearLayout>
+                                android:layout_weight="1.0" />
 
                         </LinearLayout>
 
@@ -192,6 +177,7 @@
 
                         <TextView
                             android:textSize="17.0sp"
+                            android:gravity="center"
                             android:textColor="?attr/colorMainText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -207,7 +193,7 @@
                                 android:textSize="14.0sp"
                                 android:textColor="?attr/colorPrimary"
                                 android:ellipsize="marquee"
-                                android:gravity="start|center"
+                                android:gravity="center"
                                 android:layout_gravity="start|center"
                                 android:id="@+id/tv_test_state"
                                 android:fadingEdge="horizontal"
@@ -218,21 +204,6 @@
                                 android:singleLine="true"
                                 android:layout_weight="1.0"
                                 android:marqueeRepeatLimit="marquee_forever" />
-
-                            <LinearLayout
-                                android:background="@drawable/uwu_bg_circle_arrow"
-                                android:layout_width="28.0dip"
-                                android:layout_height="28.0dip">
-
-                                <ImageView
-                                    android:layout_width="25.0dip"
-                                    android:layout_height="25.0dip"
-                                    android:layout_marginTop="1.0dip"
-                                    android:src="@drawable/uwu_arrow"
-                                    app:tint="?attr/colorMainText"
-                                    android:layout_marginStart="2.0dip" />
-
-                            </LinearLayout>
 
                         </LinearLayout>
 
@@ -270,13 +241,6 @@
 
                 </LinearLayout>
 
-                <com.github.jorgecastilloprz.FABProgressCircle
-                    android:layout_gravity="end|bottom|center"
-                    android:id="@+id/fabProgressCircle"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="24.0dip">
-
                     <com.google.android.material.floatingactionbutton.FloatingActionButton
                         android:layout_gravity="end|bottom|center"
                         android:id="@+id/fab"
@@ -295,9 +259,7 @@
                         app:tint="@color/colorText_ActionBar"
                         app:layout_anchorGravity="end|bottom|center"
                         app:shapeAppearanceOverlay="@style/fab_square"
-                        style="@style/Widget.Design.FloatingActionButton" />
-
-                </com.github.jorgecastilloprz.FABProgressCircle>
+                        style="@style/Widget.MaterialComponents.FloatingActionButton" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

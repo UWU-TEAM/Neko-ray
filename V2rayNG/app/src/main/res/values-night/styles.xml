@@ -17,10 +17,10 @@
         <item name="alertDialogTheme">@style/Theme.Base.AlertDialog</item>
         <item name="colorAccent">?attr/colorPrimary</item>
         <item name="colorBackgroundFloating">@color/uwu_bg_card</item>
-        <item name="colorIcon">@android:color/white</item>
+        <item name="colorIcon">@android:color/black</item>
         <item name="colorMainText">@color/colorText</item>
         <item name="colorPrimaryDark">?attr/colorPrimary</item>
-        <item name="colorText">@android:color/white</item>
+        <item name="colorText">@android:color/black</item>
         <item name="colorBg">@color/uwu_bg</item>
         <item name="changelogStyle">@style/LibChangelog</item>
         <item name="elevation">0.0dip</item>

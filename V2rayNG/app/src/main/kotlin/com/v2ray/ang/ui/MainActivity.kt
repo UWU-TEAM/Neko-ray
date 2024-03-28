@@ -109,8 +109,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
-        "v${BuildConfig.VERSION_NAME} (${SpeedtestUtil.getLibVersion()})".also { binding.version.text = it }
-
         setupViewModel()
         copyAssets()
         migrateLegacy()
@@ -158,7 +156,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 setTestState(getString(R.string.connection_not_connected))
                 binding.layoutTest.isFocusable = false
             }
-            hideCircle()
         }
         mainViewModel.startListenBroadcast()
     }
@@ -206,10 +203,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
             return
         }
-        showCircle()
 //        toast(R.string.toast_services_start)
         V2RayServiceManager.startV2Ray(this)
-        hideCircle()
     }
 
     fun restartV2Ray() {
@@ -649,38 +644,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         return super.onKeyDown(keyCode, event)
     }
-
-
-    fun showCircle() {
-        binding.fabProgressCircle.show()
-    }
-
-    fun hideCircle() {
-        try {
-            Observable.timer(300, TimeUnit.MILLISECONDS)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe {
-                        try {
-                            if (binding.fabProgressCircle.isShown) {
-                                binding.fabProgressCircle.hide()
-                            }
-                        } catch (e: Exception) {
-                            Log.w(ANG_PACKAGE, e)
-                        }
-                    }
-        } catch (e: Exception) {
-            Log.d(ANG_PACKAGE, e.toString())
-        }
-    }
-
-//    override fun onBackPressed() {
-//        if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
-//            binding.drawerLayout.closeDrawer(GravityCompat.START)
-//        } else {
-//            super.onBackPressed()
-//            //onBackPressedDispatcher.onBackPressed()
-//        }
-//    }
 
     fun UwuTools(view: View) {
         startActivity(Intent(this, ToolsActivity::class.java))
