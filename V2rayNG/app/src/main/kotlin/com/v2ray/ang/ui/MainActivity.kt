@@ -646,10 +646,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return super.onKeyDown(keyCode, event)
     }
 
-    fun UwuTools(view: View) {
-        startActivity(Intent(this, ToolsActivity::class.java))
-    }
-
     fun logcat(view: View) {
         startActivity(Intent(this, LogcatActivity::class.java))
     }

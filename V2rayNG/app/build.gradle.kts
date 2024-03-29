@@ -153,7 +153,7 @@ android {
                 else
                     "all"
 
-                output.outputFileName = "v2rayNG_${variant.versionName}_${abi}.apk"
+                output.outputFileName = "Neko_v2rayNG_${variant.versionName}_${abi}.apk"
                 if(versionCodes.containsKey(abi))
                 {
                     output.versionCodeOverride = (1000000 * versionCodes[abi]!!).plus(variant.versionCode)

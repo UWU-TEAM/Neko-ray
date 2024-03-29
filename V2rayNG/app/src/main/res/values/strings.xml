@@ -113,11 +113,6 @@
     <string name="title_pref_mux_concurency">TCP connections（range -1 to 1024）</string>
     <string name="title_pref_mux_xudp_concurency">XUDP connections（range -1 to 1024）</string>
     <string name="title_pref_mux_xudp_quic">Handling of QUIC in mux tunnel</string>
-    <string-array name="mux_xudp_quic_entries">
-        <item>reject</item>
-        <item>allow</item>
-        <item>skip</item>
-    </string-array>
 
     <string name="title_pref_speed_enabled">Enable speed display</string>
     <string name="summary_pref_speed_enabled">Display current speed in the notification.\nNotification icon would change based on
@@ -240,36 +235,6 @@
     <string name="title_pref_fragment_interval">Fragment Interval (min-max)</string>
     <string name="title_pref_fragment_enabled">Enable Fragment</string>
 
-    <string-array name="share_method">
-        <item>QRcode</item>
-        <item>Export to clipboard</item>
-        <item>Export full configuration to clipboard</item>
-    </string-array>
-
-    <string-array name="share_sub_method">
-        <item>QRcode</item>
-        <item>Export to clipboard</item>
-    </string-array>
-
-    <string-array name="routing_tag">
-        <item>proxy URL or IP</item>
-        <item>direct URL or IP</item>
-        <item>blocked URL or IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>Global proxy</item>
-        <item>Bypassing the LAN address then proxy</item>
-        <item>Bypass mainland address then proxy</item>
-        <item>Bypassing LAN and mainland address then proxy</item>
-        <item>Global direct</item>
-    </string-array>
-
-    <string-array name="mode_entries">
-        <item>VPN</item>
-        <item>Proxy only</item>
-    </string-array>
-
     <string name="title_theme_settings">Theme Settings</string>
     <string name="title_choose_theme">Choose Color Theme</string>
     <string name="uwu_header_title">Hi, <b>onii-chan</b></string>
@@ -285,7 +250,5 @@
     <string name="uwu_version_sdk_minimum">Min SDK Version</string>
     <string name="uwu_version_sdk_target">Target SDK Version</string>
     <string name="uwu_package_name">Package name</string>
-    <string name="uwu_title_dashboard_tools">Hello there...</string>
-    <string name="uwu_summary_dashboard_tools">Welcome to the Neko v2raynG tools menu.</string>
 
 </resources>
