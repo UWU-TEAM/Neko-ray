@@ -47,10 +47,10 @@
         tools:targetApi="r">
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.neko.splash.SplashActivity"
             android:exported="true"
             android:launchMode="singleTask"
-            android:theme="@style/AppThemeDayNight.NoActionBar">
+            android:theme="@style/uwu_splash_theme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

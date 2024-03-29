@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/splash_root"
+    android:background="?attr/colorPrimaryContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.neko.waveview.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimaryContainer"
+        app:above_wave_color="?attr/colorPrimary"
+        app:blow_wave_color="?attr/colorPrimary"
+        app:progress="30"
+        app:wave_height="large"
+        app:wave_hz="fast"
+        app:wave_length="little" />
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/logo_bg"
+            android:background="@drawable/uwu_logo_elevation"
+            android:padding="3.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo_view"
+                android:layout_width="160.0dip"
+                android:layout_height="160.0dip"
+                app:srcCompat="@drawable/uwu_banner_profile" />
+
+        </LinearLayout>
+
+        <TextView
+            android:textSize="24.0sp"
+            android:textColor="?android:textColorPrimary"
+            android:id="@+id/splash_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/app_name"
+            android:fontFamily="@font/font_7f090000"
+            app:layout_constraintEnd_toEndOf="@+id/logo_bg"
+            app:layout_constraintStart_toStartOf="@+id/logo_bg"
+            app:layout_constraintTop_toBottomOf="@+id/logo_bg" />
+
+    </LinearLayout>
+
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="?android:textColorPrimary"
+        android:gravity="center_horizontal"
+        android:id="@+id/splash_owner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:text="Made With ♥️\nBy AnGgIt86 Development"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/splash_version"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:textSize="14.0sp"
+        android:textColor="?android:textColorPrimary"
+        android:id="@+id/splash_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16.0dip"
+        android:text="@string/neko_app_version"
+        android:textAllCaps="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
