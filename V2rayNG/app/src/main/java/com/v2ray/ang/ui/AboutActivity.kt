@@ -18,7 +18,7 @@ class AboutActivity : UwuCollapsingToolbarActivity() {
 
     companion object {
         fun repositoryUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/v2rayNG")))
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/Neko_v2rayNG")))
         }
 
         fun promotionUrl(context: Context) {
@@ -26,11 +26,11 @@ class AboutActivity : UwuCollapsingToolbarActivity() {
         }
 
         fun feedbackUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/v2rayNG/issues")))
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/Neko_v2rayNG/issues")))
         }
 
         fun privacyUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://raw.githubusercontent.com/Blawuken/v2rayNG/master/CR.md")))
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/CR.md")))
         }
 
         fun modderUrl(context: Context) {
