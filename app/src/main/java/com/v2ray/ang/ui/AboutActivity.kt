@@ -2,18 +2,38 @@ package com.v2ray.ang.ui
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
+import android.os.Build
+import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import com.neko.changelog.Changelog
 import com.v2ray.ang.util.SpeedtestUtil
+import com.v2ray.ang.extension.toast
 import com.v2ray.ang.R
 
 class AboutActivity : UwuCollapsingToolbarActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        isStoragePermissionGranted()
+        super.onCreate(savedInstanceState)
+    }
+
     override fun getFragment(): Fragment {
         return AsFragment()
+    }
+
+    fun isStoragePermissionGranted(): Boolean {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkSelfPermission("android.permission.READ_MEDIA_IMAGES") != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_MEDIA_IMAGES"), 1)
+        } else {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
+        }
+        return false
     }
 
     companion object {
