@@ -2,6 +2,7 @@ package com.v2ray.ang.ui
 
 import android.Manifest
 import android.content.*
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.net.VpnService
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,6 +18,7 @@ import com.v2ray.ang.AppConfig
 import android.content.res.ColorStateList
 import android.os.Build
 import com.google.android.material.navigation.NavigationView
+import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -102,6 +104,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
     override fun onCreate(savedInstanceState: Bundle?) {
+        isStoragePermissionGranted()
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
@@ -708,6 +711,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return true
         }
         return super.onKeyDown(keyCode, event)
+    }
+
+    fun isStoragePermissionGranted(): Boolean {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkSelfPermission("android.permission.READ_MEDIA_IMAGES") != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_MEDIA_IMAGES"), 1)
+        } else {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
+        }
+        return false
     }
 
     fun logcat(view: View) {

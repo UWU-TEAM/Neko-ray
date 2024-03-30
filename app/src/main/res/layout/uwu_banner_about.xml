@@ -1,121 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
-    android:gravity="center"
-    android:background="@android:color/transparent"
+    android:background="@drawable/uwu_bg_top"
+    android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:clipToOutline="true"
+    android:layout_marginTop="4.0dip"
+    android:layout_marginBottom="2.0dip"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginEnd="16.0dip"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
         android:gravity="center_vertical"
-        android:orientation="vertical"
-        android:background="@android:color/transparent"
         android:clipToPadding="false"
         android:layout_width="match_parent"
-        android:layout_height="200.0dip"
-        android:layout_marginTop="0.0dip"
-        android:layout_marginBottom="8.0dip"
-        android:baselineAligned="false">
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="200.0dip"
-            android:layout_marginHorizontal="16.0dip"
-            app:strokeWidth="0.0dip"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:minHeight="?android:listPreferredItemHeightSmall"
+        android:paddingStart="?android:listPreferredItemPaddingStart"
+        android:paddingEnd="?android:listPreferredItemPaddingEnd">
+        <com.neko.elasticview.ElasticView
+            android:layout_width="150.0dip"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginBottom="16.0dip"
+            android:layout_marginStart="2.0dip"
+            android:layerType="software"
             app:cardBackgroundColor="@color/uwu_bg_card"
-            app:cardCornerRadius="24.0dip"
-            app:cardElevation="0.0dip"
-            app:rippleColor="@android:color/transparent">
-            <com.airbnb.lottie.LottieAnimationView
+            app:cardCornerRadius="18.0dip"
+            app:cardElevation="0.0dip">
+            <com.neko.ui.WallpaperView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:elevation="0dp"
+                android:gravity="center"
+                android:orientation="vertical" />
+            <LinearLayout
+                android:background="@android:color/black"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.2" />
+            <LinearLayout
                 android:layout_gravity="center"
-                android:padding="4.0dip"
-                android:layout_width="180.0dip"
-                android:layout_height="150.0dip"
-                android:alpha="0.4"
-                android:layout_marginHorizontal="25.0dip"
-                app:lottie_renderMode="software"
-                app:lottie_autoPlay="true"
-                app:lottie_colorFilter="?attr/colorPrimary"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/uwu_lottie_hexagon" />
-            <FrameLayout
-                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <View
-                    android:gravity="center_horizontal"
-                    android:layout_gravity="center|top"
-                    android:background="@drawable/uwu_bg_sin"
-                    android:clickable="false"
-                    android:layout_width="match_parent"
-                    android:layout_height="40.0dip"
-                    android:layout_marginTop="-30.0dip"
-                    android:backgroundTint="?attr/colorBg"
-                    android:layout_marginHorizontal="75.0dip" />
-                <LinearLayout
+                <TextClock
+                    android:textSize="56.0sp"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"
                     android:gravity="center"
-                    android:layout_gravity="center_vertical"
-                    android:orientation="vertical"
-                    android:paddingTop="16.0dip"
-                    android:paddingBottom="16.0dip"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="35.0dip">
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="1.5dip" />
-                    <FrameLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <TextView
-                            android:textSize="35.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:ellipsize="marquee"
-                            android:gravity="center_horizontal"
-                            android:id="@+id/title"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Neko v2rayNG"
-                            android:singleLine="true"
-                            android:fontFamily="@font/uwu_font_title" />
-                        <TextView
-                            android:textSize="35.0sp"
-                            android:textColor="?attr/colorPrimary"
-                            android:ellipsize="marquee"
-                            android:gravity="center_horizontal"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Neko v2rayNG"
-                            android:singleLine="true"
-                            android:maxLength="5"
-                            android:fontFamily="@font/uwu_font_title" />
-                    </FrameLayout>
-                    <com.neko.marquee.text.AutoMarqueeVersiTextView
-                        android:textSize="18.0sp"
-                        android:textColor="?android:textColorPrimary"
-                        android:gravity="center_horizontal"
-                        android:id="@+id/summary"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:maxLines="10"
-                        android:layout_below="@+id/title"
-                        android:layout_alignLeft="@+id/title"
-                        android:fontFamily="@font/uwu_font_summary"
-                        android:layout_alignStart="@+id/title" />
-                </LinearLayout>
-                <View
+                    android:layout_marginBottom="-35.0dip"
+                    android:fontFamily="@font/font_7f090000"
+                    android:format12Hour="hh"
+                    android:format24Hour="kk"
+                    android:fontFeatureSettings="tnum, cv03, cv04" />
+                <TextClock
+                    android:textSize="56.0sp"
+                    android:typeface="monospace"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
                     android:layout_width="match_parent"
-                    android:layout_height="1.5dip" />
-            </FrameLayout>
-            <View
-                android:gravity="center_horizontal"
-                android:layout_gravity="bottom|center"
-                android:background="@drawable/uwu_bg_sin"
-                android:clickable="false"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-10.0dip"
+                    android:fontFamily="@font/font_7f090000"
+                    android:format12Hour="mm"
+                    android:format24Hour="mm"
+                    android:fontFeatureSettings="tnum, cv03, cv04" />
+            </LinearLayout>
+        </com.neko.elasticview.ElasticView>
+        <RelativeLayout
+            android:padding="16.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_name_title"
                 android:layout_width="match_parent"
-                android:layout_height="40.0dip"
-                android:layout_marginBottom="-30.0dip"
-                android:backgroundTint="?attr/colorBg"
-                android:layout_marginHorizontal="75.0dip" />
-        </com.google.android.material.card.MaterialCardView>
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dip"
+                android:text="Device Name"
+                android:singleLine="true" />
+            <com.neko.marquee.deviceinfo.Device
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_name_title_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_name_title"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_name_title" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_developer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Board"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_name_title_summary"
+                android:layout_alignStart="@+id/uwu_name_title_summary" />
+            <com.neko.marquee.deviceinfo.Board
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_developer_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_developer"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_developer" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_modder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OS Version"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_developer_summary"
+                android:layout_alignStart="@+id/uwu_developer_summary" />
+            <com.neko.marquee.deviceinfo.OsVersion
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_modder_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_modder"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_modder" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_version_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Brand"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_modder_summary"
+                android:layout_alignStart="@+id/uwu_modder_summary" />
+            <com.neko.marquee.deviceinfo.Brand
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_version_name_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_version_name"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_version_name" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_version_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Build ID"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_version_name_summary"
+                android:layout_alignStart="@+id/uwu_version_name_summary" />
+            <com.neko.marquee.deviceinfo.BuildID
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_version_code_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_version_code"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_version_code" />
+            <TextView
+                android:textSize="17.0sp"
+                android:textColor="?android:textColorPrimary"
+                android:id="@+id/uwu_package_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Serial"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_version_code_summary"
+                android:layout_alignStart="@+id/uwu_version_code_summary" />
+            <com.neko.marquee.deviceinfo.Serial
+                android:textSize="14.0sp"
+                android:textColor="?android:textColorSecondary"
+                android:ellipsize="marquee"
+                android:id="@+id/uwu_package_name_summary"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12.0dip"
+                android:singleLine="true"
+                android:layout_below="@+id/uwu_package_name"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_alignStart="@+id/uwu_package_name" />
+        </RelativeLayout>
     </LinearLayout>
 </FrameLayout>
