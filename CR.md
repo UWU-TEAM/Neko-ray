@@ -1,40 +1,39 @@
-**v2rayNG 隐私权政策**
+**Neko v2rayNG Privacy Policy**
 
-本政策自2023年11月17日起施行
+This policy will be effective from November 17, 2023
 
-2dust 将 v2rayNG 应用程序构建为开源应用程序。 本服务由 2dust 免费提供，并且旨在按原样使用。
+2dust builds the Neko v2rayNG application as an open source application. The Service is provided free of charge by 2dust and is intended to be used as is.
 
-v2rayNG 尊重并保护所有用户的个人隐私权，为此我们向大众公开这份隐私权政策。**您使用 v2rayNG 即代表您以阅读并同意了这份条款，如果您不同意这份条款请立即停止使用并卸载 v2rayNG。**
+Neko v2rayNG respects and protects the personal privacy rights of all users, and for this reason we disclose this privacy policy to the public. **Your use of Neko v2rayNG means that you have read and agreed to these terms. If you do not agree to these terms, please stop using and uninstall Neko v2rayNG immediately. **
 
-**信息收集**
+**collect message**
 
-v2rayNG 软件自身不会发送任何信息到开发者，但是您下载软件的应用市场（如 Google Play）可能会收集关于应用运行状态的相关信息并提供给 v2rayNG 开发者。有关这些信息，请阅读您使用的应用市场所提供的隐私权政策。
+The Neko v2rayNG software itself will not send any information to the developer, but the application market (such as Google Play) where you download the software may collect relevant information about the running status of the application and provide it to the Neko v2rayNG developer. For this information, please read the privacy policy provided by the app store you use.
 
-v2rayNG 软件中可能包含需要通过 IAP 支付解锁的功能，您的支付信息将由相关的 IAP 渠道进行处理，而我们对支付信息没有访问权。
+The Neko v2rayNG software may contain features that require unlocking through IAP payment, and your payment information will be processed by the relevant IAP channel, and we have no access to the payment information.
 
-当您向 v2rayNG 开发者反馈软件运行中的错误时，开发者可能会要求您提供软件以及系统的日志以帮助确认问题的原因。因日志中可能包括敏感信息，此类信息只能由您自己操作发送。**我们不对任何传输服务的安全性和隐私性做任何明示或暗示的担保，请您在传送相关信息时选择可以您自身可以接受的方式。**
+When you report an error in software operation to Neko v2rayNG developers, the developer may ask you to provide software and system logs to help confirm the cause of the problem. Since the logs may contain sensitive information, such information can only be sent by yourself. **We do not make any express or implied guarantees about the security and privacy of any transmission service. Please choose a method that is acceptable to you when transmitting relevant information. **
 
-**信息共享**
+**Information Sharing**
 
-我们不会向任何第三方出售收集到的用户数据。我们可能向外部开发者提供信息以协助软件的开发，但是在提供信息之前我们会传达相关保密义务并确定其可以遵守。
+We do not sell collected user data to any third party. We may provide information to outside developers to assist in the development of software, but we will communicate relevant confidentiality obligations and determine that they can be complied with before providing the information.
 
-**信息存留**
+**Information Retention**
 
-除非有相关法律规定，我们会在 30 天内清除不需要继续使用的用户数据，或将统计数据整合为无法识别单个用户的综合报告。
+Unless there are relevant legal requirements, we will delete user data that is no longer needed within 30 days, or consolidate the statistical data into a comprehensive report that cannot identify individual users.
 
-**信息泄露**
+**Information leaked**
 
-我们会使用合理的技术和安全手段尽力保护用户的数据，但是无法保证数据的绝对安全。如果我们确认数据发生了泄露，我们会在 7 天内通过可用的渠道通知用户。**您同意不向我们追责任何因不可抗力而造成的损失。**
+We will use reasonable technology and security means to try our best to protect user data, but we cannot guarantee the absolute security of data. If we confirm that a data breach has occurred, we will notify users through available channels within 7 days. **You agree not to hold us responsible for any losses caused by force majeure. **
 
-**儿童隐私**
+**Children’s Privacy**
 
-这些服务不针对 13 岁以下的任何人。我不会故意收集 13 岁以下儿童的个人身份信息。 如果我发现 13 岁以下的儿童向我提供了个人信息，我会立即从我们的服务器中删除该信息。 如果您是父母或监护人，并且您知道您的孩子向我们提供了个人信息，请与我联系，以便我能够采取必要的行动。
+The Services are not directed to anyone under the age of 13. I do not knowingly collect personally identifiable information from children under 13 years of age. If I discover that a child under 13 has provided me with personal information, I will promptly delete that information from our servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact me so that I can take necessary action.
 
-**条款修改**
+**Terms Modification**
 
-我们保留修改这份隐私权政策的权利，但是会确保在更新条款前至少 30 天通过我们的可用渠道和应用内提示来通知用户。**在新条款生效后继续使用软件即表示您同意修改后的隐私权政策。**
+We reserve the right to modify this Privacy Policy, but will ensure that users are notified through our available channels and in-app prompts at least 30 days before updating the terms. **Continuing to use the software after the new terms take effect constitutes your agreement to the revised Privacy Policy. **
 
-**联系我们**
+**contact us**
 
-如果您对我的隐私政策有任何疑问或建议，请随时通过 CaptainIronng@protonmail.com 与我联系。
-
+If you have any questions or suggestions about my privacy policy, please feel free to contact me at jarbull86@gmail.com.
