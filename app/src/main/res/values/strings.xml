@@ -250,5 +250,7 @@
     <string name="uwu_version_sdk_minimum">Min SDK Version</string>
     <string name="uwu_version_sdk_target">Target SDK Version</string>
     <string name="uwu_package_name">Package name</string>
+    <string name="uwu_neko_update">Update</string>
+    <string name="uwu_neko_update_check">Check now</string>
 
 </resources>

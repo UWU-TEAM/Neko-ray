@@ -11,6 +11,9 @@ import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
 import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
+import com.neko.appupdater.AppUpdater
+import com.neko.appupdater.enums.Display
+import com.neko.appupdater.enums.UpdateFrom
 import com.neko.changelog.Changelog
 import com.v2ray.ang.util.SpeedtestUtil
 import com.v2ray.ang.extension.toast
@@ -56,6 +59,16 @@ class AboutActivity : UwuCollapsingToolbarActivity() {
         fun modderUrl(context: Context) {
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/uwuresourceguide")))
         }
+    }
+
+    fun uwuUpdater(view: View) {
+        AppUpdater(this)
+            .setUpdateFrom(UpdateFrom.GITHUB)
+            .setGitHubUserAndRepo("Blawuken", "Neko_v2rayNG")
+            .setDisplay(Display.DIALOG)
+            .showAppUpdated(true)
+            .start()
+        true
     }
 
     fun uwuRepository(view: View) {

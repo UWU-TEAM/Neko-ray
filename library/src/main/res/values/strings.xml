@@ -9,4 +9,27 @@
     <string name="homepage_widget_storage_title">Storage</string>
     <string name="changelog_title">Changelog</string>
 
+    <string name="appupdater_update_available">New update available!</string>
+    <string name="appupdater_update_available_description_dialog">Update %1$s is available to download. By downloading the latest update you will get the latest features, improvements and bug fixes for %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Update %1$s is available to download.\n\nYou can get these new features:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">Update %1$s is available!</string>
+    <string name="appupdater_update_available_description_notification">Update %1$s of %2$s is available to download</string>
+    <string name="appupdater_update_not_available">No updates available</string>
+    <string name="appupdater_update_not_available_description">You are already on the latest version %s!</string>
+    <string name="appupdater_btn_update">Update</string>
+    <string name="appupdater_btn_disable">Don\'t show again</string>
+    <string name="appupdater_btn_dismiss">Dismiss</string>
+    <string name="appupdater_channel_name">Update notifications</string>
+
+    <string name="define_appupdater" translatable="false"/>
+    <string name="library_appupdater_author" translatable="false">AnGgIt86</string>
+    <string name="library_appupdater_authorWebsite" translatable="false">https://github.com/Blawuken</string>
+    <string name="library_appupdater_libraryName" translatable="false">AppUpdater</string>
+    <string name="library_appupdater_libraryDescription" translatable="false">AppUpdater is a library that checks for your apps\' updates on Google Play, GitHub, Amazon and F-Droid, showing a Material dialog, Snackbar or notification when a new version is available.</string>
+    <string name="library_appupdater_libraryWebsite" translatable="false">https://github.com/Blawuken/AppUpdater</string>
+    <string name="library_appupdater_licenseId" translatable="false">apache_2_0</string>
+    <string name="library_appupdater_isOpenSource" translatable="false">true</string>
+    <string name="library_appupdater_repositoryLink" translatable="false">https://github.com/Blawuken/AppUpdater</string>
+    <string name="appupdater_channel" translatable="false">appupdater_channel_01</string>
+
 </resources>

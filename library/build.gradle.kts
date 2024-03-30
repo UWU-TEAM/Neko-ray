@@ -52,4 +52,6 @@ dependencies {
     api("androidx.preference:preference-ktx:1.2.1")
     api("com.google.android.material:material:1.11.0")
     api("androidx.constraintlayout:constraintlayout:2.1.4")
+    api("com.squareup.okhttp3:okhttp:4.12.0")
+    api("org.jsoup:jsoup:1.17.2")
 }

@@ -114,9 +114,8 @@
         <item name="android:windowAnimationStyle">@style/uwu_modder_app_anim</item>
         <item name="android:windowMinWidthMajor">85.0%</item>
         <item name="android:windowMinWidthMinor">85.0%</item>
-        <item name="android:listPreferredItemHeightSmall">38.0dip</item>
+        <item name="android:listPreferredItemHeightSmall">40.0dip</item>
         <item name="android:windowElevation">0.0dip</item>
-        <item name="dialogCornerRadius">28.0dip</item>
     </style>
 
     <style name="uwu_modder_app_anim" parent="@style/uwu_modder_app">

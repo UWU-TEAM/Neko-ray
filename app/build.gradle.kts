@@ -57,7 +57,6 @@ dependencies {
     // Misc
     implementation("de.hdodenhof:circleimageview:3.1.0")
     implementation("com.kyleduo.switchbutton:library:2.1.0")
-    implementation("com.airbnb.android:lottie:6.4.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jsoup:jsoup:1.17.2")
     implementation("androidx.webkit:webkit:1.10.0")

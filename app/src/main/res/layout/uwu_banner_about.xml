@@ -24,23 +24,86 @@
             android:layout_height="match_parent"
             android:layout_marginTop="16.0dip"
             android:layout_marginBottom="16.0dip"
-            android:layout_marginStart="2.0dip"
             android:layerType="software"
             app:cardBackgroundColor="@color/uwu_bg_card"
             app:cardCornerRadius="18.0dip"
             app:cardElevation="0.0dip">
             <com.neko.ui.WallpaperView
+                android:gravity="center"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:elevation="0dp"
-                android:gravity="center"
-                android:orientation="vertical" />
+                android:elevation="0.0dip" />
             <LinearLayout
                 android:background="@android:color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="0.2" />
+            <LinearLayout
+                android:layout_gravity="start|center|top"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:gravity="start|center|top"
+                    android:layout_gravity="start|center|top"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/uwu_signal"
+                    android:layout_marginStart="5.0dip"
+                    app:tint="@android:color/white" />
+                <ImageView
+                    android:gravity="start|center|top"
+                    android:layout_gravity="start|center|top"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/uwu_signal"
+                    app:tint="@android:color/white" />
+                <ImageView
+                    android:gravity="start|center|top"
+                    android:layout_gravity="start|center|top"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/uwu_signal_4g"
+                    app:tint="@android:color/white" />
+                <ImageView
+                    android:gravity="start|center|top"
+                    android:layout_gravity="start|center|top"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/uwu_wifi"
+                    app:tint="@android:color/white" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="end|center|top"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="8.0sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="end|center|top"
+                    android:layout_gravity="end|center|top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="50%"
+                    android:singleLine="true" />
+                <ImageView
+                    android:gravity="end|center|top"
+                    android:layout_gravity="end|center|top"
+                    android:layout_width="10.0dip"
+                    android:layout_height="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:src="@drawable/uwu_battery_50"
+                    android:layout_marginEnd="5.0dip"
+                    app:tint="@android:color/white" />
+            </LinearLayout>
             <LinearLayout
                 android:layout_gravity="center"
                 android:orientation="vertical"
@@ -53,8 +116,8 @@
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="-35.0dip"
-                    android:fontFamily="@font/font_7f090000"
+                    android:layout_marginBottom="-12.0dip"
+                    android:fontFamily="sans-serif"
                     android:format12Hour="hh"
                     android:format24Hour="kk"
                     android:fontFeatureSettings="tnum, cv03, cv04" />
@@ -65,11 +128,25 @@
                     android:gravity="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="-10.0dip"
-                    android:fontFamily="@font/font_7f090000"
+                    android:layout_marginTop="-12.0dip"
+                    android:fontFamily="sans-serif"
                     android:format12Hour="mm"
                     android:format24Hour="mm"
                     android:fontFeatureSettings="tnum, cv03, cv04" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_gravity="bottom"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:gravity="bottom|center"
+                    android:layout_gravity="bottom|center"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_marginBottom="30.0dip"
+                    android:src="@drawable/uwu_lockscreen"
+                    app:tint="@android:color/white" />
             </LinearLayout>
         </com.neko.elasticview.ElasticView>
         <RelativeLayout

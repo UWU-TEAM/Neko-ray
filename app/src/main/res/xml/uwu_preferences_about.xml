@@ -6,10 +6,16 @@
         android:layout="@layout/uwu_banner_about"
         android:selectable="false"/>
     <Preference
-        android:layout="@layout/uwu_menu_about"
-        android:selectable="false"/>
+        android:icon="@drawable/uwu_icon_update"
+        android:layout="@layout/uwu_update"
+        android:title="@string/uwu_neko_update"
+        android:selectable="false"
+        android:summary="@string/uwu_neko_update_check" />
     <Preference
         android:layout="@layout/uwu_menu_expanded"
+        android:selectable="false"/>
+    <Preference
+        android:layout="@layout/uwu_menu_about"
         android:selectable="false"/>
     <PreferenceCategory android:title="@string/uwu_information_cat">
         <Preference
