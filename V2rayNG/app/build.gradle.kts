@@ -69,7 +69,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.neko.v2ray"
+        applicationId = "com.v2ray.ang"
         minSdk = 27
         targetSdk = 34
         versionCode = 100
@@ -143,7 +143,7 @@ android {
     applicationVariants.all {
         val variant = this
         val versionCodes =
-            mapOf("armeabi-v7a" to 1, "arm64-v8a" to 2)
+            mapOf("armeabi-v7a" to 1, "arm64-v8a" to 2, "x86" to 3, "x86_64" to 4)
 
         variant.outputs
             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
