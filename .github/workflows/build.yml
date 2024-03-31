@@ -1,0 +1,77 @@
+name: pull request
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: "Gradle Wrapper validation"
+        uses: gradle/wrapper-validation-action@v2
+
+      - name: "Setup Gradle"
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: 8.6
+          build-root-directory: systems/commons
+          cache-disabled: false
+          cache-read-only: false
+          cache-write-only: false
+          cache-overwrite-existing: false
+          gradle-home-cache-includes: caches notifications
+
+          gradle-home-cache-cleanup: false
+          add-job-summary: always
+          add-job-summary-as-pr-comment: never
+          dependency-graph: disabled
+          dependency-graph-continue-on-failure: true
+          build-scan-publish: false
+          generate-job-summary: true
+          gradle-home-cache-strict-match: false
+          workflow-job-context: null
+
+      - name: "Setup matchers"
+        run: |
+          # Setting up matchers...
+
+          matchers_dir='${{ github.workspace }}/.github/matchers'
+          matcher_list()
+          {
+            echo 'gradle-build-matcher.json'
+            echo 'gradle-build-kotlin-error-matcher.json'
+          }
+
+          matcher_list | while IFS='' read -r NAME; do
+            if test -f "${matchers_dir:?}/${NAME:?}"; then
+              echo "::add-matcher::${matchers_dir:?}/${NAME:?}"
+              echo "Matcher configured: ${NAME:?}"
+            fi
+          done
+
+      - name: Build project
+        run: ./gradlew --no-daemon build
