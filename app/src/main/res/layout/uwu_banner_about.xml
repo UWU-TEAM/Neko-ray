@@ -28,12 +28,13 @@
             app:cardBackgroundColor="@color/uwu_bg_card"
             app:cardCornerRadius="18.0dip"
             app:cardElevation="0.0dip">
-            <com.neko.ui.WallpaperView
+            <ImageView
                 android:gravity="center"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
+                android:src="@drawable/uwu_banner_about"
                 android:elevation="0.0dip" />
             <LinearLayout
                 android:background="@android:color/black"

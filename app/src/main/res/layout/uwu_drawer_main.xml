@@ -42,7 +42,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/uwu_banner_profile"
-                        android:scaleType="centerCrop"/>
+                        android:scaleType="centerCrop" />
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
             <TextView
@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10.0dip"
                 android:layout_marginBottom="0.0dip"
-                android:text="@string/uwu_header_title"/>
+                android:text="@string/uwu_header_title" />
             <com.neko.marquee.text.Grettings
                 android:textSize="18.0sp"
                 android:textColor="@color/colorText_ActionBar"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10.0dip"
                 android:layout_marginBottom="10.0dip"
-                android:singleLine="true"/>
+                android:singleLine="true" />
             <FrameLayout
                 android:layout_gravity="bottom"
                 android:background="@drawable/uwu_background_lengkung"
@@ -82,286 +82,292 @@
             android:background="@drawable/uwu_background_material"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-            <androidx.core.widget.NestedScrollView
-                android:fillViewport="true"
-                android:layout_above="@+id/uwu_exit"
+            <LinearLayout
+                android:background="@drawable/uwu_background_material"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_behavior="@string/appbar_scrolling_view_behavior">
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_marginTop="0.0dip"
-                    android:layout_marginBottom="16.0dip"
-                    android:layout_marginStart="16.0dip"
-                    android:layout_marginEnd="16.0dip"
+                android:layout_above="@+id/uwu_exit"
+                android:layout_alignParentTop="true">
+                <androidx.core.widget.NestedScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:fillViewport="true"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior">
                     <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
+                        android:orientation="vertical"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_marginTop="0.0dip"
-                        android:onClick="subSetting">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/ic_subscriptions_24dp"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
+                        android:layout_marginBottom="16.0dip"
+                        android:layout_marginStart="16.0dip"
+                        android:layout_marginEnd="16.0dip">
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/title_sub_setting"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
+                            android:layout_marginTop="0.0dip"
+                            android:onClick="subSetting">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/ic_subscriptions_24dp"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_sub_setting"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="settings">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/ic_settings_24dp"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_settings"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="userAssetSetting">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/ic_file_24dp"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_user_asset_setting"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="logcat">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_ic_math_log"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/title_logcat"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="uwuNetworkSwitcher">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_icon_network_switcher"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Network Switcher"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="uwuHostToIp">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_icon_host_to_ip"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Host to ip"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:onClick="UwuAbout">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_about"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/uwu_about"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
                     </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="settings">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/ic_settings_24dp"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_settings"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="userAssetSetting">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/ic_file_24dp"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_user_asset_setting"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="logcat">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_ic_math_log"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/title_logcat"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="uwuNetworkSwitcher">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_icon_network_switcher"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Network Switcher"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="uwuHostToIp">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_icon_host_to_ip"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Host to ip"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                    <LinearLayout
-                        android:gravity="center|right"
-                        android:orientation="horizontal"
-                        android:background="@drawable/uwu_layout_bg"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10.0dip"
-                        android:onClick="UwuAbout">
-                        <ImageView
-                            android:background="@drawable/uwu_google_shape"
-                            android:padding="12.0dip"
-                            android:layout_width="45.0dip"
-                            android:layout_height="45.0dip"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_about"
-                            android:scaleType="fitCenter"
-                            android:backgroundTint="?attr/colorPrimary"
-                            app:tint="?attr/colorIcon"/>
-                        <TextView
-                            android:textSize="14.0sp"
-                            android:textColor="?android:textColorPrimary"
-                            android:gravity="left"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/uwu_about"
-                            android:layout_weight="1.0"/>
-                        <ImageView
-                            android:background="@drawable/uwu_bg_circle_arrow"
-                            android:padding="2.0dip"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_margin="10.0dip"
-                            android:src="@drawable/uwu_arrow"
-                            android:layout_centerVertical="true"
-                            android:layout_alignParentEnd="true"
-                            app:tint="?android:textColorPrimary"/>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.core.widget.NestedScrollView>
+                </androidx.core.widget.NestedScrollView>
+            </LinearLayout>
             <LinearLayout
                 android:gravity="bottom"
-                android:id="@+id/uwu_exit"
                 android:layout_gravity="bottom"
                 android:orientation="horizontal"
+                android:id="@+id/uwu_exit"
                 android:background="@drawable/uwu_background_material"
                 android:paddingBottom="10.0dip"
                 android:layout_width="match_parent"
@@ -383,7 +389,7 @@
                         android:layout_height="50.0dip"
                         android:src="@drawable/uwu_icon_exit"
                         android:scaleType="fitCenter"
-                        app:tint="?attr/colorIcon"/>
+                        app:tint="?attr/colorIcon" />
                     <TextView
                         android:textSize="14.0sp"
                         android:textColor="?attr/colorText"
@@ -394,7 +400,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Exit"
-                        android:layout_weight="1.0"/>
+                        android:layout_weight="1.0" />
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>

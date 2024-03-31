@@ -51,30 +51,16 @@ class ThemeEngine(context: Context) {
             else -> AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         }
 
-    /**
-     * Returns true if Dynamic Colors are enabled, false otherwise.
-     * Setting this property to true enables dynamic colors, false disables dynamic colors.
-     * Keep in mind that dynamic colors will work only on Android 12 i.e. API 31 and higher devices.
-     * And call Activity.recreate() after changing this property so that the changes get applied to the activity.
-     */
-    var isDynamicTheme
-        get() = prefs.getBoolean(DYNAMIC_THEME, Build.VERSION.SDK_INT >= Build.VERSION_CODES.S)
-        set(value) = prefs.edit { putBoolean(DYNAMIC_THEME, value) }
-
-    /**
-     * Get current app theme.
-     * @return a dynamic theme if [isDynamicTheme] is enabled or a static theme otherwise.
-     */
-    fun getTheme(): Int {
-        return if (hasS() && isDynamicTheme) R.style.Theme_ThemeEngine_Dynamic else staticTheme.themeId
-    }
-
-    /**
-     * Get current static app theme, the theme which is used when dynamic color is disabled
-     */
     var staticTheme: Theme
         get() = Theme.values()[prefs.getInt(APP_THEME, 1)]
         set(value) = prefs.edit { putInt(APP_THEME, value.ordinal) }
+
+    /**
+     * Get current app theme.
+     */
+    fun getTheme(): Int {
+        return staticTheme.themeId
+    }
 
     /**
      * Resets static theme
@@ -86,7 +72,6 @@ class ThemeEngine(context: Context) {
     private fun setDefaultValues(context: Context) {
         themeMode = context.getIntSafe(R.integer.theme_mode, ThemeMode.AUTO)
         prefs.edit { putInt(APP_THEME, context.getIntSafe(R.integer.static_theme, 1)) }
-        isDynamicTheme = context.getBooleanSafe(R.bool.dynamic_theme, hasS()) && hasS()
     }
 
     companion object {
@@ -129,7 +114,6 @@ class ThemeEngine(context: Context) {
         }
 
         private const val THEME_MODE = "theme_mode"
-        private const val DYNAMIC_THEME = "dynamic_theme"
         private const val APP_THEME = "app_theme"
         private const val FIRST_START = "first_start"
     }

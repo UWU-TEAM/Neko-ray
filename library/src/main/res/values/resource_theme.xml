@@ -2,8 +2,6 @@
 
 <resources>
 
-    <bool name="true_black">false</bool>
-    <bool name="dynamic_theme">true</bool>
     <integer name="theme_mode">0</integer>
     <integer name="static_theme">1</integer>
 

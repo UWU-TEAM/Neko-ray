@@ -22,17 +22,26 @@ public class NetworkSwitcher extends BaseActivity
         }
         catch (Exception e)
         {
-            Builder ErrorMessage = new Builder(this);
-            ErrorMessage.setMessage("Sorry, this feature is not available for your device.");
-            ErrorMessage.setPositiveButton("I UNDERSTAND", new DialogInterface.OnClickListener()
+            try
             {
-                public void onClick(DialogInterface dialog, int id)
+                Intent RadioInfo = new Intent("android.intent.action.MAIN");
+                RadioInfo.setClassName("com.android.phone", "com.android.phone.settings.RadioInfo");
+                startActivity(RadioInfo);
+                finish();
+            } catch (Exception e2)
+            {
+                Builder ErrorMessage = new Builder(this);
+                ErrorMessage.setMessage("Sorry, this feature is not available for your device.");
+                ErrorMessage.setPositiveButton("I UNDERSTAND", new DialogInterface.OnClickListener()
                 {
-                    dialog.dismiss();
-                    finish();
-                }
-            });
-            ErrorMessage.show();
+                    public void onClick(DialogInterface dialog, int id)
+                    {
+                        dialog.dismiss();
+                        finish();
+                    }
+                });
+                ErrorMessage.show();
+            }
         }
     }
 }

@@ -151,12 +151,14 @@
             android:label="@string/uwu_credits"
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name="com.v2ray.ang.ui.CreditsActivity"
+            android:parentActivityName="com.v2ray.ang.ui.MainActivity"
             android:exported="false" />
 
         <activity
             android:label="@string/uwu_about"
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name="com.v2ray.ang.ui.AboutActivity"
+            android:parentActivityName="com.v2ray.ang.ui.MainActivity"
             android:exported="false" />
 
         <activity

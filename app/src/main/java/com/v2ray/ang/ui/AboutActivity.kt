@@ -68,7 +68,6 @@ class AboutActivity : UwuCollapsingToolbarActivity() {
             .setDisplay(Display.DIALOG)
             .showAppUpdated(true)
             .start()
-        true
     }
 
     fun uwuRepository(view: View) {
