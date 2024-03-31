@@ -2,6 +2,7 @@ name: pull request
 
 on:
   pull_request:
+  workflow_dispatch:
     branches:
       - dev
 
