@@ -7,5 +7,6 @@
         <change>Move BroadcastReceiver from ViewModel to View</change>
         <change>Move Toasts handling from ViewModel to View layer.</change>
         <change>Fixed UnspecifiedRegisterReceiverFlag</change>
+        <change>Update lib Xray-core v1.8.10</change>
     </release>
 </changelog>
