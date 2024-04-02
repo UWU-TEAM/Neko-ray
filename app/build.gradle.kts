@@ -71,8 +71,8 @@ android {
         applicationId = "com.v2ray.ang"
         minSdk = 27
         targetSdk = 34
-        versionCode = 100
-        versionName = "1.0.0"
+        versionCode = 210
+        versionName = "1.0.1"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
 

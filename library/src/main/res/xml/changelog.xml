@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
-    <release version="v1.0.0" versioncode="2000100" summary="Neko v2rayNG" date="2024-03-28">
-        <change>Initial commit</change>
-        <change>More small layout changes</change>
-        <change>Add observatory to V2rayConfig</change>
-        <change>Move BroadcastReceiver from ViewModel to View</change>
-        <change>Move Toasts handling from ViewModel to View layer.</change>
-        <change>Fixed UnspecifiedRegisterReceiverFlag</change>
-        <change>Update lib Xray-core v1.8.10</change>
+    <release version="v1.0.1" versioncode="2000210" summary="Neko v2rayNG" date="2024-04-02">
+        <change>More bug fixed</change>
+        <change>Relayout about preference</change>
+        <change>Bump dependency</change>
     </release>
 </changelog>
