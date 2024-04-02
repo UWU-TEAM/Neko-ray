@@ -6,10 +6,7 @@
         android:layout="@layout/uwu_banner_about"
         android:selectable="false"/>
     <Preference
-        android:layout="@layout/uwu_menu_expanded"
-        android:selectable="false"/>
-    <Preference
-        android:layout="@layout/uwu_menu_about"
+        android:layout="@layout/uwu_menu_expandableview"
         android:selectable="false"/>
     <PreferenceCategory android:title="@string/uwu_information_cat">
         <Preference

@@ -9,9 +9,6 @@
     <string name="server_lab_secret_key" translatable="false">SecretKey</string>
     <string name="title_url" translatable="false">URL</string>
 
-    <public type="attr" name="expandable_visibilityMode" id="0x7f040531" />
-    <public type="attr" name="expandable_visibilityDuration" id="0x7f040532" />
-
     <string-array name="securitys" translatable="false">
         <item>chacha20-poly1305</item>
         <item>aes-128-gcm</item>
