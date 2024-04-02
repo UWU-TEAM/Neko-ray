@@ -38,7 +38,7 @@ jobs:
       - name: "Setup Gradle"
         uses: gradle/actions/setup-gradle@v3
         with:
-          gradle-version: 8.6
+          gradle-version: 8.7
           build-root-directory: systems/commons
           cache-disabled: false
           cache-read-only: false
