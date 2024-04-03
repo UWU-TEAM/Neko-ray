@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/uwu_background_material"
+    android:background="@android:color/transparent"
     android:clipToPadding="false"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,9 +12,9 @@
         android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:baselineAligned="false"
         android:layout_marginTop="0.0dip"
         android:layout_marginBottom="8.0dip"
+        android:baselineAligned="false"
         android:minHeight="?android:listPreferredItemHeightSmall"
         android:paddingStart="?android:listPreferredItemPaddingStart"
         android:paddingEnd="?android:listPreferredItemPaddingEnd">
@@ -108,8 +108,8 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_marginTop="-12.0dip"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-12.0dip">
                 <TextClock
                     android:textSize="40.0sp"
                     android:typeface="monospace"
@@ -126,8 +126,8 @@
                 android:layout_gravity="center"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_marginBottom="-12.0dip"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-12.0dip">
                 <TextClock
                     android:textSize="10.0sp"
                     android:typeface="monospace"
@@ -160,9 +160,9 @@
             android:layout_height="wrap_content"
             android:layout_weight="1.0">
             <FrameLayout
+                android:id="@+id/uwu_bagian_1"
                 android:background="@drawable/uwu_bg_top_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0.0dip"
@@ -188,28 +188,23 @@
                     <com.neko.marquee.deviceinfo.Device
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_name_title_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_name_title"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_name_title" />
                 </RelativeLayout>
             </FrameLayout>
             <FrameLayout
+                android:id="@+id/uwu_bagian_2"
                 android:background="@drawable/uwu_bg_mid_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_2"
-                android:layout_below="@+id/uwu_bagian_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1.0dip"
                 android:layout_marginBottom="1.0dip"
+                android:layout_below="@+id/uwu_bagian_1"
                 android:layout_marginStart="16.0dip"
                 android:layout_marginEnd="0.0dip">
                 <RelativeLayout
@@ -231,28 +226,23 @@
                     <com.neko.marquee.deviceinfo.Board
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_developer_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_developer"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_developer" />
                 </RelativeLayout>
             </FrameLayout>
             <FrameLayout
+                android:id="@+id/uwu_bagian_3"
                 android:background="@drawable/uwu_bg_bot_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_3"
-                android:layout_below="@+id/uwu_bagian_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1.0dip"
                 android:layout_marginBottom="5.0dip"
+                android:layout_below="@+id/uwu_bagian_2"
                 android:layout_marginStart="16.0dip"
                 android:layout_marginEnd="0.0dip">
                 <RelativeLayout
@@ -274,28 +264,23 @@
                     <com.neko.marquee.deviceinfo.OsVersion
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_modder_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_modder"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_modder" />
                 </RelativeLayout>
             </FrameLayout>
             <FrameLayout
+                android:id="@+id/uwu_bagian_4"
                 android:background="@drawable/uwu_bg_top_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_4"
-                android:layout_below="@+id/uwu_bagian_3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5.0dip"
                 android:layout_marginBottom="1.0dip"
+                android:layout_below="@+id/uwu_bagian_3"
                 android:layout_marginStart="16.0dip"
                 android:layout_marginEnd="0.0dip">
                 <RelativeLayout
@@ -317,28 +302,23 @@
                     <com.neko.marquee.deviceinfo.Brand
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_version_name_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_version_name"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_version_name" />
                 </RelativeLayout>
             </FrameLayout>
             <FrameLayout
+                android:id="@+id/uwu_bagian_5"
                 android:background="@drawable/uwu_bg_mid_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_5"
-                android:layout_below="@+id/uwu_bagian_4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1.0dip"
                 android:layout_marginBottom="1.0dip"
+                android:layout_below="@+id/uwu_bagian_4"
                 android:layout_marginStart="16.0dip"
                 android:layout_marginEnd="0.0dip">
                 <RelativeLayout
@@ -360,28 +340,23 @@
                     <com.neko.marquee.deviceinfo.BuildID
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_version_code_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_version_code"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_version_code" />
                 </RelativeLayout>
             </FrameLayout>
             <FrameLayout
+                android:id="@+id/uwu_bagian_6"
                 android:background="@drawable/uwu_bg_bot_about"
                 android:clipToPadding="false"
-                android:id="@+id/uwu_bagian_6"
-                android:layout_below="@+id/uwu_bagian_5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1.0dip"
                 android:layout_marginBottom="0.0dip"
+                android:layout_below="@+id/uwu_bagian_5"
                 android:layout_marginStart="16.0dip"
                 android:layout_marginEnd="0.0dip">
                 <RelativeLayout
@@ -403,16 +378,11 @@
                     <com.neko.marquee.deviceinfo.Serial
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
-                        android:ellipsize="marquee"
                         android:id="@+id/uwu_package_name_summary"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:clickable="true"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:singleLine="false"
                         android:layout_below="@+id/uwu_package_name"
-                        android:marqueeRepeatLimit="marquee_forever"
                         android:layout_alignStart="@+id/uwu_package_name" />
                 </RelativeLayout>
             </FrameLayout>
