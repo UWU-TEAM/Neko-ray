@@ -16,9 +16,9 @@ import (
 
 	mobasset "golang.org/x/mobile/asset"
 
-	v2core "github.com/xtls/xray-core/core"
 	v2net "github.com/xtls/xray-core/common/net"
 	v2filesystem "github.com/xtls/xray-core/common/platform/filesystem"
+	v2core "github.com/xtls/xray-core/core"
 	v2stats "github.com/xtls/xray-core/features/stats"
 	v2serial "github.com/xtls/xray-core/infra/conf/serial"
 	_ "github.com/xtls/xray-core/main/distro/all"
@@ -29,11 +29,12 @@ import (
 )
 
 const (
-	v2Asset = "xray.location.asset"
+	v2Asset     = "xray.location.asset"
 	xudpBaseKey = "xray.xudp.basekey"
 )
 
-/*V2RayPoint V2Ray Point Server
+/*
+V2RayPoint V2Ray Point Server
 This is territory of Go, so no getter and setters!
 */
 type V2RayPoint struct {
@@ -115,8 +116,8 @@ func (v *V2RayPoint) StopLoop() (err error) {
 	return
 }
 
-//Delegate Funcation
-func (v V2RayPoint) QueryStats(tag string, direct string) int64 {
+// Delegate Funcation
+func (v *V2RayPoint) QueryStats(tag string, direct string) int64 {
 	if v.statsManager == nil {
 		return 0
 	}
@@ -201,7 +202,7 @@ func InitV2Env(envPath string, key string) {
 	}
 }
 
-//Delegate Funcation
+// Delegate Funcation
 func TestConfig(ConfigureFileContent string) error {
 	_, err := v2serial.LoadJSONConfig(strings.NewReader(ConfigureFileContent))
 	return err
@@ -248,12 +249,13 @@ func NewV2RayPoint(s V2RayVPNServiceSupportsSet, adns bool) *V2RayPoint {
 	}
 }
 
-/*CheckVersionX string
+/*
+CheckVersionX string
 This func will return libv2ray binding version and V2Ray version used.
 */
 func CheckVersionX() string {
-	var version  = 26
-	return fmt.Sprintf("Lib v%d, Xray-core v%s", version, v2core.Version())
+	var version = 26
+	return fmt.Sprintf("Lib v%d, Xray-core v%s dev7 customized", version, v2core.Version())
 }
 
 func measureInstDelay(ctx context.Context, inst *v2core.Instance) (int64, error) {
