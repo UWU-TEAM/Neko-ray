@@ -66,43 +66,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
-    private val mMsgReceiver = object : BroadcastReceiver() {
-        override fun onReceive(ctx: Context?, intent: Intent?) {
-            when (intent?.getIntExtra("key", 0)) {
-                AppConfig.MSG_STATE_RUNNING -> {
-                    mainViewModel.isRunning.value = true
-                }
 
-                AppConfig.MSG_STATE_NOT_RUNNING -> {
-                    mainViewModel.isRunning.value = false
-                }
-
-                AppConfig.MSG_STATE_START_SUCCESS -> {
-                    toast(R.string.toast_services_success)
-                    mainViewModel.isRunning.value = true
-                }
-
-                AppConfig.MSG_STATE_START_FAILURE -> {
-                    toast(R.string.toast_services_failure)
-                    mainViewModel.isRunning.value = false
-                }
-
-                AppConfig.MSG_STATE_STOP_SUCCESS -> {
-                    mainViewModel.isRunning.value = false
-                }
-
-                AppConfig.MSG_MEASURE_DELAY_SUCCESS -> {
-                    mainViewModel.updateTestResultAction.value = intent.getStringExtra("content")
-                }
-
-                AppConfig.MSG_MEASURE_CONFIG_SUCCESS -> {
-                    val resultPair = intent.getSerializableExtra("content") as Pair<String, Long>
-                    MmkvManager.encodeServerTestDelayMillis(resultPair.first, resultPair.second)
-                    mainViewModel.updateListAction.value = mainViewModel.getPosition(resultPair.first)
-                }
-            }
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         isStoragePermissionGranted()
         super.onCreate(savedInstanceState)
@@ -197,25 +161,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 binding.layoutTest.isFocusable = false
             }
         }
-        mainViewModel.isRunning.value = false
-        startListenBroadcast()
-        MessageUtil.sendMsg2Service(application, AppConfig.MSG_REGISTER_CLIENT, "")
+        mainViewModel.startListenBroadcast()
     }
-    fun startListenBroadcast() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-           registerReceiver(
-                mMsgReceiver,
-                IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY),
-                Context.RECEIVER_EXPORTED
-            )
-        } else {
-           registerReceiver(
-                mMsgReceiver,
-                IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY),
-                Context.RECEIVER_NOT_EXPORTED
-            )
-        }
-    }
+
     private fun copyAssets() {
         val extFolder = Utils.userAssetPath(this)
         lifecycleScope.launch(Dispatchers.IO) {
@@ -775,10 +723,5 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        unregisterReceiver(mMsgReceiver)
     }
 }
