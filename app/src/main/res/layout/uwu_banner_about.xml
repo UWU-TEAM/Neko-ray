@@ -373,9 +373,9 @@
                         android:id="@+id/uwu_package_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Serial"
+                        android:text="Baseband Version"
                         android:singleLine="true" />
-                    <com.neko.marquee.deviceinfo.Serial
+                    <com.neko.marquee.deviceinfo.Baseband
                         android:textSize="14.0sp"
                         android:textColor="?android:textColorSecondary"
                         android:id="@+id/uwu_package_name_summary"

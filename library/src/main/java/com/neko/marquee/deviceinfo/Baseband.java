@@ -5,7 +5,7 @@ import android.os.Build;
 import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatTextView;
 
-public class Serial extends AppCompatTextView {
+public class Baseband extends AppCompatTextView {
     private String memekVersion;
 
     @Override // android.view.View
@@ -15,21 +15,21 @@ public class Serial extends AppCompatTextView {
 
     private void JupokInfoSlur() {
         StringBuilder sb = new StringBuilder();
-        sb.append(Build.SERIAL);
+        sb.append(Build.getRadioVersion());
         setText(sb);
     }
 
-    public Serial(Context context) {
+    public Baseband(Context context) {
         super(context);
         JupokInfoSlur();
     }
 
-    public Serial(Context context, AttributeSet attrs) {
+    public Baseband(Context context, AttributeSet attrs) {
         super(context, attrs);
         JupokInfoSlur();
     }
 
-    public Serial(Context context, AttributeSet attrs, int defStyleAttr) {
+    public Baseband(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         JupokInfoSlur();
     }
