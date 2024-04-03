@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.isVisible
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.neko.themeengine.hasS
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.themeengine.ThemeMode
@@ -28,6 +29,21 @@ class SettingsFragmentTheme : BottomSheetDialogFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        if (hasS()) {
+            binding.dynamicGroup.check(if (themeEngine.isDynamicTheme) R.id.dynamic_on else R.id.dynamic_off)
+            binding.dynamicGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+                if (isChecked) {
+                    when (checkedId) {
+                        R.id.dynamic_off -> themeEngine.isDynamicTheme = false
+                        R.id.dynamic_on -> themeEngine.isDynamicTheme = true
+                    }
+                    requireActivity().recreate()
+                }
+            }
+        } else {
+            binding.dynamicColorLabel.isVisible = false
+            binding.dynamicGroup.isVisible = false
+        }
         binding.themeGroup.check(
             when (themeEngine.themeMode) {
                 ThemeMode.AUTO -> R.id.auto_theme

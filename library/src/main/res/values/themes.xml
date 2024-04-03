@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <style name="Theme.ThemeEngine.Dynamic" parent="@style/ThemeOverlay.Material3.DynamicColors.DayNight" />
+
     <style name="Theme.ThemeEngine.Amber" parent="ThemeOverlay.Material3">
         <item name="colorPrimary">@color/amber_primary</item>
         <item name="colorPrimaryVariant">@color/amber_primary</item>

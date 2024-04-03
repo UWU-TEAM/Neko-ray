@@ -8,7 +8,7 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.v2ray.ang.util.MyContextWrapper
 import com.v2ray.ang.util.Utils
-
+import com.google.android.material.color.DynamicColors
 import com.neko.themeengine.ThemeEngine
 
 abstract class BaseActivity : AppCompatActivity() {

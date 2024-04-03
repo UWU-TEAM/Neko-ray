@@ -47,6 +47,38 @@
             android:text="Dark" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
 
+    <TextView
+        android:id="@+id/dynamic_color_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Dynamic Colors"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/dynamic_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingVertical="8dp"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/dynamic_on"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On" />
+
+        <Button
+            android:id="@+id/dynamic_off"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off" />
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
     <com.google.android.material.button.MaterialButton
         android:id="@+id/change_theme"
         style="@style/Widget.Material3.Button"
