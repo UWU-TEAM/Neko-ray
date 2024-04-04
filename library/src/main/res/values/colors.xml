@@ -4,5 +4,6 @@
 
     <color name="uwu_bg">#ffe5e8f5</color>
     <color name="uwu_bg_card">#ffffffff</color>
+    <color name="transparent">#00000000</color>
 
 </resources>

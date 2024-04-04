@@ -2,6 +2,7 @@ package com.v2ray.ang.ui
 
 import android.Manifest
 import android.content.*
+import android.content.Context
 import android.content.pm.PackageManager
 import android.net.Uri
 import android.net.VpnService
@@ -18,6 +19,8 @@ import com.v2ray.ang.AppConfig
 import android.content.res.ColorStateList
 import android.os.Build
 import com.google.android.material.navigation.NavigationView
+import androidx.annotation.ColorInt
+import androidx.annotation.AttrRes
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
@@ -38,6 +41,7 @@ import com.v2ray.ang.dto.EConfigType
 import com.v2ray.ang.extension.toast
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
+import java.util.*
 import java.util.concurrent.TimeUnit
 import com.v2ray.ang.helper.SimpleItemTouchHelperCallback
 import com.v2ray.ang.service.V2RayServiceManager
@@ -47,6 +51,7 @@ import kotlinx.coroutines.*
 import me.drakeet.support.toast.ToastCompat
 import java.io.File
 import java.io.FileOutputStream
+import com.neko.clock.MyAnalogClock
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -136,6 +141,26 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 }
             }
         })
+
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.HOUR, 0)
+
+        val AnalogClock = findViewById<MyAnalogClock>(R.id.uwu_clock)
+
+        @ColorInt
+        fun Context.getColorFromAttr(@AttrRes attrColor: Int): Int {
+            val typedArray = obtainStyledAttributes(intArrayOf(attrColor))
+            val color = typedArray.getColor(0, 0)
+            typedArray.recycle()
+            return color
+        }
+        val AnalogClockColor = getColorFromAttr(R.attr.uwuClockColor)
+
+        AnalogClock.setCalendar(calendar)
+            .setDiameterInDp(180.0f)
+            .setOpacity(1.0f)
+            .setShowSeconds(true)
+            .setColor(AnalogClockColor)
     }
 
     private fun setupViewModel() {

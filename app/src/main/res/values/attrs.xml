@@ -5,6 +5,7 @@
     <attr name="colorIcon" format="color" />
     <attr name="colorText" format="color" />
     <attr name="colorBg" format="color" />
+    <attr name="uwuClockColor" format="color" />
 
     <declare-styleable name="ExpandableView">
         <attr name="expandable_visibilityMode">

@@ -57,6 +57,20 @@
                     android:src="@drawable/uwu_banner_image"
                     android:scaleType="centerInside" />
 
+                <FrameLayout
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.neko.clock.MyAnalogClock
+                        android:layout_width="250.0dip"
+                        android:layout_height="250.0dip"
+                        android:id="@+id/uwu_clock"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
             </com.google.android.material.card.MaterialCardView>
 
             <LinearLayout
