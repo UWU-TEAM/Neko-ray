@@ -2,8 +2,6 @@ module github.com/2dust/AndroidLibXrayLite
 
 go 1.22
 
-toolchain go1.22.0
-
 require (
 	github.com/gvcgo/vpnparser v0.2.7
 	github.com/xtls/xray-core v1.8.10
