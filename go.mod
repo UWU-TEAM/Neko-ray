@@ -1,6 +1,6 @@
 module github.com/2dust/AndroidLibXrayLite
 
-go 1.22
+go 1.22.2
 
 require (
 	github.com/gvcgo/vpnparser v0.2.7
