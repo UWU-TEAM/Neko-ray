@@ -42,7 +42,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <TextView
-                            android:textSize="17.0sp"
+                            android:textSize="18.0sp"
                             android:textColor="?android:textColorPrimary"
                             android:ellipsize="end"
                             android:layout_width="wrap_content"
