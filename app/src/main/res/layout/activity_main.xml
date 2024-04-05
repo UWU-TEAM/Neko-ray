@@ -44,18 +44,12 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="8.0dip"
                 android:layout_alignParentStart="true"
-                app:cardBackgroundColor="@color/uwu_bg_color"
+                app:cardBackgroundColor="@color/uwu_bg_card"
                 app:cardCornerRadius="24.0dip"
                 app:cardElevation="0.0dip"
-                app:rippleColor="@color/uwu_bg_color"
+                app:rippleColor="@color/uwu_transparent"
                 app:strokeColor="@color/uwu_bg_card"
                 app:strokeWidth="3.0dip">
-
-                <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/uwu_banner_image"
-                    android:scaleType="centerInside" />
 
                 <FrameLayout
                     android:layout_gravity="center"

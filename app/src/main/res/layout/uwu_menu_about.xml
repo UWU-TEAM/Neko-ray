@@ -81,19 +81,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <LinearLayout
-                            android:background="@drawable/uwu_google_shape"
+                            android:background="@drawable/uwu_banner_image"
                             android:layout_width="85.0dip"
                             android:layout_height="85.0dip"
                             android:backgroundTint="?attr/colorPrimary">
-                            <ImageView
-                                android:layout_width="65.0dip"
-                                android:layout_height="65.0dip"
-                                android:gravity="center"
-                                android:layout_gravity="center"
-                                android:layout_marginStart="10.0dip"
-                                android:layout_marginEnd="10.0dip"
-                                android:src="@drawable/uwu_github"
-                                app:tint="?attr/colorIcon" />
                         </LinearLayout>
                     </LinearLayout>
                     <RelativeLayout
