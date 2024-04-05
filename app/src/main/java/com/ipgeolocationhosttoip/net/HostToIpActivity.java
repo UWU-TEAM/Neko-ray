@@ -33,8 +33,8 @@ import java.util.*;
 import java.util.HashMap;
 import java.util.regex.*;
 import org.json.*;
-import com.v2ray.ang.ui.*;
-import com.v2ray.ang.R;
+import com.neko.v2ray.ui.*;
+import com.neko.v2ray.R;
 
 import androidx.appcompat.widget.Toolbar;
 import com.google.android.material.appbar.CollapsingToolbarLayout;

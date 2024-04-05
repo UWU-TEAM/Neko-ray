@@ -10,8 +10,8 @@
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.v2ray.ang.ui.ScSwitchActivity"
-            android:targetPackage="com.v2ray.ang" />
+            android:targetClass="com.neko.v2ray.ui.ScSwitchActivity"
+            android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
     <shortcut
@@ -24,8 +24,8 @@
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.v2ray.ang.ui.ScScannerActivity"
-            android:targetPackage="com.v2ray.ang" />
+            android:targetClass="com.neko.v2ray.ui.ScScannerActivity"
+            android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
     <shortcut
@@ -38,8 +38,8 @@
 
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.v2ray.ang.ui.SettingsActivity"
-            android:targetPackage="com.v2ray.ang" />
+            android:targetClass="com.neko.v2ray.ui.SettingsActivity"
+            android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
 </shortcuts>

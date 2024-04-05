@@ -11,7 +11,7 @@ import android.widget.*;
 import java.io.*;
 import java.util.*;
 
-import com.v2ray.ang.R;
+import com.neko.v2ray.R;
 
 public class SketchwareUtil {
 

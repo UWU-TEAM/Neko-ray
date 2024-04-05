@@ -67,7 +67,7 @@
                 android:layout_marginEnd="-16.0dip"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
                 <fragment
-                    android:name="com.v2ray.ang.ui.SettingsActivity$SettingsFragment"
+                    android:name="com.neko.v2ray.ui.SettingsActivity$SettingsFragment"
                     android:id="@+id/fragment_settings"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />

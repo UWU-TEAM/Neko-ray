@@ -8,8 +8,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import com.v2ray.ang.ui.BaseActivity;
-import com.v2ray.ang.R;
+import com.neko.v2ray.ui.BaseActivity;
+import com.neko.v2ray.R;
 
 public class SpeedTestActivity extends BaseActivity {
     ProgressBar progressBar;

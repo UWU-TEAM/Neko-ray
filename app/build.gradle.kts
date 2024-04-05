@@ -64,11 +64,11 @@ dependencies {
 }
 
 android {
-    namespace = "com.v2ray.ang"
+    namespace = "com.neko.v2ray"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.v2ray.ang"
+        applicationId = "com.neko.v2ray"
         minSdk = 27
         targetSdk = 34
         versionCode = 210

@@ -3,7 +3,7 @@ package com.neko.marquee.text;
 import android.content.Context;
 import android.util.AttributeSet;
 import androidx.appcompat.widget.AppCompatTextView;
-import com.v2ray.ang.BuildConfig;
+import com.neko.v2ray.BuildConfig;
 
 public class AutoMarqueeVersiTextView extends AppCompatTextView {
     private String memekVersion;

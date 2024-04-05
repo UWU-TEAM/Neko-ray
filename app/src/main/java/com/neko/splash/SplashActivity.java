@@ -15,9 +15,9 @@ import android.os.Handler;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
-import com.v2ray.ang.R;
-import com.v2ray.ang.ui.BaseActivity;
-import com.v2ray.ang.ui.MainActivity;
+import com.neko.v2ray.R;
+import com.neko.v2ray.ui.BaseActivity;
+import com.neko.v2ray.ui.MainActivity;
 
 public class SplashActivity extends BaseActivity {
     public static Bitmap getRoundedCornerBitmap(Bitmap bitmap, int i) {

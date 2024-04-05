@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.app.AlertDialog.Builder;
 import android.content.DialogInterface;
 import android.net.Uri;
-import com.v2ray.ang.ui.BaseActivity;
+import com.neko.v2ray.ui.BaseActivity;
 
 public class NetworkSwitcher extends BaseActivity
 {

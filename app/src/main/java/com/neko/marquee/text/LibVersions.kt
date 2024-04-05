@@ -3,7 +3,7 @@ package com.neko.marquee.text
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.v2ray.ang.util.SpeedtestUtil
+import com.neko.v2ray.util.SpeedtestUtil
 
 class LibVersions(context: Context) : AppCompatTextView(context) {
     private var memekVersion: String? = null
