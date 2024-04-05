@@ -362,6 +362,7 @@ public abstract class AnalogClock extends RelativeLayout {
 
         Animation rotator = new RotateAnimation(0,360, Animation.RELATIVE_TO_SELF,0.5f, Animation.RELATIVE_TO_SELF,0.5f);
         rotator.setDuration(duration);
+        rotator.setStartOffset(0);
         rotator.setRepeatMode(Animation.RESTART);
         rotator.setRepeatCount(Animation.INFINITE);
 
@@ -382,6 +383,7 @@ public abstract class AnalogClock extends RelativeLayout {
 
         rotator = new RotateAnimation(0,360, Animation.RELATIVE_TO_SELF,0.5f, Animation.RELATIVE_TO_SELF,0.5f);
         rotator.setDuration(duration);
+        rotator.setStartOffset(0);
         rotator.setRepeatMode(Animation.RESTART);
         rotator.setRepeatCount(Animation.INFINITE);
 
@@ -405,6 +407,7 @@ public abstract class AnalogClock extends RelativeLayout {
 
         rotator = new RotateAnimation(0,360, Animation.RELATIVE_TO_SELF,0.5f, Animation.RELATIVE_TO_SELF,0.5f);
         rotator.setDuration(duration);
+        rotator.setStartOffset(0);
         rotator.setRepeatMode(Animation.RESTART);
         rotator.setRepeatCount(Animation.INFINITE);
 
