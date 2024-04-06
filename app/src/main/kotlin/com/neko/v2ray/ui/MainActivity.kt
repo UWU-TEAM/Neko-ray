@@ -51,7 +51,6 @@ import kotlinx.coroutines.*
 import me.drakeet.support.toast.ToastCompat
 import java.io.File
 import java.io.FileOutputStream
-import com.neko.clock.MyAnalogClock
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -142,11 +141,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         })
 
-        val calendar = Calendar.getInstance()
-        calendar.add(Calendar.HOUR, 0)
-
-        val AnalogClock = findViewById<MyAnalogClock>(R.id.uwu_clock)
-
         @ColorInt
         fun Context.getColorFromAttr(@AttrRes attrColor: Int): Int {
             val typedArray = obtainStyledAttributes(intArrayOf(attrColor))
@@ -154,13 +148,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             typedArray.recycle()
             return color
         }
-        val AnalogClockColor = getColorFromAttr(R.attr.uwuClockColor)
-
-        AnalogClock.setCalendar(calendar)
-            .setDiameterInDp(180.0f)
-            .setOpacity(1.0f)
-            .setShowSeconds(true)
-            .setColor(AnalogClockColor)
     }
 
     private fun setupViewModel() {

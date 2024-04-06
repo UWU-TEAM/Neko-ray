@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -57,11 +56,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.neko.clock.MyAnalogClock
-                        android:layout_width="250.0dip"
-                        android:layout_height="250.0dip"
-                        android:id="@+id/uwu_clock"
-                        android:layout_gravity="center" />
+                    <ImageView
+                        android:layout_width="150.0dip"
+                        android:layout_height="150.0dip"
+                        android:layout_gravity="center"
+                        android:src="@drawable/uwu_banner_image"
+                        app:tint="?attr/colorPrimary" />
 
                 </FrameLayout>
 
@@ -209,25 +209,25 @@
 
                 </LinearLayout>
 
-                    <com.google.android.material.floatingactionbutton.FloatingActionButton
-                        android:layout_gravity="end|bottom|center"
-                        android:id="@+id/fab"
-                        android:focusable="true"
-                        android:nextFocusLeft="@+id/layout_test"
-                        android:clickable="true"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="16.0dip"
-                        android:layout_marginTop="16.0dip"
-                        android:layout_marginRight="16.0dip"
-                        android:layout_marginBottom="35.0dip"
-                        android:src="@drawable/uwu_ic_service_idle"
-                        android:layout_alignParentBottom="true"
-                        android:layout_alignParentEnd="true"
-                        app:tint="@color/colorText_ActionBar"
-                        app:layout_anchorGravity="end|bottom|center"
-                        app:shapeAppearanceOverlay="@style/fab_square"
-                        style="@style/Widget.Design.FloatingActionButton" />
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_gravity="end|bottom|center"
+                    android:id="@+id/fab"
+                    android:focusable="true"
+                    android:nextFocusLeft="@+id/layout_test"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16.0dip"
+                    android:layout_marginTop="16.0dip"
+                    android:layout_marginRight="16.0dip"
+                    android:layout_marginBottom="35.0dip"
+                    android:src="@drawable/uwu_ic_service_idle"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    app:tint="@color/colorText_ActionBar"
+                    app:layout_anchorGravity="end|bottom|center"
+                    app:shapeAppearanceOverlay="@style/fab_square"
+                    style="@style/Widget.Design.FloatingActionButton" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
@@ -244,8 +244,7 @@
         app:itemIconTint="@null"
         app:menu="@null">
 
-        <include
-            layout="@layout/uwu_drawer_main" />
+        <include layout="@layout/uwu_drawer_main" />
 
         <LinearLayout
             android:layout_gravity="bottom"
