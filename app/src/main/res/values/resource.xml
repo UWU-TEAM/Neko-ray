@@ -180,12 +180,14 @@
     <string-array name="language_select" translatable="false">
         <item>auto</item>
         <item>English</item>
+        <item>Indonesia</item>
     </string-array>
 
 
     <string-array name="language_select_value" translatable="false">
         <item>auto</item>
         <item>en</item>
+        <item>in</item>
     </string-array>
 
     <string-array name="mux_xudp_quic_value" translatable="false">

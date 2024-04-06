@@ -56,10 +56,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
+                    <LinearLayout
+                        android:background="@drawable/uwu_banner_image_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:alpha="0.6" />
+
                     <ImageView
-                        android:layout_width="150.0dip"
-                        android:layout_height="150.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center"
+                        android:padding="5.0dip"
                         android:src="@drawable/uwu_banner_image"
                         app:tint="?attr/colorPrimary" />
 
@@ -97,7 +104,7 @@
                             android:gravity="center"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="SpeedTest" />
+                            android:text="@string/uwu_speedtest_title" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -105,7 +112,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <TextView
+                            <com.neko.marquee.text.AutoMarqueeTextView
                                 android:textSize="14.0sp"
                                 android:textColor="?attr/colorPrimary"
                                 android:ellipsize="marquee"
@@ -114,10 +121,11 @@
                                 android:fadingEdge="horizontal"
                                 android:layout_width="0.0dip"
                                 android:layout_height="wrap_content"
-                                android:text="Speed Network"
+                                android:text="@string/uwu_speedtest_summary"
                                 android:scrollHorizontally="true"
                                 android:singleLine="true"
-                                android:layout_weight="1.0" />
+                                android:layout_weight="1.0"
+                                android:marqueeRepeatLimit="marquee_forever" />
 
                         </LinearLayout>
 
@@ -149,7 +157,7 @@
                             android:textColor="?attr/colorMainText"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Status" />
+                            android:text="@string/uwu_status_connection_title" />
 
                         <LinearLayout
                             android:orientation="horizontal"

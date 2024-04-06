@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>Tolak</item>
+        <item>Ijinkan</item>
+        <item>Lewati</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QRcode</item>
+        <item>Ekspor ke papan klip</item>
+        <item>Ekspor konfigurasi lengkap ke clipboard</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QRcode</item>
+        <item>Ekspor ke papan klip</item>
+    </string-array>
+
+    <string-array name="routing_tag">
+        <item>proxy URL atau IP</item>
+        <item>direct URL atau IP</item>
+        <item>blocked URL atau IP</item>
+    </string-array>
+
+    <string-array name="routing_mode">
+        <item>Global proxy</item>
+        <item>Bypassing the LAN address then proxy</item>
+        <item>Bypass mainland address then proxy</item>
+        <item>Bypassing LAN and mainland address then proxy</item>
+        <item>Global direct</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>Proxy only</item>
+    </string-array>
+</resources>

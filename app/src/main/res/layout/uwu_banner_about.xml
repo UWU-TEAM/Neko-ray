@@ -183,7 +183,7 @@
                         android:id="@+id/uwu_name_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Device Name"
+                        android:text="@string/uwu_devicename_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.Device
                         android:textSize="14.0sp"
@@ -221,7 +221,7 @@
                         android:id="@+id/uwu_developer"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Board"
+                        android:text="@string/uwu_board_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.Board
                         android:textSize="14.0sp"
@@ -259,7 +259,7 @@
                         android:id="@+id/uwu_modder"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="OS Version"
+                        android:text="@string/uwu_osversion_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.OsVersion
                         android:textSize="14.0sp"
@@ -297,7 +297,7 @@
                         android:id="@+id/uwu_version_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Brand"
+                        android:text="@string/uwu_brand_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.Brand
                         android:textSize="14.0sp"
@@ -335,7 +335,7 @@
                         android:id="@+id/uwu_version_code"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Build ID"
+                        android:text="@string/uwu_buildid_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.BuildID
                         android:textSize="14.0sp"
@@ -373,7 +373,7 @@
                         android:id="@+id/uwu_package_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Baseband Version"
+                        android:text="@string/uwu_baseband_title"
                         android:singleLine="true" />
                     <com.neko.marquee.deviceinfo.Baseband
                         android:textSize="14.0sp"

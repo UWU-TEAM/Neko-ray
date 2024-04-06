@@ -11,5 +11,6 @@
         <change>Move Back Toasts handling from View layer to ViewModel.</change>
         <change>Update dependency com.tencent:mmkv-static v1.3.3 => v1.3.4</change>
         <change>Core Bump to 20240403 build</change>
+        <change>Add indonesian language</change>
     </release>
 </changelog>

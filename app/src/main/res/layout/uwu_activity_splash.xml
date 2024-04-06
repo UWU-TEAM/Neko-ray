@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/splash_root"
     android:background="?attr/colorPrimaryContainer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <com.neko.waveview.WaveView
         android:id="@+id/wave_view"
@@ -28,16 +27,19 @@
 
         <LinearLayout
             android:id="@+id/logo_bg"
-            android:background="@drawable/uwu_logo_elevation"
             android:padding="3.0dip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/logo_view"
                 android:layout_width="160.0dip"
                 android:layout_height="160.0dip"
-                app:srcCompat="@drawable/uwu_banner_profile" />
+                android:src="@drawable/uwu_banner_profile"
+                app:civ_border_color="?attr/colorPrimary"
+                app:civ_border_overlay="true"
+                app:civ_border_width="2.0dip"
+                app:civ_circle_background_color="@color/uwu_bg" />
 
         </LinearLayout>
 

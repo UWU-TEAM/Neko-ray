@@ -377,6 +377,7 @@ object Utils {
         when (settingsStorage?.decodeString(AppConfig.PREF_LANGUAGE) ?: "auto") {
             "auto" ->  getSysLocale()
             "en" -> Locale("en")
+            "in" -> Locale("in")
             else -> getSysLocale()
         }
 

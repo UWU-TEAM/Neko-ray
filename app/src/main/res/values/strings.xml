@@ -250,7 +250,26 @@
     <string name="uwu_version_sdk_minimum">Min SDK Version</string>
     <string name="uwu_version_sdk_target">Target SDK Version</string>
     <string name="uwu_package_name">Package name</string>
-    <string name="uwu_neko_update">Update</string>
-    <string name="uwu_neko_update_check">Check now</string>
-
+    <string name="uwu_speedtest_title">SpeedTest</string>
+    <string name="uwu_speedtest_summary">Speed Network</string>
+    <string name="uwu_status_connection_title">Status</string>
+    <string name="uwu_network_switcher_title">Network Switcher</string>
+    <string name="uwu_host_to_ip_title">Host to ip</string>
+    <string name="uwu_exit_title">Exit</string>
+    <string name="uwu_maintainer_title">This app is under maintenance</string>
+    <string name="uwu_border_about_title">Additional Options</string>
+    <string name="uwu_border_about_summary">Tap the arrow icon on the side</string>
+    <string name="uwu_devicename_title">Device Name</string>
+    <string name="uwu_board_title">Board</string>
+    <string name="uwu_osversion_title">Os Version</string>
+    <string name="uwu_brand_title">Brand</string>
+    <string name="uwu_buildid_title">Build ID</string>
+    <string name="uwu_baseband_title">Baseband Version</string>
+    <string name="uwu_github_title">Github</string>
+    <string name="uwu_github_summary">Source code repository</string>
+    <string name="uwu_credit_title">Credits</string>
+    <string name="uwu_updater_title">Check Update</string>
+    <string name="uwu_changrlog_title">Changelog</string>
+    <string name="uwu_feetback_title">Feetback</string>
+    <string name="uwu_modder_title">Modders</string>
 </resources>

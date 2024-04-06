@@ -4,14 +4,14 @@
         android:layout="@layout/uwu_banner_settings"
         android:selectable="false" />
     <Preference
-        android:layout="@layout/uwu_battery_storage"
-        android:selectable="false" />
-    <Preference
         android:icon="@drawable/uwu_check"
         android:layout="@layout/uwu_maintainer"
-        android:title="This app is under maintenance"
+        android:title="@string/uwu_maintainer_title"
         android:selectable="false"
         android:summary="AnGgIt86" />
+    <Preference
+        android:layout="@layout/uwu_battery_storage"
+        android:selectable="false" />
     <PreferenceCategory android:title="@string/title_settings">
         <SwitchPreference
             android:defaultValue="true"

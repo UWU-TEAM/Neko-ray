@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_widget_name">Switch</string>
+    <string name="app_tile_name">Switch</string>
+    <string name="app_tile_first_use">Penggunaan pertama fitur ini, silakan gunakan aplikasi untuk menambahkan server</string>
+    <string name="navigation_drawer_open">Buka panel navigasi</string>
+    <string name="navigation_drawer_close">Tutup panel navigasi</string>
+    <string name="migration_success">Migrasi data berhasil!</string>
+    <string name="migration_fail">Migrasi data gagal!</string>
+
+    <!-- Notifications -->
+    <string name="notification_action_stop_v2ray">Berhenti</string>
+    <string name="toast_permission_denied">Tolong berikan perizinan terlebih dahulu</string>
+    <string name="notification_action_more">klik untuk lebih lanjut</string>
+    <string name="toast_services_start">Mulai Layanan</string>
+    <string name="toast_services_stop">Hentikan Layanan</string>
+    <string name="toast_services_success">Layanan Berhasil Di Mulai</string>
+    <string name="toast_services_failure">Gagal Memulai Layanan</string>
+
+    <!--ServerActivity-->
+    <string name="title_server">Config</string>
+    <string name="menu_item_add_config">Tambahkan config</string>
+    <string name="menu_item_save_config">Simpan config</string>
+    <string name="menu_item_del_config">Hapus config</string>
+    <string name="menu_item_import_config_qrcode">Impor config dari Kode QR</string>
+    <string name="menu_item_import_config_clipboard">Impor config dari Clipboard</string>
+    <string name="menu_item_import_config_manually_vmess">Ketik secara manual[Vmess]</string>
+    <string name="menu_item_import_config_manually_vless">Ketik secara manual[VLESS]</string>
+    <string name="menu_item_import_config_manually_ss">Ketik secara manual[Shadowsocks]</string>
+    <string name="menu_item_import_config_manually_socks">Ketik secara manual[Socks]</string>
+    <string name="menu_item_import_config_manually_trojan">Ketik secara manual[Trojan]</string>
+    <string name="menu_item_import_config_manually_wireguard">Ketik secara manual[Wireguard ]</string>
+    <string name="menu_item_import_config_custom">Config khusus</string>
+    <string name="menu_item_import_config_custom_clipboard">Impor config khusus dari Clipboard</string>
+    <string name="menu_item_import_config_custom_local">Impor config khusus dari lokal</string>
+    <string name="menu_item_import_config_custom_url">Impor config khusus dari URL</string>
+    <string name="menu_item_import_config_custom_url_scan">Impor URL pemindaian config khusus</string>
+    <string name="del_config_comfirm">Konfirmasi penghapusan？</string>
+    <string name="server_lab_remarks">Keterangan</string>
+    <string name="server_lab_address">address</string>
+    <string name="server_lab_port">port</string>
+    <string name="server_lab_id">id</string>
+    <string name="server_lab_alterid">alterId</string>
+    <string name="server_lab_security">keamanan</string>
+    <string name="server_lab_network">Jaringan</string>
+    <string name="server_lab_more_function">Transportasi</string>
+    <string name="server_lab_head_type">tipe kepala</string>
+    <string name="server_lab_mode_type">mode gRPC</string>
+    <string name="server_lab_request_host">hosting permintaan(host/host ws/host httpupgrade/host h2)/keamanan QUIC/Otoritas gRPC</string>
+    <string name="server_lab_path">jalur(jalur ws /httpupgrade path/h2 path)/QUIC key/kcp seed/gRPC serviceName</string>
+    <string name="server_lab_stream_security">TLS</string>
+    <string name="server_lab_allow_insecure">allowInsecure</string>
+    <string name="server_lab_sni">SNI</string>
+    <string name="server_lab_address3">address</string>
+    <string name="server_lab_port3">port</string>
+    <string name="server_lab_id3">password</string>
+    <string name="server_lab_security3">security</string>
+    <string name="server_lab_id4">Password(Opsional)</string>
+    <string name="server_lab_security4">User(Opsional)</string>
+    <string name="server_lab_encryption">enkripsi</string>
+    <string name="server_lab_flow">flow</string>
+    <string name="server_lab_reserved">Reserved(Opsional)</string>
+    <string name="server_lab_local_address">Alamat lokal (opsional IPv4/IPv6, dipisahkan dengan koma)</string>
+    <string name="server_lab_local_mtu">Mtu(opsional, default 1420)</string>
+    <string name="toast_success">Sukses</string>
+    <string name="toast_failure">Gagal</string>
+    <string name="toast_none_data">Tidak ada apa-apa</string>
+    <string name="toast_incorrect_protocol">Protokol salah</string>
+    <string name="toast_decoding_failed">Decoding gagal</string>
+    <string name="title_file_chooser">Pilih Config</string>
+    <string name="toast_require_file_manager">Harap insta Filel Manajer.</string>
+    <string name="server_customize_config">Sesuaikan Config</string>
+    <string name="toast_config_file_invalid">Config Tidak Valid</string>
+    <string name="server_lab_content">Konten</string>
+    <string name="toast_none_data_clipboard">Tidak ada data di clipboard</string>
+    <string name="toast_invalid_url">URL tidak valid</string>
+    <string name="server_lab_need_inbound">Pastikan port masuk konsisten dengan pengaturan</string>
+    <string name="toast_malformed_josn">Format Config Salah</string>
+    <string name="server_lab_request_host6">Host(SNI)(Opsional)</string>
+    <string name="toast_asset_copy_failed">Penyalinan file gagal, silakan gunakan File Manajer</string>
+    <string name="menu_item_add_asset">Tambahkan aset</string>
+    <string name="menu_item_add_file">Tambahkan file</string>
+    <string name="menu_item_add_url">Tambahkan URL</string>
+    <string name="menu_item_download_file">Unduh file</string>
+    <string name="title_user_asset_add_url">Tambahkan URL aset</string>
+    <string name="msg_file_not_found">File tidak ditemukan</string>
+    <string name="msg_remark_is_duplicate">Keterangan sudah ada</string>
+
+
+    <!-- PerAppProxyActivity -->
+    <string name="msg_dialog_progress">Memuat</string>
+    <string name="menu_item_search">Pencarian</string>
+    <string name="menu_item_select_all">Pilih semua</string>
+    <string name="msg_enter_keywords">Masukkan kata kunci</string>
+    <string name="switch_bypass_apps_mode">Mode Bypass</string>
+    <string name="menu_item_select_proxy_app">Pilih aplikasi proxy secara otomatis</string>
+    <string name="msg_downloading_content">Mengunduh konten</string>
+    <string name="menu_item_export_proxy_app">Ekspor ke Clipboard</string>
+    <string name="menu_item_import_proxy_app">Impor dari Clipboard</string>
+
+
+    <!-- Preferences -->
+    <string name="title_settings">Pengaturan</string>
+    <string name="title_advanced">Pengaturan Lanjutan</string>
+    <string name="title_vpn_settings">Pengaturan VPN</string>
+    <string name="title_pref_per_app_proxy">Proxy per aplikasi</string>
+    <string name="summary_pref_per_app_proxy">Umum: Aplikasi yang dicentang adalah proxy, koneksi langsung tidak dicentang; \nmode bypass: aplikasi yang dicentang terhubung langsung, proxy yang tidak dicentang. \nPilihan untuk memilih aplikasi proxy secara otomatis di menu</string>
+
+    <string name="title_mux_settings">Pengaturan Mux</string>
+    <string name="title_pref_mux_enabled">Aktifkan Mux</string>
+    <string name="summary_pref_mux_enabled">Lebih Cepat, tetapi dapat menyebabkan konektivitas tidak stabil\nsesuaikan cara menangani TCP, UDP dan QUIC di bawah</string>
+    <string name="title_pref_mux_concurency">Koneksi TCP（rentang -1 hingga 1024）</string>
+    <string name="title_pref_mux_xudp_concurency">Koneksi XUDP（rentang -1 hingga 1024）</string>
+    <string name="title_pref_mux_xudp_quic">Penanganan QUIC di terowongan mux</string>
+
+    <string name="title_pref_speed_enabled">Aktifkan tampilan kecepatan</string>
+    <string name="summary_pref_speed_enabled">Tampilkan kecepatan saat ini di notifikasi.\nIkon notifikasi akan berubah berdasarkan penggunaan.</string>
+
+    <string name="title_pref_sniffing_enabled">Aktifkan Sniffing</string>
+    <string name="summary_pref_sniffing_enabled">Coba sniff domain dari paket (default aktif)</string>
+
+    <string name="title_pref_local_dns_enabled">Aktifkan DNS lokal</string>
+    <string name="summary_pref_local_dns_enabled">DNS yang diproses oleh modul DNS inti (Disarankan, jika perlu perutean Melewati LAN dan alamat daratan)</string>
+
+    <string name="title_pref_fake_dns_enabled">Aktifkan DNS palsu</string>
+    <string name="summary_pref_fake_dns_enabled">lokal DNS mengembalikan alamat IP palsu (lebih cepat, tetapi mungkin tidak berfungsi untuk beberapa aplikasi)</string>
+
+    <string name="title_pref_prefer_ipv6">Pilih IPv6</string>
+    <string name="summary_pref_prefer_ipv6">Pilih alamat dan rute IPv6</string>
+
+    <string name="title_pref_routing">Routing</string>
+    <string name="title_pref_routing_domain_strategy">Strategi domain</string>
+    <string name="title_pref_routing_mode">Aturan yang ditentukan sebelumnya</string>
+    <string name="title_pref_routing_custom">Aturan khusus</string>
+
+    <string name="title_pref_remote_dns">DNS jarak jauh (Opsional )</string>
+    <string name="summary_pref_remote_dns">DNS</string>
+
+    <string name="title_pref_vpn_dns">VPN DNS (hanya IPv4/v6)</string>
+
+    <string name="title_pref_domestic_dns">DNS Domestik (Opsional)</string>
+    <string name="summary_pref_domestic_dns">DNS</string>
+
+    <string name="title_pref_proxy_sharing_enabled">Izinkan koneksi dari LAN</string>
+    <string name="summary_pref_proxy_sharing_enabled">Perangkat lain dapat terhubung ke proxy dengan alamat ip Anda melalui kaus kaki/http , Hanya aktifkan di jaringan tepercaya untuk menghindari koneksi tidak sah</string>
+    <string name="toast_warning_pref_proxysharing_short">Izinkan koneksi dari LAN, Pastikan Anda berada di jaringan tepercaya</string>
+
+    <string name="title_pref_allow_insecure">allowInsecure</string>
+    <string name="summary_pref_allow_insecure">Saat TLS, port proxy default AllowInsecure</string>
+
+    <string name="title_pref_socks_port">SOCKS5</string>
+    <string name="summary_pref_socks_port">SOCKS5 port proxy</string>
+
+    <string name="title_pref_http_port">HTTP port proxy</string>
+    <string name="summary_pref_http_port">Port proxy HTTP</string>
+
+    <string name="title_pref_local_dns_port">Port DNS lokal</string>
+    <string name="summary_pref_local_dns_port">Port DNS lokal</string>
+
+    <string name="title_pref_confirm_remove">Konfirmasi untuk menghapus config</string>
+    <string name="summary_pref_confirm_remove">Untuk menghapus config memerlukan konfirmasi kedua oleh pengguna</string>
+
+    <string name="title_pref_start_scan_immediate">Segera mulai memindai</string>
+    <string name="summary_pref_start_scan_immediate">Buka kamera untuk memindai segera saat startup, jika tidak, Anda dapat memilih untuk memindai kode atau memilih foto di toolbar</string>
+
+    <string name="title_pref_feedback">Umpan Balik</string>
+    <string name="summary_pref_feedback">Peningkatan umpan balik atau bug ke GitHub</string>
+    <string name="summary_pref_tg_group">Bergabung dengan Grup Telegram</string>
+    <string name="toast_tg_app_not_found">Aplikasi Telegram tidak ditemukan</string>
+    <string name="title_privacy_policy">Kebijakan privasi</string>
+
+    <string name="title_pref_promotion">Promosi</string>
+    <string name="summary_pref_promotion">Promosi, klik untuk detailnya (Donasi dapat dihapus)</string>
+
+    <string name="title_pref_auto_update_subscription">Pembaruan langganan otomatis</string>
+    <string name="summary_pref_auto_update_subscription">Perbarui langganan Anda secara otomatis dengan interval di latar belakang. Tergantung pada perangkat, fitur ini mungkin tidak selalu berfungsi</string>
+    <string name="title_pref_auto_update_interval">Interval Pembaruan Otomatis (Menit, nilai Min 15)</string>
+
+    <string name="title_core_loglevel">Level Log</string>
+    <string name="title_mode">Mode</string>
+    <string name="title_mode_help">Klik untuk bantuan lebih lanjut</string>
+    <string name="title_language">Bahasa</string>
+    <string name="title_ui_settings">Pengaturan UI</string>
+
+    <string name="title_logcat">Logcat</string>
+    <string name="logcat_copy">Salin</string>
+    <string name="logcat_clear">Hapus</string>
+    <string name="title_service_restart">Mulai Ulang Layanan</string>
+    <string name="title_del_all_config">Hapus semua config</string>
+    <string name="title_del_duplicate_config">Hapus config ganda</string>
+    <string name="title_del_invalid_config">Hapus config yang tidak valid</string>
+    <string name="title_export_all">Ekspor config non-kustom ke clipboard</string>
+    <string name="title_sub_setting">Pengaturan grup langganan</string>
+    <string name="sub_setting_remarks">keterangan</string>
+    <string name="sub_setting_url">URL opsional</string>
+    <string name="sub_setting_enable">Aktifkan pembaruan</string>
+    <string name="sub_auto_update">Aktifkan pembaruan otomatis</string>
+    <string name="title_sub_update">Perbarui langganan</string>
+    <string name="title_ping_all_server">Tcping semua config</string>
+    <string name="title_real_ping_all_server">Penundaan nyata semua config</string>
+    <string name="title_user_asset_setting">File aset geografis</string>
+    <string name="title_sort_by_test_results">Menyortir berdasarkan hasil pengujian</string>
+    <string name="title_filter_config">Filter config</string>
+    <string name="filter_config_all">Semua grup langganan</string>
+    <string name="title_del_duplicate_config_count">Hapus %d config ganda</string>
+
+    <string name="tasker_start_service">Mulai Layanan</string>
+    <string name="tasker_setting_confirm">Konfirmasi</string>
+
+    <string name="routing_settings_title">Pengaturan Perutean</string>
+    <string name="routing_settings_tips">Dipisahkan dengan koma(,),ingat untuk menyimpan</string>
+    <string name="routing_settings_save">Simpan</string>
+    <string name="routing_settings_delete">Hapus</string>
+    <string name="routing_settings_scan_replace">Pindai dan ganti</string>
+    <string name="routing_settings_scan_append">Pindai dan tambahkan</string>
+    <string name="routing_settings_default_rules">tetapkan aturan perutean default</string>
+
+    <string name="connection_test_pending">Periksa Konektivitas</string>
+    <string name="connection_test_testing">Pengujian…</string>
+    <string name="connection_test_available">Berhasil: Koneksi HTTP memakan waktu %dms</string>
+    <string name="connection_test_error">Gagal mendeteksi koneksi internet: %s</string>
+    <string name="connection_test_fail">Internet Tidak Tersedia</string>
+    <string name="connection_test_error_status_code">Kode kesalahan: #%d</string>
+    <string name="connection_connected">Tersambung, ketuk untuk memeriksa koneksi</string>
+    <string name="connection_not_connected">Tidak terhubung</string>
+
+    <string name="import_subscription_success">Import Langganan Berhasil</string>
+    <string name="import_subscription_failure">Impor Langganan Gagal</string>
+    <string name="title_fragment_settings">Pengaturan Fragmen</string>
+    <string name="title_pref_fragment_packets">Paket Fragmen</string>
+    <string name="title_pref_fragment_length">Panjang Fragmen (min-maks)</string>
+    <string name="title_pref_fragment_interval">Interval Fragmen (min-maks)</string>
+    <string name="title_pref_fragment_enabled">Aktifkan Fragmen</string>
+
+    <!-- Neko String -->
+    <string name="title_theme_settings">Pengaturan Tema</string>
+    <string name="title_choose_theme">Pilih Warna Tema</string>
+    <string name="uwu_header_title">Hai, <b>onii-chan</b></string>
+    <string name="uwu_edit">Edit</string>
+    <string name="uwu_credits">Kredit</string>
+    <string name="uwu_about">Tentang Aplikasi</string>
+    <string name="uwu_tools">Alat</string>
+    <string name="uwu_information_cat">Informasi</string>
+    <string name="uwu_neko_version">Versi Aplikasi</string>
+    <string name="uwu_build_type">Jenis Pembuatan</string>
+    <string name="uwu_build_date">Tanggal Pembuatan</string>
+    <string name="uwu_recommended_os_cat">OS yang Direkomendasikan</string>
+    <string name="uwu_version_sdk_minimum">Versi Minimum SDK</string>
+    <string name="uwu_version_sdk_target">Versi Target SDK</string>
+    <string name="uwu_package_name">Nama paket</string>
+    <string name="uwu_speedtest_title">SpeedTest</string>
+    <string name="uwu_speedtest_summary">Kecepatan Jaringan</string>
+    <string name="uwu_status_connection_title">Status</string>
+    <string name="uwu_network_switcher_title">Pengalih Jaringan</string>
+    <string name="uwu_host_to_ip_title">Host to ip</string>
+    <string name="uwu_exit_title">Keluar</string>
+    <string name="uwu_maintainer_title">Aplikasi ini sedang dalam pemeliharaan</string>
+    <string name="uwu_border_about_title">Opsi Tambahan</string>
+    <string name="uwu_border_about_summary">Ketuk ikon panah di samping</string>
+    <string name="uwu_devicename_title">Nama perangkat</string>
+    <string name="uwu_board_title">Board</string>
+    <string name="uwu_osversion_title">Versi Os</string>
+    <string name="uwu_brand_title">Merek</string>
+    <string name="uwu_buildid_title">Build ID</string>
+    <string name="uwu_baseband_title">Versi Baseband</string>
+    <string name="uwu_github_title">Github</string>
+    <string name="uwu_github_summary">Repositori kode sumber</string>
+    <string name="uwu_credit_title">Kredit</string>
+    <string name="uwu_updater_title">Cek pembaruan</string>
+    <string name="uwu_changrlog_title">Changelog</string>
+    <string name="uwu_feetback_title">Feetback</string>
+    <string name="uwu_modder_title">Modder</string>
+</resources>

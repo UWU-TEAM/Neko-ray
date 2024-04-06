@@ -61,7 +61,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Changelog"
+                            android:text="@string/uwu_changrlog_title"
                             android:singleLine="false" />
                     </LinearLayout>
                 </FrameLayout>
@@ -115,7 +115,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="feedback"
+                            android:text="@string/uwu_feetback_title"
                             android:singleLine="false" />
                     </LinearLayout>
                 </FrameLayout>
@@ -169,7 +169,7 @@
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Modder"
+                            android:text="@string/uwu_modder_title"
                             android:singleLine="false" />
                     </LinearLayout>
                 </FrameLayout>
