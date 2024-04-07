@@ -620,6 +620,23 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 }
     }
 
+    private fun keluar() {
+        val builder = AlertDialog.Builder(this)
+        builder.setMessage(R.string.uwu_exit_message)
+            .setCancelable(false) // tidak bisa tekan tombol back
+            // jika pilih yes
+            .setPositiveButton(R.string.uwu_text_yes) { _, _ ->
+                if (mainViewModel.isRunning.value == true) {
+                    Utils.stopVService(this)
+                }
+                this@MainActivity.finish()
+            }
+            // jika pilih no
+            .setNegativeButton(R.string.uwu_text_no) { dialog, _ ->
+                dialog.cancel()
+            }.show()
+    }
+
     /**
      * import customize config
      */
@@ -703,7 +720,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     fun uwuExitApp(view: View) {
-        finishAffinity()
+        keluar()
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

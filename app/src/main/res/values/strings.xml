@@ -272,4 +272,7 @@
     <string name="uwu_changrlog_title">Changelog</string>
     <string name="uwu_feetback_title">Feetback</string>
     <string name="uwu_modder_title">Modders</string>
+    <string name="uwu_exit_message">Are you sure you want to leave this application?</string>
+    <string name="uwu_text_yes">Yes</string>
+    <string name="uwu_text_no">No</string>
 </resources>
