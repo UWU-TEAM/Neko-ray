@@ -378,6 +378,7 @@ object Utils {
             "auto" ->  getSysLocale()
             "en" -> Locale("en")
             "in" -> Locale("in")
+            "ja" -> Locale("ja")
             else -> getSysLocale()
         }
 

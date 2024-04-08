@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>拒否する</item>
+        <item>許す</item>
+        <item>スキップしてください</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QRコード</item>
+        <item>クリップボードにエクスポート</item>
+        <item>完全な構成をクリップボードにエクスポート</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QRコード</item>
+        <item>クリップボードにエクスポート</item>
+    </string-array>
+
+    <string-array name="routing_tag">
+        <item>プロキシ URL と IP アドレス</item>
+        <item>IP アドレスに直接 URL</item>
+        <item>IP でブロックされた URL</item>
+    </string-array>
+
+    <string-array name="routing_mode">
+        <item>グローバルプロキシ</item>
+        <item>LANアドレスをバイパスしてからプロキシを使用する</item>
+        <item>本土のアドレスをバイパスしてからプロキシをバイパスする</item>
+        <item>LAN とメインランド アドレスをバイパスしてからプロキシをバイパスする</item>
+        <item>グローバルダイレクト</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>プロキシのみ</item>
+    </string-array>
+</resources>

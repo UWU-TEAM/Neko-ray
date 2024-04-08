@@ -51,6 +51,18 @@ public class Grettings extends AppCompatTextView {
             } else {
                 sb.append("💤 Waktunya Tidur...");
             }
+        } else if (language.equals("ja")) {
+            if (timeOfDay >= 4 && timeOfDay < 9) {
+                sb.append("🌤 おはよう...");
+            } else if (timeOfDay >= 9 && timeOfDay < 16) {
+                sb.append("⛅ こんにちは...");
+            } else if (timeOfDay >= 16 && timeOfDay < 21) {
+                sb.append("🌥️ こんばんは...");
+            } else if (timeOfDay >= 21 && timeOfDay < 24) {
+                sb.append("🌙 おやすみ...");
+            } else {
+                sb.append("💤 寝る時間だよ...");
+            }
         } else {
             if (timeOfDay >= 4 && timeOfDay < 9) {
                 sb.append("🌤 Good Morning...");

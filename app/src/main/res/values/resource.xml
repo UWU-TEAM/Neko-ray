@@ -181,6 +181,7 @@
         <item>auto</item>
         <item>English</item>
         <item>Indonesia</item>
+        <item>Japanese</item>
     </string-array>
 
 
@@ -188,6 +189,7 @@
         <item>auto</item>
         <item>en</item>
         <item>in</item>
+        <item>ja</item>
     </string-array>
 
     <string-array name="mux_xudp_quic_value" translatable="false">
