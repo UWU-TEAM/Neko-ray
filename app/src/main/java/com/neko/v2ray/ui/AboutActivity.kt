@@ -9,8 +9,9 @@ import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
-import androidx.fragment.app.Fragment
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
@@ -19,24 +20,16 @@ import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.R
 
-class AboutActivity : UwuCollapsingToolbarActivity() {
+class AboutActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isStoragePermissionGranted()
         super.onCreate(savedInstanceState)
-    }
-
-    override fun getFragment(): Fragment {
-        return AsFragment()
-    }
-
-    fun isStoragePermissionGranted(): Boolean {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkSelfPermission("android.permission.READ_MEDIA_IMAGES") != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_MEDIA_IMAGES"), 1)
-        } else {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
-        }
-        return false
+        setContentView(R.layout.uwu_collapsing_toolbar)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportFragmentManager.beginTransaction().replace(R.id.content_wrapper, AboutFragment()).commit()
     }
 
     companion object {
@@ -96,11 +89,5 @@ class AboutActivity : UwuCollapsingToolbarActivity() {
 
     fun changelog(view: View) {
         Changelog.createDialog(this).show()
-    }
-
-    class AsFragment : ResourceSettingsFragment() {
-        init {
-            preferencesResource = R.xml.uwu_preferences_about
-        }
     }
 }
