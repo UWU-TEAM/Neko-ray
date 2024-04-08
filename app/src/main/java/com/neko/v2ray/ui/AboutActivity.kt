@@ -24,7 +24,7 @@ class AboutActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.uwu_collapsing_toolbar)
+        setContentView(R.layout.uwu_about_activity)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)

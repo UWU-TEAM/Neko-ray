@@ -27,6 +27,7 @@
             app:maxLines="3"
             app:scrimAnimationDuration="50"
             app:statusBarScrim="@null"
+            app:title="@string/uwu_credits"
             app:titleCollapseMode="fade"
             app:toolbarId="@+id/toolbar">
             <com.google.android.material.appbar.MaterialToolbar

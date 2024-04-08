@@ -28,7 +28,7 @@
             app:maxLines="3"
             app:scrimAnimationDuration="50"
             app:statusBarScrim="@null"
-            app:title="Host to ip"
+            app:title="@string/uwu_host_to_ip_title"
             app:titleCollapseMode="fade"
             app:toolbarId="@+id/toolbar">
             <com.google.android.material.appbar.MaterialToolbar
