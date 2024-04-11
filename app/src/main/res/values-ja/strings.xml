@@ -134,7 +134,7 @@
     <string name="title_pref_routing_mode">定義済みルール</string>
     <string name="title_pref_routing_custom">カスタム ルール</string>
 
-    <string name="title_pref_remote_dns">リモート DNS (オプション)</string>
+    <string name="title_pref_remote_dns">リモート DNS (udp/tcp/https/quic)(オプション)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (IPv4/v6 のみ)</string>

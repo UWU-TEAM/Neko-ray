@@ -134,7 +134,7 @@
     <string name="title_pref_routing_mode">Aturan yang ditentukan sebelumnya</string>
     <string name="title_pref_routing_custom">Aturan khusus</string>
 
-    <string name="title_pref_remote_dns">DNS jarak jauh (Opsional )</string>
+    <string name="title_pref_remote_dns">DNS jarak jauh (udp/tcp/https/quic)(Opsional )</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
     <string name="title_pref_vpn_dns">VPN DNS (hanya IPv4/v6)</string>
