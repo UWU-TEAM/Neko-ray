@@ -719,6 +719,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         startActivity(Intent(this, HostToIpActivity::class.java))
     }
 
+    fun uwuIPS(view: View) {
+        startActivity(Intent(this, IpScannerSettingsActivity::class.java))
+    }
+
     fun uwuExitApp(view: View) {
         keluar()
     }
@@ -736,6 +740,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
+            }
+            R.id.ip_scanner -> {
+                startActivity(Intent(this, IpScannerSettingsActivity::class.java))
             }
             R.id.feedback -> {
                 Utils.openUri(this, AppConfig.v2rayNGIssues)
