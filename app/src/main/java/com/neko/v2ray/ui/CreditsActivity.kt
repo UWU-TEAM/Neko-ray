@@ -10,8 +10,8 @@ class CreditsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.uwu_credits_activity)
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportFragmentManager.beginTransaction().replace(R.id.content_wrapper, CreditsFragment()).commit()

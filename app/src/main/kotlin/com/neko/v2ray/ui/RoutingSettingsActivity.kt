@@ -23,8 +23,8 @@ class RoutingSettingsActivity : BaseActivity() {
         val view = binding.root
         setContentView(view)
 
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
-        val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
