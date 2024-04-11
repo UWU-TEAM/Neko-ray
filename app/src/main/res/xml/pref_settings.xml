@@ -71,7 +71,7 @@
             android:summary="@string/title_pref_routing_custom"
             android:title="@string/title_pref_routing_custom"/>
         <ListPreference
-            android:defaultValue="0"
+            android:defaultValue="3"
             android:icon="@drawable/uwu_ic_predefined_rules"
             android:entries="@array/routing_mode"
             android:layout="@layout/uwu_bot"
