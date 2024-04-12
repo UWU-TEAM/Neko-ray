@@ -8,7 +8,7 @@
 <!--        app:showAsAction="always" />-->
     <item
         android:id="@+id/cancel_scan"
-        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:icon="@drawable/uwu_cancel"
         android:title="@string/menu_item_cancel"
         app:showAsAction="always" />
     <item
