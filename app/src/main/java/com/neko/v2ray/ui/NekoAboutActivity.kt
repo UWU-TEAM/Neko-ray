@@ -20,7 +20,7 @@ import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.R
 
-class AboutActivity : BaseActivity() {
+class NekoAboutActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +29,7 @@ class AboutActivity : BaseActivity() {
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportFragmentManager.beginTransaction().replace(R.id.content_wrapper, AboutFragment()).commit()
+        supportFragmentManager.beginTransaction().replace(R.id.content_wrapper, NekoAboutFragment()).commit()
     }
 
     companion object {

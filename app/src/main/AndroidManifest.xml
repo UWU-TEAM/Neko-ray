@@ -153,6 +153,9 @@
                 <data android:host="install-sub"/>
             </intent-filter>
         </activity>
+        <activity
+            android:exported="false"
+            android:name=".ui.AboutActivity" />
 
         <activity
             android:theme="@style/AppThemeDayNight.NoActionBar"
@@ -162,7 +165,7 @@
 
         <activity
             android:theme="@style/AppThemeDayNight.NoActionBar"
-            android:name="com.neko.v2ray.ui.AboutActivity"
+            android:name="com.neko.v2ray.ui.NekoAboutActivity"
             android:parentActivityName="com.neko.v2ray.ui.MainActivity"
             android:exported="false" />
 

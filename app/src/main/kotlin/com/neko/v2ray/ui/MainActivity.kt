@@ -1,56 +1,59 @@
 package com.neko.v2ray.ui
 
 import android.Manifest
-import android.content.*
-import android.content.Context
-import android.content.pm.PackageManager
+import android.content.ActivityNotFoundException
+import android.content.Intent
+import android.content.res.ColorStateList
 import android.net.Uri
 import android.net.VpnService
-import androidx.recyclerview.widget.LinearLayoutManager
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
-import com.tbruyelle.rxpermissions.RxPermissions
-import com.neko.v2ray.R
+import android.os.Build
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.KeyEvent
-import com.neko.v2ray.AppConfig
-import android.content.res.ColorStateList
-import android.os.Build
-import com.google.android.material.navigation.NavigationView
-import androidx.annotation.ColorInt
-import androidx.annotation.AttrRes
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import androidx.core.view.GravityCompat
-import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.recyclerview.widget.ItemTouchHelper
 import android.util.Log
+import android.view.KeyEvent
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
+import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.mmkv.MMKV
+import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
-import com.neko.v2ray.BuildConfig
+import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
-import rx.Observable
-import rx.android.schedulers.AndroidSchedulers
-import java.util.*
-import java.util.concurrent.TimeUnit
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.util.*
+import com.neko.v2ray.util.AngConfigManager
+import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.MainViewModel
-import kotlinx.coroutines.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import me.drakeet.support.toast.ToastCompat
+import rx.Observable
+import rx.android.schedulers.AndroidSchedulers
 import java.io.File
 import java.io.FileOutputStream
+import java.util.concurrent.TimeUnit
+
+import android.content.Context
+import android.content.pm.PackageManager
+import android.view.View
+import androidx.annotation.ColorInt
+import androidx.annotation.AttrRes
+import androidx.core.app.ActivityCompat
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -704,7 +707,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     fun UwuAbout(view: View) {
-        startActivity(Intent(this, AboutActivity::class.java))
+        startActivity(Intent(this, NekoAboutActivity::class.java))
     }
 
     fun uwuSpeedTest(view: View) {
@@ -741,20 +744,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
-            R.id.ip_scanner -> {
-                startActivity(Intent(this, IpScannerSettingsActivity::class.java))
-            }
-            R.id.feedback -> {
-                Utils.openUri(this, AppConfig.v2rayNGIssues)
-            }
             R.id.promotion -> {
-                Utils.openUri(this, "${Utils.decode(AppConfig.promotionUrl)}?t=${System.currentTimeMillis()}")
+                Utils.openUri(this, "${Utils.decode(AppConfig.PromotionUrl)}?t=${System.currentTimeMillis()}")
             }
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
             }
-            R.id.privacy_policy-> {
-                Utils.openUri(this, AppConfig.v2rayNGPrivacyPolicy)
+            R.id.about-> {
+                startActivity(Intent(this, AboutActivity::class.java))
             }
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
