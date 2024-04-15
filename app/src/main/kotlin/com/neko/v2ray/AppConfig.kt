@@ -7,6 +7,7 @@ package com.neko.v2ray
 object AppConfig {
     const val ANG_PACKAGE = BuildConfig.APPLICATION_ID
     const val DIR_ASSETS = "assets"
+    const val DIR_BACKUPS = "backups"
 
     // legacy
     const val ANG_CONFIG = "ang_config"
