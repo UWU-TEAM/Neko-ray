@@ -731,6 +731,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         startActivity(Intent(this, IpScannerSettingsActivity::class.java))
     }
 
+    fun uwuBackupConfig(view: View) {
+        startActivity(Intent(this, NekoBackupActivity::class.java))
+    }
+
     fun uwuExitApp(view: View) {
         keluar()
     }

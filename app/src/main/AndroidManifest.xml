@@ -170,6 +170,12 @@
             android:exported="false" />
 
         <activity
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.neko.v2ray.ui.NekoBackupActivity"
+            android:parentActivityName="com.neko.v2ray.ui.MainActivity"
+            android:exported="false" />
+
+        <activity
             android:name="com.neko.tools.NetworkSwitcher"
             android:exported="false" />
 
