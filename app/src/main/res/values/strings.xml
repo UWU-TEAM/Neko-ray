@@ -274,6 +274,7 @@
     <string name="uwu_status_connection_title">Status</string>
     <string name="uwu_network_switcher_title">Network Switcher</string>
     <string name="uwu_host_to_ip_title">Host to ip</string>
+    <string name="uwu_ip_location_title">IP Location</string>
     <string name="uwu_exit_title">Exit</string>
     <string name="uwu_maintainer_title">This app is under maintenance</string>
     <string name="uwu_border_about_title">Additional Options</string>

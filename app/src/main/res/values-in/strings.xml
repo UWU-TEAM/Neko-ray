@@ -270,6 +270,7 @@
     <string name="uwu_status_connection_title">Status</string>
     <string name="uwu_network_switcher_title">Pengalih Jaringan</string>
     <string name="uwu_host_to_ip_title">Host to ip</string>
+    <string name="uwu_ip_location_title">Lokasi IP</string>
     <string name="uwu_exit_title">Keluar</string>
     <string name="uwu_maintainer_title">Aplikasi ini sedang dalam pemeliharaan</string>
     <string name="uwu_border_about_title">Opsi Tambahan</string>

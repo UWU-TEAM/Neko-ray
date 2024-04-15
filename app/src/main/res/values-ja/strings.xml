@@ -270,6 +270,7 @@
     <string name="uwu_status_connection_title">ステータス</string>
     <string name="uwu_network_switcher_title">ネットワーク スイッチャー</string>
     <string name="uwu_host_to_ip_title">IP へのホスト</string>
+    <string name="uwu_ip_location_title">IP の場所</string>
     <string name="uwu_exit_title">終了</string>
     <string name="uwu_maintainer_title">このアプリはメンテナンス中です</string>
     <string name="uwu_border_about_title">追加オプション</string>

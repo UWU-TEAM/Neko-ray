@@ -1,4 +1,4 @@
-package com.ipgeolocationhosttoip.net;
+package com.neko.ip;
 import android.app.*;
 import android.content.*;
 import android.graphics.drawable.*;

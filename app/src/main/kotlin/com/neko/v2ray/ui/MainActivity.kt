@@ -58,7 +58,8 @@ import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
 import com.neko.tools.SpeedTestActivity
-import com.ipgeolocationhosttoip.net.HostToIpActivity
+import com.neko.ip.HostToIpActivity
+import com.neko.ip.IpLocation
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -720,6 +721,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun uwuHostToIp(view: View) {
         startActivity(Intent(this, HostToIpActivity::class.java))
+    }
+
+    fun uwuIpLocation(view: View) {
+        startActivity(Intent(this, IpLocation::class.java))
     }
 
     fun uwuIPS(view: View) {

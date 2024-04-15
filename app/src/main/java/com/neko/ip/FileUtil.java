@@ -1,4 +1,4 @@
-package com.ipgeolocationhosttoip.net;
+package com.neko.ip;
 
 import android.content.ContentResolver;
 import android.content.ContentUris;
