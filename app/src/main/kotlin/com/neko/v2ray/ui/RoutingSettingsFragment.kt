@@ -11,11 +11,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.preference.PreferenceManager
 import com.tbruyelle.rxpermissions.RxPermissions
+import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.FragmentRoutingSettingsBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
+import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -26,7 +28,7 @@ class RoutingSettingsFragment : Fragment() {
         private const val routing_arg = "routing_arg"
     }
 
-    val defaultSharedPreferences by lazy { PreferenceManager.getDefaultSharedPreferences(requireContext()) }
+   private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
@@ -46,7 +48,7 @@ class RoutingSettingsFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val content = defaultSharedPreferences.getString(requireArguments().getString(routing_arg), "")
+        val content = settingsStorage?.getString(requireArguments().getString(routing_arg), "")
         binding.etRoutingContent.text = Utils.getEditable(content!!)
 
         setHasOptionsMenu(true)
@@ -83,7 +85,7 @@ class RoutingSettingsFragment : Fragment() {
 
     private fun saveRouting() {
         val content = binding.etRoutingContent.text.toString()
-        defaultSharedPreferences.edit().putString(requireArguments().getString(routing_arg), content).apply()
+        settingsStorage?.encode(requireArguments().getString(routing_arg), content)
         activity?.toast(R.string.toast_success)
     }
 
