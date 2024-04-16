@@ -170,7 +170,7 @@
     <string name="toast_tg_app_not_found">Telegram アプリが見つかりません</string>
     <string name="title_privacy_policy">プライバシー ポリシー</string>
     <string name="title_configuration_backup">バックアップ構成</string>
-    <string name="summary_configuration_backup">バックアップの保存場所: [%s], アプリをアンインストールすると消去されます</string>
+    <string name="summary_configuration_backup">ストレージの場所: [%s], アプリをアンインストールするかストレージを消去すると、バックアップは消去されます</string>
     <string name="title_configuration_restore">構成を復元する</string>
 
     <string name="title_pref_promotion">プロモーション</string>
