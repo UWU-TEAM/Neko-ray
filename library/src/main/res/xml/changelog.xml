@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        version="v1.0.2"
-        versioncode="2000212"
+        version="v1.0.5"
+        versioncode="2000215"
         summary="Neko v2rayNG"
-        date="2024-04-07">
-        <change>Change animation expandablelayout view Horizontal to vertical</change>
-        <change>Change About serial info to Baseband versions</change>
-        <change>Change more banner image</change>
-        <change>Move Back Toasts handling from View layer to ViewModel.</change>
-        <change>Update dependency com.tencent:mmkv-static v1.3.3 => v1.3.4</change>
-        <change>Core Bump to 20240403 build</change>
-        <change>Add indonesian language (BETA)</change>
-        <change>More bug fixed</change>
+        date="2024-04-16">
+        <change>Add japanese language</change>
+        <change>Fixed title on change language</change>
+        <change>Adjust routing default rules</change>
+        <change>Remove the type of routing rule</change>
+        <change>Optimized toolbar layout</change>
+        <change>Add IpScanner</change>
+        <change>Bump com.android.application from 8.2.2 to 8.3.2</change>
+        <change>Bump com.android.library from 8.2.2 to 8.3.2</change>
+        <change>Optimized vector icon</change>
+        <change>Ability to override built in geosite.dat and geoip.dat</change>
+        <change>Retry downloading geo assets without proxy</change>
+        <change>Optimize routing</change>
+        <change>Add banner image to dialog changelog</change>
+        <change>Add IP Location</change>
+        <change>Add backup and restore configuration functionality</change>
+        <change>Core: Bump to 20240416 build</change>
     </release>
 </changelog>
