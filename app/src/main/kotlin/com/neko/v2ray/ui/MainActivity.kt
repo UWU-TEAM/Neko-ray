@@ -123,7 +123,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.navView.setNavigationItemSelectedListener(this)
         setupViewModel()
         copyAssets()
-        migrateLegacy()
+        //migrateLegacy()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             RxPermissions(this)
@@ -203,21 +203,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
 
-    private fun migrateLegacy() {
-        lifecycleScope.launch(Dispatchers.IO) {
-            val result = AngConfigManager.migrateLegacyConfig(this@MainActivity)
-            if (result != null) {
-                launch(Dispatchers.Main) {
-                    if (result) {
-                        toast(getString(R.string.migration_success))
-                        mainViewModel.reloadServerList()
-                    } else {
-                        toast(getString(R.string.migration_fail))
-                    }
-                }
-            }
-        }
-    }
+//    private fun migrateLegacy() {
+//        lifecycleScope.launch(Dispatchers.IO) {
+//            val result = AngConfigManager.migrateLegacyConfig(this@MainActivity)
+//            if (result != null) {
+//                launch(Dispatchers.Main) {
+//                    if (result) {
+//                        toast(getString(R.string.migration_success))
+//                        mainViewModel.reloadServerList()
+//                    } else {
+//                        toast(getString(R.string.migration_fail))
+//                    }
+//                }
+//            }
+//        }
+//    }
 
     fun startV2Ray() {
         if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
