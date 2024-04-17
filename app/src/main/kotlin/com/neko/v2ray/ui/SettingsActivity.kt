@@ -8,7 +8,11 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.activity.viewModels
 import androidx.appcompat.widget.Toolbar
-import androidx.preference.*
+import androidx.preference.SwitchPreference
+import androidx.preference.EditTextPreference
+import androidx.preference.ListPreference
+import androidx.preference.Preference
+import androidx.preference.PreferenceFragmentCompat
 import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.multiprocess.RemoteWorkManager
@@ -179,8 +183,6 @@ class SettingsActivity : BaseActivity() {
 
         override fun onStart() {
             super.onStart()
-            initSharedPreference()
-
             updateMode(settingsStorage.decodeString(AppConfig.PREF_MODE, "VPN"))
             localDns?.isChecked = settingsStorage.getBoolean(AppConfig.PREF_LOCAL_DNS_ENABLED, false)
             fakeDns?.isChecked = settingsStorage.getBoolean(AppConfig.PREF_FAKE_DNS_ENABLED, false)
@@ -206,11 +208,35 @@ class SettingsActivity : BaseActivity() {
             httpPort?.summary = settingsStorage.decodeString(AppConfig.PREF_HTTP_PORT, AppConfig.PORT_HTTP)
             remoteDns?.summary = settingsStorage.decodeString(AppConfig.PREF_REMOTE_DNS, AppConfig.DNS_PROXY)
             domesticDns?.summary = settingsStorage.decodeString(AppConfig.PREF_DOMESTIC_DNS, AppConfig.DNS_DIRECT)
+
+            initSharedPreference()
         }
 
         private fun initSharedPreference() {
             listOf(
+                localDnsPort,
+                vpnDns,
+                muxConcurrency,
+                muxXudpConcurrency,
+                fragmentLength,
+                fragmentInterval,
+                autoUpdateInterval,
+                socksPort,
+                httpPort,
+                remoteDns,
+                domesticDns
+            ).forEach { key ->
+                key?.text = key?.summary.toString()
+            }
+
+            listOf(
                 AppConfig.PREF_SNIFFING_ENABLED,
+            ).forEach { key ->
+                findPreference<SwitchPreference>(key)?.isChecked =
+                    settingsStorage.decodeBool(key, true)
+            }
+
+            listOf(
                 AppConfig.PREF_BYPASS_APPS,
                 AppConfig.PREF_SPEED_ENABLED,
                 AppConfig.PREF_CONFIRM_REMOVE,
