@@ -86,7 +86,7 @@
     <string name="title_user_asset_add_url">Tambahkan URL aset</string>
     <string name="msg_file_not_found">File tidak ditemukan</string>
     <string name="msg_remark_is_duplicate">Keterangan sudah ada</string>
-
+    <string name="toast_action_not_allowed">Tindakan tidak diperbolehkan</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Memuat</string>

@@ -118,6 +118,9 @@ class SubEditActivity : BaseActivity() {
                         MmkvManager.removeSubscription(editSubId)
                         finish()
                     }
+                    .setNegativeButton(android.R.string.no) {_, _ ->
+                        // do nothing
+                    }
                     .show()
         }
         return true

@@ -121,6 +121,9 @@ class UserAssetUrlActivity : BaseActivity() {
                     MmkvManager.removeAssetUrl(editAssetId)
                     finish()
                 }
+                .setNegativeButton(android.R.string.no) {_, _ ->
+                    // do nothing
+                }
                 .show()
         }
         return true

@@ -86,7 +86,7 @@
     <string name="title_user_asset_add_url">アセットを追加URL</string>
     <string name="msg_file_not_found">ファイルが見つかりません</string>
     <string name="msg_remark_is_duplicate">説明はすでに存在します</string>
-
+    <string name="toast_action_not_allowed">アクションは許可されていません</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">読み込み中</string>
