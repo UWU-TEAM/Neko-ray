@@ -235,7 +235,7 @@
                     app:tint="@color/colorText_ActionBar"
                     app:layout_anchorGravity="end|bottom|center"
                     app:shapeAppearanceOverlay="@style/fab_square"
-                    style="@style/Widget.Design.FloatingActionButton" />
+                    style="@style/Uwu.Design.FloatingActionButton" />
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
