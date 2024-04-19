@@ -16,6 +16,7 @@ import android.util.Base64
 import android.util.Log
 import android.util.Patterns
 import android.webkit.URLUtil
+import androidx.appcompat.app.AppCompatDelegate
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
@@ -370,6 +371,14 @@ object Utils {
         val mode = context.resources.configuration.uiMode and UI_MODE_NIGHT_MASK
         return mode != UI_MODE_NIGHT_NO
     }
+
+//    fun setNightMode(context: Context) {
+//        when (settingsStorage?.decodeString(AppConfig.PREF_UI_MODE_NIGHT, "0")) {
+//            "0" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+//            "1" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//            "2" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+//        }
+//    }
 
     fun getIpv6Address(address: String): String {
         return if (isIpv6Address(address) && !address.contains('[') && !address.contains(']')) {
