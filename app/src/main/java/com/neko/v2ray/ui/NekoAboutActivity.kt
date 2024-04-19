@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
+import androidx.annotation.Nullable
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
@@ -58,8 +59,10 @@ class NekoAboutActivity : BaseActivity() {
         AppUpdater(this)
             .setUpdateFrom(UpdateFrom.GITHUB)
             .setGitHubUserAndRepo("Blawuken", "Neko_v2rayNG")
+            .showEvery(5)
             .setDisplay(Display.DIALOG)
             .showAppUpdated(true)
+            .setCancelable(false)
             .start()
     }
 
