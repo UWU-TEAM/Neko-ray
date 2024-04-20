@@ -13,4 +13,13 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_header_vertical_spacing">8dp</dimen>
     <dimen name="nav_header_height">160dp</dimen>
+
+    <dimen name="air_baseline">16dp</dimen>
+    <dimen name="air_baseline_half">8dp</dimen>
+    <dimen name="air_baseline_card">@dimen/air_baseline_half</dimen>
+    <dimen name="air_baseline_content">72dp</dimen>
+    <dimen name="air_icon_padding">6dp</dimen>
+    <dimen name="air_card_margin_top">@dimen/air_baseline_half</dimen>
+    <dimen name="air_radio_button_padding_start">@dimen/air_baseline</dimen>
+    <dimen name="fab_size_normal">56dp</dimen>
 </resources>

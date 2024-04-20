@@ -199,6 +199,12 @@
             android:screenOrientation="portrait"
             android:parentActivityName="com.neko.v2ray.ui.MainActivity" />
 
+        <activity android:name="com.neko.reportissue.IssueReporterLauncher$Activity"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.neko.v2ray.ui.MainActivity" />
+
         <service
             android:name=".service.V2RayVpnService"
             android:enabled="true"

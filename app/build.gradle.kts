@@ -60,6 +60,8 @@ dependencies {
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jsoup:jsoup:1.17.2")
     implementation("androidx.webkit:webkit:1.10.0")
+    implementation("org.kohsuke:github-api:1.318")
+    implementation("com.github.aakira:expandable-layout:1.6.0")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
 }
 
