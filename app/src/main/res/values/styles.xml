@@ -2,7 +2,7 @@
 
     <style name="AppThemeDayNight" parent="@style/Theme.Material3.DayNight">
         <item name="android:colorBackground">?attr/colorBg</item>
-        <item name="android:windowBackground">@color/uwu_bg</item>
+        <item name="android:windowBackground">?attr/colorBg</item>
         <item name="android:alertDialogTheme">@style/Theme.Base.AlertDialog</item>
         <item name="android:scrollbarSize">0.0dip</item>
         <item name="android:listDivider">@null</item>
@@ -23,6 +23,7 @@
         <item name="colorBg">?colorSurfaceVariant</item>
         <item name="changelogStyle">@style/LibChangelog</item>
         <item name="elevation">0.0dip</item>
+        <item name="materialAlertDialogTheme">@style/Uwu.Material3.MaterialAlertDialog</item>
         <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
         <item name="preferenceCategoryStyle">@style/Uwu.Preference.Category</item>
         <item name="uwuClockColor">?attr/colorPrimary</item>
@@ -160,5 +161,27 @@
         <item name="shapeAppearance">?shapeAppearanceSmallComponent</item>
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.MaterialComponents.FloatingActionButton</item>
         <item name="showMotionSpec">@animator/mtrl_fab_show_motion_spec</item>
+    </style>
+    
+    <style name="Uwu.Material3.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="android:windowAnimationStyle">@style/uwu_modder_app_anim</item>
+        <item name="android:checkedTextViewStyle">@style/Widget.Material3.CheckedTextView</item>
+        <item name="android:windowElevation">@dimen/m3_alert_dialog_elevation</item>
+        <item name="alertDialogStyle">@style/Uwu.Base.AlertDialog</item>
+        <item name="buttonBarButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.Material3.Body.Text</item>
+        <item name="materialAlertDialogTitleIconStyle">@style/MaterialAlertDialog.Material3.Title.Icon</item>
+        <item name="materialAlertDialogTitlePanelStyle">@style/MaterialAlertDialog.Material3.Title.Panel</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.Material3.Title.Text</item>
+    </style>
+    
+    <style name="Uwu.Base.AlertDialog" parent="@style/MaterialAlertDialog.MaterialComponents">
+        <item name="android:layout">@layout/m3_alert_dialog</item>
+        <item name="backgroundTint">@color/uwu_bg_dialog</item>
+        <item name="enforceMaterialTheme">true</item>
+        <item name="shapeAppearance">?shapeAppearanceCornerExtraLarge</item>
     </style>
 </resources>

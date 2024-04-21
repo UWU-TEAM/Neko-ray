@@ -85,10 +85,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/air_card_margin_top"
                         layout="@layout/air_card_login" />
-                    <Space
-                        android:layout_width="match_parent"
-                        android:layout_height="56.0dip"
-                        android:layout_margin="@dimen/air_baseline" />
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
             <com.google.android.material.floatingactionbutton.FloatingActionButton
