@@ -744,6 +744,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         startActivity(Intent(this, NekoBackupActivity::class.java))
     }
 
+    fun uwuReportIssue(view: View) {
+        startActivity(Intent(this, NekoReporterActivity::class.java))
+    }
+
     fun uwuExitApp(view: View) {
         keluar()
     }

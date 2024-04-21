@@ -441,6 +441,43 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10.0dip"
+                            android:onClick="uwuReportIssue">
+                            <ImageView
+                                android:background="@drawable/uwu_google_shape"
+                                android:padding="12.0dip"
+                                android:layout_width="45.0dip"
+                                android:layout_height="45.0dip"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_bug"
+                                android:scaleType="fitCenter"
+                                android:backgroundTint="?attr/colorPrimary"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?android:textColorPrimary"
+                                android:gravity="left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/air_title_report_issue"
+                                android:layout_weight="1.0" />
+                            <ImageView
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_arrow"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentEnd="true"
+                                app:tint="?android:textColorPrimary" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:gravity="center|right"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_layout_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
                             android:onClick="UwuAbout">
                             <ImageView
                                 android:background="@drawable/uwu_google_shape"

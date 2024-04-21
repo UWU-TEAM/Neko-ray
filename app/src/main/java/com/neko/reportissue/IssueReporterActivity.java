@@ -67,9 +67,11 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringDef;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.NavUtils;
 
 import com.neko.v2ray.ui.BaseActivity;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.neko.v2ray.R;
 
 import static android.util.Patterns.EMAIL_ADDRESS;
@@ -120,17 +122,10 @@ public abstract class IssueReporterActivity extends BaseActivity {
     }
 
     private void initViews() {
-        setSupportActionBar(binding.airToolbar);
-
-        if (NavUtils.getParentActivityName(this) != null) {
-            ActionBar actionBar = getSupportActionBar();
-            if (actionBar != null) {
-                actionBar.setDisplayHomeAsUpEnabled(true);
-                binding.airToolbar.setContentInsetsRelative(
-                        getResources().getDimensionPixelSize(R.dimen.air_baseline_content),
-                        getResources().getDimensionPixelSize(R.dimen.air_baseline));
-            }
-        }
+        Toolbar toolbar = findViewById(R.id.air_toolbar);
+        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         reportBinding.airButtonDeviceInfo.setOnClickListener(new View.OnClickListener() {
             @Override
