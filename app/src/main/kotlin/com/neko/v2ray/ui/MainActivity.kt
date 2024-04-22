@@ -121,6 +121,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
+
         setupViewModel()
         copyAssets()
         //migrateLegacy()
@@ -223,7 +224,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
             return
         }
-//        toast(R.string.toast_services_start)
         V2RayServiceManager.startV2Ray(this)
     }
 

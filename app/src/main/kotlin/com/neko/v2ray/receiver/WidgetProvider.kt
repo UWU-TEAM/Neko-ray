@@ -8,8 +8,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Build
 import android.widget.RemoteViews
-import com.neko.v2ray.R
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.R
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.Utils
 
@@ -38,23 +38,11 @@ class WidgetProvider : AppWidgetProvider() {
             })
         remoteViews.setOnClickPendingIntent(R.id.layout_switch, pendingIntent)
         if (isRunning) {
-            if (!Utils.getDarkModeStatus(context)) {
-                remoteViews.setInt(R.id.image_switch, "setImageResource", R.drawable.ic_stat_name)
-            }
-            remoteViews.setInt(
-                R.id.layout_switch,
-                "setBackgroundResource",
-                R.drawable.ic_rounded_corner_active
-            )
+            remoteViews.setInt(R.id.image_switch, "setImageResource", R.drawable.ic_stop_24dp)
+            remoteViews.setInt(R.id.layout_background, "setBackgroundResource", R.drawable.ic_rounded_corner_active)
         } else {
-            if (!Utils.getDarkModeStatus(context)) {
-                remoteViews.setInt(R.id.image_switch, "setImageResource", R.drawable.ic_stat_name_black)
-            }
-            remoteViews.setInt(
-                R.id.layout_switch,
-                "setBackgroundResource",
-                R.drawable.ic_rounded_corner_grey
-            )
+            remoteViews.setInt(R.id.image_switch, "setImageResource", R.drawable.ic_play_24dp)
+            remoteViews.setInt(R.id.layout_background, "setBackgroundResource", R.drawable.ic_rounded_corner_inactive)
         }
 
         for (appWidgetId in appWidgetIds) {

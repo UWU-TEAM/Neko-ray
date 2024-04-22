@@ -3,12 +3,12 @@ package com.neko.v2ray.ui
 import android.content.Intent
 import android.graphics.Color
 import android.text.TextUtils
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AlertDialog
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AngApplication.Companion.application
