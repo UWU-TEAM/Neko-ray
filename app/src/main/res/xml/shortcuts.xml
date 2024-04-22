@@ -28,4 +28,19 @@
             android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
+    <shortcut
+        android:icon="@drawable/ic_qu_settings_24dp"
+        android:enabled="true"
+        android:shortcutId="shortcuts_settings"
+        android:shortcutShortLabel="@string/title_settings"
+        android:shortcutLongLabel="@string/title_settings"
+        android:shortcutDisabledMessage="@string/title_settings">
+
+        <intent
+            android:targetPackage="com.neko.v2ray"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.neko.v2ray.ui.SettingsActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
 </shortcuts>

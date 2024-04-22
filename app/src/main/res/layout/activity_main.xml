@@ -87,7 +87,8 @@
                     android:layout_marginStart="8.0dip"
                     app:cardBackgroundColor="@color/uwu_bg_card"
                     app:cardCornerRadius="24.0dip"
-                    app:cardElevation="0.0dip">
+                    app:cardElevation="0.0dip"
+                    app:strokeWidth="0.0dip">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -98,13 +99,12 @@
                         android:foreground="?attr/selectableItemBackground"
                         android:onClick="uwuSpeedTest">
 
-                        <TextView
-                            android:textSize="17.0sp"
-                            android:textColor="?attr/colorMainText"
+                        <ImageView
                             android:gravity="center"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/uwu_speedtest_title" />
+                            android:layout_gravity="center"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:src="@drawable/uwu_speedometer" />
 
                         <LinearLayout
                             android:orientation="horizontal"
@@ -112,20 +112,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <com.neko.marquee.text.AutoMarqueeTextView
+                            <TextView
                                 android:textSize="14.0sp"
                                 android:textColor="?attr/colorPrimary"
-                                android:ellipsize="marquee"
                                 android:gravity="center"
-                                android:layout_gravity="start|center"
-                                android:fadingEdge="horizontal"
-                                android:layout_width="0.0dip"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="@string/uwu_speedtest_summary"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:layout_weight="1.0"
-                                android:marqueeRepeatLimit="marquee_forever" />
+                                android:text="@string/uwu_speedtest_title" />
 
                         </LinearLayout>
 
@@ -140,7 +133,8 @@
                     android:layout_marginStart="8.0dip"
                     app:cardBackgroundColor="@color/uwu_bg_card"
                     app:cardCornerRadius="24.0dip"
-                    app:cardElevation="0.0dip">
+                    app:cardElevation="0.0dip"
+                    app:strokeWidth="0.0dip">
 
                     <LinearLayout
                         android:orientation="vertical"
@@ -151,13 +145,12 @@
                         android:layout_height="match_parent"
                         android:foreground="?attr/selectableItemBackground">
 
-                        <TextView
-                            android:textSize="17.0sp"
+                        <ImageView
                             android:gravity="center"
-                            android:textColor="?attr/colorMainText"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/uwu_status_connection_title" />
+                            android:layout_gravity="center"
+                            android:layout_width="25.0dip"
+                            android:layout_height="25.0dip"
+                            android:src="@drawable/uwu_ic_stats" />
 
                         <LinearLayout
                             android:orientation="horizontal"
