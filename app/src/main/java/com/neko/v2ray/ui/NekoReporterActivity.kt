@@ -13,7 +13,7 @@ class NekoReporterActivity : IssueReporterActivity() {
     }
 
     override fun getGuestToken(): String {
-        return "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"
+        return "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"
     }
 
     override fun getTarget(): GithubTarget {
