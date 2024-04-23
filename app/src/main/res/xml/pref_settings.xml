@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <Preference
         android:layout="@layout/uwu_banner_settings"
         android:selectable="false" />
+
     <Preference
         android:icon="@drawable/uwu_check"
         android:layout="@layout/uwu_maintainer"
         android:title="@string/uwu_maintainer_title"
         android:selectable="false"
         android:summary="AnGgIt86" />
+
     <Preference
         android:layout="@layout/uwu_battery_storage"
         android:selectable="false" />
+
     <PreferenceCategory android:title="@string/title_settings">
+
         <SwitchPreference
             android:defaultValue="true"
             android:icon="@drawable/uwu_ic_baseline_manage_search_24"
@@ -20,26 +26,32 @@
             android:key="pref_sniffing_enabled"
             android:summary="@string/summary_pref_sniffing_enabled"
             android:title="@string/title_pref_sniffing_enabled"/>
+
     </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/title_vpn_settings">
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_navigation_apps"
             android:layout="@layout/uwu_top_switch"
             android:key="pref_per_app_proxy"
             android:summary="@string/summary_pref_per_app_proxy"
             android:title="@string/title_pref_per_app_proxy"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid_switch"
             android:key="pref_local_dns_enabled"
             android:summary="@string/summary_pref_local_dns_enabled"
             android:title="@string/title_pref_local_dns_enabled"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_action_lock"
             android:layout="@layout/uwu_mid_switch"
             android:key="pref_fake_dns_enabled"
             android:summary="@string/summary_pref_fake_dns_enabled"
             android:title="@string/title_pref_fake_dns_enabled"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid"
@@ -47,14 +59,18 @@
             android:summary="10853"
             android:inputType="number"
             android:title="@string/title_pref_local_dns_port"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_bot"
             android:key="pref_vpn_dns"
             android:summary="@string/summary_pref_remote_dns"
             android:title="@string/title_pref_vpn_dns"/>
+
     </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/title_pref_routing">
+
         <ListPreference
             android:defaultValue="IPIfNonMatch"
             android:icon="@drawable/uwu_ic_baseline_camera_24"
@@ -64,117 +80,49 @@
             android:key="pref_routing_domain_strategy"
             android:summary="%s"
             android:title="@string/title_pref_routing_domain_strategy"/>
-        <Preference
-            android:icon="@drawable/uwu_ic_custom_rules"
-            android:layout="@layout/uwu_mid"
-            android:key="pref_routing_custom"
-            android:summary="@string/title_pref_routing_custom"
-            android:title="@string/title_pref_routing_custom"/>
+
         <ListPreference
             android:defaultValue="3"
             android:icon="@drawable/uwu_ic_predefined_rules"
             android:entries="@array/routing_mode"
-            android:layout="@layout/uwu_bot"
+            android:layout="@layout/uwu_mid"
             android:entryValues="@array/routing_mode_value"
             android:key="pref_routing_mode"
             android:summary="%s"
             android:title="@string/title_pref_routing_mode"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/title_mux_settings">
-        <SwitchPreference
-            android:icon="@drawable/uwu_ic_alpha_m_circle_outline"
-            android:layout="@layout/uwu_top_switch"
-            android:key="pref_mux_enabled"
-            android:summary="@string/summary_pref_mux_enabled"
-            android:title="@string/title_pref_mux_enabled"/>
-        <EditTextPreference
-            android:icon="@drawable/uwu_ic_numeric"
-            android:layout="@layout/uwu_mid"
-            android:key="pref_mux_concurency"
-            android:summary="8"
-            android:inputType="number"
-            android:title="@string/title_pref_mux_concurency"/>
-        <EditTextPreference
-            android:icon="@drawable/uwu_ic_numeric"
-            android:layout="@layout/uwu_mid"
-            android:key="pref_mux_xudp_concurency"
-            android:summary="8"
-            android:inputType="number"
-            android:title="@string/title_pref_mux_xudp_concurency"/>
-        <ListPreference
-            android:defaultValue="reject"
-            android:icon="@drawable/uwu_ic_alpha_h_circle_outline"
-            android:entries="@array/mux_xudp_quic_entries"
+
+        <Preference
+            android:icon="@drawable/uwu_ic_custom_rules"
             android:layout="@layout/uwu_bot"
-            android:entryValues="@array/mux_xudp_quic_value"
-            android:key="pref_mux_xudp_quic"
-            android:summary="%s"
-            android:title="@string/title_pref_mux_xudp_quic"/>
+            android:key="pref_routing_custom"
+            android:summary="@string/title_pref_routing_custom"
+            android:title="@string/title_pref_routing_custom"/>
+
     </PreferenceCategory>
-    <PreferenceCategory android:title="@string/title_fragment_settings">
-        <SwitchPreference
-            android:icon="@drawable/uwu_ic_toggle_switch_outline"
-            android:layout="@layout/uwu_top_switch"
-            android:key="pref_fragment_enabled"
-            android:title="@string/title_pref_fragment_enabled"
-            android:summaryOn="@string/abc_capital_on"
-            android:summaryOff="@string/abc_capital_off"/>
-        <ListPreference
-            android:key="pref_fragment_packets"
-            android:defaultValue="tlshello"
-            android:icon="@drawable/uwu_ic_package_variant"
-            android:entries="@array/fragment_packets"
-            android:layout="@layout/uwu_mid"
-            android:entryValues="@array/fragment_packets"
-            android:summary="%s"
-            android:title="@string/title_pref_fragment_packets"/>
-        <EditTextPreference
-            android:icon="@drawable/uwu_ic_numeric"
-            android:layout="@layout/uwu_mid"
-            android:key="pref_fragment_length"
-            android:summary="50-100"
-            android:title="@string/title_pref_fragment_length"/>
-        <EditTextPreference
-            android:icon="@drawable/uwu_ic_numeric"
-            android:layout="@layout/uwu_bot"
-            android:key="pref_fragment_interval"
-            android:summary="10-20"
-            android:title="@string/title_pref_fragment_interval"/>
-    </PreferenceCategory>
-    <PreferenceCategory android:title="@string/title_sub_setting">
-        <SwitchPreference
-            android:icon="@drawable/uwu_ic_subscriptions_24dp"
-            android:layout="@layout/uwu_top_switch"
-            android:key="pref_auto_update_subscription"
-            android:summary="@string/summary_pref_auto_update_subscription"
-            android:title="@string/title_pref_auto_update_subscription"/>
-        <EditTextPreference
-            android:icon="@drawable/uwu_ic_numeric"
-            android:layout="@layout/uwu_bot"
-            android:key="pref_auto_update_interval"
-            android:summary="1440"
-            android:inputType="number"
-            android:title="@string/title_pref_auto_update_interval"/>
-    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/title_ui_settings">
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_baseline_speed_24"
             android:layout="@layout/uwu_top_switch"
             android:key="pref_speed_enabled"
             android:summary="@string/summary_pref_speed_enabled"
             android:title="@string/title_pref_speed_enabled"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_delete_24dp"
             android:layout="@layout/uwu_mid_switch"
             android:key="pref_confirm_remove"
             android:summary="@string/summary_pref_confirm_remove"
             android:title="@string/title_pref_confirm_remove"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_qrcode_scan"
             android:layout="@layout/uwu_mid_switch"
             android:key="pref_start_scan_immediate"
             android:summary="@string/summary_pref_start_scan_immediate"
             android:title="@string/title_pref_start_scan_immediate"/>
+
         <ListPreference
             android:defaultValue="auto"
             android:icon="@drawable/uwu_language"
@@ -184,14 +132,110 @@
             android:key="pref_language"
             android:summary="%s"
             android:title="@string/title_language"/>
+
     </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_mux_settings">
+
+        <SwitchPreference
+            android:icon="@drawable/uwu_ic_alpha_m_circle_outline"
+            android:layout="@layout/uwu_top_switch"
+            android:key="pref_mux_enabled"
+            android:summary="@string/summary_pref_mux_enabled"
+            android:title="@string/title_pref_mux_enabled"/>
+
+        <EditTextPreference
+            android:icon="@drawable/uwu_ic_numeric"
+            android:layout="@layout/uwu_mid"
+            android:key="pref_mux_concurency"
+            android:summary="8"
+            android:inputType="number"
+            android:title="@string/title_pref_mux_concurency"/>
+
+        <EditTextPreference
+            android:icon="@drawable/uwu_ic_numeric"
+            android:layout="@layout/uwu_mid"
+            android:key="pref_mux_xudp_concurency"
+            android:summary="8"
+            android:inputType="number"
+            android:title="@string/title_pref_mux_xudp_concurency"/>
+
+        <ListPreference
+            android:defaultValue="reject"
+            android:icon="@drawable/uwu_ic_alpha_h_circle_outline"
+            android:entries="@array/mux_xudp_quic_entries"
+            android:layout="@layout/uwu_bot"
+            android:entryValues="@array/mux_xudp_quic_value"
+            android:key="pref_mux_xudp_quic"
+            android:summary="%s"
+            android:title="@string/title_pref_mux_xudp_quic"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_fragment_settings">
+
+        <SwitchPreference
+            android:icon="@drawable/uwu_ic_toggle_switch_outline"
+            android:layout="@layout/uwu_top_switch"
+            android:key="pref_fragment_enabled"
+            android:title="@string/title_pref_fragment_enabled"
+            android:summaryOn="@string/abc_capital_on"
+            android:summaryOff="@string/abc_capital_off"/>
+
+        <ListPreference
+            android:key="pref_fragment_packets"
+            android:defaultValue="tlshello"
+            android:icon="@drawable/uwu_ic_package_variant"
+            android:entries="@array/fragment_packets"
+            android:layout="@layout/uwu_mid"
+            android:entryValues="@array/fragment_packets"
+            android:summary="%s"
+            android:title="@string/title_pref_fragment_packets"/>
+
+        <EditTextPreference
+            android:icon="@drawable/uwu_ic_numeric"
+            android:layout="@layout/uwu_mid"
+            android:key="pref_fragment_length"
+            android:summary="50-100"
+            android:title="@string/title_pref_fragment_length"/>
+
+        <EditTextPreference
+            android:icon="@drawable/uwu_ic_numeric"
+            android:layout="@layout/uwu_bot"
+            android:key="pref_fragment_interval"
+            android:summary="10-20"
+            android:title="@string/title_pref_fragment_interval"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/title_sub_setting">
+
+        <SwitchPreference
+            android:icon="@drawable/uwu_ic_subscriptions_24dp"
+            android:layout="@layout/uwu_top_switch"
+            android:key="pref_auto_update_subscription"
+            android:summary="@string/summary_pref_auto_update_subscription"
+            android:title="@string/title_pref_auto_update_subscription"/>
+
+        <EditTextPreference
+            android:icon="@drawable/uwu_ic_numeric"
+            android:layout="@layout/uwu_bot"
+            android:key="pref_auto_update_interval"
+            android:summary="1440"
+            android:inputType="number"
+            android:title="@string/title_pref_auto_update_interval"/>
+
+    </PreferenceCategory>
+
     <PreferenceCategory android:title="@string/title_advanced">
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_image_looks_6"
             android:layout="@layout/uwu_top_switch"
             android:key="pref_prefer_ipv6"
             android:summary="@string/summary_pref_prefer_ipv6"
             android:title="@string/title_pref_prefer_ipv6"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_lan"
             android:layout="@layout/uwu_mid_switch"
@@ -199,6 +243,7 @@
             android:key="pref_proxy_sharing_enabled"
             android:summary="@string/summary_pref_proxy_sharing_enabled"
             android:title="@string/title_pref_proxy_sharing_enabled"/>
+
         <SwitchPreference
             android:icon="@drawable/uwu_ic_apple_airplay"
             android:layout="@layout/uwu_mid_switch"
@@ -206,6 +251,7 @@
             android:key="pref_allow_insecure"
             android:summary="@string/summary_pref_allow_insecure"
             android:title="@string/title_pref_allow_insecure"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_power_socket"
             android:layout="@layout/uwu_mid"
@@ -213,6 +259,7 @@
             android:summary="10808"
             android:inputType="number"
             android:title="@string/title_pref_socks_port"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_access_point_network"
             android:layout="@layout/uwu_mid"
@@ -220,18 +267,21 @@
             android:summary="10809"
             android:inputType="number"
             android:title="@string/title_pref_http_port"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid"
             android:key="pref_remote_dns"
             android:summary="@string/summary_pref_remote_dns"
             android:title="@string/title_pref_remote_dns"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid"
             android:key="pref_domestic_dns"
             android:summary="@string/summary_pref_domestic_dns"
             android:title="@string/title_pref_domestic_dns"/>
+
         <ListPreference
             android:defaultValue="warning"
             android:icon="@drawable/uwu_ic_math_log"
@@ -241,6 +291,7 @@
             android:key="pref_core_loglevel"
             android:summary="%s"
             android:title="@string/title_core_loglevel"/>
+
         <ListPreference
             android:icon="@drawable/uwu_ic_key_outline"
             android:defaultValue="VPN"
@@ -250,5 +301,7 @@
             android:key="pref_mode"
             android:summary="%s"
             android:title="@string/title_mode"/>
+
     </PreferenceCategory>
+
 </PreferenceScreen>
