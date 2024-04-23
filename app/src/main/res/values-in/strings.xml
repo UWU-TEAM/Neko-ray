@@ -294,4 +294,7 @@
     <string name="uwu_exit_message">Apakah Anda yakin ingin keluar dari aplikasi ini?</string>
     <string name="uwu_text_yes">Ok</string>
     <string name="uwu_text_no">Batal</string>
+    <string name="uwu_ignore_battery_optimization_summary">Ajukan permohonan izin yang diperlukan agar VPN berfungsi dengan baik.\n\nJika Anda menggunakan perangkat buatan perusahaan China, kartu tersebut mungkin tidak hilang setelah izin diberikan.</string>
+    <string name="uwu_ignore_battery_optimization_title">Abaikan pengoptimalan baterai</string>
+    <string name="read_more">Baca selengkapnya</string>
 </resources>

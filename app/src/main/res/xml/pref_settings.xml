@@ -19,6 +19,12 @@
 
     <PreferenceCategory android:title="@string/title_settings">
 
+        <Preference
+            android:key="pref_ignore_battery_optimization"
+            android:summary="@string/uwu_ignore_battery_optimization_summary"
+            android:title="@string/uwu_ignore_battery_optimization_title"
+            app:layout="@layout/preference_material_card_view" />
+
         <SwitchPreference
             android:defaultValue="true"
             android:icon="@drawable/uwu_ic_baseline_manage_search_24"
