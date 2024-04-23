@@ -45,12 +45,11 @@ public class HostToIpActivity extends BaseActivity {
 	private String quote = "";
 	private HashMap<String, Object> hostIP = new HashMap<>();
 	
-	private LinearLayout linear1;;
-	private RelativeLayout linear3;
+	private LinearLayout linear1;
 	private Button linear7;
 	private LinearLayout linear9;
 	private LinearLayout linear10;
-	private EditText edittext1;;
+	private EditText edittext1;
 	private TextView textview2;
 	private TextView textview1;
 	private TextView textview9;
@@ -67,16 +66,14 @@ public class HostToIpActivity extends BaseActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.host_to_ip);
 		initialize(_savedInstanceState);
-		Toolbar toolbar = findViewById(R.id.toolbar);
-        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		initializeLogic();
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
+	    Toolbar toolbar = findViewById(R.id.toolbar);
+        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		linear1 = findViewById(R.id.linear1);
-		linear3 = findViewById(R.id.linear3);
 		linear7 = findViewById(R.id.linear7);
 		linear9 = findViewById(R.id.linear9);
 		linear10 = findViewById(R.id.linear10);
@@ -130,10 +127,6 @@ public class HostToIpActivity extends BaseActivity {
 				SketchwareUtil.showMessage(getApplicationContext(), "Error");
 			}
 		};
-	}
-	
-	private void initializeLogic() {
-		_advancedCorners(linear7, "#7289DA", 10, 10, 10, 10);
 	}
 	
 	public void _elevation(final View _tampilkan, final double _num) {
