@@ -73,8 +73,8 @@ android {
         applicationId = "com.neko.v2ray"
         minSdk = 27
         targetSdk = 34
-        versionCode = 215
-        versionName = "1.0.5"
+        versionCode = 217
+        versionName = "1.0.7"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
 

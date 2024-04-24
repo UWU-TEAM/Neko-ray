@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        version="v1.0.5"
-        versioncode="2000215"
+        version="v1.0.7"
+        versioncode="2000217"
         summary="Neko v2rayNG"
-        date="2024-04-16">
-        <change>Add japanese language</change>
-        <change>Fixed title on change language</change>
-        <change>Adjust routing default rules</change>
-        <change>Remove the type of routing rule</change>
-        <change>Optimized toolbar layout</change>
-        <change>Add IpScanner</change>
-        <change>Bump com.android.application from 8.2.2 to 8.3.2</change>
-        <change>Bump com.android.library from 8.2.2 to 8.3.2</change>
-        <change>Optimized vector icon</change>
-        <change>Ability to override built in geosite.dat and geoip.dat</change>
-        <change>Retry downloading geo assets without proxy</change>
-        <change>Optimize routing</change>
-        <change>Add banner image to dialog changelog</change>
-        <change>Add IP Location</change>
-        <change>Add backup and restore configuration functionality</change>
-        <change>Core: Bump to 20240416 build</change>
+        date="2024-04-25">
+        <change>Redesign style FloatingActionButton</change>
+        <change>style:optimize UI logic</change>
+        <change>Bump androidx.activity:activity-ktx from 1.8.2 to 1.9.0</change>
+        <change>Bump androidx.core:core-ktx from 1.12.0 to 1.13.0</change>
+        <change>update dialog in check Update App</change>
+        <change>Optimized dialog animation</change>
+        <change>Add report issue activity</change>
+        <change>Adjust UI</change>
+        <change>Update AutoMarqueeTextView</change>
+        <change>Optimized HostToIp activity</change>
+        <change>Adjust Button text color vpn dialog</change>
+        <change>Add ignore battery optimizations card</change>
+        <change>Update splash and cgange bannee image</change>
+        <change>Add Auto Test and Connect Feature</change>
+        <change>Bump org.kohsuke:github-api from 1.318 to 1.321</change>
+        <change>Little bug fixed</change>
     </release>
 </changelog>
