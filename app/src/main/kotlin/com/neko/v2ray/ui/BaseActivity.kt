@@ -8,10 +8,10 @@ import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.neko.v2ray.util.MyContextWrapper
 import com.neko.v2ray.util.Utils
-import com.google.android.material.color.DynamicColors
 import com.neko.themeengine.ThemeEngine
 
 abstract class BaseActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ThemeEngine.applyToActivity(this)

@@ -17,9 +17,10 @@
         <change>Optimized HostToIp activity</change>
         <change>Adjust Button text color vpn dialog</change>
         <change>Add ignore battery optimizations card</change>
-        <change>Update splash and cgange bannee image</change>
+        <change>Update splash and cgange banner image</change>
         <change>Add Auto Test and Connect Feature</change>
         <change>Bump org.kohsuke:github-api from 1.318 to 1.321</change>
+        <change>Add dialog no internet connection</change>
         <change>Little bug fixed</change>
     </release>
 </changelog>

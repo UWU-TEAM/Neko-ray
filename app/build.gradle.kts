@@ -62,6 +62,7 @@ dependencies {
     implementation("androidx.webkit:webkit:1.10.0")
     implementation("org.kohsuke:github-api:1.321")
     implementation("com.github.aakira:expandable-layout:1.6.0")
+    implementation("com.jakewharton.timber:timber:5.0.1")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
 }
 

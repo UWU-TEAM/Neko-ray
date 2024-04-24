@@ -43,16 +43,17 @@ android {
 
     buildFeatures {
         viewBinding = true
+        buildConfig = true
     }
 }
 
 dependencies {
-    api("androidx.core:core-ktx:1.13.0")
-    api("androidx.appcompat:appcompat:1.6.1")
-    api("androidx.preference:preference-ktx:1.2.1")
-    api("com.google.android.material:material:1.11.0")
-    api("androidx.constraintlayout:constraintlayout:2.1.4")
-    api("com.squareup.okhttp3:okhttp:4.12.0")
-    api("de.hdodenhof:circleimageview:3.1.0")
-    api("org.jsoup:jsoup:1.17.2")
+    implementation("androidx.core:core-ktx:1.13.0")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("com.google.android.material:material:1.11.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("org.jsoup:jsoup:1.17.2")
 }

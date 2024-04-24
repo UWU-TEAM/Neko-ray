@@ -60,6 +60,9 @@ import com.neko.tools.NetworkSwitcher
 import com.neko.tools.SpeedTestActivity
 import com.neko.ip.HostToIpActivity
 import com.neko.ip.IpLocation
+import com.neko.nointernet.callbacks.ConnectionCallback
+import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
+import timber.log.Timber
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -73,6 +76,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
     private var mItemTouchHelper: ItemTouchHelper? = null
+    private var noInternetDialogSignal: NoInternetDialogSignal? = null
     val mainViewModel: MainViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -83,6 +87,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         setContentView(view)
         title = getString(R.string.app_name)
         setSupportActionBar(binding.toolbar)
+        Timber.d("onCreate")
+        Timber.d("lifecycle.currentState: ${lifecycle.currentState}")
 
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
@@ -153,6 +159,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             typedArray.recycle()
             return color
         }
+
+        noInternetDialogSignal = NoInternetDialogSignal.Builder(
+            this,
+            lifecycle
+        ).apply {
+            dialogProperties.apply {
+                connectionCallback = object : ConnectionCallback { // Optional
+                    override fun hasActiveConnection(hasActiveConnection: Boolean) {
+                        // ...
+                    }
+                }
+                cancelable = false // Optional
+                showInternetOnButtons = true // Optional
+                showAirplaneModeOffButtons = true // Optional
+            }
+        }.build()
     }
 
     private fun setupViewModel() {
@@ -786,5 +808,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
+    }
+
+    override fun onStart() {
+        super.onStart()
+        Timber.d("onStart")
+        Timber.d("lifecycle.currentState: ${lifecycle.currentState}")
+        noInternetDialogSignal?.show()
     }
 }
