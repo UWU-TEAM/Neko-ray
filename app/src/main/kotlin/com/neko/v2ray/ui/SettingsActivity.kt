@@ -21,6 +21,7 @@ import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
+import com.neko.v2ray.service.AutoTestConnectWorker
 import com.neko.v2ray.service.SubscriptionUpdater
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
@@ -75,6 +76,7 @@ class SettingsActivity : BaseActivity() {
         private val remoteDns by lazy { findPreference<EditTextPreference>(AppConfig.PREF_REMOTE_DNS) }
         private val domesticDns by lazy { findPreference<EditTextPreference>(AppConfig.PREF_DOMESTIC_DNS) }
         private val mode by lazy { findPreference<ListPreference>(AppConfig.PREF_MODE) }
+        private val autoTestConnect by lazy { findPreference<SwitchPreference>(AppConfig.PREF_AUTO_TEST_CONNECT) }
 
         override fun onCreatePreferences(bundle: Bundle?, s: String?) {
             addPreferencesFromResource(R.xml.pref_settings)
@@ -151,6 +153,13 @@ class SettingsActivity : BaseActivity() {
                     if (TextUtils.isEmpty(nval) || nval.toLong() < 15) AppConfig.SUBSCRIPTION_DEFAULT_UPDATE_INTERVAL else nval
                 autoUpdateInterval?.summary = nval
                 configureUpdateTask(nval.toLong())
+                true
+            }
+
+            autoTestConnect?.setOnPreferenceChangeListener { _, newValue ->
+                val value = newValue as Boolean
+                autoTestConnect?.isChecked = value
+                if (newValue) configureAutoTestConnectWork(15) else cancelAutoTestConnectWork()
                 true
             }
 
@@ -327,6 +336,30 @@ class SettingsActivity : BaseActivity() {
             val rw = RemoteWorkManager.getInstance(AngApplication.application)
             rw.cancelUniqueWork(AppConfig.SUBSCRIPTION_UPDATE_TASK_NAME)
         }
+
+        private fun configureAutoTestConnectWork(interval: Long) {
+            val rw = RemoteWorkManager.getInstance(AngApplication.application)
+            rw.cancelUniqueWork(AppConfig.PREF_AUTO_TEST_CONNECT_WORK_NAME)
+            rw.enqueueUniquePeriodicWork(
+                AppConfig.PREF_AUTO_TEST_CONNECT_WORK_NAME,
+                ExistingPeriodicWorkPolicy.UPDATE,
+                PeriodicWorkRequest.Builder(
+                    AutoTestConnectWorker.UpdateTask::class.java,
+                    interval,
+                    TimeUnit.MINUTES
+                )
+                    .apply {
+                        setInitialDelay(interval, TimeUnit.MINUTES)
+                    }
+                    .build()
+            )
+        }
+
+        private fun cancelAutoTestConnectWork() {
+            val rw = RemoteWorkManager.getInstance(AngApplication.application)
+            rw.cancelUniqueWork(AppConfig.PREF_AUTO_TEST_CONNECT_WORK_NAME)
+        }
+
 
         private fun updateMux(enabled: Boolean) {
             muxConcurrency?.isEnabled = enabled

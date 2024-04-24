@@ -62,11 +62,11 @@ object V2RayServiceManager {
     private var mSubscription: Subscription? = null
     private var mNotificationManager: NotificationManager? = null
 
-    fun startV2Ray(context: Context) {
+    fun startV2Ray(context: Context, noToast: Boolean = false) {
         if (settingsStorage?.decodeBool(AppConfig.PREF_PROXY_SHARING) == true) {
-            context.toast(R.string.toast_warning_pref_proxysharing_short)
+            if (!noToast) { context.toast(R.string.toast_warning_pref_proxysharing_short) }
         } else {
-            context.toast(R.string.toast_services_start)
+            if (!noToast) { context.toast(R.string.toast_services_start) }
         }
         val intent = if (settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN" == "VPN") {
             Intent(context.applicationContext, V2RayVpnService::class.java)
@@ -213,7 +213,10 @@ object V2RayServiceManager {
                     startV2rayPoint()
                 }
                 AppConfig.MSG_MEASURE_DELAY -> {
-                    measureV2rayDelay()
+                    if (v2rayPoint.isRunning) {
+                        val isAutoTest = intent.getBooleanExtra("content", false)
+                        measureV2rayDelay(isAutoTest)
+                    }
                 }
             }
 
@@ -230,7 +233,7 @@ object V2RayServiceManager {
         }
     }
 
-    private fun measureV2rayDelay() {
+    private fun measureV2rayDelay(isAutoTest: Boolean = false) {
         GlobalScope.launch(Dispatchers.IO) {
             val service = serviceControl?.get()?.getService() ?: return@launch
             var time = -1L
@@ -244,6 +247,10 @@ object V2RayServiceManager {
                 }
             }
             val result = if (time == -1L) {
+                if (isAutoTest) {
+                    MessageUtil.sendMsg2UI(service, AppConfig.MSG_AUTO_TEST_ALL_REAL_PING, "")
+                }
+
                 service.getString(R.string.connection_test_error, errstr)
             } else {
                 service.getString(R.string.connection_test_available, time)
@@ -312,6 +319,7 @@ object V2RayServiceManager {
         chan.lightColor = Color.DKGRAY
         chan.importance = NotificationManager.IMPORTANCE_NONE
         chan.lockscreenVisibility = Notification.VISIBILITY_PRIVATE
+        //chan.setSound(null, null)
         getNotificationManager()?.createNotificationChannel(chan)
         return channelId
     }

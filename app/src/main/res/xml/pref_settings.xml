@@ -28,10 +28,17 @@
         <SwitchPreference
             android:defaultValue="true"
             android:icon="@drawable/uwu_ic_baseline_manage_search_24"
-            android:layout="@layout/uwu_sin_switch"
+            android:layout="@layout/uwu_top_switch"
             android:key="pref_sniffing_enabled"
             android:summary="@string/summary_pref_sniffing_enabled"
             android:title="@string/title_pref_sniffing_enabled"/>
+
+        <SwitchPreference
+            android:key="pref_auto_test_connect"
+            android:icon="@drawable/uwu_ic_auto_test_connect"
+            android:layout="@layout/uwu_bot_switch"
+            android:summary="@string/summary_pref_auto_test_connect"
+            android:title="@string/title_pref_auto_test_connect" />
 
     </PreferenceCategory>
 

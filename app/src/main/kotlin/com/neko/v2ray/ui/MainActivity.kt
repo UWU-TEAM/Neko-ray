@@ -171,12 +171,20 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_orange))
                 setTestState(getString(R.string.connection_connected))
                 binding.layoutTest.isFocusable = true
+
+                if (settingsStorage?.decodeBool(AppConfig.PREF_AUTO_TEST_CONNECT, false) == true) {
+                    mainViewModel.testCurrentServerRealPing()
+                }
             } else {
                 binding.fab.setImageResource(R.drawable.uwu_ic_service_idle)
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_grey))
                 setTestState(getString(R.string.connection_not_connected))
                 binding.layoutTest.isFocusable = false
             }
+        }
+        mainViewModel.autoConnectServer.observe(this) {
+            adapter.notifyItemChanged(mainViewModel.getPosition(it.first!!))
+            adapter.notifyItemChanged(mainViewModel.getPosition(it.second))
         }
         mainViewModel.startListenBroadcast()
     }
