@@ -1,11 +1,11 @@
-package com.v2ray.ang.service
+package com.neko.v2ray.service
 
 import android.annotation.SuppressLint
 import android.content.Context
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
-import com.v2ray.ang.AppConfig
-import com.v2ray.ang.util.MessageUtil
+import com.neko.v2ray.AppConfig
+import com.neko.v2ray.util.MessageUtil
 
 object AutoTestConnectWorker {
 
