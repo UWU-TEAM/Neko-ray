@@ -57,9 +57,8 @@ class NekoAboutActivity : BaseActivity() {
 
     fun uwuUpdater(view: View) {
         AppUpdater(this)
-            .setUpdateFrom(UpdateFrom.GITHUB)
-            .setGitHubUserAndRepo("Blawuken", "Neko_v2rayNG")
-            .showEvery(5)
+            .setUpdateFrom(UpdateFrom.JSON)
+            .setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
             .setDisplay(Display.DIALOG)
             .showAppUpdated(true)
             .setCancelable(false)
