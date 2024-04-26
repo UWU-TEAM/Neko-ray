@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>不代理</item>
+        <item>多路復用</item>
+        <item>原生</item>
+    </string-array>
+    
+    <string-array name="share_method">
+        <item>QR Code</item>
+        <item>匯出至剪貼簿</item>
+        <item>匯出完整配置至剪貼簿</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QR Code</item>
+        <item>匯出至剪貼簿</item>
+    </string-array>
+
+    <string-array name="routing_tag">
+        <item>Proxy URL 或 IP</item>
+        <item>直接連線 URL 或 IP</item>
+        <item>已封鎖的 URL 或 IP</item>
+    </string-array>
+
+    <string-array name="routing_mode">
+        <item>全域 Proxy</item>
+        <item>略過區域網路的 Proxy</item>
+        <item>略過中國大陸的 Proxy</item>
+        <item>略過區域網路及中國大陸的 Proxy</item>
+        <item>直接連線</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>僅 Proxy</item>
+    </string-array>
+</resources>
