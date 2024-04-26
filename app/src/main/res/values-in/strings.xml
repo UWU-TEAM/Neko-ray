@@ -283,9 +283,9 @@
     <string name="uwu_border_about_title">Opsi Tambahan</string>
     <string name="uwu_border_about_summary">Ketuk ikon panah di samping</string>
     <string name="uwu_devicename_title">Nama Perangkat</string>
-    <string name="uwu_board_title">Papan</string>
+    <string name="uwu_board_title">Board</string>
     <string name="uwu_osversion_title">Versi Os</string>
-    <string name="uwu_brand_title">Merek</string>
+    <string name="uwu_brand_title">Brand</string>
     <string name="uwu_buildid_title">ID Pembuatan</string>
     <string name="uwu_baseband_title">Versi Baseband</string>
     <string name="uwu_github_title">Github</string>
