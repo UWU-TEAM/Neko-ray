@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.FileProvider
 import androidx.appcompat.widget.Toolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.tbruyelle.rxpermissions.RxPermissions
@@ -38,7 +39,31 @@ class NekoBackupActivity : BaseActivity() {
 
         binding.tvBackupSummary.text = this.getString(R.string.summary_configuration_backup, extDir)
         binding.layoutBackup.setOnClickListener {
-            backupMMKV()
+            val ret = backupConfiguration(extDir.absolutePath)
+            if (ret.first) {
+                toast(R.string.toast_success)
+            } else {
+                toast(R.string.toast_failure)
+            }
+        }
+
+        binding.layoutShare.setOnClickListener {
+            val ret = backupConfiguration(cacheDir.absolutePath)
+            if (ret.first) {
+                startActivity(
+                    Intent.createChooser(
+                        Intent(Intent.ACTION_SEND).setType("application/zip")
+                            .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+                            .putExtra(
+                                Intent.EXTRA_STREAM, FileProvider.getUriForFile(
+                                    this, BuildConfig.APPLICATION_ID + ".cache", File(ret.second)
+                                )
+                            ), getString(R.string.title_configuration_share)
+                    )
+                )
+            } else {
+                toast(R.string.toast_failure)
+            }
         }
 
         binding.layoutRestore.setOnClickListener {
@@ -62,40 +87,36 @@ class NekoBackupActivity : BaseActivity() {
         }
     }
 
-    fun backupMMKV() {
+    fun backupConfiguration(outputZipFilePos: String): Pair<Boolean, String> {
         val dateFormated = SimpleDateFormat(
             "yyyy-MM-dd-HH-mm-ss",
             Locale.getDefault()
         ).format(System.currentTimeMillis())
         val folderName = "${getString(R.string.app_name)}_${dateFormated}"
         val backupDir = this.cacheDir.absolutePath + "/$folderName"
-        val outputZipFilePath = extDir.absolutePath + "/$folderName.zip"
+        val outputZipFilePath = "$outputZipFilePos/$folderName.zip"
 
         val count = MMKV.backupAllToDirectory(backupDir)
         if (count <= 0) {
-            toast(R.string.toast_failure)
+            return Pair(false, "")
         }
 
         if (ZipUtil.zipFromFolder(backupDir, outputZipFilePath)) {
-            toast(R.string.toast_success)
+            return Pair(true, outputZipFilePath)
         } else {
-            toast(R.string.toast_failure)
+            return Pair(false, "")
         }
     }
 
-    fun restoreMMKV(zipFile: File) {
+    fun restoreConfiguration(zipFile: File): Boolean {
         val backupDir = this.cacheDir.absolutePath + "/${System.currentTimeMillis()}"
 
         if (!ZipUtil.unzipToFolder(zipFile, backupDir)) {
-            toast(R.string.toast_failure)
+            return false
         }
 
         val count = MMKV.restoreAllFromDirectory(backupDir)
-        if (count > 0) {
-            toast(R.string.toast_success)
-        } else {
-            toast(R.string.toast_failure)
-        }
+        return count > 0
     }
 
     private fun showFileChooser() {
@@ -123,8 +144,11 @@ class NekoBackupActivity : BaseActivity() {
                                 input?.copyTo(fileOut)
                             }
                         }
-
-                        restoreMMKV(targetFile)
+                        if (restoreConfiguration(targetFile)) {
+                            toast(R.string.toast_success)
+                        } else {
+                            toast(R.string.toast_failure)
+                        }
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }

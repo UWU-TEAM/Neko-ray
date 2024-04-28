@@ -176,6 +176,7 @@
     <string name="title_configuration_backup">Cadangkan Config</string>
     <string name="summary_configuration_backup">Lokasi penyimpanan: [%s], Cadangan akan dihapus setelah mencopot pemasangan aplikasi atau mengosongkan penyimpanan</string>
     <string name="title_configuration_restore">Pulihkan Config</string>
+    <string name="title_configuration_share">Bagikan Config</string>
 
     <string name="title_pref_promotion">Promosi</string>
     <string name="summary_pref_promotion">Promosi, klik untuk detailnya(Donasi dapat dihapus)</string>
