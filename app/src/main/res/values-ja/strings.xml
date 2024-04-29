@@ -298,4 +298,5 @@
     <string name="uwu_ignore_battery_optimization_summary">VPN が適切に機能するために必要な権限を申請します。\n\n中国企業製の端末をお使いの場合、許可後もカードが消えない場合があります。</string>
     <string name="uwu_ignore_battery_optimization_title">バッテリーの最適化を無視する</string>
     <string name="read_more">続きを読む</string>
+    <string name="uwu_host_checker">ホストチェッカー</string>
 </resources>

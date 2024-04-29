@@ -236,4 +236,5 @@
     <string name="title_pref_fragment_enabled">فعال کردن Fragment</string>
     <string name="menu_item_add_asset">افزودن</string>
     <string name="menu_item_add_url">افزودن لینک</string>
+    <string name="uwu_host_checker">مدقق المضيف</string>
 </resources>

@@ -194,6 +194,13 @@
 
         <activity
             android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name="com.neko.ip.hostchecker.HostChecker"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:parentActivityName="com.neko.v2ray.ui.MainActivity" />
+
+        <activity
+            android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name="com.neko.ip.IpLocation"
             android:exported="false"
             android:screenOrientation="portrait"

@@ -60,6 +60,7 @@ import com.neko.tools.NetworkSwitcher
 import com.neko.tools.SpeedTestActivity
 import com.neko.ip.HostToIpActivity
 import com.neko.ip.IpLocation
+import com.neko.ip.hostchecker.HostChecker
 import com.neko.nointernet.callbacks.ConnectionCallback
 import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import timber.log.Timber
@@ -760,6 +761,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun uwuHostToIp(view: View) {
         startActivity(Intent(this, HostToIpActivity::class.java))
+    }
+
+    fun uwuHostCeker(view: View) {
+        startActivity(Intent(this, HostChecker::class.java))
     }
 
     fun uwuIpLocation(view: View) {

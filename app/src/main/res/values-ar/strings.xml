@@ -342,5 +342,6 @@
     <string name="appupdater_btn_disable">عدم العرض مرة أخرى</string>
     <string name="appupdater_btn_dismiss">تجاهل</string>
     <string name="appupdater_channel_name">إشعارات التحديث</string>
+    <string name="uwu_host_checker"> مدقق المضيف</string>
     <!-- Neko strings -->
 </resources>

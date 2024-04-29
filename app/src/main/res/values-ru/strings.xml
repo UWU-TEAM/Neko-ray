@@ -341,5 +341,6 @@
     <string name="appupdater_btn_disable">Больше не показывать</string>
     <string name="appupdater_btn_dismiss">Закрыть</string>
     <string name="appupdater_channel_name">Уведомления об обновлениях</string>
+    <string name="uwu_host_checker">Проверка хоста</string>
     <!-- Neko strings -->
 </resources>

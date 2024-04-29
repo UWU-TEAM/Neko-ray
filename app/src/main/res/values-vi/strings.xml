@@ -334,5 +334,6 @@
     <string name="appupdater_btn_disable">Không hiển thị lại</string>
     <string name="appupdater_btn_dismiss">Bỏ qua</string>
     <string name="appupdater_channel_name">Cập nhật thông báo</string>
+    <string name="uwu_host_checker">Trình kiểm tra máy chủ</string>
     <!-- Neko strings -->
 </resources>

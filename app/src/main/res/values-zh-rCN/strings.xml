@@ -341,5 +341,6 @@
     <string name="appupdater_btn_disable">不再显示</string>
     <string name="appupdater_btn_dismiss">关闭</string>
     <string name="appupdater_channel_name">更新通知</string>
+    <string name="uwu_host_checker">主机检查器</string>
     <!-- Neko strings -->
 </resources>

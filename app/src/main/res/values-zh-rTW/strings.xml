@@ -238,4 +238,5 @@
     <string name="title_pref_fragment_length">分片包長（最小-最大）</string>
     <string name="title_pref_fragment_interval">分片間隔（最小-最大）</string>
     <string name="title_pref_fragment_enabled">啟用分片（Fragment）</string>
+    <string name="uwu_host_checker">主機檢查器</string>
 </resources>
