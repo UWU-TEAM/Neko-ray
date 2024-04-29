@@ -32,6 +32,24 @@ class Grettings : AppCompatTextView {
 
         val sb = StringBuilder()
         when (language) {
+            "ar" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 صباح الخير...")
+                    timeOfDay in 9..15 -> sb.append("⛅ مساء الخير...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ مساء الخير...")
+                    timeOfDay in 21..23 -> sb.append("🌙 طاب مساؤك...")
+                    else -> sb.append("💤 حان الوقت للذهاب الى النوم...")
+                }
+            }
+            "fa" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 صباح الخير...")
+                    timeOfDay in 9..15 -> sb.append("⛅ مساء الخير...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ مساء الخير...")
+                    timeOfDay in 21..23 -> sb.append("🌙 طاب مساؤك...")
+                    else -> sb.append("💤 حان الوقت للذهاب الى النوم...")
+                }
+            }
             "in" -> {
                 when {
                     timeOfDay in 4..8 -> sb.append("🌤 Selamat Pagi...")
@@ -48,6 +66,42 @@ class Grettings : AppCompatTextView {
                     timeOfDay in 16..20 -> sb.append("🌥️ こんばんは...")
                     timeOfDay in 21..23 -> sb.append("🌙 おやすみ...")
                     else -> sb.append("💤 寝る時間だよ...")
+                }
+            }
+            "ru" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 Доброе утро...")
+                    timeOfDay in 9..15 -> sb.append("⛅ Добрый день...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ Добрый день...")
+                    timeOfDay in 21..23 -> sb.append("🌙 Спокойной ночи...")
+                    else -> sb.append("💤 пора идти спать...")
+                }
+            }
+            "vi" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 Chào buổi sáng...")
+                    timeOfDay in 9..15 -> sb.append("⛅ Chào buổi chiều...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ Chào buổi chiều...")
+                    timeOfDay in 21..23 -> sb.append("🌙 Chúc ngủ ngon...")
+                    else -> sb.append("💤 Đã đến giờ đi ngủ...")
+                }
+            }
+            "zh", "CN" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 早上好...")
+                    timeOfDay in 9..15 -> sb.append("⛅ 下午好...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ 下午好...")
+                    timeOfDay in 21..23 -> sb.append("🌙 晚安...")
+                    else -> sb.append("💤 是时候去睡觉了...")
+                }
+            }
+            "zh", "TW" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 早安...")
+                    timeOfDay in 9..15 -> sb.append("⛅ 午安...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ 午安...")
+                    timeOfDay in 21..23 -> sb.append("🌙 晚安...")
+                    else -> sb.append("💤 是時候去睡覺了...")
                 }
             }
             else -> {
