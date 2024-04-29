@@ -1,10 +1,8 @@
 package com.neko.v2ray.ui
 
-import android.content.Intent
-import android.os.Handler
-import android.os.Looper
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.text.method.ScrollingMovementMethod
+import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
@@ -17,14 +15,19 @@ import com.neko.v2ray.databinding.ActivityLogcatBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
+import kotlinx.coroutines.withContext
+import java.io.BufferedReader
 import java.io.IOException
-import java.util.LinkedHashSet
+import java.io.InputStreamReader
+import java.nio.charset.StandardCharsets
 
 class LogcatActivity : BaseActivity() {
     private lateinit var binding: ActivityLogcatBinding
+
+    companion object {
+        private const val MAX_BUFFERED_LINES = (1 shl 14) - 1
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,44 +38,7 @@ class LogcatActivity : BaseActivity() {
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        logcat(false)
-    }
-
-    private fun logcat(shouldFlushLog: Boolean) {
-
-        try {
-            binding.pbWaiting.visibility = View.VISIBLE
-
-            lifecycleScope.launch(Dispatchers.Default) {
-                if (shouldFlushLog) {
-                    val lst = LinkedHashSet<String>()
-                    lst.add("logcat")
-                    lst.add("-c")
-                    val process = Runtime.getRuntime().exec(lst.toTypedArray())
-                    process.waitFor()
-                }
-                val lst = LinkedHashSet<String>()
-                lst.add("logcat")
-                lst.add("-d")
-                lst.add("-v")
-                lst.add("time")
-                lst.add("-s")
-                lst.add("GoLog,tun2socks,${ANG_PACKAGE},AndroidRuntime,System.err")
-                val process = Runtime.getRuntime().exec(lst.toTypedArray())
-//                val bufferedReader = BufferedReader(
-//                        InputStreamReader(process.inputStream))
-//                val allText = bufferedReader.use(BufferedReader::readText)
-                val allText = process.inputStream.bufferedReader().use { it.readText() }
-                launch(Dispatchers.Main) {
-                    binding.tvLogcat.text = allText
-                    binding.tvLogcat.movementMethod = ScrollingMovementMethod()
-                    binding.pbWaiting.visibility = View.GONE
-                    Handler(Looper.getMainLooper()).post { binding.svLogcat.fullScroll(View.FOCUS_DOWN) }
-                }
-            }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
+        lifecycleScope.launch(Dispatchers.IO) { streamingLog() }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -87,9 +53,66 @@ class LogcatActivity : BaseActivity() {
             true
         }
         R.id.clear_all -> {
-            logcat(true)
+            flush()
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    private fun flush() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val command = listOf("logcat", "-c")
+            val process = ProcessBuilder(command).start()
+            process.waitFor()
+            withContext(Dispatchers.Main) {
+                binding.tvLogcat.text = ""
+            }
+        }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private suspend fun streamingLog() = withContext(Dispatchers.IO) {
+        val builder = ProcessBuilder("logcat", "-v", "time", "-s", "GoLog,tun2socks,${ANG_PACKAGE},AndroidRuntime,System.err")
+        builder.environment()["LC_ALL"] = "C"
+        var process: Process? = null
+        try {
+            process = try {
+                builder.start()
+            } catch (e: IOException) {
+                Log.e(packageName, Log.getStackTraceString(e))
+                return@withContext
+            }
+            val stdout = BufferedReader(InputStreamReader(process!!.inputStream, StandardCharsets.UTF_8))
+
+            var timeLastNotify = System.nanoTime()
+            val bufferedLogLines = arrayListOf<String>()
+            var timeout = 1000000000L / 2 // The timeout is initially small so that the view gets populated immediately.
+
+            while (true) {
+                val line = stdout.readLine() ?: break
+                bufferedLogLines.add(line)
+                val timeNow = System.nanoTime()
+                if (bufferedLogLines.size < MAX_BUFFERED_LINES && (timeNow - timeLastNotify) < timeout && stdout.ready())
+                    continue
+                timeout = 1000000000L * 5 / 2 // Increase the timeout after the initial view has something in it.
+                timeLastNotify = timeNow
+
+                withContext(Dispatchers.Main) {
+                    val contentHeight = binding.tvLogcat.height
+                    val scrollViewHeight = binding.svLogcat.height
+                    val isScrolledToBottomAlready = (binding.svLogcat.scrollY + scrollViewHeight) >= contentHeight * 0.9
+                    binding.pbWaiting.visibility = View.GONE
+                    binding.tvLogcat.text = binding.tvLogcat.text.toString() + bufferedLogLines.joinToString(separator = "\n", postfix = "\n")
+                    bufferedLogLines.clear()
+                    if (isScrolledToBottomAlready) {
+                        binding.svLogcat.post {
+                            binding.svLogcat.fullScroll(View.FOCUS_DOWN)
+                        }
+                    }
+                }
+            }
+        } finally {
+            process?.destroy()
+        }
     }
 }
