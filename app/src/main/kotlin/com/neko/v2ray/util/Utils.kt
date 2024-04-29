@@ -399,6 +399,7 @@ object Utils {
             "vi" -> Locale("vi")
             "ru" -> Locale("ru")
             "fa" -> Locale("fa")
+            "ar" -> Locale("ar")
             else -> getSysLocale()
         }
 
