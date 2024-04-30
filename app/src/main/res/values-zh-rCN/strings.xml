@@ -1,248 +1,266 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_widget_name">开关</string>
-    <string name="app_tile_name">开关</string>
-    <string name="app_tile_first_use">初次使用此功能请先用APP添加配置</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="migration_success">数据迁移成功!</string>
-    <string name="migration_fail">数据迁移失败啦!</string>
-
-    <!-- Notifications -->
+<?xml version="1.0" encoding="utf-8"?> 
+<resources> 
+    <string name="app_widget_name">转变</string>
+    <string name="app_tile_name">转变</string>
+    <string name="app_tile_first_use">首次使用此功能，请使用App添加服务器</string>
+    <string name="navigation_drawer_open">打开导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
+    <string name="migration_success">数据迁移成功！</string>
+    <string name="migration_fail">数据迁移失败！</string>
+ 
+    <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">停止</string>
-    <string name="toast_permission_denied">无法取得权限</string>
+    <string name="toast_permission_denied">无法获得权限</string>
     <string name="notification_action_more">点击了解更多</string>
-    <string name="toast_services_start">启动服务中</string>
-    <string name="toast_services_stop">关闭中</string>
+    <string name="toast_services_start">启动服务</string>
+    <string name="toast_services_stop">停止服务</string>
     <string name="toast_services_success">启动服务成功</string>
     <string name="toast_services_failure">启动服务失败</string>
-
-    <!--ServerActivity-->
+ 
+    <!--ServerActivity--> 
     <string name="title_server">配置文件</string>
     <string name="menu_item_add_config">添加配置</string>
     <string name="menu_item_save_config">保存配置</string>
     <string name="menu_item_del_config">删除配置</string>
-    <string name="menu_item_import_config_qrcode">扫描二维码</string>
-    <string name="menu_item_import_config_clipboard">从剪贴板导入</string>
+    <string name="menu_item_import_config_qrcode">从二维码导入配置</string>
+    <string name="menu_item_import_config_clipboard">从剪贴板导入配置</string>
     <string name="menu_item_import_config_manually_vmess">手动输入[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">手动输入[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">手动输入[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">手动输入[Socks]</string>
-    <string name="menu_item_import_config_manually_trojan">手动输入[Trojan]</string>
+    <string name="menu_item_import_config_manually_socks">手动输入[袜子]</string>
+    <string name="menu_item_import_config_manually_trojan">手动输入[木马]</string>
     <string name="menu_item_import_config_manually_wireguard">手动输入[Wireguard]</string>
     <string name="menu_item_import_config_custom">自定义配置</string>
     <string name="menu_item_import_config_custom_clipboard">从剪贴板导入自定义配置</string>
     <string name="menu_item_import_config_custom_local">从本地导入自定义配置</string>
-    <string name="menu_item_import_config_custom_url">剪贴板URL导入自定义配置</string>
-    <string name="menu_item_import_config_custom_url_scan">扫描URL导入自定义配置</string>
+    <string name="menu_item_import_config_custom_url">从 URL 导入自定义配置</string>
+    <string name="menu_item_import_config_custom_url_scan">导入自定义配置扫描 URL</string>
     <string name="del_config_comfirm">确认删除？</string>
-    <string name="server_lab_remarks">别名(remarks)</string>
-    <string name="server_lab_address">地址(address)</string>
-    <string name="server_lab_port">端口(port)</string>
-    <string name="server_lab_id">用户ID(id)</string>
-    <string name="server_lab_alterid">额外ID(alterId)</string>
-    <string name="server_lab_security">加密方式(security)</string>
-    <string name="server_lab_network">传输协议(network)</string>
-    <string name="server_lab_more_function">底层传输方式(transport)</string>
-    <string name="server_lab_head_type">伪装类型(type)</string>
-    <string name="server_lab_mode_type">gRPC 传输模式(mode)</string>
-    <string name="server_lab_request_host">伪装域名(host)(host/ws host/httpupgrade host/h2 host)/QUIC 加密方式/gRPC Authority</string>
-    <string name="server_lab_path">path(ws path/httpupgrade path/h2 path)/QUIC 加密密钥/kcp seed/gRPC serviceName</string>
-    <string name="server_lab_stream_security">传输层安全(TLS)</string>
-    <string name="server_lab_allow_insecure">跳过证书验证(allowInsecure)</string>
-    <string name="server_lab_sni">SNI</string>
-    <string name="server_lab_address3">服务器地址</string>
-    <string name="server_lab_port3">服务器端口</string>
+    <string name="server_lab_remarks">评论</string>
+    <string name="server_lab_address">地址</string>
+    <string name="server_lab_port">港口</string>
+    <string name="server_lab_id">ID</string>
+    <string name="server_lab_alterid">变更ID</string>
+    <string name="server_lab_security">安全</string>
+    <string name="server_lab_network">网络</string>
+    <string name="server_lab_more_function">运输</string>
+    <string name="server_lab_head_type">头型</string>
+    <string name="server_lab_mode_type">gRPC模式</string>
+    <string name="server_lab_request_host">请求主机(主机/ws主机/httpupgrade主机/h2主机)/QUIC安全/gRPC权限</string>
+    <string name="server_lab_path">路径(ws 路径/httpupgrade 路径/h2 路径)/QUIC 密钥/kcp 种子/gRPC 服务名称</string>
+    <string name="server_lab_stream_security">传输层安全协议</string>
+    <string name="server_lab_allow_insecure">允许不安全</string>
+    <string name="server_lab_sni">神经网络研究所</string>
+    <string name="server_lab_address3">地址</string>
+    <string name="server_lab_port3">港口</string>
     <string name="server_lab_id3">密码</string>
-    <string name="server_lab_security3">加密方式</string>
-    <string name="server_lab_id4">密码(可选)</string>
-    <string name="server_lab_security4">用户名(可选)</string>
-    <string name="server_lab_encryption">加密方式(encryption)</string>
-    <string name="server_lab_flow">流控(flow)</string>
-    <string name="server_lab_reserved">Reserved(可选)</string>
-    <string name="server_lab_local_address">本地地址(可选IPv4/IPv6，逗号隔开)</string>
-    <string name="server_lab_local_mtu">Mtu(可选, 默认1420)</string>
+    <string name="server_lab_security3">安全</string>
+    <string name="server_lab_id4">密码（可选）</string>
+    <string name="server_lab_security4">用户（可选）</string>
+    <string name="server_lab_encryption">加密</string>
+    <string name="server_lab_flow">流动</string>
+    <string name="server_lab_reserved">保留（可选）</string>
+    <string name="server_lab_local_address">本地地址（可选 IPv4/IPv6，以逗号分隔）</string>
+    <string name="server_lab_local_mtu">Mtu（可选，默认1420）</string>
     <string name="toast_success">成功</string>
     <string name="toast_failure">失败</string>
-    <string name="toast_none_data">没有数据</string>
-    <string name="toast_incorrect_protocol">不正确的协议</string>
+    <string name="toast_none_data">没有什么</string>
+    <string name="toast_incorrect_protocol">协议不正确</string>
     <string name="toast_decoding_failed">解码失败</string>
     <string name="title_file_chooser">选择一个配置文件</string>
-    <string name="toast_require_file_manager">请安装一个文件管理器</string>
+    <string name="toast_require_file_manager">请安装文件管理器。</string>
     <string name="server_customize_config">自定义配置</string>
-    <string name="toast_config_file_invalid">无效的配置文件</string>
+    <string name="toast_config_file_invalid">无效配置</string>
     <string name="server_lab_content">内容</string>
     <string name="toast_none_data_clipboard">剪贴板中没有数据</string>
     <string name="toast_invalid_url">无效的网址</string>
-    <string name="server_lab_need_inbound">确保inbounds port和设置中的一致</string>
+    <string name="server_lab_need_inbound">确保入站端口与设置一致</string>
     <string name="toast_malformed_josn">配置格式错误</string>
-    <string name="server_lab_request_host6">Host(SNI)(可选)</string>
-    <string name="toast_asset_copy_failed">失败, 请使用文件管理器</string>
+    <string name="server_lab_request_host6">主机(SNI)(可选)</string>
+    <string name="toast_asset_copy_failed">文件复制失败，请使用文件管理器</string>
+    <string name="menu_item_add_asset">添加资产</string>
     <string name="menu_item_add_file">添加文件</string>
+    <string name="menu_item_add_url">添加网址</string>
     <string name="menu_item_download_file">下载文件</string>
-    <string name="toast_action_not_allowed">禁止此项操作</string>
-
-
-    <!-- PerAppProxyActivity -->
     <string name="title_user_asset_add_url">添加资产网址</string>
     <string name="msg_file_not_found">文件未找到</string>
     <string name="msg_remark_is_duplicate">备注已经存在</string>
-    <string name="msg_dialog_progress">正在加载</string>
+    <string name="toast_action_not_allowed">不允许的操作</string>
+ 
+    <!-- PerAppProxyActivity --> 
+    <string name="msg_dialog_progress">加载中</string>
     <string name="menu_item_search">搜索</string>
     <string name="menu_item_select_all">全选</string>
     <string name="msg_enter_keywords">输入关键字</string>
-    <string name="switch_bypass_apps_mode">绕行模式</string>
-    <string name="menu_item_select_proxy_app">自动选中需代理应用</string>
-    <string name="msg_downloading_content">正在下载内容</string>
-    <string name="menu_item_export_proxy_app">导出至剪贴板</string>
+    <string name="switch_bypass_apps_mode">旁路模式</string>
+    <string name="menu_item_select_proxy_app">自动选择代理应用程序</string>
+    <string name="msg_downloading_content">下载内容</string>
+    <string name="menu_item_export_proxy_app">导出到剪贴板</string>
     <string name="menu_item_import_proxy_app">从剪贴板导入</string>
-
-    <!-- Preferences -->
+ 
+    <!-- Preferences --> 
     <string name="title_settings">设置</string>
-    <string name="title_advanced">进阶设置</string>
+    <string name="title_advanced">高级设置</string>
     <string name="title_vpn_settings">VPN 设置</string>
-    <string name="title_pref_per_app_proxy">分应用代理</string>
-    <string name="summary_pref_per_app_proxy">常规:勾选的App被代理,未勾选的直连;\n绕行模式:勾选的App直连,未勾选的被代理.\n不明白者在菜单中选择自动选中需代理应用</string>
-
-    <string name="title_mux_settings">Mux 多路复用 设置</string>
-    <string name="title_pref_mux_enabled">启用 Mux 多路复用</string>
-    <string name="summary_pref_mux_enabled">减低延时，但可能会断流，建议不要启用。\nTCP，UDP 及 QUIC 流量处理方式下方可选。</string>
-    <string name="title_pref_mux_concurency">TCP 复用子链接数（可填 -1 至 1024）</string>
-    <string name="title_pref_mux_xudp_concurency">XUDP 复用子链接数（可填 -1 至 1024）</string>
-    <string name="title_pref_mux_xudp_quic">QUIC 流量处理方式</string>
-
+    <string name="title_pref_per_app_proxy">每个应用程序代理</string>
+    <string name="summary_pref_per_app_proxy">General：勾选App为代理，不勾选直连； \n绕过模式：选中应用程序直连，未选中代理。 \n菜单中自动选择代理应用程序的选项</string>
+ 
+    <string name="title_mux_settings">复用器设置</string>
+    <string name="title_pref_mux_enabled">启用复用器</string>
+    <string name="summary_pref_mux_enabled">更快，但可能会导致连接不稳定\n自定义如何处理下面的 TCP、UDP 和 QUIC</string>
+    <string name="title_pref_mux_concurency">TCP连接数（范围-1到1024）</string>
+    <string name="title_pref_mux_xudp_concurency">XUDP连接数（范围-1到1024）</string>
+    <string name="title_pref_mux_xudp_quic">多路复用器隧道中 QUIC 的处理</string>
+ 
     <string name="title_pref_speed_enabled">启用速度显示</string>
-    <string name="summary_pref_speed_enabled">在通知中显示当前速度\n小图标显示流量的路由情况</string>
-
-    <string name="title_pref_sniffing_enabled">启用流量探测</string>
-    <string name="summary_pref_sniffing_enabled">从流量中探测域名 (默认启用)</string>
-
-    <string name="title_pref_local_dns_enabled">启用本地DNS</string>
-    <string name="summary_pref_local_dns_enabled">DNS 请求导入 core 由 DNS 模块处理（推荐启用 如果需要路由绕过局域网及大陆地址)</string>
-
-    <string name="title_pref_fake_dns_enabled">启用虚拟DNS</string>
-    <string name="summary_pref_fake_dns_enabled">本地返回虚构解析结果 (减低延时 但个别应用可能无法使用)</string>
-
-    <string name="title_pref_prefer_ipv6">IPv6优先</string>
-    <string name="summary_pref_prefer_ipv6">App优先使用IPv6地址连接服务器,同时开启VPN的IPv6路由</string>
-
-    <string name="title_pref_routing">路由设置</string>
-    <string name="title_pref_routing_domain_strategy">域名策略</string>
+    <string name="summary_pref_speed_enabled">在通知中显示当前速度。\n通知图标会根据使用情况而变化。</string>
+ 
+    <string name="title_pref_sniffing_enabled">启用嗅探</string>
+    <string name="summary_pref_sniffing_enabled">尝试从数据包中嗅探域（默认开启）</string>
+ 
+    <string name="title_pref_auto_test_connect">自动测试和连接</string>
+    <string name="summary_pref_auto_test_connect">每 15 分钟测试一次，如果未连接，则通过评估实际延迟尝试连接到最佳配置。</string>
+ 
+    <string name="title_pref_local_dns_enabled">启用本地 DNS</string>
+    <string name="summary_pref_local_dns_enabled">由核心的DNS模块处理的DNS（推荐，如果需要路由绕过LAN和大陆地址）</string>
+ 
+    <string name="title_pref_fake_dns_enabled">启用假 DNS</string>
+    <string name="summary_pref_fake_dns_enabled">本地 DNS 返回假 IP 地址（速度更快，但可能不适用于某些应用程序）</string>
+ 
+    <string name="title_pref_prefer_ipv6">首选 IPv6</string>
+    <string name="summary_pref_prefer_ipv6">首选 IPv6 地址和路由</string>
+ 
+    <string name="title_pref_routing">路由</string>
+    <string name="title_pref_routing_domain_strategy">领域策略</string>
     <string name="title_pref_routing_mode">预定义规则</string>
     <string name="title_pref_routing_custom">自定义规则</string>
-
+ 
     <string name="title_pref_remote_dns">远程DNS (udp/tcp/https/quic)(可选)</string>
-    <string name="summary_pref_remote_dns">DNS</string>
-
-    <string name="title_pref_vpn_dns">VPN DNS (仅支持 IPv4/v6)</string>
-
-    <string name="title_pref_domestic_dns">境内DNS (可选)</string>
-    <string name="summary_pref_domestic_dns">DNS</string>
-
-    <string name="title_pref_proxy_sharing_enabled">允许来自局域网的连接</string>
-    <string name="summary_pref_proxy_sharing_enabled">其他设备可以使用socks/http协议通过您的IP地址连接到代理,仅在受信任的网络中启用以避免未经授权的连接</string>
-    <string name="toast_warning_pref_proxysharing_short">允许来自局域网的连接，请确保处于受信网络</string>
-
-    <string name="title_pref_allow_insecure">跳过证书验证(allowInsecure)</string>
-    <string name="summary_pref_allow_insecure">传输层安全选tls时，默认跳过证书验证(allowInsecure)</string>
-
+    <string name="summary_pref_remote_dns">域名系统</string>
+ 
+    <string name="title_pref_vpn_dns">VPN DNS（仅限 IPv4/v6）</string>
+ 
+    <string name="title_pref_domestic_dns">国内DNS（可选）</string>
+    <string name="summary_pref_domestic_dns">域名系统</string>
+ 
+    <string name="title_pref_proxy_sharing_enabled">允许来自 LAN 的连接</string>
+    <string name="summary_pref_proxy_sharing_enabled">其他设备可以通过socks/http通过您的IP地址连接到代理，仅在受信任的网络中启用，以避免未经授权的连接</string>
+    <string name="toast_warning_pref_proxysharing_short">允许来自 LAN 的连接，确保您位于受信任的网络中</string>
+ 
+    <string name="title_pref_allow_insecure">允许不安全</string>
+    <string name="summary_pref_allow_insecure">TLS时，默认allowInsecure</string>
+ 
     <string name="title_pref_socks_port">SOCKS5代理端口</string>
     <string name="summary_pref_socks_port">SOCKS5代理端口</string>
-
+ 
     <string name="title_pref_http_port">HTTP代理端口</string>
     <string name="summary_pref_http_port">HTTP代理端口</string>
-
-    <string name="title_pref_local_dns_port">本地DNS端口</string>
-    <string name="summary_pref_local_dns_port">本地DNS端口</string>
-
+ 
+    <string name="title_pref_local_dns_port">本地 DNS 端口</string>
+    <string name="summary_pref_local_dns_port">本地 DNS 端口</string>
+ 
     <string name="title_pref_confirm_remove">删除配置文件确认</string>
-    <string name="summary_pref_confirm_remove">删除配置文件是否需要用户二次确认</string>
-
-    <string name="title_pref_start_scan_immediate">立即启动扫码</string>
-    <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可在工具栏选择扫码或选照片</string>
-
+    <string name="summary_pref_confirm_remove">是否删除配置文件需要用户二次确认</string>
+ 
+    <string name="title_pref_start_scan_immediate">立即开始扫描</string>
+    <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可以选择扫码或在工具栏中选择照片</string>
+ 
     <string name="title_pref_feedback">反馈</string>
-    <string name="summary_pref_feedback">反馈改进或漏洞至 GitHub</string>
-    <string name="summary_pref_tg_group">加入Telegram Group</string>
-    <string name="toast_tg_app_not_found">未找到Telegram app</string>
-    <string name="title_privacy_policy">隐私权政策</string>
+    <string name="summary_pref_feedback">向 GitHub 反馈增强功能或错误</string>
+    <string name="summary_pref_tg_group">加入电报群</string>
+    <string name="toast_tg_app_not_found">未找到 Telegram 应用</string>
+    <string name="title_privacy_policy">隐私政策</string>
     <string name="title_about">关于</string>
     <string name="title_source_code">源代码</string>
-    <string name="title_tg_channel">Telegram 频道</string>
+    <string name="title_tg_channel">电报频道</string>
     <string name="title_configuration_backup">备份配置</string>
-    <string name="summary_configuration_backup">存储位置: [%s], 卸载App或清除存储后备份将被清除</string>
-    <string name="title_configuration_restore">还原配置</string>
+    <string name="summary_configuration_backup">存储位置：[%s]，卸载应用或清除存储后，备份将被清除</string>
+    <string name="title_configuration_restore">恢复配置</string>
     <string name="title_configuration_share">共享配置</string>
-
-    <string name="title_pref_promotion">推广</string>
-    <string name="summary_pref_promotion">一些推广,点击查看详情(捐赠可去除)</string>
-
+ 
+    <string name="title_pref_promotion">晋升</string>
+    <string name="summary_pref_promotion">促销活动，点击查看详情（捐赠可删除）</string>
+ 
     <string name="title_pref_auto_update_subscription">自动更新订阅</string>
-    <string name="summary_pref_auto_update_subscription">在后台按一定时间间隔自动更新您的订阅。受设备影响，此功能不一定总是有效</string>
-    <string name="title_pref_auto_update_interval">自动更新间隔（分钟，最小值15）</string>
-
+    <string name="summary_pref_auto_update_subscription">在后台按一定时间间隔自动更新您的订阅。根据设备的不同，此功能可能并不总是有效</string>
+    <string name="title_pref_auto_update_interval">自动更新间隔（分钟，最小值 15）</string>
+ 
     <string name="title_core_loglevel">日志级别</string>
     <string name="title_mode">模式</string>
-    <string name="title_mode_help">点此查看更多帮助</string>
+    <string name="title_mode_help">点我获取更多帮助</string>
     <string name="title_language">语言</string>
     <string name="title_ui_settings">用户界面设置</string>
-
-    <string name="title_logcat">Logcat</string>
+ 
+    <string name="title_logcat">日志猫</string>
     <string name="logcat_copy">复制</string>
     <string name="logcat_clear">清除</string>
     <string name="title_service_restart">服务重启</string>
-    <string name="title_del_all_config">删除全部配置</string>
-    <string name="title_del_duplicate_config">删除重复配置</string>
-    <string name="title_del_invalid_config">删除无效配置(先测试)</string>
-    <string name="title_export_all">导出全部(非自定义)配置至剪贴板</string>
-    <string name="title_sub_setting">订阅分组设置</string>
-    <string name="sub_setting_remarks">备注</string>
-    <string name="sub_setting_url">可选地址(url)</string>
+    <string name="title_del_all_config">删除所有配置</string>
+    <string name="title_del_duplicate_config">删除重复的配置</string>
+    <string name="title_del_invalid_config">删除无效配置（先测试）</string>
+    <string name="title_export_all">将非自定义配置导出到剪贴板</string>
+    <string name="title_sub_setting">订阅组设置</string>
+    <string name="sub_setting_remarks">评论</string>
+    <string name="sub_setting_url">可选网址</string>
     <string name="sub_setting_enable">启用更新</string>
     <string name="sub_auto_update">启用自动更新</string>
     <string name="title_sub_update">更新订阅</string>
-    <string name="title_ping_all_server">测试全部配置Tcping</string>
-    <string name="title_real_ping_all_server">测试全部配置真连接</string>
-    <string name="title_user_asset_setting">Geo 资源文件</string>
+    <string name="title_ping_all_server">Tcping 所有配置</string>
+    <string name="title_real_ping_all_server">真正的延迟所有配置</string>
+    <string name="title_user_asset_setting">地理资产文件</string>
     <string name="title_sort_by_test_results">按测试结果排序</string>
-    <string name="title_filter_config">过滤配置文件</string>
-    <string name="filter_config_all">所有订阅分组</string>
+    <string name="title_filter_config">过滤器配置文件</string>
+    <string name="filter_config_all">所有订阅组</string>
     <string name="title_del_duplicate_config_count">删除 %d 个重复配置</string>
-
+ 
     <string name="tasker_start_service">启动服务</string>
-    <string name="tasker_setting_confirm">确定</string>
-
+    <string name="tasker_setting_confirm">确认</string>
+ 
     <string name="routing_settings_title">路由设置</string>
-    <string name="routing_settings_tips">用逗号(,)隔开,可以一行多个,记得保存</string>
-    <string name="routing_settings_save">保存</string>
-    <string name="routing_settings_delete">清空</string>
+    <string name="routing_settings_tips">用逗号(,)分隔，记得保存</string>
+    <string name="routing_settings_save">节省</string>
+    <string name="routing_settings_delete">清除</string>
     <string name="routing_settings_scan_replace">扫描并替换</string>
     <string name="routing_settings_scan_append">扫描并追加</string>
     <string name="routing_settings_default_rules">设置默认路由规则</string>
-
-    <string name="connection_test_pending">"检查网络连接"</string>
-    <string name="connection_test_testing">"测试中…"</string>
-    <string name="connection_test_available">"连接成功：延时 %d 毫秒"</string>
-    <string name="connection_test_error">"失败：%s"</string>
-    <string name="connection_test_fail">"无互联网连接"</string>
-    <string name="connection_test_error_status_code">"状态码无效（#%d）"</string>
-    <string name="connection_connected">"已连接，点击测试连接"</string>
-    <string name="connection_not_connected">"未连接"</string>
-
+ 
+    <string name="connection_test_pending">检查连接性</string>
+    <string name="connection_test_testing">测试...</string>
+    <string name="connection_test_available">成功：HTTP 连接花费了 %dms</string>
+    <string name="connection_test_error">无法检测互联网连接：%s</string>
+    <string name="connection_test_fail">无法上网</string>
+    <string name="connection_test_error_status_code">错误代码：#%d</string>
+    <string name="connection_connected">已连接，点击检查连接</string>
+    <string name="connection_not_connected">未连接</string>
+ 
     <string name="import_subscription_success">订阅导入成功</string>
     <string name="import_subscription_failure">导入订阅失败</string>
-    <string name="menu_item_add_asset">添加</string>
-    <string name="menu_item_add_url">添加链接</string>
-    <string name="title_fragment_settings">分片（Fragment） 设置</string>
-    <string name="title_pref_fragment_packets">分片方式</string>
-    <string name="title_pref_fragment_length">分片包长（最小-最大）</string>
-    <string name="title_pref_fragment_interval">分片间隔（最小-最大）</string>
-    <string name="title_pref_fragment_enabled">启用分片（Fragment）</string>
-
-    <!-- Neko strings -->
+    <string name="title_fragment_settings">片段设置</string>
+    <string name="title_pref_fragment_packets">分片数据包</string>
+    <string name="title_pref_fragment_length">片段长度（最小-最大）</string>
+    <string name="title_pref_fragment_interval">片段间隔（最小-最大）</string>
+    <string name="title_pref_fragment_enabled">启用片段</string>
+ 
+    <string name="title_ip_scanner_setting">IP扫描仪</string>
+    <string name="title_ip_scanner">IP扫描仪</string>
+    <string name="menu_item_cancel">取消</string>
+    <string name="menu_item_copy_all_ips">复制所有IP</string>
+    <string name="ip_scanner_max_latency">最大限度。潜伏</string>
+    <string name="ip_scanner_max_ips">最大限度。知识产权</string>
+    <string name="ip_scanner_max_ips_default">5</string>
+    <string name="ip_scanner_max_latency_default">700</string>
+    <string name="menu_item_start_scan">开始扫描</string>
+    <string name="ip_scanner_cdn_provider">CDN提供商</string>
+    <string name="ip_scanner_clean_ips">干净的IP</string>
+    <string name="ip_scanner_testing">测试IP</string>
+    <string name="ip_scanner_preparing">准备IP</string>
+    <string name="ip_scanner_selected_config">选定的配置</string>
+    <string name="ip_scanner_no_valid_config_is_selected">未选择配置！</string>
+ 
+    <!-- Neko strings --> 
     <string name="title_theme_settings">主题设置</string>
     <string name="title_choose_theme">选择颜色主题</string>
-    <string name="uwu_header_title">嗨，<b>onii-chan</b></string>
+    <string name="uwu_header_title">嗨，<b>哥哥</b></string>
     <string name="uwu_edit">编辑</string>
     <string name="uwu_credits">制作人员</string>
     <string name="uwu_about">关于应用程序</string>
@@ -252,50 +270,50 @@
     <string name="uwu_build_type">构建类型</string>
     <string name="uwu_build_date">构建日期</string>
     <string name="uwu_recommended_os_cat">推荐操作系统</string>
-    <string name="uwu_version_sdk_minimum">最小SDK版本</string>
+    <string name="uwu_version_sdk_minimum">最低 SDK 版本</string>
     <string name="uwu_version_sdk_target">目标SDK版本</string>
-    <string name="uwu_package_name">包名称</string>
+    <string name="uwu_package_name">包裹名字</string>
     <string name="uwu_speedtest_title">速度测试</string>
-    <string name="uwu_speedtest_summary">速度网络</string>
-    <string name="uwu_status_connection_title">状态</string>
+    <string name="uwu_speedtest_summary">极速网络</string>
+    <string name="uwu_status_connection_title">地位</string>
     <string name="uwu_network_switcher_title">网络切换器</string>
     <string name="uwu_host_to_ip_title">主机到ip</string>
     <string name="uwu_ip_location_title">IP位置</string>
-    <string name="uwu_exit_title">退出</string>
-    <string name="uwu_maintainer_title">此应用程序正在下维护</string>
+    <string name="uwu_exit_title">出口</string>
+    <string name="uwu_maintainer_title">此应用程序正在维护中</string>
     <string name="uwu_border_about_title">其他选项</string>
-    <string name="uwu_border_about_summary">点击侧面箭头图标</string>
+    <string name="uwu_border_about_summary">点击侧面的箭头图标</string>
     <string name="uwu_devicename_title">设备名称</string>
-    <string name="uwu_board_title">主板</string>
+    <string name="uwu_board_title">木板</string>
     <string name="uwu_osversion_title">操作系统版本</string>
     <string name="uwu_brand_title">品牌</string>
-    <string name="uwu_buildid_title">版本ID</string>
+    <string name="uwu_buildid_title">构建ID</string>
     <string name="uwu_baseband_title">基带版本</string>
-    <string name="uwu_github_title">Github</string>
+    <string name="uwu_github_title">吉图布</string>
     <string name="uwu_github_summary">源代码存储库</string>
     <string name="uwu_credit_title">制作人员</string>
     <string name="uwu_updater_title">检查更新</string>
     <string name="uwu_changrlog_title">变更日志</string>
-    <string name="uwu_feetback_title">脚步</string>
-    <string name="uwu_modder_title">Modders</string>
+    <string name="uwu_feetback_title">脚回</string>
+    <string name="uwu_modder_title">改装者</string>
     <string name="uwu_exit_message">您确定要离开此应用程序吗？</string>
-    <string name="uwu_text_yes">是</string>
-    <string name="uwu_text_no">否</string>
-    <string name="uwu_ignore_battery_optimization_summary">申请必要的权限，以便 VPN 正常运行。\n\n如果您使用中国公司制造的设备，授予权限后该卡可能不会消失。</string>
+    <string name="uwu_text_yes">是的</string>
+    <string name="uwu_text_no">不</string>
+    <string name="uwu_ignore_battery_optimization_summary">申请必要的权限以使VPN正常运行。\n\n如果您使用的是中国公司制造的设备，则授予权限后该卡可能不会消失。</string>
     <string name="uwu_ignore_battery_optimization_title">忽略电池优化</string>
     <string name="read_more">阅读更多</string>
-    <string name="default_title">无互联网</string>
+    <string name="default_title">没有互联网</string>
     <string name="default_message">检查您的互联网连接，然后重试。</string>
-    <string name="please_turn_on">请打开开启</string>
-    <string name="wifi">Wifi</string>
+    <string name="please_turn_on">请开启</string>
+    <string name="wifi">无线上网</string>
     <string name="mobile_data">移动数据</string>
     <string name="default_snackbar_message">没有有效的互联网连接！</string>
     <string name="settings">设置</string>
-    <string name="ok">确定</string>
+    <string name="ok">好的</string>
     <string name="please_turn_off">请关闭</string>
     <string name="airplane_mode">飞行模式</string>
     <string name="default_airplane_mode_message">您已打开飞行模式。</string>
-    
+     
     <string name="air_title_report_issue">报告问题</string>
     <string name="air_title_issue">问题</string>
     <string name="air_title_login">登录</string>
@@ -311,36 +329,40 @@
     <string name="air_label_email_optional">电子邮件（可选）</string>
     <string name="air_error_no_title">请输入问题标题</string>
     <string name="air_error_no_description">请输入问题描述</string>
+    <plurals name="air_error_short_description"> 
+        <item quantity="one">描述必须至少有 %d 个字符</item> 
+        <item quantity="other">描述必须至少有 %d 个字符</item> 
+    </plurals> 
     <string name="air_error_no_username">请输入您的有效 GitHub 用户名</string>
     <string name="air_error_no_password">请输入您的有效 GitHub 密码</string>
     <string name="air_error_no_email">请输入电子邮件地址</string>
-    <string name="air_dialog_title_loading">正在将报告上传到 GitHub…+</string>
+    <string name="air_dialog_title_loading">正在将报告上传到 GitHub...</string>
     <string name="air_dialog_title_failed">无法发送报告</string>
-    <string name="air_dialog_description_failed_wrong_credentials">用户名或密码错误</string>
-    <string name="air_dialog_description_failed_invalid_token">访问令牌无效。请联系应用程序开发人员。</string>
-    <string name="air_dialog_description_failed_issues_not_available">所选存储库未启用问题。请联系应用程序开发人员。+</string>
-    <string name="air_dialog_description_failed_unknown">发生意外错误。请联系应用开发者。</string>
-    <string name="air_dialog_action_failed">确定</string>
-    <string name="air_title_login_github_notes"><b>注意：</b> 不支持两步验证。</string>
-    
-    <string name="homepage_widget_battery_percent">百分比</string>
-    <string name="homepage_widget_battery_charge">充电</string>
+    <string name="air_dialog_description_failed_wrong_credentials">错误的用户名或密码</string>
+    <string name="air_dialog_description_failed_invalid_token">无效的访问令牌。请联系应用程序开发者。</string>
+    <string name="air_dialog_description_failed_issues_not_available">未针对所选存储库启用问题。请联系应用程序开发者。</string>
+    <string name="air_dialog_description_failed_unknown">一个意料之外的问题发生了。请联系应用程序开发者。</string>
+    <string name="air_dialog_action_failed">好的</string>
+    <string name="air_title_login_github_notes"><b>注意：</b>不支持两因素身份验证。</string>
+     
+    <string name="homepage_widget_battery_percent">百分</string>
+    <string name="homepage_widget_battery_charge">收费</string>
     <string name="homepage_widget_battery_discharge">放电</string>
     <string name="homepage_widget_battery_title">电池</string>
-    <string name="homepage_widget_storage_title">存储</string>
-    <string name="changelog_title">更改日志</string>
-
-    <string name="appupdater_update_available">新更新可用！</string>
-    <string name="appupdater_update_available_description_dialog">更新 %1$s 可供下载。通过下载最新更新，您将获得 %2$s 的最新功能、改进和错误修复。</string>
+    <string name="homepage_widget_storage_title">贮存</string>
+    <string name="changelog_title">变更日志</string>
+ 
+    <string name="appupdater_update_available">有新的更新可用！</string>
+    <string name="appupdater_update_available_description_dialog">更新%1$s可供下载。通过下载最新更新，您将获得最新功能、改进和错误修复，只需 %2$s。</string>
     <string name="appupdater_update_available_description_dialog_before_release_notes">更新 %1$s 可供下载。\n\n您可以获得以下新功能：\n%2$s</string>
-    <string name="appupdater_update_available_description_snackbar">更新 %1$s 可用！</string>
+    <string name="appupdater_update_available_description_snackbar">更新%1$s 可用！</string>
     <string name="appupdater_update_available_description_notification">%2$s 的更新 %1$s 可供下载</string>
-    <string name="appupdater_update_not_available">没有可用更新</string>
-    <string name="appupdater_update_not_available_description">您已使用最新版本 %s！</string>
-    <string name="appupdater_btn_update">更新+</string>
+    <string name="appupdater_update_not_available">无可用更新</string>
+    <string name="appupdater_update_not_available_description">您已经使用的是最新版本 %s！</string>
+    <string name="appupdater_btn_update">更新</string>
     <string name="appupdater_btn_disable">不再显示</string>
-    <string name="appupdater_btn_dismiss">关闭</string>
+    <string name="appupdater_btn_dismiss">解雇</string>
     <string name="appupdater_channel_name">更新通知</string>
     <string name="uwu_host_checker">主机检查器</string>
-    <!-- Neko strings -->
+    <!-- Neko strings --> 
 </resources>

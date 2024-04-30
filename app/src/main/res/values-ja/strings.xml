@@ -1,302 +1,368 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-
+<?xml version="1.0" encoding="utf-8"?> 
+<resources> 
     <string name="app_widget_name">スイッチ</string>
     <string name="app_tile_name">スイッチ</string>
-    <string name="app_tile_first_use">この機能を初めて使用する場合は、アプリケーションを使用してサーバーを追加してください</string>
-    <string name="navigation_drawer_open">ナビゲーション パネルを開きます</string>
-    <string name="navigation_drawer_close">ナビゲーション パネルを閉じます</string>
-    <string name="migration_success">データ移行に成功しました!</string>
+    <string name="app_tile_first_use">この機能を初めて使用する場合は、アプリを使用してサーバーを追加してください</string>
+    <string name="navigation_drawer_open">ナビゲーションドロワーを開く</string>
+    <string name="navigation_drawer_close">ナビゲーションドロワーを閉じる</string>
+    <string name="migration_success">データ移行成功！</string>
     <string name="migration_fail">データ移行に失敗しました!</string>
-
-    <!-- Notifications -->
+ 
+    <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">停止</string>
-    <string name="toast_permission_denied">最初に許可を与えてください</string>
-    <string name="notification_action_more">詳細についてはクリック</string>
+    <string name="toast_permission_denied">許可が得られません</string>
+    <string name="notification_action_more">クリックして詳細を表示</string>
     <string name="toast_services_start">サービスの開始</string>
     <string name="toast_services_stop">サービスの停止</string>
-    <string name="toast_services_success">サービスは正常に開始されました</string>
-    <string name="toast_services_failure">サービスの開始に失敗しました</string>
-
-    <!--ServerActivity-->
-    <string name="title_server">設定</string>
-    <string name="menu_item_add_config">設定を追加</string>
-    <string name="menu_item_save_config">設定を保存</string>
-    <string name="menu_item_del_config">設定を削除</string>
-    <string name="menu_item_import_config_qrcode">から設定をインポートQR コード</string>
+    <string name="toast_services_success">サービスの開始に成功しました</string>
+    <string name="toast_services_failure">サービスの開始の失敗</string>
+ 
+    <!--ServerActivity--> 
+    <string name="title_server">設定ファイル</string>
+    <string name="menu_item_add_config">構成の追加</string>
+    <string name="menu_item_save_config">設定を保存する</string>
+    <string name="menu_item_del_config">構成の削除</string>
+    <string name="menu_item_import_config_qrcode">QRコードから設定をインポート</string>
     <string name="menu_item_import_config_clipboard">クリップボードから設定をインポート</string>
     <string name="menu_item_import_config_manually_vmess">手動で入力[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">手動で入力[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">手動で入力[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">手動で入力[Socks]</string>
-    <string name="menu_item_import_config_manually_trojan">手動で入力[Trojan]</string>
-    <string name="menu_item_import_config_manually_wireguard">手動で[Wireguard ]と入力</string>
-    <string name="menu_item_import_config_custom">カスタム設定</string>
-    <string name="menu_item_import_config_custom_clipboard">クリップボードからカスタム設定をインポート</string>
-    <string name="menu_item_import_config_custom_local">ローカルからカスタム設定をインポート</string>
-    <string name="menu_item_import_config_custom_url">URLからカスタム設定をインポート</string>
-    <string name="menu_item_import_config_custom_url_scan">カスタム設定スキャンURLをインポート</string>
-    <string name="del_config_comfirm">削除を確認？</string>
-    <string name="server_lab_remarks">説明</string>
-    <string name="server_lab_address">アドレス</string>
+    <string name="menu_item_import_config_manually_socks">手動で入力[靴下]</string>
+    <string name="menu_item_import_config_manually_trojan">手動で入力[トロイの木馬]</string>
+    <string name="menu_item_import_config_manually_wireguard">手動で入力[ワイヤーガード]</string>
+    <string name="menu_item_import_config_custom">カスタム構成</string>
+    <string name="menu_item_import_config_custom_clipboard">クリップボードからカスタム構成をインポートする</string>
+    <string name="menu_item_import_config_custom_local">カスタム構成をローカルからインポートする</string>
+    <string name="menu_item_import_config_custom_url">URLからカスタム構成をインポート</string>
+    <string name="menu_item_import_config_custom_url_scan">カスタム構成スキャン URL をインポートする</string>
+    <string name="del_config_comfirm">削除を確認しますか？</string>
+    <string name="server_lab_remarks">備考</string>
+    <string name="server_lab_address">住所</string>
     <string name="server_lab_port">ポート</string>
-    <string name="server_lab_id">id</string>
-    <string name="server_lab_alterid">alterId</string>
-    <string name="server_lab_security">security</string>
-    <string name="server_lab_network">ネットワーク</string>
-    <string name="server_lab_more_function">トランスポート</string>
+    <string name="server_lab_id">ID</string>
+    <string name="server_lab_alterid">変更ID</string>
+    <string name="server_lab_security">安全</string>
+    <string name="server_lab_network">通信網</string>
+    <string name="server_lab_more_function">輸送</string>
     <string name="server_lab_head_type">ヘッドタイプ</string>
-    <string name="server_lab_mode_type">gRPCモード</string>
-    <string name="server_lab_request_host">リクエストホスティング(host/host ws/host httpupgrade/host h2)/security QUIC/gRPC Authority</string>
-    <string name="server_lab_path">path(ws パス /httpupgrade パス/h2 パス)/QUIC キー/kcp シード/gRPC サービス名</string>
+    <string name="server_lab_mode_type">gRPC モード</string>
+    <string name="server_lab_request_host">リクエストホスト(ホスト/wsホスト/httpupgradeホスト/h2ホスト)/QUICセキュリティ/gRPC権限</string>
+    <string name="server_lab_path">パス(wsパス/httpupgradeパス/h2パス)/QUICキー/kcpシード/gRPCサービス名</string>
     <string name="server_lab_stream_security">TLS</string>
-    <string name="server_lab_allow_insecure">allowInsecure</string>
+    <string name="server_lab_allow_insecure">許可しない安全でない</string>
     <string name="server_lab_sni">SNI</string>
-    <string name="server_lab_address3">アドレス</string>
+    <string name="server_lab_address3">住所</string>
     <string name="server_lab_port3">ポート</string>
     <string name="server_lab_id3">パスワード</string>
-    <string name="server_lab_security3">セキュリティ</string>
-    <string name="server_lab_id4">パスワード(オプション)</string>
+    <string name="server_lab_security3">安全</string>
+    <string name="server_lab_id4">パスワード(任意​​)</string>
     <string name="server_lab_security4">ユーザー(オプション)</string>
     <string name="server_lab_encryption">暗号化</string>
-    <string name="server_lab_flow">フロー</string>
-    <string name="server_lab_reserved">予約(オプション)</string>
-    <string name="server_lab_local_address">ローカルアドレス(オプションのIPv4/IPv6、カンマ区切り)</string>
-    <string name="server_lab_local_mtu">Mtu(オプション、デフォルトは1420)</string>
+    <string name="server_lab_flow">流れ</string>
+    <string name="server_lab_reserved">予約済み(オプション)</string>
+    <string name="server_lab_local_address">ローカル アドレス (オプションの IPv4/IPv6、カンマ区切り)</string>
+    <string name="server_lab_local_mtu">Mtu (オプション、デフォルトは 1420)</string>
     <string name="toast_success">成功</string>
     <string name="toast_failure">失敗</string>
-    <string name="toast_none_data">何もありません</string>
-    <string name="toast_incorrect_protocol">プロトコルが正しくありません</string>
+    <string name="toast_none_data">何もない</string>
+    <string name="toast_incorrect_protocol">不正なプロトコル</string>
     <string name="toast_decoding_failed">デコードに失敗しました</string>
-    <string name="title_file_chooser">構成を選択してください</string>
-    <string name="toast_require_file_manager">Filel Managerをインストールしてください。</string>
-    <string name="server_customize_config">構成をカスタマイズしてください</string>
+    <string name="title_file_chooser">構成ファイルを選択します</string>
+    <string name="toast_require_file_manager">ファイルマネージャーをインストールしてください。</string>
+    <string name="server_customize_config">構成のカスタマイズ</string>
     <string name="toast_config_file_invalid">無効な構成</string>
     <string name="server_lab_content">コンテンツ</string>
     <string name="toast_none_data_clipboard">クリップボードにデータがありません</string>
-    <string name="toast_invalid_url">URLが無効です</string>
-    <string name="server_lab_need_inbound">受信ポートを確認してください設定と一致しています</string>
-    <string name="toast_malformed_josn">設定形式が正しくありません</string>
+    <string name="toast_invalid_url">無効なURL</string>
+    <string name="server_lab_need_inbound">受信ポートが設定と一致していることを確認してください</string>
+    <string name="toast_malformed_josn">構成が不正です</string>
     <string name="server_lab_request_host6">ホスト(SNI)(オプション)</string>
     <string name="toast_asset_copy_failed">ファイルのコピーに失敗しました。ファイル マネージャーを使用してください</string>
-    <string name="menu_item_add_asset">アセットを追加</string>
-    <string name="menu_item_add_file">ファイルを追加</string>
+    <string name="menu_item_add_asset">アセットの追加</string>
+    <string name="menu_item_add_file">追加ファイル</string>
     <string name="menu_item_add_url">URLを追加</string>
-    <string name="menu_item_download_file">ファイルをダウンロード</string>
-    <string name="title_user_asset_add_url">アセットを追加URL</string>
+    <string name="menu_item_download_file">ファイルをダウンロードする</string>
+    <string name="title_user_asset_add_url">アセット URL を追加</string>
     <string name="msg_file_not_found">ファイルが見つかりません</string>
-    <string name="msg_remark_is_duplicate">説明はすでに存在します</string>
-    <string name="toast_action_not_allowed">アクションは許可されていません</string>
-
-    <!-- PerAppProxyActivity -->
+    <string name="msg_remark_is_duplicate">コメントはすでに存在します</string>
+    <string name="toast_action_not_allowed">許可されていないアクション</string>
+ 
+    <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">読み込み中</string>
     <string name="menu_item_search">検索</string>
     <string name="menu_item_select_all">すべて選択</string>
-    <string name="msg_enter_keywords">キーワードを入力</string>
+    <string name="msg_enter_keywords">キーワードを入力します</string>
     <string name="switch_bypass_apps_mode">バイパスモード</string>
-    <string name="menu_item_select_proxy_app">プロキシアプリケーションを自動的に選択</string>
-    <string name="msg_downloading_content">コンテンツをダウンロード</string>
+    <string name="menu_item_select_proxy_app">プロキシアプリを自動選択</string>
+    <string name="msg_downloading_content">コンテンツをダウンロードする</string>
     <string name="menu_item_export_proxy_app">クリップボードにエクスポート</string>
     <string name="menu_item_import_proxy_app">クリップボードからインポート</string>
-
-
-    <!-- Preferences -->
+ 
+    <!-- Preferences --> 
     <string name="title_settings">設定</string>
-    <string name="title_advanced">詳細設定</string>
+    <string name="title_advanced">高度な設定</string>
     <string name="title_vpn_settings">VPN設定</string>
     <string name="title_pref_per_app_proxy">アプリごとのプロキシ</string>
-    <string name="summary_pref_per_app_proxy">全般: チェックされたアプリはプロキシであり、直接接続はオフです。 \nバイパス モード: チェックを入れたアプリは直接接続し、チェックを外した場合はプロキシに接続します。 \nメニューでプロキシ アプリケーションを自動的に選択するオプション</string>
-
-    <string name="title_mux_settings">Mux 設定</string>
-    <string name="title_pref_mux_enabled">Mux を有効にする</string>
-    <string name="summary_pref_mux_enabled">高速化されますが、接続が不安定になる可能性があります\nTCP、UDP、および QUIC の処理方法を調整します</string>
-    <string name="title_pref_mux_concurency">TCP 接続（範囲 -1 ～ 1024 ）</string>
+    <string name="summary_pref_per_app_proxy">一般: チェックされているアプリはプロキシ、チェックされていない場合は直接接続です。 \nバイパス モード: チェックされたアプリが直接接続され、チェックされていないプロキシ。 \nメニューでプロキシ アプリケーションを自動的に選択するオプション</string>
+ 
+    <string name="title_mux_settings">マルチプレクサ設定</string>
+    <string name="title_pref_mux_enabled">マルチプレクサを有効にする</string>
+    <string name="summary_pref_mux_enabled">高速ですが、接続が不安定になる可能性があります\n以下の TCP、UDP、QUIC の処理方法をカスタマイズしてください</string>
+    <string name="title_pref_mux_concurency">TCP接続（範囲-1～1024）</string>
     <string name="title_pref_mux_xudp_concurency">XUDP 接続（範囲 -1 ～ 1024）</string>
-    <string name="title_pref_mux_xudp_quic">Mux トンネルでの QUIC 処理</string>
-
+    <string name="title_pref_mux_xudp_quic">Mux トンネルでの QUIC の処理</string>
+ 
     <string name="title_pref_speed_enabled">速度表示を有効にする</string>
-    <string name="summary_pref_speed_enabled">通知で現在の速度を表示します。\n通知アイコンは使用状況に応じて変化します。</string>
-
+    <string name="summary_pref_speed_enabled">通知に現在の速度を表示します。\n通知アイコンは使用状況に応じて変化します。</string>
+ 
     <string name="title_pref_sniffing_enabled">スニッフィングを有効にする</string>
-    <string name="summary_pref_sniffing_enabled">ドメインをスニッフィングしてみるパケットから (デフォルトはオン)</string>
-
-    <string name="title_pref_local_dns_enabled">ローカル DNS を有効にする</string>
-    <string name="summary_pref_local_dns_enabled">コア DNS モジュールによって処理される DNS (推奨、必要に応じて LAN およびランド アドレスによるルーティング)</string>
-
-    <string name="title_pref_fake_dns_enabled">偽の DNS を有効にする</string>
-    <string name="summary_pref_fake_dns_enabled">ローカル DNS は偽の IP アドレスを返します (高速、ただし、一部のアプリケーションでは機能しない場合があります)</string>
-
-    <string name="title_pref_prefer_ipv6">IPv6 を選択</string>
-    <string name="summary_pref_prefer_ipv6">IPv6 アドレスとルートを選択</string>
-
+    <string name="summary_pref_sniffing_enabled">パケットからドメインをスニフしてみます (デフォルトはオン)</string>
+ 
+    <string name="title_pref_auto_test_connect">自動テストと接続</string>
+    <string name="summary_pref_auto_test_connect">15 分ごとにテストし、接続されていない場合は、実際の遅延を評価して最適な構成への接続を試みます。</string>
+ 
+    <string name="title_pref_local_dns_enabled">ローカルDNSを有効にする</string>
+    <string name="summary_pref_local_dns_enabled">コアの DNS モジュールによって処理される DNS (LAN とメインランド アドレスをバイパスするルーティングが必要な場合に推奨)</string>
+ 
+    <string name="title_pref_fake_dns_enabled">偽のDNSを有効にする</string>
+    <string name="summary_pref_fake_dns_enabled">ローカル DNS は偽の IP アドレスを返します (高速ですが、一部のアプリでは機能しない可能性があります)</string>
+ 
+    <string name="title_pref_prefer_ipv6">IPv6 を優先する</string>
+    <string name="summary_pref_prefer_ipv6">IPv6 アドレスとルートを優先する</string>
+ 
     <string name="title_pref_routing">ルーティング</string>
     <string name="title_pref_routing_domain_strategy">ドメイン戦略</string>
-    <string name="title_pref_routing_mode">定義済みルール</string>
-    <string name="title_pref_routing_custom">カスタム ルール</string>
-
-    <string name="title_pref_remote_dns">リモート DNS (udp/tcp/https/quic)(オプション)</string>
+    <string name="title_pref_routing_mode">事前定義されたルール</string>
+    <string name="title_pref_routing_custom">カスタムルール</string>
+ 
+    <string name="title_pref_remote_dns">リモートDNS (udp/tcp/https/quic)(オプション)</string>
     <string name="summary_pref_remote_dns">DNS</string>
-
+ 
     <string name="title_pref_vpn_dns">VPN DNS (IPv4/v6 のみ)</string>
-
-    <string name="title_pref_domestic_dns">国内 DNS (オプション)</string>
+ 
+    <string name="title_pref_domestic_dns">国内DNS（オプション）</string>
     <string name="summary_pref_domestic_dns">DNS</string>
-
-    <string name="title_pref_proxy_sharing_enabled">LAN からの接続を許可</string>
-    <string name="summary_pref_proxy_sharing_enabled">他のデバイスは、socks/http 経由であなたの IP アドレスを使用してプロキシに接続できます。不正を避けるため、信頼されたネットワークでのみ有効にします接続</string>
-    <string name="toast_warning_pref_proxysharing_short">LAN からの接続を許可します。信頼できるネットワーク上にいることを確認してください</string>
-
-    <string name="title_pref_allow_insecure">allowInsecure</string>
-    <string name="summary_pref_allow_insecure">TLS の場合、デフォルトのプロキシ ポートAllowInsecure</string>
-
-    <string name="title_pref_socks_port">SOCKS5</string>
+ 
+    <string name="title_pref_proxy_sharing_enabled">LANからの接続を許可する</string>
+    <string name="summary_pref_proxy_sharing_enabled">他のデバイスは、socks/http 経由で IP アドレスによってプロキシに接続できます。不正な接続を避けるために、信頼されたネットワークでのみ有効にしてください</string>
+    <string name="toast_warning_pref_proxysharing_short">LAN からの接続を許可します。信頼されたネットワークにいることを確認してください。</string>
+ 
+    <string name="title_pref_allow_insecure">許可しない安全でない</string>
+    <string name="summary_pref_allow_insecure">TLS の場合、デフォルトのallowInsecure</string>
+ 
+    <string name="title_pref_socks_port">SOCKS5 プロキシ ポート</string>
     <string name="summary_pref_socks_port">SOCKS5 プロキシ ポート</string>
-
-    <string name="title_pref_http_port">HTTP プロキシ ポート</string>
-    <string name="summary_pref_http_port">ポート HTTP プロキシ</string>
-
-    <string name="title_pref_local_dns_port">ローカル DNS ポート</string>
-    <string name="summary_pref_local_dns_port">ローカル DNS ポート</string>
-
-    <string name="title_pref_confirm_remove">設定をクリアするための確認</string>
-    <string name="summary_pref_confirm_remove">設定をクリアするにはユーザーによる 2 回目の確認が必要</string>
-
-    <string name="title_pref_start_scan_immediate">すぐにスキャンを開始</string>
-    <string name="summary_pref_start_scan_immediate">カメラを開いて起動時にすぐにスキャンします。それ以外の場合は、コードをスキャンするかツールバーで写真を選択することができます</string>
-
+ 
+    <string name="title_pref_http_port">HTTPプロキシポート</string>
+    <string name="summary_pref_http_port">HTTPプロキシポート</string>
+ 
+    <string name="title_pref_local_dns_port">ローカルDNSポート</string>
+    <string name="summary_pref_local_dns_port">ローカルDNSポート</string>
+ 
+    <string name="title_pref_confirm_remove">設定ファイル削除の確認</string>
+    <string name="summary_pref_confirm_remove">構成ファイルを削除するかどうかは、ユーザーによる 2 回目の確認が必要です</string>
+ 
+    <string name="title_pref_start_scan_immediate">すぐにスキャンを開始します</string>
+    <string name="summary_pref_start_scan_immediate">カメラを開いて起動時にすぐにスキャンします。それ以外の場合は、コードをスキャンするか、ツールバーで写真を選択するかを選択できます。</string>
+ 
     <string name="title_pref_feedback">フィードバック</string>
-    <string name="summary_pref_feedback">GitHub への改善点やバグのフィードバック</string>
-    <string name="summary_pref_tg_group">Telegram グループに参加</string>
-    <string name="toast_tg_app_not_found">Telegram アプリが見つかりません</string>
-    <string name="title_privacy_policy">プライバシー ポリシー</string>
+    <string name="summary_pref_feedback">機能強化やバグを GitHub にフィードバックする</string>
+    <string name="summary_pref_tg_group">テレグラムグループに参加する</string>
+    <string name="toast_tg_app_not_found">電報アプリが見つかりません</string>
+    <string name="title_privacy_policy">プライバシーポリシー</string>
+    <string name="title_about">について</string>
+    <string name="title_source_code">ソースコード</string>
+    <string name="title_tg_channel">電報チャンネル</string>
     <string name="title_configuration_backup">バックアップ構成</string>
-    <string name="summary_configuration_backup">ストレージの場所: [%s], アプリをアンインストールするかストレージを消去すると、バックアップは消去されます</string>
+    <string name="summary_configuration_backup">ストレージの場所: [%s]、アプリをアンインストールするかストレージをクリアすると、バックアップはクリアされます</string>
     <string name="title_configuration_restore">構成を復元する</string>
-    <string name="title_configuration_share">共有設定</string>
-
+    <string name="title_configuration_share">共有構成</string>
+ 
     <string name="title_pref_promotion">プロモーション</string>
-    <string name="summary_pref_promotion">プロモーション、クリックして詳細を表示 (寄付は削除できます)</string>
-
-    <string name="title_pref_auto_update_subscription">サブスクリプションの自動更新</string>
-    <string name="summary_pref_auto_update_subscription">バックグラウンドで定期的にサブスクリプションを自動的に更新します。デバイスによっては、この機能が常に動作するとは限りません</string>
+    <string name="summary_pref_promotion">プロモーション、クリックして詳細をご覧ください（寄付は削除できます）</string>
+ 
+    <string name="title_pref_auto_update_subscription">自動更新サブスクリプション</string>
+    <string name="summary_pref_auto_update_subscription">バックグラウンドで一定間隔でサブスクリプションを自動的に更新します。デバイスによっては、この機能が常に動作するとは限りません</string>
     <string name="title_pref_auto_update_interval">自動更新間隔 (分、最小値 15)</string>
-
-    <string name="title_core_loglevel">ログ レベル</string>
+ 
+    <string name="title_core_loglevel">ログレベル</string>
     <string name="title_mode">モード</string>
-    <string name="title_mode_help">クリックして詳細ヘルプ</string>
+    <string name="title_mode_help">さらに詳しいヘルプを表示するには、ここをクリックしてください</string>
     <string name="title_language">言語</string>
-    <string name="title_ui_settings">UI 設定</string>
-
-    <string name="title_logcat">Logcat</string>
+    <string name="title_ui_settings">UI設定</string>
+ 
+    <string name="title_logcat">ログキャット</string>
     <string name="logcat_copy">コピー</string>
-    <string name="logcat_clear">削除</string>
-    <string name="title_service_restart">サービスを再起動</string>
+    <string name="logcat_clear">クリア</string>
+    <string name="title_service_restart">サービスの再開</string>
     <string name="title_del_all_config">すべての設定を削除</string>
-    <string name="title_del_duplicate_config">重複した構成を削除</string>
-    <string name="title_del_invalid_config">無効な構成を削除</string>
+    <string name="title_del_duplicate_config">重複した構成を削除する</string>
+    <string name="title_del_invalid_config">無効な構成を削除します(最初にテスト)</string>
     <string name="title_export_all">非カスタム構成をクリップボードにエクスポート</string>
-    <string name="title_sub_setting">サブスクリプション グループ設定</string>
-    <string name="sub_setting_remarks">説明</string>
+    <string name="title_sub_setting">サブスクリプショングループの設定</string>
+    <string name="sub_setting_remarks">備考</string>
     <string name="sub_setting_url">オプションの URL</string>
-    <string name="sub_setting_enable">更新を有効にする</string>
+    <string name="sub_setting_enable">アップデートを有効にする</string>
     <string name="sub_auto_update">自動更新を有効にする</string>
-    <string name="title_sub_update">サブスクリプションを更新</string>
-    <string name="title_ping_all_server">すべての構成を Tcping</string>
-    <string name="title_real_ping_all_server">Realすべての設定を遅延</string>
-    <string name="title_user_asset_setting">地理的資産ファイル</string>
+    <string name="title_sub_update">サブスクリプションを更新する</string>
+    <string name="title_ping_all_server">すべての設定をTCPする</string>
+    <string name="title_real_ping_all_server">実質遅延のすべての設定</string>
+    <string name="title_user_asset_setting">地理アセット ファイル</string>
     <string name="title_sort_by_test_results">テスト結果による並べ替え</string>
-    <string name="title_filter_config">設定のフィルター</string>
+    <string name="title_filter_config">フィルタ設定ファイル</string>
     <string name="filter_config_all">すべてのサブスクリプション グループ</string>
-    <string name="title_del_duplicate_config_count">重複した %d 設定を削除</string>
-
-    <string name="tasker_start_service">サービスの開始</string>
-    <string name="tasker_setting_confirm">確認</string>
-
+    <string name="title_del_duplicate_config_count">%d 個の重複構成を削除します</string>
+ 
+    <string name="tasker_start_service">サービス開始</string>
+    <string name="tasker_setting_confirm">確認する</string>
+ 
     <string name="routing_settings_title">ルーティング設定</string>
-    <string name="routing_settings_tips">カンマ (, ) で区切って、必ず保存してください</string>
+    <string name="routing_settings_tips">カンマ(,)で区切って保存してください</string>
     <string name="routing_settings_save">保存</string>
-    <string name="routing_settings_delete">削除</string>
-    <string name="routing_settings_scan_replace">スキャンして置換</string>
+    <string name="routing_settings_delete">クリア</string>
+    <string name="routing_settings_scan_replace">スキャンして置換する</string>
     <string name="routing_settings_scan_append">スキャンして追加</string>
-    <string name="routing_settings_default_rules">デフォルトのルーティング ルールを設定</string>
-
-    <string name="connection_test_pending">接続を確認</string>
-    <string name="connection_test_testing">テスト…</string>
-    <string name="connection_test_available">成功: HTTP 接続に時間がかかります %dms</string>
-    <string name="connection_test_error">インターネットの検出に失敗しました接続: %s</string>
-    <string name="connection_test_fail">インターネットが利用できません</string>
-    <string name="connection_test_error_status_code">エラー コード: #%d</string>
-    <string name="connection_connected">接続されました、タップして接続を確認してください</string>
-    <string name="connection_not_connected">未接続</string>
-
-    <string name="import_subscription_success">サブスクリプションのインポート成功</string>
-    <string name="import_subscription_failure">サブスクリプションのインポート失敗</string>
+    <string name="routing_settings_default_rules">デフォルトのルーティング ルールを設定する</string>
+ 
+    <string name="connection_test_pending">接続をチェックする</string>
+    <string name="connection_test_testing">テスト中…</string>
+    <string name="connection_test_available">成功: HTTP 接続に %dms かかりました</string>
+    <string name="connection_test_error">インターネット接続の検出に失敗しました: %s</string>
+    <string name="connection_test_fail">インターネットが利用できない</string>
+    <string name="connection_test_error_status_code">エラーコード: #%d</string>
+    <string name="connection_connected">接続されました。タップして接続を確認してください</string>
+    <string name="connection_not_connected">接続されていません</string>
+ 
+    <string name="import_subscription_success">サブスクリプションが正常にインポートされました</string>
+    <string name="import_subscription_failure">サブスクリプションのインポートに失敗しました</string>
     <string name="title_fragment_settings">フラグメント設定</string>
-    <string name="title_pref_fragment_packets">フラグメント パッケージ</string>
-    <string name="title_pref_fragment_length">フラグメント長さ (最小-最大)</string>
+    <string name="title_pref_fragment_packets">フラグメントパケット</string>
+    <string name="title_pref_fragment_length">フラグメントの長さ (最小-最大)</string>
     <string name="title_pref_fragment_interval">フラグメント間隔 (最小-最大)</string>
-    <string name="title_pref_fragment_enabled">フラグメントをアクティブ化</string>
-
-    <string name="title_ip_scanner_setting">IP スキャナ</string>
-    <string name="title_ip_scanner">IP スキャナ</string>
+    <string name="title_pref_fragment_enabled">フラグメントを有効にする</string>
+ 
+    <string name="title_ip_scanner_setting">IPスキャナー</string>
+    <string name="title_ip_scanner">IPスキャナー</string>
     <string name="menu_item_cancel">キャンセル</string>
     <string name="menu_item_copy_all_ips">すべての IP をコピー</string>
-    <string name="ip_scanner_max_latency">最大レイテンシ</string>
-    <string name="ip_scanner_max_ips">最大。 IPs</string>
+    <string name="ip_scanner_max_latency">最大。レイテンシ</string>
+    <string name="ip_scanner_max_ips">最大。 IP</string>
     <string name="ip_scanner_max_ips_default">5</string>
     <string name="ip_scanner_max_latency_default">700</string>
     <string name="menu_item_start_scan">スキャン開始</string>
-    <string name="ip_scanner_cdn_provider">CDN プロバイダー</string>
-    <string name="ip_scanner_clean_ips">IP をクリーンアップ</string>
-    <string name="ip_scanner_testing">IP をテスト中</string>
-    <string name="ip_scanner_preparing">IP を準備中</string>
-    <string name="ip_scanner_selected_config">選択された構成</string>
+    <string name="ip_scanner_cdn_provider">CDNプロバイダー</string>
+    <string name="ip_scanner_clean_ips">クリーン IP</string>
+    <string name="ip_scanner_testing">IPのテスト</string>
+    <string name="ip_scanner_preparing">IPの準備</string>
+    <string name="ip_scanner_selected_config">選択した構成</string>
     <string name="ip_scanner_no_valid_config_is_selected">構成が選択されていません!</string>
-
-    <!-- Neko String -->
+ 
+    <!-- Neko strings --> 
     <string name="title_theme_settings">テーマ設定</string>
-    <string name="title_choose_theme">テーマカラーを選択</string>
+    <string name="title_choose_theme">カラーテーマの選択</string>
     <string name="uwu_header_title">こんにちは、<b>お兄ちゃん</b></string>
     <string name="uwu_edit">編集</string>
     <string name="uwu_credits">クレジット</string>
     <string name="uwu_about">アプリについて</string>
     <string name="uwu_tools">ツール</string>
     <string name="uwu_information_cat">情報</string>
-    <string name="uwu_neko_version">アプリケーションのバージョン</string>
-    <string name="uwu_build_type">作成タイプ</string>
-    <string name="uwu_build_date">作成日</string>
+    <string name="uwu_neko_version">アプリのバージョン</string>
+    <string name="uwu_build_type">ビルドタイプ</string>
+    <string name="uwu_build_date">建設日</string>
     <string name="uwu_recommended_os_cat">推奨OS</string>
-    <string name="uwu_version_sdk_minimum">最小SDKバージョン</string>
+    <string name="uwu_version_sdk_minimum">SDKの最小バージョン</string>
     <string name="uwu_version_sdk_target">ターゲットSDKバージョン</string>
     <string name="uwu_package_name">パッケージ名</string>
-    <string name="uwu_speedtest_title">SpeedTest</string>
-    <string name="uwu_speedtest_summary">ネットワーク速度</string>
-    <string name="uwu_status_connection_title">ステータス</string>
-    <string name="uwu_network_switcher_title">ネットワーク スイッチャー</string>
-    <string name="uwu_host_to_ip_title">IP へのホスト</string>
+    <string name="uwu_speedtest_title">スピードテスト</string>
+    <string name="uwu_speedtest_summary">高速ネットワーク</string>
+    <string name="uwu_status_connection_title">状態</string>
+    <string name="uwu_network_switcher_title">ネットワークスイッチャー</string>
+    <string name="uwu_host_to_ip_title">ホストからIPへ</string>
     <string name="uwu_ip_location_title">IP の場所</string>
-    <string name="uwu_exit_title">終了</string>
+    <string name="uwu_exit_title">出口</string>
     <string name="uwu_maintainer_title">このアプリはメンテナンス中です</string>
     <string name="uwu_border_about_title">追加オプション</string>
-    <string name="uwu_border_about_summary">横の矢印アイコンをタップ</string>
-    <string name="uwu_devicename_title">デバイス名</string>
+    <string name="uwu_border_about_summary">横にある矢印アイコンをタップします</string>
+    <string name="uwu_devicename_title">装置名</string>
     <string name="uwu_board_title">ボード</string>
-    <string name="uwu_osversion_title">OS バージョン</string>
+    <string name="uwu_osversion_title">OSのバージョン</string>
     <string name="uwu_brand_title">ブランド</string>
     <string name="uwu_buildid_title">ビルドID</string>
-    <string name="uwu_baseband_title">ベースバンド バージョン</string>
-    <string name="uwu_github_title">Github</string>
-    <string name="uwu_github_summary">ソース コード リポジトリ</string>
+    <string name="uwu_baseband_title">ベースバンドバージョン</string>
+    <string name="uwu_github_title">ギットハブ</string>
+    <string name="uwu_github_summary">ソースコードリポジトリ</string>
     <string name="uwu_credit_title">クレジット</string>
-    <string name="uwu_updater_title">更新の確認</string>
-    <string name="uwu_changrlog_title">変更ログ</string>
-    <string name="uwu_feetback_title">フィートバック</string>
-    <string name="uwu_modder_title">Modder</string>
-    <string name="uwu_exit_message">このアプリを終了してもよろしいですか?</string>
-    <string name="uwu_text_yes">Ok</string>
-    <string name="uwu_text_no">キャンセル</string>
-    <string name="uwu_ignore_battery_optimization_summary">VPN が適切に機能するために必要な権限を申請します。\n\n中国企業製の端末をお使いの場合、許可後もカードが消えない場合があります。</string>
+    <string name="uwu_updater_title">アップデートをチェックする</string>
+    <string name="uwu_changrlog_title">変更履歴</string>
+    <string name="uwu_feetback_title">フィードバック</string>
+    <string name="uwu_modder_title">改造者</string>
+    <string name="uwu_exit_message">このアプリケーションを終了してもよろしいですか?</string>
+    <string name="uwu_text_yes">はい</string>
+    <string name="uwu_text_no">いいえ</string>
+    <string name="uwu_ignore_battery_optimization_summary">VPN が適切に機能するために必要な許可を申請してください。\n\n中国企業製のデバイスを使用している場合は、許可が与えられた後もカードが表示されなくなることがあります。</string>
     <string name="uwu_ignore_battery_optimization_title">バッテリーの最適化を無視する</string>
     <string name="read_more">続きを読む</string>
+    <string name="default_title">インターネットがない</string>
+    <string name="default_message">インターネット接続を確認して、もう一度試してください。</string>
+    <string name="please_turn_on">オンにしてください</string>
+    <string name="wifi">Wi-Fi</string>
+    <string name="mobile_data">モバイルデータ</string>
+    <string name="default_snackbar_message">アクティブなインターネット接続がありません!</string>
+    <string name="settings">設定</string>
+    <string name="ok">わかりました</string>
+    <string name="please_turn_off">電源を切ってください</string>
+    <string name="airplane_mode">機内モード</string>
+    <string name="default_airplane_mode_message">機内モードがオンになりました。</string>
+     
+    <string name="air_title_report_issue">問題を報告する</string>
+    <string name="air_title_issue">問題</string>
+    <string name="air_title_login">ログイン</string>
+    <string name="air_label_issue_title">タイトル</string>
+    <string name="air_label_issue_description">説明</string>
+    <string name="air_label_device_info">デバイス情報</string>
+    <string name="air_label_use_account">GitHub アカウントを使用して送信する</string>
+    <string name="air_label_use_email">電子メールを使用して送信する</string>
+    <string name="air_label_use_guest">匿名で送信</string>
+    <string name="air_label_username">ユーザー名</string>
+    <string name="air_label_password">パスワード</string>
+    <string name="air_label_email">Eメール</string>
+    <string name="air_label_email_optional">電子メール (オプション)</string>
+    <string name="air_error_no_title">問題のタイトルを入力してください</string>
+    <string name="air_error_no_description">問題の説明を入力してください</string>
+    <plurals name="air_error_short_description"> 
+        <item quantity="one">説明には少なくとも %d 文字が必要です</item> 
+        <item quantity="other">説明には少なくとも %d 文字が必要です</item> 
+    </plurals> 
+    <string name="air_error_no_username">有効な GitHub ユーザー名を入力してください</string>
+    <string name="air_error_no_password">有効な GitHub パスワードを入力してください</string>
+    <string name="air_error_no_email">メールアドレスを入力してください</string>
+    <string name="air_dialog_title_loading">レポートを GitHub にアップロードしています…</string>
+    <string name="air_dialog_title_failed">レポートを送信できません</string>
+    <string name="air_dialog_description_failed_wrong_credentials">間違ったユーザー名またはパスワード</string>
+    <string name="air_dialog_description_failed_invalid_token">無効なアクセストークンです。アプリ開発者にお問い合わせください。</string>
+    <string name="air_dialog_description_failed_issues_not_available">選択したリポジトリでは問題が有効になっていません。アプリ開発者にお問い合わせください。</string>
+    <string name="air_dialog_description_failed_unknown">予期しないエラーが発生しました。アプリ開発者にお問い合わせください。</string>
+    <string name="air_dialog_action_failed">わかりました</string>
+    <string name="air_title_login_github_notes"><b>注:</b> 2 要素認証はサポートされていません。</string>
+     
+    <string name="homepage_widget_battery_percent">パーセント</string>
+    <string name="homepage_widget_battery_charge">充電</string>
+    <string name="homepage_widget_battery_discharge">放電中</string>
+    <string name="homepage_widget_battery_title">バッテリー</string>
+    <string name="homepage_widget_storage_title">ストレージ</string>
+    <string name="changelog_title">変更履歴</string>
+ 
+    <string name="appupdater_update_available">新しいアップデートが利用可能になりました!</string>
+    <string name="appupdater_update_available_description_dialog">アップデート %1$s をダウンロードできます。最新のアップデートをダウンロードすると、%2$s の最新の機能、改善点、バグ修正が得られます。</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">アップデート %1$s をダウンロードできます。\n\n次の新機能を入手できます:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">アップデート %1$s が利用可能です!</string>
+    <string name="appupdater_update_available_description_notification">アップデート %1$s/%2$s をダウンロードできます</string>
+    <string name="appupdater_update_not_available">利用可能なアップデートはありません</string>
+    <string name="appupdater_update_not_available_description">すでに最新バージョン %s を使用しています。</string>
+    <string name="appupdater_btn_update">アップデート</string>
+    <string name="appupdater_btn_disable">二度と表示しないでください</string>
+    <string name="appupdater_btn_dismiss">却下する</string>
+    <string name="appupdater_channel_name">更新通知</string>
     <string name="uwu_host_checker">ホストチェッカー</string>
-</resources>
+    <!-- Neko strings --> 
+</resources> 

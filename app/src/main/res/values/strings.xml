@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
     <string name="app_widget_name">Switch</string>
     <string name="app_tile_name">Switch</string>
     <string name="app_tile_first_use">First use of this feature, please use the app to add server</string>
@@ -88,7 +87,6 @@
     <string name="msg_remark_is_duplicate">The remarks already exists</string>
     <string name="toast_action_not_allowed">Action not allowed</string>
 
-
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Loading</string>
     <string name="menu_item_search">Search</string>
@@ -99,7 +97,6 @@
     <string name="msg_downloading_content">Downloading content</string>
     <string name="menu_item_export_proxy_app">Export to Clipboard</string>
     <string name="menu_item_import_proxy_app">Import from Clipboard</string>
-
 
     <!-- Preferences -->
     <string name="title_settings">Settings</string>
