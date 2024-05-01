@@ -77,6 +77,15 @@ class Grettings : AppCompatTextView {
                     else -> sb.append("💤 пора идти спать...")
                 }
             }
+            "su" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 Wilujeng énjing...")
+                    timeOfDay in 9..15 -> sb.append("⛅ Wilujeng sonten...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ Wilujeng sonten...")
+                    timeOfDay in 21..23 -> sb.append("🌙 Wilujeng wengi...")
+                    else -> sb.append("💤 Wanci saré...")
+                }
+            }
             "vi" -> {
                 when {
                     timeOfDay in 4..8 -> sb.append("🌤 Chào buổi sáng...")
