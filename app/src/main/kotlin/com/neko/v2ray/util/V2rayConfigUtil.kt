@@ -2,7 +2,7 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
-import com.google.gson.*
+import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.PROTOCOL_FREEDOM
@@ -10,9 +10,9 @@ import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.TAG_FRAGMENT
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V6
-import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ERoutingMode
+import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.V2rayConfig.Companion.DEFAULT_NETWORK
 import com.neko.v2ray.dto.V2rayConfig.Companion.HTTP
 
@@ -286,15 +286,11 @@ object V2rayConfigUtil {
                 rulesIP.ip = ArrayList()
 
                 userRule.split(",").map { it.trim() }.forEach {
-                    if (Utils.isIpAddress(it) || it.startsWith("geoip:")) {
+                    if (it.startsWith("ext:") && it.contains("geoip")) {
                         rulesIP.ip?.add(it)
-                    } else if (it.isNotEmpty())
-//                                if (Utils.isValidUrl(it)
-//                                    || it.startsWith("geosite:")
-//                                    || it.startsWith("regexp:")
-//                                    || it.startsWith("domain:")
-//                                    || it.startsWith("full:"))
-                    {
+                    } else if (Utils.isIpAddress(it) || it.startsWith("geoip:")) {
+                        rulesIP.ip?.add(it)
+                    } else if (it.isNotEmpty()) {
                         rulesDomain.domain?.add(it)
                     }
                 }
