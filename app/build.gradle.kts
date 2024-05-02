@@ -59,7 +59,7 @@ dependencies {
     implementation("com.kyleduo.switchbutton:library:2.1.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.jsoup:jsoup:1.17.2")
-    implementation("androidx.webkit:webkit:1.10.0")
+    implementation("androidx.webkit:webkit:1.11.0")
     implementation("org.kohsuke:github-api:1.321")
     implementation("com.github.aakira:expandable-layout:1.6.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
