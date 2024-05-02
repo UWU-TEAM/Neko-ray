@@ -117,6 +117,8 @@
 
     <string name="title_pref_sniffing_enabled">Aktifkan Sniffing</string>
     <string name="summary_pref_sniffing_enabled">Coba sniff domain dari paket (default aktif)</string>
+    <string name="title_pref_route_only_enabled">Aktifkan hanya rute</string>
+    <string name="summary_pref_route_only_enabled">Gunakan nama domain yang diendus hanya untuk perutean, dan pertahankan alamat target sebagai alamat IP.</string>
 
     <string name="title_pref_auto_test_connect">Otomatis Uji dan Sambungkan</string>
     <string name="summary_pref_auto_test_connect">Uji setiap 15 menit, dan jika tidak tersambung, coba sambungkan ke Config terbaik dengan mengevaluasi tcping sebenarnya.</string>

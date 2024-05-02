@@ -117,6 +117,8 @@
  
     <string name="title_pref_sniffing_enabled">启用嗅探</string>
     <string name="summary_pref_sniffing_enabled">尝试从数据包中嗅探域（默认开启）</string>
+    <string name="title_pref_route_only_enabled">仅启用路由</string>
+    <string name="summary_pref_route_only_enabled">仅使用嗅探到的域名进行路由，并将目标地址保留为IP 地址。</string>
  
     <string name="title_pref_auto_test_connect">自动测试和连接</string>
     <string name="summary_pref_auto_test_connect">每 15 分钟测试一次，如果未连接，则通过评估实际延迟尝试连接到最佳配置。</string>

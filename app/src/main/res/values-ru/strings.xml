@@ -117,6 +117,8 @@
  
     <string name="title_pref_sniffing_enabled">Включить прослушивание</string>
     <string name="summary_pref_sniffing_enabled">Попробуйте пронюхать домен из пакета (по умолчанию включено).</string>
+    <string name="title_pref_route_only_enabled">Включить только маршрут</string>
+    <string name="summary_pref_route_only_enabled">Используйте прослушанное доменное имя только для маршрутизации и оставьте целевой адрес в качестве IP-адреса.</string>
  
     <string name="title_pref_auto_test_connect">Автоматическое тестирование и подключение</string>
     <string name="summary_pref_auto_test_connect">Тестируйте каждые 15 минут, и если он не подключен, попробуйте подключиться к лучшей конфигурации, оценив реальные задержки.</string>

@@ -117,6 +117,8 @@
  
     <string name="title_pref_sniffing_enabled">スニッフィングを有効にする</string>
     <string name="summary_pref_sniffing_enabled">パケットからドメインをスニフしてみます (デフォルトはオン)</string>
+    <string name="title_pref_route_only_enabled">ルートのみを有効にする</string>
+    <string name="summary_pref_route_only_enabled">スニッフィングされたドメイン名はルーティングのみに使用し、ターゲット アドレスは IP アドレスとして保持します。</string>
  
     <string name="title_pref_auto_test_connect">自動テストと接続</string>
     <string name="summary_pref_auto_test_connect">15 分ごとにテストし、接続されていない場合は、実際の遅延を評価して最適な構成への接続を試みます。</string>

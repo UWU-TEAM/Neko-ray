@@ -117,6 +117,8 @@
  
     <string name="title_pref_sniffing_enabled">تمكين الاستنشاق</string>
     <string name="summary_pref_sniffing_enabled">حاول شم المجال من الحزمة (التشغيل الافتراضي)</string>
+    <string name="title_pref_route_only_enabled">تمكين المسار فقط</string>
+    <string name="summary_pref_route_only_enabled">استخدم اسم المجال المستنشق للتوجيه فقط، واحتفظ بالعنوان الهدف كعنوان IP.</string>
  
     <string name="title_pref_auto_test_connect">الاختبار التلقائي والاتصال</string>
     <string name="summary_pref_auto_test_connect">قم بإجراء الاختبار كل 15 دقيقة، وإذا لم يكن متصلاً، فحاول الاتصال بأفضل تكوين من خلال تقييم التأخيرات الحقيقية.</string>
