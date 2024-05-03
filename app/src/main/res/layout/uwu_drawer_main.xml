@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -76,16 +75,20 @@
                 android:background="@drawable/uwu_background_lengkung"
                 android:layout_width="match_parent"
                 android:layout_height="25.0dip"
+                android:layout_marginStart="5.0dip"
+                android:layout_marginEnd="5.0dip"
                 app:layout_anchorGravity="bottom" />
         </LinearLayout>
         <RelativeLayout
-            android:background="@drawable/uwu_background_material"
+            android:background="?attr/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
                 android:background="@drawable/uwu_background_material"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="5.0dip"
+                android:layout_marginEnd="5.0dip"
                 android:layout_above="@+id/uwu_exit"
                 android:layout_alignParentTop="true">
                 <androidx.core.widget.NestedScrollView
@@ -98,7 +101,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="0.0dip"
-                        android:layout_marginBottom="16.0dip"
+                        android:layout_marginBottom="0.0dip"
                         android:layout_marginStart="16.0dip"
                         android:layout_marginEnd="16.0dip">
                         <LinearLayout
@@ -549,19 +552,22 @@
                 </androidx.core.widget.NestedScrollView>
             </LinearLayout>
             <LinearLayout
-                android:gravity="bottom"
-                android:layout_gravity="bottom"
-                android:orientation="horizontal"
+                android:gravity="center|bottom"
+                android:layout_gravity="center|bottom"
+                android:orientation="vertical"
                 android:id="@+id/uwu_exit"
-                android:background="@drawable/uwu_background_material"
+                android:background="@drawable/uwu_background_lengkung_bottom"
+                android:paddingTop="10.0dip"
                 android:paddingBottom="10.0dip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
+                android:layout_marginStart="5.0dip"
+                android:layout_marginEnd="5.0dip"
                 android:layout_alignParentBottom="true"
                 app:layout_anchorGravity="bottom">
                 <LinearLayout
-                    android:gravity="center|left"
+                    android:gravity="center"
                     android:orientation="horizontal"
                     android:background="@drawable/uwu_bg_exit"
                     android:padding="5.0dip"
@@ -580,7 +586,7 @@
                         android:textColor="?attr/colorText"
                         android:paddingLeft="8.0dip"
                         android:paddingTop="8.0dip"
-                        android:paddingRight="60.0dip"
+                        android:paddingRight="50.0dip"
                         android:paddingBottom="8.0dip"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"

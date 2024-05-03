@@ -9,10 +9,10 @@
             <solid
                 android:color="?attr/colorPrimary" />
             <corners
-                android:topLeftRadius="0.0dip"
-                android:topRightRadius="99.0dip"
-                android:bottomLeftRadius="0.0dip"
-                android:bottomRightRadius="99.0dip" />
+                android:topLeftRadius="20.0dip"
+                android:topRightRadius="20.0dip"
+                android:bottomLeftRadius="20.0dip"
+                android:bottomRightRadius="20.0dip" />
         </shape>
     </item>
 </ripple>
