@@ -84,6 +84,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="bottom"
+                        android:maxLines="65536"
                         android:textAppearance="?android:attr/textAppearanceSmall" />
                 </RelativeLayout>
             </androidx.core.widget.NestedScrollView>
