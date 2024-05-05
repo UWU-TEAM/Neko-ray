@@ -24,165 +24,173 @@
 
         </com.google.android.material.appbar.AppBarLayout>
 
-        <RelativeLayout
-            android:background="?attr/colorPrimary"
-            android:paddingBottom="16.0dip"
+        <com.neko.expandable.layout.ExpandableView
+            android:id="@+id/expandabledashboard_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0.0dip"
-            android:layout_marginBottom="0.0dip"
-            android:paddingStart="16.0dip"
-            android:paddingEnd="16.0dip">
+            android:orientation="vertical">
 
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/uwu_banner"
-                android:layout_width="170.0dip"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/uwu_title"
-                android:layout_alignParentTop="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="8.0dip"
-                android:layout_alignParentStart="true"
-                app:cardBackgroundColor="@color/uwu_bg_card"
-                app:cardCornerRadius="24.0dip"
-                app:cardElevation="0.0dip"
-                app:rippleColor="@color/uwu_transparent"
-                app:strokeColor="@color/uwu_bg_card"
-                app:strokeWidth="3.0dip">
-
-                <FrameLayout
-                    android:layout_gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:background="@drawable/uwu_banner_image_2"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:alpha="0.6" />
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:padding="5.0dip"
-                        android:src="@drawable/uwu_banner_image"
-                        app:tint="?attr/colorPrimary" />
-
-                </FrameLayout>
-
-            </com.google.android.material.card.MaterialCardView>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:id="@+id/uwu_title"
+            <RelativeLayout
+                android:background="?attr/colorPrimary"
+                android:paddingBottom="16.0dip"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toEndOf="@+id/uwu_banner">
+                android:layout_marginTop="0.0dip"
+                android:layout_marginBottom="0.0dip"
+                android:paddingStart="16.0dip"
+                android:paddingEnd="16.0dip">
 
                 <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
+                    android:id="@+id/uwu_banner"
+                    android:layout_width="170.0dip"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8.0dip"
+                    android:layout_alignBottom="@+id/uwu_title"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="8.0dip"
+                    android:layout_alignParentStart="true"
                     app:cardBackgroundColor="@color/uwu_bg_card"
                     app:cardCornerRadius="24.0dip"
                     app:cardElevation="0.0dip"
-                    app:strokeWidth="0.0dip">
+                    app:rippleColor="@color/uwu_transparent"
+                    app:strokeColor="@color/uwu_bg_card"
+                    app:strokeWidth="3.0dip">
 
-                    <LinearLayout
+                    <FrameLayout
+                        android:layout_gravity="center"
                         android:orientation="vertical"
-                        android:padding="16.0dip"
-                        android:clickable="true"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:foreground="?attr/selectableItemBackground"
-                        android:onClick="uwuSpeedTest">
-
-                        <ImageView
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:layout_width="25.0dip"
-                            android:layout_height="25.0dip"
-                            android:src="@drawable/uwu_speedometer" />
+                        android:layout_height="match_parent">
 
                         <LinearLayout
-                            android:orientation="horizontal"
-                            android:paddingTop="10.0dip"
+                            android:background="@drawable/uwu_banner_image_2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:alpha="0.6" />
 
-                            <TextView
-                                android:textSize="14.0sp"
-                                android:textColor="?attr/colorPrimary"
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:padding="5.0dip"
+                            android:src="@drawable/uwu_banner_image"
+                            app:tint="?attr/colorPrimary" />
+
+                    </FrameLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/uwu_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/uwu_banner">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8.0dip"
+                        app:cardBackgroundColor="@color/uwu_bg_card"
+                        app:cardCornerRadius="24.0dip"
+                        app:cardElevation="0.0dip"
+                        app:strokeWidth="0.0dip">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:padding="16.0dip"
+                            android:clickable="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:foreground="?attr/selectableItemBackground"
+                            android:onClick="uwuSpeedTest">
+
+                            <ImageView
                                 android:gravity="center"
+                                android:layout_gravity="center"
+                                android:layout_width="25.0dip"
+                                android:layout_height="25.0dip"
+                                android:src="@drawable/uwu_speedometer" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingTop="10.0dip"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="@string/uwu_speedtest_title" />
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:textSize="14.0sp"
+                                    android:textColor="?attr/colorPrimary"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/uwu_speedtest_title" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                    </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                </com.google.android.material.card.MaterialCardView>
-
-                <com.google.android.material.card.MaterialCardView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16.0dip"
-                    android:layout_marginStart="8.0dip"
-                    app:cardBackgroundColor="@color/uwu_bg_card"
-                    app:cardCornerRadius="24.0dip"
-                    app:cardElevation="0.0dip"
-                    app:strokeWidth="0.0dip">
-
-                    <LinearLayout
-                        android:orientation="vertical"
-                        android:id="@+id/layout_test"
-                        android:padding="16.0dip"
-                        android:clickable="true"
+                    <com.google.android.material.card.MaterialCardView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:foreground="?attr/selectableItemBackground">
-
-                        <ImageView
-                            android:gravity="center"
-                            android:layout_gravity="center"
-                            android:layout_width="25.0dip"
-                            android:layout_height="25.0dip"
-                            android:src="@drawable/uwu_ic_stats" />
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip"
+                        android:layout_marginStart="8.0dip"
+                        app:cardBackgroundColor="@color/uwu_bg_card"
+                        app:cardCornerRadius="24.0dip"
+                        app:cardElevation="0.0dip"
+                        app:strokeWidth="0.0dip">
 
                         <LinearLayout
-                            android:orientation="horizontal"
-                            android:paddingTop="10.0dip"
+                            android:orientation="vertical"
+                            android:id="@+id/layout_test"
+                            android:padding="16.0dip"
+                            android:clickable="true"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent">
+                            android:layout_height="match_parent"
+                            android:foreground="?attr/selectableItemBackground">
 
-                            <com.neko.marquee.text.AutoMarqueeTextView
-                                android:textSize="14.0sp"
-                                android:textColor="?attr/colorPrimary"
-                                android:ellipsize="marquee"
+                            <ImageView
                                 android:gravity="center"
-                                android:layout_gravity="start|center"
-                                android:id="@+id/tv_test_state"
-                                android:fadingEdge="horizontal"
-                                android:layout_width="0.0dip"
-                                android:layout_height="wrap_content"
-                                android:text="@string/connection_test_pending"
-                                android:scrollHorizontally="true"
-                                android:singleLine="true"
-                                android:layout_weight="1.0"
-                                android:marqueeRepeatLimit="marquee_forever" />
+                                android:layout_gravity="center"
+                                android:layout_width="25.0dip"
+                                android:layout_height="25.0dip"
+                                android:src="@drawable/uwu_ic_stats" />
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingTop="10.0dip"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <com.neko.marquee.text.AutoMarqueeTextView
+                                    android:textSize="14.0sp"
+                                    android:textColor="?attr/colorPrimary"
+                                    android:ellipsize="marquee"
+                                    android:gravity="center"
+                                    android:layout_gravity="start|center"
+                                    android:id="@+id/tv_test_state"
+                                    android:fadingEdge="horizontal"
+                                    android:layout_width="0.0dip"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/connection_test_pending"
+                                    android:scrollHorizontally="true"
+                                    android:singleLine="true"
+                                    android:layout_weight="1.0"
+                                    android:marqueeRepeatLimit="marquee_forever" />
+
+                            </LinearLayout>
 
                         </LinearLayout>
 
-                    </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
 
-                </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
 
-            </LinearLayout>
+            </RelativeLayout>
 
-        </RelativeLayout>
+        </com.neko.expandable.layout.ExpandableView>
 
         <RelativeLayout
             android:fitsSystemWindows="true"
