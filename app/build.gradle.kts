@@ -3,68 +3,11 @@ import java.util.Date
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
 }
 
 configurations {
     create("defaultRuntimeOnly")
-}
-
-dependencies {
-    testImplementation("junit:junit:4.13.2")
-
-    // Include Project
-    implementation(project(":library"))
-
-    // Androidx
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.legacy:legacy-support-v4:1.0.0")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.cardview:cardview:1.0.0")
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("androidx.recyclerview:recyclerview:1.3.2")
-    implementation("androidx.fragment:fragment-ktx:1.7.0")
-    implementation("androidx.multidex:multidex:2.0.1")
-    implementation("androidx.viewpager2:viewpager2:1.1.0-rc01")
-
-    // Androidx ktx
-    implementation("androidx.activity:activity-ktx:1.9.0")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-
-    //kotlin
-    implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.23")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
-
-    implementation("com.tencent:mmkv-static:1.3.4")
-    implementation("com.google.code.gson:gson:2.10.1")
-    implementation("io.reactivex:rxjava:1.3.8")
-    implementation("io.reactivex:rxandroid:1.2.1")
-    implementation("com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar")
-    implementation("me.drakeet.support:toastcompat:1.1.0")
-    implementation("com.blacksquircle.ui:editorkit:2.9.0")
-    implementation("com.blacksquircle.ui:language-base:2.9.0")
-    implementation("com.blacksquircle.ui:language-json:2.9.0")
-    implementation("io.github.g00fy2.quickie:quickie-bundled:1.9.0")
-    implementation("com.google.zxing:core:3.5.3")
-
-    implementation("androidx.work:work-runtime-ktx:2.8.1")
-    implementation("androidx.work:work-multiprocess:2.8.1")
-
-    // Misc
-    implementation("de.hdodenhof:circleimageview:3.1.0")
-    implementation("com.kyleduo.switchbutton:library:2.1.0")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("org.jsoup:jsoup:1.17.2")
-    implementation("androidx.webkit:webkit:1.11.0")
-    implementation("org.kohsuke:github-api:1.321")
-    implementation("com.github.aakira:expandable-layout:1.6.0")
-    implementation("com.jakewharton.timber:timber:5.0.1")
-    implementation("com.google.mlkit:barcode-scanning:17.2.0")
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
 }
 
 android {
@@ -187,4 +130,61 @@ android {
 
 if (file("user.gradle").exists()) {
     apply(from = "user.gradle")
+}
+
+dependencies {
+    testImplementation("junit:junit:4.13.2")
+
+    // Include Project
+    implementation(project(":library"))
+
+    // Androidx
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    implementation("com.google.android.material:material:1.12.0")
+    implementation("androidx.cardview:cardview:1.0.0")
+    implementation("androidx.preference:preference-ktx:1.2.1")
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
+    implementation("androidx.fragment:fragment-ktx:1.7.0")
+    implementation("androidx.multidex:multidex:2.0.1")
+    implementation("androidx.viewpager2:viewpager2:1.1.0-rc01")
+
+    // Androidx ktx
+    implementation("androidx.activity:activity-ktx:1.9.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+
+    //kotlin
+    implementation("org.jetbrains.kotlin:kotlin-reflect:1.9.23")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.0")
+
+    implementation("com.tencent:mmkv-static:1.3.4")
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("io.reactivex:rxjava:1.3.8")
+    implementation("io.reactivex:rxandroid:1.2.1")
+    implementation("com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar")
+    implementation("me.drakeet.support:toastcompat:1.1.0")
+    implementation("com.blacksquircle.ui:editorkit:2.9.0")
+    implementation("com.blacksquircle.ui:language-base:2.9.0")
+    implementation("com.blacksquircle.ui:language-json:2.9.0")
+    implementation("io.github.g00fy2.quickie:quickie-bundled:1.9.0")
+    implementation("com.google.zxing:core:3.5.3")
+
+    implementation("androidx.work:work-runtime-ktx:2.8.1")
+    implementation("androidx.work:work-multiprocess:2.8.1")
+
+    // Misc
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+    implementation("com.kyleduo.switchbutton:library:2.1.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.jsoup:jsoup:1.17.2")
+    implementation("androidx.webkit:webkit:1.11.0")
+    implementation("org.kohsuke:github-api:1.321")
+    implementation("com.github.aakira:expandable-layout:1.6.0")
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.google.mlkit:barcode-scanning:17.2.0")
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
 }
