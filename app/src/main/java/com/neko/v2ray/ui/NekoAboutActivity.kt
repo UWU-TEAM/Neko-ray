@@ -8,6 +8,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.webkit.WebView
+import androidx.annotation.NonNull
 import androidx.annotation.Nullable
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
@@ -53,13 +54,14 @@ class NekoAboutActivity : BaseActivity() {
     }
 
     fun uwuUpdater(view: View) {
-        AppUpdater(this)
-            .setUpdateFrom(UpdateFrom.JSON)
-            .setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
-            .setDisplay(Display.DIALOG)
-            .showAppUpdated(true)
-            .setCancelable(false)
-            .start()
+        val appUpdater = AppUpdater(this)
+        appUpdater.setUpdateFrom(UpdateFrom.JSON)
+        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
+        appUpdater.setDisplay(Display.DIALOG)
+        appUpdater.showAppUpdated(true)
+        appUpdater.setCancelable(false)
+        appUpdater.setButtonDoNotShowAgain("")
+        appUpdater.start()
     }
 
     fun uwuRepository(view: View) {

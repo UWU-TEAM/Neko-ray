@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        version="v1.0.7"
-        versioncode="2000217"
+        date="2024-05-07"
         summary="Neko v2rayNG"
-        date="2024-04-25">
-        <change>Redesign style FloatingActionButton</change>
-        <change>style:optimize UI logic</change>
-        <change>Bump androidx.activity:activity-ktx from 1.8.2 to 1.9.0</change>
-        <change>Bump androidx.core:core-ktx from 1.12.0 to 1.13.0</change>
-        <change>update dialog in check Update App</change>
-        <change>Optimized dialog animation</change>
-        <change>Add report issue activity</change>
-        <change>Adjust UI</change>
-        <change>Update AutoMarqueeTextView</change>
-        <change>Optimized HostToIp activity</change>
-        <change>Adjust Button text color vpn dialog</change>
-        <change>Add ignore battery optimizations card</change>
-        <change>Update splash and cgange banner image</change>
-        <change>Add Auto Test and Connect Feature</change>
-        <change>Bump org.kohsuke:github-api from 1.318 to 1.321</change>
-        <change>Add dialog no internet connection</change>
-        <change>Little bug fixed</change>
+        version="v1.1.0"
+        versioncode="2000220">
+        <change>Add more language</change>
+        <change>Added feature Share configuration in backup file configuration</change>
+        <change>Added HostName Checker</change>
+        <change>Update grettings text for more language</change>
+        <change>Rule start with ext and contains geoip added to the ips</change>
+        <change>Adjust DNS hardcoded geoip:cn issue</change>
+        <change>Add attributes to grpc</change>
+        <change>Add Switchpreference routeOnly</change>
+        <change>Redesign drawer layout</change>
+        <change>Added attempt to update subscription via proxy</change>
+        <change>Change Feedback to License preference</change>
+        <change>Bump com.android.library from 8.3.2 to 8.4.0</change>
+        <change>Bump com.android.application from 8.3.2 to 8.4.0</change>
+        <change>Bump androidx.viewpager2:viewpager2 from 1.1.0-beta02 to 1.1.0-rc01</change>
+        <change>Bump androidx.core:core-ktx from 1.13.0 to 1.13.1</change>
+        <change>Bump androidx.webkit:webkit from 1.10.0 to 1.11.0</change>
+        <change>Bump androidx.fragment:fragment-ktx from 1.6.2 to 1.7.0</change>
+        <change>Bump com.google.android.material:material from 1.11.0 to 1.12.0</change>
+        <change>Bump io.github.g00fy2.quickie:quickie-bundled from 1.9.0 to 1.10.0</change>
     </release>
 </changelog>
