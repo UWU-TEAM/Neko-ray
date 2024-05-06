@@ -50,15 +50,10 @@ import java.util.concurrent.TimeUnit
 
 import android.content.Context
 import android.content.pm.PackageManager
-import android.graphics.drawable.RippleDrawable
 import android.view.View
-import android.util.AttributeSet
-import android.widget.ImageView
-import android.widget.LinearLayout
 import androidx.annotation.ColorInt
 import androidx.annotation.AttrRes
 import androidx.core.app.ActivityCompat
-import com.neko.expandable.layout.ExpandableView
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -72,7 +67,6 @@ import timber.log.Timber
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
-    private lateinit var expandableContent: ExpandableView
 
     private val adapter by lazy { MainRecyclerAdapter(this) }
     private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
@@ -100,18 +94,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
-                setOnclickDashboard(view)
             } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()
-                    setOnclickDashboard(view)
                 } else {
                     requestVpnPermission.launch(intent)
                 }
             } else {
                 startV2Ray()
-                setOnclickDashboard(view)
             }
         }
         binding.layoutTest.setOnClickListener {
@@ -185,9 +176,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 showAirplaneModeOffButtons = true // Optional
             }
         }.build()
-
-        expandableContent = findViewById(R.id.expandabledashboard_view)
-        initializeLogic()
     }
 
     private fun setupViewModel() {
@@ -844,19 +832,5 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         Timber.d("onStart")
         Timber.d("lifecycle.currentState: ${lifecycle.currentState}")
         noInternetDialogSignal?.show()
-    }
-
-    private fun setOnclickDashboard(view: View) {
-        if (expandableContent.isExpanded) {
-            expandableContent.collapse()
-            expandableContent.orientation = ExpandableView.VERTICAL
-            return
-        }
-        expandableContent.expand()
-        expandableContent.orientation = ExpandableView.VERTICAL
-    }
-
-    private fun initializeLogic() {
-        expandableContent.setExpansion(false)
     }
 }
