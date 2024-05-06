@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.ui.item
+package com.mikepenz.aboutlibraries.ui.item
 
 import android.content.Context
 import android.content.Intent
@@ -14,11 +14,10 @@ import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.neko.aboutlibraries.LibsBuilder
-import com.neko.aboutlibraries.LibsConfiguration
+import com.mikepenz.aboutlibraries.LibsBuilder
+import com.mikepenz.aboutlibraries.LibsConfiguration
 import com.neko.v2ray.R
 import com.mikepenz.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.util.*
 import com.mikepenz.aboutlibraries.util.*
 import com.mikepenz.fastadapter.items.AbstractItem
 
@@ -256,7 +255,7 @@ class LibraryItem(internal val library: Library, private val libsBuilder: LibsBu
                 card.setCardBackgroundColor(
                     it.getColor(
                         R.styleable.AboutLibraries_aboutLibrariesCardBackground,
-                        ctx.getThemeColor(R.attr.aboutLibrariesCardBackground, ctx.getSupportColor(R.color.about_libraries_card))
+                        ctx.getThemeColor(R.attr.aboutLibrariesCardBackground, ctx.getSupportColor(R.color.uwu_bg_card))
                     )
                 )
                 defaultRippleColor = card.rippleColor
@@ -275,7 +274,7 @@ class LibraryItem(internal val library: Library, private val libsBuilder: LibsBu
                         ctx.getThemeColor(R.attr.aboutLibrariesOpenSourceDivider, ctx.getSupportColor(R.color.about_libraries_dividerLight_openSource))
                     )
                 )
-                libraryVersion.setTextColor(it.getColorStateList(R.styleable.AboutLibraries_aboutLibrariesOpenSourceText))
+                libraryVersion.setTextColor(it.getColorStateList(R.styleable.AboutLibraries_aboutLibrariesOpenSourceTextVersion))
                 libraryLicense.setTextColor(it.getColorStateList(R.styleable.AboutLibraries_aboutLibrariesOpenSourceText))
             }
         }

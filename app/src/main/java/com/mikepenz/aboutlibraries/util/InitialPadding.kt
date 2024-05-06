@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.util
+package com.mikepenz.aboutlibraries.util
 
 import androidx.annotation.RestrictTo
 

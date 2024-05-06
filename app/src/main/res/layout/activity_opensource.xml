@@ -1,28 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/main_content"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        style="?toolbarStyle"
-        android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+    <com.google.android.material.appbar.AppBarLayout
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:contentInsetStart="0dp"
-        app:contentInsetStartWithNavigation="0dp"
-        app:elevation="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/frame_container"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:fitsSystemWindows="true">
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:theme="@style/Uwu.Material3.CollapsingToolbar"
+            android:id="@+id/collapsing_toolbar"
+            android:background="?attr/colorPrimary"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleGravity="center"
+            app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
+            app:extraMultilineHeightEnabled="true"
+            app:forceApplySystemWindowInsetTop="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:maxLines="3"
+            app:scrimAnimationDuration="50"
+            app:statusBarScrim="@null"
+            app:titleCollapseMode="fade"
+            app:toolbarId="@+id/toolbar">
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin" />
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        <androidx.appcompat.widget.ActionBarContextView
+            android:theme="?attr/actionModeTheme"
+            android:id="@+id/action_context_bar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:background="@drawable/uwu_background_lengkung"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <androidx.cardview.widget.CardView
+            android:paddingTop="16.0dip"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16.0dip"
+            android:layout_marginBottom="0.0dip"
+            android:layout_marginStart="16.0dip"
+            android:layout_marginEnd="16.0dip"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="28.0dip"
+            app:cardElevation="0.0dip">
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:layout_marginStart="-16.0dip"
+                android:layout_marginEnd="-16.0dip"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+                <androidx.fragment.app.FragmentContainerView
+                    android:id="@+id/frame_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0" />
+            </androidx.core.widget.NestedScrollView>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

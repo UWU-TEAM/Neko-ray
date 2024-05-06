@@ -1,10 +1,10 @@
-package com.neko.aboutlibraries.viewmodel
+package com.mikepenz.aboutlibraries.viewmodel
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.neko.aboutlibraries.Libs
-import com.neko.aboutlibraries.LibsBuilder
+import com.mikepenz.aboutlibraries.Libs
+import com.mikepenz.aboutlibraries.LibsBuilder
 
 class LibsViewModelFactory(
     private val context: Context,

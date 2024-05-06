@@ -1,16 +1,16 @@
 @file:JvmName("LibsBuilder")
 
-package com.neko.aboutlibraries
+package com.mikepenz.aboutlibraries
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.mikepenz.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.ui.LibsActivity
-import com.neko.aboutlibraries.ui.LibsSupportFragment
-import com.neko.aboutlibraries.util.SerializableLibs
-import com.neko.aboutlibraries.util.toLibs
-import com.neko.aboutlibraries.util.toSerializable
+import com.mikepenz.aboutlibraries.ui.LibsActivity
+import com.mikepenz.aboutlibraries.ui.LibsSupportFragment
+import com.mikepenz.aboutlibraries.util.SerializableLibs
+import com.mikepenz.aboutlibraries.util.toLibs
+import com.mikepenz.aboutlibraries.util.toSerializable
 import java.io.Serializable
 
 class LibsBuilder : Serializable {

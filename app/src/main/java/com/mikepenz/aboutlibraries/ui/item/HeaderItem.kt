@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.ui.item
+package com.mikepenz.aboutlibraries.ui.item
 
 import android.graphics.drawable.Drawable
 import android.text.TextUtils
@@ -10,10 +10,9 @@ import android.widget.TextView
 import androidx.core.text.HtmlCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.neko.aboutlibraries.LibsBuilder
-import com.neko.aboutlibraries.LibsConfiguration
+import com.mikepenz.aboutlibraries.LibsBuilder
+import com.mikepenz.aboutlibraries.LibsConfiguration
 import com.neko.v2ray.R
-import com.neko.aboutlibraries.util.*
 import com.mikepenz.aboutlibraries.util.*
 import com.mikepenz.fastadapter.items.AbstractItem
 

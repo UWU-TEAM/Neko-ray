@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.ui.item
+package com.mikepenz.aboutlibraries.ui.item
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

@@ -213,12 +213,13 @@
 
     <style name="AboutLibrariesStyle" parent="">
         <!-- AboutLibraries specific values -->
-        <item name="aboutLibrariesCardBackground">?colorSurface</item>
+        <item name="aboutLibrariesCardBackground">@color/uwu_bg_card</item>
         <item name="aboutLibrariesDescriptionTitle">?android:textColorPrimary</item>
         <item name="aboutLibrariesDescriptionText">?android:textColorSecondary</item>
         <item name="aboutLibrariesDescriptionDivider">@color/description_divider</item>
         <item name="aboutLibrariesOpenSourceTitle">?android:textColorPrimary</item>
         <item name="aboutLibrariesOpenSourceText">?android:textColorSecondary</item>
+        <item name="aboutLibrariesOpenSourceTextVersion">@color/colorText_ActionBar</item>
         <item name="aboutLibrariesSpecialButtonText">?android:textColorPrimary</item>
         <item name="aboutLibrariesOpenSourceDivider">@color/opensource_divider</item>
     </style>

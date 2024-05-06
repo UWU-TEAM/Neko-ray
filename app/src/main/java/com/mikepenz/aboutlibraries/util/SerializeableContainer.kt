@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.util
+package com.mikepenz.aboutlibraries.util
 
 import com.mikepenz.aboutlibraries.Libs
 import com.mikepenz.aboutlibraries.entity.Developer

@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.util
+package com.mikepenz.aboutlibraries.util
 
 import android.app.Activity
 import android.content.Context

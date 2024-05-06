@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.neko.aboutlibraries.LibsBuilder
+import com.mikepenz.aboutlibraries.LibsBuilder
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
@@ -81,6 +81,8 @@ class NekoAboutActivity : BaseActivity() {
             .withAboutVersionShown(true)
             .withAboutVersionShownName(true)
             .withAboutVersionShownCode(true)
+            .withSearchEnabled(true)
+            .withActivityTitle(getString(R.string.uwu_license_title))
             .start(this)
     }
 

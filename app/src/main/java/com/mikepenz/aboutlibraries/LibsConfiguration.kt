@@ -1,11 +1,11 @@
 @file:JvmName("LibsConfiguration")
 
-package com.neko.aboutlibraries
+package com.mikepenz.aboutlibraries
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.util.SpecialButton
+import com.mikepenz.aboutlibraries.util.SpecialButton
 
 /**
  * Util class to modify behavior of the

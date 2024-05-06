@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.ui
+package com.mikepenz.aboutlibraries.ui
 
 import android.graphics.Color
 import android.os.Bundle
@@ -9,9 +9,10 @@ import android.widget.EditText
 import com.neko.v2ray.ui.BaseActivity
 import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.Toolbar
-import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_EDGE_TO_EDGE
-import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_SEARCH_ENABLED
-import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_TITLE
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.mikepenz.aboutlibraries.LibsBuilder.Companion.BUNDLE_EDGE_TO_EDGE
+import com.mikepenz.aboutlibraries.LibsBuilder.Companion.BUNDLE_SEARCH_ENABLED
+import com.mikepenz.aboutlibraries.LibsBuilder.Companion.BUNDLE_TITLE
 import com.neko.v2ray.R
 import com.mikepenz.aboutlibraries.util.applyEdgeSystemUi
 import com.mikepenz.aboutlibraries.util.doOnApplySystemWindowInsets
@@ -48,6 +49,7 @@ open class LibsActivity : BaseActivity(), SearchView.OnQueryTextListener {
 
         // Handle Toolbar
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
 
         // Support ActionBar :D

@@ -219,7 +219,7 @@
             android:windowSoftInputMode="adjustPan"
             android:parentActivityName="com.neko.v2ray.ui.MainActivity" />
 
-        <activity android:name="com.neko.aboutlibraries.ui.LibsActivity"
+        <activity android:name="com.mikepenz.aboutlibraries.ui.LibsActivity"
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:exported="false"
             android:screenOrientation="portrait" />

@@ -1,4 +1,4 @@
-package com.neko.aboutlibraries.ui
+package com.mikepenz.aboutlibraries.ui
 
 import android.os.Bundle
 import android.util.Log
@@ -16,15 +16,15 @@ import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.mikepenz.aboutlibraries.Libs
-import com.neko.aboutlibraries.LibsBuilder
-import com.neko.aboutlibraries.LibsConfiguration
+import com.mikepenz.aboutlibraries.LibsBuilder
+import com.mikepenz.aboutlibraries.LibsConfiguration
 import com.neko.v2ray.R
-import com.neko.aboutlibraries.ui.item.LibraryItem
-import com.neko.aboutlibraries.ui.item.SimpleLibraryItem
+import com.mikepenz.aboutlibraries.ui.item.LibraryItem
+import com.mikepenz.aboutlibraries.ui.item.SimpleLibraryItem
 import com.mikepenz.aboutlibraries.util.doOnApplySystemWindowInsets
 import com.mikepenz.aboutlibraries.util.withContext
-import com.neko.aboutlibraries.viewmodel.LibsViewModel
-import com.neko.aboutlibraries.viewmodel.LibsViewModelFactory
+import com.mikepenz.aboutlibraries.viewmodel.LibsViewModel
+import com.mikepenz.aboutlibraries.viewmodel.LibsViewModelFactory
 import com.mikepenz.fastadapter.FastAdapter
 import com.mikepenz.fastadapter.GenericItem
 import com.mikepenz.fastadapter.adapters.ItemAdapter
