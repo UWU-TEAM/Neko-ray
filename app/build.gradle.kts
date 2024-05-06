@@ -171,7 +171,7 @@ dependencies {
     implementation("com.blacksquircle.ui:editorkit:2.9.0")
     implementation("com.blacksquircle.ui:language-base:2.9.0")
     implementation("com.blacksquircle.ui:language-json:2.9.0")
-    implementation("io.github.g00fy2.quickie:quickie-bundled:1.9.0")
+    implementation("io.github.g00fy2.quickie:quickie-bundled:1.10.0")
     implementation("com.google.zxing:core:3.5.3")
 
     implementation("androidx.work:work-runtime-ktx:2.8.1")
