@@ -13,6 +13,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.neko.aboutlibraries.LibsBuilder
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
@@ -42,10 +43,6 @@ class NekoAboutActivity : BaseActivity() {
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://9.234456.xyz/abc.html?t=1703789826882")))
         }
 
-        fun feedbackUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/Neko_v2rayNG/issues")))
-        }
-
         fun privacyUrl(context: Context) {
             context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/CR.md")))
         }
@@ -73,8 +70,18 @@ class NekoAboutActivity : BaseActivity() {
         promotionUrl(this)
     }
 
-    fun feedback(view: View) {
-        feedbackUrl(this)
+    fun license(view: View) {
+        LibsBuilder()
+            .withSortEnabled(true)
+            .withLicenseShown(true)
+            .withLicenseDialog(true)
+            .withVersionShown(true)
+            .withAboutIconShown(true)
+            .withAboutMinimalDesign(false)
+            .withAboutVersionShown(true)
+            .withAboutVersionShownName(true)
+            .withAboutVersionShownCode(true)
+            .start(this)
     }
 
     fun privacypolicy(view: View) {

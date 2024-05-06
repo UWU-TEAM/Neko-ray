@@ -75,7 +75,7 @@
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:onClick="feedback"
+                android:onClick="license"
                 android:layout_marginStart="4.0dip"
                 android:layout_marginEnd="4.0dip"
                 android:layout_marginTop="8.0dip"
@@ -99,23 +99,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:id="@+id/icon_uwu_feedback"
+                            android:id="@+id/icon_uwu_license"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_width="25.0dip"
                             android:layout_height="25.0dip"
-                            android:src="@drawable/ic_feedback_24dp"
+                            android:src="@drawable/uwu_ic_license"
                             app:tint="?android:textColorSecondary" />
                         <TextView
                             android:textSize="14.0sp"
-                            android:layout_below="@+id/icon_uwu_feedback"
+                            android:layout_below="@+id/icon_uwu_license"
                             android:textColor="?android:textColorPrimary"
                             android:ellipsize="end"
                             android:gravity="center"
                             android:layout_gravity="center"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="@string/uwu_feetback_title"
+                            android:text="@string/uwu_license_title"
                             android:singleLine="false" />
                     </LinearLayout>
                 </FrameLayout>

@@ -23,4 +23,9 @@
     <dimen name="air_radio_button_padding_start">@dimen/air_baseline</dimen>
     <dimen name="fab_size_normal">56dp</dimen>
     <dimen name="baseline">16dp</dimen>
+
+    <dimen name="aboutImage_openSource">72dp</dimen>
+
+    <dimen name="aboutLibraries_card_inner_padding">16dp</dimen>
+    <dimen name="aboutLibraries_card_divider_padding">8dp</dimen>
 </resources>

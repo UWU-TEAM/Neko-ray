@@ -210,4 +210,16 @@
         <item name="NoInternet_Dialog_Signal_cloudColorTwo">@drawable/ic_cloud_2</item>
         <item name="NoInternet_Dialog_Signal_cloudColorThree">@drawable/ic_cloud_3</item>
     </style>
+
+    <style name="AboutLibrariesStyle" parent="">
+        <!-- AboutLibraries specific values -->
+        <item name="aboutLibrariesCardBackground">?colorSurface</item>
+        <item name="aboutLibrariesDescriptionTitle">?android:textColorPrimary</item>
+        <item name="aboutLibrariesDescriptionText">?android:textColorSecondary</item>
+        <item name="aboutLibrariesDescriptionDivider">@color/description_divider</item>
+        <item name="aboutLibrariesOpenSourceTitle">?android:textColorPrimary</item>
+        <item name="aboutLibrariesOpenSourceText">?android:textColorSecondary</item>
+        <item name="aboutLibrariesSpecialButtonText">?android:textColorPrimary</item>
+        <item name="aboutLibrariesOpenSourceDivider">@color/opensource_divider</item>
+    </style>
 </resources>
