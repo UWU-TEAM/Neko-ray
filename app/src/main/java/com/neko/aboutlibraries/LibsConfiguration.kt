@@ -4,7 +4,7 @@ package com.neko.aboutlibraries
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.neko.aboutlibraries.entity.Library
+import com.mikepenz.aboutlibraries.entity.Library
 import com.neko.aboutlibraries.util.SpecialButton
 
 /**

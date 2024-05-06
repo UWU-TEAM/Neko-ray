@@ -15,14 +15,14 @@ import androidx.lifecycle.whenStarted
 import androidx.recyclerview.widget.DefaultItemAnimator
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.neko.aboutlibraries.Libs
+import com.mikepenz.aboutlibraries.Libs
 import com.neko.aboutlibraries.LibsBuilder
 import com.neko.aboutlibraries.LibsConfiguration
 import com.neko.v2ray.R
 import com.neko.aboutlibraries.ui.item.LibraryItem
 import com.neko.aboutlibraries.ui.item.SimpleLibraryItem
-import com.neko.aboutlibraries.util.doOnApplySystemWindowInsets
-import com.neko.aboutlibraries.util.withContext
+import com.mikepenz.aboutlibraries.util.doOnApplySystemWindowInsets
+import com.mikepenz.aboutlibraries.util.withContext
 import com.neko.aboutlibraries.viewmodel.LibsViewModel
 import com.neko.aboutlibraries.viewmodel.LibsViewModelFactory
 import com.mikepenz.fastadapter.FastAdapter

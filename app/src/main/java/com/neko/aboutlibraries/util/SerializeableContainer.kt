@@ -1,12 +1,12 @@
 package com.neko.aboutlibraries.util
 
-import com.neko.aboutlibraries.Libs
-import com.neko.aboutlibraries.entity.Developer
-import com.neko.aboutlibraries.entity.Funding
-import com.neko.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.entity.License
-import com.neko.aboutlibraries.entity.Organization
-import com.neko.aboutlibraries.entity.Scm
+import com.mikepenz.aboutlibraries.Libs
+import com.mikepenz.aboutlibraries.entity.Developer
+import com.mikepenz.aboutlibraries.entity.Funding
+import com.mikepenz.aboutlibraries.entity.Library
+import com.mikepenz.aboutlibraries.entity.License
+import com.mikepenz.aboutlibraries.entity.Organization
+import com.mikepenz.aboutlibraries.entity.Scm
 import kotlinx.collections.immutable.toImmutableList
 import kotlinx.collections.immutable.toImmutableSet
 import java.io.Serializable

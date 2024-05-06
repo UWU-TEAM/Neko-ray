@@ -5,7 +5,7 @@ package com.neko.aboutlibraries
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.neko.aboutlibraries.entity.Library
+import com.mikepenz.aboutlibraries.entity.Library
 import com.neko.aboutlibraries.ui.LibsActivity
 import com.neko.aboutlibraries.ui.LibsSupportFragment
 import com.neko.aboutlibraries.util.SerializableLibs

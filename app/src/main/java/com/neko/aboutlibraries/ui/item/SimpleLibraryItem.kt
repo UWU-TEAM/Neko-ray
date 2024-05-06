@@ -11,10 +11,10 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.neko.aboutlibraries.LibsBuilder
 import com.neko.aboutlibraries.LibsConfiguration
 import com.neko.v2ray.R
-import com.neko.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.util.htmlReadyLicenseContent
-import com.neko.aboutlibraries.util.license
-import com.neko.aboutlibraries.util.resolveStyledValue
+import com.mikepenz.aboutlibraries.entity.Library
+import com.mikepenz.aboutlibraries.util.htmlReadyLicenseContent
+import com.mikepenz.aboutlibraries.util.license
+import com.mikepenz.aboutlibraries.util.resolveStyledValue
 import com.mikepenz.fastadapter.items.AbstractItem
 
 

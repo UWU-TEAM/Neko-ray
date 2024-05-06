@@ -1,7 +1,7 @@
 package com.neko.aboutlibraries.util
 
-import com.neko.aboutlibraries.entity.Library
-import com.neko.aboutlibraries.entity.License
+import com.mikepenz.aboutlibraries.entity.Library
+import com.mikepenz.aboutlibraries.entity.License
 
 internal val Library.license: License?
     get() = licenses.firstOrNull()

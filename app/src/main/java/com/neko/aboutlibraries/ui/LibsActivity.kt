@@ -13,9 +13,9 @@ import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_EDGE_TO_EDGE
 import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_SEARCH_ENABLED
 import com.neko.aboutlibraries.LibsBuilder.Companion.BUNDLE_TITLE
 import com.neko.v2ray.R
-import com.neko.aboutlibraries.util.applyEdgeSystemUi
-import com.neko.aboutlibraries.util.doOnApplySystemWindowInsets
-import com.neko.aboutlibraries.util.getThemeColor
+import com.mikepenz.aboutlibraries.util.applyEdgeSystemUi
+import com.mikepenz.aboutlibraries.util.doOnApplySystemWindowInsets
+import com.mikepenz.aboutlibraries.util.getThemeColor
 
 
 /**
