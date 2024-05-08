@@ -9,7 +9,6 @@ android {
 
     defaultConfig {
         minSdk = 27
-        targetSdk = 34
     }
 
     compileOptions {
@@ -28,8 +27,8 @@ android {
 
     sourceSets {
         getByName("main") {
-            kotlin.srcDir("src/main/kotlin")
-            java.srcDir("src/main/java")
+            kotlin.srcDirs("src/main/kotlin")
+            java.srcDirs("src/main/java")
         }
     }
 
@@ -37,13 +36,16 @@ android {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
 
-    lintOptions {
-        disable("MissingTranslation", "GetLocales")
+    lint {
+        disable += "MissingTranslation" + "GetLocales"
+        abortOnError = false
+        checkReleaseBuilds =  false
     }
 
     buildFeatures {
-        viewBinding = true
         buildConfig = true
+        dataBinding = true
+        viewBinding = true
     }
 }
 

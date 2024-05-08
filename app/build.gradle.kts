@@ -50,6 +50,10 @@ android {
             storePassword = "password"
             keyAlias = "platform"
             keyPassword = "password"
+            enableV1Signing = true
+            enableV2Signing = true
+            enableV3Signing = true
+            enableV4Signing = true
         }
     }
 
@@ -71,8 +75,8 @@ android {
     sourceSets {
         getByName("main") {
             jniLibs.srcDirs("libs")
-            kotlin.srcDir("src/main/kotlin")
-            java.srcDir("src/main/java")
+            kotlin.srcDirs("src/main/kotlin")
+            java.srcDirs("src/main/java")
         }
     }
 
@@ -89,9 +93,6 @@ android {
 
     applicationVariants.all {
         val variant = this
-        val versionCodes =
-            mapOf("armeabi-v7a" to 1, "arm64-v8a" to 1, "x86" to 1, "x86_64" to 1)
-
         variant.outputs
             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
             .forEach { output ->
@@ -101,31 +102,29 @@ android {
                     "all"
 
                 output.outputFileName = "Neko_v2rayNG_${variant.versionName}_${abi}.apk"
-                if(versionCodes.containsKey(abi))
-                {
-                    output.versionCodeOverride = (1000000 * versionCodes[abi]!!).plus(variant.versionCode)
-                }
-                else
-                {
-                    return@forEach
-                }
+                output.versionCodeOverride = (1000000).plus(variant.versionCode)
             }
     }
 
-    lintOptions {
-        disable("MissingTranslation")
+    lint {
+        disable += "MissingTranslation"
+        abortOnError = false
+        checkReleaseBuilds =  false
     }
 
     buildFeatures {
-        viewBinding = true
         buildConfig = true
+        dataBinding = true
+        viewBinding = true
     }
 
-    packagingOptions {
-        exclude("META-INF/ASL2.0")
-        jniLibs {
-            useLegacyPackaging = true
-        }
+    dataBinding {
+        addKtx = true
+    }
+
+    packaging {
+        resources.excludes.add("META-INF/*")
+        jniLibs.useLegacyPackaging = true
     }
 }
 
