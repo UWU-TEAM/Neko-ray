@@ -368,5 +368,7 @@
     <string name="appupdater_btn_dismiss">Kaluar</string>
     <string name="appupdater_channel_name">Ngamutahirkeun béwara</string>
     <string name="uwu_host_checker">Pamariksaan host</string>
+    <string name="uwu_license_title">Lisense</string>
+    <string name="version">Versi</string>
     <!-- Neko strings -->
 </resources> 

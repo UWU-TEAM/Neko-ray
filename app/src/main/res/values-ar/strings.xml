@@ -362,5 +362,7 @@
     <string name="appupdater_btn_dismiss">رفض</string>
     <string name="appupdater_channel_name">تحديث الإخطارات</string>
     <string name="uwu_host_checker">مدقق المضيف</string>
+    <string name="uwu_license_title">رخصة</string>
+    <string name="version">إصدار</string>
     <!-- Neko strings --> 
 </resources> 

@@ -366,5 +366,7 @@
     <string name="appupdater_btn_dismiss">却下する</string>
     <string name="appupdater_channel_name">更新通知</string>
     <string name="uwu_host_checker">ホストチェッカー</string>
+    <string name="uwu_license_title">ライセンス</string>
+    <string name="version">バージョン</string>
     <!-- Neko strings --> 
 </resources> 
