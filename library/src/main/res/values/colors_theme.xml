@@ -2,7 +2,7 @@
 
 <resources>
 
-    <color name="amber_primary">#795900</color>
+    <color name="amber_primary">#FFA000</color>
     <color name="amber_onPrimary">#FFFFFF</color>
     <color name="amber_primaryContainer">#FFDF99</color>
     <color name="amber_onPrimaryContainer">#261A00</color>
@@ -191,7 +191,7 @@
     <color name="deep_purple_inverseSurface">#323033</color>
     <color name="deep_purple_primaryInverse">#D4BAFF</color>
 
-    <color name="green_primary">#006E17</color>
+    <color name="green_primary">#388E3C</color>
     <color name="green_onPrimary">#FFFFFF</color>
     <color name="green_primaryContainer">#93F990</color>
     <color name="green_onPrimaryContainer">#002203</color>
@@ -299,7 +299,7 @@
     <color name="light_green_inverseSurface">#30312D</color>
     <color name="light_green_primaryInverse">#9ED75C</color>
 
-    <color name="lime_primary">#5A6400</color>
+    <color name="lime_primary">#AFB42B</color>
     <color name="lime_onPrimary">#FFFFFF</color>
     <color name="lime_primaryContainer">#DEED49</color>
     <color name="lime_onPrimaryContainer">#1A1E00</color>
@@ -326,7 +326,7 @@
     <color name="lime_inverseSurface">#31312B</color>
     <color name="lime_primaryInverse">#C1D02C</color>
 
-    <color name="orange_primary">#8C5000</color>
+    <color name="orange_primary">#F57C00</color>
     <color name="orange_onPrimary">#FFFFFF</color>
     <color name="orange_primaryContainer">#FFDCBB</color>
     <color name="orange_onPrimaryContainer">#2D1600</color>
@@ -488,7 +488,7 @@
     <color name="violet_inverseSurface">#303034</color>
     <color name="violet_primaryInverse">#B9C3FF</color>
 
-    <color name="yellow_primary">#6A5F00</color>
+    <color name="yellow_primary">#FBC02D</color>
     <color name="yellow_onPrimary">#FFFFFF</color>
     <color name="yellow_primaryContainer">#F9E534</color>
     <color name="yellow_onPrimaryContainer">#201C00</color>
@@ -514,5 +514,32 @@
     <color name="yellow_inverseOnSurface">#F5F0E7</color>
     <color name="yellow_inverseSurface">#32302A</color>
     <color name="yellow_primaryInverse">#DBC808</color>
+
+    <color name="nekocok_background">#fffcfcfc</color>
+    <color name="nekocok_error">#ffba1b1b</color>
+    <color name="nekocok_errorContainer">#ffffdad4</color>
+    <color name="nekocok_inverseOnSurface">#EEEEEE</color>
+    <color name="nekocok_inverseSurface">#ff362f30</color>
+    <color name="nekocok_onBackground">#ff201a1b</color>
+    <color name="nekocok_onError">#ffffffff</color>
+    <color name="nekocok_onErrorContainer">#ff410001</color>
+    <color name="nekocok_onPrimary">#ffffffff</color>
+    <color name="nekocok_onPrimaryContainer">#ff400013</color>
+    <color name="nekocok_onSecondary">#ffffffff</color>
+    <color name="nekocok_onSecondaryContainer">#ff2b1519</color>
+    <color name="nekocok_onSurface">#ff201a1b</color>
+    <color name="nekocok_onSurfaceVariant">#ff524345</color>
+    <color name="nekocok_onTertiary">#ffffffff</color>
+    <color name="nekocok_onTertiaryContainer">#ff2c1700</color>
+    <color name="nekocok_outline">#ff847375</color>
+    <color name="nekocok_primary">#ff777777</color>
+    <color name="nekocok_primaryContainer">#ffbdbdbd</color>
+    <color name="nekocok_primaryInverse">#ff9e9e9e</color>
+    <color name="nekocok_secondary">#ff76565b</color>
+    <color name="nekocok_secondaryContainer">#ffbdbdbd</color>
+    <color name="nekocok_surface">#fffcfcfc</color>
+    <color name="nekocok_surfaceVariant">#E0E0E0</color>
+    <color name="nekocok_tertiary">#ff795831</color>
+    <color name="nekocok_tertiaryContainer">#B0BEC5</color>
 
 </resources>

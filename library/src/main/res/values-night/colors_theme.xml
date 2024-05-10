@@ -515,4 +515,31 @@
     <color name="yellow_inverseSurface">#E7E2D9</color>
     <color name="yellow_primaryInverse">#6A5F00</color>
 
+    <color name="nekocok_primary">#E0E0E0</color>
+    <color name="nekocok_onPrimary">#424242</color>
+    <color name="nekocok_primaryContainer">#444444</color>
+    <color name="nekocok_onPrimaryContainer">#9E9E9F</color>
+    <color name="nekocok_secondary">#757575</color>
+    <color name="nekocok_onSecondary">#43292D</color>
+    <color name="nekocok_secondaryContainer">#424242</color>
+    <color name="nekocok_onSecondaryContainer">#9E9E9E</color>
+    <color name="nekocok_tertiary">#9E9E9E</color>
+    <color name="nekocok_onTertiary">#424242</color>
+    <color name="nekocok_tertiaryContainer">#424242</color>
+    <color name="nekocok_onTertiaryContainer">#E0E0E0</color>
+    <color name="nekocok_error">#9E9E9E</color>
+    <color name="nekocok_errorContainer">#616161</color>
+    <color name="nekocok_onError">#424242</color>
+    <color name="nekocok_onErrorContainer">#BDBDBD</color>
+    <color name="nekocok_background">#201A1B</color>
+    <color name="nekocok_onBackground">#E0E0E0</color>
+    <color name="nekocok_surface">#201A1B</color>
+    <color name="nekocok_onSurface">#E0E0E0</color>
+    <color name="nekocok_surfaceVariant">#524345</color>
+    <color name="nekocok_onSurfaceVariant">#E0E0E0</color>
+    <color name="nekocok_outline">#757575</color>
+    <color name="nekocok_inverseOnSurface">#201A1B</color>
+    <color name="nekocok_inverseSurface">#E0E0E0</color>
+    <color name="nekocok_primaryInverse">#777777</color>
+
 </resources>

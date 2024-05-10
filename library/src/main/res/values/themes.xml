@@ -572,4 +572,34 @@
         <item name="colorSurfaceInverse">@color/yellow_inverseSurface</item>
         <item name="colorPrimaryInverse">@color/yellow_primaryInverse</item>
     </style>
+
+    <style name="Theme.ThemeEngine.Nekocok" parent="ThemeOverlay.Material3">
+        <item name="colorPrimary">@color/nekocok_primary</item>
+        <item name="colorPrimaryVariant">@color/nekocok_primary</item>
+        <item name="colorOnPrimary">@color/nekocok_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/nekocok_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/nekocok_onPrimaryContainer</item>
+        <item name="colorSecondary">@color/nekocok_secondary</item>
+        <item name="colorOnSecondary">@color/nekocok_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/nekocok_secondaryContainer</item>
+        <item name="colorOnSecondaryContainer">@color/nekocok_onSecondaryContainer</item>
+        <item name="colorTertiary">@color/nekocok_tertiary</item>
+        <item name="colorOnTertiary">@color/nekocok_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/nekocok_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/nekocok_onTertiaryContainer</item>
+        <item name="colorError">@color/nekocok_error</item>
+        <item name="colorErrorContainer">@color/nekocok_errorContainer</item>
+        <item name="colorOnError">@color/nekocok_onError</item>
+        <item name="colorOnErrorContainer">@color/nekocok_onErrorContainer</item>
+        <item name="android:colorBackground">@color/nekocok_background</item>
+        <item name="colorOnBackground">@color/nekocok_onBackground</item>
+        <item name="colorSurface">@color/nekocok_surface</item>
+        <item name="colorOnSurface">@color/nekocok_onSurface</item>
+        <item name="colorSurfaceVariant">@color/nekocok_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/nekocok_onSurfaceVariant</item>
+        <item name="colorOutline">@color/nekocok_outline</item>
+        <item name="colorOnSurfaceInverse">@color/nekocok_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/nekocok_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/nekocok_primaryInverse</item>
+    </style>
 </resources>

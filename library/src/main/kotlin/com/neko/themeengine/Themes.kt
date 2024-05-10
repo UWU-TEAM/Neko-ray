@@ -24,5 +24,6 @@ enum class Theme(@StyleRes val themeId: Int, @ColorRes val primaryColor: Int) {
     Red(R.style.Theme_ThemeEngine_Red, R.color.red_primary),
     Teal(R.style.Theme_ThemeEngine_Teal, R.color.teal_primary),
     Violet(R.style.Theme_ThemeEngine_Violet, R.color.violet_primary),
-    Yellow(R.style.Theme_ThemeEngine_Yellow, R.color.yellow_primary)
+    Yellow(R.style.Theme_ThemeEngine_Yellow, R.color.yellow_primary),
+    Nekocok(R.style.Theme_ThemeEngine_Nekocok, R.color.nekocok_primary)
 }
