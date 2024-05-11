@@ -19,7 +19,8 @@ import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
 import com.neko.changelog.Changelog
-import com.neko.v2ray.util.SpeedtestUtil
+import com.neko.v2ray.AppConfig
+import com.neko.v2ray.util.Utils
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.R
 
@@ -35,24 +36,6 @@ class NekoAboutActivity : BaseActivity() {
         supportFragmentManager.beginTransaction().replace(R.id.content_wrapper, NekoAboutFragment()).commit()
     }
 
-    companion object {
-        fun repositoryUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Blawuken/Neko_v2rayNG")))
-        }
-
-        fun promotionUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://9.234456.xyz/abc.html?t=1703789826882")))
-        }
-
-        fun privacyUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/CR.md")))
-        }
-
-        fun modderUrl(context: Context) {
-            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/uwuresourceguide")))
-        }
-    }
-
     fun uwuUpdater(view: View) {
         val appUpdater = AppUpdater(this)
         appUpdater.setUpdateFrom(UpdateFrom.JSON)
@@ -65,11 +48,11 @@ class NekoAboutActivity : BaseActivity() {
     }
 
     fun uwuRepository(view: View) {
-        repositoryUrl(this)
+        Utils.openUri(this, AppConfig.v2rayNGUrl)
     }
 
     fun promotion(view: View) {
-        promotionUrl(this)
+        Utils.openUri(this, AppConfig.PromotionUrl)
     }
 
     fun license(view: View) {
@@ -89,11 +72,11 @@ class NekoAboutActivity : BaseActivity() {
     }
 
     fun privacypolicy(view: View) {
-        privacyUrl(this)
+        Utils.openUri(this, AppConfig.v2rayNGPrivacyPolicy)
     }
 
     fun uwumodder(view: View) {
-        modderUrl(this)
+        Utils.openUri(this, AppConfig.TgChannelUrl)
     }
 
     fun uwuCredits(view: View) {
