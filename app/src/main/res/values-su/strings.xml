@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">DNS Doméstik (Pilihan)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
  
+    <string name="title_pref_delay_test_url">URL uji reureuh leres (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">Ngidinan sambungan tina LAN</string>
     <string name="summary_pref_proxy_sharing_enabled">Alat anu sanés tiasa nyambung ka proxy nganggo alamat ip anjeun ngalangkungan kaos kaki / http, Ngan ukur aktipkeun dina jaringan anu dipercaya pikeun nyegah sambungan anu henteu sah</string>
     <string name="toast_warning_pref_proxysharing_short">Ngidinan sambungan ti LAN, Pastikeun anjeun dina jaringan dipercaya</string>

@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">DNS Domestik (Opsi)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
 
+    <string name="title_pref_delay_test_url">Url pengujian penundaan yang sebenarnya (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+
     <string name="title_pref_proxy_sharing_enabled">Izinkan koneksi dari LAN</string>
     <string name="summary_pref_proxy_sharing_enabled">Perangkat lain dapat terhubung ke proxy dengan alamat ip Anda melalui kaus kaki/http, Hanya aktifkan di jaringan tepercaya untuk menghindari koneksi tidak sah</string>
     <string name="toast_warning_pref_proxysharing_short">Izinkan koneksi dari LAN, Pastikan Anda berada di jaringan tepercaya</string>

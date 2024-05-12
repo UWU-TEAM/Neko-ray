@@ -147,6 +147,9 @@
     <string name="title_pref_domestic_dns">DNS داخلی (اختیاری)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
  
+    <string name="title_pref_delay_test_url">آدرس اینترنتی آزمایش تاخیر واقعی (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">اتصالات از LAN را مجاز کنید</string>
     <string name="summary_pref_proxy_sharing_enabled">سایر دستگاه‌ها می‌توانند از طریق آدرس IP شما از طریق جوراب/http به پروکسی متصل شوند، فقط در شبکه قابل اعتماد فعال شود تا از اتصال غیرمجاز جلوگیری شود.</string>
     <string name="toast_warning_pref_proxysharing_short">اتصالات از LAN را مجاز کنید، مطمئن شوید که در یک شبکه قابل اعتماد هستید</string>

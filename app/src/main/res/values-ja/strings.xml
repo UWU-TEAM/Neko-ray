@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">国内DNS（オプション）</string>
     <string name="summary_pref_domestic_dns">DNS</string>
  
+    <string name="title_pref_delay_test_url">真の遅延テストの URL (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">LANからの接続を許可する</string>
     <string name="summary_pref_proxy_sharing_enabled">他のデバイスは、socks/http 経由で IP アドレスによってプロキシに接続できます。不正な接続を避けるために、信頼されたネットワークでのみ有効にしてください</string>
     <string name="toast_warning_pref_proxysharing_short">LAN からの接続を許可します。信頼されたネットワークにいることを確認してください。</string>

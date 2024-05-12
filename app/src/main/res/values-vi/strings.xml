@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">DNS trong nước (Tùy chọn)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
  
+    <string name="title_pref_delay_test_url">Url kiểm tra độ trễ thực sự (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">Cho phép kết nối từ mạng LAN</string>
     <string name="summary_pref_proxy_sharing_enabled">Các thiết bị khác có thể kết nối với proxy bằng địa chỉ IP của bạn thông qua vớ/http, Chỉ bật trong mạng đáng tin cậy để tránh kết nối trái phép</string>
     <string name="toast_warning_pref_proxysharing_short">Cho phép kết nối từ mạng LAN, Đảm bảo bạn đang ở trong một mạng đáng tin cậy</string>

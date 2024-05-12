@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">Внутренний DNS (необязательно)</string>
     <string name="summary_pref_domestic_dns">DNS</string>
  
+    <string name="title_pref_delay_test_url">URL-адрес теста истинной задержки (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">Разрешить подключения из локальной сети</string>
     <string name="summary_pref_proxy_sharing_enabled">Другие устройства могут подключаться к прокси-серверу по вашему IP-адресу через Socks/http. Включайте только в доверенной сети, чтобы избежать несанкционированного подключения.</string>
     <string name="toast_warning_pref_proxysharing_short">Разрешите подключения из локальной сети. Убедитесь, что вы находитесь в надежной сети.</string>

@@ -303,6 +303,13 @@
             android:summary="@string/summary_pref_domestic_dns"
             android:title="@string/title_pref_domestic_dns"/>
 
+        <EditTextPreference
+            android:key="pref_delay_test_url"
+            android:icon="@drawable/uwu_ic_delay"
+            android:layout="@layout/uwu_mid"
+            android:summary="@string/summary_pref_delay_test_url"
+            android:title="@string/title_pref_delay_test_url" />
+
         <ListPreference
             android:defaultValue="warning"
             android:icon="@drawable/uwu_ic_math_log"

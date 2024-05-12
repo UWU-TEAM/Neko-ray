@@ -145,6 +145,9 @@
     <string name="title_pref_domestic_dns">國內DNS（可選）</string>
     <string name="summary_pref_domestic_dns">域名系統</string>
  
+    <string name="title_pref_delay_test_url">真實延遲測試網址 (http/https)</string>
+    <string name="summary_pref_delay_test_url">Url</string>
+ 
     <string name="title_pref_proxy_sharing_enabled">允許來自 LAN 的連接</string>
     <string name="summary_pref_proxy_sharing_enabled">其他裝置可以透過socks/http透過您的IP位址連接到代理，僅在受信任的網路中啟用，以避免未經授權的連接</string>
     <string name="toast_warning_pref_proxysharing_short">允許來自 LAN 的連接，確保您位於受信任的網路中</string>
