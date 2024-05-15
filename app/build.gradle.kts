@@ -146,7 +146,7 @@ dependencies {
     implementation("androidx.recyclerview:recyclerview:1.3.2")
     implementation("androidx.fragment:fragment-ktx:1.7.0")
     implementation("androidx.multidex:multidex:2.0.1")
-    implementation("androidx.viewpager2:viewpager2:1.1.0-rc01")
+    implementation("androidx.viewpager2:viewpager2:1.1.0")
 
     // Androidx ktx
     implementation("androidx.activity:activity-ktx:1.9.0")
