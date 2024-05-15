@@ -36,7 +36,7 @@
     <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
-        android:name="com.neko.crash.App"
+        android:name=".AngApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:banner="@mipmap/ic_banner"
@@ -223,15 +223,6 @@
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:exported="false"
             android:screenOrientation="portrait" />
-
-        <activity
-            android:theme="@style/com_neko_CrashLoggerTheme"
-            android:label="CrashLogger"
-            android:name="com.neko.crash.Act"
-            android:exported="true"
-            android:excludeFromRecents="true"
-            android:configChanges="orientation|screenSize"
-            android:windowSoftInputMode="adjustResize|stateHidden"/>
 
         <service
             android:name=".service.V2RayVpnService"
