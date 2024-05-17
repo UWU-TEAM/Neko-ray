@@ -1,7 +1,11 @@
 package com.neko.v2ray.viewmodel
 
 import android.app.Application
-import android.content.*
+import android.content.BroadcastReceiver
+import android.content.Context
+import android.content.DialogInterface
+import android.content.Intent
+import android.content.IntentFilter
 import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
@@ -17,15 +21,26 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.DialogConfigFilterBinding
-import com.neko.v2ray.dto.*
+import com.neko.v2ray.dto.EConfigType
+import com.neko.v2ray.dto.ServerConfig
+import com.neko.v2ray.dto.ServersCache
+import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.util.*
+import com.neko.v2ray.util.MessageUtil
+import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.KEY_ANG_CONFIGS
-import kotlinx.coroutines.*
+import com.neko.v2ray.util.SpeedtestUtil
+import com.neko.v2ray.util.Utils
+import com.neko.v2ray.util.V2rayConfigUtil
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.launch
 import rx.Observable
 import rx.android.schedulers.AndroidSchedulers
-import java.util.*
+import java.util.Collections
 import java.util.concurrent.TimeUnit
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
@@ -137,7 +152,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun testAllTcping() {
         tcpingTestScope.coroutineContext[Job]?.cancelChildren()
         SpeedtestUtil.closeAllTcpSockets()
-        MmkvManager.clearAllTestDelayResults()
+        MmkvManager.clearAllTestDelayResults(serversCache.map { it.guid }.toList())
         updateListAction.value = -1 // update all
 
         getApplication<AngApplication>().toast(R.string.connection_test_testing)
@@ -160,7 +175,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun testAllRealPing(isAutoTest: Boolean = false) {
         MessageUtil.sendMsg2TestService(getApplication(), AppConfig.MSG_MEASURE_CONFIG_CANCEL, "")
-        MmkvManager.clearAllTestDelayResults()
+        MmkvManager.clearAllTestDelayResults(serversCache.map { it.guid }.toList())
         updateListAction.value = -1 // update all
 
         val serversCopy = serversCache.toList() // Create a copy of the list
