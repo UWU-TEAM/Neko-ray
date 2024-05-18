@@ -23,6 +23,15 @@ android {
         versionName = "1.1.0"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
+        splits.abi {
+            reset()
+            include(
+                "arm64-v8a",
+                "armeabi-v7a",
+                "x86_64",
+                "x86"
+            )
+        }
 
         val formattedDate = SimpleDateFormat("dd, MMMM yyyy").format(Date())
         val variant = this
