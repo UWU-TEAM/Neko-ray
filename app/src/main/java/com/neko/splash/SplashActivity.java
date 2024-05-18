@@ -54,7 +54,7 @@ public class SplashActivity extends BaseActivity {
                 SplashActivity.this.finish();
                 SplashActivity.this.overridePendingTransition(17432578, 17432579);
             }
-        }, 2500);
+        }, 1500);
         _Radius_ImageView((ImageView) findViewById(R.id.logo_view), 1000);
     }
 }
