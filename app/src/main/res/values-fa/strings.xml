@@ -247,23 +247,7 @@
     <string name="title_pref_fragment_length">طول قطعه (حداقل-حداکثر)</string>
     <string name="title_pref_fragment_interval">فاصله قطعه (حداقل-حداکثر)</string>
     <string name="title_pref_fragment_enabled">Fragment را فعال کنید</string>
- 
-    <string name="title_ip_scanner_setting">اسکنر IP</string>
-    <string name="title_ip_scanner">اسکنر IP</string>
-    <string name="menu_item_cancel">لغو کنید</string>
-    <string name="menu_item_copy_all_ips">همه IP ها را کپی کنید</string>
-    <string name="ip_scanner_max_latency">حداکثر تاخیر</string>
-    <string name="ip_scanner_max_ips">حداکثر آی پی ها</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">اسکن را شروع کنید</string>
-    <string name="ip_scanner_cdn_provider">ارائه دهنده CDN</string>
-    <string name="ip_scanner_clean_ips">پاک کردن آی پی ها</string>
-    <string name="ip_scanner_testing">تست IP ها</string>
-    <string name="ip_scanner_preparing">آماده سازی IP ها</string>
-    <string name="ip_scanner_selected_config">پیکربندی انتخاب شده است</string>
-    <string name="ip_scanner_no_valid_config_is_selected">هیچ پیکربندی انتخاب نشده است!</string>
- 
+
     <!-- Neko strings --> 
     <string name="title_theme_settings">تنظیمات پوسته</string>
     <string name="title_choose_theme">تم رنگی را انتخاب کنید</string>

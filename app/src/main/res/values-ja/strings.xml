@@ -245,23 +245,7 @@
     <string name="title_pref_fragment_length">フラグメントの長さ (最小-最大)</string>
     <string name="title_pref_fragment_interval">フラグメント間隔 (最小-最大)</string>
     <string name="title_pref_fragment_enabled">フラグメントを有効にする</string>
- 
-    <string name="title_ip_scanner_setting">IPスキャナー</string>
-    <string name="title_ip_scanner">IPスキャナー</string>
-    <string name="menu_item_cancel">キャンセル</string>
-    <string name="menu_item_copy_all_ips">すべての IP をコピー</string>
-    <string name="ip_scanner_max_latency">最大。レイテンシ</string>
-    <string name="ip_scanner_max_ips">最大。 IP</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">スキャン開始</string>
-    <string name="ip_scanner_cdn_provider">CDNプロバイダー</string>
-    <string name="ip_scanner_clean_ips">クリーン IP</string>
-    <string name="ip_scanner_testing">IPのテスト</string>
-    <string name="ip_scanner_preparing">IPの準備</string>
-    <string name="ip_scanner_selected_config">選択した構成</string>
-    <string name="ip_scanner_no_valid_config_is_selected">構成が選択されていません!</string>
- 
+
     <!-- Neko strings --> 
     <string name="title_theme_settings">テーマ設定</string>
     <string name="title_choose_theme">カラーテーマの選択</string>

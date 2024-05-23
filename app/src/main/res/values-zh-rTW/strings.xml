@@ -245,23 +245,7 @@
     <string name="title_pref_fragment_length">片段長度（最小-最大）</string>
     <string name="title_pref_fragment_interval">片段間隔（最小-最大）</string>
     <string name="title_pref_fragment_enabled">啟用片段</string>
- 
-    <string name="title_ip_scanner_setting">IP掃描儀</string>
-    <string name="title_ip_scanner">IP掃描儀</string>
-    <string name="menu_item_cancel">取消</string>
-    <string name="menu_item_copy_all_ips">複製所有IP</string>
-    <string name="ip_scanner_max_latency">最大限度。潛伏</string>
-    <string name="ip_scanner_max_ips">最大限度。智慧財產</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">開始掃描</string>
-    <string name="ip_scanner_cdn_provider">CDN提供者</string>
-    <string name="ip_scanner_clean_ips">乾淨的IP</string>
-    <string name="ip_scanner_testing">測試IP</string>
-    <string name="ip_scanner_preparing">準備IP</string>
-    <string name="ip_scanner_selected_config">選定的配置</string>
-    <string name="ip_scanner_no_valid_config_is_selected">未選擇配置！</string>
- 
+
     <!-- Neko strings --> 
     <string name="title_theme_settings">主題設定</string>
     <string name="title_choose_theme">選擇顏色主題</string>

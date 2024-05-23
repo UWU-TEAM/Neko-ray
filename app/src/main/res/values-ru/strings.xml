@@ -246,22 +246,6 @@
     <string name="title_pref_fragment_interval">Интервал фрагмента (мин-макс)</string>
     <string name="title_pref_fragment_enabled">Включить фрагмент</string>
  
-    <string name="title_ip_scanner_setting">IP-сканер</string>
-    <string name="title_ip_scanner">IP-сканер</string>
-    <string name="menu_item_cancel">Отмена</string>
-    <string name="menu_item_copy_all_ips">Скопировать все IP-адреса</string>
-    <string name="ip_scanner_max_latency">Макс. Задержка</string>
-    <string name="ip_scanner_max_ips">Макс. IP-адреса</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">Начать сканирование</string>
-    <string name="ip_scanner_cdn_provider">CDN-провайдер</string>
-    <string name="ip_scanner_clean_ips">Чистые IP-адреса</string>
-    <string name="ip_scanner_testing">Тестирование IP-адресов</string>
-    <string name="ip_scanner_preparing">Подготовка IP-адресов</string>
-    <string name="ip_scanner_selected_config">Выбранная конфигурация</string>
-    <string name="ip_scanner_no_valid_config_is_selected">Конфигурация не выбрана!</string>
- 
     <!-- Neko strings --> 
     <string name="title_theme_settings">Настройки темы</string>
     <string name="title_choose_theme">Выберите цветовую тему</string>

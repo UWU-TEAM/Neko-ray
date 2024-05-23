@@ -113,14 +113,7 @@
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name=".ui.UserAssetUrlActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:theme="@style/AppThemeDayNight.NoActionBar"
-            android:exported="false"
-            android:name=".ui.IpScannerSettingsActivity" />
-        <activity
-            android:theme="@style/AppThemeDayNight.NoActionBar"
-            android:exported="false"
-            android:name=".ui.IpScannerActivity" />
+
         <activity
             android:exported="false"
             android:theme="@style/AppThemeDayNight.NoActionBar"

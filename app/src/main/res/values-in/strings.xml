@@ -246,22 +246,6 @@
     <string name="title_pref_fragment_interval">Interval Fragmen (min-maks)</string>
     <string name="title_pref_fragment_enabled">Aktifkan Fragmen</string>
 
-    <string name="title_ip_scanner_setting">Pemindai IP</string>
-    <string name="title_ip_scanner">Pemindai IP</string>
-    <string name="menu_item_cancel">Batal</string>
-    <string name="menu_item_copy_all_ips">Salin Semua IP</string>
-    <string name="ip_scanner_max_latency">Maks. Latensi</string>
-    <string name="ip_scanner_max_ips">Maks. IP</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">Mulai Pemindaian</string>
-    <string name="ip_scanner_cdn_provider">Penyedia CDN</string>
-    <string name="ip_scanner_clean_ips">IP Bersih</string>
-    <string name="ip_scanner_testing">Pengujian IP</string>
-    <string name="ip_scanner_preparing">Mempersiapkan IP</string>
-    <string name="ip_scanner_selected_config">Config yang Terpilih</string>
-    <string name="ip_scanner_no_valid_config_is_selected">Tidak ada Config yang dipilih!</string>
-
     <!-- Neko strings -->
     <string name="title_theme_settings">Pengaturan Tema</string>
     <string name="title_choose_theme">Pilih Warna Tema</string>

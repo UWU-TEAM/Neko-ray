@@ -787,10 +787,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         startActivity(Intent(this, IpLocation::class.java))
     }
 
-    fun uwuIPS(view: View) {
-        startActivity(Intent(this, IpScannerSettingsActivity::class.java))
-    }
-
     fun uwuBackupConfig(view: View) {
         startActivity(Intent(this, NekoBackupActivity::class.java))
     }

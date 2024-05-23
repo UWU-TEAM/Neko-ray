@@ -245,23 +245,7 @@
     <string name="title_pref_fragment_length">طول القطعة (الحد الأدنى والحد الأقصى)</string>
     <string name="title_pref_fragment_interval">الفاصل الزمني للجزء (الحد الأدنى والحد الأقصى)</string>
     <string name="title_pref_fragment_enabled">تمكين جزء</string>
- 
-    <string name="title_ip_scanner_setting">ماسح IP</string>
-    <string name="title_ip_scanner">ماسح IP</string>
-    <string name="menu_item_cancel">يلغي</string>
-    <string name="menu_item_copy_all_ips">انسخ جميع عناوين IP</string>
-    <string name="ip_scanner_max_latency">الأعلى. وقت الإستجابة</string>
-    <string name="ip_scanner_max_ips">الأعلى. عناوين IP</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">ابدأ المسح</string>
-    <string name="ip_scanner_cdn_provider">مزود CDN</string>
-    <string name="ip_scanner_clean_ips">عناوين IP النظيفة</string>
-    <string name="ip_scanner_testing">اختبار عناوين IP</string>
-    <string name="ip_scanner_preparing">إعداد عناوين IP</string>
-    <string name="ip_scanner_selected_config">التكوين المحدد</string>
-    <string name="ip_scanner_no_valid_config_is_selected">لم يتم تحديد التكوين!</string>
- 
+
     <!-- Neko strings --> 
     <string name="title_theme_settings">إعدادات الموضوع</string>
     <string name="title_choose_theme">اختر سمة اللون</string>

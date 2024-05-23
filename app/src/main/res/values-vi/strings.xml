@@ -245,23 +245,7 @@
     <string name="title_pref_fragment_length">Độ dài đoạn (tối thiểu-tối đa)</string>
     <string name="title_pref_fragment_interval">Khoảng thời gian phân đoạn (tối thiểu-tối đa)</string>
     <string name="title_pref_fragment_enabled">Kích hoạt mảnh</string>
- 
-    <string name="title_ip_scanner_setting">Máy quét IP</string>
-    <string name="title_ip_scanner">Máy quét IP</string>
-    <string name="menu_item_cancel">Hủy bỏ</string>
-    <string name="menu_item_copy_all_ips">Sao chép tất cả IP</string>
-    <string name="ip_scanner_max_latency">Tối đa. Độ trễ</string>
-    <string name="ip_scanner_max_ips">Tối đa. IP</string>
-    <string name="ip_scanner_max_ips_default">5</string>
-    <string name="ip_scanner_max_latency_default">700</string>
-    <string name="menu_item_start_scan">Bắt đầu quét</string>
-    <string name="ip_scanner_cdn_provider">Nhà cung cấp CDN</string>
-    <string name="ip_scanner_clean_ips">IP sạch</string>
-    <string name="ip_scanner_testing">Kiểm tra IP</string>
-    <string name="ip_scanner_preparing">Đang chuẩn bị IP</string>
-    <string name="ip_scanner_selected_config">Cấu hình đã chọn</string>
-    <string name="ip_scanner_no_valid_config_is_selected">Không có cấu hình nào được chọn!</string>
- 
+
     <!-- Neko strings --> 
     <string name="title_theme_settings">Cài đặt chủ đề</string>
     <string name="title_choose_theme">Chọn chủ đề màu</string>
