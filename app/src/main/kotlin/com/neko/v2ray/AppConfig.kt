@@ -137,4 +137,7 @@ object AppConfig {
     const val MSG_MEASURE_IP_TESTING = 82
     const val MSG_MEASURE_IP_CANCEL = 83
     const val MSG_MEASURE_IP_CANCELED = 84
+    const val MSG_MEASURE_FRAGMENT = 8
+    const val MSG_MEASURE_FRAGMENT_SUCCESS = 81
+    const val MSG_MEASURE_FRAGMENT_CANCEL = 82
 }
