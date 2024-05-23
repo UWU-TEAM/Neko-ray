@@ -498,7 +498,7 @@
                                 android:gravity="left"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="@string/air_title_report_issue"
+                                android:text="@string/title_pref_feedback"
                                 android:layout_weight="1.0" />
                             <ImageView
                                 android:background="@drawable/uwu_bg_circle_arrow"

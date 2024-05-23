@@ -319,37 +319,6 @@
     <string name="airplane_mode">Mode pesawat</string>
     <string name="default_airplane_mode_message">Anda telah mengaktifkan mode pesawat.</string>
     
-    <string name="air_title_report_issue">Laporkan masalah</string>
-    <string name="air_title_issue">Masalah</string>
-    <string name="air_title_login">Login</string>
-    <string name="air_label_issue_title">Judul</string>
-    <string name="air_label_issue_description">Deskripsi</string>
-    <string name="air_label_device_info">Info perangkat</string>
-    <string name="air_label_use_account">Kirim menggunakan akun GitHub</string>
-    <string name="air_label_use_email">Kirim menggunakan E-mail</string>
-    <string name="air_label_use_guest">Kirim secara anonim</string>
-    <string name="air_label_username">Nama Pengguna</string>
-    <string name="air_label_password">Kata Sandi</string>
-    <string name="air_label_email">E-mail</string>
-    <string name="air_label_email_optional">E-mail (Opsi)</string>
-    <string name="air_error_no_title">Silakan masukkan judul terbitan</string>
-    <string name="air_error_no_description">Silakan masukkan deskripsi masalah</string>
-    <plurals name="air_error_short_description">
-        <item quantity="one">Deskripsi harus memiliki setidaknya %d karakter</item>
-        <item quantity="other">Deskripsi harus memiliki setidaknya %d karakter</item>
-    </plurals>
-    <string name="air_error_no_username">Masukkan nama pengguna GitHub Anda yang valid</string>
-    <string name="air_error_no_password">Masukkan kata sandi GitHub Anda yang valid</string>
-    <string name="air_error_no_email">Silakan masukkan alamat email</string>
-    <string name="air_dialog_title_loading">Mengunggah laporan ke GitHub…</string>
-    <string name="air_dialog_title_failed">Tidak dapat mengirim laporan</string>
-    <string name="air_dialog_description_failed_wrong_credentials">Nama pengguna atau kata sandi salah</string>
-    <string name="air_dialog_description_failed_invalid_token">Token akses tidak valid. Silakan hubungi pengembang aplikasi.</string>
-    <string name="air_dialog_description_failed_issues_not_available">Masalah tidak diaktifkan untuk repositori yang dipilih. Silakan hubungi pengembang aplikasi.</string>
-    <string name="air_dialog_description_failed_unknown">Terjadi kesalahan yang tidak terduga. Silakan hubungi pengembang aplikasi.</string>
-    <string name="air_dialog_action_failed">OK</string>
-    <string name="air_title_login_github_notes"><b>Catatan:</b> Otentikasi dua faktor tidak didukung.</string>
-
     <!-- Battery widget -->
     <string name="homepage_widget_battery_percent">persen</string>
     <string name="homepage_widget_battery_charge">Mengisi daya</string>

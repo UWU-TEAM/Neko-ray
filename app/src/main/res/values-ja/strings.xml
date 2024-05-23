@@ -319,37 +319,6 @@
     <string name="airplane_mode">機内モード</string>
     <string name="default_airplane_mode_message">機内モードがオンになりました。</string>
      
-    <string name="air_title_report_issue">問題を報告する</string>
-    <string name="air_title_issue">問題</string>
-    <string name="air_title_login">ログイン</string>
-    <string name="air_label_issue_title">タイトル</string>
-    <string name="air_label_issue_description">説明</string>
-    <string name="air_label_device_info">デバイス情報</string>
-    <string name="air_label_use_account">GitHub アカウントを使用して送信する</string>
-    <string name="air_label_use_email">電子メールを使用して送信する</string>
-    <string name="air_label_use_guest">匿名で送信</string>
-    <string name="air_label_username">ユーザー名</string>
-    <string name="air_label_password">パスワード</string>
-    <string name="air_label_email">Eメール</string>
-    <string name="air_label_email_optional">電子メール (オプション)</string>
-    <string name="air_error_no_title">問題のタイトルを入力してください</string>
-    <string name="air_error_no_description">問題の説明を入力してください</string>
-    <plurals name="air_error_short_description"> 
-        <item quantity="one">説明には少なくとも %d 文字が必要です</item> 
-        <item quantity="other">説明には少なくとも %d 文字が必要です</item> 
-    </plurals> 
-    <string name="air_error_no_username">有効な GitHub ユーザー名を入力してください</string>
-    <string name="air_error_no_password">有効な GitHub パスワードを入力してください</string>
-    <string name="air_error_no_email">メールアドレスを入力してください</string>
-    <string name="air_dialog_title_loading">レポートを GitHub にアップロードしています…</string>
-    <string name="air_dialog_title_failed">レポートを送信できません</string>
-    <string name="air_dialog_description_failed_wrong_credentials">間違ったユーザー名またはパスワード</string>
-    <string name="air_dialog_description_failed_invalid_token">無効なアクセストークンです。アプリ開発者にお問い合わせください。</string>
-    <string name="air_dialog_description_failed_issues_not_available">選択したリポジトリでは問題が有効になっていません。アプリ開発者にお問い合わせください。</string>
-    <string name="air_dialog_description_failed_unknown">予期しないエラーが発生しました。アプリ開発者にお問い合わせください。</string>
-    <string name="air_dialog_action_failed">わかりました</string>
-    <string name="air_title_login_github_notes"><b>注:</b> 2 要素認証はサポートされていません。</string>
-     
     <string name="homepage_widget_battery_percent">パーセント</string>
     <string name="homepage_widget_battery_charge">充電</string>
     <string name="homepage_widget_battery_discharge">放電中</string>

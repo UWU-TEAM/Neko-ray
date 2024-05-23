@@ -319,33 +319,6 @@
     <string name="airplane_mode">وضع الطيران</string>
     <string name="default_airplane_mode_message">لقد قمت بتشغيل وضع الطائرة.</string>
      
-    <string name="air_title_report_issue">قضية تقرير</string>
-    <string name="air_title_issue">مشكلة</string>
-    <string name="air_title_login">تسجيل الدخول</string>
-    <string name="air_label_issue_title">عنوان</string>
-    <string name="air_label_issue_description">وصف</string>
-    <string name="air_label_device_info">معلومات الجهاز</string>
-    <string name="air_label_use_account">أرسل باستخدام حساب GitHub</string>
-    <string name="air_label_use_email">إرسال باستخدام البريد الإلكتروني</string>
-    <string name="air_label_use_guest">إرسال مجهول</string>
-    <string name="air_label_username">اسم المستخدم</string>
-    <string name="air_label_password">كلمة المرور</string>
-    <string name="air_label_email">بريد إلكتروني</string>
-    <string name="air_label_email_optional">البريد الإلكتروني اختياري)</string>
-    <string name="air_error_no_title">الرجاء إدخال عنوان المشكلة</string>
-    <string name="air_error_no_description">الرجاء إدخال وصف المشكلة</string>
-    <string name="air_error_no_username">الرجاء إدخال اسم مستخدم GitHub الصحيح الخاص بك</string>
-    <string name="air_error_no_password">الرجاء إدخال كلمة مرور GitHub الصالحة</string>
-    <string name="air_error_no_email">الرجاء إدخال عنوان البريد الإلكتروني</string>
-    <string name="air_dialog_title_loading">جارٍ تحميل التقرير إلى GitHub...</string>
-    <string name="air_dialog_title_failed">غير قادر على إرسال التقرير</string>
-    <string name="air_dialog_description_failed_wrong_credentials">اسم المستخدم أو كلمة المرور خاطئة</string>
-    <string name="air_dialog_description_failed_invalid_token">تصريح الدخول غير صالح. يرجى الاتصال بمطور التطبيق.</string>
-    <string name="air_dialog_description_failed_issues_not_available">لم يتم تمكين المشكلات للمستودع المحدد. يرجى الاتصال بمطور التطبيق.</string>
-    <string name="air_dialog_description_failed_unknown">حدث خطأ غير متوقع. يرجى الاتصال بمطور التطبيق.</string>
-    <string name="air_dialog_action_failed">نعم</string>
-    <string name="air_title_login_github_notes"><b>ملاحظات:</b> لا يتم دعم المصادقة الثنائية.</string>
-     
     <string name="homepage_widget_battery_percent">نسبه مئويه</string>
     <string name="homepage_widget_battery_charge">الشحن</string>
     <string name="homepage_widget_battery_discharge">التفريغ</string>

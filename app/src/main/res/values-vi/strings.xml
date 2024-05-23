@@ -319,37 +319,6 @@
     <string name="airplane_mode">Chế độ máy bay</string>
     <string name="default_airplane_mode_message">Bạn đã bật chế độ máy bay.</string>
      
-    <string name="air_title_report_issue">Báo cáo phát hành</string>
-    <string name="air_title_issue">Vấn đề</string>
-    <string name="air_title_login">Đăng nhập</string>
-    <string name="air_label_issue_title">Tiêu đề</string>
-    <string name="air_label_issue_description">Sự miêu tả</string>
-    <string name="air_label_device_info">Thông tin thiết bị</string>
-    <string name="air_label_use_account">Gửi bằng tài khoản GitHub</string>
-    <string name="air_label_use_email">Gửi bằng E-mail</string>
-    <string name="air_label_use_guest">Gửi ẩn danh</string>
-    <string name="air_label_username">tên tài khoản</string>
-    <string name="air_label_password">Mật khẩu</string>
-    <string name="air_label_email">E-mail</string>
-    <string name="air_label_email_optional">Email (tùy chọn)</string>
-    <string name="air_error_no_title">Vui lòng nhập tiêu đề vấn đề</string>
-    <string name="air_error_no_description">Vui lòng nhập mô tả vấn đề</string>
-    <plurals name="air_error_short_description"> 
-        <item quantity="one">Mô tả phải có ít nhất %d ký tự</item> 
-        <item quantity="other">Mô tả phải có ít nhất %d ký tự</item> 
-    </plurals> 
-    <string name="air_error_no_username">Vui lòng nhập tên người dùng GitHub hợp lệ của bạn</string>
-    <string name="air_error_no_password">Vui lòng nhập mật khẩu GitHub hợp lệ của bạn</string>
-    <string name="air_error_no_email">Vui lòng nhập địa chỉ email</string>
-    <string name="air_dialog_title_loading">Đang tải báo cáo lên GitHub…</string>
-    <string name="air_dialog_title_failed">Không thể gửi báo cáo</string>
-    <string name="air_dialog_description_failed_wrong_credentials">Tên người dùng hoặc mật khẩu sai</string>
-    <string name="air_dialog_description_failed_invalid_token">Mã thông báo truy cập không hợp lệ. Vui lòng liên hệ với nhà phát triển ứng dụng.</string>
-    <string name="air_dialog_description_failed_issues_not_available">Sự cố không được kích hoạt cho kho lưu trữ đã chọn. Vui lòng liên hệ với nhà phát triển ứng dụng.</string>
-    <string name="air_dialog_description_failed_unknown">Đã xảy ra lỗi không mong muốn. Vui lòng liên hệ với nhà phát triển ứng dụng.</string>
-    <string name="air_dialog_action_failed">ĐƯỢC RỒI</string>
-    <string name="air_title_login_github_notes"><b>Lưu ý:</b> Xác thực hai yếu tố không được hỗ trợ.</string>
-     
     <string name="homepage_widget_battery_percent">phần trăm</string>
     <string name="homepage_widget_battery_charge">Sạc</string>
     <string name="homepage_widget_battery_discharge">Xả</string>

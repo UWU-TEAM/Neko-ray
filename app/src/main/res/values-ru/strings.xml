@@ -319,33 +319,6 @@
     <string name="airplane_mode">Авиа режим</string>
     <string name="default_airplane_mode_message">Вы включили режим полета.</string>
      
-    <string name="air_title_report_issue">Сообщить о проблеме</string>
-    <string name="air_title_issue">Проблема</string>
-    <string name="air_title_login">Авторизоваться</string>
-    <string name="air_label_issue_title">Заголовок</string>
-    <string name="air_label_issue_description">Описание</string>
-    <string name="air_label_device_info">Информация об устройстве</string>
-    <string name="air_label_use_account">Отправить, используя учетную запись GitHub</string>
-    <string name="air_label_use_email">Отправить по электронной почте</string>
-    <string name="air_label_use_guest">Отправить анонимно</string>
-    <string name="air_label_username">Имя пользователя</string>
-    <string name="air_label_password">Пароль</string>
-    <string name="air_label_email">Электронная почта</string>
-    <string name="air_label_email_optional">Электронная почта (необязательно)</string>
-    <string name="air_error_no_title">Пожалуйста, введите название проблемы</string>
-    <string name="air_error_no_description">Введите описание проблемы</string>
-    <string name="air_error_no_username">Пожалуйста, введите свое действительное имя пользователя GitHub.</string>
-    <string name="air_error_no_password">Пожалуйста, введите действительный пароль GitHub</string>
-    <string name="air_error_no_email">Пожалуйста, введите адрес электронной почты</string>
-    <string name="air_dialog_title_loading">Загрузка отчета на GitHub…</string>
-    <string name="air_dialog_title_failed">Невозможно отправить отчет</string>
-    <string name="air_dialog_description_failed_wrong_credentials">Неверное имя пользователя или пароль</string>
-    <string name="air_dialog_description_failed_invalid_token">Недопустимый маркер доступа. Пожалуйста, свяжитесь с разработчиком приложения.</string>
-    <string name="air_dialog_description_failed_issues_not_available">Проблемы не включены для выбранного репозитория. Пожалуйста, свяжитесь с разработчиком приложения.</string>
-    <string name="air_dialog_description_failed_unknown">Произошла непредвиденная ошибка. Пожалуйста, свяжитесь с разработчиком приложения.</string>
-    <string name="air_dialog_action_failed">ХОРОШО</string>
-    <string name="air_title_login_github_notes"><b>Примечания</b>. Двухфакторная аутентификация не поддерживается.</string>
-     
     <string name="homepage_widget_battery_percent">процент</string>
     <string name="homepage_widget_battery_charge">Зарядка</string>
     <string name="homepage_widget_battery_discharge">Разгрузка</string>

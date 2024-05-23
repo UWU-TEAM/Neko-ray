@@ -792,7 +792,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     fun uwuReportIssue(view: View) {
-        startActivity(Intent(this, NekoReporterActivity::class.java))
+        Utils.openUri(this, AppConfig.v2rayNGIssues)
     }
 
     fun uwuExitApp(view: View) {

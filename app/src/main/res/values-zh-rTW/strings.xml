@@ -319,37 +319,6 @@
     <string name="airplane_mode">飛航模式</string>
     <string name="default_airplane_mode_message">您已開啟飛航模式。</string>
      
-    <string name="air_title_report_issue">報告問題</string>
-    <string name="air_title_issue">問題</string>
-    <string name="air_title_login">登入</string>
-    <string name="air_label_issue_title">標題</string>
-    <string name="air_label_issue_description">描述</string>
-    <string name="air_label_device_info">設備資訊</string>
-    <string name="air_label_use_account">使用 GitHub 帳戶傳送</string>
-    <string name="air_label_use_email">使用電子郵件發送</string>
-    <string name="air_label_use_guest">匿名發送</string>
-    <string name="air_label_username">使用者名稱</string>
-    <string name="air_label_password">密碼</string>
-    <string name="air_label_email">電子郵件</string>
-    <string name="air_label_email_optional">電子郵件（可選）</string>
-    <string name="air_error_no_title">請輸入問題標題</string>
-    <string name="air_error_no_description">請輸入問題描述</string>
-    <plurals name="air_error_short_description"> 
-        <item quantity="one">描述必須至少有 %d 個字符</item> 
-        <item quantity="other">描述必須至少有 %d 個字符</item> 
-    </plurals> 
-    <string name="air_error_no_username">請輸入您的有效 GitHub 使用者名稱</string>
-    <string name="air_error_no_password">請輸入您的有效 GitHub 密碼</string>
-    <string name="air_error_no_email">請輸入電子郵件地址</string>
-    <string name="air_dialog_title_loading">正在將報告上傳到 GitHub...</string>
-    <string name="air_dialog_title_failed">無法發送報告</string>
-    <string name="air_dialog_description_failed_wrong_credentials">錯誤的使用者名稱或密碼</string>
-    <string name="air_dialog_description_failed_invalid_token">無效的訪問令牌。請聯絡應用程式開發者。</string>
-    <string name="air_dialog_description_failed_issues_not_available">未針對所選存儲庫啟用問題。請聯絡應用程式開發者。</string>
-    <string name="air_dialog_description_failed_unknown">一個意料之外的問題發生了。請聯絡應用程式開發者。</string>
-    <string name="air_dialog_action_failed">好的</string>
-    <string name="air_title_login_github_notes"><b>注意：</b>不支援兩因素身份驗證。</string>
-     
     <string name="homepage_widget_battery_percent">百分</string>
     <string name="homepage_widget_battery_charge">收費</string>
     <string name="homepage_widget_battery_discharge">放電</string>
