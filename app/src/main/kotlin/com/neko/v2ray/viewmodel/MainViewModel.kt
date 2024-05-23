@@ -25,8 +25,6 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.ServersCache
 import com.neko.v2ray.dto.V2rayConfig
-import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.FragmentBean
-import com.neko.v2ray.dto.FragmentsCache
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.MessageUtil
@@ -70,7 +68,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     var keywordFilter: String = settingsStorage.decodeString(AppConfig.CACHE_KEYWORD_FILTER, "")!!
         private set
     val serversCache = mutableListOf<ServersCache>()
-    val fragmentsCache = mutableListOf<FragmentsCache>()
     val isRunning by lazy { MutableLiveData<Boolean>() }
     val updateListAction by lazy { MutableLiveData<Int>() }
     val updateTestResultAction by lazy { MutableLiveData<String>() }
@@ -197,82 +194,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     )
                 }
             }
-        }
-    }
-
-    fun findBestFragmentSettings() {
-        MessageUtil.sendMsg2TestService(getApplication(), AppConfig.MSG_MEASURE_FRAGMENT_CANCEL, "")
-
-        val guid = mainStorage.decodeString(MmkvManager.KEY_SELECTED_SERVER) ?: ""
-        val config = MmkvManager.decodeServerConfig(guid)
-        if (config?.configType == EConfigType.VLESS || config?.configType == EConfigType.VMESS) {
-            if (config.outboundBean?.streamSettings?.security == "tls") {
-                getApplication<AngApplication>().toast(R.string.fragment_test_started)
-                val prefFragmentEnabled = settingsStorage.decodeBool(AppConfig.PREF_FRAGMENT_ENABLED, false)
-                settingsStorage.putBoolean(AppConfig.PREF_FRAGMENT_ENABLED, false)
-                val configJson = V2rayConfigUtil.getV2rayConfig(getApplication(), guid).content
-                fragmentsCache.clear()
-                fragmentsCache.add(FragmentsCache(FragmentBean("")))
-                for (length in arrayOf(5, 7, 10, 12, 15, 20, 25, 30, 50)) {
-                    for (interval in arrayOf(2, 3, 5, 7, 10, 12, 15, 20, 30)) {
-                        fragmentsCache.add(FragmentsCache(FragmentBean(
-                            "tlshello",
-                            "${length}-${length * 2}",
-                            "${interval}-${interval * 2}",
-                        )))
-                    }
-                }
-                viewModelScope.launch(Dispatchers.Default) { // without Dispatchers.Default viewModelScope will launch in main thread
-                    for ((index, item) in fragmentsCache.withIndex()) {
-                        val v2rayConfig = Gson().fromJson(configJson, V2rayConfig::class.java)
-                        if (index > 0) {
-                            V2rayConfigUtil.updateOutboundFragment(v2rayConfig, item.fragmentBean)
-                        }
-                        MessageUtil.sendMsg2TestService(
-                            getApplication(),
-                            AppConfig.MSG_MEASURE_FRAGMENT,
-                            Pair(index, v2rayConfig.toPrettyPrinting())
-                        )
-                    }
-                }
-                settingsStorage.putBoolean(AppConfig.PREF_FRAGMENT_ENABLED, prefFragmentEnabled)
-                return
-            }
-        }
-        getApplication<AngApplication>().toast(R.string.error_select_a_tls_config)
-    }
-
-    fun checkAndSetBestFragmentSettings() {
-        if (fragmentsCache.any { it.ping == -2L }) {
-            return
-        }
-
-        var maxPing = 0L
-        var bestFragmentBean: FragmentBean? = null
-
-        for (item in fragmentsCache) {
-            if (item.ping < 0) {
-                continue
-            }
-
-            if (maxPing == 0L || item.ping < maxPing) {
-                maxPing = item.ping
-                bestFragmentBean = item.fragmentBean
-            }
-        }
-
-        if (maxPing > 0L) {
-            if (bestFragmentBean?.packets.isNullOrEmpty()) {
-                settingsStorage.putBoolean(AppConfig.PREF_FRAGMENT_ENABLED, false)
-            } else {
-                settingsStorage.putString(AppConfig.PREF_FRAGMENT_PACKETS, bestFragmentBean?.packets)
-                settingsStorage.putString(AppConfig.PREF_FRAGMENT_LENGTH, bestFragmentBean?.length)
-                settingsStorage.putString(AppConfig.PREF_FRAGMENT_INTERVAL, bestFragmentBean?.interval)
-                settingsStorage.putBoolean(AppConfig.PREF_FRAGMENT_ENABLED, true)
-            }
-            getApplication<AngApplication>().toast(R.string.fragment_test_done)
-        } else {
-            getApplication<AngApplication>().toast(R.string.fragment_test_failed)
         }
     }
 
@@ -427,12 +348,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 AppConfig.MSG_AUTO_TEST_ALL_REAL_PING -> {
                     isWaitingForAutoConnect = true
                     testAllRealPing(true)
-                }
-
-                AppConfig.MSG_MEASURE_FRAGMENT_SUCCESS -> {
-                    val resultPair = intent.getSerializableExtra("content") as Pair<Int, Long>
-                    fragmentsCache[resultPair.first].ping = resultPair.second
-                    checkAndSetBestFragmentSettings()
                 }
             }
         }

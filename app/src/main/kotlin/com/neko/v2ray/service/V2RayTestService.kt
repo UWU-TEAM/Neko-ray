@@ -6,9 +6,6 @@ import android.os.IBinder
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_CANCEL
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
-import com.neko.v2ray.AppConfig.MSG_MEASURE_FRAGMENT
-import com.neko.v2ray.AppConfig.MSG_MEASURE_FRAGMENT_CANCEL
-import com.neko.v2ray.AppConfig.MSG_MEASURE_FRAGMENT_SUCCESS
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
@@ -33,13 +30,6 @@ class V2RayTestService : Service() {
                 realTestScope.launch {
                     val result = SpeedtestUtil.realPing(contentPair.second)
                     MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_CONFIG_SUCCESS, Pair(contentPair.first, result))
-                }
-            }
-            MSG_MEASURE_FRAGMENT -> {
-                val contentPair = intent.getSerializableExtra("content") as Pair<Int, String>
-                realTestScope.launch {
-                    val result = SpeedtestUtil.realPing(contentPair.second)
-                    MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_FRAGMENT_SUCCESS, Pair(contentPair.first, result))
                 }
             }
             MSG_MEASURE_CONFIG_CANCEL -> {

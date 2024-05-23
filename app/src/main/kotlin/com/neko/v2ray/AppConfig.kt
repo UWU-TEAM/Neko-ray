@@ -132,7 +132,4 @@ object AppConfig {
     const val MSG_MEASURE_CONFIG = 7
     const val MSG_MEASURE_CONFIG_SUCCESS = 71
     const val MSG_MEASURE_CONFIG_CANCEL = 72
-    const val MSG_MEASURE_FRAGMENT = 8
-    const val MSG_MEASURE_FRAGMENT_SUCCESS = 81
-    const val MSG_MEASURE_FRAGMENT_CANCEL = 82
 }
