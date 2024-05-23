@@ -26,7 +26,6 @@ import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.ServersCache
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.KEY_ANG_CONFIGS
@@ -38,10 +37,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancelChildren
 import kotlinx.coroutines.launch
-import rx.Observable
-import rx.android.schedulers.AndroidSchedulers
 import java.util.Collections
-import java.util.concurrent.TimeUnit
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private val mainStorage by lazy {
@@ -71,9 +67,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     val isRunning by lazy { MutableLiveData<Boolean>() }
     val updateListAction by lazy { MutableLiveData<Int>() }
     val updateTestResultAction by lazy { MutableLiveData<String>() }
-    val autoConnectServer by lazy { MutableLiveData<Pair<String?, String>>() }
-    var isWaitingForAutoConnect: Boolean = false
-
     private val tcpingTestScope by lazy { CoroutineScope(Dispatchers.IO) }
 
     fun startListenBroadcast() {
@@ -173,16 +166,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun testAllRealPing(isAutoTest: Boolean = false) {
+    fun testAllRealPing() {
         MessageUtil.sendMsg2TestService(getApplication(), AppConfig.MSG_MEASURE_CONFIG_CANCEL, "")
         MmkvManager.clearAllTestDelayResults(serversCache.map { it.guid }.toList())
         updateListAction.value = -1 // update all
 
         val serversCopy = serversCache.toList() // Create a copy of the list
 
-        if (!isAutoTest) {
-            getApplication<AngApplication>().toast(R.string.connection_test_testing)
-        }
+        getApplication<AngApplication>().toast(R.string.connection_test_testing)
         viewModelScope.launch(Dispatchers.Default) { // without Dispatchers.Default viewModelScope will launch in main thread
             for (item in serversCopy) {
                 val config = V2rayConfigUtil.getV2rayConfig(getApplication(), item.guid)
@@ -323,31 +314,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     val resultPair = intent.getSerializableExtra("content") as Pair<String, Long>
                     MmkvManager.encodeServerTestDelayMillis(resultPair.first, resultPair.second)
                     updateListAction.value = getPosition(resultPair.first)
-
-                    if (resultPair.second > 0L && isWaitingForAutoConnect) {
-                        isWaitingForAutoConnect = false
-
-                        val guid = resultPair.first
-                        val selected = mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)
-                        if (guid != selected) {
-                            val context = getApplication<AngApplication>()
-                            mainStorage?.encode(MmkvManager.KEY_SELECTED_SERVER, guid)
-                            Utils.stopVService(context, true)
-                            Observable.timer(500, TimeUnit.MILLISECONDS)
-                                .observeOn(AndroidSchedulers.mainThread())
-                                .subscribe {
-                                    V2RayServiceManager.startV2Ray(context)
-                                }
-                        }
-
-                        val pairOldNew = Pair(selected, guid)
-                        autoConnectServer.value = pairOldNew
-                    }
-                }
-
-                AppConfig.MSG_AUTO_TEST_ALL_REAL_PING -> {
-                    isWaitingForAutoConnect = true
-                    testAllRealPing(true)
                 }
             }
         }

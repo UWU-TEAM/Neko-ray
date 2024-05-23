@@ -37,16 +37,9 @@
             android:defaultValue="false"
             android:key="pref_route_only_enabled"
             android:icon="@drawable/uwu_ic_route"
-            android:layout="@layout/uwu_mid_switch"
+            android:layout="@layout/uwu_bot_switch"
             android:summary="@string/summary_pref_route_only_enabled"
             android:title="@string/title_pref_route_only_enabled" />
-
-        <SwitchPreference
-            android:key="pref_auto_test_connect"
-            android:icon="@drawable/uwu_ic_auto_test_connect"
-            android:layout="@layout/uwu_bot_switch"
-            android:summary="@string/summary_pref_auto_test_connect"
-            android:title="@string/title_pref_auto_test_connect" />
 
     </PreferenceCategory>
 

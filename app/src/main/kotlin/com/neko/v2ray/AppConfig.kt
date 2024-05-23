@@ -68,9 +68,6 @@ object AppConfig {
     const val CACHE_SUBSCRIPTION_ID = "cache_subscription_id"
     const val CACHE_KEYWORD_FILTER = "cache_keyword_filter"
 
-    const val PREF_AUTO_TEST_CONNECT = "pref_auto_test_connect"
-    const val PREF_AUTO_TEST_CONNECT_WORK_NAME = "auto_test_connect_work"
-
     //Preferences mapped to MMKV End
 
     const val PROTOCOL_HTTP: String = "http://"
@@ -128,7 +125,6 @@ object AppConfig {
     const val MSG_STATE_RESTART = 5
     const val MSG_MEASURE_DELAY = 6
     const val MSG_MEASURE_DELAY_SUCCESS = 61
-    const val MSG_AUTO_TEST_ALL_REAL_PING = 62
     const val MSG_MEASURE_CONFIG = 7
     const val MSG_MEASURE_CONFIG_SUCCESS = 71
     const val MSG_MEASURE_CONFIG_CANCEL = 72

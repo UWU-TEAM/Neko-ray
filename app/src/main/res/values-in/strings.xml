@@ -120,9 +120,6 @@
     <string name="title_pref_route_only_enabled">Aktifkan hanya rute</string>
     <string name="summary_pref_route_only_enabled">Gunakan nama domain yang diendus hanya untuk perutean, dan pertahankan alamat target sebagai alamat IP.</string>
 
-    <string name="title_pref_auto_test_connect">Otomatis Uji dan Sambungkan</string>
-    <string name="summary_pref_auto_test_connect">Uji setiap 15 menit, dan jika tidak tersambung, coba sambungkan ke Config terbaik dengan mengevaluasi tcping sebenarnya.</string>
-
     <string name="title_pref_local_dns_enabled">Aktifkan DNS lokal</string>
     <string name="summary_pref_local_dns_enabled">DNS diproses oleh modul DNS inti (Disarankan, jika perlu perutean Melewati alamat LAN dan daratan)</string>
 

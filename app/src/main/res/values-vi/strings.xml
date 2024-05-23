@@ -119,10 +119,7 @@
     <string name="summary_pref_sniffing_enabled">Hãy thử đánh hơi tên miền từ gói (bật mặc định)</string>
     <string name="title_pref_route_only_enabled">Bật chỉ tuyến đường</string>
     <string name="summary_pref_route_only_enabled">Chỉ sử dụng tên miền được đánh hơi để định tuyến và giữ địa chỉ đích làm địa chỉ IP.</string>
- 
-    <string name="title_pref_auto_test_connect">Tự động kiểm tra và kết nối</string>
-    <string name="summary_pref_auto_test_connect">Kiểm tra 15 phút một lần và nếu nó không được kết nối, hãy thử kết nối với cấu hình tốt nhất bằng cách đánh giá độ trễ thực sự.</string>
- 
+
     <string name="title_pref_local_dns_enabled">Kích hoạt DNS cục bộ</string>
     <string name="summary_pref_local_dns_enabled">DNS được xử lý bởi mô-đun DNS của lõi (Được khuyến nghị, nếu cần định tuyến Bỏ qua địa chỉ mạng LAN và đất liền)</string>
  

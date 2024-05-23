@@ -119,10 +119,7 @@
     <string name="summary_pref_sniffing_enabled">嘗試從資料包中嗅探域（預設為開啟）</string>
     <string name="title_pref_route_only_enabled">僅啟用路由</string>
     <string name="summary_pref_route_only_enabled">僅使用嗅探到的網域名稱進行路由，並將目標位址保留為IP 位址。</string>
- 
-    <string name="title_pref_auto_test_connect">自動測試和連接</string>
-    <string name="summary_pref_auto_test_connect">每 15 分鐘測試一次，如果未連接，則透過評估實際延遲嘗試連接到最佳配置。</string>
- 
+
     <string name="title_pref_local_dns_enabled">啟用本機 DNS</string>
     <string name="summary_pref_local_dns_enabled">由核心的DNS模組處理的DNS（推薦，如果需要路由繞過LAN和大陸位址）</string>
  
