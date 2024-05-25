@@ -64,6 +64,9 @@ import com.neko.ip.hostchecker.HostChecker
 import com.neko.nointernet.callbacks.ConnectionCallback
 import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import timber.log.Timber
+import com.neko.nekodrawer.NekoDrawerView
+import android.graphics.Color
+import android.os.Handler
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private lateinit var binding: ActivityMainBinding
@@ -79,6 +82,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     private var noInternetDialogSignal: NoInternetDialogSignal? = null
     val mainViewModel: MainViewModel by viewModels()
+    val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isStoragePermissionGranted()
@@ -127,6 +131,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
+        binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
         binding.navView.setNavigationItemSelectedListener(this)
 
         setupViewModel()
@@ -176,6 +181,18 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 showAirplaneModeOffButtons = true // Optional
             }
         }.build()
+
+        binding.drawerLayout.setNekoDrawerListener(object : NekoDrawerView.NekoDrawerEvents {
+            override fun onDrawerOpened(drawerView: View) {
+                super.onDrawerOpened(drawerView)
+                Log.d(TAG, "Drawer Opened")
+            }
+
+            override fun onDrawerClosed(drawerView: View) {
+                super.onDrawerClosed(drawerView)
+                Log.d(TAG, "Drawer closed")
+            }
+        })
     }
 
     private fun setupViewModel() {

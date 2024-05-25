@@ -46,4 +46,14 @@
     <attr name="NoInternet_Dialog_Signal_cloudColorOne" format="reference" />
     <attr name="NoInternet_Dialog_Signal_cloudColorTwo" format="reference" />
     <attr name="NoInternet_Dialog_Signal_cloudColorThree" format="reference" />
+
+    <declare-styleable name="NekoDrawerView">
+        <eat-comment />
+        <attr name="sliderType">
+            <enum name="scroll" value="1"/>
+            <enum name="doorIn" value="2"/>
+            <enum name="doorOut" value="3"/>
+            <enum name="slide" value="4"/>
+        </attr>
+    </declare-styleable>
 </resources>
