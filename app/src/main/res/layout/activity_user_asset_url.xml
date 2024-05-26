@@ -157,7 +157,7 @@
                                     android:layout_marginBottom="16.0dip"
                                     android:layout_marginStart="16.0dip"
                                     android:layout_marginEnd="5.0dip">
-                                    <de.hdodenhof.circleimageview.CircleImageView
+                                    <com.neko.circleimageview.CircleImageView
                                         android:layout_width="60.0dip"
                                         android:layout_height="60.0dip"
                                         android:src="@drawable/uwu_banner_profile"
