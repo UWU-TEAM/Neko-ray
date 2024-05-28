@@ -5,11 +5,17 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/gvcgo/vpnparser/pkgs/outbound"
-	"github.com/gvcgo/vpnparser/pkgs/parser"
-	"github.com/gvcgo/vpnparser/pkgs/utils"
+	"github.com/dev7dev/uri-to-json/pkgs/outbound"
+	"github.com/dev7dev/uri-to-json/pkgs/parser"
+	"github.com/dev7dev/uri-to-json/pkgs/utils"
+	v2serial "github.com/xtls/xray-core/infra/conf/serial"
 	"strings"
 )
+
+func TestConfig(ConfigureFileContent string) error {
+	_, err := v2serial.LoadJSONConfig(strings.NewReader(ConfigureFileContent))
+	return err
+}
 
 func getOutboundJSONIntended(oStr string) string {
 	var out bytes.Buffer
