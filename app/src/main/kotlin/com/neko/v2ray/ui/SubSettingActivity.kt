@@ -1,22 +1,33 @@
 package com.neko.v2ray.ui
 
 import android.content.Intent
+import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
+import androidx.activity.viewModels
+import androidx.appcompat.app.AlertDialog
+import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.neko.v2ray.R
-import android.os.Bundle
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.databinding.ActivitySubSettingBinding
+import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.SubscriptionItem
+import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.viewmodel.SubViewModel
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class SubSettingActivity : BaseActivity() {
     private lateinit var binding: ActivitySubSettingBinding
 
-    var subscriptions:List<Pair<String, SubscriptionItem>> = listOf()
+    var subscriptions: List<Pair<String, SubscriptionItem>> = listOf()
     private val adapter by lazy { SubSettingRecyclerAdapter(this) }
+    val subViewModel: SubViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,9 +53,6 @@ class SubSettingActivity : BaseActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.action_sub_setting, menu)
-        menu.findItem(R.id.del_config)?.isVisible = false
-        menu.findItem(R.id.save_config)?.isVisible = false
-
         return super.onCreateOptionsMenu(menu)
     }
 
@@ -53,6 +61,30 @@ class SubSettingActivity : BaseActivity() {
             startActivity(Intent(this, SubEditActivity::class.java))
             true
         }
+
+        R.id.sub_update -> {
+            val dialog = AlertDialog.Builder(this)
+                .setView(LayoutProgressBinding.inflate(layoutInflater).root)
+                .setCancelable(false)
+                .show()
+
+            lifecycleScope.launch(Dispatchers.IO) {
+                val count = subViewModel.updateConfigViaSubAll()
+                delay(500L)
+                launch(Dispatchers.Main) {
+                    if (count > 0) {
+                        toast(R.string.toast_success)
+                    } else {
+                        toast(R.string.toast_failure)
+                    }
+                    dialog.dismiss()
+                }
+            }
+
+            true
+        }
+
         else -> super.onOptionsItemSelected(item)
+
     }
 }

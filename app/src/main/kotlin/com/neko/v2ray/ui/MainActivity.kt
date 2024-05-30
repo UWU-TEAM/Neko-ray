@@ -31,6 +31,7 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
+import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
@@ -39,7 +40,9 @@ import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.MainViewModel
+import com.neko.v2ray.viewmodel.SubViewModel
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import me.drakeet.support.toast.ToastCompat
 import rx.Observable
@@ -82,6 +85,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     private var noInternetDialogSignal: NoInternetDialogSignal? = null
     val mainViewModel: MainViewModel by viewModels()
+    val subViewModel: SubViewModel by viewModels()
     val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -346,11 +350,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
 
-//        R.id.sub_setting -> {
-//            startActivity<SubSettingActivity>()
-//            true
-//        }
-
         R.id.sub_update -> {
             importConfigViaSub()
             true
@@ -488,26 +487,24 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return true
     }
 
-    fun importBatchConfig(server: String?, subid: String = "") {
-        val subid2 = if(subid.isNullOrEmpty()){
-            mainViewModel.subscriptionId
-        }else{
-            subid
-        }
-        val append = subid.isNullOrEmpty()
+    fun importBatchConfig(server: String?) {
+        val dialog = AlertDialog.Builder(this)
+            .setView(LayoutProgressBinding.inflate(layoutInflater).root)
+            .setCancelable(false)
+            .show()
 
-        var count = AngConfigManager.importBatchConfig(server, subid2, append)
-        if (count <= 0) {
-            count = AngConfigManager.importBatchConfig(Utils.decode(server!!), subid2, append)
-        }
-        if (count <= 0) {
-            count = AngConfigManager.appendCustomConfigServer(server, subid2)
-        }
-        if (count > 0) {
-            toast(R.string.toast_success)
-            mainViewModel.reloadServerList()
-        } else {
-            toast(R.string.toast_failure)
+        lifecycleScope.launch(Dispatchers.IO) {
+            val count = subViewModel.importBatchConfig(server, mainViewModel.subscriptionId, true)
+            delay(500L)
+            launch(Dispatchers.Main) {
+                if (count > 0) {
+                    toast(R.string.toast_success)
+                    mainViewModel.reloadServerList()
+                } else {
+                    toast(R.string.toast_failure)
+                }
+                dialog.dismiss()
+            }
         }
     }
 
@@ -585,55 +582,24 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     /**
      * import config from sub
      */
-    fun importConfigViaSub()
-            : Boolean {
-        try {
-            toast(R.string.title_sub_update)
-            MmkvManager.decodeSubscriptions().forEach {
-                if (TextUtils.isEmpty(it.first)
-                        || TextUtils.isEmpty(it.second.remarks)
-                        || TextUtils.isEmpty(it.second.url)
-                ) {
-                    return@forEach
+    fun importConfigViaSub() : Boolean {
+        val dialog = AlertDialog.Builder(this)
+            .setView(LayoutProgressBinding.inflate(layoutInflater).root)
+            .setCancelable(false)
+            .show()
+
+        lifecycleScope.launch(Dispatchers.IO) {
+            val count = subViewModel.updateConfigViaSubAll()
+            delay(500L)
+            launch(Dispatchers.Main) {
+                if (count > 0) {
+                    toast(R.string.toast_success)
+                    mainViewModel.reloadServerList()
+                } else {
+                    toast(R.string.toast_failure)
                 }
-                if (!it.second.enabled) {
-                    return@forEach
-                }
-                val url = Utils.idnToASCII(it.second.url)
-                if (!Utils.isValidUrl(url)) {
-                    return@forEach
-                }
-                Log.d(ANG_PACKAGE, url)
-                lifecycleScope.launch(Dispatchers.IO) {
-                    var configText = try {
-                        Utils.getUrlContentWithCustomUserAgent(url)
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                        ""
-                    }
-                    if(configText.isEmpty()) {
-                        configText = try {
-                            val httpPort = Utils.parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
-                            Utils.getUrlContentWithCustomUserAgent(url, httpPort)
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                            ""
-                        }
-                    }
-                    if(configText.isEmpty()) {
-                        launch(Dispatchers.Main) {
-                            toast("\"" + it.second.remarks + "\" " + getString(R.string.toast_failure))
-                        }
-                        return@launch
-                    }
-                    launch(Dispatchers.Main) {
-                        importBatchConfig(configText, it.first)
-                    }
-                }
+                dialog.dismiss()
             }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return false
         }
         return true
     }
