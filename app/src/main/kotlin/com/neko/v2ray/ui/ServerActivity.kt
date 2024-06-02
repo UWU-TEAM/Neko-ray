@@ -6,12 +6,16 @@ import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.*
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.EditText
+import android.widget.LinearLayout
+import android.widget.Spinner
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.PREF_ALLOW_INSECURE
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
@@ -294,7 +298,7 @@ class ServerActivity : BaseActivity() {
                 tlsSetting.alpn?.let {
                     val alpnIndex = Utils.arrayFind(
                         alpns,
-                        Utils.removeWhiteSpace(tlsSetting.alpn.joinToString())!!
+                        Utils.removeWhiteSpace(tlsSetting.alpn.joinToString())?:""
                     )
                     sp_stream_alpn?.setSelection(alpnIndex)
                 }
@@ -422,7 +426,7 @@ class ServerActivity : BaseActivity() {
             saveStreamSettings(it)
         }
         if (config.subscriptionId.isEmpty() && !subscriptionId.isNullOrEmpty()) {
-            config.subscriptionId = subscriptionId!!
+            config.subscriptionId = subscriptionId?:""
         }
 
         MmkvManager.encodeServerConfig(editGuid, config)
