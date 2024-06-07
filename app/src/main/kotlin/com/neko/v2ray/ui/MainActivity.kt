@@ -40,7 +40,6 @@ import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.MainViewModel
-import com.neko.v2ray.viewmodel.SubViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -85,7 +84,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     private var noInternetDialogSignal: NoInternetDialogSignal? = null
     val mainViewModel: MainViewModel by viewModels()
-    val subViewModel: SubViewModel by viewModels()
     val TAG = "MainActivity"
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -494,7 +492,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .show()
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val count = subViewModel.importBatchConfig(server, mainViewModel.subscriptionId, true)
+            val count = AngConfigManager.importBatchConfig(server, mainViewModel.subscriptionId, true)
             delay(500L)
             launch(Dispatchers.Main) {
                 if (count > 0) {
@@ -589,7 +587,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .show()
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val count = subViewModel.updateConfigViaSubAll()
+            val count = AngConfigManager.updateConfigViaSubAll()
             delay(500L)
             launch(Dispatchers.Main) {
                 if (count > 0) {

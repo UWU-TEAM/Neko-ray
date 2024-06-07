@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
-import androidx.activity.viewModels
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +16,6 @@ import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.viewmodel.SubViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -27,7 +25,6 @@ class SubSettingActivity : BaseActivity() {
 
     var subscriptions: List<Pair<String, SubscriptionItem>> = listOf()
     private val adapter by lazy { SubSettingRecyclerAdapter(this) }
-    val subViewModel: SubViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -69,7 +66,7 @@ class SubSettingActivity : BaseActivity() {
                 .show()
 
             lifecycleScope.launch(Dispatchers.IO) {
-                val count = subViewModel.updateConfigViaSubAll()
+                val count = AngConfigManager.updateConfigViaSubAll()
                 delay(500L)
                 launch(Dispatchers.Main) {
                     if (count > 0) {
