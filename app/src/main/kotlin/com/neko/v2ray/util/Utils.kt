@@ -42,6 +42,9 @@ object Utils {
     fun getEditable(text: String?): Editable {
         return Editable.Factory.getInstance().newEditable(text?:"")
     }
+    fun getEditable1(hint: String?): Editable {
+        return Editable.Factory.getInstance().newEditable(hint?:"")
+    }
 
     /**
      * find value in array position

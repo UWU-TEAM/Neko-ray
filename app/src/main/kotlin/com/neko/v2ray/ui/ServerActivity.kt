@@ -16,6 +16,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.textfield.TextInputLayout
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.PREF_ALLOW_INSECURE
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
@@ -113,9 +114,9 @@ class ServerActivity : BaseActivity() {
     private val sp_network: Spinner? by lazy { findViewById(R.id.sp_network) }
     private val sp_header_type: Spinner? by lazy { findViewById(R.id.sp_header_type) }
     private val sp_header_type_title: TextView? by lazy { findViewById(R.id.sp_header_type_title) }
-    private val tv_request_host: TextView? by lazy { findViewById(R.id.tv_request_host) }
+    private val tv_request_host: TextInputLayout? by lazy { findViewById(R.id.tv_request_host) }
     private val et_request_host: EditText? by lazy { findViewById(R.id.et_request_host) }
-    private val tv_path: TextView? by lazy { findViewById(R.id.tv_path) }
+    private val tv_path: TextInputLayout? by lazy { findViewById(R.id.tv_path) }
     private val et_path: EditText? by lazy { findViewById(R.id.et_path) }
     private val sp_stream_alpn: Spinner? by lazy { findViewById(R.id.sp_stream_alpn) } //uTLS
     private val container_alpn: LinearLayout? by lazy { findViewById(R.id.l4) }
@@ -173,7 +174,7 @@ class ServerActivity : BaseActivity() {
                     et_path?.text = Utils.getEditable(transportDetails[2])
                 }
 
-                tv_request_host?.text = Utils.getEditable(
+                tv_request_host?.hint = Utils.getEditable1(
                     getString(
                         when (networks[position]) {
                             "tcp" -> R.string.server_lab_request_host_http
@@ -188,7 +189,7 @@ class ServerActivity : BaseActivity() {
                     )
                 )
 
-                tv_path?.text = Utils.getEditable(
+                tv_path?.hint = Utils.getEditable1(
                     getString(
                         when (networks[position]) {
                             "kcp" -> R.string.server_lab_path_kcp
