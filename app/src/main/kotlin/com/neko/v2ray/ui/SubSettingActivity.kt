@@ -3,7 +3,6 @@ package com.neko.v2ray.ui
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
-import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
@@ -15,6 +14,7 @@ import com.neko.v2ray.databinding.ActivitySubSettingBinding
 import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
