@@ -2,9 +2,11 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
+import android.util.Log
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.PROTOCOL_FREEDOM
 import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.TAG_FRAGMENT
@@ -49,6 +51,12 @@ object V2rayConfigUtil {
                 return Result(true, customConfig)
             }
             val outbound = config.getProxyOutbound() ?: return Result(false, "")
+            val address = outbound.getServerAddress() ?: return Result(false, "")
+            if (!Utils.isIpAddress(address) && !Utils.isValidUrl(address)) {
+                Log.d(ANG_PACKAGE, "$address is an invalid ip or domain")
+                return Result(false, "")
+            }
+
             val result = getV2rayNonCustomConfig(context, outbound, config.remarks)
             //Log.d(ANG_PACKAGE, result.content)
             return result
