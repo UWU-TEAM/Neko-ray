@@ -189,7 +189,7 @@ dependencies {
     implementation("androidx.webkit:webkit:1.11.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("com.google.mlkit:barcode-scanning:17.2.0")
-    implementation("com.mikepenz:aboutlibraries-core:11.2.0")
+    implementation("com.mikepenz:aboutlibraries-core:11.2.2")
     implementation("com.mikepenz:fastadapter:5.7.0")
     implementation("androidx.navigation:navigation-fragment:2.7.7")
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
