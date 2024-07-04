@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <PreferenceCategory
-        android:title="Modder" />
     <Preference
-        android:icon="@drawable/uwu_modder"
-        android:layout="@layout/uwu_top"
-        android:title="Milim Nava"
-        android:summary="Demon Lord">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/milimnavaUwU" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_dev"
-        android:layout="@layout/uwu_mid"
+        android:icon="@drawable/anggit"
+        android:layout="@layout/uwu_sin_cred"
         android:title="AnGgIt86 [M•R•T]"
         android:summary="Application Developer">
         <intent
@@ -22,227 +11,48 @@
             android:data="https://t.me/anggit0817" />
     </Preference>
     <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_bot"
-        android:title="UWU RESOURCE GUIDE ID"
-        android:summary="Channel">
+        android:icon="@drawable/dens"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="DᵉᶯˢρĻªϒ #ᴍ•ʀ•ᴛ™🇮🇩"
+        android:summary="Miui Reborn Team[M•R•T]">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/uwuresourceguide" />
+            android:data="https://t.me/Dens_play89" />
     </Preference>
-    <PreferenceCategory
-        android:title="Communities" />
     <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_top"
-        android:title="Villain Anti Hero"
-        android:summary="Channel">
+        android:icon="@drawable/mobx"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="ヨヴィエ ~ Retired"
+        android:summary="Miui Reborn Team [M•R•T]">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/modz_riz" />
+            android:data="https://t.me/mobxprjkt" />
     </Preference>
     <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_bot"
-        android:title="Open Net"
-        android:summary="Group">
+        android:icon="@drawable/milim"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="Milim Nava"
+        android:summary="Demon Lord">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/mod_riz" />
-    </Preference>
-    <PreferenceCategory
-        android:title="Material design" />
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_sin"
-        android:title="xdroidOSS° newsletter"
-        android:summary="mnmlist">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/xdroidOSS" />
-    </Preference>
-    <PreferenceCategory
-        android:title="Resources &amp; Guides" />
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_top"
-        android:title="Allive Prjct Update"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/AlliveeCh" />
+            android:data="https://t.me/milimnavaUwU" />
     </Preference>
     <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Allive Nitip File"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/AlliveeNitip" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Allive"
-        android:summary="Group">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/Allivee2nd" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Anu Bareng Channel"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/anubarengch" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Anu Bareng"
-        android:summary="Group">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/anubareng" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="PROJEN | ANNOUNCEMENT"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/forumprojen" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="PROJEN | TALK, REPORT &amp; DISCUSS"
-        android:summary="Group">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/projenxfmly" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="iDanX"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/bancitobat20" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="TADIKA MESRA CHANNEL"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/t4dikamesra" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="TADIKA MESRA"
-        android:summary="Group">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/tadikamesranew" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Newbie Permanen | Angeldust"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/nabilaba000" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="evillium prjct°"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/evilliumprjct" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="ANDROID RESOURCE ID"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/droidresID" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="ANDROID RESOURCE ID (discussion)"
-        android:summary="Group">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/AResourcesID" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="TJ"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/shitUp_tj" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_bot"
-        android:title="⚡"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/clvtrash" />
-    </Preference>
-    <PreferenceCategory
-        android:title="Big thanks" />
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_top"
-        android:title="Hitori Gotō"
-        android:summary="Helping">
+        android:icon="@drawable/hitori"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="Hitori Gotō 🇯🇵"
+        android:summary="BOCCHI">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/iirzzxx" />
     </Preference>
     <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="スクロース"
+        android:icon="@drawable/fischl"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="[Fischl] $ rm -rf /*"
         android:summary="Sepuh">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="https://t.me/Unzarii" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_mid"
-        android:title="Afterlife Project"
-        android:summary="Channel">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/Afterlife_update" />
-    </Preference>
-    <Preference
-        android:icon="@drawable/uwu_telegram"
-        android:layout="@layout/uwu_bot"
-        android:title="Weeabooify"
-        android:summary="User interface reference">
-        <intent
-            android:action="android.intent.action.VIEW"
-            android:data="https://t.me/weeabooify" />
+            android:data="https://t.me/Fischl_PV" />
     </Preference>
 </PreferenceScreen>
