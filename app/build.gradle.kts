@@ -178,7 +178,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
-    implementation("com.tencent:mmkv-static:1.3.4")
+    implementation("com.tencent:mmkv-static:1.3.7")
     implementation("com.google.code.gson:gson:2.11.0")
     implementation("io.reactivex:rxjava:1.3.8")
     implementation("io.reactivex:rxandroid:1.2.1")
