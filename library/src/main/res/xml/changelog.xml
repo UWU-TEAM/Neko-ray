@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        date="2024-05-07"
+        date="2024-07-18"
         summary="Neko v2rayNG"
-        version="v1.1.0"
-        versioncode="2000220">
-        <change>Add more language</change>
-        <change>Added feature Share configuration in backup file configuration</change>
-        <change>Added HostName Checker</change>
-        <change>Update grettings text for more language</change>
-        <change>Rule start with ext and contains geoip added to the ips</change>
-        <change>Adjust DNS hardcoded geoip:cn issue</change>
-        <change>Add attributes to grpc</change>
-        <change>Add Switchpreference routeOnly</change>
-        <change>Redesign drawer layout</change>
-        <change>Added attempt to update subscription via proxy</change>
-        <change>Change Feedback to License preference</change>
-        <change>Bump com.android.library from 8.3.2 to 8.4.0</change>
-        <change>Bump com.android.application from 8.3.2 to 8.4.0</change>
-        <change>Bump androidx.viewpager2:viewpager2 from 1.1.0-beta02 to 1.1.0-rc01</change>
-        <change>Bump androidx.core:core-ktx from 1.13.0 to 1.13.1</change>
-        <change>Bump androidx.webkit:webkit from 1.10.0 to 1.11.0</change>
-        <change>Bump androidx.fragment:fragment-ktx from 1.6.2 to 1.7.0</change>
-        <change>Bump com.google.android.material:material from 1.11.0 to 1.12.0</change>
-        <change>Bump io.github.g00fy2.quickie:quickie-bundled from 1.9.0 to 1.10.0</change>
+        version="v1.1.5"
+        versioncode="2000225">
+        <change>Update Theme Engine</change>
+        <change>Add delayed test URL</change>
+        <change>Fixed Reading QRs from Gallery</change>
+        <change>Redesign header darboard</change>
+        <change>Optimized SplashScreen</change>
+        <change>Fixed Problems occur after using Delete Invalid Configuration after speed test</change>
+        <change>Drop IpScanner feature</change>
+        <change>Drop auto test connection</change>
+        <change>Use Neko Drawer style</change>
+        <change>Refactor the parser</change>
+        <change>Optimized code</change>
+        <change>Auto update subscriptions when adding a url</change>
+        <change>Hardcode gstatic.com taking detour [proxy]</change>
+        <change>Add splithttp transport for xray</change>
+        <change>fix wireguard issue</change>
+        <change>Add LEANBACK_LAUNCHER</change>
+        <change>Redesign Credits preference</change>
+        <change>More code clean</change>
+        <change>Core: Bump v1.8.19</change>
     </release>
 </changelog>
