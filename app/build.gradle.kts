@@ -196,7 +196,7 @@ dependencies {
 
     // Misc
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("org.jsoup:jsoup:1.17.2")
+    implementation("org.jsoup:jsoup:1.18.1")
     implementation("androidx.webkit:webkit:1.11.0")
     implementation("com.jakewharton.timber:timber:5.0.1")
     implementation("com.google.mlkit:barcode-scanning:17.2.0")
