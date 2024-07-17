@@ -103,7 +103,7 @@ android {
     applicationVariants.all {
         val variant = this
         val versionCodes =
-            mapOf("armeabi-v7a" to 4, "arm64-v8a" to 4, "x86" to 4, "x86_64" to 4, "all" to 4)
+            mapOf("armeabi-v7a" to 4, "arm64-v8a" to 4, "x86" to 4, "x86_64" to 4, "universal" to 4)
 
         variant.outputs
             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
@@ -111,7 +111,7 @@ android {
                 val abi = if (output.getFilter("ABI") != null)
                     output.getFilter("ABI")
                 else
-                    "all"
+                    "universal"
 
                 output.outputFileName = "Neko-ray_${variant.versionName}_${abi}.apk"
                 if(versionCodes.containsKey(abi))
@@ -151,6 +151,7 @@ if (file("user.gradle").exists()) {
 
 dependencies {
     testImplementation("junit:junit:4.13.2")
+    implementation("com.google.android.flexbox:flexbox:3.0.0")
 
     // Include Project
     implementation(project(":library"))
