@@ -53,6 +53,7 @@ import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.AttrRes
 import androidx.core.app.ActivityCompat
+import com.neko.appupdater.AppUpdater
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -191,6 +192,18 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 Log.d(TAG, "Drawer closed")
             }
         })
+
+        fun uwuUpdater(view: View) {
+            val appUpdater = AppUpdater(this)
+            appUpdater.setUpdateFrom(UpdateFrom.JSON)
+            appUpdater.setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
+            appUpdater.setDisplay(Display.DIALOG)
+            appUpdater.showAppUpdated(false)
+            appUpdater.setCancelable(false)
+            appUpdater.setButtonDoNotShowAgain("")
+            appUpdater.start()
+        }
+        uwuUpdater()
     }
 
     private fun setupViewModel() {
