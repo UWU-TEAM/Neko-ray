@@ -39,7 +39,7 @@ class NekoAboutActivity : BaseActivity() {
     fun uwuUpdater(view: View) {
         val appUpdater = AppUpdater(this)
         appUpdater.setUpdateFrom(UpdateFrom.JSON)
-        appUpdater.setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
+        appUpdater.setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
         appUpdater.setDisplay(Display.DIALOG)
         appUpdater.showAppUpdated(true)
         appUpdater.setCancelable(false)

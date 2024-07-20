@@ -197,7 +197,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Show new update with dialog
         val appUpdater = AppUpdater(this).apply {
             setUpdateFrom(UpdateFrom.JSON)
-            setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
+            setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
             setDisplay(Display.DIALOG)
             showAppUpdated(false)
             setCancelable(false)
@@ -208,7 +208,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Show new update with notification
         val appUpdaterNotification = AppUpdater(this).apply {
             setUpdateFrom(UpdateFrom.JSON)
-            setUpdateJSON("https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json")
+            setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
             setDisplay(Display.NOTIFICATION)
             showAppUpdated(false)
             setCancelable(false)

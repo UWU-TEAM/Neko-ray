@@ -128,4 +128,7 @@ object AppConfig {
     const val MSG_MEASURE_CONFIG = 7
     const val MSG_MEASURE_CONFIG_SUCCESS = 71
     const val MSG_MEASURE_CONFIG_CANCEL = 72
+
+    // UWU
+    const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json"
 }
