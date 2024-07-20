@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        date="2024-07-18"
+        date="2024-07-20"
         summary="Neko v2rayNG"
-        version="v1.1.5"
-        versioncode="2000225">
+        version="v1.1.6"
+        versioncode="2000226">
         <change>Core: Bump v1.8.20</change>
     </release>
 </changelog>
