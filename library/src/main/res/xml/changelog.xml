@@ -5,24 +5,6 @@
         summary="Neko v2rayNG"
         version="v1.1.5"
         versioncode="2000225">
-        <change>Update Theme Engine</change>
-        <change>Add delayed test URL</change>
-        <change>Fixed Reading QRs from Gallery</change>
-        <change>Redesign header darboard</change>
-        <change>Optimized SplashScreen</change>
-        <change>Fixed Problems occur after using Delete Invalid Configuration after speed test</change>
-        <change>Drop IpScanner feature</change>
-        <change>Drop auto test connection</change>
-        <change>Use Neko Drawer style</change>
-        <change>Refactor the parser</change>
-        <change>Optimized code</change>
-        <change>Auto update subscriptions when adding a url</change>
-        <change>Hardcode gstatic.com taking detour [proxy]</change>
-        <change>Add splithttp transport for xray</change>
-        <change>fix wireguard issue</change>
-        <change>Add LEANBACK_LAUNCHER</change>
-        <change>Redesign Credits preference</change>
-        <change>More code clean</change>
-        <change>Core: Bump v1.8.19</change>
+        <change>Core: Bump v1.8.20</change>
     </release>
 </changelog>
