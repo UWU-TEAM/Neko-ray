@@ -337,5 +337,6 @@
     <string name="uwu_license_title">Giấy phép</string>
     <string name="version">Phiên bản</string>
     <string name="uwu_group">Nhóm</string>
+    <string name="uwu_fokus_today">Hãy tập trung vào ngày hôm nay!</string>
     <!-- Neko strings --> 
 </resources>

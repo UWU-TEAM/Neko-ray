@@ -337,5 +337,6 @@
     <string name="uwu_license_title">执照</string>
     <string name="version">版本</string>
     <string name="uwu_group">团体</string>
+    <string name="uwu_fokus_today">我们集中精力在今天吧！</string>
     <!-- Neko strings --> 
 </resources>

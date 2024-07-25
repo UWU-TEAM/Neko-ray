@@ -161,7 +161,7 @@
                                                     android:ellipsize="marquee"
                                                     android:layout_width="wrap_content"
                                                     android:layout_height="wrap_content"
-                                                    android:text="Mari fokus pada hari ini!"
+                                                    android:text="@string/uwu_fokus_today"
                                                     android:singleLine="true"
                                                     android:marqueeRepeatLimit="marquee_forever" />
                                             </LinearLayout>
