@@ -645,6 +645,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             // jika pilih no
             .setNegativeButton(R.string.uwu_text_no) { dialog, _ ->
                 dialog.cancel()
+            }
+            // Run in background
+            .setNeutralButton("Minimize") { _, _ ->
+                this@MainActivity.finishAffinity()
             }.show()
     }
 
