@@ -340,7 +340,7 @@
     <string name="uwu_fokus_today">Давайте сосредоточимся на сегодняшнем дне!</string>
     <string name="uwu_theme">Тема</string>
     <string name="uwu_theme_desc">Цвет акцента выбирайте сами</string>
-    <string name="uwu_theme_mode_default">Системные установки по умолчанию</string>
+    <string name="uwu_theme_mode_default">Авто</string>
     <string name="uwu_theme_mode_light">Свет</string>
     <string name="uwu_theme_mode_dark">Темный</string>
     <string name="uwu_theme_botton_text">Менять тему</string>
