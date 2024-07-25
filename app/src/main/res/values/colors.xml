@@ -27,7 +27,6 @@
     <color name="uwu_bg_card">#ffffffff</color>
     <color name="uwu_primary">#ff51599a</color>
     <color name="uwu_transparent">@android:color/transparent</color>
-    <color name="uwuClockColor">#000000</color>
     <color name="uwu_ripple">@color/uwu_accent_alpha1</color>
     
     <!-- Colors Form: https://flatuicolors.com/palette/defo -->

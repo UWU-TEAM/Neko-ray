@@ -26,7 +26,7 @@
         <item name="materialAlertDialogTheme">@style/Uwu.Material3.MaterialAlertDialog</item>
         <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
         <item name="preferenceCategoryStyle">@style/Uwu.Preference.Category</item>
-        <item name="uwuClockColor">?attr/colorPrimary</item>
+        <item name="colorCard">?attr/colorSurfaceContainerLow</item>
     </style>
 
     <style name="Dialog.Signal" parent="Theme.MaterialComponents.DayNight.Dialog">

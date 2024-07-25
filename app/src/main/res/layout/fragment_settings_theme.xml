@@ -1,99 +1,250 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    android:orientation="vertical"
     android:background="@drawable/uwu_background_dialog_top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:ignore="HardcodedText">
-
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.bottomsheet.BottomSheetDragHandleView
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="-16.0dip"
-        android:layout_marginBottom="5.0dip"
-        android:text="Theme"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
+        android:layout_marginBottom="8.0dip"
+        android:layout_marginStart="16.0dip"
+        android:layout_marginEnd="16.0dip"
+        app:strokeWidth="0.0dip"
+        app:cardBackgroundColor="?attr/colorCard"
+        app:cardCornerRadius="24.0dip"
+        app:cardElevation="0.0dip">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.neko.elasticview.ElasticView
+                android:layout_width="match_parent"
+                android:layout_height="150.0dip"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginStart="12.0dip"
+                android:layout_marginEnd="12.0dip"
+                app:cardBackgroundColor="#00000000"
+                app:cardCornerRadius="19.0dip"
+                app:cardElevation="0.0dip"
+                app:rippleColor="#00000000">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/uwu_banner_image_3"
+                    android:scaleType="centerCrop"
+                    android:elevation="0.0dip" />
+                <View
+                    android:background="@android:color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha="0.2" />
+                <LinearLayout
+                    android:gravity="bottom"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center_vertical"
+                        android:clipToPadding="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="16.0dip"
+                            android:layout_marginBottom="16.0dip"
+                            android:layout_marginStart="16.0dip"
+                            android:layout_marginEnd="5.0dip">
+                            <com.neko.circleimageview.CircleImageView
+                                android:layout_width="60.0dip"
+                                android:layout_height="60.0dip"
+                                android:src="@drawable/uwu_banner_profile"
+                                app:civ_border_color="?attr/colorPrimary"
+                                app:civ_border_overlay="true"
+                                app:civ_border_width="3.0dip"
+                                app:civ_circle_background_color="?attr/colorBg" />
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:paddingTop="16.0dip"
+                            android:paddingBottom="16.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:layout_marginStart="5.0dip"
+                            android:layout_marginEnd="5.0dip">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:textSize="17.0sp"
+                                    android:textColor="@android:color/white"
+                                    android:ellipsize="marquee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/uwu_header_title"
+                                    android:singleLine="true" />
+                                <TextView
+                                    android:textSize="14.0sp"
+                                    android:textColor="@android:color/white"
+                                    android:ellipsize="marquee"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Let's focus on today!"
+                                    android:singleLine="true" />
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </com.neko.elasticview.ElasticView>
+            <com.google.android.material.card.MaterialCardView
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12.0dip"
+                android:layout_marginBottom="12.0dip"
+                android:layout_marginStart="12.0dip"
+                android:layout_marginEnd="12.0dip"
+                app:strokeWidth="0.0dip"
+                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardCornerRadius="19.0dip"
+                app:cardElevation="0.0dip">
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:clipToPadding="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip"
+                        android:layout_marginBottom="16.0dip"
+                        android:layout_marginStart="16.0dip"
+                        android:layout_marginEnd="5.0dip">
+                        <LinearLayout
+                            android:background="@drawable/uwu_google_shape"
+                            android:layout_width="45.0dip"
+                            android:layout_height="45.0dip"
+                            android:backgroundTint="?attr/colorIcon">
+                            <ImageView
+                                android:gravity="center"
+                                android:layout_width="25.0dip"
+                                android:layout_height="25.0dip"
+                                android:layout_marginTop="10.0dip"
+                                android:src="@drawable/uwu_ic_baseline_color_lens"
+                                android:tint="?attr/colorPrimary"
+                                android:layout_marginStart="10.0dip" />
+                        </LinearLayout>
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:paddingTop="16.0dip"
+                        android:paddingBottom="16.0dip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:layout_marginStart="5.0dip"
+                        android:layout_marginEnd="5.0dip">
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:textSize="17.0sp"
+                                android:textColor="?attr/colorText"
+                                android:ellipsize="marquee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Theme"
+                                android:singleLine="false" />
+                            <com.neko.marquee.text.AutoMarqueeTextView
+                                android:textSize="14.0sp"
+                                android:textColor="?attr/colorText"
+                                android:ellipsize="marquee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Choose the accent color yourself"
+                                android:singleLine="true"
+                                android:marqueeRepeatLimit="marquee_forever" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
     <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_gravity="center"
         android:id="@+id/theme_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="5.0dip"
         android:layout_marginBottom="5.0dip"
         app:selectionRequired="true"
         app:singleSelection="true">
-
         <Button
             android:id="@+id/auto_theme"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="System default" />
-
+            android:text="System default"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
         <Button
             android:id="@+id/light_theme"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light" />
-
+            android:text="Light"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
         <Button
             android:id="@+id/dark_theme"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dark" />
+            android:text="Dark"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
-
     <TextView
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_gravity="center_horizontal"
         android:id="@+id/dynamic_color_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Dynamic Colors"
-        android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
-
+        android:text="Dynamic Colors" />
     <com.google.android.material.button.MaterialButtonToggleGroup
+        android:layout_gravity="center"
         android:id="@+id/dynamic_group"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="5.0dip"
         android:layout_marginBottom="5.0dip"
         app:selectionRequired="true"
         app:singleSelection="true">
-
         <Button
             android:id="@+id/dynamic_on"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="On" />
-
+            android:text="On"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
         <Button
             android:id="@+id/dynamic_off"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Off" />
+            android:text="Off"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
-
     <com.google.android.material.button.MaterialButton
+        android:layout_gravity="center"
         android:id="@+id/change_theme"
-        style="@style/Widget.Material3.Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:layout_marginTop="5.0dip"
         android:layout_marginBottom="16.0dip"
-        android:text="Change theme" />
-
+        android:text="Change theme"
+        style="@style/Widget.Material3.Button" />
 </LinearLayout>
