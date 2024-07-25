@@ -336,5 +336,6 @@
     <string name="uwu_host_checker">مدقق المضيف</string>
     <string name="uwu_license_title">رخصة</string>
     <string name="version">إصدار</string>
+    <string name="uwu_group">مجموعة</string>
     <!-- Neko strings --> 
 </resources> 

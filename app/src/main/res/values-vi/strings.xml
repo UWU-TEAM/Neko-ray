@@ -336,5 +336,6 @@
     <string name="uwu_host_checker">Trình kiểm tra máy chủ</string>
     <string name="uwu_license_title">Giấy phép</string>
     <string name="version">Phiên bản</string>
+    <string name="uwu_group">Nhóm</string>
     <!-- Neko strings --> 
 </resources>

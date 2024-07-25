@@ -336,5 +336,6 @@
     <string name="uwu_host_checker">主機檢查器</string>
     <string name="uwu_license_title">執照</string>
     <string name="version">版本</string>
+    <string name="uwu_group">團體</string>
     <!-- Neko strings --> 
 </resources>

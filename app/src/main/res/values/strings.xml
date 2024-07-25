@@ -338,5 +338,6 @@
     <string name="uwu_host_checker">Host checker</string>
     <string name="uwu_license_title">License</string>
     <string name="version">Version</string>
+    <string name="uwu_group">Group</string>
     <!-- Neko strings -->
 </resources>

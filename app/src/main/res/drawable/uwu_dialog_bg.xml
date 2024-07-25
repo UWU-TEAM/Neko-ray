@@ -11,10 +11,10 @@
             <solid
                 android:color="@color/uwu_bg_dialog" />
             <corners
-                android:topLeftRadius="15.0dip"
-                android:topRightRadius="15.0dip"
-                android:bottomLeftRadius="15.0dip"
-                android:bottomRightRadius="15.0dip" />
+                android:topLeftRadius="24.0dip"
+                android:topRightRadius="24.0dip"
+                android:bottomLeftRadius="24.0dip"
+                android:bottomRightRadius="24.0dip" />
         </shape>
     </item>
 </ripple>

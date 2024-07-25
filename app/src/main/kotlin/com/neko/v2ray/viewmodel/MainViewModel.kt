@@ -226,7 +226,6 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         ivBinding.spSubscriptionId.setSelection(checkedItem)
         ivBinding.etKeyword.text = Utils.getEditable(keywordFilter)
         val builder = AlertDialog.Builder(context).setView(ivBinding.root)
-        builder.setTitle(R.string.title_filter_config)
         builder.setPositiveButton(R.string.tasker_setting_confirm) { dialogInterface: DialogInterface?, _: Int ->
             try {
                 val position = ivBinding.spSubscriptionId.selectedItemPosition
