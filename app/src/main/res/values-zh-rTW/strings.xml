@@ -338,5 +338,11 @@
     <string name="version">版本</string>
     <string name="uwu_group">團體</string>
     <string name="uwu_fokus_today">今天我們就來關註一下吧！</string>
+    <string name="uwu_theme">主題</string>
+    <string name="uwu_theme_desc">自己選擇強調色</string>
+    <string name="uwu_theme_mode_default">系統預設</string>
+    <string name="uwu_theme_mode_light">光</string>
+    <string name="uwu_theme_mode_dark">黑暗的</string>
+    <string name="uwu_theme_botton_text">改變主題</string>
     <!-- Neko strings --> 
 </resources>

@@ -338,5 +338,11 @@
     <string name="version">バージョン</string>
     <string name="uwu_group">グループ</string>
     <string name="uwu_fokus_today">今日に集中しましょう！</string>
+    <string name="uwu_theme">テーマ</string>
+    <string name="uwu_theme_desc">アクセントカラーを自分で選ぶ</string>
+    <string name="uwu_theme_mode_default">オート</string>
+    <string name="uwu_theme_mode_light">ライト</string>
+    <string name="uwu_theme_mode_dark">暗い</string>
+    <string name="uwu_theme_botton_text">テーマを変更する</string>
     <!-- Neko strings --> 
 </resources> 

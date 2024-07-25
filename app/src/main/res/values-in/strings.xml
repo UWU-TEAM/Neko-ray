@@ -340,5 +340,11 @@
     <string name="version">Versi</string>
     <string name="uwu_group">Grup</string>
     <string name="uwu_fokus_today">Mari fokus pada hari ini!</string>
+    <string name="uwu_theme">Tema</string>
+    <string name="uwu_theme_desc">Pilih sendiri warna aksennya</string>
+    <string name="uwu_theme_mode_default">Bawaan sistem</string>
+    <string name="uwu_theme_mode_light">Terang</string>
+    <string name="uwu_theme_mode_dark">Gelap</string>
+    <string name="uwu_theme_botton_text">Ubah tema</string>
     <!-- Neko strings -->
 </resources>

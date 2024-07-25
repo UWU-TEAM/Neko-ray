@@ -340,5 +340,11 @@
     <string name="version">نسخه</string>
     <string name="uwu_group">گروه</string>
     <string name="uwu_fokus_today">بیایید روی امروز تمرکز کنیم!</string>
+    <string name="uwu_theme">موضوع</string>
+    <string name="uwu_theme_desc">رنگ تاکیدی را خودتان انتخاب کنید</string>
+    <string name="uwu_theme_mode_default">پیش فرض سیستم</string>
+    <string name="uwu_theme_mode_light">سبک</string>
+    <string name="uwu_theme_mode_dark">تاریک</string>
+    <string name="uwu_theme_botton_text">تغییر زمینه</string>
     <!-- Neko strings --> 
 </resources> 

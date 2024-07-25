@@ -338,5 +338,11 @@
     <string name="version">Phiên bản</string>
     <string name="uwu_group">Nhóm</string>
     <string name="uwu_fokus_today">Hãy tập trung vào ngày hôm nay!</string>
+    <string name="uwu_theme">chủ đề</string>
+    <string name="uwu_theme_desc">Tự mình chọn màu nhấn</string>
+    <string name="uwu_theme_mode_default">Mặc định hệ thống</string>
+    <string name="uwu_theme_mode_light">Ánh sáng</string>
+    <string name="uwu_theme_mode_dark">Tối tăm</string>
+    <string name="uwu_theme_botton_text">Thay đổi chủ đề</string>
     <!-- Neko strings --> 
 </resources>

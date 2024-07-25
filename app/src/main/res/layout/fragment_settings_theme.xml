@@ -164,7 +164,7 @@
                                 android:ellipsize="marquee"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Theme"
+                                android:text="@string/uwu_theme"
                                 android:singleLine="false" />
                             <com.neko.marquee.text.AutoMarqueeTextView
                                 android:textSize="14.0sp"
@@ -172,7 +172,7 @@
                                 android:ellipsize="marquee"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Choose the accent color yourself"
+                                android:text="@string/uwu_theme_desc"
                                 android:singleLine="true"
                                 android:marqueeRepeatLimit="marquee_forever" />
                         </LinearLayout>
@@ -194,19 +194,19 @@
             android:id="@+id/auto_theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="System default"
+            android:text="@string/uwu_theme_mode_default"
             style="@style/Widget.Material3.Button.OutlinedButton" />
         <Button
             android:id="@+id/light_theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Light"
+            android:text="@string/uwu_theme_mode_light"
             style="@style/Widget.Material3.Button.OutlinedButton" />
         <Button
             android:id="@+id/dark_theme"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Dark"
+            android:text="@string/uwu_theme_mode_dark"
             style="@style/Widget.Material3.Button.OutlinedButton" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
     <TextView
@@ -245,6 +245,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5.0dip"
         android:layout_marginBottom="16.0dip"
-        android:text="Change theme"
+        android:text="@string/uwu_theme_botton_text"
         style="@style/Widget.Material3.Button" />
 </LinearLayout>

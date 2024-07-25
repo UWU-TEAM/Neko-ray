@@ -338,5 +338,11 @@
     <string name="version">إصدار</string>
     <string name="uwu_group">مجموعة</string>
     <string name="uwu_fokus_today">دعونا نركز على اليوم!</string>
+    <string name="uwu_theme">سمة</string>
+    <string name="uwu_theme_desc">اختر لون التمييز بنفسك</string>
+    <string name="uwu_theme_mode_default">النظام الافتراضي</string>
+    <string name="uwu_theme_mode_light">ضوء</string>
+    <string name="uwu_theme_mode_dark">مظلم</string>
+    <string name="uwu_theme_botton_text">غير الخلفية</string>
     <!-- Neko strings --> 
 </resources> 
