@@ -346,5 +346,7 @@
     <string name="uwu_theme_mode_light">Caang</string>
     <string name="uwu_theme_mode_dark">Poek</string>
     <string name="uwu_theme_botton_text">Robah téma</string>
+    <string name="uwu_subscription">Langganan</string>
+    <string name="uwu_subscription_desc">Setel grup langganan anjeun di dieu!</string>
     <!-- Neko strings -->
 </resources> 

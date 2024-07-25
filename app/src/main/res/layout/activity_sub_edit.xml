@@ -225,7 +225,7 @@
                                                 android:ellipsize="marquee"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:text="Subscription"
+                                                android:text="@string/uwu_subscription"
                                                 android:singleLine="false" />
                                             <com.neko.marquee.text.AutoMarqueeTextView
                                                 android:textSize="14.0sp"
@@ -233,7 +233,7 @@
                                                 android:ellipsize="marquee"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:text="Setup your subscription group here!"
+                                                android:text="@string/uwu_subscription_desc"
                                                 android:singleLine="true"
                                                 android:marqueeRepeatLimit="marquee_forever" />
                                         </LinearLayout>

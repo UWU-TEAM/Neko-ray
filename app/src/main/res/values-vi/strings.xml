@@ -344,5 +344,7 @@
     <string name="uwu_theme_mode_light">Ánh sáng</string>
     <string name="uwu_theme_mode_dark">Tối tăm</string>
     <string name="uwu_theme_botton_text">Thay đổi chủ đề</string>
+    <string name="uwu_subscription">Đăng ký</string>
+    <string name="uwu_subscription_desc">Thiết lập nhóm đăng ký của bạn ở đây!</string>
     <!-- Neko strings --> 
 </resources>

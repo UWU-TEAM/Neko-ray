@@ -344,5 +344,7 @@
     <string name="uwu_theme_mode_light">光</string>
     <string name="uwu_theme_mode_dark">黑暗的</string>
     <string name="uwu_theme_botton_text">改變主題</string>
+    <string name="uwu_subscription">訂閱</string>
+    <string name="uwu_subscription_desc">在這裡設定您的訂閱組！</string>
     <!-- Neko strings --> 
 </resources>

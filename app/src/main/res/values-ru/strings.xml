@@ -344,5 +344,7 @@
     <string name="uwu_theme_mode_light">Свет</string>
     <string name="uwu_theme_mode_dark">Темный</string>
     <string name="uwu_theme_botton_text">Менять тему</string>
+    <string name="uwu_subscription">Подписка</string>
+    <string name="uwu_subscription_desc">Настройте свою группу подписки здесь!</string>
     <!-- Neko strings --> 
 </resources> 
