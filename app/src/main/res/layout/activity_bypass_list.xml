@@ -99,11 +99,14 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/title_pref_per_app_proxy"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-                                    <androidx.appcompat.widget.SwitchCompat
+                                    <com.neko.switchbutton.SwitchButton
                                         android:id="@+id/switch_per_app_proxy"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:paddingStart="20dp" />
+                                        android:paddingStart="10.0dip"
+                                        app:kswAnimationDuration="300"
+                                        app:kswBackDrawable="@drawable/uwu_back_drawable"
+                                        app:kswThumbDrawable="@drawable/uwu_thumb" />
                                 </LinearLayout>
                                 <LinearLayout
                                     android:id="@+id/container_bypass_apps"
@@ -119,11 +122,14 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/switch_bypass_apps_mode"
                                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-                                    <androidx.appcompat.widget.SwitchCompat
+                                    <com.neko.switchbutton.SwitchButton
                                         android:id="@+id/switch_bypass_apps"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:paddingStart="20dp" />
+                                        android:paddingStart="10.0dip"
+                                        app:kswAnimationDuration="300"
+                                        app:kswBackDrawable="@drawable/uwu_back_drawable"
+                                        app:kswThumbDrawable="@drawable/uwu_thumb" />
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
