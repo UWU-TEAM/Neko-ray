@@ -313,6 +313,7 @@
     <string name="please_turn_off">من فضلك اطفئ</string>
     <string name="airplane_mode">وضع الطيران</string>
     <string name="default_airplane_mode_message">لقد قمت بتشغيل وضع الطائرة.</string>
+    <string name="neko_setup_config">قم بإعداد التكوين الخاص بك هنا!</string>
      
     <string name="homepage_widget_battery_percent">نسبه مئويه</string>
     <string name="homepage_widget_battery_charge">الشحن</string>

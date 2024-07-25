@@ -313,6 +313,7 @@
     <string name="please_turn_off">Vui lòng tắt</string>
     <string name="airplane_mode">Chế độ máy bay</string>
     <string name="default_airplane_mode_message">Bạn đã bật chế độ máy bay.</string>
+    <string name="neko_setup_config">Thiết lập cấu hình của bạn ở đây!</string>
      
     <string name="homepage_widget_battery_percent">phần trăm</string>
     <string name="homepage_widget_battery_charge">Sạc</string>

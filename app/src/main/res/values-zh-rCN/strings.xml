@@ -313,6 +313,7 @@
     <string name="please_turn_off">请关闭</string>
     <string name="airplane_mode">飞行模式</string>
     <string name="default_airplane_mode_message">您已打开飞行模式。</string>
+    <string name="neko_setup_config">在这里设置您的配置！</string>
      
     <string name="homepage_widget_battery_percent">百分</string>
     <string name="homepage_widget_battery_charge">收费</string>

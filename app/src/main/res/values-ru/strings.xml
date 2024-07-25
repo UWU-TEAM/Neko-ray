@@ -313,6 +313,7 @@
     <string name="please_turn_off">Пожалуйста, выключите</string>
     <string name="airplane_mode">Авиа режим</string>
     <string name="default_airplane_mode_message">Вы включили режим полета.</string>
+    <string name="neko_setup_config">Настройте свою конфигурацию здесь!</string>
      
     <string name="homepage_widget_battery_percent">процент</string>
     <string name="homepage_widget_battery_charge">Зарядка</string>

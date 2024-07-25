@@ -315,6 +315,7 @@
     <string name="please_turn_off">Please turn off</string>
     <string name="airplane_mode">Airplane mode</string>
     <string name="default_airplane_mode_message">You have turned on the airplane mode.</string>
+    <string name="neko_setup_config">Set up your config here!</string>
     
     <string name="homepage_widget_battery_percent">percent</string>
     <string name="homepage_widget_battery_charge">Charging</string>

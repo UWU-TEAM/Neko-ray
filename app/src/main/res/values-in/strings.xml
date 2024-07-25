@@ -313,6 +313,7 @@
     <string name="please_turn_off">Harap matikan</string>
     <string name="airplane_mode">Mode pesawat</string>
     <string name="default_airplane_mode_message">Anda telah mengaktifkan mode pesawat.</string>
+    <string name="neko_setup_config">Siapkan konfig Anda di sini!</string>
     
     <!-- Battery widget -->
     <string name="homepage_widget_battery_percent">persen</string>

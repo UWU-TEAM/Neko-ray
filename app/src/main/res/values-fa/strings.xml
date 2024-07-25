@@ -315,6 +315,7 @@
     <string name="please_turn_off">لطفا خاموش کن</string>
     <string name="airplane_mode">حالت هواپیما</string>
     <string name="default_airplane_mode_message">شما حالت هواپیما را روشن کرده اید.</string>
+    <string name="neko_setup_config">تنظیمات خود را در اینجا تنظیم کنید!</string>
      
     <string name="homepage_widget_battery_percent">درصد</string>
     <string name="homepage_widget_battery_charge">شارژ کردن</string>

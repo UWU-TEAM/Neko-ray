@@ -313,6 +313,7 @@
     <string name="please_turn_off">電源を切ってください</string>
     <string name="airplane_mode">機内モード</string>
     <string name="default_airplane_mode_message">機内モードがオンになりました。</string>
+    <string name="neko_setup_config">ここで設定をセットアップしてください。</string>
      
     <string name="homepage_widget_battery_percent">パーセント</string>
     <string name="homepage_widget_battery_charge">充電</string>
