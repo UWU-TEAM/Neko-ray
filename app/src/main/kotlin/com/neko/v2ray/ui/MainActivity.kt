@@ -65,7 +65,6 @@ import com.neko.ip.IpLocation
 import com.neko.ip.hostchecker.HostChecker
 import com.neko.nointernet.callbacks.ConnectionCallback
 import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
-import timber.log.Timber
 import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
 import android.os.Handler
@@ -82,7 +81,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
     private var mItemTouchHelper: ItemTouchHelper? = null
-    private var noInternetDialogSignal: NoInternetDialogSignal? = null
     val mainViewModel: MainViewModel by viewModels()
     val TAG = "MainActivity"
 
@@ -94,8 +92,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         setContentView(view)
         title = getString(R.string.app_name)
         setSupportActionBar(binding.toolbar)
-        Timber.d("onCreate")
-        Timber.d("lifecycle.currentState: ${lifecycle.currentState}")
 
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
@@ -167,21 +163,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return color
         }
 
-        noInternetDialogSignal = NoInternetDialogSignal.Builder(
-            this,
-            lifecycle
-        ).apply {
-            dialogProperties.apply {
-                connectionCallback = object : ConnectionCallback { // Optional
-                    override fun hasActiveConnection(hasActiveConnection: Boolean) {
-                        // ...
-                    }
-                }
-                cancelable = false // Optional
-                showInternetOnButtons = true // Optional
-                showAirplaneModeOffButtons = true // Optional
-            }
-        }.build()
+        startNoInternetDialog()
 
         binding.drawerLayout.setNekoDrawerListener(object : NekoDrawerView.NekoDrawerEvents {
             override fun onDrawerOpened(drawerView: View) {
@@ -215,6 +197,24 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setButtonDoNotShowAgain("")
         }
         appUpdaterNotification.start()
+    }
+
+    private fun startNoInternetDialog() {
+        NoInternetDialogSignal.Builder(
+            this,
+            lifecycle
+        ).apply {
+            dialogProperties.apply {
+                connectionCallback = object : ConnectionCallback { // Optional
+                    override fun hasActiveConnection(hasActiveConnection: Boolean) {
+                        // ...
+                    }
+                }
+                cancelable = false // Optional
+                showInternetOnButtons = true // Optional
+                showAirplaneModeOffButtons = true // Optional
+            }
+        }.build()
     }
 
     private fun setupViewModel() {
@@ -783,12 +783,5 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
-    }
-
-    override fun onStart() {
-        super.onStart()
-        Timber.d("onStart")
-        Timber.d("lifecycle.currentState: ${lifecycle.currentState}")
-        noInternetDialogSignal?.show()
     }
 }
