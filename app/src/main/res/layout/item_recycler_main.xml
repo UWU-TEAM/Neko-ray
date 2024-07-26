@@ -128,7 +128,7 @@
                         <ImageView
                             android:layout_width="@dimen/png_height"
                             android:layout_height="@dimen/png_height"
-                            android:src="@drawable/ic_delete_24dp"
+                            android:src="@drawable/ic_delete"
                             app:tint="?attr/colorMainText" />
                     </LinearLayout>
                 </LinearLayout>
