@@ -98,7 +98,7 @@ object AppConfig {
     const val v2rayNGWikiMode = "$v2rayNGUrl/wiki/Mode"
     const val v2rayNGPrivacyPolicy = "https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/CR.md"
     const val PromotionUrl = "https://9.234456.xyz/abc.html?t=1703789826882"
-    const val GeoUrl = "https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/"
+    const val GeoUrl = "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/"
     const val TgChannelUrl = "https://t.me/uwuresourceguide"
     const val DelayTestUrl = "https://www.gstatic.com/generate_204"
 
