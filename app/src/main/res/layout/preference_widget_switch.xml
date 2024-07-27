@@ -6,8 +6,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:kswAnimationDuration="300"
-    app:kswBackDrawable="@drawable/uwu_back_drawable"
-    app:kswThumbDrawable="@drawable/uwu_thumb"
+    app:kswBackDrawable="@drawable/uwu_switch_track"
+    app:kswThumbDrawable="@drawable/uwu_switch_thumb"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:res-auto="http://schemas.android.com/apk/res-auto"
     xmlns:app="http://schemas.android.com/apk/res-auto" />
