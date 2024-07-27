@@ -11,8 +11,10 @@ import (
 	"time"
 
 	"golang.org/x/sys/unix"
-	v2net "github.com/v2fly/v2ray-core/v5/common/net"
-	v2internet "github.com/v2fly/v2ray-core/v5/transport/internet"
+	v2net "github.com/xtls/xray-core/common/net"
+	"github.com/xtls/xray-core/features/dns"
+	"github.com/xtls/xray-core/features/outbound"
+	v2internet "github.com/xtls/xray-core/transport/internet"
 )
 
 type protectSet interface {
@@ -185,7 +187,7 @@ func (d *ProtectedDialer) PrepareDomain(domainName string, closeCh <-chan struct
 			log.Printf("PrepareDomain err: %v\n", err)
 			select {
 			case <-closeCh:
-				log.Printf("PrepareDomain exit due to v2ray closed")
+				log.Printf("PrepareDomain exit due to core closed")
 				return
 			case <-time.After(time.Second * 2):
 			}
@@ -211,6 +213,11 @@ func (d *ProtectedDialer) getFd(network v2net.Network) (fd int, err error) {
 	return
 }
 
+// Init implement internet.SystemDialer
+func (d *ProtectedDialer) Init(_ dns.Client, _ outbound.Manager) {
+	// do nothing
+}
+
 // Dial exported as the protected dial method
 func (d *ProtectedDialer) Dial(ctx context.Context,
 	src v2net.Address, dest v2net.Destination, sockopt *v2internet.SocketConfig) (net.Conn, error) {
@@ -233,9 +240,9 @@ func (d *ProtectedDialer) Dial(ctx context.Context,
 			}
 		}
 
-		if time.Since(d.vServer.lastResolved) > time.Minute*30 {
-			go d.PrepareDomain(Address, nil, d.preferIPv6)
-		}
+		// if time.Since(d.vServer.lastResolved) > time.Minute*30 {
+		// 	go d.PrepareDomain(Address, nil, d.preferIPv6)
+		// }
 
 		fd, err := d.getFd(dest.Network)
 		if err != nil {
@@ -267,6 +274,10 @@ func (d *ProtectedDialer) Dial(ctx context.Context,
 	// use the first resolved address.
 	// the result IP may vary, eg: IPv6 addrs comes first if client has ipv6 address
 	return d.fdConn(ctx, resolved.IPs[0], resolved.Port, fd)
+}
+
+func (d *ProtectedDialer) DestIpAddress() net.IP {
+	return d.vServer.currentIP()
 }
 
 func (d *ProtectedDialer) fdConn(ctx context.Context, ip net.IP, port int, fd int) (net.Conn, error) {

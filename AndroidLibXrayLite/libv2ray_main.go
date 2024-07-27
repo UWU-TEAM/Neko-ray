@@ -16,20 +16,21 @@ import (
 
 	mobasset "golang.org/x/mobile/asset"
 
-	v2core "github.com/v2fly/v2ray-core/v5"
-	v2net "github.com/v2fly/v2ray-core/v5/common/net"
-	v2filesystem "github.com/v2fly/v2ray-core/v5/common/platform/filesystem"
-	v2stats "github.com/v2fly/v2ray-core/v5/features/stats"
-	v2serial "github.com/v2fly/v2ray-core/v5/infra/conf/serial"
-	_ "github.com/v2fly/v2ray-core/v5/main/distro/all"
-	v2internet "github.com/v2fly/v2ray-core/v5/transport/internet"
+	v2net "github.com/xtls/xray-core/common/net"
+	v2filesystem "github.com/xtls/xray-core/common/platform/filesystem"
+	v2core "github.com/xtls/xray-core/core"
+	v2stats "github.com/xtls/xray-core/features/stats"
+	v2serial "github.com/xtls/xray-core/infra/conf/serial"
+	_ "github.com/xtls/xray-core/main/distro/all"
+	v2internet "github.com/xtls/xray-core/transport/internet"
 
-	v2applog "github.com/v2fly/v2ray-core/v5/app/log"
-	v2commlog "github.com/v2fly/v2ray-core/v5/common/log"
+	v2applog "github.com/xtls/xray-core/app/log"
+	v2commlog "github.com/xtls/xray-core/common/log"
 )
 
 const (
-	v2Asset = "v2ray.location.asset"
+	v2Asset     = "xray.location.asset"
+	xudpBaseKey = "xray.xudp.basekey"
 )
 
 /*
@@ -135,14 +136,14 @@ func (v *V2RayPoint) shutdownInit() {
 }
 
 func (v *V2RayPoint) pointloop() error {
-	log.Println("loading v2ray config")
+	log.Println("loading core config")
 	config, err := v2serial.LoadJSONConfig(strings.NewReader(v.ConfigureFileContent))
 	if err != nil {
 		log.Println(err)
 		return err
 	}
 
-	log.Println("new v2ray core")
+	log.Println("new core")
 	v.Vpoint, err = v2core.New(config)
 	if err != nil {
 		v.Vpoint = nil
@@ -151,7 +152,7 @@ func (v *V2RayPoint) pointloop() error {
 	}
 	v.statsManager = v.Vpoint.GetFeature(v2stats.ManagerType()).(v2stats.Manager)
 
-	log.Println("start v2ray core")
+	log.Println("start core")
 	v.IsRunning = true
 	if err := v.Vpoint.Start(); err != nil {
 		v.IsRunning = false
@@ -181,11 +182,14 @@ func (v *V2RayPoint) MeasureDelay(url string) (int64, error) {
 }
 
 // InitV2Env set v2 asset path
-func InitV2Env(envPath string) {
+func InitV2Env(envPath string, key string) {
 	//Initialize asset API, Since Raymond Will not let notify the asset location inside Process,
 	//We need to set location outside V2Ray
 	if len(envPath) > 0 {
 		os.Setenv(v2Asset, envPath)
+	}
+	if len(key) > 0 {
+		os.Setenv(xudpBaseKey, key)
 	}
 
 	//Now we handle read, fallback to gomobile asset (apk assets)
@@ -206,9 +210,9 @@ func MeasureOutboundDelay(ConfigureFileContent string, url string) (int64, error
 
 	// dont listen to anything for test purpose
 	config.Inbound = nil
-	config.Transport = nil
+	// config.App: (fakedns), log, dispatcher, InboundConfig, OutboundConfig, (stats), router, dns, (policy)
 	// keep only basic features
-	config.App = config.App[:4]
+	config.App = config.App[:5]
 
 	inst, err := v2core.New(config)
 	if err != nil {
@@ -245,7 +249,7 @@ This func will return libv2ray binding version and V2Ray version used.
 */
 func CheckVersionX() string {
 	var version = 27
-	return fmt.Sprintf("Lib v%d, V2fly-core v%s", version, v2core.Version())
+	return fmt.Sprintf("Lib v%d, Xray-core v%s", version, v2core.Version())
 }
 
 func measureInstDelay(ctx context.Context, inst *v2core.Instance, url string) (int64, error) {
@@ -279,6 +283,7 @@ func measureInstDelay(ctx context.Context, inst *v2core.Instance, url string) (i
 	if err != nil {
 		return -1, err
 	}
+
 	if resp.StatusCode != http.StatusOK && resp.StatusCode != http.StatusNoContent {
 		return -1, fmt.Errorf("status != 20x: %s", resp.Status)
 	}

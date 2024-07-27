@@ -9,7 +9,7 @@ import (
 	"testing"
 	"time"
 
-	v2net "github.com/v2fly/v2ray-core/v5/common/net"
+	v2net "github.com/xtls/xray-core/common/net"
 )
 
 type fakeSupportSet struct{}
