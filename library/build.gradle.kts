@@ -48,11 +48,11 @@ android {
 }
 
 dependencies {
-    implementation("androidx.core:core-ktx:1.13.1")
-    implementation("androidx.appcompat:appcompat:1.7.0")
-    implementation("androidx.preference:preference-ktx:1.2.1")
-    implementation("com.google.android.material:material:1.12.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-    implementation("org.jsoup:jsoup:1.18.1")
+    implementation(libs.core.ktx)
+    implementation(libs.appcompat)
+    implementation(libs.preference.ktx)
+    implementation(libs.material)
+    implementation(libs.constraintlayout)
+    implementation(libs.okhttp)
+    implementation(libs.jsoup)
 }
