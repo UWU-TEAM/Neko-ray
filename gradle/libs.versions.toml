@@ -31,7 +31,7 @@ rxjava = "1.3.8"
 rxpermissions = "0.9.4"
 toastcompat = "1.1.0"
 viewpager2 = "1.1.0"
-workRuntimeKtx = "2.8.1"
+workRuntimeKtx = "2.9.0"
 webkit = "1.11.0"
 
 [libraries]
