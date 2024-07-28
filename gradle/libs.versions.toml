@@ -73,6 +73,7 @@ rxpermissions = { module = "com.tbruyelle.rxpermissions:rxpermissions", version.
 toastcompat = { module = "me.drakeet.support:toastcompat", version.ref = "toastcompat" }
 viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
 work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = "workRuntimeKtx" }
+work-runtime = { module = "androidx.work:work-runtime", version.ref = "workRuntimeKtx" }
 work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 webkit = { module = "androidx.webkit:webkit", version.ref = "webkit" }
 

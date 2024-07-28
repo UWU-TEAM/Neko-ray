@@ -192,6 +192,7 @@ dependencies {
     implementation(libs.core)
 
     implementation(libs.work.runtime.ktx)
+    implementation(libs.work.runtime)
     implementation(libs.work.multiprocess)
 
     // Misc
