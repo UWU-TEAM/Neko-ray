@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: V2Ray程序问题
+  - name: V2Ray Procedural issues
     url: https://github.com/v2fly/v2ray-core/
-    about: 如果您有V2Ray而非v2rayNG的问题，请至这个链接讨论。
+    about: If you have a question about V2Ray instead of v2rayNG, please go to this link to discuss.

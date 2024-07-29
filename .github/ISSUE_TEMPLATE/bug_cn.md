@@ -1,34 +1,34 @@
 ---
-name: v2rayNG程序问题
-about: 创建一个报告来帮助我们改进
+name: Neko-vray program issues
+about: Create a report to help us improve
 ---
 
-在提出问题前请先自行排除服务器端问题，同时也请通过搜索确认是否有人提出过相同问题。
+Please troubleshoot server-side issues yourself before raising a question, and also search to see if anyone else has asked the same question.
 
 
-### 预期行为
-描述你认为应该发生什么
+### Expected behavior
+Describe what you think should happen
 
-### 实际行为
-描述实际发生了什么
+### Actual behavior
+Describe what actually happened
 
-### 复现方法
+### Reproduction method
 1.
 2.
 3.
 
-### 日志信息
+### Log information
 <details>
 
-通过`adb logcat -s com.v2ray.ang GoLog V2rayConfigUtilGoLog Main`获取日志。请自行删减日志中可能出现的敏感信息。
+pass `adb logcat -s com.v2ray.ang GoLog V2rayConfigUtilGoLog Main` Get the log. Please delete any sensitive information that may appear in the log.
 
-如果问题可重现，建议先执行`adb logcat -c`清空系统日志再执行上述命令，再操作重现问题。
+If the problem can be reproduced, it is recommended to execute `adb logcat -c` Clear the system log and then execute the above command to reproduce the problem.
 ```
-在这里粘贴日志
+Paste log here
 ```
 </details>
 
-### 环境信息
+### Environmental Information
 
-### 额外信息（可选）
+### Additional information (optional)
 
