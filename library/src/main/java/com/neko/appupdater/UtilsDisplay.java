@@ -12,7 +12,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.media.RingtoneManager;
 import androidx.core.app.NotificationCompat;
-import android.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 import android.view.View;
 import android.webkit.WebView;
 import com.neko.R;
