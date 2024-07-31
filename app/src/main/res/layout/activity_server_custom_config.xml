@@ -283,6 +283,7 @@
                                 android:layout_margin="@dimen/layout_margin_spacing"
                                 android:text="@string/server_lab_content" />
                             <com.blacksquircle.ui.editorkit.widget.TextProcessor
+                                android:backgroundTint="?attr/colorCard"
                                 android:gravity="start|center|top"
                                 android:id="@+id/editor"
                                 android:layout_width="match_parent"

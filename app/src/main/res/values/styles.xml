@@ -115,7 +115,7 @@
         <item name="android:windowBackground">@drawable/uwu_dialog_bg</item>
         <item name="android:windowAnimationStyle">@style/uwu_modder_app_anim</item>
         <item name="android:windowMinWidthMajor">55.000008%</item>
-        <item name="android:windowMinWidthMinor">90.00001%</item>
+        <item name="android:windowMinWidthMinor">87.00001%</item>
         <item name="android:windowElevation">@dimen/m3_sys_elevation_level1</item>
     </style>
 
@@ -164,21 +164,36 @@
     
     <style name="Uwu.Material3.MaterialAlertDialog" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog">
         <item name="android:windowAnimationStyle">@style/uwu_modder_app_anim</item>
+        <item name="android:windowMinWidthMajor">65.000008%</item>
+        <item name="android:windowMinWidthMinor">95.00001%</item>
         <item name="android:checkedTextViewStyle">@style/Widget.Material3.CheckedTextView</item>
         <item name="android:windowElevation">@dimen/m3_alert_dialog_elevation</item>
         <item name="alertDialogStyle">@style/Uwu.Base.AlertDialog</item>
-        <item name="buttonBarButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
-        <item name="buttonBarNegativeButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
-        <item name="buttonBarNeutralButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog.Flush</item>
-        <item name="buttonBarPositiveButtonStyle">@style/Widget.Material3.Button.TextButton.Dialog</item>
-        <item name="materialAlertDialogBodyTextStyle">@style/MaterialAlertDialog.Material3.Body.Text</item>
+        <item name="buttonBarButtonStyle">@style/Uwu.TextButton.Dialog.Material3</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Uwu.TextButton.Dialog.Material3</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Uwu.TextButton.Dialog.Flush.Material3</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Uwu.TextButton.Dialog.Material3</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/Uwu.Dialog.Body.Text.Material3</item>
         <item name="materialAlertDialogTitleIconStyle">@style/MaterialAlertDialog.Material3.Title.Icon</item>
         <item name="materialAlertDialogTitlePanelStyle">@style/MaterialAlertDialog.Material3.Title.Panel</item>
         <item name="materialAlertDialogTitleTextStyle">@style/MaterialAlertDialog.Material3.Title.Text</item>
     </style>
     
+    <style name="Uwu.Dialog.Body.Text.Material3" parent="@style/MaterialAlertDialog.Material3.Body.Text">
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+    
+    <style name="Uwu.TextButton.Dialog.Material3" parent="@style/Widget.Material3.Button.TextButton.Dialog">
+        <item name="android:textSize">14sp</item>
+    </style>
+    
+    <style name="Uwu.TextButton.Dialog.Flush.Material3" parent="@style/Widget.Material3.Button.TextButton.Dialog.Flush">
+        <item name="android:textSize">14sp</item>
+    </style>
+    
     <style name="Uwu.Base.AlertDialog" parent="@style/MaterialAlertDialog.MaterialComponents">
-        <item name="android:layout">@layout/m3_alert_dialog</item>
+        <item name="android:layout">@layout/abc_alert_dialog_material</item>
         <item name="backgroundTint">@color/uwu_bg_dialog</item>
         <item name="enforceMaterialTheme">true</item>
         <item name="shapeAppearance">?shapeAppearanceCornerExtraLarge</item>
