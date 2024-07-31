@@ -33,11 +33,13 @@ import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.ID_MAIN
 import com.neko.v2ray.util.MmkvManager.KEY_SELECTED_SERVER
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.Utils.getIpv6Address
 
 class ServerActivity : BaseActivity() {
 
+    private lateinit var softInputAssist: SoftInputAssist
     private val mainStorage by lazy { MMKV.mmkvWithID(ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
     private val settingsStorage by lazy {
         MMKV.mmkvWithID(
@@ -252,6 +254,7 @@ class ServerActivity : BaseActivity() {
         } else {
             clearServer()
         }
+        softInputAssist = SoftInputAssist(this)
     }
 
     /**
@@ -650,5 +653,20 @@ class ServerActivity : BaseActivity() {
         }
 
         else -> super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        softInputAssist.onResume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
     }
 }

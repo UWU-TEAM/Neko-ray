@@ -34,6 +34,7 @@ import java.util.HashMap;
 import java.util.regex.*;
 import org.json.*;
 import com.neko.v2ray.ui.*;
+import com.neko.v2ray.util.SoftInputAssist;
 import com.neko.v2ray.R;
 
 import androidx.appcompat.widget.Toolbar;
@@ -60,12 +61,14 @@ public class HostToIpActivity extends BaseActivity {
 	
 	private RequestNetwork anichan;
 	private RequestNetwork.RequestListener _anichan_request_listener;
+	private SoftInputAssist softInputAssist;
 	
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.host_to_ip);
 		initialize(_savedInstanceState);
+		softInputAssist = new SoftInputAssist(this);
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
@@ -195,4 +198,22 @@ public class HostToIpActivity extends BaseActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
+
+    @Override
+    protected void onResume() {
+        softInputAssist.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        softInputAssist.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        softInputAssist.onDestroy();
+        super.onDestroy();
+    }
 }

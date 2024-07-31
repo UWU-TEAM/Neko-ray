@@ -16,6 +16,7 @@ import android.widget.Spinner
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import com.neko.v2ray.ui.BaseActivity
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.R
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import java.net.HttpURLConnection
@@ -39,15 +40,18 @@ class HostChecker : BaseActivity() {
     private lateinit var proxy: EditText
     private lateinit var sp: SharedPreferences
     private lateinit var spinner: Spinner
+    private lateinit var softInputAssist: SoftInputAssist
 
     private fun initialize(bundle: Bundle?) {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        softInputAssist = SoftInputAssist(this)
     }
 
     override fun onPause() {
+        softInputAssist.onPause()
         super.onPause()
         Log.v(TAG, "onPause()")
         savePreferences("hostChecker", bugHost.text.toString().trim())
@@ -60,6 +64,7 @@ class HostChecker : BaseActivity() {
     }
 
     override fun onResume() {
+        softInputAssist.onResume()
         super.onResume()
         if (!::sp.isInitialized) {
             sp = PreferenceManager.getDefaultSharedPreferences(this)
@@ -69,6 +74,7 @@ class HostChecker : BaseActivity() {
     }
 
     override fun onDestroy() {
+        softInputAssist.onDestroy()
         super.onDestroy()
     }
 

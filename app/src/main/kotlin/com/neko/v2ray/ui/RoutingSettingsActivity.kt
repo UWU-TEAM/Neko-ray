@@ -9,9 +9,11 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.databinding.ActivityRoutingSettingsBinding
+import com.neko.v2ray.util.SoftInputAssist
 
 class RoutingSettingsActivity : BaseActivity() {
     private lateinit var binding: ActivityRoutingSettingsBinding
+    private lateinit var softInputAssist: SoftInputAssist
 
     private val titles: Array<out String> by lazy {
         resources.getStringArray(R.array.routing_tag)
@@ -39,5 +41,21 @@ class RoutingSettingsActivity : BaseActivity() {
         TabLayoutMediator(binding.tablayout, binding.viewpager) { tab, position ->
             tab.text = titles[position]
         }.attach()
+        softInputAssist = SoftInputAssist(this)
+    }
+
+    override fun onResume() {
+        softInputAssist.onResume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
     }
 }

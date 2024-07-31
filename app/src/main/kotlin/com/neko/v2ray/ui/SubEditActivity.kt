@@ -22,11 +22,13 @@ import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.service.SubscriptionUpdater
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import java.util.concurrent.TimeUnit
 
 class SubEditActivity : BaseActivity() {
     private lateinit var binding: ActivitySubEditBinding
+    private lateinit var softInputAssist: SoftInputAssist
 
     var del_config: MenuItem? = null
     var save_config: MenuItem? = null
@@ -51,6 +53,7 @@ class SubEditActivity : BaseActivity() {
         } else {
             clearServer()
         }
+        softInputAssist = SoftInputAssist(this)
     }
 
     /**
@@ -150,4 +153,18 @@ class SubEditActivity : BaseActivity() {
         else -> super.onOptionsItemSelected(item)
     }
 
+    override fun onResume() {
+        softInputAssist.onResume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
+    }
 }

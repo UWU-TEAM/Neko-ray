@@ -15,11 +15,13 @@ import com.neko.v2ray.databinding.ActivityUserAssetUrlBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import java.io.File
 
 class UserAssetUrlActivity : BaseActivity() {
     private lateinit var binding: ActivityUserAssetUrlBinding
+    private lateinit var softInputAssist: SoftInputAssist
 
     var del_config: MenuItem? = null
     var save_config: MenuItem? = null
@@ -45,6 +47,7 @@ class UserAssetUrlActivity : BaseActivity() {
         } else {
             clearAsset()
         }
+        softInputAssist = SoftInputAssist(this)
     }
 
     /**
@@ -151,5 +154,20 @@ class UserAssetUrlActivity : BaseActivity() {
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        softInputAssist.onResume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
     }
 }

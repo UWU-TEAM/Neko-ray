@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.neko.v2ray.R;
 import com.neko.v2ray.ui.BaseActivity;
+import com.neko.v2ray.util.SoftInputAssist;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -44,6 +45,7 @@ public class IpLocation extends BaseActivity {
     private TextView textview7;
     private TextView textview8;
     private TextView textview9;
+    private SoftInputAssist softInputAssist;
 
     private void initialize(Bundle bundle) {
         linear1 = findViewById(getUwU("linear1", "id"));
@@ -109,6 +111,7 @@ public class IpLocation extends BaseActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initialize(bundle);
         initializeLogic();
+        softInputAssist = new SoftInputAssist(this);
     }
 
     public int getUwU(String str, String str2) {
@@ -122,5 +125,23 @@ public class IpLocation extends BaseActivity {
     public void _Aniqlash(String str) {
         req.setHeaders(Map);
         req.startRequestNetwork("GET", "https://ipinfo.io/" + str + "/geo", "", _req_request_listener);
+    }
+
+    @Override
+    protected void onResume() {
+        softInputAssist.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        softInputAssist.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        softInputAssist.onDestroy();
+        super.onDestroy();
     }
 }

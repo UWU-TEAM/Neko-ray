@@ -20,11 +20,13 @@ import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
 class ServerCustomConfigActivity : BaseActivity() {
     private lateinit var binding: ActivityServerCustomConfigBinding
+    private lateinit var softInputAssist: SoftInputAssist
 
     private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
     private val serverRawStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SERVER_RAW, MMKV.MULTI_PROCESS_MODE) }
@@ -56,6 +58,7 @@ class ServerCustomConfigActivity : BaseActivity() {
         } else {
             clearServer()
         }
+        softInputAssist = SoftInputAssist(this)
     }
 
     /**
@@ -153,5 +156,20 @@ class ServerCustomConfigActivity : BaseActivity() {
             true
         }
         else -> super.onOptionsItemSelected(item)
+    }
+
+    override fun onResume() {
+        softInputAssist.onResume()
+        super.onResume()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
     }
 }

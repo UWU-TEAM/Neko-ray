@@ -16,12 +16,14 @@ import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.SoftInputAssist
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SubSettingActivity : BaseActivity() {
     private lateinit var binding: ActivitySubSettingBinding
+    private lateinit var softInputAssist: SoftInputAssist
 
     var subscriptions: List<Pair<String, SubscriptionItem>> = listOf()
     private val adapter by lazy { SubSettingRecyclerAdapter(this) }
@@ -40,12 +42,25 @@ class SubSettingActivity : BaseActivity() {
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
+
+        softInputAssist = SoftInputAssist(this)
     }
 
     override fun onResume() {
+        softInputAssist.onResume()
         super.onResume()
         subscriptions = MmkvManager.decodeSubscriptions()
         adapter.notifyDataSetChanged()
+    }
+
+    override fun onPause() {
+        softInputAssist.onPause()
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        softInputAssist.onDestroy()
+        super.onDestroy()
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
