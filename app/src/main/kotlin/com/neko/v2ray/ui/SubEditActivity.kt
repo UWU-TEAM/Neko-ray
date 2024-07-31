@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.appcompat.widget.Toolbar
 import androidx.work.Constraints
 import androidx.work.ExistingPeriodicWorkPolicy
@@ -113,7 +113,7 @@ class SubEditActivity : BaseActivity() {
      */
     private fun deleteServer(): Boolean {
         if (editSubId.isNotEmpty()) {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
                         MmkvManager.removeSubscription(editSubId)
                         finish()

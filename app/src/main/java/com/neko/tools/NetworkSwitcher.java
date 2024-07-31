@@ -2,7 +2,7 @@ package com.neko.tools;
 
 import android.os.Bundle;
 import android.content.Intent;
-import android.app.AlertDialog.Builder;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import android.content.DialogInterface;
 import android.net.Uri;
 import com.neko.v2ray.ui.BaseActivity;
@@ -30,7 +30,7 @@ public class NetworkSwitcher extends BaseActivity
                 finish();
             } catch (Exception e2)
             {
-                Builder ErrorMessage = new Builder(this);
+                MaterialAlertDialogBuilder ErrorMessage = new MaterialAlertDialogBuilder(this);
                 ErrorMessage.setMessage("Sorry, this feature is not available for your device.");
                 ErrorMessage.setPositiveButton("I UNDERSTAND", new DialogInterface.OnClickListener()
                 {

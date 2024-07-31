@@ -111,12 +111,12 @@
 
     <style name="Theme.Base.AlertDialog" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
         <item name="android:colorBackground">@drawable/uwu_dialog_bg</item>
-        <item name="android:backgroundDimAmount">@dimen/m3_comp_scrim_container_opacity</item>
+        <item name="android:backgroundDimAmount">0.50</item>
         <item name="android:windowBackground">@drawable/uwu_dialog_bg</item>
         <item name="android:windowAnimationStyle">@style/uwu_modder_app_anim</item>
-        <item name="android:windowMinWidthMajor">55.0%</item>
+        <item name="android:windowMinWidthMajor">55.000008%</item>
         <item name="android:windowMinWidthMinor">90.00001%</item>
-        <item name="android:windowElevation">@dimen/m3_alert_dialog_elevation</item>
+        <item name="android:windowElevation">@dimen/m3_sys_elevation_level1</item>
     </style>
 
     <style name="uwu_modder_app_anim" parent="@style/uwu_modder_app">

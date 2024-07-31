@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.appcompat.widget.Toolbar
 import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
@@ -113,7 +113,7 @@ class ServerCustomConfigActivity : BaseActivity() {
      */
     private fun deleteServer(): Boolean {
         if (editGuid.isNotEmpty()) {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
                         MmkvManager.removeServer(editGuid)
                         finish()

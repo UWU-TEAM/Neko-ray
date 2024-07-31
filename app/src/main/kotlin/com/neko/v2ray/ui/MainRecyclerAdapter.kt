@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
@@ -107,7 +107,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             holder.itemMainBinding.tvStatistics.text = strState
 
             holder.itemMainBinding.layoutShare.setOnClickListener {
-                AlertDialog.Builder(mActivity).setItems(shareOptions.toTypedArray()) { _, i ->
+                MaterialAlertDialogBuilder(mActivity).setItems(shareOptions.toTypedArray()) { _, i ->
                     try {
                         when (i) {
                             0 -> {
@@ -116,7 +116,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                                 } else {
                                     val ivBinding = ItemQrcodeBinding.inflate(LayoutInflater.from(mActivity))
                                     ivBinding.ivQcode.setImageBitmap(AngConfigManager.share2QRCode(guid))
-                                    AlertDialog.Builder(mActivity).setView(ivBinding.root).show()
+                                    MaterialAlertDialogBuilder(mActivity).setView(ivBinding.root).show()
                                 }
                             }
                             1 -> {
@@ -147,7 +147,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             holder.itemMainBinding.layoutRemove.setOnClickListener {
                 if (guid != mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)) {
                     if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
-                        AlertDialog.Builder(mActivity).setMessage(R.string.del_config_comfirm)
+                        MaterialAlertDialogBuilder(mActivity).setMessage(R.string.del_config_comfirm)
                             .setPositiveButton(android.R.string.ok) { _, _ ->
                                 removeServer(guid, position)
                             }

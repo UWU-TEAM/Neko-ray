@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.neko.v2ray.R
@@ -60,7 +60,7 @@ class SubSettingActivity : BaseActivity() {
         }
 
         R.id.sub_update -> {
-            val dialog = AlertDialog.Builder(this)
+            val dialog = MaterialAlertDialogBuilder(this)
                 .setView(LayoutProgressBinding.inflate(layoutInflater).root)
                 .setCancelable(false)
                 .show()

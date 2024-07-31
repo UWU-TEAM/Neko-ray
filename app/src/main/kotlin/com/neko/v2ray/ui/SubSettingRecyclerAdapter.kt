@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.R
@@ -60,7 +60,7 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
             holder.itemSubSettingBinding.layoutShare.visibility = View.INVISIBLE
         } else {
             holder.itemSubSettingBinding.layoutShare.setOnClickListener {
-                AlertDialog.Builder(mActivity)
+                MaterialAlertDialogBuilder(mActivity)
                     .setItems(share_method.asList().toTypedArray()) { _, i ->
                         try {
                             when (i) {
@@ -73,7 +73,7 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
 
                                         )
                                     )
-                                    AlertDialog.Builder(mActivity).setView(ivBinding.root).show()
+                                    MaterialAlertDialogBuilder(mActivity).setView(ivBinding.root).show()
                                 }
 
                                 1 -> {

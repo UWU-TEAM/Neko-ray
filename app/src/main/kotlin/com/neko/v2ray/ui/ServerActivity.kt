@@ -12,7 +12,7 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.appcompat.widget.Toolbar
 import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -601,7 +601,7 @@ class ServerActivity : BaseActivity() {
         if (editGuid.isNotEmpty()) {
             if (editGuid != mainStorage?.decodeString(KEY_SELECTED_SERVER)) {
                 if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
-                    AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+                    MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                         .setPositiveButton(android.R.string.ok) { _, _ ->
                             MmkvManager.removeServer(editGuid)
                             finish()

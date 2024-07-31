@@ -18,7 +18,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.ActionBarDrawerToggle
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import androidx.lifecycle.lifecycleScope
@@ -359,7 +359,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         R.id.del_all_config -> {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
                         MmkvManager.removeAllServer()
                         mainViewModel.reloadServerList()
@@ -371,7 +371,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
         R.id.del_duplicate_config-> {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     mainViewModel.removeDuplicateServer()
                     mainViewModel.reloadServerList()
@@ -383,7 +383,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
         R.id.del_invalid_config -> {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     MmkvManager.removeInvalidServer()
                     mainViewModel.reloadServerList()
@@ -468,7 +468,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun importBatchConfig(server: String?) {
-        val dialog = AlertDialog.Builder(this)
+        val dialog = MaterialAlertDialogBuilder(this)
             .setView(LayoutProgressBinding.inflate(layoutInflater).root)
             .setCancelable(false)
             .show()
@@ -563,7 +563,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
      * import config from sub
      */
     private fun importConfigViaSub() : Boolean {
-        val dialog = AlertDialog.Builder(this)
+        val dialog = MaterialAlertDialogBuilder(this)
             .setView(LayoutProgressBinding.inflate(layoutInflater).root)
             .setCancelable(false)
             .show()
@@ -632,7 +632,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun keluar() {
-        val builder = AlertDialog.Builder(this)
+        val builder = MaterialAlertDialogBuilder(this)
         builder.setMessage(R.string.uwu_exit_message)
             .setCancelable(false) // tidak bisa tekan tombol back
             // jika pilih yes

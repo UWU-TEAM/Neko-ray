@@ -11,7 +11,7 @@ import android.os.Build
 import android.util.Log
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -225,7 +225,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         )
         ivBinding.spSubscriptionId.setSelection(checkedItem)
         ivBinding.etKeyword.text = Utils.getEditable(keywordFilter)
-        val builder = AlertDialog.Builder(context).setView(ivBinding.root)
+        val builder = MaterialAlertDialogBuilder(context).setView(ivBinding.root)
         builder.setPositiveButton(R.string.tasker_setting_confirm) { dialogInterface: DialogInterface?, _: Int ->
             try {
                 val position = ivBinding.spSubscriptionId.selectedItemPosition

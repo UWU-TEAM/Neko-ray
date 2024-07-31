@@ -1,13 +1,13 @@
 package com.neko.changelog
 
 import android.app.Activity
-import android.app.AlertDialog
 import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.XmlResourceParser
 import android.text.format.DateFormat
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.RecyclerView
 import org.xmlpull.v1.XmlPullParser
 import org.xmlpull.v1.XmlPullParserException

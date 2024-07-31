@@ -6,7 +6,7 @@ import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.widget.Toolbar
-import androidx.appcompat.app.AlertDialog
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
@@ -116,7 +116,7 @@ class UserAssetUrlActivity : BaseActivity() {
      */
     private fun deleteServer(): Boolean {
         if (editAssetId.isNotEmpty()) {
-            AlertDialog.Builder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     MmkvManager.removeAssetUrl(editAssetId)
                     finish()

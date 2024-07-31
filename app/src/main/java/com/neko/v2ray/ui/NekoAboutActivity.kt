@@ -10,7 +10,6 @@ import android.view.View
 import android.webkit.WebView
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import com.google.android.material.appbar.CollapsingToolbarLayout

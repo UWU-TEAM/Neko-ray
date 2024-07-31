@@ -13,6 +13,6 @@
     <color name="colorMainTestBg">#222222</color>
 
     <color name="colorText_ActionBar">#aa000000</color>
-    <color name="uwu_bg">#ff000000</color>
-    <color name="uwu_bg_card">#ff131313</color>
+    <color name="uwu_bg">@color/m3_sys_color_dark_background</color>
+    <color name="uwu_bg_card">#ff21272b</color>
 </resources>
