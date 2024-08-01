@@ -88,6 +88,8 @@ object AppConfig {
     const val TAG_DIRECT = "direct"
     const val TAG_BLOCKED = "block"
     const val TAG_FRAGMENT = "fragment"
+    const val UPLINK = "uplink"
+    const val DOWNLINK = "downlink"
 
     const val androidpackagenamelistUrl =
         "https://raw.githubusercontent.com/2dust/androidpackagenamelist/master/proxy.txt"
@@ -129,6 +131,9 @@ object AppConfig {
     const val MSG_MEASURE_CONFIG = 7
     const val MSG_MEASURE_CONFIG_SUCCESS = 71
     const val MSG_MEASURE_CONFIG_CANCEL = 72
+
+    const val CHANNEL_ID = "RAY_NG_M_CH_ID"
+    const val CHANNEL_NAME = "V2rayNG Background Service"
 
     // UWU
     const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json"
