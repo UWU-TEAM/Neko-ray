@@ -167,12 +167,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.drawerLayout.setNekoDrawerListener(object : NekoDrawerView.NekoDrawerEvents {
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
-                Log.d(TAG, "Drawer Opened")
             }
 
             override fun onDrawerClosed(drawerView: View) {
                 super.onDrawerClosed(drawerView)
-                Log.d(TAG, "Drawer closed")
             }
         })
         // Show new update with dialog
