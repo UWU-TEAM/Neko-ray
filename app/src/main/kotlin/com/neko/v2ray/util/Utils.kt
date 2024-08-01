@@ -42,9 +42,6 @@ object Utils {
     fun getEditable(text: String?): Editable {
         return Editable.Factory.getInstance().newEditable(text?:"")
     }
-    fun getEditable1(hint: String?): Editable {
-        return Editable.Factory.getInstance().newEditable(hint?:"")
-    }
 
     /**
      * find value in array position
@@ -459,6 +456,15 @@ object Utils {
     fun getDelayTestUrl(): String {
         val url = settingsStorage.decodeString(AppConfig.PREF_DELAY_TEST_URL)
         return if (url.isNullOrEmpty()) AppConfig.DelayTestUrl else url
+    }
+
+    fun getDelayTestUrl(second: Boolean = false): String {
+        return if (second) {
+            AppConfig.DelayTestUrl2
+        } else {
+            val url = settingsStorage.decodeString(AppConfig.PREF_DELAY_TEST_URL)
+            if (url.isNullOrEmpty()) AppConfig.DelayTestUrl else url
+        }
     }
 }
 

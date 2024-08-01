@@ -176,7 +176,7 @@ class ServerActivity : BaseActivity() {
                     et_path?.text = Utils.getEditable(transportDetails[2])
                 }
 
-                tv_request_host?.hint = Utils.getEditable1(
+                tv_request_host?.text = Utils.getEditable(
                     getString(
                         when (networks[position]) {
                             "tcp" -> R.string.server_lab_request_host_http
@@ -191,7 +191,7 @@ class ServerActivity : BaseActivity() {
                     )
                 )
 
-                tv_path?.hint = Utils.getEditable1(
+                tv_path?.text = Utils.getEditable(
                     getString(
                         when (networks[position]) {
                             "kcp" -> R.string.server_lab_path_kcp

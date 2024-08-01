@@ -6,8 +6,7 @@
     <color name="colorSelected">#FFFFFF</color>
     <color name="colorUnselected">@android:color/transparent</color>
 
-    <color name="colorPrimary">#222222</color>
-    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorPrimary">#212121</color>
     <color name="colorAccent">#FFFFFF</color>
     <color name="colorText">#FFFFFF</color>
     <color name="colorMainTestBg">#222222</color>

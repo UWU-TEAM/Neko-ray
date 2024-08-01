@@ -5,9 +5,9 @@ import android.graphics.Color
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.R
@@ -15,7 +15,6 @@ import com.neko.v2ray.databinding.ItemQrcodeBinding
 import com.neko.v2ray.databinding.ItemRecyclerSubSettingBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.QRCodeDecoder
 import com.neko.v2ray.util.Utils
@@ -38,7 +37,7 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
         holder.itemSubSettingBinding.tvName.text = subItem.remarks
         holder.itemSubSettingBinding.tvUrl.text = subItem.url
         if (subItem.enabled) {
-            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.color.colorSelected)
+            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.color.colorAccent)
         } else {
             holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.color.uwu_transparent)
         }

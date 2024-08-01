@@ -8,7 +8,11 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/sub_update"
+<<<<<<< HEAD:app/src/main/res/menu/action_sub_setting.xml
         android:icon="@drawable/ic_uwu_refresh"
+=======
+        android:icon="@drawable/ic_restore_24dp"
+>>>>>>> 162e156b33689b1cae26ec588ee2cd96d3429a47:V2rayNG/app/src/main/res/menu/action_sub_setting.xml
         android:title="@string/title_sub_update"
         app:showAsAction="always" />
 </menu>

@@ -154,16 +154,6 @@ class SettingsActivity : BaseActivity() {
                 configureUpdateTask(nval.toLong())
                 true
             }
-            remoteDns?.setOnPreferenceChangeListener { _, any ->
-                val nval = any as String
-                remoteDns?.summary = if (nval == "") AppConfig.DNS_PROXY else nval
-                true
-            }
-            domesticDns?.setOnPreferenceChangeListener { _, any ->
-                val nval = any as String
-                domesticDns?.summary = if (nval == "") AppConfig.DNS_DIRECT else nval
-                true
-            }
             socksPort?.setOnPreferenceChangeListener { _, any ->
                 val nval = any as String
                 socksPort?.summary = if (TextUtils.isEmpty(nval)) AppConfig.PORT_SOCKS else nval
