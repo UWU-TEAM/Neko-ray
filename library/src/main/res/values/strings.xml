@@ -18,4 +18,6 @@
     <string name="appupdater_btn_disable">Don\'t show again</string>
     <string name="appupdater_btn_dismiss">Dismiss</string>
     <string name="appupdater_channel_name">Update notifications</string>
+
+    <string name="left">LEFT</string>
 </resources>

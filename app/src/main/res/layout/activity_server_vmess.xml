@@ -97,12 +97,16 @@
                                 app:cardCornerRadius="19.0dip"
                                 app:cardElevation="0.0dip"
                                 app:rippleColor="#00000000">
-                                <ImageView
+                                <com.neko.imageslider.ImageSlider
+                                    android:id="@+id/image_slider"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:src="@drawable/uwu_banner_image_3"
-                                    android:scaleType="centerCrop"
-                                    android:elevation="0.0dip" />
+                                    android:layout_height="match_parent"
+                                    app:iss_auto_cycle="true"
+                                    app:iss_period="3000"
+                                    app:iss_delay="3000"
+                                    app:iss_text_align="CENTER"
+                                    app:iss_text_color="#00000000"
+                                    app:iss_no_dots="true"/>
                                 <View
                                     android:background="@android:color/black"
                                     android:layout_width="match_parent"

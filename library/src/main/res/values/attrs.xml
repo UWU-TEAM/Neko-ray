@@ -88,4 +88,20 @@
         <attr name="civ_border_overlay" format="boolean" />
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
+
+    <declare-styleable name="ImageSlider">
+        <attr name="iss_auto_cycle" format="boolean" />
+        <attr name="iss_corner_radius" format="integer" />
+        <attr name="iss_period" format="integer" />
+        <attr name="iss_delay" format="integer" />
+        <attr name="iss_placeholder" format="reference" />
+        <attr name="iss_error_image" format="reference" />
+        <attr name="iss_selected_dot" format="reference" />
+        <attr name="iss_unselected_dot" format="reference" />
+        <attr name="iss_title_background" format="reference" />
+        <attr name="iss_text_align" format="string"/>
+        <attr name="iss_indicator_align" format="string"/>
+        <attr name="iss_no_dots" format="boolean" />
+        <attr name="iss_text_color" format="string"/>
+    </declare-styleable>
 </resources>

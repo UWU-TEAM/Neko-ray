@@ -55,4 +55,5 @@ dependencies {
     implementation(libs.constraintlayout)
     implementation(libs.okhttp)
     implementation(libs.jsoup)
+    implementation(libs.picasso)
 }

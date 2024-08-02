@@ -203,5 +203,6 @@ dependencies {
     implementation(libs.aboutlibraries.core)
     implementation(libs.fastadapter)
     implementation(libs.navigation.fragment)
+    implementation(libs.picasso)
     implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
 }
