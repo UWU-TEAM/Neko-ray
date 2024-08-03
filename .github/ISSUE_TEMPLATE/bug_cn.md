@@ -20,7 +20,7 @@ Describe what actually happened
 ### Log information
 <details>
 
-pass `adb logcat -s com.v2ray.ang GoLog V2rayConfigUtilGoLog Main` Get the log. Please delete any sensitive information that may appear in the log.
+pass `adb logcat -s com.neko.v2ray GoLog V2rayConfigUtilGoLog Main` Get the log. Please delete any sensitive information that may appear in the log.
 
 If the problem can be reproduced, it is recommended to execute `adb logcat -c` Clear the system log and then execute the above command to reproduce the problem.
 ```

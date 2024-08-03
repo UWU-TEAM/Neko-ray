@@ -1,6 +1,7 @@
 package com.neko.v2ray.ui
 
 import android.content.Intent
+import android.content.res.Configuration
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.Menu
@@ -57,8 +58,10 @@ class ServerCustomConfigActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        if (!Utils.getDarkModeStatus(this)) {
-            binding.editor.colorScheme = EditorTheme.INTELLIJ_LIGHT
+        when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_NO -> {
+                binding.editor.colorScheme = EditorTheme.INTELLIJ_LIGHT
+            }
         }
         binding.editor.language = JsonLanguage()
         val config = MmkvManager.decodeServerConfig(editGuid)

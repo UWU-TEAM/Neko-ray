@@ -11,8 +11,8 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.neko.v2ray.AppConfig
-import com.v2ray.ang.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL
-import com.v2ray.ang.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL_NAME
+import com.neko.v2ray.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL
+import com.neko.v2ray.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL_NAME
 import com.neko.v2ray.R
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
