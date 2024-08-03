@@ -402,21 +402,24 @@ object Utils {
         }
     }
 
-    fun getLocale(): Locale =
-        when (settingsStorage?.decodeString(AppConfig.PREF_LANGUAGE) ?: "auto") {
-            "auto" ->  getSysLocale()
-            "en" -> Locale("en")
+    fun getLocale(): Locale {
+        val lang = settingsStorage?.decodeString(AppConfig.PREF_LANGUAGE) ?: "auto"
+        return when (lang) {
+            "auto" -> getSysLocale()
+            "en" -> Locale.ENGLISH
             "in" -> Locale("in")
             "su" -> Locale("su")
             "ja" -> Locale("ja")
-            "zh-rCN" -> Locale("zh", "CN")
-            "zh-rTW" -> Locale("zh", "TW")
+            "zh-rCN" -> Locale.CHINA
+            "zh-rTW" -> Locale.TRADITIONAL_CHINESE
             "vi" -> Locale("vi")
             "ru" -> Locale("ru")
             "fa" -> Locale("fa")
             "ar" -> Locale("ar")
             else -> getSysLocale()
         }
+    }
+
 
     private fun getSysLocale(): Locale = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
         LocaleList.getDefault()[0]
