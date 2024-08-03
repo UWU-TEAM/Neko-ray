@@ -379,18 +379,17 @@ object Utils {
         }
     }
 
-    fun getDarkModeStatus(context: Context): Boolean {
-        val mode = context.resources.configuration.uiMode and UI_MODE_NIGHT_MASK
-        return mode != UI_MODE_NIGHT_NO
-    }
+    // fun getDarkModeStatus(context: Context): Boolean {
+        // return context.resources.configuration.uiMode and UI_MODE_NIGHT_MASK != UI_MODE_NIGHT_NO
+    // }
 
-//    fun setNightMode(context: Context) {
-//        when (settingsStorage?.decodeString(AppConfig.PREF_UI_MODE_NIGHT, "0")) {
-//            "0" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-//            "1" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//            "2" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
-//        }
-//    }
+    // fun setNightMode(context: Context) {
+        // when (settingsStorage?.decodeString(AppConfig.PREF_UI_MODE_NIGHT, "0")) {
+            // "0" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+            // "1" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            // "2" -> AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+        // }
+    // }
 
     fun getIpv6Address(address: String?): String {
         if(address == null){
