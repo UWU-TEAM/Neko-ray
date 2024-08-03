@@ -11,6 +11,8 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
 import com.neko.v2ray.AppConfig
+import com.v2ray.ang.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL
+import com.v2ray.ang.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL_NAME
 import com.neko.v2ray.R
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
@@ -18,14 +20,14 @@ import com.neko.v2ray.util.Utils
 
 object SubscriptionUpdater {
 
-    const val notificationChannel = "subscription_update_channel"
+
 
     class UpdateTask(context: Context, params: WorkerParameters) :
         CoroutineWorker(context, params) {
 
         private val notificationManager = NotificationManagerCompat.from(applicationContext)
         private val notification =
-            NotificationCompat.Builder(applicationContext, notificationChannel)
+            NotificationCompat.Builder(applicationContext, SUBSCRIPTION_UPDATE_CHANNEL)
                 .setWhen(0)
                 .setTicker("Update")
                 .setContentTitle(context.getString(R.string.title_pref_auto_update_subscription))
@@ -43,11 +45,11 @@ object SubscriptionUpdater {
                 val subscription = i.second
 
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                    notification.setChannelId(notificationChannel)
+                    notification.setChannelId(SUBSCRIPTION_UPDATE_CHANNEL)
                     val channel =
                         NotificationChannel(
-                            notificationChannel,
-                            "Subscription Update Service",
+                            SUBSCRIPTION_UPDATE_CHANNEL,
+                            SUBSCRIPTION_UPDATE_CHANNEL_NAME,
                             NotificationManager.IMPORTANCE_MIN
                         )
                     notificationManager.createNotificationChannel(channel)
