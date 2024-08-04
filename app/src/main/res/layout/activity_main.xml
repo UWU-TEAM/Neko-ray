@@ -214,15 +214,17 @@
 
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/tab_group"
-                        android:background="@drawable/uwu_bg_sin"
+                        android:background="@drawable/uwu_bg_tablayout"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="16.0dip"
+                        android:layout_marginBottom="0.0dip"
                         android:layout_marginStart="16.0dip"
                         android:layout_marginEnd="16.0dip"
-                        android:layout_marginTop="8.0dip"
-                        android:layout_marginBottom="0.0dip"
-                        app:tabMode="scrollable"
-                        app:tabIndicatorFullWidth="false" />
+                        android:paddingStart="12.0dip"
+                        android:paddingEnd="12.0dip"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabMode="scrollable" />
 
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view"
