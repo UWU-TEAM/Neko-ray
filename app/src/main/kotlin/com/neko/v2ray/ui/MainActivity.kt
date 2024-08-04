@@ -20,10 +20,12 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
+import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
+import com.google.android.material.tabs.TabLayout
 import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
@@ -79,6 +81,23 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             startV2Ray()
         }
     }
+    private val requestSubSettingActivity = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        initGroupTab()
+    }
+    private val tabGroupListener = object : TabLayout.OnTabSelectedListener {
+        override fun onTabSelected(tab: TabLayout.Tab?) {
+            val selectId = tab?.tag.toString()
+            if (selectId != mainViewModel.subscriptionId) {
+                mainViewModel.subscriptionIdChanged(selectId)
+            }
+        }
+
+        override fun onTabUnselected(tab: TabLayout.Tab?) {
+        }
+
+        override fun onTabReselected(tab: TabLayout.Tab?) {
+        }
+    }
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
     val TAG = "MainActivity"
@@ -131,6 +150,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
         binding.navView.setNavigationItemSelectedListener(this)
 
+        initGroupTab()
         setupViewModel()
         mainViewModel.copyAssets(assets)
 
@@ -238,6 +258,29 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         }
         mainViewModel.startListenBroadcast()
+    }
+
+    private fun initGroupTab() {
+        binding.tabGroup.removeOnTabSelectedListener(tabGroupListener)
+        binding.tabGroup.removeAllTabs()
+        binding.tabGroup.isVisible = false
+
+        val (listId, listRemarks) = mainViewModel.getSubscriptions(this)
+        if (listId == null || listRemarks == null) {
+            return
+        }
+
+        for (it in listRemarks.indices) {
+            val tab = binding.tabGroup.newTab()
+            tab.text = listRemarks[it]
+            tab.tag = listId[it]
+            binding.tabGroup.addTab(tab)
+        }
+        val selectIndex =
+            listId.indexOf(mainViewModel.subscriptionId).takeIf { it >= 0 } ?: (listId.count() - 1)
+        binding.tabGroup.selectTab(binding.tabGroup.getTabAt(selectIndex))
+        binding.tabGroup.addOnTabSelectedListener(tabGroupListener)
+        binding.tabGroup.isVisible = true
     }
 
     fun startV2Ray() {
@@ -396,11 +439,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             mainViewModel.reloadServerList()
             true
         }
-        R.id.filter_config -> {
-            mainViewModel.filterConfig(this)
-            true
-        }
-
         else -> super.onOptionsItemSelected(item)
     }
 
@@ -471,18 +509,20 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .show()
 
         lifecycleScope.launch(Dispatchers.IO) {
-            val count = AngConfigManager.importBatchConfig(server, mainViewModel.subscriptionId, true)
+            val (count, countSub) = AngConfigManager.importBatchConfig(server, mainViewModel.subscriptionId, true)
             delay(500L)
             launch(Dispatchers.Main) {
                 if (count > 0) {
                     toast(R.string.toast_success)
                     mainViewModel.reloadServerList()
+                } else if (countSub > 0) {
+                    initGroupTab()
                 } else {
                     toast(R.string.toast_failure)
                 }
                 dialog.dismiss()
             }
-        }
+            }
     }
 
     private fun importConfigCustomClipboard()
@@ -757,9 +797,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
         when (item.itemId) {
-            //R.id.server_profile -> activityClass = MainActivity::class.java
             R.id.sub_setting -> {
-                startActivity(Intent(this, SubSettingActivity::class.java))
+                requestSubSettingActivity.launch(Intent(this,SubSettingActivity::class.java))
             }
             R.id.settings -> {
                 startActivity(Intent(this, SettingsActivity::class.java)
