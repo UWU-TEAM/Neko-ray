@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        date="2024-07-27"
+        date="2024-08-04"
         summary="Neko v2rayNG"
-        version="v1.1.7"
-        versioncode="2000227">
-        <change>Core update v1.8.21</change>
-        <change>Set UseIP in Direct to break the Android Private DNS dead loop</change>
-        <change>Redesign more banner image</change>
-        <change>Translation update</change>
-        <change>Optimized NoInternetDialog</change>
-        <change>Use geo asset from malikshi</change>
-        <change>Fix trojan issue</change>
+        version="v1.1.8"
+        versioncode="2000228">
+        <change>Core update v1.8.23</change>
+        <change>Change style switchpreference</change>
+        <change>Redesign bypass list activity</change>
+        <change>Translation Update</change>
+        <change>Optimized Theme Dark Mode</change>
+        <change>Introduced version catalog for streamlined dependency management</change>
+        <change>Bump workRuntimeKtx from 2.8.1 to 2.9.0</change>
+        <change>Bump com.tencent:mmkv-static from 1.3.7 to 1.3.9</change>
+        <change>Fixed the toolbar disappearing when the typing keyboard appears</change>
+        <change>Fix typo: s/Domian/Domain/g</change>
+        <change>Refactor extension functions for better performance and clarity</change>
+        <change>Refactor V2RayServiceManager to Use Constants for Configuration Values</change>
+        <change>Refactor GlobalScope Usage to Prevent Memory Leaks</change>
+        <change>Refactor redundant PendingIntent code into a helper function</change>
+        <change>Refactor charset usage and consolidate function implementation</change>
+        <change>Drop geolocation-cn (cn contains geolocation-cn)</change>
+        <change>Introduct ImageSlider</change>
+        <change>Simplifying the filter configuration file</change>
+        <change>Remove redundant access modifier</change>
+        <change>Add Documentation Comments to AppConfig Constants</change>
+        <change>Refactor filterConfig Function for Simplified Code and Reusability</change>
+        <change>Optimize strState Handling by Removing Redundant try-catch</change>
+        <change>Simplify parseInt function</change>
+        <change>Refactor base64 decode function to simplify handling</change>
+        <change>Fix getDarkModeStatus to handle configuration changes more accurately</change>
+        <change>Updated getLocale function to use appropriate Locale constants</change>
     </release>
 </changelog>
