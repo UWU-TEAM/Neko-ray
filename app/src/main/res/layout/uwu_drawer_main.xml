@@ -482,7 +482,7 @@
                 android:layout_gravity="center|bottom"
                 android:orientation="vertical"
                 android:id="@+id/uwu_exit"
-                android:background="@drawable/uwu_background_lengkung_bottom"
+                android:background="@drawable/uwu_background_material"
                 android:paddingTop="10.0dip"
                 android:paddingBottom="10.0dip"
                 android:layout_width="match_parent"

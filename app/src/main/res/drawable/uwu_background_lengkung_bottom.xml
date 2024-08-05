@@ -16,8 +16,8 @@
             <corners
                 android:topLeftRadius="0.0dip"
                 android:topRightRadius="0.0dip"
-                android:bottomLeftRadius="0.0dip"
-                android:bottomRightRadius="0.0dip" />
+                android:bottomLeftRadius="30.0dip"
+                android:bottomRightRadius="30.0dip" />
         </shape>
     </item>
 </layer-list>
