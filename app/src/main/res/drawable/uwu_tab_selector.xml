@@ -1,0 +1,11 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+ <!-- For selected tab -->
+ <item
+     android:drawable="@drawable/uwu_selected_tab"
+     android:state_selected="true"/>
+
+ <!-- For unselected tab -->
+ <item
+     android:drawable="@drawable/uwu_unselected_tab"
+     android:state_selected="false"/>
+ </selector>

@@ -212,20 +212,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
-                    <com.google.android.material.tabs.TabLayout
-                        android:id="@+id/tab_group"
-                        android:background="@drawable/uwu_bg_tablayout"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="16.0dip"
-                        android:layout_marginBottom="0.0dip"
-                        android:layout_marginStart="16.0dip"
-                        android:layout_marginEnd="16.0dip"
-                        android:paddingStart="12.0dip"
-                        android:paddingEnd="12.0dip"
-                        app:tabIndicatorFullWidth="false"
-                        app:tabMode="scrollable" />
-
                     <androidx.recyclerview.widget.RecyclerView
                         android:id="@+id/recycler_view"
                         android:nextFocusRight="@+id/fab"
@@ -236,25 +222,66 @@
 
                 </LinearLayout>
 
-                <com.google.android.material.floatingactionbutton.FloatingActionButton
-                    android:layout_gravity="end|bottom|center"
-                    android:id="@+id/fab"
-                    android:focusable="true"
-                    android:nextFocusLeft="@+id/uwu_about"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="16.0dip"
-                    android:layout_marginTop="16.0dip"
-                    android:layout_marginRight="16.0dip"
-                    android:layout_marginBottom="35.0dip"
-                    android:src="@drawable/uwu_ic_service_idle"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentEnd="true"
-                    app:tint="@color/colorText_ActionBar"
-                    app:layout_anchorGravity="end|bottom|center"
-                    app:shapeAppearanceOverlay="@style/fab_square"
-                    style="@style/Uwu.Design.FloatingActionButton" />
+                    android:layout_marginLeft="0.0dip"
+                    android:layout_marginRight="0.0dip"
+                    android:layout_marginBottom="16.0dip">
+
+                    <FrameLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/tab_group"
+                            android:background="@drawable/uwu_bg_tablayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="55.0dip"
+                            android:layout_marginStart="16.0dip"
+                            android:layout_marginEnd="4.0dip"
+                            android:layout_marginTop="0.0dip"
+                            android:layout_marginBottom="16.0dip"
+                            app:tabBackground="@drawable/uwu_tab_selector"
+                            app:tabIndicatorFullWidth="false"
+                            app:tabMode="scrollable"
+                            app:tabIndicatorColor="@android:color/transparent"
+                            app:tabIndicatorHeight="0dp"
+                            app:tabRippleColor="@null"
+                            app:tabGravity="fill"
+                            app:tabSelectedTextColor="?android:textColorPrimary"
+                            app:tabTextColor="@color/colorText_ActionBar" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_gravity="end|bottom|center"
+                            android:id="@+id/fab"
+                            android:focusable="true"
+                            android:nextFocusLeft="@+id/uwu_about"
+                            android:clickable="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="4.0dip"
+                            android:layout_marginTop="0.0dip"
+                            android:layout_marginRight="16.0dip"
+                            android:layout_marginBottom="16.0dip"
+                            android:src="@drawable/uwu_ic_service_idle"
+                            android:layout_alignParentBottom="true"
+                            android:layout_alignParentEnd="true"
+                            app:layout_anchorGravity="end|bottom|center"
+                            app:shapeAppearanceOverlay="@style/fab_square"
+                            app:tint="@color/colorText_ActionBar"
+                            style="@style/Uwu.Design.FloatingActionButton" />
+                    </FrameLayout>
+
+                </LinearLayout>
 
             </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
