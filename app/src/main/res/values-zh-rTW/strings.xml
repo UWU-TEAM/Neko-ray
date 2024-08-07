@@ -92,7 +92,7 @@
     <string name="toast_malformed_josn">配置格式錯誤</string>
     <string name="server_lab_request_host6">主機(SNI)(可選)</string>
     <string name="toast_asset_copy_failed">文件複製失敗，請使用文件管理器</string>
-    <string name="menu_item_add_asset">新增資產</string>
+    <string name="menu_item_add_asset">從此處的網址設定您的資產！</string>
     <string name="menu_item_add_file">新增文件</string>
     <string name="menu_item_add_url">新增網址</string>
     <string name="menu_item_download_file">下載文件</string>

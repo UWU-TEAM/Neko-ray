@@ -92,7 +92,7 @@
     <string name="toast_malformed_josn">Cấu hình không đúng định dạng</string>
     <string name="server_lab_request_host6">Máy chủ(SNI)(Tùy chọn)</string>
     <string name="toast_asset_copy_failed">Sao chép tệp không thành công, vui lòng sử dụng Trình quản lý tệp</string>
-    <string name="menu_item_add_asset">Thêm tài sản</string>
+    <string name="menu_item_add_asset">Thiết lập nội dung của bạn từ url tại đây!</string>
     <string name="menu_item_add_file">Thêm các tập tin</string>
     <string name="menu_item_add_url">Thêm URL</string>
     <string name="menu_item_download_file">Tải tập tin</string>

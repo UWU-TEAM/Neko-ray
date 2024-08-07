@@ -92,7 +92,7 @@
     <string name="toast_malformed_josn">پیکربندی نادرست است</string>
     <string name="server_lab_request_host6">میزبان (SNI) (اختیاری)</string>
     <string name="toast_asset_copy_failed">کپی فایل انجام نشد، لطفا از مدیر فایل استفاده کنید</string>
-    <string name="menu_item_add_asset">اضافه کردن دارایی</string>
+    <string name="menu_item_add_asset">دارایی های خود را از آدرس اینترنتی اینجا تنظیم کنید!</string>
     <string name="menu_item_add_file">فایل ها را اضافه کنید</string>
     <string name="menu_item_add_url">اضافه کردن URL</string>
     <string name="menu_item_download_file">دانلود فایل ها</string>

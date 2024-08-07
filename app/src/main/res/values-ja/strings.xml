@@ -92,7 +92,7 @@
     <string name="toast_malformed_josn">構成が不正です</string>
     <string name="server_lab_request_host6">ホスト(SNI)(オプション)</string>
     <string name="toast_asset_copy_failed">ファイルのコピーに失敗しました。ファイル マネージャーを使用してください</string>
-    <string name="menu_item_add_asset">アセットの追加</string>
+    <string name="menu_item_add_asset">こちらの URL からアセットを設定してください。</string>
     <string name="menu_item_add_file">追加ファイル</string>
     <string name="menu_item_add_url">URLを追加</string>
     <string name="menu_item_download_file">ファイルをダウンロードする</string>
