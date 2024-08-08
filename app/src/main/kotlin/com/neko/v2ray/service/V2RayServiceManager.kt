@@ -33,8 +33,9 @@ import kotlinx.coroutines.launch
 import libv2ray.Libv2ray
 import libv2ray.V2RayPoint
 import libv2ray.V2RayVPNServiceSupportsSet
-import rx.Observable
-import rx.Subscription
+import io.reactivex.rxjava3.core.Observable
+import io.reactivex.rxjava3.disposables.Disposable
+import io.reactivex.rxjava3.subscribers.DisposableSubscriber
 import java.lang.ref.SoftReference
 import kotlin.math.min
 
@@ -59,7 +60,7 @@ object V2RayServiceManager {
 
     private var lastQueryTime = 0L
     private var mBuilder: NotificationCompat.Builder? = null
-    private var mSubscription: Subscription? = null
+    private var mDisposable: Disposable? = null
     private var mNotificationManager: NotificationManager? = null
 
     fun startV2Ray(context: Context) {
@@ -326,8 +327,8 @@ object V2RayServiceManager {
         val service = serviceControl?.get()?.getService() ?: return
         service.stopForeground(true)
         mBuilder = null
-        mSubscription?.unsubscribe()
-        mSubscription = null
+        mDisposable?.dispose()
+        mDisposable = null
     }
 
     private fun updateNotification(contentText: String?, proxyTraffic: Long, directTraffic: Long) {
@@ -354,14 +355,14 @@ object V2RayServiceManager {
     }
 
     private fun startSpeedNotification() {
-        if (mSubscription == null &&
+        if (mDisposable == null &&
                 v2rayPoint.isRunning &&
                 settingsStorage?.decodeBool(AppConfig.PREF_SPEED_ENABLED) == true) {
             var lastZeroSpeed = false
             val outboundTags = currentConfig?.getAllOutboundTags()
             outboundTags?.remove(TAG_DIRECT)
 
-            mSubscription = Observable.interval(3, java.util.concurrent.TimeUnit.SECONDS)
+            mDisposable = Observable.interval(3, java.util.concurrent.TimeUnit.SECONDS)
                     .subscribe {
                         val queryTime = System.currentTimeMillis()
                         val sinceLastQueryInSeconds = (queryTime - lastQueryTime) / 1000.0
@@ -403,9 +404,9 @@ object V2RayServiceManager {
     }
 
     private fun stopSpeedNotification() {
-        if (mSubscription != null) {
-            mSubscription?.unsubscribe() //stop queryStats
-            mSubscription = null
+        if (mDisposable != null) {
+            mDisposable?.dispose() //stop queryStats
+            mDisposable = null
             updateNotification(currentConfig?.remarks, 0, 0)
         }
     }
