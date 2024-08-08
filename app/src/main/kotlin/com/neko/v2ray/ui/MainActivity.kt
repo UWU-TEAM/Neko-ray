@@ -26,7 +26,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
-import com.tbruyelle.rxpermissions3.RxPermissions
+import com.tbruyelle.rxpermissions.RxPermissions
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
@@ -44,8 +44,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import me.drakeet.support.toast.ToastCompat
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import rx.Observable
+import rx.android.schedulers.AndroidSchedulers
 import java.util.concurrent.TimeUnit
 
 import android.content.Context

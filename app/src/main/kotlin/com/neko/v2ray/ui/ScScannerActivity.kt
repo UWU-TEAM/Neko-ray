@@ -4,7 +4,7 @@ import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
-import com.tbruyelle.rxpermissions3.RxPermissions
+import com.tbruyelle.rxpermissions.RxPermissions
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.AngConfigManager

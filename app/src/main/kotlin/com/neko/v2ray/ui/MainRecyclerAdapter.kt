@@ -26,8 +26,8 @@ import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
+import rx.Observable
+import rx.android.schedulers.AndroidSchedulers
 import java.util.concurrent.TimeUnit
 
 class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<MainRecyclerAdapter.BaseViewHolder>()

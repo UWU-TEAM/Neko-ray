@@ -6,7 +6,7 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager
 import com.neko.v2ray.dto.AppInfo
-import io.reactivex.rxjava3.core.Observable
+import rx.Observable
 
 object AppManagerUtil {
     fun loadNetworkAppList(ctx: Context): ArrayList<AppInfo> {
