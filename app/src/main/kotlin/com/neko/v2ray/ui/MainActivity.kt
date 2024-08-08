@@ -33,6 +33,7 @@ import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
 import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.EConfigType
+import com.neko.v2ray.extension.isNetworkConnected
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.service.V2RayServiceManager
@@ -284,10 +285,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     fun startV2Ray() {
-        if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
-            return
+        if (isNetworkConnected) {
+            if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
+                return
+            }
+            V2RayServiceManager.startV2Ray(this)
+        } else {
+            ToastCompat.makeText(this, getString(R.string.connection_test_fail), Toast.LENGTH_LONG).show()
         }
-        V2RayServiceManager.startV2Ray(this)
     }
 
     fun restartV2Ray() {
