@@ -747,12 +747,17 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return false
     }
 
+    fun settingsExtra(): Boolean {
+        startActivity(Intent(this, SettingsActivity::class.java).putExtra("isRunning", mainViewModel.isRunning.value == true))
+        return true
+    }
+
     fun logcat(view: View) {
         startActivity(Intent(this, LogcatActivity::class.java))
     }
 
     fun settings(view: View) {
-        startActivity(Intent(this, SettingsActivity::class.java))
+        settingsExtra()
     }
 
     fun subSetting(view: View) {
