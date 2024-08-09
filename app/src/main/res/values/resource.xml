@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name" translatable="false">Neko-ray</string>
+    <string name="app_title_name" translatable="false">★⃝Neko-ray༘࿐</string>
     <string name="server_lab_stream_fingerprint" translatable="false">Fingerprint</string>
     <string name="server_lab_stream_alpn" translatable="false">Alpn</string>
     <string name="server_lab_public_key" translatable="false">PublicKey</string>
