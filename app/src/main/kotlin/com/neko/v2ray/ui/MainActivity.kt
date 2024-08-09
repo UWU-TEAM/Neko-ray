@@ -756,7 +756,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     fun subSetting(view: View) {
-        startActivity(Intent(this, SubSettingActivity::class.java))
+        requestSubSettingActivity.launch(Intent(this,SubSettingActivity::class.java))
     }
 
     fun userAssetSetting(view: View) {

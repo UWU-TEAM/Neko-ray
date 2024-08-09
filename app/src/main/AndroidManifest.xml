@@ -66,7 +66,7 @@
         <activity
             android:theme="@style/AppThemeDayNight.NoActionBar"
             android:name="com.neko.v2ray.ui.MainActivity"
-            android:exported="false"
+            android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
