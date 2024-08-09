@@ -109,7 +109,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
-        title = getString(R.string.app_name)
+        title = getString(R.string.app_title_name)
         setSupportActionBar(binding.toolbar)
 
         binding.fab.setOnClickListener {
