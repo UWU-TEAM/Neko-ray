@@ -202,7 +202,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setDisplay(Display.DIALOG)
             showAppUpdated(false)
             setCancelable(false)
-            setButtonDoNotShowAgain("")
         }
         appUpdater.start()
 
@@ -213,7 +212,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setDisplay(Display.NOTIFICATION)
             showAppUpdated(false)
             setCancelable(false)
-            setButtonDoNotShowAgain("")
         }
         appUpdaterNotification.start()
     }
