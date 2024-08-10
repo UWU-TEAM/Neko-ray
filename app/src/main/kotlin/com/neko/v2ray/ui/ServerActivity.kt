@@ -378,7 +378,7 @@ class ServerActivity : BaseActivity() {
                 tlsSetting.alpn?.let {
                     val alpnIndex = Utils.arrayFind(
                         alpns,
-                        Utils.removeWhiteSpace(tlsSetting.alpn.joinToString())?:""
+                        Utils.removeWhiteSpace(tlsSetting.alpn.joinToString()).orEmpty()
                     )
                     sp_stream_alpn?.setSelection(alpnIndex)
                 }
@@ -506,7 +506,7 @@ class ServerActivity : BaseActivity() {
             saveStreamSettings(it)
         }
         if (config.subscriptionId.isEmpty() && !subscriptionId.isNullOrEmpty()) {
-            config.subscriptionId = subscriptionId?:""
+            config.subscriptionId = subscriptionId.orEmpty()
         }
 
         MmkvManager.encodeServerConfig(editGuid, config)
