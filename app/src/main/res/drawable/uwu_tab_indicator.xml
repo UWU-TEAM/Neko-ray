@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@android:id/background">
+        <shape
+            android:innerRadius="0.0dip">
+            <solid
+                android:color="?attr/colorPrimaryContainer" />
+            <stroke
+                android:width="2.0dip"
+                android:color="@color/colorText_ActionBar" />
+            <corners
+                android:radius="10.0dip" />
+        </shape>
+    </item>
+</layer-list>
