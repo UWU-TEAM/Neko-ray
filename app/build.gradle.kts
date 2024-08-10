@@ -24,14 +24,17 @@ android {
         versionName = "1.1.9"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
-        splits.abi {
-            reset()
-            include(
-                "arm64-v8a",
-                "armeabi-v7a",
-                "x86_64",
-                "x86"
-            )
+        splits {
+            abi {
+                isEnable = true
+                include(
+                    "arm64-v8a",
+                    "armeabi-v7a",
+                    "x86_64",
+                    "x86"
+                )
+                isUniversalApk = true
+            }
         }
 
         val formattedDate = SimpleDateFormat("dd, MMMM yyyy").format(Date())
@@ -92,13 +95,6 @@ android {
 
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
-    }
-
-    splits {
-        abi {
-            isEnable = true
-            isUniversalApk = true
-        }
     }
 
     applicationVariants.all {
