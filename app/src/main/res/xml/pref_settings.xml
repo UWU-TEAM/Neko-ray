@@ -161,7 +161,7 @@
         <EditTextPreference
             android:icon="@drawable/uwu_ic_numeric"
             android:layout="@layout/uwu_mid"
-            android:key="pref_mux_concurency"
+            android:key="pref_mux_concurrency"
             android:summary="8"
             android:inputType="number"
             android:title="@string/title_pref_mux_concurency"/>
@@ -169,7 +169,7 @@
         <EditTextPreference
             android:icon="@drawable/uwu_ic_numeric"
             android:layout="@layout/uwu_mid"
-            android:key="pref_mux_xudp_concurency"
+            android:key="pref_mux_xudp_concurrency"
             android:summary="8"
             android:inputType="number"
             android:title="@string/title_pref_mux_xudp_concurency"/>
