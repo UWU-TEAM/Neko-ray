@@ -2,6 +2,8 @@ package com.neko.v2ray
 
 
 object AppConfig {
+    /** UWU **/
+    const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json"
 
     /** The application's package name. */
     const val ANG_PACKAGE = BuildConfig.APPLICATION_ID
@@ -142,6 +144,12 @@ object AppConfig {
     const val SUBSCRIPTION_UPDATE_CHANNEL = "subscription_update_channel"
     const val SUBSCRIPTION_UPDATE_CHANNEL_NAME = "Subscription Update Service"
 
-    // UWU
-    const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/Blawuken/Neko_v2rayNG/main/release.json"
+    /** Protocols Scheme **/
+    const val VMESS = "vmess://"
+    const val CUSTOM = ""
+    const val SHADOWSOCKS = "ss://"
+    const val SOCKS = "socks://"
+    const val VLESS = "vless://"
+    const val TROJAN = "trojan://"
+    const val WIREGUARD = "wireguard://"
 }
