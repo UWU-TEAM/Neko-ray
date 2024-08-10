@@ -72,10 +72,10 @@ class ServerCustomConfigActivity : BaseActivity() {
         
         val imageSlider = findViewById<ImageSlider>(R.id.image_slider) // init imageSlider
         val imageList = ArrayList<SlideModel>() // Create image list
-        imageList.add(SlideModel("https://telegra.ph/file/ab718d248f3a0682a549d.png", ""))
-        imageList.add(SlideModel("https://telegra.ph/file/9fa70f1e6d880e5a52319.jpg", ""))
-        imageList.add(SlideModel("https://telegra.ph/file/c714839ece8899d1a2cfb.jpg", ""))
-        imageList.add(SlideModel("https://telegra.ph/file/e0e87781ff6b21c876b8e.jpg", ""))
+        imageList.add(SlideModel(R.drawable.uwu_banner_image_3, ""))
+        imageList.add(SlideModel(R.drawable.uwu_banner_image_5, ""))
+        imageList.add(SlideModel(R.drawable.uwu_banner_image_6, ""))
+        imageList.add(SlideModel(R.drawable.uwu_banner_image_7, ""))
         imageSlider.setImageList(imageList, ScaleTypes.CENTER_CROP)
         imageSlider.setSlideAnimation(AnimationTypes.ZOOM_OUT)
         imageSlider.setItemClickListener(object : ItemClickListener {
@@ -100,7 +100,7 @@ class ServerCustomConfigActivity : BaseActivity() {
                 if (touched == ActionTypes.DOWN){
                     imageSlider.stopSliding()
                 } else if (touched == ActionTypes.UP ) {
-                    imageSlider.startSliding(1000)
+                    imageSlider.startSliding(3000)
                 }
             }
         })
