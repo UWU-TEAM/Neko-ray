@@ -31,7 +31,9 @@ import io.reactivex.rxjava3.schedulers.Schedulers
 import java.text.Collator
 
 class PerAppProxyActivity : BaseActivity() {
-    private lateinit var binding: ActivityBypassListBinding
+    private val binding by lazy {
+        ActivityBypassListBinding.inflate(layoutInflater)
+    }
 
     private var adapter: PerAppProxyAdapter? = null
     private var appsAll: List<AppInfo>? = null
@@ -39,9 +41,7 @@ class PerAppProxyActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityBypassListBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

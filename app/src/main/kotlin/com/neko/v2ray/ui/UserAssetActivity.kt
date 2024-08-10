@@ -43,7 +43,7 @@ import java.text.DateFormat
 import java.util.*
 
 class UserAssetActivity : BaseActivity() {
-    private lateinit var binding: ActivityUserAssetBinding
+    private val binding by lazy { ActivityUserAssetBinding.inflate(layoutInflater) }
     private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
     private val assetStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_ASSET, MMKV.MULTI_PROCESS_MODE) }
 
@@ -53,9 +53,7 @@ class UserAssetActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUserAssetBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

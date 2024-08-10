@@ -29,7 +29,7 @@ import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
 
 class UserAssetUrlActivity : BaseActivity() {
-    private lateinit var binding: ActivityUserAssetUrlBinding
+    private val binding by lazy { ActivityUserAssetUrlBinding.inflate(layoutInflater) }
     private lateinit var softInputAssist: SoftInputAssist
 
     var del_config: MenuItem? = null
@@ -41,9 +41,7 @@ class UserAssetUrlActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityUserAssetUrlBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

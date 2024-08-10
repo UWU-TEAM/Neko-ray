@@ -22,7 +22,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class SubSettingActivity : BaseActivity() {
-    private lateinit var binding: ActivitySubSettingBinding
+    private val binding by lazy { ActivitySubSettingBinding.inflate(layoutInflater) }
     private lateinit var softInputAssist: SoftInputAssist
 
     var subscriptions: List<Pair<String, SubscriptionItem>> = listOf()
@@ -30,9 +30,7 @@ class SubSettingActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySubSettingBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

@@ -12,7 +12,7 @@ import com.neko.v2ray.databinding.ActivityRoutingSettingsBinding
 import com.neko.v2ray.util.SoftInputAssist
 
 class RoutingSettingsActivity : BaseActivity() {
-    private lateinit var binding: ActivityRoutingSettingsBinding
+    private val binding by lazy { ActivityRoutingSettingsBinding.inflate(layoutInflater) }
     private lateinit var softInputAssist: SoftInputAssist
 
     private val titles: Array<out String> by lazy {
@@ -21,9 +21,7 @@ class RoutingSettingsActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityRoutingSettingsBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

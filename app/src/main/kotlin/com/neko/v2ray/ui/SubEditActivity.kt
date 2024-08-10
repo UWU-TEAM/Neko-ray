@@ -36,7 +36,7 @@ import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
 
 class SubEditActivity : BaseActivity() {
-    private lateinit var binding: ActivitySubEditBinding
+    private val binding by lazy {ActivitySubEditBinding.inflate(layoutInflater)}
     private lateinit var softInputAssist: SoftInputAssist
 
     var del_config: MenuItem? = null
@@ -47,9 +47,7 @@ class SubEditActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySubEditBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)

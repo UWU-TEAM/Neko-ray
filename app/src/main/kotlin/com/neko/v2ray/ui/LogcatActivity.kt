@@ -24,13 +24,13 @@ import java.io.IOException
 import java.util.LinkedHashSet
 
 class LogcatActivity : BaseActivity() {
-    private lateinit var binding: ActivityLogcatBinding
+    private val binding by lazy {
+        ActivityLogcatBinding.inflate(layoutInflater)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLogcatBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)

@@ -35,7 +35,7 @@ import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
 
 class ServerCustomConfigActivity : BaseActivity() {
-    private lateinit var binding: ActivityServerCustomConfigBinding
+    private val binding by lazy { ActivityServerCustomConfigBinding.inflate(layoutInflater) }
     private lateinit var softInputAssist: SoftInputAssist
 
     private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
@@ -49,9 +49,7 @@ class ServerCustomConfigActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityServerCustomConfigBinding.inflate(layoutInflater)
-        val view = binding.root
-        setContentView(view)
+        setContentView(binding.root)
 
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
