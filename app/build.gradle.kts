@@ -99,25 +99,21 @@ android {
 
     applicationVariants.all {
         val variant = this
-        val versionCodes =
-            mapOf("armeabi-v7a" to 4, "arm64-v8a" to 4, "x86" to 4, "x86_64" to 4, "universal" to 4)
+        val versionCodes = mapOf(
+            "armeabi-v7a" to 4,
+            "arm64-v8a" to 4,
+            "x86" to 4,
+            "x86_64" to 4,
+            "universal" to 4
+        )
 
-        variant.outputs
+        outputs
             .map { it as com.android.build.gradle.internal.api.ApkVariantOutputImpl }
             .forEach { output ->
-                val abi = if (output.getFilter("ABI") != null)
-                    output.getFilter("ABI")
-                else
-                    "universal"
-
-                output.outputFileName = "Neko-ray_${variant.versionName}_${abi}.apk"
-                if(versionCodes.containsKey(abi))
-                {
-                    output.versionCodeOverride = (1000000).plus(variant.versionCode)
-                }
-                else
-                {
-                    return@forEach
+                val abi = output.getFilter("ABI") ?: "universal"
+                output.outputFileName = "Neko-ray_${variant.versionName}_$abi.apk"
+                if (abi in versionCodes) {
+                    output.versionCodeOverride = 1000000 + variant.versionCode
                 }
             }
     }
@@ -171,7 +167,7 @@ dependencies {
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.runtime.ktx)
 
-    //kotlin
+    // Kotlin
     implementation(libs.kotlin.reflect)
     implementation(libs.kotlinx.coroutines.core)
     implementation(libs.kotlinx.coroutines.android)
@@ -187,6 +183,7 @@ dependencies {
     implementation(libs.language.json)
     implementation(libs.quickie.bundled)
     implementation(libs.core)
+
     // Updating these 2 dependencies may cause some errors. Be careful.
     implementation(libs.work.runtime.ktx)
     implementation(libs.work.runtime)
@@ -201,5 +198,5 @@ dependencies {
     implementation(libs.fastadapter)
     implementation(libs.navigation.fragment)
     implementation(libs.picasso)
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar","*.jar"))))
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar", "*.jar"))))
 }
