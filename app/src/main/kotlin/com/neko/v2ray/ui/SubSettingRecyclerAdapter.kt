@@ -37,9 +37,9 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
         holder.itemSubSettingBinding.tvName.text = subItem.remarks
         holder.itemSubSettingBinding.tvUrl.text = subItem.url
         if (subItem.enabled) {
-            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.color.colorAccent)
+            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.drawable.uwu_selected_indicator)
         } else {
-            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(R.color.uwu_transparent)
+            holder.itemSubSettingBinding.chkEnable.setBackgroundResource(0)
         }
         holder.itemView.setBackgroundColor(Color.TRANSPARENT)
 

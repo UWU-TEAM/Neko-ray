@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.google.android.material.card.MaterialCardView
+    <androidx.cardview.widget.CardView
         android:orientation="horizontal"
         android:id="@+id/item_cardview"
         android:layout_width="match_parent"
@@ -15,7 +15,6 @@
         android:layout_marginTop="5.0dip"
         android:layout_marginRight="16.0dip"
         android:layout_marginBottom="11.0dip"
-        app:strokeWidth="0.0dip"
         app:cardBackgroundColor="@color/uwu_bg_card"
         app:cardCornerRadius="24.0dip"
         app:cardElevation="0.0dip">
@@ -31,91 +30,91 @@
             android:layout_height="@dimen/server_height"
             android:foreground="?android:selectableItemBackground">
             <LinearLayout
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:id="@+id/chk_enable"
-                android:layout_width="4.0dip"
-                android:layout_height="match_parent"
-                android:backgroundTint="?attr/colorPrimary" />
-            <LinearLayout
-                android:background="@drawable/uwu_google_shape"
-                android:layout_width="45.0dip"
-                android:layout_height="45.0dip"
-                android:layout_marginStart="13.0dip"
-                android:layout_marginEnd="5.0dip"
-                android:backgroundTint="?attr/colorPrimary">
-                <androidx.preference.internal.PreferenceImageView
-                    android:gravity="center"
-                    android:layout_width="25.0dip"
-                    android:layout_height="25.0dip"
-                    android:layout_marginTop="10.0dip"
-                    android:src="@drawable/ic_social_emoji_symbols"
-                    android:tint="?attr/colorIcon"
-                    android:layout_marginStart="10.0dip"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-            </LinearLayout>
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0.0dip"
-                android:layout_height="wrap_content"
-                android:layout_weight="1.0"
-                android:paddingStart="9.0dip">
-                <TextView
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                    android:textSize="17.0sp"
-                    android:id="@+id/tv_name"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
-                <TextView
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                    android:textSize="14.0sp"
-                    android:id="@+id/tv_url"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10.0dip"
-                    android:lines="1" />
-            </LinearLayout>
-            <LinearLayout
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="@dimen/server_height">
+                android:id="@+id/chk_enable"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
                 <LinearLayout
-                    android:gravity="center"
+                    android:background="@drawable/uwu_google_shape"
+                    android:layout_width="45.0dip"
+                    android:layout_height="45.0dip"
+                    android:layout_marginStart="16.0dip"
+                    android:layout_marginEnd="5.0dip"
+                    android:backgroundTint="?colorPrimary">
+                    <androidx.preference.internal.PreferenceImageView
+                        android:gravity="center"
+                        android:layout_width="25.0dip"
+                        android:layout_height="25.0dip"
+                        android:layout_marginTop="10.0dip"
+                        android:src="@drawable/ic_social_emoji_symbols"
+                        android:tint="?colorIcon"
+                        android:layout_marginStart="10.0dip"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+                <LinearLayout
                     android:orientation="vertical"
-                    android:id="@+id/layout_share"
-                    android:background="?android:selectableItemBackground"
-                    android:padding="12.0dip"
-                    android:focusable="true"
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="@dimen/png_height"
-                        android:layout_height="@dimen/png_height"
-                        android:src="@drawable/ic_share_24dp"
-                        app:tint="?attr/colorMainText" />
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:paddingStart="9.0dip">
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                        android:textSize="17.0sp"
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                    <TextView
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                        android:textSize="14.0sp"
+                        android:id="@+id/tv_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:lines="1" />
                 </LinearLayout>
                 <LinearLayout
                     android:gravity="center"
-                    android:orientation="vertical"
-                    android:id="@+id/layout_edit"
-                    android:background="?android:selectableItemBackground"
-                    android:padding="12.0dip"
-                    android:focusable="true"
-                    android:nextFocusLeft="@+id/info_container"
-                    android:clickable="true"
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:layout_width="@dimen/png_height"
-                        android:layout_height="@dimen/png_height"
-                        android:src="@drawable/ic_edit_24dp"
-                        app:tint="?attr/colorMainText" />
+                    android:layout_height="@dimen/server_height">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/layout_share"
+                        android:background="?android:selectableItemBackground"
+                        android:padding="12.0dip"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="@dimen/png_height"
+                            android:layout_height="@dimen/png_height"
+                            android:src="@drawable/ic_share_24dp"
+                            app:tint="?attr/colorMainText" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:id="@+id/layout_edit"
+                        android:background="?android:selectableItemBackground"
+                        android:padding="12.0dip"
+                        android:focusable="true"
+                        android:nextFocusLeft="@+id/info_container"
+                        android:clickable="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:layout_width="@dimen/png_height"
+                            android:layout_height="@dimen/png_height"
+                            android:src="@drawable/ic_edit_24dp"
+                            app:tint="?attr/colorMainText" />
+                    </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

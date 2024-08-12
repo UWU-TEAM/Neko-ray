@@ -44,7 +44,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeDayNight"
         android:usesCleartextTraffic="true"
-        tools:targetApi="r">
+        tools:targetApi="o">
 
         <activity
             android:name="com.neko.splash.SplashActivity"
