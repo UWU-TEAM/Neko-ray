@@ -80,7 +80,6 @@
     </style>
 
     <style name="CollapsingToolbarTitle.Expanded" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
-        <item name="android:fontFamily">@font/lexend</item>
         <item name="android:textColor">@color/colorText_ActionBar</item>
         <item name="android:textSize">30dp</item>
     </style>

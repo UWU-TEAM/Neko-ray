@@ -20,7 +20,9 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
             app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleGravity="center"
+            app:expandedTitleMarginBottom="24.0dip"
+            app:expandedTitleMarginEnd="24.0dip"
+            app:expandedTitleMarginStart="24.0dip"
             app:expandedTitleTextAppearance="@style/CollapsingToolbarTitle.Expanded"
             app:extraMultilineHeightEnabled="true"
             app:forceApplySystemWindowInsetTop="true"
@@ -29,7 +31,7 @@
             app:scrimAnimationDuration="50"
             app:statusBarScrim="@null"
             app:title="@string/title_sub_setting"
-            app:titleCollapseMode="fade"
+            app:titleCollapseMode="scale"
             app:toolbarId="@+id/toolbar">
             <com.google.android.material.appbar.MaterialToolbar
                 android:id="@+id/toolbar"
