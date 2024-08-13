@@ -406,11 +406,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         R.id.export_all -> {
-            if (AngConfigManager.shareNonCustomConfigsToClipboard(this, mainViewModel.serverList) == 0) {
-                toast(R.string.toast_success)
-            } else {
-                toast(R.string.toast_failure)
-            }
+            mainViewModel.exportAllServer()
             true
         }
 
@@ -432,8 +428,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         R.id.del_all_config -> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
-                        MmkvManager.removeAllServer()
-                        mainViewModel.reloadServerList()
+                        mainViewModel.removeAllServer()
                     }
                     .setNegativeButton(android.R.string.no) {_, _ ->
                         //do noting
@@ -455,8 +450,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         R.id.del_invalid_config -> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
-                    MmkvManager.removeInvalidServer()
-                    mainViewModel.reloadServerList()
+                    mainViewModel.removeInvalidServer()
                 }
                 .setNegativeButton(android.R.string.no) {_, _ ->
                     //do noting
@@ -465,8 +459,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
         R.id.sort_by_test_results -> {
-            MmkvManager.sortByTestResults()
-            mainViewModel.reloadServerList()
+            mainViewModel.sortByTestResults()
             true
         }
         else -> super.onOptionsItemSelected(item)
