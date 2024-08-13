@@ -37,6 +37,7 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.isNetworkConnected
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
+import com.neko.v2ray.nekonet.*
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
@@ -71,6 +72,7 @@ import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
 import android.os.Handler
+import android.os.Looper
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private val binding by lazy {
@@ -113,18 +115,45 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         title = getString(R.string.app_title_name)
         setSupportActionBar(binding.toolbar)
 
+        val networkUsage = NetworkManager(this, Util.getSubscriberId(this))
+        val handler = Handler(Looper.getMainLooper())
+        val runnableCode = object : Runnable {
+            override fun run() {
+                val now = networkUsage.getUsageNow(NetworkType.ALL)
+                val speeds = NetSpeed.calculateSpeed(now.timeTaken, now.downloads, now.uploads)
+                binding.apply {
+                    totalSpeedTv.text = speeds[0].speed + "\n" + speeds[0].unit
+                    upUsagesTv.text = "▲ " + speeds[2].speed + speeds[2].unit
+                    downUsagesTv.text = "▼ " + speeds[1].speed + speeds[1].unit
+                }
+                handler.postDelayed(this, 1000)
+            }
+        }
+
+        fun stoptraffic() {
+            handler.removeCallbacks(runnableCode)
+            binding.apply {
+                totalSpeedTv.text = "0" + "\n" + "kB/s"
+                upUsagesTv.text = "▲ " + "0kB/s"
+                downUsagesTv.text = "▼ " + "0kB/s"
+            }
+        }
+
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
+                stoptraffic()
             } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()
+                    runnableCode.run()
                 } else {
                     requestVpnPermission.launch(intent)
                 }
             } else {
                 startV2Ray()
+                runnableCode.run()
             }
         }
         binding.layoutTest.setOnClickListener {
