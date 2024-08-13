@@ -2,17 +2,19 @@ package com.neko.v2ray.ui
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.OpenableColumns
 import android.util.Log
-import android.view.*
-import android.view.View.GONE
-import android.view.View.VISIBLE
+import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View.GONE
+import android.view.View.VISIBLE
+import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.lifecycleScope
@@ -26,6 +28,7 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityUserAssetBinding
 import com.neko.v2ray.databinding.ItemRecyclerUserAssetBinding
+import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
@@ -40,7 +43,7 @@ import java.net.InetSocketAddress
 import java.net.Proxy
 import java.net.URL
 import java.text.DateFormat
-import java.util.*
+import java.util.Date
 
 class UserAssetActivity : BaseActivity() {
     private val binding by lazy { ActivityUserAssetBinding.inflate(layoutInflater) }
@@ -174,9 +177,13 @@ class UserAssetActivity : BaseActivity() {
     }
 
     private fun downloadGeoFiles() {
-        val httpPort = Utils.parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
-
+        val dialog = AlertDialog.Builder(this)
+            .setView(LayoutProgressBinding.inflate(layoutInflater).root)
+            .setCancelable(false)
+            .show()
         toast(R.string.msg_downloading_content)
+
+        val httpPort = Utils.parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
         var assets = MmkvManager.decodeAssetUrls()
         assets = addBuiltInGeoItems(assets)
 
@@ -194,6 +201,7 @@ class UserAssetActivity : BaseActivity() {
                     } else {
                         toast(getString(R.string.toast_failure) + " " + it.second.remarks)
                     }
+                    dialog.dismiss()
                 }
             }
         }
