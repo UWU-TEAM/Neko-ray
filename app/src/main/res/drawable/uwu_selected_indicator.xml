@@ -1,49 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:gravity="top|start"
-        android:height="26.0dip"
-        android:width="170.0dip">
-        <shape>
-            <gradient
-                android:startColor="?attr/colorPrimary"
-                android:endColor="@color/uwu_bg_card"
-                android:type="linear" />
-            <corners android:radius="24.0dip" />
-        </shape>
-    </item>
-    <item
-        android:gravity="top|end"
-        android:height="26.0dip"
-        android:width="170.0dip">
+        android:gravity="top"
+        android:height="26.0dip">
         <shape>
             <gradient
                 android:startColor="@color/uwu_bg_card"
                 android:endColor="?attr/colorPrimary"
+                android:angle="45.0"
                 android:type="linear" />
             <corners android:radius="24.0dip" />
         </shape>
     </item>
     <item
-        android:gravity="bottom|start"
-        android:height="26.0dip"
-        android:width="170.0dip">
+        android:gravity="bottom"
+        android:height="26.0dip">
         <shape>
             <gradient
                 android:startColor="?attr/colorPrimary"
                 android:endColor="@color/uwu_bg_card"
-                android:type="linear" />
-            <corners android:radius="24.0dip" />
-        </shape>
-    </item>
-    <item
-        android:gravity="bottom|end"
-        android:height="26.0dip"
-        android:width="170.0dip">
-        <shape>
-            <gradient
-                android:startColor="@color/uwu_bg_card"
-                android:endColor="?attr/colorPrimary"
+                android:angle="45.0"
                 android:type="linear" />
             <corners android:radius="24.0dip" />
         </shape>
