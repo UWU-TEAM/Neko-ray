@@ -28,7 +28,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.tbruyelle.rxpermissions3.RxPermissions
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
@@ -79,8 +78,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private val adapter by lazy { MainRecyclerAdapter(this) }
-    private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
     private val requestVpnPermission = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == RESULT_OK) {
             startV2Ray()
@@ -142,7 +139,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
                 stoptraffic()
-            } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
+            } else if ((MmkvManager.settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()
@@ -174,7 +171,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
 
         val toggle = ActionBarDrawerToggle(
-                this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close)
+            this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+        )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
@@ -313,7 +311,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun startV2Ray() {
         if (isNetworkConnected) {
-            if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
+            if (MmkvManager.mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
                 return
             }
             V2RayServiceManager.startV2Ray(this)
@@ -327,10 +325,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             Utils.stopVService(this)
         }
         Observable.timer(500, TimeUnit.MILLISECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe {
-                    startV2Ray()
-                }
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribe {
+                startV2Ray()
+            }
     }
 
     public override fun onResume() {
@@ -374,46 +372,57 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             importQRcode(true)
             true
         }
+
         R.id.import_clipboard -> {
             importClipboard()
             true
         }
+
         R.id.import_manually_vmess -> {
             importManually(EConfigType.VMESS.value)
             true
         }
+
         R.id.import_manually_vless -> {
             importManually(EConfigType.VLESS.value)
             true
         }
+
         R.id.import_manually_ss -> {
             importManually(EConfigType.SHADOWSOCKS.value)
             true
         }
+
         R.id.import_manually_socks -> {
             importManually(EConfigType.SOCKS.value)
             true
         }
+
         R.id.import_manually_trojan -> {
             importManually(EConfigType.TROJAN.value)
             true
         }
+
         R.id.import_manually_wireguard -> {
             importManually(EConfigType.WIREGUARD.value)
             true
         }
+
         R.id.import_config_custom_clipboard -> {
             importConfigCustomClipboard()
             true
         }
+
         R.id.import_config_custom_local -> {
             importConfigCustomLocal()
             true
         }
+
         R.id.import_config_custom_url -> {
             importConfigCustomUrlClipboard()
             true
         }
+
         R.id.import_config_custom_url_scan -> {
             importQRcode(false)
             true
@@ -457,20 +466,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         R.id.del_all_config -> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
-                    .setPositiveButton(android.R.string.ok) { _, _ ->
-                        binding.pbWaiting.show()
-                        lifecycleScope.launch(Dispatchers.IO) {
-                            mainViewModel.removeAllServer()
-                            launch(Dispatchers.Main) {
-                                mainViewModel.reloadServerList()
-                                binding.pbWaiting.hide()
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    binding.pbWaiting.show()
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        mainViewModel.removeAllServer()
+                        launch(Dispatchers.Main) {
+                            mainViewModel.reloadServerList()
+                            binding.pbWaiting.hide()
                             }
                         }
                     }
-                    .setNegativeButton(android.R.string.no) {_, _ ->
-                        //do noting
-                    }
-                    .show()
+                }
+                .setNegativeButton(android.R.string.no) { _, _ ->
+                    //do noting
+                }
+                .show()
             true
         }
         R.id.del_duplicate_config-> {
@@ -505,12 +515,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                         }
                     }
                 }
-                .setNegativeButton(android.R.string.no) {_, _ ->
+                .setNegativeButton(android.R.string.no) { _, _ ->
                     //do noting
                 }
                 .show()
             true
         }
+
         R.id.sort_by_test_results -> {
             binding.pbWaiting.show()
             lifecycleScope.launch(Dispatchers.IO) {
@@ -522,10 +533,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
             true
         }
+
         else -> super.onOptionsItemSelected(item)
     }
 
-    private fun importManually(createConfigType : Int) {
+    private fun importManually(createConfigType: Int) {
         startActivity(
             Intent()
                 .putExtra("createConfigType", createConfigType)
@@ -544,16 +556,16 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 //                    .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP), requestCode)
 //        } catch (e: Exception) {
         RxPermissions(this)
-                .request(Manifest.permission.CAMERA)
-                .subscribe {
-                    if (it)
-                        if (forConfig)
-                            scanQRCodeForConfig.launch(Intent(this, ScannerActivity::class.java))
-                        else
-                            scanQRCodeForUrlToCustomConfig.launch(Intent(this, ScannerActivity::class.java))
+            .request(Manifest.permission.CAMERA)
+            .subscribe {
+                if (it)
+                    if (forConfig)
+                        scanQRCodeForConfig.launch(Intent(this, ScannerActivity::class.java))
                     else
-                        toast(R.string.toast_permission_denied)
-                }
+                        scanQRCodeForUrlToCustomConfig.launch(Intent(this, ScannerActivity::class.java))
+                else
+                    toast(R.string.toast_permission_denied)
+            }
 //        }
         return true
     }
@@ -740,19 +752,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             Manifest.permission.READ_EXTERNAL_STORAGE
         }
         RxPermissions(this)
-                .request(permission)
-                .subscribe {
-                    if (it) {
-                        try {
-                            contentResolver.openInputStream(uri).use { input ->
-                                importCustomizeConfig(input?.bufferedReader()?.readText())
-                            }
-                        } catch (e: Exception) {
-                            e.printStackTrace()
+            .request(permission)
+            .subscribe {
+                if (it) {
+                    try {
+                        contentResolver.openInputStream(uri).use { input ->
+                            importCustomizeConfig(input?.bufferedReader()?.readText())
                         }
-                    } else
-                        toast(R.string.toast_permission_denied)
-                }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                } else
+                    toast(R.string.toast_permission_denied)
+            }
     }
 
     private fun keluar() {
@@ -890,22 +902,29 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.sub_setting -> {
-                requestSubSettingActivity.launch(Intent(this,SubSettingActivity::class.java))
+                requestSubSettingActivity.launch(Intent(this, SubSettingActivity::class.java))
             }
+
             R.id.settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java)
-                        .putExtra("isRunning", mainViewModel.isRunning.value == true))
+                startActivity(
+                    Intent(this, SettingsActivity::class.java)
+                        .putExtra("isRunning", mainViewModel.isRunning.value == true)
+                )
             }
+
             R.id.user_asset_setting -> {
                 startActivity(Intent(this, UserAssetActivity::class.java))
             }
+
             R.id.promotion -> {
                 Utils.openUri(this, "${Utils.decode(AppConfig.PromotionUrl)}?t=${System.currentTimeMillis()}")
             }
+
             R.id.logcat -> {
                 startActivity(Intent(this, LogcatActivity::class.java))
             }
-            R.id.about-> {
+
+            R.id.about -> {
                 startActivity(Intent(this, AboutActivity::class.java))
             }
         }

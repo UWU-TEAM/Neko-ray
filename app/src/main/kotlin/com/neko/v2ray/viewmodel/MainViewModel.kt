@@ -12,7 +12,6 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
@@ -40,29 +39,11 @@ import java.io.FileOutputStream
 import java.util.Collections
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
-    private val mainStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_MAIN,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
-    private val serverRawStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SERVER_RAW,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
-    private val settingsStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SETTING,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
+    private var serverList = MmkvManager.decodeServerList()
+    var subscriptionId: String = MmkvManager.settingsStorage.decodeString(AppConfig.CACHE_SUBSCRIPTION_ID, "") ?: ""
 
-    var serverList = MmkvManager.decodeServerList()
-    var subscriptionId: String = settingsStorage.decodeString(AppConfig.CACHE_SUBSCRIPTION_ID, "")?:""
-    var keywordFilter: String = settingsStorage.decodeString(AppConfig.CACHE_KEYWORD_FILTER, "")?:""
-        private set
+    //var keywordFilter: String = MmkvManager.settingsStorage.decodeString(AppConfig.CACHE_KEYWORD_FILTER, "")?:""
+    private var keywordFilter = ""
     val serversCache = mutableListOf<ServersCache>()
     val isRunning by lazy { MutableLiveData<Boolean>() }
     val updateListAction by lazy { MutableLiveData<Int>() }
@@ -121,7 +102,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 config.fullConfig = Gson().fromJson(server, V2rayConfig::class.java)
                 config.remarks = config.fullConfig?.remarks ?: System.currentTimeMillis().toString()
                 val key = MmkvManager.encodeServerConfig("", config)
-                serverRawStorage?.encode(key, server)
+                MmkvManager.serverRawStorage?.encode(key, server)
                 serverList.add(0, key)
                 val profile = ProfileItem(
                     configType = config.configType,
@@ -142,7 +123,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun swapServer(fromPosition: Int, toPosition: Int) {
         Collections.swap(serverList, fromPosition, toPosition)
         Collections.swap(serversCache, fromPosition, toPosition)
-        mainStorage?.encode(KEY_ANG_CONFIGS, Gson().toJson(serverList))
+        MmkvManager.mainStorage?.encode(KEY_ANG_CONFIGS, Gson().toJson(serverList))
     }
 
     @Synchronized
@@ -173,7 +154,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     }
 
 
-    fun exportAllServer() : Int {
+    fun exportAllServer(): Int {
         val serverListCopy =
             if (subscriptionId.isNullOrEmpty()) {
                 serverList
@@ -242,12 +223,12 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun subscriptionIdChanged(id: String) {
         if (subscriptionId != id) {
             subscriptionId = id
-            settingsStorage.encode(AppConfig.CACHE_SUBSCRIPTION_ID, subscriptionId)
+            MmkvManager.settingsStorage.encode(AppConfig.CACHE_SUBSCRIPTION_ID, subscriptionId)
             reloadServerList()
         }
     }
 
-    fun getSubscriptions(context: Context) : Pair<MutableList<String>?, MutableList<String>?> {
+    fun getSubscriptions(context: Context): Pair<MutableList<String>?, MutableList<String>?> {
         val subscriptions = MmkvManager.decodeSubscriptions()
         if (subscriptionId.isNotEmpty()
             && !subscriptions.map { it.first }.contains(subscriptionId)
@@ -273,7 +254,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         return -1
     }
 
-    fun removeDuplicateServer() : Int {
+    fun removeDuplicateServer(): Int {
         val serversCacheCopy = mutableListOf<Pair<String, ServerConfig>>()
         for (it in serversCache) {
             val config = MmkvManager.decodeServerConfig(it.guid) ?: continue
@@ -354,7 +335,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun filterConfig(keyword: String) {
         keywordFilter = keyword
-        settingsStorage.encode(AppConfig.CACHE_KEYWORD_FILTER, keywordFilter)
+        MmkvManager.settingsStorage.encode(AppConfig.CACHE_KEYWORD_FILTER, keywordFilter)
         reloadServerList()
     }
 
