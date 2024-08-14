@@ -2,16 +2,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
+        android:icon="@drawable/ic_description_24dp"
+        android:id="@+id/search_view"
+        android:title="@string/menu_item_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="always"  />
+    <item
         android:icon="@drawable/uwu_thememode"
         android:id="@+id/theme_settings"
         android:title="@string/title_theme_settings"
         app:showAsAction="always" />
-    <item
-        android:id="@+id/search_view"
-        android:icon="@drawable/ic_description_24dp"
-        android:title="@string/menu_item_search"
-        app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="always"  />
     <item
         android:icon="@drawable/ic_add_24dp"
         android:title="@string/menu_item_add_config"

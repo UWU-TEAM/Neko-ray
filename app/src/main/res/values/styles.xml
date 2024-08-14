@@ -42,6 +42,11 @@
         <!--<item name="colorAccent">@color/colorAccent</item>-->
     </style>
 
+    <style name="AppTheme.SearchView" parent="">
+        <item name="android:editTextColor">@color/colorText_ActionBar</item>
+        <item name="android:textColorHint">@color/colorText_ActionBar</item>
+    </style>
+
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

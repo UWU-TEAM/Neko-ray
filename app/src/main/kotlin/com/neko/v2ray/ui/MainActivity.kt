@@ -54,6 +54,8 @@ import android.content.pm.PackageManager
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.AttrRes
+import android.annotation.SuppressLint
+import android.app.AppOpsManager
 import androidx.core.app.ActivityCompat
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
@@ -71,6 +73,8 @@ import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
 import android.os.Handler
 import android.os.Looper
+import android.os.Process
+import android.provider.Settings
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private val binding by lazy {
@@ -239,6 +243,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setCancelable(false)
         }
         appUpdaterNotification.start()
+
+        setupPermissions()
     }
 
     private fun startNoInternetDialog() {
@@ -473,7 +479,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                         launch(Dispatchers.Main) {
                             mainViewModel.reloadServerList()
                             binding.pbWaiting.hide()
-                            }
                         }
                     }
                 }
@@ -483,6 +488,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 .show()
             true
         }
+
         R.id.del_duplicate_config-> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
@@ -839,6 +845,39 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
         }
         return false
+    }
+
+    private fun setupPermissions() {
+        val permission = ContextCompat.checkSelfPermission(
+            this, Manifest.permission.READ_PHONE_STATE
+        )
+
+        if (permission != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(
+                this, arrayOf(Manifest.permission.READ_PHONE_STATE), 34
+            )
+        }
+
+        if (!checkUsagePermission()) {
+            Toast.makeText(this, "Please allow usage access", Toast.LENGTH_SHORT).show()
+        }
+
+    }
+
+    private fun checkUsagePermission(): Boolean {
+        val appOps = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
+        var mode: Int = appOps.checkOpNoThrow(
+            "android:get_usage_stats", Process.myUid(),
+            packageName
+
+        )
+        val granted = mode == AppOpsManager.MODE_ALLOWED
+        if (!granted) {
+            val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
+            startActivity(intent)
+            return false
+        }
+        return true
     }
 
     fun settingsExtra(): Boolean {
