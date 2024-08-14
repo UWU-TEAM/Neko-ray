@@ -534,7 +534,7 @@ object AngConfigManager {
         return count
     }
 
-    private fun updateConfigViaSub(it: Pair<String, SubscriptionItem>): Int {
+    fun updateConfigViaSub(it: Pair<String, SubscriptionItem>): Int {
         try {
             if (TextUtils.isEmpty(it.first)
                 || TextUtils.isEmpty(it.second.remarks)
