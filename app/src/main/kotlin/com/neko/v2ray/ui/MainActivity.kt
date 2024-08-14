@@ -182,7 +182,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         initGroupTab()
         setupViewModel()
-        mainViewModel.copyAssets(assets)
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             RxPermissions(this)
@@ -286,6 +285,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         }
         mainViewModel.startListenBroadcast()
+        mainViewModel.copyAssets(assets)
     }
 
     private fun initGroupTab() {
@@ -425,7 +425,18 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         R.id.export_all -> {
-            mainViewModel.exportAllServer()
+            binding.pbWaiting.show()
+            lifecycleScope.launch(Dispatchers.IO) {
+                val ret = mainViewModel.exportAllServer()
+                launch(Dispatchers.Main) {
+                    if (ret == 0)
+                        toast(R.string.toast_success)
+                    else
+                        toast(R.string.toast_failure)
+                    binding.pbWaiting.hide()
+                }
+            }
+
             true
         }
 
@@ -447,7 +458,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         R.id.del_all_config -> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
-                        mainViewModel.removeAllServer()
+                        binding.pbWaiting.show()
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            mainViewModel.removeAllServer()
+                            launch(Dispatchers.Main) {
+                                mainViewModel.reloadServerList()
+                                binding.pbWaiting.hide()
+                            }
+                        }
                     }
                     .setNegativeButton(android.R.string.no) {_, _ ->
                         //do noting
@@ -458,18 +476,34 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         R.id.del_duplicate_config-> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
-                    mainViewModel.removeDuplicateServer()
+                    binding.pbWaiting.show()
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        val ret = mainViewModel.removeDuplicateServer()
+                        launch(Dispatchers.Main) {
+                            mainViewModel.reloadServerList()
+                            toast(getString(R.string.title_del_duplicate_config_count, ret))
+                            binding.pbWaiting.hide()
+                        }
+                    }
                 }
-                .setNegativeButton(android.R.string.no) {_, _ ->
+                .setNegativeButton(android.R.string.no) { _, _ ->
                     //do noting
                 }
                 .show()
             true
         }
+
         R.id.del_invalid_config -> {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
-                    mainViewModel.removeInvalidServer()
+                    binding.pbWaiting.show()
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        mainViewModel.removeInvalidServer()
+                        launch(Dispatchers.Main) {
+                            mainViewModel.reloadServerList()
+                            binding.pbWaiting.hide()
+                        }
+                    }
                 }
                 .setNegativeButton(android.R.string.no) {_, _ ->
                     //do noting
@@ -478,7 +512,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             true
         }
         R.id.sort_by_test_results -> {
-            mainViewModel.sortByTestResults()
+            binding.pbWaiting.show()
+            lifecycleScope.launch(Dispatchers.IO) {
+                mainViewModel.sortByTestResults()
+                launch(Dispatchers.Main) {
+                    mainViewModel.reloadServerList()
+                    binding.pbWaiting.hide()
+                }
+            }
             true
         }
         else -> super.onOptionsItemSelected(item)
@@ -566,7 +607,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 //dialog.dismiss()
                 binding.pbWaiting.hide()
             }
-            }
+        }
     }
 
     private fun importConfigCustomClipboard()

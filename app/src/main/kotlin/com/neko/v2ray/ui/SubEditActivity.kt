@@ -7,24 +7,19 @@ import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.appcompat.widget.Toolbar
-import androidx.work.Constraints
-import androidx.work.ExistingPeriodicWorkPolicy
-import androidx.work.NetworkType
-import androidx.work.PeriodicWorkRequest
-import androidx.work.multiprocess.RemoteWorkManager
+import androidx.lifecycle.lifecycleScope
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
-import com.neko.v2ray.AngApplication
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivitySubEditBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.service.SubscriptionUpdater
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
-import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 import com.neko.imageslider.ImageSlider
 import com.neko.imageslider.constants.ActionTypes
@@ -160,8 +155,12 @@ class SubEditActivity : BaseActivity() {
         if (editSubId.isNotEmpty()) {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                     .setPositiveButton(android.R.string.ok) { _, _ ->
-                        MmkvManager.removeSubscription(editSubId)
-                        finish()
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            MmkvManager.removeSubscription(editSubId)
+                            launch(Dispatchers.Main) {
+                                finish()
+                            }
+                        }
                     }
                     .setNegativeButton(android.R.string.no) {_, _ ->
                         // do nothing
