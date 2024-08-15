@@ -36,6 +36,7 @@
     <string name="menu_item_import_config_custom_url">استيراد التكوين المخصص من URL</string>
     <string name="menu_item_import_config_custom_url_scan">استيراد عنوان URL لفحص التكوين المخصص</string>
     <string name="del_config_comfirm">تأكيد الحذف？</string>
+    <string name="del_invalid_config_comfirm">يرجى الاختبار قبل الحذف! هل تريد تأكيد الحذف؟</string>
     <string name="server_lab_remarks">ملاحظات</string>
     <string name="server_lab_address">عنوان</string>
     <string name="server_lab_port">ميناء</string>

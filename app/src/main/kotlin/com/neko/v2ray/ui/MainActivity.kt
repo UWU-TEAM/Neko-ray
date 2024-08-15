@@ -520,7 +520,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
 
         R.id.del_invalid_config -> {
-            MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
+            MaterialAlertDialogBuilder(this).setMessage(R.string.del_invalid_config_comfirm)
                 .setPositiveButton(android.R.string.ok) { _, _ ->
                     binding.pbWaiting.show()
                     lifecycleScope.launch(Dispatchers.IO) {

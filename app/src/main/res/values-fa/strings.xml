@@ -36,6 +36,7 @@
     <string name="menu_item_import_config_custom_url">پیکربندی سفارشی را از URL وارد کنید</string>
     <string name="menu_item_import_config_custom_url_scan">URL اسکن پیکربندی سفارشی را وارد کنید</string>
     <string name="del_config_comfirm">تایید حذف؟</string>
+    <string name="del_invalid_config_comfirm">لطفا قبل از حذف تست کنید! تایید حذف؟</string>
     <string name="server_lab_remarks">ملاحظات</string>
     <string name="server_lab_address">نشانی</string>
     <string name="server_lab_port">بندر</string>
@@ -213,22 +214,22 @@
     <string name="logcat_copy">کپی 🀄</string>
     <string name="logcat_clear">پاک کردن</string>
     <string name="title_service_restart">راه اندازی مجدد سرویس</string>
-    <string name="title_del_all_config">تمام تنظیمات را حذف کنید</string>
-    <string name="title_del_duplicate_config">تنظیمات تکراری را حذف کنید</string>
-    <string name="title_del_invalid_config">تنظیمات نامعتبر را حذف کنید (ابتدا تست کنید)</string>
-    <string name="title_export_all">پیکربندی های غیر سفارشی را به کلیپ بورد صادر کنید</string>
+    <string name="title_del_all_config">حذف تكوين المجموعة الحالية</string>
+    <string name="title_del_duplicate_config">حذف تكوين المجموعة الحالية المكرر</string>
+    <string name="title_del_invalid_config">حذف تكوين المجموعة الحالية غير الصحيح</string>
+    <string name="title_export_all">تصدير تكوينات المجموعة الحالية غير المخصصة إلى الحافظة</string>
     <string name="title_sub_setting">تنظیم گروه اشتراک</string>
     <string name="sub_setting_remarks">ملاحظات</string>
     <string name="sub_setting_url">URL اختیاری</string>
     <string name="sub_setting_enable">فعال کردن آپدیت</string>
     <string name="sub_auto_update">فعال کردن به روز رسانی خودکار</string>
-    <string name="title_sub_update">اشتراک را به روز کنید</string>
-    <string name="title_ping_all_server">Tcping تمام تنظیمات</string>
-    <string name="title_real_ping_all_server">تاخیر واقعی تمام تنظیمات</string>
+    <string name="title_sub_update">تحديث اشتراك المجموعة الحالية</string>
+    <string name="title_ping_all_server">تكوين المجموعة الحالية Tcping</string>
+    <string name="title_real_ping_all_server">تأخير حقيقي لتكوين المجموعة الحالية</string>
     <string name="title_user_asset_setting">فایل های دارایی جغرافیایی</string>
     <string name="title_sort_by_test_results">مرتب سازی بر اساس نتایج آزمون</string>
     <string name="title_filter_config">فایل پیکربندی فیلتر</string>
-    <string name="filter_config_all">همه گروه های اشتراک</string>
+    <string name="filter_config_all">جميع المجموعات</string>
     <string name="title_del_duplicate_config_count">%d پیکربندی تکراری را حذف کنید</string>
  
     <string name="tasker_start_service">سرویس را شروع کنید</string>
