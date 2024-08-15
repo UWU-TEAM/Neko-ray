@@ -6,10 +6,10 @@
         <shape
             android:innerRadius="0.0dip">
             <solid
-                android:color="?attr/colorPrimaryContainer" />
+                android:color="?attr/colorPrimary" />
             <stroke
                 android:width="2.0dip"
-                android:color="@color/colorText_ActionBar" />
+                android:color="?android:textColorPrimary" />
             <corners
                 android:radius="10.0dip" />
         </shape>

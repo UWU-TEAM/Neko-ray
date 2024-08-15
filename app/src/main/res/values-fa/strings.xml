@@ -349,5 +349,7 @@
     <string name="uwu_theme_botton_text">تغییر زمینه</string>
     <string name="uwu_subscription">اشتراک، ابونمان</string>
     <string name="uwu_subscription_desc">گروه اشتراک خود را در اینجا راه اندازی کنید!</string>
+    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">لطفا ابتدا VPN را خاموش کنید</string>
+    <string name="uwu_dialog_warn_apply_theme_in_banner_open">لطفا ابتدا بنر را مخفی کنید</string>
     <!-- Neko strings --> 
 </resources> 

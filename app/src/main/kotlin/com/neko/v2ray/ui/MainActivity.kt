@@ -109,6 +109,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     val mainViewModel: MainViewModel by viewModels()
     val TAG = "MainActivity"
     private lateinit var expandableContent: ExpandableView
+    private lateinit var expandableConnection: ExpandableView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setupPermissions()
@@ -118,6 +119,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         setSupportActionBar(binding.toolbar)
         expandableContent = findViewById(R.id.uwu_header_home)
         expandableContent.setExpansion(false)
+        expandableConnection = findViewById(R.id.uwu_connection_expanded)
+        expandableConnection.setExpansion(false)
 
         val networkUsage = NetworkManager(this, Util.getSubscriberId(this))
         val handler = Handler(Looper.getMainLooper())
@@ -280,11 +283,15 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             adapter.isRunning = isRunning
             if (isRunning) {
                 binding.fab.setImageResource(R.drawable.uwu_ic_service_busy)
+                expandableConnection.expand()
+                expandableConnection.orientation = ExpandableView.HORIZONTAL
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_orange))
                 setTestState(getString(R.string.connection_connected))
                 binding.layoutTest.isFocusable = true
             } else {
                 binding.fab.setImageResource(R.drawable.uwu_ic_service_idle)
+                expandableConnection.collapse()
+                expandableConnection.orientation = ExpandableView.HORIZONTAL
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_grey))
                 setTestState(getString(R.string.connection_not_connected))
                 binding.layoutTest.isFocusable = false
@@ -337,6 +344,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             .subscribe {
                 startV2Ray()
             }
+        expandableConnection.collapse()
+        expandableConnection.orientation = ExpandableView.HORIZONTAL
     }
 
     public override fun onResume() {
@@ -373,7 +382,13 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.theme_settings -> {
-            SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
+            if (mainViewModel.isRunning.value == true) {
+                uwuVpnIsRun()
+            } else if (expandableContent.isExpanded) {
+                uwuBannerIsOpen()
+            } else {
+                SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
+            }
             true
         }
 
@@ -859,11 +874,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         } else {
             ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_PHONE_NUMBERS"), 1)
         }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkSelfPermission("android.permission.READ_MEDIA_IMAGES") != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_MEDIA_IMAGES"), 1)
-        } else {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
-        }
         return true
     }
 
@@ -888,9 +898,32 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             expandableContent.collapse()
             expandableContent.orientation = ExpandableView.VERTICAL
             return
+        } else {
+            expandableContent.expand()
+            expandableContent.orientation = ExpandableView.VERTICAL
         }
-        expandableContent.expand()
-        expandableContent.orientation = ExpandableView.VERTICAL
+    }
+
+    private fun uwuVpnIsRun() {
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.setTitle("⚠️ WARNING")
+        .setMessage(R.string.uwu_dialog_warn_apply_theme_in_vpn_run)
+        .setCancelable(false)
+        .setPositiveButton(R.string.ok) { dialog, _ ->
+            dialog.cancel()
+        }
+        .show()
+    }
+
+    private fun uwuBannerIsOpen() {
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.setTitle("⚠️ WARNING")
+        .setMessage(R.string.uwu_dialog_warn_apply_theme_in_banner_open)
+        .setCancelable(false)
+        .setPositiveButton(R.string.ok) { dialog, _ ->
+            dialog.cancel()
+        }
+        .show()
     }
 
     fun settingsExtra(): Boolean {
