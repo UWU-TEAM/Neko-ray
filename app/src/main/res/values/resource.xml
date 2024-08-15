@@ -183,7 +183,8 @@
         <item>English</item>
         <item>Indonesia</item>
         <item>Sunda</item>
-        <item>日本語</item>
+        <item>Japanese</item>
+        <item>Jawa</item>
         <item>中文简体</item>
         <item>中文繁體</item>
         <item>Tiếng Việt</item>
@@ -198,6 +199,7 @@
         <item>in</item>
         <item>su</item>
         <item>ja</item>
+        <item>jw</item>
         <item>zh-rCN</item>
         <item>zh-rTW</item>
         <item>vi</item>

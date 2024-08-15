@@ -410,6 +410,7 @@ object Utils {
             "in" -> Locale("in")
             "su" -> Locale("su")
             "ja" -> Locale("ja")
+            "je" -> Locale("jw")
             "zh-rCN" -> Locale.CHINA
             "zh-rTW" -> Locale.TRADITIONAL_CHINESE
             "vi" -> Locale("vi")
