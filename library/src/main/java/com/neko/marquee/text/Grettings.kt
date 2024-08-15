@@ -68,6 +68,15 @@ class Grettings : AppCompatTextView {
                     else -> sb.append("💤 寝る時間だよ...")
                 }
             }
+            "jw" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 sugeng enjang...")
+                    timeOfDay in 9..15 -> sb.append("⛅ sugeng siang...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ sugeng sonten...")
+                    timeOfDay in 21..23 -> sb.append("🌙 sugeng dalu...")
+                    else -> sb.append("💤 Wis wayahe turu...")
+                }
+            }
             "ru" -> {
                 when {
                     timeOfDay in 4..8 -> sb.append("🌤 Доброе утро...")
