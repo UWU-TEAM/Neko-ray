@@ -111,7 +111,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private lateinit var expandableContent: ExpandableView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        isStoragePermissionGranted()
+        setupPermissions()
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         title = getString(R.string.app_title_name)
@@ -247,8 +247,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setCancelable(false)
         }
         appUpdaterNotification.start()
-
-        setupPermissions()
     }
 
     private fun startNoInternetDialog() {
@@ -848,33 +846,28 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         return super.onKeyDown(keyCode, event)
     }
 
-    fun isStoragePermissionGranted(): Boolean {
+    fun setupPermissions() {
+        PermissionGranted()
+        if (!checkUsagePermission()) {
+            Toast.makeText(this, "Please allow usage access", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun PermissionGranted(): Boolean {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q && checkSelfPermission("android.permission.READ_PHONE_STATE") != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_PHONE_STATE"), 1)
+        } else {
+            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_PHONE_NUMBERS"), 1)
+        }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU && checkSelfPermission("android.permission.READ_MEDIA_IMAGES") != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_MEDIA_IMAGES"), 1)
         } else {
             ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_EXTERNAL_STORAGE"), 1)
         }
-        return false
+        return true
     }
 
-    private fun setupPermissions() {
-        val permission = ContextCompat.checkSelfPermission(
-            this, Manifest.permission.READ_PHONE_STATE
-        )
-
-        if (permission != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(
-                this, arrayOf(Manifest.permission.READ_PHONE_STATE), 34
-            )
-        }
-
-        if (!checkUsagePermission()) {
-            Toast.makeText(this, "Please allow usage access", Toast.LENGTH_SHORT).show()
-        }
-
-    }
-
-    private fun checkUsagePermission(): Boolean {
+    fun checkUsagePermission(): Boolean {
         val appOps = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
         var mode: Int = appOps.checkOpNoThrow(
             "android:get_usage_stats", Process.myUid(),
