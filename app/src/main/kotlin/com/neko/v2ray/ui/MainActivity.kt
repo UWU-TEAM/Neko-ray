@@ -60,6 +60,7 @@ import androidx.core.app.ActivityCompat
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
+import com.neko.expandable.layout.ExpandableView
 import com.neko.themeengine.ThemeChooserDialogBuilder
 import com.neko.themeengine.ThemeEngine
 import com.neko.tools.NetworkSwitcher
@@ -107,6 +108,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
     val TAG = "MainActivity"
+    private lateinit var expandableContent: ExpandableView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         isStoragePermissionGranted()
@@ -114,6 +116,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         setContentView(binding.root)
         title = getString(R.string.app_title_name)
         setSupportActionBar(binding.toolbar)
+        expandableContent = findViewById(R.id.uwu_header_home)
+        expandableContent.setExpansion(false)
 
         val networkUsage = NetworkManager(this, Util.getSubscriberId(this))
         val handler = Handler(Looper.getMainLooper())
@@ -374,6 +378,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
             true
         }
+
+        R.id.uwu_banner_hide -> {
+            uwuBanner()
+            true
+        }
+
         R.id.import_qrcode -> {
             importQRcode(true)
             true
@@ -878,6 +888,16 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return false
         }
         return true
+    }
+
+    private fun uwuBanner() {
+        if (expandableContent.isExpanded) {
+            expandableContent.collapse()
+            expandableContent.orientation = ExpandableView.VERTICAL
+            return
+        }
+        expandableContent.expand()
+        expandableContent.orientation = ExpandableView.VERTICAL
     }
 
     fun settingsExtra(): Boolean {
