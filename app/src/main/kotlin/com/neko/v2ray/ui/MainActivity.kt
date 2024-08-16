@@ -128,6 +128,11 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             override fun run() {
                 val now = networkUsage.getUsageNow(NetworkType.ALL)
                 val speeds = NetSpeed.calculateSpeed(now.timeTaken, now.downloads, now.uploads)
+                val todayM = networkUsage.getUsage(Interval.today, NetworkType.MOBILE)
+                val todayW = networkUsage.getUsage(Interval.today, NetworkType.WIFI)
+                
+                binding.wifiUsagesTv.text = "ᯤ" + "\n" + Util.formatData(todayW.downloads, todayW.uploads)[2]
+                binding.dataUsagesTv.text = "📱" + "\n" + Util.formatData(todayM.downloads, todayM.uploads)[2]
                 binding.apply {
                     totalSpeedTv.text = speeds[0].speed + "\n" + speeds[0].unit
                     upUsagesTv.text = "▲ " + speeds[2].speed + speeds[2].unit
