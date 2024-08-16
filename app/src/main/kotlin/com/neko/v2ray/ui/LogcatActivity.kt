@@ -1,9 +1,9 @@
 package com.neko.v2ray.ui
 
 import android.content.Intent
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
 import android.view.Menu
 import android.view.MenuItem
@@ -17,11 +17,9 @@ import com.neko.v2ray.databinding.ActivityLogcatBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-
+import kotlinx.coroutines.withContext
 import java.io.IOException
-import java.util.LinkedHashSet
 
 class LogcatActivity : BaseActivity() {
     private val binding by lazy {
@@ -48,8 +46,10 @@ class LogcatActivity : BaseActivity() {
                     val lst = LinkedHashSet<String>()
                     lst.add("logcat")
                     lst.add("-c")
-                    val process = Runtime.getRuntime().exec(lst.toTypedArray())
-                    process.waitFor()
+                    withContext(Dispatchers.IO) {
+                        val process = Runtime.getRuntime().exec(lst.toTypedArray())
+                        process.waitFor()
+                    }
                 }
                 val lst = LinkedHashSet<String>()
                 lst.add("logcat")
@@ -58,7 +58,9 @@ class LogcatActivity : BaseActivity() {
                 lst.add("time")
                 lst.add("-s")
                 lst.add("GoLog,tun2socks,${ANG_PACKAGE},AndroidRuntime,System.err")
-                val process = Runtime.getRuntime().exec(lst.toTypedArray())
+                val process = withContext(Dispatchers.IO) {
+                    Runtime.getRuntime().exec(lst.toTypedArray())
+                }
 //                val bufferedReader = BufferedReader(
 //                        InputStreamReader(process.inputStream))
 //                val allText = bufferedReader.use(BufferedReader::readText)
