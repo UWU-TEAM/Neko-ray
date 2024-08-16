@@ -128,17 +128,26 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             override fun run() {
                 val now = networkUsage.getUsageNow(NetworkType.ALL)
                 val speeds = NetSpeed.calculateSpeed(now.timeTaken, now.downloads, now.uploads)
-                val todayM = networkUsage.getUsage(Interval.today, NetworkType.MOBILE)
-                val todayW = networkUsage.getUsage(Interval.today, NetworkType.WIFI)
-                
-                binding.wifiUsagesTv.text = "ᯤ" + "\n" + Util.formatData(todayW.downloads, todayW.uploads)[2]
-                binding.dataUsagesTv.text = "📱" + "\n" + Util.formatData(todayM.downloads, todayM.uploads)[2]
+
                 binding.apply {
                     totalSpeedTv.text = speeds[0].speed + "\n" + speeds[0].unit
                     upUsagesTv.text = "▲ " + speeds[2].speed + speeds[2].unit
                     downUsagesTv.text = "▼ " + speeds[1].speed + speeds[1].unit
                 }
                 handler.postDelayed(this, 1000)
+            }
+        }
+
+        val runnableCode1 = object : Runnable {
+            override fun run() {
+                val todayM = networkUsage.getUsage(Interval.today, NetworkType.MOBILE)
+                val todayW = networkUsage.getUsage(Interval.today, NetworkType.WIFI)
+                
+                binding.apply {
+                    wifiUsagesTv.text = "wifi" + "\n" + Util.formatData(todayW.downloads, todayW.uploads)[2]
+                    dataUsagesTv.text = "mobile" + "\n" + Util.formatData(todayM.downloads, todayM.uploads)[2]
+                }
+                handler.postDelayed(this, 36000)
             }
         }
 
@@ -149,6 +158,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 upUsagesTv.text = "▲ " + "0kB/s"
                 downUsagesTv.text = "▼ " + "0kB/s"
             }
+            handler.removeCallbacks(runnableCode1)
         }
 
         binding.fab.setOnClickListener {
@@ -160,12 +170,14 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 if (intent == null) {
                     startV2Ray()
                     runnableCode.run()
+                    runnableCode1.run()
                 } else {
                     requestVpnPermission.launch(intent)
                 }
             } else {
                 startV2Ray()
                 runnableCode.run()
+                runnableCode1.run()
             }
         }
         binding.layoutTest.setOnClickListener {
