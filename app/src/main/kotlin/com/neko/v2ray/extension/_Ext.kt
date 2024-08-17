@@ -1,8 +1,6 @@
 package com.neko.v2ray.extension
 
 import android.content.Context
-import android.net.ConnectivityManager
-import android.net.NetworkCapabilities
 import android.os.Build
 import android.widget.Toast
 import com.neko.v2ray.AngApplication

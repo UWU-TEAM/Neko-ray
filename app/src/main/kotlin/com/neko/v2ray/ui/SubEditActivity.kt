@@ -154,18 +154,18 @@ class SubEditActivity : BaseActivity() {
     private fun deleteServer(): Boolean {
         if (editSubId.isNotEmpty()) {
             MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
-                    .setPositiveButton(android.R.string.ok) { _, _ ->
-                        lifecycleScope.launch(Dispatchers.IO) {
-                            MmkvManager.removeSubscription(editSubId)
-                            launch(Dispatchers.Main) {
-                                finish()
-                            }
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        MmkvManager.removeSubscription(editSubId)
+                        launch(Dispatchers.Main) {
+                            finish()
                         }
                     }
-                    .setNegativeButton(android.R.string.no) {_, _ ->
-                        // do nothing
-                    }
-                    .show()
+                }
+                .setNegativeButton(android.R.string.no) { _, _ ->
+                    // do nothing
+                }
+                .show()
         }
         return true
     }
@@ -187,10 +187,12 @@ class SubEditActivity : BaseActivity() {
             deleteServer()
             true
         }
+
         R.id.save_config -> {
             saveServer()
             true
         }
+
         else -> super.onOptionsItemSelected(item)
     }
 

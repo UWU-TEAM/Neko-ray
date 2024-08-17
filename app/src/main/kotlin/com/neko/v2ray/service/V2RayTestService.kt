@@ -10,7 +10,11 @@ import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
 import go.Seq
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.asCoroutineDispatcher
+import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.launch
 import libv2ray.Libv2ray
 import java.util.concurrent.Executors
 
@@ -32,6 +36,7 @@ class V2RayTestService : Service() {
                     MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_CONFIG_SUCCESS, Pair(contentPair.first, result))
                 }
             }
+
             MSG_MEASURE_CONFIG_CANCEL -> {
                 realTestScope.coroutineContext[Job]?.cancelChildren()
             }

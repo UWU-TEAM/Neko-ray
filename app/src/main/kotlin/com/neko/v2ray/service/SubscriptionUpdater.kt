@@ -21,7 +21,6 @@ import com.neko.v2ray.util.Utils
 object SubscriptionUpdater {
 
 
-
     class UpdateTask(context: Context, params: WorkerParameters) :
         CoroutineWorker(context, params) {
 

@@ -2,12 +2,12 @@ package com.neko.v2ray.ui
 
 import android.content.Intent
 import android.os.Bundle
-import com.neko.v2ray.R
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingsBinding
 import com.neko.v2ray.util.SoftInputAssist
 
@@ -23,7 +23,7 @@ class RoutingSettingsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

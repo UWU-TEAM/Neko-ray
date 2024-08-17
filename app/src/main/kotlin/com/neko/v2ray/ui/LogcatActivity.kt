@@ -88,10 +88,12 @@ class LogcatActivity : BaseActivity() {
             toast(R.string.toast_success)
             true
         }
+
         R.id.clear_all -> {
             logcat(true)
             true
         }
+
         else -> super.onOptionsItemSelected(item)
     }
 }
