@@ -146,7 +146,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                     wifiUsagesTv.text = "wifi" + "\n" + Util.formatData(todayW.downloads, todayW.uploads)[2]
                     dataUsagesTv.text = "mobile" + "\n" + Util.formatData(todayM.downloads, todayM.uploads)[2]
                 }
-                handler.postDelayed(this, 36000)
+                handler.postDelayed(this, 216000)
             }
         }
 
