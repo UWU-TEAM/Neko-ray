@@ -18,7 +18,7 @@ import com.google.gson.reflect.TypeToken;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import androidx.appcompat.widget.Toolbar;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 
 public class IpLocation extends BaseActivity {
@@ -105,7 +105,7 @@ public class IpLocation extends BaseActivity {
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(getUwU("uwu_ip_location", "layout"));
-        Toolbar toolbar = findViewById(R.id.toolbar);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
         CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);

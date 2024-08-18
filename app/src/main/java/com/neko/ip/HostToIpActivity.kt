@@ -16,7 +16,7 @@ import android.view.*
 import android.webkit.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
@@ -55,7 +55,7 @@ class HostToIpActivity : BaseActivity() {
     }
 
     private fun initialize(savedInstanceState: Bundle?) {
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val toolbar: MaterialToolbar = findViewById(R.id.toolbar)
         val toolbarLayout: CollapsingToolbarLayout = findViewById(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

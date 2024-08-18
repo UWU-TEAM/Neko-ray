@@ -10,7 +10,7 @@ import android.view.View
 import android.webkit.WebView
 import androidx.annotation.NonNull
 import androidx.annotation.Nullable
-import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.MaterialToolbar
 import androidx.core.app.ActivityCompat
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.mikepenz.aboutlibraries.LibsBuilder
@@ -28,7 +28,7 @@ class NekoAboutActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.uwu_about_activity)
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

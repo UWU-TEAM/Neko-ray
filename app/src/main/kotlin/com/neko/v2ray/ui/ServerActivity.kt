@@ -13,7 +13,7 @@ import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.MaterialToolbar
 import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.textfield.TextInputLayout
@@ -158,7 +158,7 @@ class ServerActivity : BaseActivity() {
             EConfigType.WIREGUARD -> setContentView(R.layout.activity_server_wireguard)
         }
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

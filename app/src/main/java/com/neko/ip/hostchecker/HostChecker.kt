@@ -14,7 +14,7 @@ import android.widget.EditText
 import android.widget.ListView
 import android.widget.Spinner
 import android.widget.Toast
-import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.MaterialToolbar
 import com.neko.v2ray.ui.BaseActivity
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.R
@@ -43,7 +43,7 @@ class HostChecker : BaseActivity() {
     private lateinit var softInputAssist: SoftInputAssist
 
     private fun initialize(bundle: Bundle?) {
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)

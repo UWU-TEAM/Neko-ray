@@ -8,7 +8,7 @@ import android.view.MenuItem
 import android.widget.EditText
 import com.neko.v2ray.ui.BaseActivity
 import androidx.appcompat.widget.SearchView
-import androidx.appcompat.widget.Toolbar
+import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.mikepenz.aboutlibraries.LibsBuilder.Companion.BUNDLE_EDGE_TO_EDGE
 import com.mikepenz.aboutlibraries.LibsBuilder.Companion.BUNDLE_SEARCH_ENABLED
@@ -48,7 +48,7 @@ open class LibsActivity : BaseActivity(), SearchView.OnQueryTextListener {
         }
 
         // Handle Toolbar
-        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
 
