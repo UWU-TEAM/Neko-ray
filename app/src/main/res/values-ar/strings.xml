@@ -347,7 +347,5 @@
     <string name="uwu_theme_botton_text">غير الخلفية</string>
     <string name="uwu_subscription">الاشتراك</string>
     <string name="uwu_subscription_desc">قم بإعداد مجموعة الاشتراك الخاصة بك هنا!</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">يرجى إيقاف تشغيل VPN أولاً</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">يرجى إخفاء اللافتة أولاً</string>
     <!-- Neko strings --> 
 </resources> 

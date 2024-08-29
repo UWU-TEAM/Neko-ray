@@ -347,7 +347,5 @@
     <string name="uwu_theme_botton_text">改變主題</string>
     <string name="uwu_subscription">訂閱</string>
     <string name="uwu_subscription_desc">在這裡設定您的訂閱組！</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">請先關閉VPN</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">請先隱藏橫幅</string>
     <!-- Neko strings --> 
 </resources>

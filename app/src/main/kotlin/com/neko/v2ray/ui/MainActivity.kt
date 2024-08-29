@@ -397,13 +397,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.theme_settings -> {
-            if (mainViewModel.isRunning.value == true) {
-                uwuVpnIsRun()
-            } else if (expandableContent.isExpanded) {
-                uwuBannerIsOpen()
-            } else {
-                SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
-            }
+            SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
             true
         }
 
@@ -919,28 +913,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             expandableContent.orientation = ExpandableView.VERTICAL
             expandableContent.setExpansion(true)
         }
-    }
-
-    private fun uwuVpnIsRun() {
-        val builder = MaterialAlertDialogBuilder(this)
-        builder.setTitle("⚠️ WARNING")
-        .setMessage(R.string.uwu_dialog_warn_apply_theme_in_vpn_run)
-        .setCancelable(false)
-        .setPositiveButton(R.string.ok) { dialog, _ ->
-            dialog.cancel()
-        }
-        .show()
-    }
-
-    private fun uwuBannerIsOpen() {
-        val builder = MaterialAlertDialogBuilder(this)
-        builder.setTitle("⚠️ WARNING")
-        .setMessage(R.string.uwu_dialog_warn_apply_theme_in_banner_open)
-        .setCancelable(false)
-        .setPositiveButton(R.string.ok) { dialog, _ ->
-            dialog.cancel()
-        }
-        .show()
     }
 
     fun settingsExtra(): Boolean {

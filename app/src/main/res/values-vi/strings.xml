@@ -347,7 +347,5 @@
     <string name="uwu_theme_botton_text">Thay đổi chủ đề</string>
     <string name="uwu_subscription">Đăng ký</string>
     <string name="uwu_subscription_desc">Thiết lập nhóm đăng ký của bạn ở đây!</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">Vui lòng tắt VPN trước</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">Vui lòng ẩn banner trước</string>
     <!-- Neko strings --> 
 </resources>

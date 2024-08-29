@@ -347,7 +347,5 @@
     <string name="uwu_theme_botton_text">テーマを変更する</string>
     <string name="uwu_subscription">サブスクリプション</string>
     <string name="uwu_subscription_desc">ここでサブスクリプション グループを設定してください。</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">まず VPN をオフにしてください</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">まずはバナーを非表示にしてください</string>
     <!-- Neko strings --> 
 </resources> 

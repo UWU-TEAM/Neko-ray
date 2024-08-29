@@ -349,7 +349,5 @@
     <string name="uwu_theme_botton_text">Ganti tema</string>
     <string name="uwu_subscription">Langganan</string>
     <string name="uwu_subscription_desc">Setel grup langganan ing kene!</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">Mangga mateni VPN dhisik</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">Mangga ndhelikake spanduk dhisik</string>
     <!-- Neko strings -->
 </resources>

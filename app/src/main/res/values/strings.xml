@@ -349,7 +349,5 @@
     <string name="uwu_theme_botton_text">Change theme</string>
     <string name="uwu_subscription">Subscription</string>
     <string name="uwu_subscription_desc">Setup your subscription group here!</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">Please turn off VPN first</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">Please hide the banner first</string>
     <!-- Neko strings -->
 </resources>

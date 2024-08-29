@@ -349,7 +349,5 @@
     <string name="uwu_theme_botton_text">Robah téma</string>
     <string name="uwu_subscription">Langganan</string>
     <string name="uwu_subscription_desc">Setel grup langganan anjeun di dieu!</string>
-    <string name="uwu_dialog_warn_apply_theme_in_vpn_run">Mangga pareuman heula VPN</string>
-    <string name="uwu_dialog_warn_apply_theme_in_banner_open">Mangga nyumput heula spandukna</string>
     <!-- Neko strings -->
 </resources> 
