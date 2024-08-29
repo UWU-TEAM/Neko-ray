@@ -34,7 +34,6 @@ import com.neko.v2ray.databinding.ActivityMainBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
-import com.neko.v2ray.nekonet.*
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
@@ -69,10 +68,6 @@ import com.neko.ip.IpLocation
 import com.neko.ip.hostchecker.HostChecker
 import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
-import android.os.Handler
-import android.os.Looper
-import android.os.Process
-import android.provider.Settings
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private val binding by lazy {
@@ -105,76 +100,28 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
     val TAG = "MainActivity"
-    private lateinit var expandableContent: ExpandableView
     private lateinit var expandableConnection: ExpandableView
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        setupPermissions()
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         title = getString(R.string.app_title_name)
         setSupportActionBar(binding.toolbar)
-        expandableContent = findViewById(R.id.uwu_header_home)
-        expandableContent.setExpansion(false)
         expandableConnection = findViewById(R.id.uwu_connection_expanded)
         expandableConnection.setExpansion(false)
-
-        val networkUsage = NetworkManager(this, Util.getSubscriberId(this))
-        val handler = Handler(Looper.getMainLooper())
-        val runnableCode = object : Runnable {
-            override fun run() {
-                val now = networkUsage.getUsageNow(NetworkType.ALL)
-                val speeds = NetSpeed.calculateSpeed(now.timeTaken, now.downloads, now.uploads)
-
-                binding.apply {
-                    totalSpeedTv.text = speeds[0].speed + "\n" + speeds[0].unit
-                    upUsagesTv.text = "▲ " + speeds[2].speed + speeds[2].unit
-                    downUsagesTv.text = "▼ " + speeds[1].speed + speeds[1].unit
-                }
-                handler.postDelayed(this, 1000)
-            }
-        }
-
-        val runnableCode1 = object : Runnable {
-            override fun run() {
-                val todayM = networkUsage.getUsage(Interval.today, NetworkType.MOBILE)
-                val todayW = networkUsage.getUsage(Interval.today, NetworkType.WIFI)
-                
-                binding.apply {
-                    wifiUsagesTv.text = "wifi" + "\n" + Util.formatData(todayW.downloads, todayW.uploads)[2]
-                    dataUsagesTv.text = "mobile" + "\n" + Util.formatData(todayM.downloads, todayM.uploads)[2]
-                }
-                handler.postDelayed(this, 216000)
-            }
-        }
-
-        fun stoptraffic() {
-            handler.removeCallbacks(runnableCode)
-            binding.apply {
-                totalSpeedTv.text = "0" + "\n" + "kB/s"
-                upUsagesTv.text = "▲ " + "0kB/s"
-                downUsagesTv.text = "▼ " + "0kB/s"
-            }
-            handler.removeCallbacks(runnableCode1)
-        }
 
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
-                stoptraffic()
             } else if ((MmkvManager.settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()
-                    runnableCode.run()
-                    runnableCode1.run()
                 } else {
                     requestVpnPermission.launch(intent)
                 }
             } else {
                 startV2Ray()
-                runnableCode.run()
-                runnableCode1.run()
             }
         }
         binding.layoutTest.setOnClickListener {
@@ -376,11 +323,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onOptionsItemSelected(item: MenuItem) = when (item.itemId) {
         R.id.theme_settings -> {
             SettingsFragmentTheme().show(supportFragmentManager, "Theme Settings")
-            true
-        }
-
-        R.id.uwu_banner_hide -> {
-            uwuBanner()
             true
         }
 
@@ -846,50 +788,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return true
         }
         return super.onKeyDown(keyCode, event)
-    }
-
-    fun setupPermissions() {
-        PermissionGranted()
-        if (!checkUsagePermission()) {
-            Toast.makeText(this, "Please allow usage access", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    fun PermissionGranted(): Boolean {
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q && checkSelfPermission("android.permission.READ_PHONE_STATE") != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_PHONE_STATE"), 1)
-        } else {
-            ActivityCompat.requestPermissions(this, arrayOf("android.permission.READ_PHONE_NUMBERS"), 1)
-        }
-        return true
-    }
-
-    fun checkUsagePermission(): Boolean {
-        val appOps = getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager
-        var mode: Int = appOps.checkOpNoThrow(
-            "android:get_usage_stats", Process.myUid(),
-            packageName
-
-        )
-        val granted = mode == AppOpsManager.MODE_ALLOWED
-        if (!granted) {
-            val intent = Intent(Settings.ACTION_USAGE_ACCESS_SETTINGS)
-            startActivity(intent)
-            return false
-        }
-        return true
-    }
-
-    private fun uwuBanner() {
-        if (expandableContent.isExpanded) {
-            expandableContent.collapse()
-            expandableContent.orientation = ExpandableView.VERTICAL
-            expandableContent.setExpansion(false)
-            return
-        }
-        expandableContent.expand()
-        expandableContent.orientation = ExpandableView.VERTICAL
-        expandableContent.setExpansion(true)
     }
 
     fun settingsExtra(): Boolean {

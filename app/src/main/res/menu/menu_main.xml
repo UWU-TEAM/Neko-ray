@@ -75,10 +75,6 @@
         </menu>
     </item>
     <item
-        android:id="@+id/uwu_banner_hide"
-        android:title="Show or Hide home banner"
-        app:showAsAction="never" />
-    <item
         android:id="@+id/service_restart"
         android:title="@string/title_service_restart"
         app:showAsAction="never" />
