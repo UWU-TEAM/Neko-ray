@@ -1,27 +1,22 @@
 ### CHANGELOG
-* Core update v1.8.23
-* Change style switchpreference
-* Redesign bypass list activity
-* Translation Update
-* Optimized Theme Dark Mode
-* Introduced version catalog for streamlined dependency management
-* Bump workRuntimeKtx from 2.8.1 to 2.9.0
-* Bump com.tencent:mmkv-static from 1.3.7 to 1.3.9
-* Fixed the toolbar disappearing when the typing keyboard appears
-* Fix typo: s/Domian/Domain/g
-* Refactor extension functions for better performance and clarity
-* Refactor V2RayServiceManager to Use Constants for Configuration Values
-* Refactor GlobalScope Usage to Prevent Memory Leaks
-* Refactor redundant PendingIntent code into a helper function
-* Refactor charset usage and consolidate function implementation
-* Drop geolocation-cn (cn contains geolocation-cn)
-* Introduct ImageSlider
-* Simplifying the filter configuration file
-* Remove redundant access modifier
-* Add Documentation Comments to AppConfig Constants
-* Refactor filterConfig Function for Simplified Code and Reusability
-* Optimize strState Handling by Removing Redundant try-catch
-* Simplify parseInt function
-* Refactor base64 decode function to simplify handling
-* Fix getDarkModeStatus to handle configuration changes more accurately
-* Updated getLocale function to use appropriate Locale constants
+* Replace global scope with CoroutineScope for socket operations
+* Redesin subs tablayout
+* Redesign collapsing toolbar layout
+* Added net traffic in home
+* Change bg selected indicator
+* Performance optimization
+* Add profile filtering
+* Add a progress bar
+* Update subscriptions based on grouping
+* Added menu hide or show banner in home
+* Optimize text descriptions
+* Added jawa language
+* Redesign home activity
+* Added system datausage
+* Update getSerializableExtra usage for Android 13 or later
+* Fix logcat flush blocking call on the wrong dispatcher
+* Optimized searchview
+* Removed internet check
+* Updating the toolbar with MaterialToolbar
+* Added wireguard regular config parsing feature, which we discussed on issue
+* Remove rounded bg space in preference

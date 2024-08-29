@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        date="2024-08-10"
-        summary="Neko v2rayNG"
-        version="v1.1.9"
-        versioncode="2000229">
-                <change>Core update v1.8.23</change>
-                <change>Add geosite:private</change>
-                <change>Optimized UI</change>
-                <change>Switch filter config dialog to tablayout</change>
-                <change>Add ParticlesView</change>
-                <change>Bump com.google.mlkit:barcode-scanning from 17.2.0 to 17.3.0</change>
-                <change>Update RxPermissions and rxjava3</change>
-                <change>hardcode popular Android Private DNS rule to fix localhost DNS problem</change>
-                <change>hardcode popular Android Private DNS: Add dns.pub</change>
-                <change>Implement isNetworkConnected functionality</change>
-                <change>Implement a check to start V2Ray if the network connected</change>
-                <change>Fix subsettings tablayout</change>
-                <change>Fix settings activity Mis boolean</change>
+        date="2024-08-29"
+        summary="Neko Ray"
+        version="v1.1.10"
+        versioncode="2000230">
+        <change>Replace global scope with CoroutineScope for socket operations</change>
+        <change>Redesin subs tablayout</change>
+        <change>Redesign collapsing toolbar layout</change>
+        <change>Added net traffic in home</change>
+        <change>Change bg selected indicator</change>
+        <change>Performance optimization</change>
+        <change>Add profile filtering</change>
+        <change>Add a progress bar</change>
+        <change>Update subscriptions based on grouping</change>
+        <change>Added menu hide or show banner in home</change>
+        <change>Optimize text descriptions</change>
+        <change>Added jawa language</change>
+        <change>Redesign home activity</change>
+        <change>Added system datausage</change>
+        <change>Update getSerializableExtra usage for Android 13 or later</change>
+        <change>Fix logcat flush blocking call on the wrong dispatcher</change>
+        <change>Optimized searchview</change>
+        <change>Removed internet check</change>
+        <change>Updating the toolbar with MaterialToolbar</change>
+        <change>Added wireguard regular config parsing feature, which we discussed on issue</change>
+        <change>Remove rounded bg space in preference</change>
     </release>
 </changelog>
