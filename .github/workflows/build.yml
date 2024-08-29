@@ -4,7 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
     branches:
-      - dev
+      - main
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -18,13 +18,17 @@ jobs:
       issues: write # to be able to comment on released issues
       pull-requests: write # to be able to comment on released pull requests
       id-token: write # to enable use of OIDC
-    env:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
+          token: ${{ secrets.MY_TOKEN }}
           fetch-depth: 0
+
+      - name: Prepare
+        run: |
+          sudo apt-get -y install dos2unix apksigner
 
       - name: JDK Setup
         uses: actions/setup-java@v4
@@ -32,8 +36,46 @@ jobs:
           distribution: 'temurin'
           java-version: 17
 
-      - name: Inspect Gradle tasks
-        run: ./gradlew tasks
+      - name: "Execute Gradle assemble"
+        run: |
+          dos2unix ./gradlew
+          ./gradlew assemble
 
-      - name: Execute Gradle assemble
-        run: ./gradlew assemble
+      - name: Sign APK
+        run: |
+          cd ${{ github.workspace }}/v2rayNG
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/debug/*arm64-v8a.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/debug/*armeabi-v7a.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/debug/*x86.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/debug/*x86_64.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/debug/*universal.apk
+
+      - name: arm64
+        uses: actions/upload-artifact@v4
+        with:
+          name: Arm64
+          path: ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/debug/*arm64-v8a.apk
+
+      - name: armeabi-v7a
+        uses: actions/upload-artifact@v4
+        with:
+          name: Armeabi-v7a
+          path: ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/debug/*armeabi-v7a.apk
+
+      - name: x86
+        uses: actions/upload-artifact@v4
+        with:
+          name: X86
+          path: ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/debug/*x86.apk
+
+      - name: x86_64
+        uses: actions/upload-artifact@v4
+        with:
+          name: X86_64
+          path: ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/debug/*x86_64.apk
+
+      - name: universal
+        uses: actions/upload-artifact@v4
+        with:
+          name: Universal
+          path: ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/debug/*universal.apk

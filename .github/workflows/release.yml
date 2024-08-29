@@ -1,0 +1,76 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      TAGS:
+        description: 'tag of the version release'
+        required: true
+        default: ''
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to be able to publish a GitHub release
+      issues: write # to be able to comment on released issues
+      pull-requests: write # to be able to comment on released pull requests
+      id-token: write # to enable use of OIDC
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.MY_TOKEN }}
+
+      - name: Prepare
+        run: |
+          sudo apt-get -y install dos2unix apksigner
+
+      - name: JDK Setup
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 17
+
+      - name: Setup Golang
+        uses: actions/setup-go@v5
+        with:
+          go-version: '^1.22.2'
+          cache: false
+
+      - name: Install gomobile
+        run: |
+          go install golang.org/x/mobile/cmd/gomobile@latest
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Setup Android environment
+        uses: android-actions/setup-android@v3
+
+      - name: Build
+        run: |
+          dos2unix ./gradlew
+          ./gradlew assemble
+
+      - name: Sign APK
+        run: |
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*arm64-v8a.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*armeabi-v7a.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*x86.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*x86_64.apk
+          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*universal.apk
+
+      - name: Release
+        uses: softprops/action-gh-release@master
+        if: startsWith(${{ github.event.inputs.TAG }})
+        with:
+          repository: UWU-TEAM/Neko-ray
+          body_path: ${{ github.workspace }}/CHANGELOG.md
+          token: ${{ secrets.MY_TOKEN }}
+          files: |
+            ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
+            ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
+            ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/release/*x86.apk
+            ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/release/*x86_64.apk
+            ${{ github.workspace }}/v2rayNG/app/build/outputs/apk/release/*universal.apk

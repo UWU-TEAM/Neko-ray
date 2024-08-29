@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: github-actions
     labels: []
     directory: /
-    target-branch: dev
+    target-branch: main
     schedule:
       interval: daily
       timezone: Asia/Jakarta
@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: gradle
     labels: []
     directory: /
-    target-branch: dev
+    target-branch: main
     schedule:
       interval: daily
       timezone: Asia/Jakarta
