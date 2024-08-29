@@ -67,8 +67,6 @@ import com.neko.tools.SpeedTestActivity
 import com.neko.ip.HostToIpActivity
 import com.neko.ip.IpLocation
 import com.neko.ip.hostchecker.HostChecker
-import com.neko.nointernet.callbacks.ConnectionCallback
-import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
 import android.os.Handler
@@ -236,8 +234,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return color
         }
 
-        startNoInternetDialog()
-
         binding.drawerLayout.setNekoDrawerListener(object : NekoDrawerView.NekoDrawerEvents {
             override fun onDrawerOpened(drawerView: View) {
                 super.onDrawerOpened(drawerView)
@@ -266,24 +262,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setCancelable(false)
         }
         appUpdaterNotification.start()
-    }
-
-    private fun startNoInternetDialog() {
-        NoInternetDialogSignal.Builder(
-            this,
-            lifecycle
-        ).apply {
-            dialogProperties.apply {
-                connectionCallback = object : ConnectionCallback { // Optional
-                    override fun hasActiveConnection(hasActiveConnection: Boolean) {
-                        // ...
-                    }
-                }
-                cancelable = false // Optional
-                showInternetOnButtons = true // Optional
-                showAirplaneModeOffButtons = true // Optional
-            }
-        }.build()
     }
 
     private fun setupViewModel() {
