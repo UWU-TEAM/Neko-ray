@@ -1,12 +1,9 @@
 name: Release
 
 on:
-  workflow_dispatch:
-    inputs:
-      TAGS:
-        description: 'tag of the version release'
-        required: true
-        default: ''
+  push:
+    tags:
+      - "v*.*.*"
 
 jobs:
   build:
@@ -60,7 +57,7 @@ jobs:
 
       - name: Release
         uses: softprops/action-gh-release@master
-        if: startsWith(${{ github.event.inputs.TAG }})
+        if: startsWith(github.ref, 'refs/tags/')
         with:
           repository: UWU-TEAM/Neko-ray
           body_path: ${{ github.workspace }}/CHANGELOG.md
