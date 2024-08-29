@@ -13,6 +13,6 @@ dependencyResolutionManagement {
         maven { url = uri("https://jitpack.io") }
     }
 }
-rootProject.name = "V2rayNG"
+rootProject.name = "Neko-ray"
 include(":library")
 include(":app")

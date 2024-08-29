@@ -1,5 +1,5 @@
 ---
-name: Neko-vray program issues
+name: Neko-ray program issues
 about: Create a report to help us improve
 ---
 
