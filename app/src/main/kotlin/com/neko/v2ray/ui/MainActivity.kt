@@ -66,7 +66,6 @@ import com.neko.tools.SpeedTestActivity
 import com.neko.ip.HostToIpActivity
 import com.neko.ip.IpLocation
 import com.neko.ip.hostchecker.HostChecker
-import com.neko.nekodrawer.NekoDrawerView
 import android.graphics.Color
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -99,7 +98,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
-    val TAG = "MainActivity"
     private lateinit var expandableConnection: ExpandableView
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -147,7 +145,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         )
         binding.drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        binding.drawerLayout.setScrimColor(Color.TRANSPARENT)
         binding.navView.setNavigationItemSelectedListener(this)
 
         initGroupTab()
@@ -181,15 +178,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             return color
         }
 
-        binding.drawerLayout.setNekoDrawerListener(object : NekoDrawerView.NekoDrawerEvents {
-            override fun onDrawerOpened(drawerView: View) {
-                super.onDrawerOpened(drawerView)
-            }
-
-            override fun onDrawerClosed(drawerView: View) {
-                super.onDrawerClosed(drawerView)
-            }
-        })
         // Show new update with dialog
         val appUpdater = AppUpdater(this).apply {
             setUpdateFrom(UpdateFrom.JSON)
