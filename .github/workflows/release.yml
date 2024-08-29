@@ -20,7 +20,7 @@ jobs:
 
       - name: Prepare
         run: |
-          sudo apt-get -y install dos2unix apksigner
+          sudo apt-get -y install dos2unix
 
       - name: JDK Setup
         uses: actions/setup-java@v4
@@ -46,14 +46,6 @@ jobs:
         run: |
           dos2unix ./gradlew
           ./gradlew assemble
-
-      - name: Sign APK
-        run: |
-          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*arm64-v8a.apk
-          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*armeabi-v7a.apk
-          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*x86.apk
-          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*x86_64.apk
-          apksigner sign --key platform.pk8 --cert platform.x509.pem app/build/outputs/apk/release/*universal.apk
 
       - name: Release
         uses: softprops/action-gh-release@master
