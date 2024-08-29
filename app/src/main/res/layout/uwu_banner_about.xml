@@ -161,7 +161,7 @@
             android:layout_weight="1.0">
             <FrameLayout
                 android:id="@+id/uwu_bagian_1"
-                android:background="@drawable/uwu_bg_top_about"
+                android:background="@drawable/uwu_bg_top"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/uwu_bagian_2"
-                android:background="@drawable/uwu_bg_mid_about"
+                android:background="@drawable/uwu_bg_mid"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -236,7 +236,7 @@
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/uwu_bagian_3"
-                android:background="@drawable/uwu_bg_bot_about"
+                android:background="@drawable/uwu_bg_bot"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -274,7 +274,7 @@
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/uwu_bagian_4"
-                android:background="@drawable/uwu_bg_top_about"
+                android:background="@drawable/uwu_bg_top"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -312,7 +312,7 @@
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/uwu_bagian_5"
-                android:background="@drawable/uwu_bg_mid_about"
+                android:background="@drawable/uwu_bg_mid"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -350,7 +350,7 @@
             </FrameLayout>
             <FrameLayout
                 android:id="@+id/uwu_bagian_6"
-                android:background="@drawable/uwu_bg_bot_about"
+                android:background="@drawable/uwu_bg_bot"
                 android:clipToPadding="false"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
