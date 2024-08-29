@@ -1,26 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:gravity="top"
-        android:height="26.0dip">
-        <shape>
-            <gradient
-                android:startColor="@color/uwu_bg_card"
-                android:endColor="?attr/colorPrimary"
-                android:angle="45.0"
-                android:type="linear" />
-            <corners android:radius="24.0dip" />
-        </shape>
-    </item>
-    <item
-        android:gravity="bottom"
-        android:height="26.0dip">
-        <shape>
-            <gradient
-                android:startColor="?attr/colorPrimary"
-                android:endColor="@color/uwu_bg_card"
-                android:angle="45.0"
-                android:type="linear" />
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/colorPrimary" />
             <corners android:radius="24.0dip" />
         </shape>
     </item>
