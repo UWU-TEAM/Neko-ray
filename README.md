@@ -7,13 +7,15 @@
 <details>
   <summary>ScreenShoot</summary>
 
+**Light**
 ![Screenshot](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/screenshoot1.png)
 ![Screenshot](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/screenshoot2.png)
 
-</details>
+**Dark**
+![Screenshot](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/screenshoot3.png)
+![Screenshot](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/screenshoot4.png)
 
-## Neko ray Translation
-[Neko ray Translation](https://github.com/UWU-TEAM/Neko-ray_language) Request your language for Neko ray
+</details>
 
 **Credits**
 
