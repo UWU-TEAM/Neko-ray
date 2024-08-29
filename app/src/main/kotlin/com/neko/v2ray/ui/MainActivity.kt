@@ -301,6 +301,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 binding.fab.setImageResource(R.drawable.uwu_ic_service_busy)
                 expandableConnection.expand()
                 expandableConnection.orientation = ExpandableView.HORIZONTAL
+                expandableConnection.setExpansion(true)
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_orange))
                 setTestState(getString(R.string.connection_connected))
                 binding.layoutTest.isFocusable = true
@@ -308,6 +309,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 binding.fab.setImageResource(R.drawable.uwu_ic_service_idle)
                 expandableConnection.collapse()
                 expandableConnection.orientation = ExpandableView.HORIZONTAL
+                expandableConnection.setExpansion(false)
                 // binding.fab.backgroundTintList = ColorStateList.valueOf(ContextCompat.getColor(this, R.color.color_fab_grey))
                 setTestState(getString(R.string.connection_not_connected))
                 binding.layoutTest.isFocusable = false
@@ -358,6 +360,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         expandableConnection.collapse()
         expandableConnection.orientation = ExpandableView.HORIZONTAL
+        expandableConnection.setExpansion(false)
     }
 
     public override fun onResume() {
@@ -909,10 +912,12 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         if (expandableContent.isExpanded) {
             expandableContent.collapse()
             expandableContent.orientation = ExpandableView.VERTICAL
+            expandableContent.setExpansion(false)
             return
         } else {
             expandableContent.expand()
             expandableContent.orientation = ExpandableView.VERTICAL
+            expandableContent.setExpansion(true)
         }
     }
 
