@@ -886,11 +886,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             expandableContent.orientation = ExpandableView.VERTICAL
             expandableContent.setExpansion(false)
             return
-        } else {
-            expandableContent.expand()
-            expandableContent.orientation = ExpandableView.VERTICAL
-            expandableContent.setExpansion(true)
         }
+        expandableContent.expand()
+        expandableContent.orientation = ExpandableView.VERTICAL
+        expandableContent.setExpansion(true)
     }
 
     fun settingsExtra(): Boolean {
