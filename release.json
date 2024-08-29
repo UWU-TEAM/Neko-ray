@@ -28,6 +28,6 @@
     "• Removed internet check",
     "• Updating the toolbar with MaterialToolbar",
     "• Added wireguard regular config parsing feature, which we discussed on issue",
-    "• Remove rounded bg space in preference",
+    "• Remove rounded bg space in preference"
   ]
 }
