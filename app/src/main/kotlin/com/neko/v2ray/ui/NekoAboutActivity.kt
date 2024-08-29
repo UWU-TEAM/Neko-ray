@@ -18,6 +18,8 @@ import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
 import com.neko.changelog.Changelog
+import com.neko.nointernet.callbacks.ConnectionCallback
+import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.extension.toast
@@ -36,6 +38,7 @@ class NekoAboutActivity : BaseActivity() {
     }
 
     fun uwuUpdater(view: View) {
+        startNoInternetDialog()
         val appUpdater = AppUpdater(this)
         appUpdater.setUpdateFrom(UpdateFrom.JSON)
         appUpdater.setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
@@ -84,5 +87,23 @@ class NekoAboutActivity : BaseActivity() {
 
     fun changelog(view: View) {
         Changelog.createDialog(this).show()
+    }
+
+    private fun startNoInternetDialog() {
+        NoInternetDialogSignal.Builder(
+            this,
+            lifecycle
+        ).apply {
+            dialogProperties.apply {
+                connectionCallback = object : ConnectionCallback { // Optional
+                    override fun hasActiveConnection(hasActiveConnection: Boolean) {
+                        // ...
+                    }
+                }
+                cancelable = false // Optional
+                showInternetOnButtons = true // Optional
+                showAirplaneModeOffButtons = true // Optional
+            }
+        }.build()
     }
 }
