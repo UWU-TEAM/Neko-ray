@@ -662,7 +662,7 @@ apifox.com
 ]
 APKPUREapkpure.comapkpure.netcdnpure.compureapk.com
 winudf.com
-¬‹
+ùﬂ
 APPLE%api-adservices.apple.com
 adsiadsdk.apple.com
 adsiad.apple.com
@@ -819,9 +819,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn'amp-api-edge.apps.apple.com
 cn."amp-api-search-edge.apps.apple.com
 cn"amp-api.apps.apple.com
+cn#amp-api.music.apple.com
 cn aod.itunes.apple.com
 cn#api-edge.apps.apple.com
 cn(apptrailers.itunes.apple.com
+cn auth.music.apple.com
 cn bag.itunes.apple.com
 cn'bookkeeper.itunes.apple.com
 cn'client-api.itunes.apple.com
@@ -836,16 +838,21 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn5)inappcheck-cn.itunes-apple.com.akadns.net
 cn5)inappcheck-lb.itunes-apple.com.akadns.net
 cn'inappcheck.itunes.apple.com
-cn!init.itunes.apple.com
 cn+init.gc-lb.apple.com.akadns.net
 cninit.gc.apple.com
+cn!init.itunes.apple.com
 cn$iosapps.itunes.apple.com
 cn"js-cdn.music.apple.com
 cn km.support.apple.com
 cnmaps.apple.com
+cn(misc-assets.itunes.apple.com
+cn"myapp.itunes.apple.com
+cn$np-edge.itunes.apple.com
 cn$osxapps.itunes.apple.com
+cn"pd-nk.itunes.apple.com
 cnpd.itunes.apple.com
 cn!play.itunes.apple.com
+cn play.music.apple.com
 cn$se-edge.itunes.apple.com
 cn se2.itunes.apple.com
 cn#search.itunes.apple.com
@@ -854,7 +861,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+streamingaudio.itunes.apple.com
 cnsu.itunes.apple.com
 cn!sync.itunes.apple.com
+cn(tf-feedback.itunes.apple.com
 cn upp.itunes.apple.com
+cn!www.support.apple.com
 cn#^a[1-5]\.mzstatic\.com$
 cn0$^cdn(-cn)?[1-4]?\.apple-mapkit\.com$
 cn9-^cl[1-5]-cdn\.origin-apple\.com\.akadns\.net$
@@ -866,8 +875,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cna3.mzstatic.com
 cna4.mzstatic.com
 cna5.mzstatic.com
-cn, adcdownload.apple.com.akadns.net
 cn!adcdownload.apple.com
+cn, adcdownload.apple.com.akadns.net
 cn#amp-api.media.apple.com
 cn&api-p-ap-c.smoot.apple.com
 cn&api-p-ap-d.smoot.apple.com
@@ -887,8 +896,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn!cdn3.apple-mapkit.com
 cn!cdn4.apple-mapkit.com
 cn!cds-cdn.v.aaplimg.com
-cn$cds.apple.com.akadns.net
 cncds.apple.com
+cn$cds.apple.com.akadns.net
 cncdsassets.apple.com
 cn/#cl1-cdn.origin-apple.com.akadns.net
 cncl1.apple.com
@@ -901,11 +910,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cncl4.apple.com
 cn/#cl5-cdn.origin-apple.com.akadns.net
 cncl5.apple.com
-cn+clientflow.apple.com.akadns.net
 cn clientflow.apple.com
+cn+clientflow.apple.com.akadns.net
 cn, cn-smp-paymentservices.apple.com
-cn."configuration.apple.com.akadns.net
 cn#configuration.apple.com
+cn."configuration.apple.com.akadns.net
 cncstat.apple.com
 cncstat.cdn-apple.com
 cn."dd-cdn.origin-apple.com.akadns.net
@@ -917,9 +926,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn%gsp10-ssl-cn.ls.apple.com
 cn!gsp12-cn.ls.apple.com
 cn!gsp13-cn.ls.apple.com
-cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-cn, gsp4-cn.ls.apple.com.edgekey.net
 cn gsp4-cn.ls.apple.com
+cn, gsp4-cn.ls.apple.com.edgekey.net
+cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
 cn gsp5-cn.ls.apple.com
 cn%gsp85-cn-ssl.ls.apple.com
 cn(gspe19-2-cn-ssl.ls.apple.com
@@ -933,12 +942,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+guzzoni-apple-com.v.aaplimg.com
 cnguzzoni.apple.com
 cn#guzzoni.smoot.apple.com
-cniadsdk.apple.com
 cn, icloud-cdn.icloud.com.akadns.net
 cn icloud.cdn-apple.com
+cnimages.apple.com
 cn'images.apple.com.akadns.net
 cn?3images.apple.com.edgekey.net.globalredir.akadns.net
-cnimages.apple.com
 cninit-kt.apple.com
 cn3'init-p01md-lb.push-apple.com.akadns.net
 cn init-p01md.apple.com
@@ -971,6 +979,7 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnmusic.apple.com
 cn(ocsp-lb.apple.com.akadns.net
 cnocsp.apple.com
+cn)ocsp2-lb.apple.com.akadns.net
 cnocsp2.apple.com
 cnoscdn.apple.com
 cn-!oscdn.origin-apple.com.akadns.net
@@ -993,9 +1002,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnstatic.gc.apple.com
 cn4(stocks-sparkline-lb.apple.com.akadns.net
 cn&stocks-sparkline.apple.com
-cn>2store.apple.com.edgekey.net.globalredir.akadns.net
-cn'store.apple.com.edgekey.net
 cnstore.apple.com
+cn'store.apple.com.edgekey.net
+cn>2store.apple.com.edgekey.net.globalredir.akadns.net
 cn2&store.storeimages.apple.com.akadns.net
 cn+store.storeimages.cdn-apple.com
 cn2&support-china.apple-support.akadns.net
@@ -1006,25 +1015,25 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnswcatalog.apple.com
 cnswcdn.apple.com
 cnswcdn.g.aaplimg.com
-cn'swdist.apple.com.akadns.net
 cnswdist.apple.com
+cn'swdist.apple.com.akadns.net
 cn+swscan-cdn.apple.com.akadns.net
 cnswscan.apple.com
 cnsylvan.apple.com
 cn(tj-pod1-smp-device.apple.com
-cn1%updates-http.cdn-apple.com.akadns.net
 cn&updates-http.cdn-apple.com
+cn1%updates-http.cdn-apple.com.akadns.net
 cn!updates.cdn-apple.com
 cnvalid.apple.com
 cn-!valid.origin-apple.com.akadns.net
-cn-!weather-data.apple.com.akadns.net
 cn"weather-data.apple.com
+cn-!weather-data.apple.com.akadns.net
 cn!weather-map.apple.com
 cn"weather-map2.apple.com
 cn weatherkit.apple.com
-cn<0www.apple.com.edgekey.net.globalredir.akadns.net
-cn%www.apple.com.edgekey.net
 cnwww.apple.com
+cn%www.apple.com.edgekey.net
+cn<0www.apple.com.edgekey.net.globalredir.akadns.net
 cnxp.apple.com
 cn
 Ö
@@ -3414,6 +3423,12 @@ shuzilm.cn
 CATEGORY-ADS-IRadivery.com
 adivery.irkaprila.com	najva.comsabavision.com
 tapsell.iryektanet.com
+∞
+CATEGORY-AI-CHAT-!CNanthropic.com	claude.ai%!servd-anthropic-website.b-cdn.netdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.comchatgpt.comoaistatic.comoaiusercontent.com
+openai.com!openai.com.cdn.cloudflare.net openaiapi-site.azureedge.net2.openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net1-openaicomproductionae4b.blob.core.windows.net.*production-openaicom-storage.azureedge.net=9^chatgpt-async-webps-prod-\s+-\d+\.webpubsub\.azure\.com$$o33249.ingest.sentry.io
+ads openaicom.imgix.net
+adspoe.com
+poecdn.netx.aimeta.ai
 ò
 CATEGORY-ANDROID-APP-DOWNLOADapkcombo.comapkmirror.comapkpure.comapkpure.netcdnpure.compureapk.com
 winudf.com
@@ -3616,7 +3631,7 @@ telesco.pe
 tg.dev	tx.meusercontent.devgraph.whatsapp.com
 adsgraph.whatsapp.net
 ads	wa.mewhatsapp-plus.infowhatsapp-plus.mewhatsapp-plus.netwhatsapp.ccwhatsapp.comwhatsapp.infowhatsapp.netwhatsapp.orgwhatsapp.tvwhatsappbrand.com
-·œ	
+Î‘	
 CATEGORY-COMPANIESacer-group.comacer.comacer.com.cn
 cn3dns-1.adobe.com3dns-2.adobe.com3dns-3.adobe.com3dns-4.adobe.com3dns-5.adobe.com3dns.adobe.comactivate-sea.adobe.comactivate-sjc0.adobe.comactivate.adobe.comactivate.wip1.adobe.comactivate.wip2.adobe.comactivate.wip3.adobe.comactivate.wip4.adobe.comadobe-dns-1.adobe.comadobe-dns-2.adobe.comadobe-dns-3.adobe.comadobe-dns-4.adobe.comadobe-dns.adobe.comadobeereg.comcrl.versign.netereg.adobe.comereg.wip.adobe.comereg.wip1.adobe.comereg.wip2.adobe.comereg.wip3.adobe.comereg.wip4.adobe.comhl2rcv.adobe.comhlrcv.stage.adobe.comlm.licenses.adobe.comlmlicenses.wip4.adobe.comna1r.services.adobe.comood.opsource.netpractivate.adobepractivate.adobe.compractivate.adobe.ipppractivate.adobe.newoapractivate.adobe.ntpwip.adobe.comwip1.adobe.comwip2.adobe.comwip3.adobe.comwip4.adobe.comwwis-dubc1-vip100.adobe.comwwis-dubc1-vip101.adobe.comwwis-dubc1-vip102.adobe.comwwis-dubc1-vip103.adobe.comwwis-dubc1-vip104.adobe.comwwis-dubc1-vip105.adobe.comwwis-dubc1-vip106.adobe.comwwis-dubc1-vip107.adobe.comwwis-dubc1-vip108.adobe.comwwis-dubc1-vip109.adobe.comwwis-dubc1-vip110.adobe.comwwis-dubc1-vip111.adobe.comwwis-dubc1-vip112.adobe.comwwis-dubc1-vip113.adobe.comwwis-dubc1-vip114.adobe.comwwis-dubc1-vip115.adobe.comwwis-dubc1-vip116.adobe.comwwis-dubc1-vip117.adobe.comwwis-dubc1-vip118.adobe.comwwis-dubc1-vip119.adobe.comwwis-dubc1-vip120.adobe.comwwis-dubc1-vip121.adobe.comwwis-dubc1-vip122.adobe.comwwis-dubc1-vip123.adobe.comwwis-dubc1-vip124.adobe.comwwis-dubc1-vip125.adobe.comwwis-dubc1-vip30.adobe.comwwis-dubc1-vip31.adobe.comwwis-dubc1-vip32.adobe.comwwis-dubc1-vip33.adobe.comwwis-dubc1-vip34.adobe.comwwis-dubc1-vip35.adobe.comwwis-dubc1-vip36.adobe.comwwis-dubc1-vip37.adobe.comwwis-dubc1-vip38.adobe.comwwis-dubc1-vip39.adobe.comwwis-dubc1-vip40.adobe.comwwis-dubc1-vip41.adobe.comwwis-dubc1-vip42.adobe.comwwis-dubc1-vip43.adobe.comwwis-dubc1-vip44.adobe.comwwis-dubc1-vip45.adobe.comwwis-dubc1-vip46.adobe.comwwis-dubc1-vip47.adobe.comwwis-dubc1-vip48.adobe.comwwis-dubc1-vip49.adobe.comwwis-dubc1-vip50.adobe.comwwis-dubc1-vip51.adobe.comwwis-dubc1-vip52.adobe.comwwis-dubc1-vip53.adobe.comwwis-dubc1-vip54.adobe.comwwis-dubc1-vip55.adobe.comwwis-dubc1-vip56.adobe.comwwis-dubc1-vip57.adobe.comwwis-dubc1-vip58.adobe.comwwis-dubc1-vip59.adobe.comwwis-dubc1-vip60.adobe.comwwis-dubc1-vip61.adobe.comwwis-dubc1-vip62.adobe.comwwis-dubc1-vip63.adobe.comwwis-dubc1-vip64.adobe.comwwis-dubc1-vip65.adobe.comwwis-dubc1-vip66.adobe.comwwis-dubc1-vip67.adobe.comwwis-dubc1-vip68.adobe.comwwis-dubc1-vip69.adobe.comwwis-dubc1-vip70.adobe.comwwis-dubc1-vip71.adobe.comwwis-dubc1-vip72.adobe.comwwis-dubc1-vip73.adobe.comwwis-dubc1-vip74.adobe.comwwis-dubc1-vip75.adobe.comwwis-dubc1-vip76.adobe.comwwis-dubc1-vip77.adobe.comwwis-dubc1-vip78.adobe.comwwis-dubc1-vip79.adobe.comwwis-dubc1-vip80.adobe.comwwis-dubc1-vip81.adobe.comwwis-dubc1-vip82.adobe.comwwis-dubc1-vip83.adobe.comwwis-dubc1-vip84.adobe.comwwis-dubc1-vip85.adobe.comwwis-dubc1-vip86.adobe.comwwis-dubc1-vip87.adobe.comwwis-dubc1-vip88.adobe.comwwis-dubc1-vip89.adobe.comwwis-dubc1-vip90.adobe.comwwis-dubc1-vip91.adobe.comwwis-dubc1-vip92.adobe.comwwis-dubc1-vip93.adobe.comwwis-dubc1-vip94.adobe.comwwis-dubc1-vip95.adobe.comwwis-dubc1-vip96.adobe.comwwis-dubc1-vip97.adobe.comwwis-dubc1-vip98.adobe.comwwis-dubc1-vip99.adobe.com"advertising.adobe.com
 adstubemogul.com
@@ -3706,7 +3721,7 @@ yamaxun.cn
 cnamd.com
 amd.com.cnamdfanstore.com
 radeon.comwww.amd.com
-cn%api-adservices.apple.com
+cnanthropic.com	claude.ai%!servd-anthropic-website.b-cdn.net%api-adservices.apple.com
 adsiadsdk.apple.com
 adsiad.apple.com
 ads	qwapi.com
@@ -3862,9 +3877,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn'amp-api-edge.apps.apple.com
 cn."amp-api-search-edge.apps.apple.com
 cn"amp-api.apps.apple.com
+cn#amp-api.music.apple.com
 cn aod.itunes.apple.com
 cn#api-edge.apps.apple.com
 cn(apptrailers.itunes.apple.com
+cn auth.music.apple.com
 cn bag.itunes.apple.com
 cn'bookkeeper.itunes.apple.com
 cn'client-api.itunes.apple.com
@@ -3879,16 +3896,21 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn5)inappcheck-cn.itunes-apple.com.akadns.net
 cn5)inappcheck-lb.itunes-apple.com.akadns.net
 cn'inappcheck.itunes.apple.com
-cn!init.itunes.apple.com
 cn+init.gc-lb.apple.com.akadns.net
 cninit.gc.apple.com
+cn!init.itunes.apple.com
 cn$iosapps.itunes.apple.com
 cn"js-cdn.music.apple.com
 cn km.support.apple.com
 cnmaps.apple.com
+cn(misc-assets.itunes.apple.com
+cn"myapp.itunes.apple.com
+cn$np-edge.itunes.apple.com
 cn$osxapps.itunes.apple.com
+cn"pd-nk.itunes.apple.com
 cnpd.itunes.apple.com
 cn!play.itunes.apple.com
+cn play.music.apple.com
 cn$se-edge.itunes.apple.com
 cn se2.itunes.apple.com
 cn#search.itunes.apple.com
@@ -3897,7 +3919,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+streamingaudio.itunes.apple.com
 cnsu.itunes.apple.com
 cn!sync.itunes.apple.com
+cn(tf-feedback.itunes.apple.com
 cn upp.itunes.apple.com
+cn!www.support.apple.com
 cn#^a[1-5]\.mzstatic\.com$
 cn0$^cdn(-cn)?[1-4]?\.apple-mapkit\.com$
 cn9-^cl[1-5]-cdn\.origin-apple\.com\.akadns\.net$
@@ -3909,8 +3933,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cna3.mzstatic.com
 cna4.mzstatic.com
 cna5.mzstatic.com
-cn, adcdownload.apple.com.akadns.net
 cn!adcdownload.apple.com
+cn, adcdownload.apple.com.akadns.net
 cn#amp-api.media.apple.com
 cn&api-p-ap-c.smoot.apple.com
 cn&api-p-ap-d.smoot.apple.com
@@ -3930,8 +3954,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn!cdn3.apple-mapkit.com
 cn!cdn4.apple-mapkit.com
 cn!cds-cdn.v.aaplimg.com
-cn$cds.apple.com.akadns.net
 cncds.apple.com
+cn$cds.apple.com.akadns.net
 cncdsassets.apple.com
 cn/#cl1-cdn.origin-apple.com.akadns.net
 cncl1.apple.com
@@ -3944,11 +3968,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cncl4.apple.com
 cn/#cl5-cdn.origin-apple.com.akadns.net
 cncl5.apple.com
-cn+clientflow.apple.com.akadns.net
 cn clientflow.apple.com
+cn+clientflow.apple.com.akadns.net
 cn, cn-smp-paymentservices.apple.com
-cn."configuration.apple.com.akadns.net
 cn#configuration.apple.com
+cn."configuration.apple.com.akadns.net
 cncstat.apple.com
 cncstat.cdn-apple.com
 cn."dd-cdn.origin-apple.com.akadns.net
@@ -3960,9 +3984,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn%gsp10-ssl-cn.ls.apple.com
 cn!gsp12-cn.ls.apple.com
 cn!gsp13-cn.ls.apple.com
-cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-cn, gsp4-cn.ls.apple.com.edgekey.net
 cn gsp4-cn.ls.apple.com
+cn, gsp4-cn.ls.apple.com.edgekey.net
+cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
 cn gsp5-cn.ls.apple.com
 cn%gsp85-cn-ssl.ls.apple.com
 cn(gspe19-2-cn-ssl.ls.apple.com
@@ -3976,12 +4000,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+guzzoni-apple-com.v.aaplimg.com
 cnguzzoni.apple.com
 cn#guzzoni.smoot.apple.com
-cniadsdk.apple.com
 cn, icloud-cdn.icloud.com.akadns.net
 cn icloud.cdn-apple.com
+cnimages.apple.com
 cn'images.apple.com.akadns.net
 cn?3images.apple.com.edgekey.net.globalredir.akadns.net
-cnimages.apple.com
 cninit-kt.apple.com
 cn3'init-p01md-lb.push-apple.com.akadns.net
 cn init-p01md.apple.com
@@ -4014,6 +4037,7 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnmusic.apple.com
 cn(ocsp-lb.apple.com.akadns.net
 cnocsp.apple.com
+cn)ocsp2-lb.apple.com.akadns.net
 cnocsp2.apple.com
 cnoscdn.apple.com
 cn-!oscdn.origin-apple.com.akadns.net
@@ -4036,9 +4060,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnstatic.gc.apple.com
 cn4(stocks-sparkline-lb.apple.com.akadns.net
 cn&stocks-sparkline.apple.com
-cn>2store.apple.com.edgekey.net.globalredir.akadns.net
-cn'store.apple.com.edgekey.net
 cnstore.apple.com
+cn'store.apple.com.edgekey.net
+cn>2store.apple.com.edgekey.net.globalredir.akadns.net
 cn2&store.storeimages.apple.com.akadns.net
 cn+store.storeimages.cdn-apple.com
 cn2&support-china.apple-support.akadns.net
@@ -4049,25 +4073,25 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnswcatalog.apple.com
 cnswcdn.apple.com
 cnswcdn.g.aaplimg.com
-cn'swdist.apple.com.akadns.net
 cnswdist.apple.com
+cn'swdist.apple.com.akadns.net
 cn+swscan-cdn.apple.com.akadns.net
 cnswscan.apple.com
 cnsylvan.apple.com
 cn(tj-pod1-smp-device.apple.com
-cn1%updates-http.cdn-apple.com.akadns.net
 cn&updates-http.cdn-apple.com
+cn1%updates-http.cdn-apple.com.akadns.net
 cn!updates.cdn-apple.com
 cnvalid.apple.com
 cn-!valid.origin-apple.com.akadns.net
-cn-!weather-data.apple.com.akadns.net
 cn"weather-data.apple.com
+cn-!weather-data.apple.com.akadns.net
 cn!weather-map.apple.com
 cn"weather-map2.apple.com
 cn weatherkit.apple.com
-cn<0www.apple.com.edgekey.net.globalredir.akadns.net
-cn%www.apple.com.edgekey.net
 cnwww.apple.com
+cn%www.apple.com.edgekey.net
+cn<0www.apple.com.edgekey.net.globalredir.akadns.net
 cnxp.apple.com
 cnasus.comasus.com.cn
 cnasuscloud.comasuswebstorage.comatlassian.comatlassian.netbitbucket.iobitbucket.orgstatuspage.io
@@ -4183,7 +4207,7 @@ golang.org2mdn-cn.net
 urchin.com
 ads!analytics.google.com
 ads>1^adservice\.google\.([a-z]{2}|com?)(\.[a-z]{2})?$
-adscharlestonroadregistry.comcrr.comregistry.googleget.appget.devget.howget.newget.pageget.rsvphey.booiam.soynew.dayxn--p8j9a0d9c9a.xn--q9jyb4cscholar.google.aescholar.google.atscholar.google.bescholar.google.bgscholar.google.cascholar.google.catscholar.google.chscholar.google.clscholar.google.cnscholar.google.co.crscholar.google.co.idscholar.google.co.ilscholar.google.co.inscholar.google.co.jpscholar.google.co.krscholar.google.co.nzscholar.google.co.thscholar.google.co.ukscholar.google.co.vescholar.google.co.zascholar.google.comscholar.google.com.arscholar.google.com.auscholar.google.com.boscholar.google.com.brscholar.google.com.coscholar.google.com.cuscholar.google.com.doscholar.google.com.ecscholar.google.com.egscholar.google.com.gtscholar.google.com.hkscholar.google.com.lyscholar.google.com.mxscholar.google.com.myscholar.google.com.nischolar.google.com.pascholar.google.com.pescholar.google.com.phscholar.google.com.pkscholar.google.com.prscholar.google.com.pyscholar.google.com.sgscholar.google.com.svscholar.google.com.trscholar.google.com.twscholar.google.com.uascholar.google.com.uyscholar.google.com.vnscholar.google.czscholar.google.descholar.google.dkscholar.google.esscholar.google.fischolar.google.frscholar.google.grscholar.google.hnscholar.google.hrscholar.google.huscholar.google.isscholar.google.itscholar.google.lischolar.google.ltscholar.google.luscholar.google.lvscholar.google.nlscholar.google.noscholar.google.plscholar.google.ptscholar.google.roscholar.google.ruscholar.google.sescholar.google.sischolar.google.sk!scholar.googleusercontent.comscholar.l.google.compki.goog!pki-goog.l.google.com
+adsdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.comcharlestonroadregistry.comcrr.comregistry.googleget.appget.devget.howget.newget.pageget.rsvphey.booiam.soynew.dayxn--p8j9a0d9c9a.xn--q9jyb4cscholar.google.aescholar.google.atscholar.google.bescholar.google.bgscholar.google.cascholar.google.catscholar.google.chscholar.google.clscholar.google.cnscholar.google.co.crscholar.google.co.idscholar.google.co.ilscholar.google.co.inscholar.google.co.jpscholar.google.co.krscholar.google.co.nzscholar.google.co.thscholar.google.co.ukscholar.google.co.vescholar.google.co.zascholar.google.comscholar.google.com.arscholar.google.com.auscholar.google.com.boscholar.google.com.brscholar.google.com.coscholar.google.com.cuscholar.google.com.doscholar.google.com.ecscholar.google.com.egscholar.google.com.gtscholar.google.com.hkscholar.google.com.lyscholar.google.com.mxscholar.google.com.myscholar.google.com.nischolar.google.com.pascholar.google.com.pescholar.google.com.phscholar.google.com.pkscholar.google.com.prscholar.google.com.pyscholar.google.com.sgscholar.google.com.svscholar.google.com.trscholar.google.com.twscholar.google.com.uascholar.google.com.uyscholar.google.com.vnscholar.google.czscholar.google.descholar.google.dkscholar.google.esscholar.google.fischolar.google.frscholar.google.grscholar.google.hnscholar.google.hrscholar.google.huscholar.google.isscholar.google.itscholar.google.lischolar.google.ltscholar.google.luscholar.google.lvscholar.google.nlscholar.google.noscholar.google.plscholar.google.ptscholar.google.roscholar.google.ruscholar.google.sescholar.google.sischolar.google.sk!scholar.googleusercontent.comscholar.l.google.compki.goog!pki-goog.l.google.com
 cn
 c.pki.goog
 cn
@@ -4290,7 +4314,7 @@ apture.comarea120.com
 asp-cc.comautodraw.combandpage.combaselinestudy.combaselinestudy.orgbazel.buildbdn.devbeatthatquote.com	blink.orgbrocaproject.com
 brotli.orgbumpshare.com
 bumptop.cabumptop.combumptop.netbumptop.orgbumptunes.comcampuslondon.com certificate-transparency.org
-chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdeepmind.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
+chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
 fflick.comfinanceleadsonline.com
 fitbit.com
 foofle.comfroogle.comfuchsia.dev	g-tun.comg.cn
@@ -4877,7 +4901,7 @@ myguide.hktechcrunch.comyahoo-news.com.hkyahooapis.comya
 yandexxn--d1acpjx3f.xn--p1aidzen.ru	ya.ruyandex.aero	yandex.az	yandex.byyandex.co.il
 yandex.comyandex.com.amyandex.com.geyandex.com.ruyandex.com.tryandex.com.ua	yandex.de	yandex.ee	yandex.eu	yandex.fi	yandex.fryandex.jobs	yandex.kg	yandex.kz	yandex.lt	yandex.lv	yandex.md
 yandex.net
-yandex.org	yandex.pl	yandex.ru	yandex.st	yandex.sx	yandex.tj	yandex.tm	yandex.ua	yandex.uzyandexcloud.netyastatic.netteamviewer.cn
+yandex.org	yandex.pl	yandex.ru	yandex.st	yandex.sx	yandex.tj	yandex.tm	yandex.ua	yandex.uzyandexcloud.netyastatic.netx.aiteamviewer.cn
 cnteamviewer.comteamviewer.us,(client-teamviewer-com.trafficmanager.net%!teamviewer.com.cdn.cloudflare.netanydesk.comnomachine.comrustdesk.com	auth0.comcivitai.comporkbun.com
 ÷
 CATEGORY-CONTAINER
@@ -4912,7 +4936,7 @@ kraken.com
 opensea.ioosl.com
 paxful.com
 ripple.comsatoshilabs.comtheblock.co	trezor.io	truefi.io	unisat.iouniswap.orgwalletconnect.comwintermute.com	zapper.fi
-ÕU
+ûR
 CATEGORY-DEVanaconda.cloudanaconda.comanaconda.orgconda.ioandroid.comandroidify.comappleswift.com	swift.org
 swiftui.cn
 cnswiftui.com.cn
@@ -4958,10 +4982,7 @@ blazor.netbotframework.comcodethemicrobit.comdevopsassessment.
 cnmicrosoftreactor.infomicrosoftreactor.netmicrosoftreactor.orgmicrosoftsilverlight.commicrosoftsilverlight.orgmicrosoftsilverlight.netmicrosoftsqlserver.com	mmdnn.commono-project.commsdn.commsinnovationchallenge.commspairlift.commsropendata.com	nuget.orgnugettest.orgopentranslatorstothings.orgposhtestgallery.compwabuilder.comreactorms.com.cn
 cn
 sankie.netsqlserveronlinux.comtimelinestoryteller.comuwpcommunitytoolkit.comvisualstudio-staging.comvisualstudio.comvisualstudio.covisualstudio.co.ukvisualstudio.euvisualstudio.netvfsforgit.comvfsforgit.orgvsassets.io
-vscode.devvscode-cdn.netvscode-unpkg.netxamarin.comaz764295.vo.msecnd.net)%bingsettingssearch.trafficmanager.netdefault.exp-tas.comdeveloper.microsoft.com'#download.visualstudio.microsoft.comdtlgalleryint.cloudapp.net poshtestgallery.cloudapp.net"psg-int-centralus.cloudapp.netpsg-int-eastus.cloudapp.netrink.hockeyapp.net+'vscode-sync-insiders.trafficmanager.net"vscode-sync.trafficmanager.net vscode.blob.core.windows.netvscode.search.windows.net vsmarketplacebadge.apphb.commongodb.commongodb.org	nginx.com	nginx.org	nixos.orgchatgpt.comoaistatic.comoaiusercontent.com
-openai.com!openai.com.cdn.cloudflare.net openaiapi-site.azureedge.net2.openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net1-openaicomproductionae4b.blob.core.windows.net.*production-openaicom-storage.azureedge.net=9^chatgpt-async-webps-prod-\s+-\d+\.webpubsub\.azure\.com$$o33249.ingest.sentry.io
-ads openaicom.imgix.net
-adsopenwrt.orglede-project.orgosdn.netperl.apache.orgperl.orgcpan.orgmetacpan.org
+vscode.devvscode-cdn.netvscode-unpkg.netxamarin.comaz764295.vo.msecnd.net)%bingsettingssearch.trafficmanager.netdefault.exp-tas.comdeveloper.microsoft.com'#download.visualstudio.microsoft.comdtlgalleryint.cloudapp.net poshtestgallery.cloudapp.net"psg-int-centralus.cloudapp.netpsg-int-eastus.cloudapp.netrink.hockeyapp.net+'vscode-sync-insiders.trafficmanager.net"vscode-sync.trafficmanager.net vscode.blob.core.windows.netvscode.search.windows.net vsmarketplacebadge.apphb.commongodb.commongodb.org	nginx.com	nginx.org	nixos.orgopenwrt.orglede-project.orgosdn.netperl.apache.orgperl.orgcpan.orgmetacpan.org
 modperl.plpolymer-project.orgpolymerproject.org	pycon.orgpypa.iopypi.iopypi.org
 python.orgpythonhosted.orgpiwheels.org	qt.ioqt-project.orgreadthedocs-hosted.comreadthedocs.comreadthedocs.ioreadthedocs.orgredis.ioredislabs.comremirepo.netruby-lang.orgrubygems.orgrust-lang.org	rustup.rs	crates.iodocs.rs
 redhat.com
@@ -5957,12 +5978,12 @@ isignal.irtgju.orgbama.ir
 jobinja.irjobinjacdn.combeytoote.com
 setare.com
 tebyan.net
-÷ﬁ
+é‡
 CATEGORY-MEDIA	6park.com6parkbbs.com6parknews.com
 cool18.com	popo8.com
 parkvv.comxwbo.com9cdn.net9nation.com.au9news.com.au9now.com.aufreeviewplus.net.au
 mi9.com.au
-mi9cdn.comnine.com.aunineentertainment.com.aunineentertainmentco.com.auninemediaroom.com.auninemsn.com.austatic9.net.auyourtv.com.au9to5google.com9to5mac.com9to5terminal.com9to5toys.comdronedj.comelectrek.cospaceexplored.comafp.comafpforum.com
+mi9cdn.comnine.com.aunineentertainment.com.aunineentertainmentco.com.auninemediaroom.com.auninemsn.com.austatic9.net.auyourtv.com.auafp.comafpforum.com
 ajplus.netaljazeera.comaljazeera.netpalestineremix.comsarajevopodopsadom.comsrebrenica360.comsyhacked.com
 ap.org
 apnews.comappledaily.comappledaily.com.hkappledaily.com.twappledaily.hkapplefruity.comapplehealth.com.hk
@@ -6053,8 +6074,7 @@ i-scmp.comsetn.comsettv.com.twsingtaonewscorp.com
 sing68.comsingtao.comsingtaobooks.comsingtaola.comsingtaousa.comstheadline.comsingtaoopo.comhkheadline.comthestandard.com.hkeastweek.com.hkeasttouch.com.hkbastillepost.com
 eduplus.hkheadlinejobs.hkjobmarket.com.hkmy-magazine.mepcmarket.com.hkskysky.comskyassets.comskyoceanrescue.comskyoceanrescue.deskyoceanrescue.itskysports.comskysports.frskysports.ieskysportsonline.comskysportsracing.comtheguardiandev-guardianapis.comdev-theguardian.com
 gu-web.netguardianapis.comguardianapps.co.uk
-guim.co.ukguimcode.co.uktheguardian.comtheguardiandns.comtheinitium.com	init.shopthetype.cloud
-cnthetype.comtypeisbeautiful.comreut.rsreuters.com
+guim.co.ukguimcode.co.uktheguardian.comtheguardiandns.comtheinitium.com	init.shopreut.rsreuters.com
 reuters.tvreutersmedia.netaranzadi.escorepublishingsolutions.com	elite.comlegaltracker.comlivrariart.com.brreutersagency.cnsweetandmaxwell.co.ukthomsonreuters.cathomsonreuters.cnthomsonreuters.co.jpthomsonreuters.co.krthomsonreuters.co.nzthomsonreuters.co.ukthomsonreuters.comthomsonreuters.com.arthomsonreuters.com.authomsonreuters.com.brthomsonreuters.com.hkthomsonreuters.com.mythomsonreuters.com.pethomsonreuters.com.sgthomsonreuters.com.trthomsonreuters.esthomsonreuters.inthomsonreuters.ruthomsonreutersmexico.com	tmsnrt.rs
 tr.comtokyo-sports.co.jptospo-keiba.jpmytvsuper.comtvb.combigbigchannel.com.hkbigbigshop.comencoretvb.comtvb.com
 tvb.com.autvbanywhere.comtvbanywhere.com.sgtvbc.com.cn
@@ -6070,23 +6090,24 @@ recode.netsbnation.comtheverge.comvox-cdn.comvox.com
 voxops.netwant-media.comchinatimes.comchinatimes.com.twinfotimes.com.tw
 ctwant.comctee.com.tw
 ctv.com.twctitv.com.twwantblogger.comzwtvusa.combenliton.com	lecoin.ccloveparents.orgsuperstation.com.twwatchout.tw
-waa.twstartupschool.orgycombinator.comchuokoron.jpfujinkoron.jp
+waa.twchuokoron.jpfujinkoron.jp
 hochi.newsryokoyomiuri.co.jpthe-japan-news.com	ync.ne.jpyomikyo.or.jpyomilogi.comyomiuri-johkai.co.jpyomiuri-johkai.co.jpyomiuri-ryokou.co.jp#yomiuri-shimbun.pressreader.comyomiuri-systec.co.jpyomiuri.co.jp
 zaobao.comzaobao.com.sg	zaobao.sg
 bgr.inbollywoodlife.comcareerfundas.comcricketcountry.comdnai.indnaindia.comearngeek.comekhindi.com
 ind.sh	india.comindiancolleges.comitripto.com	oncars.inprepsure.comthehealthsite.comwionews.comyo1health.comzee.com
-zeebiz.comzeeentertainment.comzeenews.com"zeenews-fonts.s3.amazonaws.com
-881903.comam730.com.hkamericasvoice.newsappleinsider.com	axios.combbgwatch.combnext.com.twbreitbart.combusinessfocus.iobusinesstoday.com.twbusinessweekly.com.twcaijinglengyan.comchinadecoding.comchinadigitaltimes.netchinaeconomicreview.comcmmedia.com.tw
+zeebiz.comzeeentertainment.comzeenews.com"zeenews-fonts.s3.amazonaws.com9to5google.com9to5mac.com9to5terminal.com9to5toys.comdronedj.comelectrek.cospaceexplored.comthetype.cloud
+cnthetype.comtypeisbeautiful.comstartupschool.orgycombinator.comandroidauthority.comandroidpolice.comappleinsider.comdigitaltrends.comengadget.commacrumors.comslashdot.orgtechnews.twtechradar.comtheverge.comtomsguide.com	zdnet.comzdnet.redvideo.io
+881903.comam730.com.hkamericasvoice.news	axios.combbgwatch.combnext.com.twbreitbart.combusinessfocus.iobusinesstoday.com.twbusinessweekly.com.twcaijinglengyan.comchinadecoding.comchinadigitaltimes.netchinaeconomicreview.comcmmedia.com.tw
 cna.com.tw	cnyes.comcoolloud.org.tw
 cup.com.hk	cw.com.twd100.net
 ebc.net.twettoday.neteventsinfocus.orgfactwire.orgfortuneinsight.comfreebeacon.com	gbnews.ukhk01.comhkcitizenmedia.comhkcnews.comhkej.com
 hkgpao.comhongkongfp.cominmediahk.netinside.com.twjfengtime.comlandofhope.tv
-limedia.twlocalpresshk.comltsports.com.twmacrumors.commdnkids.commirrormedia.com.twmirrormedia.mgmoney-link.com.twmy-formosa.com
+limedia.twlocalpresshk.comltsports.com.twmdnkids.commirrormedia.com.twmirrormedia.mgmoney-link.com.twmy-formosa.com
 newtalk.twnewyorker.comnextapple.comnownews.comnpr.org	on.ccpassiontimes.hkpeoplenews.twpost852.comqmap.pubrealvision.comrfa.org
 rfi.frrsf.org
 rt.com
-rtings.comshuziyimin.orgsingpao.com.hksinoinsider.comslashdot.org
-socrec.orgstorm.mgtaipeitimes.comtaiwannews.com.twtechnews.twtheaffairs.comtheatlantic.comthegatewaypundit.comthenationalpulse.comthenewslens.comthestandnews.comtnntoday.comtvbs.com.twtvmost.com.hktwgreatnews.com	unwire.hk
+rtings.comshuziyimin.orgsingpao.com.hksinoinsider.com
+socrec.orgstorm.mgtaipeitimes.comtaiwannews.com.twtheaffairs.comtheatlantic.comthegatewaypundit.comthenationalpulse.comthenewslens.comthestandnews.comtnntoday.comtvbs.com.twtvmost.com.hktwgreatnews.com	unwire.hk
 upmedia.mgvjmedia.com.hkwarroom.orgwashingtonpost.comwealth.com.twweiyuksj.com
 wenzhao.ca	wired.com
 ydn.com.twyibaochina.comyoulucky.comzerohedge.comzoomingin.tv
@@ -7120,6 +7141,9 @@ rightel.irsarmayex.comsarzamindownload.com	shatel.irskyro
 tci.iruplod.ir
 uupload.ir	yasdl.com
 zhaket.com	zoomit.ir
+ê
+CATEGORY-TECH-MEDIA9to5google.com9to5mac.com9to5terminal.com9to5toys.comdronedj.comelectrek.cospaceexplored.comthetype.cloud
+cnthetype.comtypeisbeautiful.comstartupschool.orgycombinator.comandroidauthority.comandroidpolice.comappleinsider.comdigitaltrends.comengadget.commacrumors.comslashdot.orgtechnews.twtechradar.comtheverge.comtomsguide.com	zdnet.comzdnet.redvideo.io
 U
 CATEGORY-TRAVEL-IR
 alibaba.irflightio.commrbilit.comtapsi.ir
@@ -7334,7 +7358,7 @@ cmbimg.comcmbt.cn
 cmbuat.com	cmburl.cn cmbwinglungbank.com
 !cncmf.bizcmf.ltdcmfchina.com
 cmfunds.cntest-cignacmb.com
-öÈ
+´È
 CNcn	citic	baidu
 unicomsohuxn--zfr164b
 xn--fiqs8s
@@ -8322,7 +8346,7 @@ myhwcdn.cnmyhwcdn.commyhwcloudlive.commyhwclouds.cnmyhwc
 !cn- ru-northwest-2.myhuaweicloud.com
 !cn*sa-brazil-1.myhuaweicloud.com
 !cn(tr-west-1.myhuaweicloud.com
-!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
+!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.cndbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
 huawei.comhuawei.com.cnhuaweiacad.comhuaweiief.cnhuaweiief.comhuaweistatic.com	hwccpc.cn
 hwccpc.comhwht.cnhwocloud.com
 hwtrip.comshanhaitujian.com	vmall.comvmallres.comiflytek.com	xunfei.cn
@@ -9644,8 +9668,12 @@ gcores.com
 GEETESTgeetest.com#geetest.datasink.sensorsdata.cn
 `
 GEMFURY	fury.blogfury.cofury.dev	fury.helpfury.iogemfury.com
-¸–
-GEOLOCATION-!CNcolorfulstage.comcrypton.co.jplapriere.jpmagicalmirai.commikuexpo.com
+∆⁄
+GEOLOCATION-!CNanthropic.com	claude.ai%!servd-anthropic-website.b-cdn.netdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.comchatgpt.comoaistatic.comoaiusercontent.com
+openai.com!openai.com.cdn.cloudflare.net openaiapi-site.azureedge.net2.openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net1-openaicomproductionae4b.blob.core.windows.net.*production-openaicom-storage.azureedge.net=9^chatgpt-async-webps-prod-\s+-\d+\.webpubsub\.azure\.com$$o33249.ingest.sentry.io
+ads openaicom.imgix.net
+adspoe.com
+poecdn.netx.aimeta.aicolorfulstage.comcrypton.co.jplapriere.jpmagicalmirai.commikuexpo.com
 piapro.netsnowmiku.combowlroll.netpubmatic.compubmatic.co.jpads.pubmatic.com
 adstaboola.comcensorship.nocitizenlab.cacitizenlab.orgepicbrowser.comapplecensorship.comfreebrowser.orgfreewechat.comfreeweibo.comfreezhihu.orggreatfire.orgpao-pao.netwikiunblocked.orghaveibeenpwned.compwnedpasswords.comgetlantern.org
 lantern.iopaskoocheh.comsoftether.orgsoftether-download.comtorproject.org	v2ray.com
@@ -10616,8 +10644,7 @@ dcard.linkdcard.twbroadbandreports.comdslr.netdslreports
 pixnet.net
 pixnet.pro	pixnet.tw
 pixplug.in
-ptt.ccptt2.ccptt3.ccpoe.com
-poecdn.net	qr.ae	quora.comquoracdn.netredd.itreddit.app.link
+ptt.ccptt2.ccptt3.cc	qr.ae	quora.comquoracdn.netredd.itreddit.app.link
 reddit.comredditblog.comreddithelp.comredditinc.comredditmail.comredditmedia.comredditspace.comredditstatic.comredditstatus.comreddit.map.fastly.net
 yamibo.com	18p2p.comavsforum.comdisp.cc	doom9.orgeyny.comgab.comhydrogenaud.iomewe.com
 parler.compincong.rockssafechat.com
@@ -10641,7 +10668,7 @@ vk-cdn.netvk-portal.net	vk.cc
 vk.com	vk.designvk.link	vk.mevkcache.comvkgo.app
 vklive.appvkmessenger.comvkmessenger.appvkontakte.ruvkuseraudio.comvkuserlive.netvkuservideo.comvkuservideo.net4everland.ioc4rex.cocrustwebsites.net	dweb.linkgateway.pinata.cloudipfs-gateway.cloudipfs.anonymize.comipfs.best-practice.seipfs.eternum.ioipfs.eth.aragon.networkipfs.fleek.coipfs.ioipfs.lain.laipfs.runfission.com	ipfs.techipns.cojorropo.netnftstorage.linkvia0.com9cdn.net9nation.com.au9news.com.au9now.com.aufreeviewplus.net.au
 mi9.com.au
-mi9cdn.comnine.com.aunineentertainment.com.aunineentertainmentco.com.auninemediaroom.com.auninemsn.com.austatic9.net.auyourtv.com.au9to5google.com9to5mac.com9to5terminal.com9to5toys.comdronedj.comelectrek.cospaceexplored.comafp.comafpforum.com
+mi9cdn.comnine.com.aunineentertainment.com.aunineentertainmentco.com.auninemediaroom.com.auninemsn.com.austatic9.net.auyourtv.com.auafp.comafpforum.com
 ajplus.netaljazeera.comaljazeera.netpalestineremix.comsarajevopodopsadom.comsrebrenica360.comsyhacked.com
 ap.org
 apnews.comappledaily.comappledaily.com.hkappledaily.com.twappledaily.hkapplefruity.comapplehealth.com.hk
@@ -10725,8 +10752,7 @@ i-scmp.comsetn.comsettv.com.twsingtaonewscorp.com
 sing68.comsingtao.comsingtaobooks.comsingtaola.comsingtaousa.comstheadline.comsingtaoopo.comhkheadline.comthestandard.com.hkeastweek.com.hkeasttouch.com.hkbastillepost.com
 eduplus.hkheadlinejobs.hkjobmarket.com.hkmy-magazine.mepcmarket.com.hkskysky.comskyassets.comskyoceanrescue.comskyoceanrescue.deskyoceanrescue.itskysports.comskysports.frskysports.ieskysportsonline.comskysportsracing.comtheguardiandev-guardianapis.comdev-theguardian.com
 gu-web.netguardianapis.comguardianapps.co.uk
-guim.co.ukguimcode.co.uktheguardian.comtheguardiandns.comtheinitium.com	init.shopthetype.cloud
-cnthetype.comtypeisbeautiful.comreut.rsreuters.com
+guim.co.ukguimcode.co.uktheguardian.comtheguardiandns.comtheinitium.com	init.shopreut.rsreuters.com
 reuters.tvreutersmedia.netaranzadi.escorepublishingsolutions.com	elite.comlegaltracker.comlivrariart.com.brreutersagency.cnsweetandmaxwell.co.ukthomsonreuters.cathomsonreuters.cnthomsonreuters.co.jpthomsonreuters.co.krthomsonreuters.co.nzthomsonreuters.co.ukthomsonreuters.comthomsonreuters.com.arthomsonreuters.com.authomsonreuters.com.brthomsonreuters.com.hkthomsonreuters.com.mythomsonreuters.com.pethomsonreuters.com.sgthomsonreuters.com.trthomsonreuters.esthomsonreuters.inthomsonreuters.ruthomsonreutersmexico.com	tmsnrt.rs
 tr.comtokyo-sports.co.jptospo-keiba.jpbigbigchannel.com.hkbigbigshop.comencoretvb.comtvb.com
 tvb.com.autvbanywhere.comtvbanywhere.com.sgtvbc.com.cn
@@ -10740,23 +10766,24 @@ recode.netsbnation.comtheverge.comvox-cdn.comvox.com
 voxops.netwant-media.comchinatimes.comchinatimes.com.twinfotimes.com.tw
 ctwant.comctee.com.tw
 ctv.com.twctitv.com.twwantblogger.comzwtvusa.combenliton.com	lecoin.ccloveparents.orgsuperstation.com.twwatchout.tw
-waa.twstartupschool.orgycombinator.comchuokoron.jpfujinkoron.jp
+waa.twchuokoron.jpfujinkoron.jp
 hochi.newsryokoyomiuri.co.jpthe-japan-news.com	ync.ne.jpyomikyo.or.jpyomilogi.comyomiuri-johkai.co.jpyomiuri-johkai.co.jpyomiuri-ryokou.co.jp#yomiuri-shimbun.pressreader.comyomiuri-systec.co.jpyomiuri.co.jp
 zaobao.comzaobao.com.sg	zaobao.sg
 bgr.inbollywoodlife.comcareerfundas.comcricketcountry.comdnai.indnaindia.comearngeek.comekhindi.com
 ind.sh	india.comindiancolleges.comitripto.com	oncars.inprepsure.comthehealthsite.comwionews.comyo1health.comzee.com
-zeebiz.comzeeentertainment.comzeenews.com"zeenews-fonts.s3.amazonaws.com
-881903.comam730.com.hkamericasvoice.newsappleinsider.com	axios.combbgwatch.combnext.com.twbreitbart.combusinessfocus.iobusinesstoday.com.twbusinessweekly.com.twcaijinglengyan.comchinadecoding.comchinadigitaltimes.netchinaeconomicreview.comcmmedia.com.tw
+zeebiz.comzeeentertainment.comzeenews.com"zeenews-fonts.s3.amazonaws.com9to5google.com9to5mac.com9to5terminal.com9to5toys.comdronedj.comelectrek.cospaceexplored.comthetype.cloud
+cnthetype.comtypeisbeautiful.comstartupschool.orgycombinator.comandroidauthority.comandroidpolice.comappleinsider.comdigitaltrends.comengadget.commacrumors.comslashdot.orgtechnews.twtechradar.comtheverge.comtomsguide.com	zdnet.comzdnet.redvideo.io
+881903.comam730.com.hkamericasvoice.news	axios.combbgwatch.combnext.com.twbreitbart.combusinessfocus.iobusinesstoday.com.twbusinessweekly.com.twcaijinglengyan.comchinadecoding.comchinadigitaltimes.netchinaeconomicreview.comcmmedia.com.tw
 cna.com.tw	cnyes.comcoolloud.org.tw
 cup.com.hk	cw.com.twd100.net
 ebc.net.twettoday.neteventsinfocus.orgfactwire.orgfortuneinsight.comfreebeacon.com	gbnews.ukhk01.comhkcitizenmedia.comhkcnews.comhkej.com
 hkgpao.comhongkongfp.cominmediahk.netinside.com.twjfengtime.comlandofhope.tv
-limedia.twlocalpresshk.comltsports.com.twmacrumors.commdnkids.commirrormedia.com.twmirrormedia.mgmoney-link.com.twmy-formosa.com
+limedia.twlocalpresshk.comltsports.com.twmdnkids.commirrormedia.com.twmirrormedia.mgmoney-link.com.twmy-formosa.com
 newtalk.twnewyorker.comnextapple.comnownews.comnpr.org	on.ccpassiontimes.hkpeoplenews.twpost852.comqmap.pubrealvision.comrfa.org
 rfi.frrsf.org
 rt.com
-rtings.comshuziyimin.orgsingpao.com.hksinoinsider.comslashdot.org
-socrec.orgstorm.mgtaipeitimes.comtaiwannews.com.twtechnews.twtheaffairs.comtheatlantic.comthegatewaypundit.comthenationalpulse.comthenewslens.comthestandnews.comtnntoday.comtvbs.com.twtvmost.com.hktwgreatnews.com	unwire.hk
+rtings.comshuziyimin.orgsingpao.com.hksinoinsider.com
+socrec.orgstorm.mgtaipeitimes.comtaiwannews.com.twtheaffairs.comtheatlantic.comthegatewaypundit.comthenationalpulse.comthenewslens.comthestandnews.comtnntoday.comtvbs.com.twtvmost.com.hktwgreatnews.com	unwire.hk
 upmedia.mgvjmedia.com.hkwarroom.orgwashingtonpost.comwealth.com.twweiyuksj.com
 wenzhao.ca	wired.com
 ydn.com.twyibaochina.comyoulucky.comzerohedge.comzoomingin.tvpugpig-dev.compugpig-stage.com
@@ -11535,10 +11562,7 @@ blazor.netbotframework.comcodethemicrobit.comdevopsassessment.
 cnmicrosoftreactor.infomicrosoftreactor.netmicrosoftreactor.orgmicrosoftsilverlight.commicrosoftsilverlight.orgmicrosoftsilverlight.netmicrosoftsqlserver.com	mmdnn.commono-project.commsdn.commsinnovationchallenge.commspairlift.commsropendata.com	nuget.orgnugettest.orgopentranslatorstothings.orgposhtestgallery.compwabuilder.comreactorms.com.cn
 cn
 sankie.netsqlserveronlinux.comtimelinestoryteller.comuwpcommunitytoolkit.comvisualstudio-staging.comvisualstudio.comvisualstudio.covisualstudio.co.ukvisualstudio.euvisualstudio.netvfsforgit.comvfsforgit.orgvsassets.io
-vscode.devvscode-cdn.netvscode-unpkg.netxamarin.comaz764295.vo.msecnd.net)%bingsettingssearch.trafficmanager.netdefault.exp-tas.comdeveloper.microsoft.com'#download.visualstudio.microsoft.comdtlgalleryint.cloudapp.net poshtestgallery.cloudapp.net"psg-int-centralus.cloudapp.netpsg-int-eastus.cloudapp.netrink.hockeyapp.net+'vscode-sync-insiders.trafficmanager.net"vscode-sync.trafficmanager.net vscode.blob.core.windows.netvscode.search.windows.net vsmarketplacebadge.apphb.commongodb.commongodb.org	nginx.com	nginx.org	nixos.orgchatgpt.comoaistatic.comoaiusercontent.com
-openai.com!openai.com.cdn.cloudflare.net openaiapi-site.azureedge.net2.openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net1-openaicomproductionae4b.blob.core.windows.net.*production-openaicom-storage.azureedge.net=9^chatgpt-async-webps-prod-\s+-\d+\.webpubsub\.azure\.com$$o33249.ingest.sentry.io
-ads openaicom.imgix.net
-adsopenwrt.orglede-project.orgosdn.netperl.apache.orgperl.orgcpan.orgmetacpan.org
+vscode.devvscode-cdn.netvscode-unpkg.netxamarin.comaz764295.vo.msecnd.net)%bingsettingssearch.trafficmanager.netdefault.exp-tas.comdeveloper.microsoft.com'#download.visualstudio.microsoft.comdtlgalleryint.cloudapp.net poshtestgallery.cloudapp.net"psg-int-centralus.cloudapp.netpsg-int-eastus.cloudapp.netrink.hockeyapp.net+'vscode-sync-insiders.trafficmanager.net"vscode-sync.trafficmanager.net vscode.blob.core.windows.netvscode.search.windows.net vsmarketplacebadge.apphb.commongodb.commongodb.org	nginx.com	nginx.org	nixos.orgopenwrt.orglede-project.orgosdn.netperl.apache.orgperl.orgcpan.orgmetacpan.org
 modperl.plpolymer-project.orgpolymerproject.org	pycon.orgpypa.iopypi.iopypi.org
 python.orgpythonhosted.orgpiwheels.org	qt.ioqt-project.orgreadthedocs-hosted.comreadthedocs.comreadthedocs.ioreadthedocs.orgredis.ioredislabs.comremirepo.netruby-lang.orgrubygems.orgrust-lang.org	rustup.rs	crates.iodocs.rs
 redhat.com
@@ -11802,9 +11826,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn'amp-api-edge.apps.apple.com
 cn."amp-api-search-edge.apps.apple.com
 cn"amp-api.apps.apple.com
+cn#amp-api.music.apple.com
 cn aod.itunes.apple.com
 cn#api-edge.apps.apple.com
 cn(apptrailers.itunes.apple.com
+cn auth.music.apple.com
 cn bag.itunes.apple.com
 cn'bookkeeper.itunes.apple.com
 cn'client-api.itunes.apple.com
@@ -11819,16 +11845,21 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn5)inappcheck-cn.itunes-apple.com.akadns.net
 cn5)inappcheck-lb.itunes-apple.com.akadns.net
 cn'inappcheck.itunes.apple.com
-cn!init.itunes.apple.com
 cn+init.gc-lb.apple.com.akadns.net
 cninit.gc.apple.com
+cn!init.itunes.apple.com
 cn$iosapps.itunes.apple.com
 cn"js-cdn.music.apple.com
 cn km.support.apple.com
 cnmaps.apple.com
+cn(misc-assets.itunes.apple.com
+cn"myapp.itunes.apple.com
+cn$np-edge.itunes.apple.com
 cn$osxapps.itunes.apple.com
+cn"pd-nk.itunes.apple.com
 cnpd.itunes.apple.com
 cn!play.itunes.apple.com
+cn play.music.apple.com
 cn$se-edge.itunes.apple.com
 cn se2.itunes.apple.com
 cn#search.itunes.apple.com
@@ -11837,7 +11868,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+streamingaudio.itunes.apple.com
 cnsu.itunes.apple.com
 cn!sync.itunes.apple.com
+cn(tf-feedback.itunes.apple.com
 cn upp.itunes.apple.com
+cn!www.support.apple.com
 cn#^a[1-5]\.mzstatic\.com$
 cn0$^cdn(-cn)?[1-4]?\.apple-mapkit\.com$
 cn9-^cl[1-5]-cdn\.origin-apple\.com\.akadns\.net$
@@ -11849,8 +11882,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cna3.mzstatic.com
 cna4.mzstatic.com
 cna5.mzstatic.com
-cn, adcdownload.apple.com.akadns.net
 cn!adcdownload.apple.com
+cn, adcdownload.apple.com.akadns.net
 cn#amp-api.media.apple.com
 cn&api-p-ap-c.smoot.apple.com
 cn&api-p-ap-d.smoot.apple.com
@@ -11870,8 +11903,8 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn!cdn3.apple-mapkit.com
 cn!cdn4.apple-mapkit.com
 cn!cds-cdn.v.aaplimg.com
-cn$cds.apple.com.akadns.net
 cncds.apple.com
+cn$cds.apple.com.akadns.net
 cncdsassets.apple.com
 cn/#cl1-cdn.origin-apple.com.akadns.net
 cncl1.apple.com
@@ -11884,11 +11917,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cncl4.apple.com
 cn/#cl5-cdn.origin-apple.com.akadns.net
 cncl5.apple.com
-cn+clientflow.apple.com.akadns.net
 cn clientflow.apple.com
+cn+clientflow.apple.com.akadns.net
 cn, cn-smp-paymentservices.apple.com
-cn."configuration.apple.com.akadns.net
 cn#configuration.apple.com
+cn."configuration.apple.com.akadns.net
 cncstat.apple.com
 cncstat.cdn-apple.com
 cn."dd-cdn.origin-apple.com.akadns.net
@@ -11900,9 +11933,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn%gsp10-ssl-cn.ls.apple.com
 cn!gsp12-cn.ls.apple.com
 cn!gsp13-cn.ls.apple.com
-cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
-cn, gsp4-cn.ls.apple.com.edgekey.net
 cn gsp4-cn.ls.apple.com
+cn, gsp4-cn.ls.apple.com.edgekey.net
+cnC7gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
 cn gsp5-cn.ls.apple.com
 cn%gsp85-cn-ssl.ls.apple.com
 cn(gspe19-2-cn-ssl.ls.apple.com
@@ -11916,12 +11949,11 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cn+guzzoni-apple-com.v.aaplimg.com
 cnguzzoni.apple.com
 cn#guzzoni.smoot.apple.com
-cniadsdk.apple.com
 cn, icloud-cdn.icloud.com.akadns.net
 cn icloud.cdn-apple.com
+cnimages.apple.com
 cn'images.apple.com.akadns.net
 cn?3images.apple.com.edgekey.net.globalredir.akadns.net
-cnimages.apple.com
 cninit-kt.apple.com
 cn3'init-p01md-lb.push-apple.com.akadns.net
 cn init-p01md.apple.com
@@ -11954,6 +11986,7 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnmusic.apple.com
 cn(ocsp-lb.apple.com.akadns.net
 cnocsp.apple.com
+cn)ocsp2-lb.apple.com.akadns.net
 cnocsp2.apple.com
 cnoscdn.apple.com
 cn-!oscdn.origin-apple.com.akadns.net
@@ -11976,9 +12009,9 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnstatic.gc.apple.com
 cn4(stocks-sparkline-lb.apple.com.akadns.net
 cn&stocks-sparkline.apple.com
-cn>2store.apple.com.edgekey.net.globalredir.akadns.net
-cn'store.apple.com.edgekey.net
 cnstore.apple.com
+cn'store.apple.com.edgekey.net
+cn>2store.apple.com.edgekey.net.globalredir.akadns.net
 cn2&store.storeimages.apple.com.akadns.net
 cn+store.storeimages.cdn-apple.com
 cn2&support-china.apple-support.akadns.net
@@ -11989,25 +12022,25 @@ touchid.tvtouchid.wangtracking-location.comtruedepth3d.com
 cnswcatalog.apple.com
 cnswcdn.apple.com
 cnswcdn.g.aaplimg.com
-cn'swdist.apple.com.akadns.net
 cnswdist.apple.com
+cn'swdist.apple.com.akadns.net
 cn+swscan-cdn.apple.com.akadns.net
 cnswscan.apple.com
 cnsylvan.apple.com
 cn(tj-pod1-smp-device.apple.com
-cn1%updates-http.cdn-apple.com.akadns.net
 cn&updates-http.cdn-apple.com
+cn1%updates-http.cdn-apple.com.akadns.net
 cn!updates.cdn-apple.com
 cnvalid.apple.com
 cn-!valid.origin-apple.com.akadns.net
-cn-!weather-data.apple.com.akadns.net
 cn"weather-data.apple.com
+cn-!weather-data.apple.com.akadns.net
 cn!weather-map.apple.com
 cn"weather-map2.apple.com
 cn weatherkit.apple.com
-cn<0www.apple.com.edgekey.net.globalredir.akadns.net
-cn%www.apple.com.edgekey.net
 cnwww.apple.com
+cn%www.apple.com.edgekey.net
+cn<0www.apple.com.edgekey.net.globalredir.akadns.net
 cnxp.apple.com
 cnasus.comasus.com.cn
 cnasuscloud.comasuswebstorage.comatlassian.comatlassian.netbitbucket.iobitbucket.orgstatuspage.ioaccbusiness.com
@@ -12131,7 +12164,7 @@ apture.comarea120.com
 asp-cc.comautodraw.combandpage.combaselinestudy.combaselinestudy.orgbazel.buildbdn.devbeatthatquote.com	blink.orgbrocaproject.com
 brotli.orgbumpshare.com
 bumptop.cabumptop.combumptop.netbumptop.orgbumptunes.comcampuslondon.com certificate-transparency.org
-chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdeepmind.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
+chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
 fflick.comfinanceleadsonline.com
 fitbit.com
 foofle.comfroogle.comfuchsia.dev	g-tun.comg.cn
@@ -12658,8 +12691,10 @@ ssrpass.pwstc-server.comhutao.cloudcursecdn.com
 fandom.com	wikia.com	wikia.orgdndbeyond.comfuthead.comgamepedia.commuthead.comcortexrpg.comfanatical.comwikia.nocookie.netfandom.zendesk.commiraheze.orgscp-wiki.net	scpdb.orgscpwiki.comtranslatewiki.nettranslatewiki.orgwdfiles.comwikidot.comwikihow.commediawiki.orgwikibooks.orgwikidata.orgwikimediafoundation.orgwikimedia.orgwikinews.orgwikipedia.orgwikiquote.orgwikisource.orgwikiversity.orgwikivoyage.orgwiktionary.orgwmfusercontent.org
 w.wikitoolforge.orgwikimediacloud.orgwmcloud.orgwmflabs.org	atwiki.jptouhouwiki.netapi.nebula-emby.comweb.nebula-emby.comavxhm.se	avh.world	avxde.orgavxhm.isavxlive.icu	xsava.xyzzavat.pw	chobit.ccci-en.jp	ci-en.net
 dlsite.comdlsite.com.tw	dlsite.jpdlsitestudio.comnijiyome.jptriokini.comespressif.com	esp32.comesp8266.comfamifun.com.twfamily.co.jpfamily.com.twfamilymart.com.cn
-cnfamilymart.com.myfamilymart.com.ph	famima.vnfzdm.com	fffdm.com	edcity.hkhkedcity.nethkreadingcity.nethuanghuagang.orglavteam.orgmcd	mcdonalds4008-517-517.cn
-cnaboutmcdonalds.comhappymeal.co.nzhappymeal.com.aumcd.commcdelivery.co.idmcdelivery.co.krmcdelivery.com.aumcdelivery.com.mymcdelivery.com.sgmcdelivery.com.twmcdindonesia.commcdonalds.camcdonalds.co.ukmcdonalds.commcdonalds.com.hkmcdonalds.hkmcdonalds.itmcdonalds.nomcdonalds.semcdonaldsarabia.commcdonaldsparties.co.nzmcdonaldsparties.com.au!xn--qhrx81fxh2a.xn--55qx5d.hkaerogard.com.auaerogard.com.cn
+cnfamilymart.com.myfamilymart.com.ph	famima.vnfzdm.com	fffdm.com	edcity.hkhkedcity.nethkreadingcity.nethuanghuagang.orglavteam.orgmcd	mcdonaldshappymeal.com.aumcdelivery.com.aumcdonalds.com.au4008-517-517.cn
+cnmcd.cn
+cnmcdonalds.com.cn
+cnmcdonalds.hkmcdonalds.com.hkmcdelivery.co.inmcdindia.commcdelivery.co.idmcdindonesia.commcdonalds.co.idmcdonalds.co.jpmcdonalds-online.commcd-holdings.co.jpmcdelivery.co.krmcdonalds.co.krmcdelivery.com.twmcdonalds.com.twaboutmcdonalds.comhappymeal.co.nzhappymeal.comhappymealdigital.commcd.commcdelivery.com.mymcdelivery.com.phmcdelivery.com.sgmcdonalds.bemcdonalds.camcdonalds.itmcdonalds.nomcdonalds.semcdonalds.co.nzmcdonalds.co.ukmcdonalds.commcdonalds.com.lbmcdonalds.com.mymcdonalds.com.phmcdonaldsapps.commcdonaldsarabia.commcdonaldsparties.co.nzaerogard.com.auaerogard.com.cn
 cnaerogardcn.com
 airwick.at
 airwick.be
@@ -12764,7 +12799,7 @@ rea.global
 rea.iorea.techrealcommercial.com.aurealestate.com.aurealtor.comreastatic.netrumah123.comsmartexpos.comsmartline.com.auspacely.com.ausquarefoot.com.hkthinkofliving.comscenesource.me	scnsrc.mesbux.com.mysbuxcard.comstarbucks-stars.comstarbucks.adstarbucks.atstarbucks.bestarbucks.bgstarbucks.castarbucks.chstarbucks.co.idstarbucks.co.jpstarbucks.co.nzstarbucks.co.thstarbucks.co.ukstarbucks.co.zastarbucks.comstarbucks.com.arstarbucks.com.bnstarbucks.com.cn
 cnstarbucks.com.costarbucks.com.cystarbucks.com.grstarbucks.com.hkstarbucks.com.khstarbucks.com.kzstarbucks.com.mxstarbucks.com.mystarbucks.com.pestarbucks.com.sgstarbucks.com.trstarbucks.com.uystarbucks.destarbucks.dkstarbucks.esstarbucks.frstarbucks.hustarbucks.iestarbucks.instarbucks.itstarbucks.nlstarbucks.nostarbucks.phstarbucks.plstarbucks.ptstarbucks.rsstarbucks.rustarbucks.sestarbucks.ttstarbucks.vnstarbucksathome.comstarbucksavie.castarbuckscard.phstarbuckscardb2b.comstarbuckscoffee.czstarbuckscoffeegear.com starbuckscoffeegearstore.comstarbucksforlife.castarbucksforlife.comstarbuckspoq.comstarbucksreserve.comstarbucksrewardsstarland.ca starbucksrewardsstarland.comstarbucksromania.rostarbucksrtd.comstarbucksslovakia.skstarbuckssummergame.castarbuckssummergame.com
 tsquare.tv	windy.comxdty.org	xingrz.me
-È‰
+˙‰
 GEOLOCATION-CN
 42r.cn
 5566ua.comaurorapush.cn
@@ -13740,7 +13775,7 @@ myhwcdn.cnmyhwcdn.commyhwcloudlive.commyhwclouds.cnmyhwc
 !cn- ru-northwest-2.myhuaweicloud.com
 !cn*sa-brazil-1.myhuaweicloud.com
 !cn(tr-west-1.myhuaweicloud.com
-!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
+!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.cndbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
 huawei.comhuawei.com.cnhuaweiacad.comhuaweiief.cnhuaweiief.comhuaweistatic.com	hwccpc.cn
 hwccpc.comhwht.cnhwocloud.com
 hwtrip.comshanhaitujian.com	vmall.comvmallres.comiflytek.com	xunfei.cn
@@ -14420,7 +14455,7 @@ golang.net
 golang.org
 1
 	GOODREADSgoodreads.comgr-assets.com
-¶»
+Ç 
 GOOGLEandroid.comandroidify.comblogger.comblogblog.comblogspot.aeblogspot.alblogspot.amblogspot.bablogspot.beblogspot.bgblogspot.bjblogspot.cablogspot.cfblogspot.chblogspot.clblogspot.co.atblogspot.co.idblogspot.co.ilblogspot.co.keblogspot.co.nzblogspot.co.ukblogspot.co.zablogspot.comblogspot.com.arblogspot.com.aublogspot.com.brblogspot.com.byblogspot.com.coblogspot.com.cyblogspot.com.eeblogspot.com.egblogspot.com.esblogspot.com.mtblogspot.com.ngblogspot.com.trblogspot.com.uyblogspot.cvblogspot.czblogspot.deblogspot.dkblogspot.fiblogspot.frblogspot.grblogspot.hkblogspot.hrblogspot.hublogspot.ieblogspot.inblogspot.isblogspot.itblogspot.jpblogspot.krblogspot.liblogspot.ltblogspot.lublogspot.mdblogspot.mkblogspot.mxblogspot.myblogspot.nlblogspot.noblogspot.peblogspot.ptblogspot.qablogspot.reblogspot.roblogspot.rsblogspot.rublogspot.seblogspot.sgblogspot.siblogspot.skblogspot.snblogspot.tdblogspot.twblogspot.ugblogspot.vndart.devdartlang.orgdartpad.devfastlane.cifastlane.toolsfirebase.comfirebase.iofirebaseapp.comfirebaseio.com-!firebase-settings.crashlytics.com
 cnfirebase.google.comfirebase.googleapis.com#firebaseappcheck.googleapis.com,(firebasedynamiclinks-ipv4.googleapis.com,(firebasedynamiclinks-ipv6.googleapis.com'#firebasedynamiclinks.googleapis.com)%firebaseinappmessaging.googleapis.com($firebaseinstallations.googleapis.com%!firebaselogging-pa.googleapis.com"firebaselogging.googleapis.com+'firebaseperusertopics-pa.googleapis.com'#firebaseremoteconfig.googleapis.comflutter.devflutterapp.compub.devgo-lang.comgo-lang.netgo-lang.org
 go.dev	godoc.org
@@ -14471,7 +14506,7 @@ golang.org2mdn-cn.net
 urchin.com
 ads!analytics.google.com
 ads>1^adservice\.google\.([a-z]{2}|com?)(\.[a-z]{2})?$
-adscharlestonroadregistry.comcrr.comregistry.googleget.appget.devget.howget.newget.pageget.rsvphey.booiam.soynew.dayxn--p8j9a0d9c9a.xn--q9jyb4cscholar.google.aescholar.google.atscholar.google.bescholar.google.bgscholar.google.cascholar.google.catscholar.google.chscholar.google.clscholar.google.cnscholar.google.co.crscholar.google.co.idscholar.google.co.ilscholar.google.co.inscholar.google.co.jpscholar.google.co.krscholar.google.co.nzscholar.google.co.thscholar.google.co.ukscholar.google.co.vescholar.google.co.zascholar.google.comscholar.google.com.arscholar.google.com.auscholar.google.com.boscholar.google.com.brscholar.google.com.coscholar.google.com.cuscholar.google.com.doscholar.google.com.ecscholar.google.com.egscholar.google.com.gtscholar.google.com.hkscholar.google.com.lyscholar.google.com.mxscholar.google.com.myscholar.google.com.nischolar.google.com.pascholar.google.com.pescholar.google.com.phscholar.google.com.pkscholar.google.com.prscholar.google.com.pyscholar.google.com.sgscholar.google.com.svscholar.google.com.trscholar.google.com.twscholar.google.com.uascholar.google.com.uyscholar.google.com.vnscholar.google.czscholar.google.descholar.google.dkscholar.google.esscholar.google.fischolar.google.frscholar.google.grscholar.google.hnscholar.google.hrscholar.google.huscholar.google.isscholar.google.itscholar.google.lischolar.google.ltscholar.google.luscholar.google.lvscholar.google.nlscholar.google.noscholar.google.plscholar.google.ptscholar.google.roscholar.google.ruscholar.google.sescholar.google.sischolar.google.sk!scholar.googleusercontent.comscholar.l.google.compki.goog!pki-goog.l.google.com
+adsdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.comcharlestonroadregistry.comcrr.comregistry.googleget.appget.devget.howget.newget.pageget.rsvphey.booiam.soynew.dayxn--p8j9a0d9c9a.xn--q9jyb4cscholar.google.aescholar.google.atscholar.google.bescholar.google.bgscholar.google.cascholar.google.catscholar.google.chscholar.google.clscholar.google.cnscholar.google.co.crscholar.google.co.idscholar.google.co.ilscholar.google.co.inscholar.google.co.jpscholar.google.co.krscholar.google.co.nzscholar.google.co.thscholar.google.co.ukscholar.google.co.vescholar.google.co.zascholar.google.comscholar.google.com.arscholar.google.com.auscholar.google.com.boscholar.google.com.brscholar.google.com.coscholar.google.com.cuscholar.google.com.doscholar.google.com.ecscholar.google.com.egscholar.google.com.gtscholar.google.com.hkscholar.google.com.lyscholar.google.com.mxscholar.google.com.myscholar.google.com.nischolar.google.com.pascholar.google.com.pescholar.google.com.phscholar.google.com.pkscholar.google.com.prscholar.google.com.pyscholar.google.com.sgscholar.google.com.svscholar.google.com.trscholar.google.com.twscholar.google.com.uascholar.google.com.uyscholar.google.com.vnscholar.google.czscholar.google.descholar.google.dkscholar.google.esscholar.google.fischolar.google.frscholar.google.grscholar.google.hnscholar.google.hrscholar.google.huscholar.google.isscholar.google.itscholar.google.lischolar.google.ltscholar.google.luscholar.google.lvscholar.google.nlscholar.google.noscholar.google.plscholar.google.ptscholar.google.roscholar.google.ruscholar.google.sescholar.google.sischolar.google.sk!scholar.googleusercontent.comscholar.l.google.compki.goog!pki-goog.l.google.com
 cn
 c.pki.goog
 cn
@@ -14578,7 +14613,7 @@ apture.comarea120.com
 asp-cc.comautodraw.combandpage.combaselinestudy.combaselinestudy.orgbazel.buildbdn.devbeatthatquote.com	blink.orgbrocaproject.com
 brotli.orgbumpshare.com
 bumptop.cabumptop.combumptop.netbumptop.orgbumptunes.comcampuslondon.com certificate-transparency.org
-chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdeepmind.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
+chrome.comchromebook.comchromecast.comchromeos.devchromium.orgchronicle.securitychroniclesec.comcloudburstresearch.comcloudfunctions.netcloudproxy.appcloudrobotics.comcobrasearch.comcodespot.comconscrypt.comconscrypt.orgcookiechoices.org	coova.com	coova.net	coova.orgcrossmediapanel.com	cs4hs.comdartsearch.netdataliberation.org	debug.comdebugproject.comdevsitetest.howdialogflow.comdigitalassetlinks.orgdocs.newepisodic.comfeedburner.com
 fflick.comfinanceleadsonline.com
 fitbit.com
 foofle.comfroogle.comfuchsia.dev	g-tun.comg.cn
@@ -14854,6 +14889,10 @@ urchin.com
 ads!analytics.google.com
 ads>1^adservice\.google\.([a-z]{2}|com?)(\.[a-z]{2})?$
 ads
+ˇ
+GOOGLE-DEEPMINDdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.com
+˝
+GOOGLE-GEMINIdeepmind.comdeepmind.googleai.google.devaistudio.google.combard.google.comgemini.google.com%!generativelanguage.googleapis.commakersuite.google.com+'alkalimakersuite-pa.clients6.google.com
 Î
 GOOGLE-REGISTRYcharlestonroadregistry.comcrr.comregistry.googleget.appget.devget.howget.newget.pageget.rsvphey.booiam.soynew.dayxn--p8j9a0d9c9a.xn--q9jyb4c
 ◊
@@ -15021,7 +15060,7 @@ G
 HSBC-CNhsbc.com.cnhsbcqh.com.cnhsbcinsurance.com.cn
 $
 HUANGHUAGANGhuanghuagang.org
-¸0
+ç1
 HUAWEI
 bisheng.cn
 cnbishengcompiler.cn
@@ -15070,7 +15109,7 @@ myhwcdn.cnmyhwcdn.commyhwcloudlive.commyhwclouds.cnmyhwc
 !cn- ru-northwest-2.myhuaweicloud.com
 !cn*sa-brazil-1.myhuaweicloud.com
 !cn(tr-west-1.myhuaweicloud.com
-!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
+!cncdnhwchcg02.comcdnhwcurq03.comcdnhwczba04.comcdnhwclxw05.comcdnhwcupf06.comcdnhwcxcy07.comcdnhwcatq08.comcdnhwcztu09.comcdnhwcedi10.comcdnhwcoem01.comcdnhwcllh11.comcdnhwcjog12.comcdnhwcpsd13.comcdnhwcqwg14.comcdnhwcqir15.comcdnhwcvix16.comcdnhwcajk17.comcdnhwcchh18.comcdnhwcohm19.comcdnhwczjt20.comcdnhwcggk22.comcdnhwczth23.comcdnhwctxz24.comcdnhwcgrb01.cncdnhwcyxb02.cncdnhwcywp03.cncdnhwclkl04.cncdnhwcjbj05.cncdnhwconz06.cncdnhwcgqa21.comcdnhwckbw08.cncdnhwcsjs09.cncdnhwcjkl10.cncdnhwctmz11.cncdnhwcrpp12.cncdnhwcpqh13.cncdnhwcxsi14.cncdnhwcfzp15.cncdnhwcgvs16.cncdnhwcrgg07.cncdnhwceft18.cncdnhwccvo19.cncdnhwcbvo20.cncdnhwcdkd21.cncdnhwcdvg22.cncdnhwclnh23.cncdnhwckfd24.cncdnhwczxh101.comcdnhwcbzj102.comcdnhwcjqv17.cncdnhwcljk104.comcdnhwclxu105.comcdnhwcbqs106.comcdnhwctnm107.comcdnhwcbni108.comcdnhwczks109.comcdnhwcick110.comcdnhwcead111.comcdnhwcjlg112.comcdnhwckon103.comcdnhwczmn114.comcdnhwcqgw115.comcdnhwckfz116.comcdnhwcqve117.comcdnhwcgnc118.comcdnhwcuim119.comcdnhwcjsb120.comcdnhwccmz121.comcdnhwcibv122.comcdnhwcprh113.comcdnhwcedt124.comcdnhwcofl101.cncdnhwclrd102.cncdnhwcurr103.cncdnhwczid104.cncdnhwcqvk105.cncdnhwczoy106.cncdnhwcuwd107.cncdnhwcogx108.cncdnhwcoph123.comcdnhwceod109.cncdnhwcpcw110.cncdnhwczic111.cncdnhwcozb112.cncdnhwcqrr114.cncdnhwcaoc115.cncdnhwctyd116.cncdnhwcidu117.cncdnhwclsl119.cncdnhwcsux118.cncdnhwcbie120.cncdnhwcuxc121.cncdnhwcaip122.cncdnhwcwqz113.cncdnhwcojn124.cncdnhwcscc123.cno7mu8.cn59bob.cntc3bl.cnhiu58.cnkfomn.cnazkr2.cnvm45e.cnbuf35.cnuwtmy.cnfpxyo.cntm2a8.cnr8zc9.cn6ts7c.cn2gkjr.cnns95c.cntm7sg.cnle5vb.cny43f6.cn8n82b.cnx9exk.cnms2tg.cnka9bv.cnacgab.cnmle5p.cn26r9y.cn9coof.cntzygd.cnz95rr.cn3ili6.cnvo6z2.cnlu1da.cnivwi3.cn7k2k1.cncza84.cn8gcdp.cnkma1g.cn576nt.cn#.+\.cdnhwc([1-9]|10)\.(cn|com)$abhouses.comagconnect.link	dbank.comdbankcdn.cndbankcdn.comdbankcloud.comhicloud.comhihonor.comhonor.cn	huawei.cn
 huawei.comhuawei.com.cnhuaweiacad.comhuaweiief.cnhuaweiief.comhuaweistatic.com	hwccpc.cn
 hwccpc.comhwht.cnhwocloud.com
 hwtrip.comshanhaitujian.com	vmall.comvmallres.com
@@ -15858,9 +15897,11 @@ matrix.org	matrix.to
 modular.imriot.im	vector.im
 V
 MATTERSmatters.newsmatters.onematters.townmattersprotocol.io
-ª
-	MCDONALDSmcd	mcdonalds4008-517-517.cn
-cnaboutmcdonalds.comhappymeal.co.nzhappymeal.com.aumcd.commcdelivery.co.idmcdelivery.co.krmcdelivery.com.aumcdelivery.com.mymcdelivery.com.sgmcdelivery.com.twmcdindonesia.commcdonalds.camcdonalds.co.ukmcdonalds.commcdonalds.com.hkmcdonalds.hkmcdonalds.itmcdonalds.nomcdonalds.semcdonaldsarabia.commcdonaldsparties.co.nzmcdonaldsparties.com.au!xn--qhrx81fxh2a.xn--55qx5d.hk
+∂
+	MCDONALDSmcd	mcdonaldshappymeal.com.aumcdelivery.com.aumcdonalds.com.au4008-517-517.cn
+cnmcd.cn
+cnmcdonalds.com.cn
+cnmcdonalds.hkmcdonalds.com.hkmcdelivery.co.inmcdindia.commcdelivery.co.idmcdindonesia.commcdonalds.co.idmcdonalds.co.jpmcdonalds-online.commcd-holdings.co.jpmcdelivery.co.krmcdonalds.co.krmcdelivery.com.twmcdonalds.com.twaboutmcdonalds.comhappymeal.co.nzhappymeal.comhappymealdigital.commcd.commcdelivery.com.mymcdelivery.com.phmcdelivery.com.sgmcdonalds.bemcdonalds.camcdonalds.itmcdonalds.nomcdonalds.semcdonalds.co.nzmcdonalds.co.ukmcdonalds.commcdonalds.com.lbmcdonalds.com.mymcdonalds.com.phmcdonaldsapps.commcdonaldsarabia.commcdonaldsparties.co.nz
 √
 MDNdeveloper.allizom.orgdeveloper.mozilla.orgmdn.allizom.netmdn.devmdn.mozilla.netmdn.mozit.cloudmdnplay.devmdnyalp.devmdn.mozillademos.org
 •
@@ -16753,6 +16794,9 @@ D
 POCOIQ-ADScdn.pocoiq.cn
 adsoct.pocoiq.cn
 ads
+"
+POEpoe.com
+poecdn.net
 :
 POLYMERpolymer-project.orgpolymerproject.org
 '
@@ -18132,15 +18176,15 @@ tiktokw.us
 
 TIPDM
 tipdim.org
-ÚI
-TLD-!CNmemeingfoozipmov	nexusdadphdprofesqrsvpboodaynewdevpageapphowsoyxn--q9jyb4cgovmileduacadaeafagaialamaoaqarasatauawaxazbabbbdbebfbgbhbibjbmbnbobrbsbtbvbwbybzcacdcfcgchcickclcmcrcucvcwcxcyczdedjdkdmdodzeceeegereseteufifjfkfmfofrgagbgdgegfggghgiglgmgngpgrgsgtgugwgyhkhmhnhrhthuidieiliminioiqirisitjejmjojpkekgkhkikmknkpkrkwkykzlalblclilklrlsltlulvlymamcmdmgmhmkmlmmmnmompmqmrmsmtmumvmwmxmymznancnenfngninlnonpnrnunzompapepfpgphpkplpmpnprpspsptpyqarerorsrurwsasbscsdsesgshsisjskslsmsnsososrssstsusvsxsysztctdtftgthtjtktltmtntotrtttvtwtzuaugukusuyuzvavcvevgvivnvuwfwsyeytzazmzwaflmlbnbanflnracrsdnpdvagerniice	locusmckinseyolayangroup
+˙H
+TLD-!CNmemeingfoozipmov	nexusdadphdprofesqrsvpboodaynewdevpageapphowsoyxn--q9jyb4cgovmileduacadaeafagaialamaoaqarasatauawaxazbabbbdbebfbgbhbibjbmbnbobrbsbtbvbwbybzcacdcfcgchcickclcmcrcucvcwcxcyczdedjdkdmdodzeceeegereseteufifjfkfmfofrgagbgdgegfggghgiglgmgngpgrgsgtgugwgyhmhnhrhthuidieiliminioiqirisitjejmjojpkekgkhkikmknkpkrkwkykzlalblclilklrlsltlulvlymamcmdmgmhmkmlmmmnmompmqmrmsmtmumvmwmxmymznancnenfngninlnonpnrnunzompapepfpgphpkplpmpnprpspsptpyqarerorsrurwsasbscsdsesgshsisjskslsmsnsososrssstsusvsxsysztctdtftgthtjtktltmtntotrtttwtzuaugukusuyuzvavcvevgvivnvuwfwsyeytzazmzwaflmlbnbanflnracrsdnpdvagerniice	locusmckinseyolayangroup
 olayan	praxisapseekwtc	xeroxathleta	bloombergcalvinkleingap	gucci
 hermes	lancaster	lipsy	mango
 nextdirectnextnike	omegaredstone
 swatch
 africacapetown
 durban
-joburgabudhabiarabasia	dubaikrd	kyoto
+joburgabudhabiarab	dubaikrd	kyoto
 nagoyaokinawa	osaka
 ryukyu
 taipei	tatar	tokyoyokohama
@@ -18164,20 +18208,20 @@ boehringer	dabur	freseniusjnj
 bostik	crown
 dupontflirgraingerhitachiifmipirangajiokomatsu	kuokgroupleclerclidl	lottemanmtrreliancerexrothrilrwesandvikcoromantsandvik
 schaefflerschmidtschwarz	senersewsncf	total
-walter	weberweirwoodsidezaraafricamagicagakhanakdnbabybar
+walter	weberweirwoodsidezaraafricamagicagakhanakdnbar
 bharti	bingocasa
-casinochat
+casino
 datingdomains
 extraspacegaygentinghot	ikano
 imamatlgbtmaif
-mattelmoe	pokersas	shellshia	style	sucks	tatar
+mattelmoesas	shellshia	style	sucks	tatar
 tattoovana
 virgin	vodkawinewmewtf	biblecatholicismailixn--mgbi4ecexpcern
 emerck	hisamitsu	lillylundbeckmerckmsdmsd
 otsuka
 pfizer	stadateva	torayweather	adultpornsexsexyxxxauspostdhl	fedexxn--lgbbat1ad8j
 xn--y9a3aqxn--mgbcpq6gpa1axn--54b7fta0cc	xn--90aisxn--90ae
-xn--wgbh1c	xn--e1a4c	xn--qxa6axn--nodexn--qxamxn--j6w193gxn--4dbrk0cexn--h2brj9cxn--mgbbh1a71exn--fpcrj9c3dxn--gecrj9cxn--s9brj9cxn--45brj9cxn--xkc2dl3a5ee0hxn--2scrj9cxn--rvc1e0am3exn--45br5cylxn--3hcrj9cxn--mgbbh1axn--h2breg3evexn--h2brj9c8cxn--mgbgu82axn--mgba3a4f16axn--mgba3a4fraxn--mgbtx2bxn--mgbayh7gpaxn--80ao21axn--3e0b707e
+xn--wgbh1c	xn--e1a4c	xn--qxa6axn--nodexn--qxamxn--4dbrk0cexn--h2brj9cxn--mgbbh1a71exn--fpcrj9c3dxn--gecrj9cxn--s9brj9cxn--45brj9cxn--xkc2dl3a5ee0hxn--2scrj9cxn--rvc1e0am3exn--45br5cylxn--3hcrj9cxn--mgbbh1axn--h2breg3evexn--h2brj9c8cxn--mgbgu82axn--mgba3a4f16axn--mgba3a4fraxn--mgbtx2bxn--mgbayh7gpaxn--80ao21axn--3e0b707e
 xn--q7ce6axn--mix891fxn--mix082f	xn--d1alfxn--mgbx4cd0abxn--mgbah1a3hjkrd	xn--l1accxn--mgbc0a9azcgxn--mgb9awbfxn--mgbai9azgqp6jxn--mgbai9a5eva00bxn--ygbi2ammx
 xn--wgbl6axn--p1aixn--mgberp4a5d4arxn--mgberp4a5d4a87gxn--mgbqly7c0a67fbcxn--mgbqly7cvafr
 xn--90a3acxn--yfro4i67oxn--fzc2c9e2cxn--mgbpl2fhxn--ogbpf8flxn--mgbtf8flxn--kpry57dxn--kprw13dxn--nnx388a
@@ -18191,9 +18235,9 @@ mitsubishi
 tatamotors
 toyotatvs	volvoandroid	applebestbuybrother	canondellfujitsu	goldpointibm	nikon	nokia	panasonicphilipspioneersamsung	sharpsonytoshiba	yodobashi	allfinanzallyamericanexpressamexanzbanamexbarclaycardbarclaysbbtbbva
 bnpparibasbofabradesco
-capitalonecbacfa	chasecitadelciticommbankdeloittediscoverfidelityhdfcbankhdfchsbcitaujcbjlljpmorgankfhkpmglacaixalasallelplfinanciallplnabnetbankopen
+capitalonecbacfacitadelciticommbankdeloittediscoverfidelityhdfcbankhdfchsbcitaujcbjllkfhkpmglacaixalasallelplfinanciallplnabnetbankopen
 pictetpncpohl	pramerica
-prudentialprupwcsaxosbiscbsoftbank	statebanktemasek	ubankubsvanguardvisawolterskluwer	aquarellediy	homedepot	homegoodsaigallstateamericanfamily	amfam	amicaaxafarmersmma
+prudentialprupwcsbiscbsoftbank	statebanktemasek	ubankubsvanguardvisawolterskluwer	aquarellediy	homedepot	homegoodsaigallstateamericanfamily	amfam	amicaaxafarmersmma
 nissayprogressiveredumbrella	statefarmtiaatravelersinsurance	travelerstrvvig	beatsblockbusternetflixplaystationtabwilliamhillxboxasda
 george	homesenselego	marshallsobisamsclubstaples
 targetthd
@@ -18211,7 +18255,7 @@ prudentialprupwcsaxosbiscbsoftbank	stat
 nortonntt
 officeollo
 oracle
-orangeovhpccw	quest	richardli	ricoh
+orangeovhpccw	richardli	ricoh
 rogers
 sakurasassfrshaw	skype	sling	smartstcgroupstctcitdkuolverisignvivavivowindows	yahooyamaxun
 yandexyoutube
@@ -19042,4 +19086,4 @@ zybang.com
 H
 	ZYNGA-ADS	zynga.com
 ads#zyngaplayersupport.com
-ads8f59d8165ac66b7280621656376aec19350236e8fa0e108a376de0a545cffa03  dlc.dat
+adsacabd214b0a05363f678baba64dfb745ffc551a9dea6d8c15abe0821a0cac5e9  dlc.dat
