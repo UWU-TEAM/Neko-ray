@@ -51,6 +51,7 @@ jobs:
 
     - name: Build dependencies
       run: |
+        cd ${{ github.workspace }}/AndroidLibXrayLite
         mkdir -p assets data
         bash gen_assets.sh download
         mv -v data/*.dat assets/
@@ -58,13 +59,13 @@ jobs:
         gomobile init
         go mod tidy -v
         gomobile bind -v -androidapi 27 -ldflags='-s -w' ./
-        mv *.aar app/libs/
+        mv *.aar ${{ github.workspace }}/app/libs/
 
     - name: Update library
       run: |
         git config --global user.email jarbull86@gmail.com
         git config --global user.name AnGgIt86
-        rm -rfd AndroidLibXrayLite/*.jar
+        rm -rfd ${{ github.workspace }}/AndroidLibXrayLite/*.jar
         git add -f .
         git commit -m "Core: Bump ${{ github.event.inputs.CORE }}"
         git push
