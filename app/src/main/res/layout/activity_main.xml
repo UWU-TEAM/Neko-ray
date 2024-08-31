@@ -267,7 +267,7 @@
                                 android:minHeight="?attr/actionBarSize"
                                 app:cardBackgroundColor="?attr/colorPrimary"
                                 app:cardCornerRadius="15.0dip"
-                                app:cardElevation="0.0dip"
+                                app:cardElevation="2.0dip"
                                 app:contentInsetStart="0.0dip">
                                 <LinearLayout
                                     android:gravity="center"
