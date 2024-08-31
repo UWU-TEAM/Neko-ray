@@ -10,15 +10,37 @@
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/anggit0817" />
     </Preference>
+
+    <Preference
+        android:icon="@drawable/dust"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="2dust"
+        android:summary="v2rayNG">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/2dust" />
+    </Preference>
+
+    <Preference
+        android:icon="@drawable/codewithtamim"
+        android:layout="@layout/uwu_sin_cred"
+        android:title="CodeWithTamim"
+        android:summary="Assist of v2rayNG">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:data="https://github.com/CodeWithTamim" />
+    </Preference>
+
     <Preference
         android:icon="@drawable/dens"
         android:layout="@layout/uwu_sin_cred"
         android:title="DᵉᶯˢρĻªϒ #ᴍ•ʀ•ᴛ™🇮🇩"
-        android:summary="Miui Reborn Team[M•R•T]">
+        android:summary="Miui Reborn Team [M•R•T]">
         <intent
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/Dens_play89" />
     </Preference>
+
     <Preference
         android:icon="@drawable/mobx"
         android:layout="@layout/uwu_sin_cred"
@@ -28,6 +50,7 @@
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/mobxprjkt" />
     </Preference>
+
     <Preference
         android:icon="@drawable/milim"
         android:layout="@layout/uwu_sin_cred"
@@ -37,6 +60,7 @@
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/milimnavaUwU" />
     </Preference>
+
     <Preference
         android:icon="@drawable/hitori"
         android:layout="@layout/uwu_sin_cred"
@@ -46,6 +70,7 @@
             android:action="android.intent.action.VIEW"
             android:data="https://t.me/iirzzxx" />
     </Preference>
+
     <Preference
         android:icon="@drawable/fischl"
         android:layout="@layout/uwu_sin_cred"
