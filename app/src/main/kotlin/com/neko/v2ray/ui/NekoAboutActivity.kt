@@ -100,7 +100,7 @@ class NekoAboutActivity : BaseActivity() {
                         // ...
                     }
                 }
-                cancelable = false // Optional
+                cancelable = true // Optional
                 showInternetOnButtons = true // Optional
                 showAirplaneModeOffButtons = true // Optional
             }
