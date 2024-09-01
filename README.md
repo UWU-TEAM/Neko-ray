@@ -2,12 +2,12 @@
 
 A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-core) and [v2fly core](https://github.com/v2fly/v2ray-core)
 
-[![Platform](https://img.shields.io/badge/android-platform?style=for-the-badge&label=platform&labelColor=21262d&color=6e7681)](https://www.android.com)
-[![API](https://img.shields.io/badge/27%2B-level?style=for-the-badge&logo=android&logoColor=3cd382&label=API&labelColor=21262d&color=ff663b)](https://developer.android.com/studio/releases/platforms)
-[![Release](https://img.shields.io/github/v/release/UWU-TEAM/Neko-ray?display_name=tag&style=for-the-badge&logo=github&labelColor=21262d&color=1f6feb)](https://github.com/UWU-TEAM/Neko-ray/releases/latest)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/UWU-TEAM/Neko-ray)](https://github.com/UWU-TEAM/Neko-ray/commits/main)
-[![Downloads](https://img.shields.io/github/downloads/UWU-TEAM/Neko-ray/total?style=for-the-badge&labelColor=21262d&color=238636)](https://github.com/UWU-TEAM/Neko-ray/releases)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/uwuresourceguide)
+[![Platform](https://img.shields.io/badge/android-platform?style=flat&label=platform&labelColor=21262d&color=6e7681)](https://www.android.com)
+[![API](https://img.shields.io/badge/27%2B-level?style=flat&logo=android&logoColor=3cd382&label=API&labelColor=21262d&color=ff663b)](https://developer.android.com/studio/releases/platforms)
+[![Release](https://img.shields.io/github/v/release/UWU-TEAM/Neko-ray?display_name=tag&style=flat&logo=github&labelColor=21262d&color=1f6feb)](https://github.com/UWU-TEAM/Neko-ray/releases/latest)
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/UWU-TEAM/Neko-ray?style=flat&logo=Github)](https://github.com/UWU-TEAM/Neko-ray/commits/main)
+[![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/UWU-TEAM/Neko-ray/total?style=flat&logo=Github&label=Download%40latest&color=green)](https://github.com/UWU-TEAM/Neko-ray/releases)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/uwuresourceguide)
 
 ![Banner](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/uwu_banner.png)
 
