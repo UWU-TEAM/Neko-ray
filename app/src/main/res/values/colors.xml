@@ -18,7 +18,7 @@
     <color name="colorText">#000000</color>
     <color name="colorMainTestBg">#F0F1F6</color>
 
-    <color name="colorText_ActionBar">#ffffffff</color>
+    <color name="colorText_ActionBar">#ff21272b</color>
     <color name="fab_orange_bright">@android:color/transparent</color>
     <color name="fab_orange_dark">@android:color/transparent</color>
     <color name="fab_orange_light">@android:color/transparent</color>

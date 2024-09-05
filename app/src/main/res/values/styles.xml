@@ -17,11 +17,12 @@
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Uwu.Material3.BottomSheetDialog</item>
         <item name="colorAccent">?attr/colorPrimary</item>
         <item name="colorBackgroundFloating">@color/uwu_bg_card</item>
-        <item name="colorIcon">@android:color/white</item>
+        <item name="colorIcon">@color/colorText_ActionBar</item>
         <item name="colorMainText">@color/colorText</item>
+        <item name="colorPrimary">?attr/colorPrimaryInverse</item>
         <item name="colorPrimaryDark">?attr/colorPrimary</item>
-        <item name="colorText">@android:color/white</item>
-        <item name="colorBg">?colorSurfaceVariant</item>
+        <item name="colorText">@color/colorText_ActionBar</item>
+        <item name="colorBg">?attr/colorSurfaceVariant</item>
         <item name="changelogStyle">@style/LibChangelog</item>
         <item name="elevation">0.0dip</item>
         <item name="materialAlertDialogTheme">@style/Uwu.Material3.MaterialAlertDialog</item>
