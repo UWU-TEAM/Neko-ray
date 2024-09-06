@@ -19,7 +19,7 @@
             android:layout_width="45.0dip"
             android:layout_height="45.0dip"
             android:layout_marginStart="10.0dip"
-            android:backgroundTint="?attr/colorPrimary">
+            android:backgroundTint="?attr/colorThemeUwu">
             <androidx.preference.internal.PreferenceImageView
                 android:gravity="center"
                 android:id="@android:id/icon"

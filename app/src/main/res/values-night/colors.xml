@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorThemeUwu">#ffffffff</color>
     <color name="color_fab_active">#f97910</color>
     <color name="color_fab_inactive">#646464</color>
     <color name="color_secondary">#BDBDBD</color>
@@ -11,7 +12,7 @@
     <color name="colorText">#FFFFFF</color>
     <color name="colorMainTestBg">#222222</color>
 
-    <color name="colorText_ActionBar">#ff21272b</color>
+    <color name="colorText_ActionBar">@color/black_80</color>
     <color name="uwu_bg">@color/m3_sys_color_dark_background</color>
     <color name="uwu_bg_card">#ff21272b</color>
 </resources>

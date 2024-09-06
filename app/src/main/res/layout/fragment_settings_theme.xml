@@ -56,8 +56,8 @@
                     app:lineThickness="1.0dip"
                     app:lineDistance="86.0dip"
                     app:numDots="60"
-                    app:dotColor="?attr/colorPrimary"
-                    app:lineColor="?attr/colorPrimary"
+                    app:dotColor="?attr/colorThemeUwu"
+                    app:lineColor="?attr/colorThemeUwu"
                     app:frameDelayMillis="10"
                     app:stepMultiplier="1.0" />
                 <LinearLayout
@@ -82,7 +82,7 @@
                                 android:layout_width="60.0dip"
                                 android:layout_height="60.0dip"
                                 android:src="@drawable/uwu_banner_profile"
-                                app:civ_border_color="?attr/colorPrimary"
+                                app:civ_border_color="?attr/colorThemeUwu"
                                 app:civ_border_overlay="true"
                                 app:civ_border_width="3.0dip"
                                 app:civ_circle_background_color="?attr/colorBg" />
@@ -129,7 +129,7 @@
                 android:layout_marginStart="12.0dip"
                 android:layout_marginEnd="12.0dip"
                 app:strokeWidth="0.0dip"
-                app:cardBackgroundColor="?attr/colorPrimary"
+                app:cardBackgroundColor="?attr/colorThemeUwu"
                 app:cardCornerRadius="19.0dip"
                 app:cardElevation="0.0dip">
                 <LinearLayout
@@ -156,7 +156,7 @@
                                 android:layout_height="25.0dip"
                                 android:layout_marginTop="10.0dip"
                                 android:src="@drawable/uwu_ic_baseline_color_lens"
-                                android:tint="?attr/colorPrimary"
+                                android:tint="?attr/colorThemeUwu"
                                 android:layout_marginStart="10.0dip" />
                         </LinearLayout>
                     </LinearLayout>
@@ -253,6 +253,7 @@
             style="@style/Widget.Material3.Button.OutlinedButton" />
     </com.google.android.material.button.MaterialButtonToggleGroup>
     <com.google.android.material.button.MaterialButton
+        android:backgroundTint="?attr/colorThemeUwu"
         android:layout_gravity="center"
         android:id="@+id/change_theme"
         android:layout_width="wrap_content"
@@ -260,5 +261,6 @@
         android:layout_marginTop="5.0dip"
         android:layout_marginBottom="16.0dip"
         android:text="@string/uwu_theme_botton_text"
+        android:textColor="?attr/colorText"
         style="@style/Widget.Material3.Button" />
 </LinearLayout>

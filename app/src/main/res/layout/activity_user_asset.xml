@@ -15,11 +15,11 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:theme="@style/Uwu.Material3.CollapsingToolbar"
             android:id="@+id/collapsing_toolbar"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorThemeUwu"
             android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="?attr/colorThemeUwu"
             app:expandedTitleMarginBottom="24.0dip"
             app:expandedTitleMarginEnd="24.0dip"
             app:expandedTitleMarginStart="24.0dip"

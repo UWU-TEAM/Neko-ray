@@ -211,7 +211,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         mainViewModel.isRunning.observe(this) { isRunning ->
             adapter.isRunning = isRunning
             if (isRunning) {
-                binding.fab.setImageResource(R.drawable.uwu_ic_service_busy)
+                binding.fab.setImageResource(R.drawable.ic_stop_24dp)
                 expandableConnection.expand()
                 expandableConnection.orientation = ExpandableView.HORIZONTAL
                 expandableConnection.setExpansion(true)
@@ -219,7 +219,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 setTestState(getString(R.string.connection_connected))
                 binding.layoutTest.isFocusable = true
             } else {
-                binding.fab.setImageResource(R.drawable.uwu_ic_service_idle)
+                binding.fab.setImageResource(R.drawable.ic_play_24dp)
                 expandableConnection.collapse()
                 expandableConnection.orientation = ExpandableView.HORIZONTAL
                 expandableConnection.setExpansion(false)
