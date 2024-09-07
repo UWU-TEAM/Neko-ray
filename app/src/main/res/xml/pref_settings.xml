@@ -7,13 +7,6 @@
         android:selectable="false" />
 
     <Preference
-        android:icon="@drawable/uwu_check"
-        android:layout="@layout/uwu_maintainer"
-        android:title="@string/uwu_maintainer_title"
-        android:selectable="false"
-        android:summary="AnGgIt86" />
-
-    <Preference
         android:layout="@layout/uwu_battery_storage"
         android:selectable="false" />
 

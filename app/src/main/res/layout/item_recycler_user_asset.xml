@@ -31,7 +31,7 @@
                 android:layout_height="45.0dip"
                 android:layout_marginStart="13.0dip"
                 android:layout_marginEnd="5.0dip"
-                android:backgroundTint="?attr/colorPrimary">
+                android:backgroundTint="?attr/colorThemeUwu">
                 <androidx.preference.internal.PreferenceImageView
                     android:gravity="center"
                     android:layout_width="25.0dip"

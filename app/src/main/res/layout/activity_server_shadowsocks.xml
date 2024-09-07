@@ -15,11 +15,11 @@
         <com.google.android.material.appbar.CollapsingToolbarLayout
             android:theme="@style/Uwu.Material3.CollapsingToolbar"
             android:id="@+id/collapsing_toolbar"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorThemeUwu"
             android:clipToPadding="false"
             android:layout_width="match_parent"
             android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
-            app:contentScrim="?attr/colorPrimary"
+            app:contentScrim="?attr/colorThemeUwu"
             app:expandedTitleMarginBottom="24.0dip"
             app:expandedTitleMarginEnd="24.0dip"
             app:expandedTitleMarginStart="24.0dip"
@@ -115,7 +115,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:alpha="0.2" />
-                                <com.doctoror.particlesdrawable.ParticlesView
+                                <com.neko.particlesdrawable.ParticlesView
                                     android:background="#00000000"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
@@ -125,8 +125,8 @@
                                     app:lineThickness="1.0dip"
                                     app:lineDistance="86.0dip"
                                     app:numDots="60"
-                                    app:dotColor="?attr/colorPrimary"
-                                    app:lineColor="?attr/colorPrimary"
+                                    app:dotColor="?attr/colorThemeUwu"
+                                    app:lineColor="?attr/colorThemeUwu"
                                     app:frameDelayMillis="10"
                                     app:stepMultiplier="1.0" />
                                 <LinearLayout
@@ -151,7 +151,7 @@
                                                 android:layout_width="60.0dip"
                                                 android:layout_height="60.0dip"
                                                 android:src="@drawable/uwu_banner_profile"
-                                                app:civ_border_color="?attr/colorPrimary"
+                                                app:civ_border_color="?attr/colorThemeUwu"
                                                 app:civ_border_overlay="true"
                                                 app:civ_border_width="3.0dip"
                                                 app:civ_circle_background_color="?attr/colorBg" />
@@ -198,7 +198,7 @@
                                 android:layout_marginBottom="12.0dip"
                                 android:layout_marginStart="12.0dip"
                                 android:layout_marginEnd="12.0dip"
-                                app:cardBackgroundColor="?attr/colorPrimary"
+                                app:cardBackgroundColor="?attr/colorThemeUwu"
                                 app:cardCornerRadius="19.0dip"
                                 app:cardElevation="0.0dip"
                                 app:strokeWidth="0.0dip">
@@ -226,7 +226,7 @@
                                                 android:layout_height="25.0dip"
                                                 android:layout_marginTop="10.0dip"
                                                 android:src="@drawable/ic_social_emoji_symbols"
-                                                android:tint="?attr/colorPrimary"
+                                                android:tint="?attr/colorThemeUwu"
                                                 android:layout_marginStart="10.0dip" />
                                         </LinearLayout>
                                     </LinearLayout>

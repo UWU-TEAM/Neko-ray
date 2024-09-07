@@ -6,6 +6,7 @@
     <attr name="colorText" format="color" />
     <attr name="colorBg" format="color" />
     <attr name="colorCard" format="color" />
+    <attr name="colorThemeUwu" format="color" />
 
     <declare-styleable name="ExpandableView">
         <attr name="expandable_visibilityMode">

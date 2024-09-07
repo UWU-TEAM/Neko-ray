@@ -12,7 +12,7 @@
             android:gravity="left"
             android:layout_gravity="left"
             android:orientation="vertical"
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorThemeUwu"
             android:paddingTop="10.0dip"
             android:paddingBottom="0.0dip"
             android:layout_width="match_parent"
@@ -35,7 +35,7 @@
                     app:cardCornerRadius="24.0dip"
                     app:cardElevation="0.0dip"
                     app:rippleColor="#00000000"
-                    app:strokeColor="@color/uwu_bg_card"
+                    app:strokeColor="@color/colorText_ActionBar"
                     app:strokeWidth="3.0dip">
                     <ImageView
                         android:layout_width="match_parent"
@@ -80,7 +80,7 @@
                 app:layout_anchorGravity="bottom" />
         </LinearLayout>
         <RelativeLayout
-            android:background="?attr/colorPrimary"
+            android:background="?attr/colorThemeUwu"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <LinearLayout
@@ -120,7 +120,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/ic_subscriptions_24dp"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -157,7 +157,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_ic_backup"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -194,7 +194,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/ic_settings_24dp"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -231,7 +231,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/ic_file_24dp"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -268,7 +268,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_ic_math_log"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -305,7 +305,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_icon_network_switcher"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -342,7 +342,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_icon_host_to_ip"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -379,7 +379,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_icon_host_checker"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -416,7 +416,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_icon_ip_location"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"
@@ -453,7 +453,7 @@
                                 android:layout_margin="10.0dip"
                                 android:src="@drawable/uwu_bug"
                                 android:scaleType="fitCenter"
-                                android:backgroundTint="?attr/colorPrimary"
+                                android:backgroundTint="?attr/colorThemeUwu"
                                 app:tint="?attr/colorIcon" />
                             <TextView
                                 android:textSize="14.0sp"

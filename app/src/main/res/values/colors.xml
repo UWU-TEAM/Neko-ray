@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorThemeUwu">#ff000000</color>
     <color name="colorPing">#009966</color>
     <color name="colorPingRed">#FF0099</color>
     <color name="colorConfigType">#f97910</color>
@@ -18,7 +19,7 @@
     <color name="colorText">#000000</color>
     <color name="colorMainTestBg">#F0F1F6</color>
 
-    <color name="colorText_ActionBar">#ffffffff</color>
+    <color name="colorText_ActionBar">@color/black_80</color>
     <color name="fab_orange_bright">@android:color/transparent</color>
     <color name="fab_orange_dark">@android:color/transparent</color>
     <color name="fab_orange_light">@android:color/transparent</color>

@@ -4,5 +4,6 @@
 
     <color name="uwu_bg">#ff151419</color>
     <color name="uwu_bg_card">#ff212227</color>
+    <color name="colorThemeUwu">#ffffffff</color>
 
 </resources>

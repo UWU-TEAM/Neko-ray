@@ -27,7 +27,7 @@
     <color name="amber_outline">#999080</color>
     <color name="amber_inverseOnSurface">#1E1B16</color>
     <color name="amber_inverseSurface">#E9E1D8</color>
-    <color name="amber_primaryInverse">#795900</color>
+    <color name="amber_primaryInverse">@color/amber_primary</color>
 
     <color name="blue_primary">#ACC6FF</color>
     <color name="blue_onPrimary">#002D6E</color>
@@ -54,7 +54,7 @@
     <color name="blue_outline">#938F99</color>
     <color name="blue_inverseOnSurface">#191C1E</color>
     <color name="blue_inverseSurface">#E1E2E5</color>
-    <color name="blue_primaryInverse">#235BB6</color>
+    <color name="blue_primaryInverse">@color/blue_primary</color>
 
     <color name="blue_variant_primary">#9CCAFF</color>
     <color name="blue_variant_onPrimary">#00325A</color>
@@ -81,7 +81,7 @@
     <color name="blue_variant_outline">#8D9199</color>
     <color name="blue_variant_inverseOnSurface">#1B1B1B</color>
     <color name="blue_variant_inverseSurface">#E2E2E6</color>
-    <color name="blue_variant_primaryInverse">#0061A6</color>
+    <color name="blue_variant_primaryInverse">@color/blue_variant_primary</color>
 
     <color name="brown_primary">#FFB598</color>
     <color name="brown_onPrimary">#5C1A00</color>
@@ -108,7 +108,7 @@
     <color name="brown_outline">#A08C86</color>
     <color name="brown_inverseOnSurface">#201A18</color>
     <color name="brown_inverseSurface">#EDE0DC</color>
-    <color name="brown_primaryInverse">#9A4523</color>
+    <color name="brown_primaryInverse">@color/brown_primary</color>
 
     <color name="cyan_primary">#44D8F1</color>
     <color name="cyan_onPrimary">#00363F</color>
@@ -135,7 +135,7 @@
     <color name="cyan_outline">#899294</color>
     <color name="cyan_inverseOnSurface">#191C1D</color>
     <color name="cyan_inverseSurface">#E1E3E3</color>
-    <color name="cyan_primaryInverse">#006877</color>
+    <color name="cyan_primaryInverse">@color/cyan_primary</color>
 
     <color name="deep_orange_primary">#FFB49D</color>
     <color name="deep_orange_onPrimary">#601400</color>
@@ -162,7 +162,7 @@
     <color name="deep_orange_outline">#A08C87</color>
     <color name="deep_orange_inverseOnSurface">#201A18</color>
     <color name="deep_orange_inverseSurface">#EDE0DD</color>
-    <color name="deep_orange_primaryInverse">#B22D00</color>
+    <color name="deep_orange_primaryInverse">@color/deep_orange_primary</color>
 
     <color name="deep_purple_primary">#D4BAFF</color>
     <color name="deep_purple_onPrimary">#3E008E</color>
@@ -189,7 +189,7 @@
     <color name="deep_purple_outline">#948E99</color>
     <color name="deep_purple_inverseOnSurface">#1D1B1F</color>
     <color name="deep_purple_inverseSurface">#E6E1E5</color>
-    <color name="deep_purple_primaryInverse">#6F43BF</color>
+    <color name="deep_purple_primaryInverse">@color/deep_purple_primary</color>
 
     <color name="green_primary">#78DC77</color>
     <color name="green_onPrimary">#003907</color>
@@ -216,7 +216,7 @@
     <color name="green_outline">#8C9288</color>
     <color name="green_inverseOnSurface">#1A1C19</color>
     <color name="green_inverseSurface">#E2E3DD</color>
-    <color name="green_primaryInverse">#006E17</color>
+    <color name="green_primaryInverse">@color/green_primary</color>
 
     <color name="indigo_primary">#B9C3FF</color>
     <color name="indigo_onPrimary">#08218A</color>
@@ -243,7 +243,7 @@
     <color name="indigo_outline">#90909A</color>
     <color name="indigo_inverseOnSurface">#1B1B1F</color>
     <color name="indigo_inverseSurface">#E4E1E6</color>
-    <color name="indigo_primaryInverse">#4355B9</color>
+    <color name="indigo_primaryInverse">@color/indigo_primary</color>
 
     <color name="light_blue_primary">#8BCEFF</color>
     <color name="light_blue_onPrimary">#003450</color>
@@ -270,7 +270,7 @@
     <color name="light_blue_outline">#8B9198</color>
     <color name="light_blue_inverseOnSurface">#1A1C1E</color>
     <color name="light_blue_inverseSurface">#E2E2E5</color>
-    <color name="light_blue_primaryInverse">#006494</color>
+    <color name="light_blue_primaryInverse">@color/light_blue_primary</color>
 
     <color name="light_green_primary">#9ED75C</color>
     <color name="light_green_onPrimary">#1C3700</color>
@@ -297,7 +297,7 @@
     <color name="light_green_outline">#8E9285</color>
     <color name="light_green_inverseOnSurface">#1A1C17</color>
     <color name="light_green_inverseSurface">#E3E3DB</color>
-    <color name="light_green_primaryInverse">#3C6A00</color>
+    <color name="light_green_primaryInverse">@color/light_green_primary</color>
 
     <color name="lime_primary">#C1D02C</color>
     <color name="lime_onPrimary">#2E3400</color>
@@ -324,7 +324,7 @@
     <color name="lime_outline">#929282</color>
     <color name="lime_inverseOnSurface">#1C1C17</color>
     <color name="lime_inverseSurface">#E5E2DA</color>
-    <color name="lime_primaryInverse">#5A6400</color>
+    <color name="lime_primaryInverse">@color/lime_primary</color>
 
     <color name="orange_primary">#FFB86D</color>
     <color name="orange_onPrimary">#4B2800</color>
@@ -351,7 +351,7 @@
     <color name="orange_outline">#9E8E81</color>
     <color name="orange_inverseOnSurface">#1F1B17</color>
     <color name="orange_inverseSurface">#EBE0D9</color>
-    <color name="orange_primaryInverse">#8C5000</color>
+    <color name="orange_primaryInverse">@color/orange_primary</color>
 
     <color name="pink_primary">#FFB2C0</color>
     <color name="pink_onPrimary">#670024</color>
@@ -378,7 +378,7 @@
     <color name="pink_outline">#9F8C8E</color>
     <color name="pink_inverseOnSurface">#201A1B</color>
     <color name="pink_inverseSurface">#ECE0E0</color>
-    <color name="pink_primaryInverse">#BC0049</color>
+    <color name="pink_primaryInverse">@color/pink_primary</color>
 
     <color name="purple_primary">#D2BCFF</color>
     <color name="purple_onPrimary">#391E72</color>
@@ -405,7 +405,7 @@
     <color name="purple_outline">#938F99</color>
     <color name="purple_inverseOnSurface">#1C1B1F</color>
     <color name="purple_inverseSurface">#E5E1E5</color>
-    <color name="purple_primaryInverse">#684FA4</color>
+    <color name="purple_primaryInverse">@color/purple_primary</color>
 
     <color name="red_primary">#FFB3A9</color>
     <color name="red_onPrimary">#690005</color>
@@ -432,7 +432,7 @@
     <color name="red_outline">#9F8C8A</color>
     <color name="red_inverseOnSurface">#211A19</color>
     <color name="red_inverseSurface">#EDE0DE</color>
-    <color name="red_primaryInverse">#BA171C</color>
+    <color name="red_primaryInverse">@color/red_primary</color>
 
     <color name="teal_primary">#53DBC9</color>
     <color name="teal_onPrimary">#003730</color>
@@ -459,7 +459,7 @@
     <color name="teal_outline">#889390</color>
     <color name="teal_inverseOnSurface">#191C1B</color>
     <color name="teal_inverseSurface">#E0E3E1</color>
-    <color name="teal_primaryInverse">#006A5F</color>
+    <color name="teal_primaryInverse">@color/teal_primary</color>
 
     <color name="violet_primary">#B9C3FF</color>
     <color name="violet_onPrimary">#08218A</color>
@@ -486,7 +486,7 @@
     <color name="violet_outline">#90909A</color>
     <color name="violet_inverseOnSurface">#1B1B1F</color>
     <color name="violet_inverseSurface">#E4E1E6</color>
-    <color name="violet_primaryInverse">#4355B9</color>
+    <color name="violet_primaryInverse">@color/violet_primary</color>
 
     <color name="yellow_primary">#DBC808</color>
     <color name="yellow_onPrimary">#373100</color>
@@ -513,7 +513,7 @@
     <color name="yellow_outline">#959181</color>
     <color name="yellow_inverseOnSurface">#1D1C16</color>
     <color name="yellow_inverseSurface">#E7E2D9</color>
-    <color name="yellow_primaryInverse">#6A5F00</color>
+    <color name="yellow_primaryInverse">@color/yellow_primary</color>
 
     <color name="nekocok_primary">#E0E0E0</color>
     <color name="nekocok_onPrimary">#424242</color>
@@ -540,6 +540,6 @@
     <color name="nekocok_outline">#757575</color>
     <color name="nekocok_inverseOnSurface">#201A1B</color>
     <color name="nekocok_inverseSurface">#E0E0E0</color>
-    <color name="nekocok_primaryInverse">#777777</color>
+    <color name="nekocok_primaryInverse">@color/nekocok_primary</color>
 
 </resources>

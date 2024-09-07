@@ -6,7 +6,7 @@
         <shape
             android:innerRadius="0.0dip">
             <solid
-                android:color="?attr/colorPrimary" />
+                android:color="?attr/colorThemeUwu" />
             <stroke
                 android:width="2.0dip"
                 android:color="?android:textColorPrimary" />

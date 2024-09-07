@@ -8,7 +8,7 @@
         <item name="android:listDivider">@null</item>
         <item name="android:overScrollMode">never</item>
         <item name="android:homeAsUpIndicator">@drawable/uwu_back_arrow</item>
-        <item name="android:statusBarColor">?attr/colorPrimary</item>
+        <item name="android:statusBarColor">?attr/colorThemeUwu</item>
         <item name="android:navigationBarColor">@color/uwu_bg</item>
         <item name="android:colorEdgeEffect">@null</item>
         <item name="android:windowLightStatusBar">true</item>
@@ -17,10 +17,11 @@
         <item name="bottomSheetDialogTheme">@style/ThemeOverlay.Uwu.Material3.BottomSheetDialog</item>
         <item name="colorAccent">?attr/colorPrimary</item>
         <item name="colorBackgroundFloating">@color/uwu_bg_card</item>
-        <item name="colorIcon">@android:color/black</item>
+        <item name="colorIcon">@color/black</item>
         <item name="colorMainText">@color/colorText</item>
         <item name="colorPrimaryDark">?attr/colorPrimary</item>
-        <item name="colorText">@android:color/black</item>
+        <item name="colorThemeUwu">?attr/colorPrimary</item>
+        <item name="colorText">@color/colorText_ActionBar</item>
         <item name="colorBg">@color/uwu_bg</item>
         <item name="changelogStyle">@style/LibChangelog</item>
         <item name="elevation">0.0dip</item>

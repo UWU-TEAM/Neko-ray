@@ -94,4 +94,6 @@
         <attr name="iss_no_dots" format="boolean" />
         <attr name="iss_text_color" format="string"/>
     </declare-styleable>
+    
+    <attr name="colorThemeUwu" format="color" />
 </resources>

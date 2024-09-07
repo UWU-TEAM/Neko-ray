@@ -163,7 +163,7 @@
                         android:layout_gravity="center"
                         android:padding="2dp" 
                         android:clickable="true"
-                        app:tint="?attr/colorPrimary" />
+                        app:tint="@color/black" />
 
                 </LinearLayout>
                 
@@ -185,7 +185,7 @@
                         android:layout_gravity="center"
                         android:padding="2dp"
                         android:clickable="true"
-                        app:tint="?attr/colorPrimary" />
+                        app:tint="@color/black" />
 
                 </LinearLayout>
 
