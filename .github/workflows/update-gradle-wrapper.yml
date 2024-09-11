@@ -29,3 +29,4 @@ jobs:
           target-branch: main
           repo-token: ${{ secrets.MY_TOKEN }}
           set-distribution-checksum: true
+          paths: gradle/wrapper/*
