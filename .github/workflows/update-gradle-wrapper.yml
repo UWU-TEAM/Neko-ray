@@ -1,4 +1,4 @@
-name: Update Gradle
+name: Update Gradle wrapper
 
 on:
   schedule: [{cron: "0 16 * * *"}]
