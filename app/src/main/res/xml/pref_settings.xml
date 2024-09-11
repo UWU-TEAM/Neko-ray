@@ -6,10 +6,6 @@
         android:layout="@layout/uwu_banner_settings"
         android:selectable="false" />
 
-    <Preference
-        android:layout="@layout/uwu_battery_storage"
-        android:selectable="false" />
-
     <PreferenceCategory android:title="@string/title_settings">
 
         <Preference
