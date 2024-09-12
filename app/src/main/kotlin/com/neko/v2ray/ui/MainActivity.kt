@@ -143,8 +143,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val toggle = ActionBarDrawerToggle(
             this, binding.drawerLayout, binding.toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
         )
-        binding.drawerLayout.addDrawerListener(toggle)
-        toggle.syncState()
+        // binding.drawerLayout.addDrawerListener(toggle)
+        // toggle.syncState()
         binding.navView.setNavigationItemSelectedListener(this)
 
         initGroupTab()
