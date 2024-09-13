@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:fitsSystemWindows="true"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -43,6 +41,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1.0">
                     <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/uwu_menu_tool"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_marginTop="0.0dip"
@@ -122,9 +121,9 @@
                                     android:ellipsize="end"
                                     android:gravity="center"
                                     android:layout_gravity="center"
-                                    android:layout_marginTop="8.0dip"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="8.0dip"
                                     android:text="@string/uwu_speedtest_title"
                                     android:singleLine="false"
                                     android:layout_below="@+id/icon_uwu_speedtest" />
@@ -171,9 +170,9 @@
                                     android:ellipsize="end"
                                     android:gravity="center"
                                     android:layout_gravity="center"
-                                    android:layout_marginTop="8.0dip"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:layout_marginTop="8.0dip"
                                     android:text="@string/uwu_about"
                                     android:singleLine="false"
                                     android:layout_below="@+id/icon_uwu_about" />
@@ -338,6 +337,172 @@
         app:headerLayout="@null"
         app:itemIconTint="@null"
         app:menu="@null">
-        <include layout="@layout/uwu_drawer_main" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:gravity="left"
+                    android:layout_gravity="left"
+                    android:orientation="vertical"
+                    android:background="@drawable/uwu_background_drawer_lengkung1"
+                    android:paddingTop="10.0dip"
+                    android:paddingBottom="0.0dip"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16.0dip"
+                        android:layout_marginTop="30.0dip"
+                        android:layout_marginRight="10.0dip">
+                        <com.google.android.material.card.MaterialCardView
+                            android:paddingTop="10.0dip"
+                            android:paddingBottom="10.0dip"
+                            android:layout_width="120.0dip"
+                            android:layout_height="120.0dip"
+                            app:cardBackgroundColor="@color/uwu_bg"
+                            app:cardCornerRadius="24.0dip"
+                            app:cardElevation="0.0dip"
+                            app:rippleColor="#00000000"
+                            app:strokeColor="@color/colorText_ActionBar"
+                            app:strokeWidth="3.0dip">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/uwu_banner_profile"
+                                android:scaleType="centerCrop" />
+                            <ImageView
+                                android:gravity="center"
+                                android:layout_gravity="bottom|center"
+                                android:background="@drawable/uwu_bg_circle_arrow"
+                                android:padding="2.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10.0dip"
+                                android:src="@drawable/uwu_profile_edit"
+                                android:layout_centerVertical="true"
+                                android:onClick="uwuEditProfile"
+                                android:layout_alignParentEnd="true"
+                                android:backgroundTint="?attr/colorThemeUwu"
+                                app:tint="?attr/colorIcon" />
+                        </com.google.android.material.card.MaterialCardView>
+                    </LinearLayout>
+                    <TextView
+                        android:textSize="20.0sp"
+                        android:textColor="@color/colorText_ActionBar"
+                        android:gravity="center"
+                        android:id="@+id/uwu_username"
+                        android:paddingLeft="16.0dip"
+                        android:paddingTop="10.0dip"
+                        android:paddingRight="8.0dip"
+                        android:paddingBottom="0.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginBottom="0.0dip"
+                        android:text="@string/uwu_header_title" />
+                    <com.neko.marquee.text.Grettings
+                        android:textSize="18.0sp"
+                        android:textColor="@color/colorText_ActionBar"
+                        android:gravity="center"
+                        android:paddingLeft="16.0dip"
+                        android:paddingTop="5.0dip"
+                        android:paddingRight="8.0dip"
+                        android:paddingBottom="5.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:layout_marginBottom="10.0dip"
+                        android:singleLine="true" />
+                </LinearLayout>
+                <RelativeLayout
+                    android:background="?attr/colorThemeUwu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <FrameLayout
+                        android:background="@drawable/uwu_background_drawer_lengkung2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/uwu_exit"
+                        android:layout_alignParentTop="true">
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:paddingTop="16.0dip"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="0.0dip"
+                            android:layout_marginBottom="0.0dip"
+                            android:layout_marginStart="0.0dip"
+                            android:layout_marginEnd="0.0dip">
+                            <androidx.core.widget.NestedScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/rv_database"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="0.0dip"
+                                        android:layout_weight="1.0"
+                                        android:nestedScrollingEnabled="false"
+                                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+                                </LinearLayout>
+                            </androidx.core.widget.NestedScrollView>
+                        </LinearLayout>
+                    </FrameLayout>
+                    <LinearLayout
+                        android:gravity="bottom|center"
+                        android:layout_gravity="bottom|center"
+                        android:orientation="vertical"
+                        android:id="@+id/uwu_exit"
+                        android:background="@drawable/uwu_background_material"
+                        android:paddingTop="10.0dip"
+                        android:paddingBottom="10.0dip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:layout_alignParentBottom="true"
+                        app:layout_anchorGravity="bottom">
+                        <LinearLayout
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:background="@drawable/uwu_bg_exit"
+                            android:padding="5.0dip"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="uwuExitApp">
+                            <ImageView
+                                android:padding="10.0dip"
+                                android:layout_width="50.0dip"
+                                android:layout_height="50.0dip"
+                                android:src="@drawable/uwu_icon_exit"
+                                android:scaleType="fitCenter"
+                                app:tint="?attr/colorIcon" />
+                            <TextView
+                                android:textSize="14.0sp"
+                                android:textColor="?attr/colorText"
+                                android:paddingLeft="8.0dip"
+                                android:paddingTop="8.0dip"
+                                android:paddingRight="50.0dip"
+                                android:paddingBottom="8.0dip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/uwu_exit_title"
+                                android:layout_weight="1.0" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
     </com.google.android.material.navigation.NavigationView>
 </androidx.drawerlayout.widget.DrawerLayout>

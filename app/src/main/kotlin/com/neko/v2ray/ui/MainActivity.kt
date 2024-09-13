@@ -25,6 +25,8 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.tbruyelle.rxpermissions3.RxPermissions
@@ -67,6 +69,9 @@ import com.neko.ip.HostToIpActivity
 import com.neko.ip.IpLocation
 import com.neko.ip.hostchecker.HostChecker
 import android.graphics.Color
+import com.google.android.material.card.MaterialCardView
+import com.neko.uwu.*
+import android.database.Cursor
 
 class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
     private val binding by lazy {
@@ -99,10 +104,33 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private var mItemTouchHelper: ItemTouchHelper? = null
     val mainViewModel: MainViewModel by viewModels()
     private lateinit var expandableConnection: ExpandableView
+    private lateinit var bottomSheetTools: MaterialCardView
+    private lateinit var rvDatabase: RecyclerView
+    private lateinit var myDB: MyDatabaseHelper
+    private lateinit var adapterDatabase: AdapterDatabase
+    private lateinit var arrID: ArrayList<String>
+    private lateinit var arrName: ArrayList<String>
+    private lateinit var arrUsername: ArrayList<String>
+    private lateinit var arrEmail: ArrayList<String>
+    private lateinit var arrAge: ArrayList<String>
+    private lateinit var arrHobi: ArrayList<String>
+    private lateinit var arrTgl: ArrayList<String>
+
+    companion object {
+        var posisiData = 0
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        bottomSheetTools = findViewById(R.id.uwu_menu_tool)
+        bottomSheetTools.setOnClickListener {
+            val bottomSheetDialog = BottomSheetDialog(this@MainActivity)
+            val inflater = layoutInflater
+            val view = inflater.inflate(R.layout.uwu_menu_tools_bottom_sheet, null)
+            bottomSheetDialog.setContentView(view)
+            bottomSheetDialog.show()
+        }
         title = getString(R.string.app_title_name)
         setSupportActionBar(binding.toolbar)
         expandableConnection = findViewById(R.id.uwu_connection_expanded)
@@ -197,6 +225,32 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             setCancelable(false)
         }
         appUpdaterNotification.start()
+
+        myDB = MyDatabaseHelper(this)
+        var usernameuwu = intent.getStringExtra("varUsername")
+        if (usernameuwu == null) {
+            usernameuwu = "@Neko-Ray"
+        }
+        binding.uwuUsername.text = getString(R.string.uwu_header_title) + " " + usernameuwu
+    }
+
+    private fun SQLiteToArrayList() {
+        val cursor = myDB.bacaSemuaData()
+        if (cursor?.count == 0) {
+            // Toast.makeText(this, "Tidak ada data", Toast.LENGTH_SHORT).show()
+        } else {
+            cursor?.use {
+                while (it.moveToNext()) {
+                    arrID.add(it.getString(0))
+                    arrName.add(it.getString(1))
+                    arrUsername.add(it.getString(2))
+                    arrEmail.add(it.getString(3))
+                    arrAge.add(it.getString(4))
+                    arrHobi.add(it.getString(5))
+                    arrTgl.add(it.getString(6))
+                }
+            }
+        }
     }
 
     private fun setupViewModel() {
@@ -279,6 +333,22 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     public override fun onResume() {
         super.onResume()
         mainViewModel.reloadServerList()
+
+        arrID = ArrayList()
+        arrName = ArrayList()
+        arrUsername = ArrayList()
+        arrEmail = ArrayList()
+        arrAge = ArrayList()
+        arrHobi = ArrayList()
+        arrTgl = ArrayList()
+
+        SQLiteToArrayList()
+
+        rvDatabase = findViewById(R.id.rv_database)
+        adapterDatabase = AdapterDatabase(this, arrID, arrName, arrUsername, arrEmail, arrAge, arrHobi, arrTgl)
+        rvDatabase.adapter = adapterDatabase
+        rvDatabase.layoutManager = LinearLayoutManager(this)
+        rvDatabase.smoothScrollToPosition(posisiData)
     }
 
     public override fun onPause() {
@@ -833,6 +903,45 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun uwuExitApp(view: View) {
         keluar()
+    }
+
+    fun uwuEditProfile(view: View) {
+        val cursor: Cursor? = myDB.bacaSemuaData()
+        if (cursor == null || cursor.count == 0) {
+            startActivity(Intent(this, TambahActivity::class.java))
+        } else {
+            try {
+                val db = myDB.readableDatabase
+                val query = "SELECT * FROM nekoray"
+                val rs: Cursor = db.rawQuery(query, null)
+            
+                if (rs.moveToFirst()) {
+                    val arrID = rs.getString(rs.getColumnIndexOrThrow("id"))
+                    val name = rs.getString(rs.getColumnIndexOrThrow("name"))
+                    val username = rs.getString(rs.getColumnIndexOrThrow("username"))
+                    val email = rs.getString(rs.getColumnIndexOrThrow("email"))
+                    val age = rs.getString(rs.getColumnIndexOrThrow("age"))
+                    val hobi = rs.getString(rs.getColumnIndexOrThrow("hobi"))
+                    val tgl = rs.getString(rs.getColumnIndexOrThrow("tgl"))
+                    val posisi = 1
+
+                    val intent = Intent(this, UbahActivity::class.java).apply {
+                        putExtra("varID", arrID)
+                        putExtra("varName", name)
+                        putExtra("varUsername", username)
+                        putExtra("varEmail", email)
+                        putExtra("varAge", age)
+                        putExtra("varHobi", hobi)
+                        putExtra("varTgl", tgl)
+                        putExtra("varPosisi", posisi)
+                    }
+                    startActivity(intent)
+                }
+                rs.close()
+            } finally {
+                cursor?.close()
+            }
+        }
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {

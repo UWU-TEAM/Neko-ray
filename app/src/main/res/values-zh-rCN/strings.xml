@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">删除当前组重复配置</string>
     <string name="title_del_invalid_config">删除当前组无效配置</string>
     <string name="title_export_all">导出当前组配置至剪贴板</string>
-    <string name="title_sub_setting">订阅组设置</string>
+    <string name="title_sub_setting">订阅</string>
     <string name="sub_setting_remarks">评论</string>
     <string name="sub_setting_url">可选网址</string>
     <string name="sub_setting_enable">启用更新</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">主题设置</string>
     <string name="title_choose_theme">选择颜色主题</string>
-    <string name="uwu_header_title">嗨，<b>哥哥</b></string>
+    <string name="uwu_header_title">嗨，</string>
     <string name="uwu_edit">编辑</string>
     <string name="uwu_credits">制作人员</string>
     <string name="uwu_about">关于应用程序</string>
@@ -347,5 +347,27 @@
     <string name="uwu_theme_botton_text">改变主题</string>
     <string name="uwu_subscription">订阅</string>
     <string name="uwu_subscription_desc">在此设置您的订阅组！</string>
+    <string name="uwu_name">姓名：</string>
+    <string name="uwu_name_summary">名称</string>
+    <string name="uwu_username">用户名：</string>
+    <string name="uwu_username_summary">用户名</string>
+    <string name="uwu_age">年龄：</string>
+    <string name="uwu_age_summary">年龄</string>
+    <string name="uwu_date">出生日期：</string>
+    <string name="uwu_date_summary">出生日期</string>
+    <string name="uwu_hobi">爱好：</string>
+    <string name="uwu_hobi_summary">爱好</string>
+    <string name="uwu_email">电子邮件：</string>
+    <string name="uwu_email_summary">电子邮件</string>
+    <string name="uwu_userid">用户 ID：</string>
+    <string name="uwu_userid_summary">用户 ID</string>
+    <string name="uwu_profile_update_tittle">更新个人资料</string>
+    <string name="uwu_profile_edit_tittle">编辑个人资料</string>
+    <string name="uwu_name_dialog">名称不能为空</string>
+    <string name="uwu_username_dialog">用户名不能为空</string>
+    <string name="uwu_age_dialog">年龄不能为空</string>
+    <string name="uwu_date_dialog">出生日期不能为空</string>
+    <string name="uwu_hobi_dialog">兴趣爱好不能为空</string>
+    <string name="uwu_email_dialog">邮箱不能为空</string>
     <!-- Neko strings --> 
 </resources>

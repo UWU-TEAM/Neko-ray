@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">حذف التكوين المكرر</string>
     <string name="title_del_invalid_config">حذف التكوين غير الصالح (اختبر أولاً)</string>
     <string name="title_export_all">تصدير التكوينات غير المخصصة إلى الحافظة</string>
-    <string name="title_sub_setting">إعداد مجموعة الاشتراك</string>
+    <string name="title_sub_setting">الاشتراك</string>
     <string name="sub_setting_remarks">ملاحظات</string>
     <string name="sub_setting_url">عنوان URL اختياري</string>
     <string name="sub_setting_enable">تمكين التحديث</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">إعدادات الموضوع</string>
     <string name="title_choose_theme">اختر سمة اللون</string>
-    <string name="uwu_header_title">مرحبًا <b>أوني-تشان</b></string>
+    <string name="uwu_header_title">مرحبًا </string>
     <string name="uwu_edit">يحرر</string>
     <string name="uwu_credits">الاعتمادات</string>
     <string name="uwu_about">حول التطبيقات</string>
@@ -347,5 +347,27 @@
     <string name="uwu_theme_botton_text">غير الخلفية</string>
     <string name="uwu_subscription">الاشتراك</string>
     <string name="uwu_subscription_desc">قم بإعداد مجموعة الاشتراك الخاصة بك هنا!</string>
+    <string name="uwu_name">اسم :</string>
+    <string name="uwu_name_summary">اسم</string>
+    <string name="uwu_username">اسم المستخدم :</string>
+    <string name="uwu_username_summary">اسم المستخدم</string>
+    <string name="uwu_age">عمر :</string>
+    <string name="uwu_age_summary">عمر</string>
+    <string name="uwu_date">تاريخ الميلاد :</string>
+    <string name="uwu_date_summary">تاريخ الميلاد</string>
+    <string name="uwu_hobi">هواية :</string>
+    <string name="uwu_hobi_summary">هواية</string>
+    <string name="uwu_email">بريد إلكتروني :</string>
+    <string name="uwu_email_summary">بريد إلكتروني</string>
+    <string name="uwu_userid">معرف المستخدم :</string>
+    <string name="uwu_userid_summary">معرف المستخدم</string>
+    <string name="uwu_profile_update_tittle">تحديث الملف الشخصي</string>
+    <string name="uwu_profile_edit_tittle">تعديل الملف الشخصي</string>
+    <string name="uwu_name_dialog">لا يمكن أن يكون الاسم فارغا</string>
+    <string name="uwu_username_dialog">لا يمكن أن يكون اسم المستخدم فارغًا</string>
+    <string name="uwu_age_dialog">لا يمكن للعمر أن يكون فارغا</string>
+    <string name="uwu_date_dialog">لا يمكن ترك تاريخ الميلاد فارغًا</string>
+    <string name="uwu_hobi_dialog">الهوايات لا يمكن أن تكون فارغة</string>
+    <string name="uwu_email_dialog">لا يمكن أن يكون البريد الإلكتروني فارغًا</string>
     <!-- Neko strings --> 
 </resources> 

@@ -239,6 +239,16 @@
             android:screenOrientation="portrait"
             android:exported="false" />
 
+        <activity android:name="com.neko.uwu.TambahActivity"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
+        <activity android:name="com.neko.uwu.UbahActivity"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+
         <service
             android:name=".service.V2RayVpnService"
             android:enabled="true"

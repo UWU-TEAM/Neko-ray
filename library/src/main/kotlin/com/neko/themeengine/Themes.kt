@@ -7,7 +7,7 @@ import com.neko.R
 
 enum class Theme(@StyleRes val themeId: Int, @ColorRes val primaryColor: Int) {
     Amber(R.style.Theme_ThemeEngine_Amber, R.color.amber_primaryInverse),
-    Blue(R.style.Theme_ThemeEngine_Blue, R.color.blue_primaryInverse),
+    Orange(R.style.Theme_ThemeEngine_Orange, R.color.orange_primaryInverse),
     BlueVariant(R.style.Theme_ThemeEngine_BlueVariant, R.color.blue_variant_primaryInverse),
     Brown(R.style.Theme_ThemeEngine_Brown, R.color.brown_primaryInverse),
     Cyan(R.style.Theme_ThemeEngine_Cyan, R.color.cyan_primaryInverse),
@@ -18,7 +18,7 @@ enum class Theme(@StyleRes val themeId: Int, @ColorRes val primaryColor: Int) {
     LightBlue(R.style.Theme_ThemeEngine_LightBlue, R.color.light_blue_primaryInverse),
     LightGreen(R.style.Theme_ThemeEngine_LightGreen, R.color.light_green_primaryInverse),
     Lime(R.style.Theme_ThemeEngine_Lime, R.color.lime_primaryInverse),
-    Orange(R.style.Theme_ThemeEngine_Orange, R.color.orange_primaryInverse),
+    Blue(R.style.Theme_ThemeEngine_Blue, R.color.blue_primaryInverse),
     Pink(R.style.Theme_ThemeEngine_Pink, R.color.pink_primaryInverse),
     Purple(R.style.Theme_ThemeEngine_Purple, R.color.purple_primaryInverse),
     Red(R.style.Theme_ThemeEngine_Red, R.color.red_primaryInverse),

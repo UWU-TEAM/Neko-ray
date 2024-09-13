@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">Hapus konfigurasi duplikat grup ayeuna</string>
     <string name="title_del_invalid_config">Hapus grup ayeuna konfigurasi teu valid</string>
     <string name="title_export_all">Ékspor grup ayeuna configs non-custom ka clipboard</string>
-    <string name="title_sub_setting">Ngalanggan setelan grup</string>
+    <string name="title_sub_setting">Ngalangganan</string>
     <string name="sub_setting_remarks">inpormasi</string>
     <string name="sub_setting_url">URL pilihan</string>
     <string name="sub_setting_enable">Aktipkeun apdet</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">Setélan Téma</string>
     <string name="title_choose_theme">Pilih Warna Téma</string>
-    <string name="uwu_header_title">Hai, <b>onii-chan</b></string>
+    <string name="uwu_header_title">Hai, </string>
     <string name="uwu_edit">Édit</string>
     <string name="uwu_credits">Kiridit</string>
     <string name="uwu_about">Ngeunaan Aplikasi</string>
@@ -349,5 +349,27 @@
     <string name="uwu_theme_botton_text">Robah téma</string>
     <string name="uwu_subscription">Langganan</string>
     <string name="uwu_subscription_desc">Setel grup langganan anjeun di dieu!</string>
+    <string name="uwu_name">Ngaran:</string>
+    <string name="uwu_name_summary">Ngaran</string>
+    <string name="uwu_username">Ngaran pamaké:</string>
+    <string name="uwu_username_summary">Ngaran pamaké</string>
+    <string name="uwu_age">Umur:</string>
+    <string name="uwu_age_summary">Umur</string>
+    <string name="uwu_date">Tanggal Lahir :</string>
+    <string name="uwu_date_summary">Tanggal Lahir</string>
+    <string name="uwu_hobi">Hobi :</string>
+    <string name="uwu_hobi_summary">Hobi</string>
+    <string name="uwu_email">Surélék:</string>
+    <string name="uwu_email_summary" >Surélék</string>
+    <string name="uwu_userid">ID pamaké:</string>
+    <string name="uwu_userid_summary">ID pamaké</string>
+    <string name="uwu_profile_update_tittle">Ngamutahirkeun Propil</string>
+    <string name="uwu_profile_edit_tittle">Édit Propil</string>
+    <string name="uwu_name_dialog">Ngaran Teu Bisa Kosong</string>
+    <string name="uwu_username_dialog">Ngaran Pamaké Teu Bisa Kosong</string>
+    <string name="uwu_age_dialog">Umur Teu Bisa Kosong</string>
+    <string name="uwu_date_dialog">Tanggal Lahir Teu Bisa Kosong</string>
+    <string name="uwu_hobi_dialog">Hobi Teu Bisa Kosong</string>
+    <string name="uwu_email_dialog">Surélék Teu Bisa Dikosongkeun</string>
     <!-- Neko strings -->
 </resources> 

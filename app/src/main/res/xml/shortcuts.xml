@@ -7,13 +7,13 @@
         android:shortcutId="shortcuts_switch"
         android:shortcutLongLabel="@string/app_widget_name"
         android:shortcutShortLabel="@string/app_widget_name">
-
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.neko.v2ray.ui.ScSwitchActivity"
             android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
+
     <shortcut
         android:enabled="true"
         android:icon="@drawable/ic_qu_scan_24dp"
@@ -21,13 +21,13 @@
         android:shortcutId="shortcuts_scan"
         android:shortcutLongLabel="@string/menu_item_import_config_qrcode"
         android:shortcutShortLabel="@string/menu_item_import_config_qrcode">
-
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="com.neko.v2ray.ui.ScScannerActivity"
             android:targetPackage="com.neko.v2ray" />
         <categories android:name="android.shortcut.conversation" />
     </shortcut>
+
     <shortcut
         android:icon="@drawable/ic_qu_settings_24dp"
         android:enabled="true"
@@ -35,11 +35,25 @@
         android:shortcutShortLabel="@string/title_settings"
         android:shortcutLongLabel="@string/title_settings"
         android:shortcutDisabledMessage="@string/title_settings">
-
         <intent
             android:targetPackage="com.neko.v2ray"
             android:action="android.intent.action.VIEW"
             android:targetClass="com.neko.v2ray.ui.SettingsActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+
+    <shortcut
+        android:icon="@drawable/ic_qu_uwu_bug"
+        android:enabled="true"
+        android:shortcutId="shortcuts_log"
+        android:shortcutShortLabel="@string/title_logcat"
+        android:shortcutLongLabel="@string/title_logcat"
+        android:shortcutDisabledMessage="@string/title_logcat">
+        <intent
+            android:targetPackage="com.neko.v2ray"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.neko.v2ray.ui.LogcatActivity" />
         <categories
             android:name="android.shortcut.conversation" />
     </shortcut>

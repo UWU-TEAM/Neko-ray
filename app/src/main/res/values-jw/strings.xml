@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">Busak konfigurasi grup duplikat saiki</string>
     <string name="title_del_invalid_config">Busak konfigurasi grup sing ora valid</string>
     <string name="title_export_all">Ekspor konfigurasi grup non-kustom saiki menyang clipboard</string>
-    <string name="title_sub_setting">Setelan grup langganan</string>
+    <string name="title_sub_setting">Langganan</string>
     <string name="sub_setting_remarks">deskripsi</string>
     <string name="sub_setting_url">URL Pilihan</string>
     <string name="sub_setting_enable">Aktifake nganyari</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings -->
     <string name="title_theme_settings">Setelan Tema</string>
     <string name="title_choose_theme">Pilih Warna Tema</string>
-    <string name="uwu_header_title">Halo, <b>onii-chan</b></string>
+    <string name="uwu_header_title">Halo, </string>
     <string name="uwu_edit">Sunting</string>
     <string name="uwu_credits">Kredit</string>
     <string name="uwu_about">Babagan Aplikasi</string>
@@ -349,5 +349,27 @@
     <string name="uwu_theme_botton_text">Ganti tema</string>
     <string name="uwu_subscription">Langganan</string>
     <string name="uwu_subscription_desc">Setel grup langganan ing kene!</string>
+    <string name="uwu_name">jeneng :</string>
+    <string name="uwu_name_summary">jeneng</string>
+    <string name="uwu_username">Jeneng pangguna :</string>
+    <string name="uwu_username_summary">Jeneng pangguna</string>
+    <string name="uwu_age">Umur :</string>
+    <string name="uwu_age_summary">Umur</string>
+    <string name="uwu_date">Tanggal Lair :</string>
+    <string name="uwu_date_summary">Tanggal Lair</string>
+    <string name="uwu_hobi">hobi :</string>
+    <string name="uwu_hobi_summary">hobi</string>
+    <string name="uwu_email">Email :</string>
+    <string name="uwu_email_summary">Email</string>
+    <string name="uwu_userid">ID pangguna :</string>
+    <string name="uwu_userid_summary">ID pangguna</string>
+    <string name="uwu_profile_update_tittle">Nganyari Profil</string>
+    <string name="uwu_profile_edit_tittle">Sunting Profil</string>
+    <string name="uwu_name_dialog">Jeneng Ora Bisa Kosong</string>
+    <string name="uwu_username_dialog">Jeneng Panganggo Ora Bisa Kosong</string>
+    <string name="uwu_age_dialog">Umur Ora Bisa Kosong</string>
+    <string name="uwu_date_dialog">Tanggal Lair Ora Bisa Kosong</string>
+    <string name="uwu_hobi_dialog">Hobi Ora Bisa Kosong</string>
+    <string name="uwu_email_dialog">Email Ora Bisa Kosong</string>
     <!-- Neko strings -->
 </resources>

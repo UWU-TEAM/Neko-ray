@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">現在のグループの重複構成を削除</string>
     <string name="title_del_invalid_config">現在のグループの無効な構成を削除</string>
     <string name="title_export_all">現在のグループの非カスタム構成をクリップボードにエクスポート</string>
-    <string name="title_sub_setting">サブスクリプショングループの設定</string>
+    <string name="title_sub_setting">サブスクリプション</string>
     <string name="sub_setting_remarks">備考</string>
     <string name="sub_setting_url">オプションの URL</string>
     <string name="sub_setting_enable">アップデートを有効にする</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">テーマ設定</string>
     <string name="title_choose_theme">カラーテーマの選択</string>
-    <string name="uwu_header_title">こんにちは、<b>お兄ちゃん</b></string>
+    <string name="uwu_header_title">こんにちは、</string>
     <string name="uwu_edit">編集</string>
     <string name="uwu_credits">クレジット</string>
     <string name="uwu_about">アプリについて</string>
@@ -347,5 +347,27 @@
     <string name="uwu_theme_botton_text">テーマを変更する</string>
     <string name="uwu_subscription">サブスクリプション</string>
     <string name="uwu_subscription_desc">ここでサブスクリプション グループを設定してください。</string>
+    <string name="uwu_name">名前 :</string>
+    <string name="uwu_name_summary">名前</string>
+    <string name="uwu_username">ユーザー名 :</string>
+    <string name="uwu_username_summary">ユーザー名</string>
+    <string name="uwu_age">年 :</string>
+    <string name="uwu_age_summary">年</string>
+    <string name="uwu_date">生年月日 :</string>
+    <string name="uwu_date_summary">生年月日</string>
+    <string name="uwu_hobi">趣味 :</string>
+    <string name="uwu_hobi_summary">趣味</string>
+    <string name="uwu_email">メール :</string>
+    <string name="uwu_email_summary">メール</string>
+    <string name="uwu_userid">ユーザーID ：</string>
+    <string name="uwu_userid_summary">ユーザーID</string>
+    <string name="uwu_profile_update_tittle">プロフィールを更新</string>
+    <string name="uwu_profile_edit_tittle">プロフィールを編集</string>
+    <string name="uwu_name_dialog">名前は空欄にできません</string>
+    <string name="uwu_username_dialog">ユーザー名は空欄にできません</string>
+    <string name="uwu_age_dialog">年齢は空欄にできません</string>
+    <string name="uwu_date_dialog">生年月日は空欄にできません</string>
+    <string name="uwu_hobi_dialog">趣味は空っぽではいけない</string>
+    <string name="uwu_email_dialog">メールアドレスは空欄にできません</string>
     <!-- Neko strings --> 
 </resources> 

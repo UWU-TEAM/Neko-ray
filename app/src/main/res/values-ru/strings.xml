@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">Удалить повторяющуюся конфигурацию текущей группы</string>
     <string name="title_del_invalid_config">Удалить недействительную конфигурацию текущей группы</string>
     <string name="title_export_all">Экспортировать ненастраиваемые конфигурации текущей группы в буфер обмена</string>
-    <string name="title_sub_setting">Настройка группы подписки</string>
+    <string name="title_sub_setting">Подписка</string>
     <string name="sub_setting_remarks">замечания</string>
     <string name="sub_setting_url">Необязательный URL-адрес</string>
     <string name="sub_setting_enable">Включить обновление</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">Настройки темы</string>
     <string name="title_choose_theme">Выберите цветовую тему</string>
-    <string name="uwu_header_title">Привет, <b>они-чан</b></string>
+    <string name="uwu_header_title">Привет, </string>
     <string name="uwu_edit">Редактировать</string>
     <string name="uwu_credits">Кредиты</string>
     <string name="uwu_about">О приложениях</string>
@@ -347,5 +347,27 @@
     <string name="uwu_theme_botton_text">Менять тему</string>
     <string name="uwu_subscription">Подписка</string>
     <string name="uwu_subscription_desc">Настройте свою группу подписки здесь!</string>
+    <string name="uwu_name">Имя :</string>
+    <string name="uwu_name_summary">Имя</string>
+    <string name="uwu_username">Имя пользователя :</string>
+    <string name="uwu_username_summary">Имя пользователя</string>
+    <string name="uwu_age">Возраст :</string>
+    <string name="uwu_age_summary">Возраст</string>
+    <string name="uwu_date">Дата рождения :</string>
+    <string name="uwu_date_summary">Дата рождения</string>
+    <string name="uwu_hobi">Хобби :</string>
+    <string name="uwu_hobi_summary">Хобби</string>
+    <string name="uwu_email">Электронная почта :</string>
+    <string name="uwu_email_summary">Электронная почта</string>
+    <string name="uwu_userid">ID пользователя :</string>
+    <string name="uwu_userid_summary">ID пользователя</string>
+    <string name="uwu_profile_update_tittle">Обновить профиль</string>
+    <string name="uwu_profile_edit_tittle">Редактировать профиль</string>
+    <string name="uwu_name_dialog">Имя не может быть пустым</string>
+    <string name="uwu_username_dialog">Имя пользователя не может быть пустым</string>
+    <string name="uwu_age_dialog">Возраст не может быть пустым</string>
+    <string name="uwu_date_dialog">Поле «Дата рождения» не может быть пустым.</string>
+    <string name="uwu_hobi_dialog">Хобби не может быть пустым</string>
+    <string name="uwu_email_dialog">Электронная почта не может быть пустой</string>
     <!-- Neko strings --> 
 </resources> 

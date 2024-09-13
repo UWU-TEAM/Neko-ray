@@ -218,7 +218,7 @@
     <string name="title_del_duplicate_config">Delete current group duplicate configuration</string>
     <string name="title_del_invalid_config">Delete current group invalid configuration</string>
     <string name="title_export_all">Export current group non-custom configs to clipboard</string>
-    <string name="title_sub_setting">Subscription group setting</string>
+    <string name="title_sub_setting">Subscription</string>
     <string name="sub_setting_remarks">remarks</string>
     <string name="sub_setting_url">Optional URL</string>
     <string name="sub_setting_enable">Enable update</string>
@@ -263,7 +263,7 @@
     <!-- Neko strings -->
     <string name="title_theme_settings">Theme Settings</string>
     <string name="title_choose_theme">Choose Color Theme</string>
-    <string name="uwu_header_title">Hi, <b>onii-chan</b></string>
+    <string name="uwu_header_title">Hi, </string>
     <string name="uwu_edit">Edit</string>
     <string name="uwu_credits">Credits</string>
     <string name="uwu_about">About Apps</string>
@@ -349,5 +349,28 @@
     <string name="uwu_theme_botton_text">Change theme</string>
     <string name="uwu_subscription">Subscription</string>
     <string name="uwu_subscription_desc">Setup your subscription group here!</string>
+    <string name="uwu_summary_dashboard_tools">Welcome to Neko-ray advanced settings</string>
+    <string name="uwu_name">Name :</string>
+    <string name="uwu_name_summary">Name</string>
+    <string name="uwu_username">User Name :</string>
+    <string name="uwu_username_summary">User Name</string>
+    <string name="uwu_age">Age :</string>
+    <string name="uwu_age_summary">Age</string>
+    <string name="uwu_date">Date Of Birth :</string>
+    <string name="uwu_date_summary">Date Of Birth</string>
+    <string name="uwu_hobi">Hobby :</string>
+    <string name="uwu_hobi_summary">Hobby</string>
+    <string name="uwu_email">Email :</string>
+    <string name="uwu_email_summary">Email</string>
+    <string name="uwu_userid">User ID :</string>
+    <string name="uwu_userid_summary">User ID</string>
+    <string name="uwu_profile_update_tittle">Update Profile</string>
+    <string name="uwu_profile_edit_tittle">Edit Profile</string>
+    <string name="uwu_name_dialog">Name Cannot Be Empty</string>
+    <string name="uwu_username_dialog">User Name Cannot Be Empty</string>
+    <string name="uwu_age_dialog">Age Cannot Be Empty</string>
+    <string name="uwu_date_dialog">Date of Birth Cannot Be Blank</string>
+    <string name="uwu_hobi_dialog">Hobbies Cannot Be Empty</string>
+    <string name="uwu_email_dialog">Email Cannot Be Empty</string>
     <!-- Neko strings -->
 </resources>

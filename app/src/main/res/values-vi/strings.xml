@@ -216,7 +216,7 @@
     <string name="title_del_duplicate_config">Xóa cấu hình trùng lặp nhóm hiện tại</string>
     <string name="title_del_invalid_config">Xóa cấu hình nhóm hiện tại không hợp lệ</string>
     <string name="title_export_all">Xuất các cấu hình không tùy chỉnh của nhóm hiện tại vào bảng tạm</string>
-    <string name="title_sub_setting">Cài đặt nhóm đăng ký</string>
+    <string name="title_sub_setting">Đăng ký</string>
     <string name="sub_setting_remarks">nhận xét</string>
     <string name="sub_setting_url">URL tùy chọn</string>
     <string name="sub_setting_enable">Bật cập nhật</string>
@@ -261,7 +261,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">Cài đặt chủ đề</string>
     <string name="title_choose_theme">Chọn chủ đề màu</string>
-    <string name="uwu_header_title">Chào <b>onii-chan</b></string>
+    <string name="uwu_header_title">Chào </string>
     <string name="uwu_edit">Biên tập</string>
     <string name="uwu_credits">Tín dụng</string>
     <string name="uwu_about">Giới thiệu về ứng dụng</string>
@@ -347,5 +347,27 @@
     <string name="uwu_theme_botton_text">Thay đổi chủ đề</string>
     <string name="uwu_subscription">Đăng ký</string>
     <string name="uwu_subscription_desc">Thiết lập nhóm đăng ký của bạn ở đây!</string>
+    <string name="uwu_name">Tên:</string>
+    <string name="uwu_name_summary">Tên</string>
+    <string name="uwu_username">Tên người dùng:</string>
+    <string name="uwu_username_summary">Tên người dùng</string>
+    <string name="uwu_age">Tuổi:</string>
+    <string name="uwu_age_summary">Tuổi</string>
+    <string name="uwu_date">Ngày sinh:</string>
+    <string name="uwu_date_summary">Ngày sinh</string>
+    <string name="uwu_hobi">Sở thích:</string>
+    <string name="uwu_hobi_summary">Sở thích</string>
+    <string name="uwu_email">Email:</string>
+    <string name="uwu_email_summary">Email</string>
+    <string name="uwu_userid">ID người dùng:</string>
+    <string name="uwu_userid_summary">ID người dùng</string>
+    <string name="uwu_profile_update_tittle">Cập nhật hồ sơ</string>
+    <string name="uwu_profile_edit_tittle">Chỉnh sửa hồ sơ</string>
+    <string name="uwu_name_dialog">Tên không được để trống</string>
+    <string name="uwu_username_dialog">Tên người dùng không được để trống</string>
+    <string name="uwu_age_dialog">Tuổi không được trống</string>
+    <string name="uwu_date_dialog">Ngày sinh không được để trống</string>
+    <string name="uwu_hobi_dialog">Sở thích không thể bỏ trống</string>
+    <string name="uwu_email_dialog">Email không được để trống</string>
     <!-- Neko strings --> 
 </resources>

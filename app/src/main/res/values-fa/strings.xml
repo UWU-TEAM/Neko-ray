@@ -218,7 +218,7 @@
     <string name="title_del_duplicate_config">حذف تكوين المجموعة الحالية المكرر</string>
     <string name="title_del_invalid_config">حذف تكوين المجموعة الحالية غير الصحيح</string>
     <string name="title_export_all">تصدير تكوينات المجموعة الحالية غير المخصصة إلى الحافظة</string>
-    <string name="title_sub_setting">تنظیم گروه اشتراک</string>
+    <string name="title_sub_setting">اشتراک</string>
     <string name="sub_setting_remarks">ملاحظات</string>
     <string name="sub_setting_url">URL اختیاری</string>
     <string name="sub_setting_enable">فعال کردن آپدیت</string>
@@ -263,7 +263,7 @@
     <!-- Neko strings --> 
     <string name="title_theme_settings">تنظیمات پوسته</string>
     <string name="title_choose_theme">تم رنگی را انتخاب کنید</string>
-    <string name="uwu_header_title">سلام، <b>onii-chan</b></string>
+    <string name="uwu_header_title">سلام، </string>
     <string name="uwu_edit">ویرایش کنید</string>
     <string name="uwu_credits">وام</string>
     <string name="uwu_about">درباره برنامه ها</string>
@@ -349,5 +349,27 @@
     <string name="uwu_theme_botton_text">تغییر زمینه</string>
     <string name="uwu_subscription">اشتراک، ابونمان</string>
     <string name="uwu_subscription_desc">گروه اشتراک خود را در اینجا راه اندازی کنید!</string>
+    <string name="uwu_name">نام :</string>
+    <string name="uwu_name_summary">نام</string>
+    <string name="uwu_username">نام کاربری :</string>
+    <string name="uwu_username_summary">نام کاربری</string>
+    <string name="uwu_age">سن :</string>
+    <string name="uwu_age_summary">سن</string>
+    <string name="uwu_date">تاریخ تولد :</string>
+    <string name="uwu_date_summary">تاریخ تولد</string>
+    <string name="uwu_hobi">سرگرمی :</string>
+    <string name="uwu_hobi_summary">سرگرمی</string>
+    <string name="uwu_email">ایمیل :</string>
+    <string name="uwu_email_summary">ایمیل</string>
+    <string name="uwu_userid">شناسه کاربری :</string>
+    <string name="uwu_userid_summary">شناسه کاربری</string>
+    <string name="uwu_profile_update_tittle">به روز رسانی نمایه</string>
+    <string name="uwu_profile_edit_tittle">ویرایش نمایه</string>
+    <string name="uwu_name_dialog">نام نمی تواند خالی باشد</string>
+    <string name="uwu_username_dialog">نام کاربری نمی تواند خالی باشد</string>
+    <string name="uwu_age_dialog">سن نمی تواند خالی باشد</string>
+    <string name="uwu_date_dialog">تاریخ تولد نمی تواند خالی باشد</string>
+    <string name="uwu_hobi_dialog">سرگرمی ها نمی توانند خالی باشند</string>
+    <string name="uwu_email_dialog">ایمیل نمی تواند خالی باشد</string>
     <!-- Neko strings --> 
 </resources> 
