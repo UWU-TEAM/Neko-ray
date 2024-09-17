@@ -21,6 +21,7 @@ import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
+import com.neko.v2ray.extension.toLongEx
 import com.neko.v2ray.service.SubscriptionUpdater
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.Utils
@@ -139,7 +140,7 @@ class SettingsActivity : BaseActivity() {
                 val value = newValue as Boolean
                 autoUpdateCheck?.isChecked = value
                 autoUpdateInterval?.isEnabled = value
-                autoUpdateInterval?.text?.toLong()?.let {
+                autoUpdateInterval?.text?.toLongEx()?.let {
                     if (newValue) configureUpdateTask(it) else cancelUpdateTask()
                 }
                 true
@@ -149,9 +150,9 @@ class SettingsActivity : BaseActivity() {
 
                 // It must be greater than 15 minutes because WorkManager couldn't run tasks under 15 minutes intervals
                 nval =
-                    if (TextUtils.isEmpty(nval) || nval.toLong() < 15) AppConfig.SUBSCRIPTION_DEFAULT_UPDATE_INTERVAL else nval
+                    if (TextUtils.isEmpty(nval) || nval.toLongEx() < 15) AppConfig.SUBSCRIPTION_DEFAULT_UPDATE_INTERVAL else nval
                 autoUpdateInterval?.summary = nval
-                configureUpdateTask(nval.toLong())
+                configureUpdateTask(nval.toLongEx())
                 true
             }
             socksPort?.setOnPreferenceChangeListener { _, any ->
