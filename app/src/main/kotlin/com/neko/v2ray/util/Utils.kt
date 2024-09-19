@@ -17,21 +17,18 @@ import android.util.Log
 import android.util.Patterns
 import android.webkit.URLUtil
 import androidx.appcompat.app.AppCompatDelegate
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.BuildConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.service.V2RayServiceManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import java.io.IOException
 import java.net.*
 import java.util.*
 
 object Utils {
-
-    private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     /**
      * convert string to editalbe for kotlin
@@ -246,7 +243,7 @@ object Utils {
     }
 
     fun startVServiceFromToggle(context: Context): Boolean {
-        if (mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER).isNullOrEmpty()) {
+        if (MmkvManager.getSelectServer().isNullOrEmpty()) {
             context.toast(R.string.app_tile_first_use)
             return false
         }

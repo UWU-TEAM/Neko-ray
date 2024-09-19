@@ -22,8 +22,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
 import com.tbruyelle.rxpermissions3.RxPermissions
-import com.tencent.mmkv.MMKV
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityUserAssetBinding
@@ -33,6 +31,8 @@ import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.assetStorage
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -47,8 +47,6 @@ import java.util.Date
 
 class UserAssetActivity : BaseActivity() {
     private val binding by lazy { ActivityUserAssetBinding.inflate(layoutInflater) }
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
-    private val assetStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_ASSET, MMKV.MULTI_PROCESS_MODE) }
 
     val extDir by lazy { File(Utils.userAssetPath(this)) }
     val builtInGeoFiles = arrayOf("geosite.dat", "geoip.dat")

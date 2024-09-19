@@ -5,20 +5,12 @@ import android.content.SharedPreferences
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application),
     SharedPreferences.OnSharedPreferenceChangeListener {
-
-    private val settingsStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SETTING,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
 
     fun startListenPreferenceChange() {
         PreferenceManager.getDefaultSharedPreferences(getApplication())

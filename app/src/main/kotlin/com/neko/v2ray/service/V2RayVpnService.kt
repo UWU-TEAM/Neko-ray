@@ -16,11 +16,10 @@ import android.os.ParcelFileDescriptor
 import android.os.StrictMode
 import android.util.Log
 import androidx.annotation.RequiresApi
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.ERoutingMode
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.MyContextWrapper
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.CoroutineScope
@@ -39,7 +38,6 @@ class V2RayVpnService : VpnService(), ServiceControl {
         private const val TUN2SOCKS = "libtun2socks.so"
     }
 
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     private lateinit var mInterface: ParcelFileDescriptor
     private var isRunning = false

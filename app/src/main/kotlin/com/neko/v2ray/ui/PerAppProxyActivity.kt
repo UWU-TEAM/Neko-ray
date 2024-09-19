@@ -12,8 +12,6 @@ import com.google.android.material.appbar.MaterialToolbar
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.R
@@ -22,7 +20,7 @@ import com.neko.v2ray.dto.AppInfo
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
 import com.neko.v2ray.util.AppManagerUtil
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -37,7 +35,6 @@ class PerAppProxyActivity : BaseActivity() {
 
     private var adapter: PerAppProxyAdapter? = null
     private var appsAll: List<AppInfo>? = null
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

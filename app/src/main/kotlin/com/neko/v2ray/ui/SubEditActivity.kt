@@ -10,12 +10,12 @@ import com.google.android.material.appbar.MaterialToolbar
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivitySubEditBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.subStorage
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
@@ -37,7 +37,6 @@ class SubEditActivity : BaseActivity() {
     var del_config: MenuItem? = null
     var save_config: MenuItem? = null
 
-    private val subStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SUB, MMKV.MULTI_PROCESS_MODE) }
     private val editSubId by lazy { intent.getStringExtra("subId").orEmpty() }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -11,11 +11,10 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.tbruyelle.rxpermissions3.RxPermissions
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.QRCodeDecoder
 import io.github.g00fy2.quickie.QRResult
 import io.github.g00fy2.quickie.ScanCustomCode
@@ -24,7 +23,6 @@ import io.github.g00fy2.quickie.config.ScannerConfig
 class ScannerActivity : BaseActivity() {
 
     private val scanQrCode = registerForActivityResult(ScanCustomCode(), ::handleResult)
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -14,7 +14,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.appbar.MaterialToolbar
-import com.tencent.mmkv.MMKV
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.textfield.TextInputLayout
 import com.neko.v2ray.AppConfig
@@ -31,8 +30,7 @@ import com.neko.v2ray.dto.V2rayConfig.Companion.TLS
 import com.neko.v2ray.extension.removeWhiteSpace
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.ID_MAIN
-import com.neko.v2ray.util.MmkvManager.KEY_SELECTED_SERVER
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.Utils.getIpv6Address
@@ -49,18 +47,11 @@ import com.neko.imageslider.models.SlideModel
 class ServerActivity : BaseActivity() {
 
     private lateinit var softInputAssist: SoftInputAssist
-    private val mainStorage by lazy { MMKV.mmkvWithID(ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
-    private val settingsStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SETTING,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
     private val editGuid by lazy { intent.getStringExtra("guid").orEmpty() }
     private val isRunning by lazy {
         intent.getBooleanExtra("isRunning", false)
                 && editGuid.isNotEmpty()
-                && editGuid == mainStorage?.decodeString(KEY_SELECTED_SERVER)
+                && editGuid == MmkvManager.getSelectServer()
     }
     private val createConfigType by lazy {
         EConfigType.fromInt(intent.getIntExtra("createConfigType", EConfigType.VMESS.value))
@@ -646,7 +637,7 @@ class ServerActivity : BaseActivity() {
      */
     private fun deleteServer(): Boolean {
         if (editGuid.isNotEmpty()) {
-            if (editGuid != mainStorage?.decodeString(KEY_SELECTED_SERVER)) {
+            if (editGuid != MmkvManager.getSelectServer()) {
                 if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
                     MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                         .setPositiveButton(android.R.string.ok) { _, _ ->

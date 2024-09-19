@@ -17,13 +17,12 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequest
 import androidx.work.multiprocess.RemoteWorkManager
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toLongEx
 import com.neko.v2ray.service.SubscriptionUpdater
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.SettingsViewModel
 import java.util.concurrent.TimeUnit
@@ -48,7 +47,6 @@ class SettingsActivity : BaseActivity() {
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {
-        private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
         private val perAppProxy by lazy { findPreference<SwitchPreference>(AppConfig.PREF_PER_APP_PROXY) }
         private val localDns by lazy { findPreference<SwitchPreference>(AppConfig.PREF_LOCAL_DNS_ENABLED) }

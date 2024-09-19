@@ -1,23 +1,16 @@
 package com.neko.v2ray.util.fmt
 
 import android.text.TextUtils
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.idnHost
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object TrojanFmt {
-    private val settingsStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SETTING,
-            MMKV.MULTI_PROCESS_MODE
-        )
-    }
 
     fun parseTrojan(str: String): ServerConfig {
         var allowInsecure = settingsStorage?.decodeBool(AppConfig.PREF_ALLOW_INSECURE) ?: false

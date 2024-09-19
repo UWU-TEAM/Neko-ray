@@ -22,6 +22,7 @@ import com.neko.v2ray.helper.ItemTouchHelperViewHolder
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
@@ -64,7 +65,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             } else {
                 holder.itemMainBinding.tvTestResult.setTextColor(ContextCompat.getColor(mActivity, R.color.colorPing))
             }
-            if (guid == MmkvManager.mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)) {
+            if (guid == MmkvManager.getSelectServer()) {
                 holder.itemMainBinding.layoutIndicator.setBackgroundResource(R.drawable.uwu_selected_indicator)
             } else {
                 holder.itemMainBinding.layoutIndicator.setBackgroundResource(0)
@@ -132,8 +133,8 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                 }
             }
             holder.itemMainBinding.layoutRemove.setOnClickListener {
-                if (guid != MmkvManager.mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)) {
-                    if (MmkvManager.settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
+                if (guid != MmkvManager.getSelectServer()) {
+                    if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
                         MaterialAlertDialogBuilder(mActivity).setMessage(R.string.del_config_comfirm)
                             .setPositiveButton(android.R.string.ok) { _, _ ->
                                 removeServer(guid, position)
@@ -151,9 +152,9 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             }
 
             holder.itemMainBinding.infoContainer.setOnClickListener {
-                val selected = MmkvManager.mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)
+                val selected = MmkvManager.getSelectServer()
                 if (guid != selected) {
-                    MmkvManager.mainStorage?.encode(MmkvManager.KEY_SELECTED_SERVER, guid)
+                    MmkvManager.setSelectServer(guid)
                     if (!TextUtils.isEmpty(selected)) {
                         notifyItemChanged(mActivity.mainViewModel.getPosition(selected.orEmpty()))
                     }
@@ -231,7 +232,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
 
     override fun onItemDismiss(position: Int) {
         val guid = mActivity.mainViewModel.serversCache.getOrNull(position)?.guid ?: return
-        if (guid != MmkvManager.mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)) {
+        if (guid != MmkvManager.getSelectServer()) {
 //            mActivity.alert(R.string.del_config_comfirm) {
 //                positiveButton(android.R.string.ok) {
             mActivity.mainViewModel.removeServer(guid)

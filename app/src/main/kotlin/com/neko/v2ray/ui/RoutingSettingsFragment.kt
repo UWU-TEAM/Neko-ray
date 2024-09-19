@@ -15,13 +15,13 @@ import androidx.appcompat.app.AppCompatActivity.RESULT_OK
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import com.tbruyelle.rxpermissions3.RxPermissions
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.FragmentRoutingSettingsBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -32,8 +32,6 @@ class RoutingSettingsFragment : Fragment() {
     companion object {
         private const val routing_arg = "routing_arg"
     }
-
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

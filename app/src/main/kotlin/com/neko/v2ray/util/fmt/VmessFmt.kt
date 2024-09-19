@@ -3,23 +3,17 @@ package com.neko.v2ray.util.fmt
 import android.text.TextUtils
 import android.util.Log
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.VmessQRCode
 import com.neko.v2ray.extension.idnHost
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object VmessFmt {
-    private val settingsStorage by lazy {
-        MMKV.mmkvWithID(
-            MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE
-        )
-    }
 
     fun parseVmess(str: String): ServerConfig? {
         if (str.indexOf('?') > 0 && str.indexOf('&') > 0) {

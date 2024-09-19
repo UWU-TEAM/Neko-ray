@@ -8,14 +8,13 @@ import android.view.MenuItem
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityUserAssetUrlBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.util.MmkvManager.assetStorage
 import com.neko.v2ray.util.Utils
 import java.io.File
 
@@ -36,7 +35,6 @@ class UserAssetUrlActivity : BaseActivity() {
     var save_config: MenuItem? = null
 
     val extDir by lazy { File(Utils.userAssetPath(this)) }
-    private val assetStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_ASSET, MMKV.MULTI_PROCESS_MODE) }
     private val editAssetId by lazy { intent.getStringExtra("assetId").orEmpty() }
 
     override fun onCreate(savedInstanceState: Bundle?) {

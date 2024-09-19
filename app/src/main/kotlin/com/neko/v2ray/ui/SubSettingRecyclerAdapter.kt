@@ -9,13 +9,11 @@ import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.recyclerview.widget.RecyclerView
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ItemQrcodeBinding
 import com.neko.v2ray.databinding.ItemRecyclerSubSettingBinding
-import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.subStorage
 import com.neko.v2ray.util.QRCodeDecoder
 import com.neko.v2ray.util.Utils
 
@@ -23,7 +21,6 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
     RecyclerView.Adapter<SubSettingRecyclerAdapter.MainViewHolder>() {
 
     private var mActivity: SubSettingActivity = activity
-    private val subStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SUB, MMKV.MULTI_PROCESS_MODE) }
 
     private val share_method: Array<out String> by lazy {
         mActivity.resources.getStringArray(R.array.share_sub_method)

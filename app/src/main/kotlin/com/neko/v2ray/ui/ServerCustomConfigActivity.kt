@@ -13,7 +13,6 @@ import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.gson.Gson
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityServerCustomConfigBinding
 import com.neko.v2ray.dto.EConfigType
@@ -21,7 +20,7 @@ import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.util.MmkvManager.serverRawStorage
 import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
@@ -38,13 +37,11 @@ class ServerCustomConfigActivity : BaseActivity() {
     private val binding by lazy { ActivityServerCustomConfigBinding.inflate(layoutInflater) }
     private lateinit var softInputAssist: SoftInputAssist
 
-    private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
-    private val serverRawStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SERVER_RAW, MMKV.MULTI_PROCESS_MODE) }
     private val editGuid by lazy { intent.getStringExtra("guid").orEmpty() }
     private val isRunning by lazy {
         intent.getBooleanExtra("isRunning", false)
                 && editGuid.isNotEmpty()
-                && editGuid == mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER)
+                && editGuid == MmkvManager.getSelectServer()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -13,7 +13,6 @@ import android.os.Build
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
@@ -24,6 +23,7 @@ import com.neko.v2ray.extension.toast
 import com.neko.v2ray.ui.MainActivity
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.V2rayConfigUtil
 import go.Seq
@@ -46,8 +46,6 @@ object V2RayServiceManager {
 
     val v2rayPoint: V2RayPoint = Libv2ray.newV2RayPoint(V2RayCallback(), Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1)
     private val mMsgReceive = ReceiveMessageHandler()
-    private val mainStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_MAIN, MMKV.MULTI_PROCESS_MODE) }
-    private val settingsStorage by lazy { MMKV.mmkvWithID(MmkvManager.ID_SETTING, MMKV.MULTI_PROCESS_MODE) }
 
     var serviceControl: SoftReference<ServiceControl>? = null
         set(value) {
@@ -64,7 +62,7 @@ object V2RayServiceManager {
 
     fun startV2Ray(context: Context) {
         if (v2rayPoint.isRunning) return
-        val guid = mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER) ?: return
+        val guid = MmkvManager.getSelectServer() ?: return
         val result = V2rayConfigUtil.getV2rayConfig(context, guid)
         if (!result.status) return
 
@@ -129,7 +127,7 @@ object V2RayServiceManager {
 
     fun startV2rayPoint() {
         val service = serviceControl?.get()?.getService() ?: return
-        val guid = mainStorage?.decodeString(MmkvManager.KEY_SELECTED_SERVER) ?: return
+        val guid = MmkvManager.getSelectServer() ?: return
         val config = MmkvManager.decodeServerConfig(guid) ?: return
         if (v2rayPoint.isRunning) {
             return
