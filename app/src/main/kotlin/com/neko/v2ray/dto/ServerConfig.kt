@@ -3,7 +3,6 @@ package com.neko.v2ray.dto
 import com.neko.v2ray.AppConfig.TAG_BLOCKED
 import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.TAG_PROXY
-import com.neko.v2ray.util.Utils
 
 data class ServerConfig(
     val configVersion: Int = 3,
@@ -78,11 +77,5 @@ data class ServerConfig(
             return config.outbounds.map { it.tag }.toMutableList()
         }
         return mutableListOf()
-    }
-
-    fun getV2rayPointDomainAndPort(): String {
-        val address = getProxyOutbound()?.getServerAddress().orEmpty()
-        val port = getProxyOutbound()?.getServerPort()
-        return Utils.getIpv6Address(address) + ":" + port
     }
 }

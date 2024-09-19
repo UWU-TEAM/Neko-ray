@@ -20,7 +20,6 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.ServersCache
-import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.AngConfigManager
@@ -28,7 +27,6 @@ import com.neko.v2ray.util.AngConfigManager.updateConfigViaSub
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.KEY_ANG_CONFIGS
-import com.neko.v2ray.util.MmkvManager.subStorage
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.V2rayConfigUtil
@@ -160,12 +158,8 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         if (subscriptionId.isNullOrEmpty()) {
             return AngConfigManager.updateConfigViaSubAll()
         } else {
-            val json = subStorage?.decodeString(subscriptionId)
-            if (!json.isNullOrBlank()) {
-                return updateConfigViaSub(Pair(subscriptionId, Gson().fromJson(json, SubscriptionItem::class.java)))
-            } else {
-                return 0
-            }
+            val subItem = MmkvManager.decodeSubscription(subscriptionId) ?: return 0
+            return updateConfigViaSub(Pair(subscriptionId, subItem))
         }
     }
 

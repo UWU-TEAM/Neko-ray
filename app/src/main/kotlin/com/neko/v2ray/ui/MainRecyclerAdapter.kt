@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
 import com.neko.v2ray.AngApplication.Companion.application
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
@@ -17,7 +16,6 @@ import com.neko.v2ray.databinding.ItemQrcodeBinding
 import com.neko.v2ray.databinding.ItemRecyclerFooterBinding
 import com.neko.v2ray.databinding.ItemRecyclerMainBinding
 import com.neko.v2ray.dto.EConfigType
-import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
@@ -71,12 +69,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             } else {
                 holder.itemMainBinding.layoutIndicator.setBackgroundResource(0)
             }
-            holder.itemMainBinding.tvSubscription.text = ""
-            val json = MmkvManager.subStorage?.decodeString(profile.subscriptionId)
-            if (!json.isNullOrBlank()) {
-                val sub = Gson().fromJson(json, SubscriptionItem::class.java)
-                holder.itemMainBinding.tvSubscription.text = sub.remarks
-            }
+            holder.itemMainBinding.tvSubscription.text = MmkvManager.decodeSubscription(profile.subscriptionId)?.remarks ?: ""
 
             var shareOptions = share_method.asList()
             when (profile.configType) {
