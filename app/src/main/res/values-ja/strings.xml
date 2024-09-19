@@ -221,6 +221,9 @@
     <string name="sub_setting_url">オプションの URL</string>
     <string name="sub_setting_enable">アップデートを有効にする</string>
     <string name="sub_auto_update">自動更新を有効にする</string>
+    <string name="sub_setting_pre_profile">以前の代理人の発言</string>
+    <string name="sub_setting_next_profile">次回の代理発言</string>
+    <string name="sub_setting_pre_profile_tip">発言は存在し、ユニークである</string>
     <string name="title_sub_update">現在のグループ サブスクリプションを更新</string>
     <string name="title_ping_all_server">現在のグループ構成を TCP 処理</string>
     <string name="title_real_ping_all_server">現在のグループ構成を実際に遅延</string>

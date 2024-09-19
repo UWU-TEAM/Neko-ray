@@ -221,6 +221,9 @@
     <string name="sub_setting_url">URL pilihan</string>
     <string name="sub_setting_enable">Aktipkeun apdet</string>
     <string name="sub_auto_update">Aktipkeun apdet otomatis</string>
+    <string name="sub_setting_pre_profile">Ucapan proxy saméméhna</string>
+    <string name="sub_setting_next_profile">Catetan proxy salajengna</string>
+    <string name="sub_setting_pre_profile_tip">Koméntar aya sareng unik</string>
     <string name="title_sub_update">Apdet langganan grup ayeuna</string>
     <string name="title_ping_all_server">Tcping konfigurasi grup ayeuna</string>
     <string name="title_real_ping_all_server">Konfigurasi grup ayeuna reureuh nyata</string>

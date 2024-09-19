@@ -221,6 +221,9 @@
     <string name="sub_setting_url">URL tùy chọn</string>
     <string name="sub_setting_enable">Bật cập nhật</string>
     <string name="sub_auto_update">Bật cập nhật tự động</string>
+    <string name="sub_setting_pre_profile">Nhận xét ủy quyền trước đó</string>
+    <string name="sub_setting_next_profile">Nhận xét của đại diện tiếp theo</string>
+    <string name="sub_setting_pre_profile_tip">Nhận xét tồn tại và là duy nhất</string>
     <string name="title_sub_update">Cập nhật đăng ký nhóm hiện tại</string>
     <string name="title_ping_all_server">Cấu hình nhóm hiện tại của TCP</string>
     <string name="title_real_ping_all_server">Cấu hình nhóm hiện tại trễ thực</string>

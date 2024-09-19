@@ -221,6 +221,9 @@
     <string name="sub_setting_url">عنوان URL اختياري</string>
     <string name="sub_setting_enable">تمكين التحديث</string>
     <string name="sub_auto_update">تمكين التحديث التلقائي</string>
+    <string name="sub_setting_pre_profile">تصريحات الوكالة السابقة</string>
+    <string name="sub_setting_next_profile">تصريحات الوكيل التالية</string>
+    <string name="sub_setting_pre_profile_tip">الملاحظات موجودة وهي فريدة من نوعها</string>
     <string name="title_sub_update">تحديث الاشتراك</string>
     <string name="title_ping_all_server">Tcping كل التكوين</string>
     <string name="title_real_ping_all_server">تأخير حقيقي كل التكوين</string>

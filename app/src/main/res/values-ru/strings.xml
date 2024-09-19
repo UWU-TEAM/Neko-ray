@@ -221,6 +221,9 @@
     <string name="sub_setting_url">Необязательный URL-адрес</string>
     <string name="sub_setting_enable">Включить обновление</string>
     <string name="sub_auto_update">Включить автоматическое обновление</string>
+    <string name="sub_setting_pre_profile">Предыдущие замечания доверенности</string>
+    <string name="sub_setting_next_profile">Следующие замечания доверенного лица</string>
+    <string name="sub_setting_pre_profile_tip">Замечание существует и является уникальным</string>
     <string name="title_sub_update">Обновить подписку на текущую группу</string>
     <string name="title_ping_all_server">Tcping текущей конфигурации группы</string>
     <string name="title_real_ping_all_server">Реальная задержка текущей конфигурации группы</string>

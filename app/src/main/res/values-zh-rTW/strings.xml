@@ -221,6 +221,9 @@
     <string name="sub_setting_url">可選網址</string>
     <string name="sub_setting_enable">啟用更新</string>
     <string name="sub_auto_update">啟用自動更新</string>
+    <string name="sub_setting_pre_profile">之前的代理備註</string>
+    <string name="sub_setting_next_profile">接下來的代理備註</string>
+    <string name="sub_setting_pre_profile_tip">備註存在且唯一</string>
     <string name="title_sub_update">更新目前群組訂閱</string>
     <string name="title_ping_all_server">偵測目前群組配置 Tcping</string>
     <string name="title_real_ping_all_server">偵測目前群組配置真延遲</string>

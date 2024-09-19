@@ -294,6 +294,30 @@
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
                         <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_marginBottom="8.0dip">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/sub_setting_url"
+                                style="@style/Outline_TextInputLayout">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:gravity="top"
+                                    android:id="@+id/et_url"
+                                    android:scrollbars="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10.0dip"
+                                    android:maxLines="10"
+                                    android:minLines="2"
+                                    android:inputType="textMultiLine"
+                                    tools:ignore="TextFields" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
                             android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -334,15 +358,38 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8.0dip"
+                            android:layout_marginBottom="8.0dip">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/sub_setting_pre_profile"
+                                style="@style/Outline_TextInputLayout">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:gravity="top"
+                                    android:id="@+id/et_pre_profile"
+                                    android:scrollbars="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10.0dip"
+                                    android:maxLines="10"
+                                    android:minLines="5"
+                                    android:inputType="textMultiLine" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
                             android:layout_marginBottom="16.0dip">
                             <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:hint="@string/sub_setting_url"
+                                android:hint="@string/sub_setting_next_profile"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:gravity="top"
-                                    android:id="@+id/et_url"
+                                    android:id="@+id/et_next_profile"
                                     android:scrollbars="vertical"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"

@@ -221,6 +221,9 @@
     <string name="sub_setting_url">可选网址</string>
     <string name="sub_setting_enable">启用更新</string>
     <string name="sub_auto_update">启用自动更新</string>
+    <string name="sub_setting_pre_profile">先前的代理意见</string>
+    <string name="sub_setting_next_profile">下一个代理备注</string>
+    <string name="sub_setting_pre_profile_tip">该评论存在且独特</string>
     <string name="title_sub_update">更新当前组订阅</string>
     <string name="title_ping_all_server">测试当前组配置Tcping</string>
     <string name="title_real_ping_all_server">测试当前组配置真连接</string>

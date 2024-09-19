@@ -221,6 +221,9 @@
     <string name="sub_setting_url">URL Pilihan</string>
     <string name="sub_setting_enable">Aktifake nganyari</string>
     <string name="sub_auto_update">Aktifake nganyari otomatis</string>
+    <string name="sub_setting_pre_profile">Komentar proxy sadurunge</string>
+    <string name="sub_setting_next_profile">Komentar proxy sabanjure</string>
+    <string name="sub_setting_pre_profile_tip">Ukara kasebut ana lan unik</string>
     <string name="title_sub_update">Update langganan grup saiki</string>
     <string name="title_ping_all_server">Tcping config grup saiki</string>
     <string name="title_real_ping_all_server">Real delay config grup saiki</string>
