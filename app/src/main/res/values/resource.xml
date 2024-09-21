@@ -9,6 +9,14 @@
     <string name="server_lab_spider_x" translatable="false">SpiderX</string>
     <string name="server_lab_secret_key" translatable="false">SecretKey</string>
     <string name="title_url" translatable="false">URL</string>
+    <string name="routing_settings_domain" translatable="false">domain</string>
+    <string name="routing_settings_ip" translatable="false">ip</string>
+    <string name="routing_settings_port" translatable="false">port</string>
+    <string name="routing_settings_protocol" translatable="false">protocol</string>
+    <string name="routing_settings_protocol_tip" translatable="false">[http,tls,bittorrent]</string>
+    <string name="routing_settings_network" translatable="false">network</string>"[udp|tcp]"
+    <string name="routing_settings_network_tip" translatable="false">[udp|tcp]</string>
+    <string name="routing_settings_outbound_tag" translatable="false">outboundTag</string>
 
     <string-array name="securitys" translatable="false">
         <item>chacha20-poly1305</item>
@@ -107,14 +115,6 @@
         <item></item>
         <item>true</item>
         <item>false</item>
-    </string-array>
-
-    <string-array name="routing_mode_value" translatable="false">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
     </string-array>
 
     <string-array name="routing_domain_strategy" translatable="false">
@@ -223,5 +223,11 @@
         <item>DELETE</item>
         <item>TRACE</item>
         <item>PATCH</item>
+    </string-array>
+
+    <string-array name="outbound_tag" translatable="false">
+        <item>proxy</item>
+        <item>direct</item>
+        <item>block</item>
     </string-array>
 </resources>

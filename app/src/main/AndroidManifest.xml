@@ -118,7 +118,13 @@
         <activity
             android:exported="false"
             android:theme="@style/AppThemeDayNight.NoActionBar"
-            android:name=".ui.RoutingSettingsActivity"
+            android:name=".ui.RoutingSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:exported="false"
+            android:theme="@style/AppThemeDayNight.NoActionBar"
+            android:name=".ui.RoutingEditActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustPan" />
         <activity

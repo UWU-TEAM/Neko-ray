@@ -902,6 +902,10 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         Utils.openUri(this, AppConfig.v2rayNGIssues)
     }
 
+    fun uwuRoutingSetting(view: View) {
+        requestSubSettingActivity.launch(Intent(this, RoutingSettingActivity::class.java))
+    }
+
     fun uwuExitApp(view: View) {
         keluar()
     }
@@ -959,8 +963,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 )
             }
 
-            R.id.user_asset_setting -> {
-                startActivity(Intent(this, UserAssetActivity::class.java))
+            R.id.routing_setting -> {
+                requestSubSettingActivity.launch(Intent(this, RoutingSettingActivity::class.java))
             }
 
             R.id.promotion -> {

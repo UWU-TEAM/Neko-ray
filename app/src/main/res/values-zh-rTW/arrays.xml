@@ -17,20 +17,6 @@
         <item>匯出至剪貼簿</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>Proxy URL 或 IP</item>
-        <item>直接連線 URL 或 IP</item>
-        <item>已封鎖的 URL 或 IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>全域 Proxy</item>
-        <item>略過區域網路的 Proxy</item>
-        <item>略過中國大陸的 Proxy</item>
-        <item>略過區域網路及中國大陸的 Proxy</item>
-        <item>直接連線</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>僅 Proxy</item>

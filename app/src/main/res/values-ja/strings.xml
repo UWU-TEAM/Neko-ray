@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">IPv6 を優先する</string>
     <string name="summary_pref_prefer_ipv6">IPv6 アドレスとルートを優先する</string>
  
-    <string name="title_pref_routing">ルーティング</string>
-    <string name="title_pref_routing_domain_strategy">ドメイン戦略</string>
-    <string name="title_pref_routing_mode">事前定義されたルール</string>
-    <string name="title_pref_routing_custom">カスタムルール</string>
- 
     <string name="title_pref_remote_dns">リモートDNS (udp/tcp/https/quic)(オプション)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -236,14 +231,16 @@
     <string name="tasker_start_service">サービス開始</string>
     <string name="tasker_setting_confirm">確認する</string>
  
+    <string name="routing_settings_domain_strategy">ドメイン戦略</string>
     <string name="routing_settings_title">ルーティング設定</string>
-    <string name="routing_settings_tips">カンマ(,)で区切って保存してください</string>
+    <string name="routing_settings_tips">カンマ(,)で区切る</string>
     <string name="routing_settings_save">保存</string>
     <string name="routing_settings_delete">クリア</string>
-    <string name="routing_settings_scan_replace">スキャンして置換する</string>
-    <string name="routing_settings_scan_append">スキャンして追加</string>
-    <string name="routing_settings_default_rules">デフォルトのルーティング ルールを設定する</string>
- 
+    <string name="routing_settings_rule_title">ルーティングルール設定</string>
+    <string name="routing_settings_add_rule">ルールを追加する</string>
+    <string name="routing_settings_import_rulesets">ルールセットをインポートする</string>
+    <string name="routing_settings_import_rulesets_tip">既存のルールセットは削除されます。続行しますか?</string>
+
     <string name="connection_test_pending">接続をチェックする</string>
     <string name="connection_test_testing">テスト中…</string>
     <string name="connection_test_available">成功: HTTP 接続に %dms かかりました</string>

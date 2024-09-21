@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">Ưu tiên IPv6</string>
     <string name="summary_pref_prefer_ipv6">Ưu tiên địa chỉ và tuyến đường IPv6</string>
  
-    <string name="title_pref_routing">Lộ trình</string>
-    <string name="title_pref_routing_domain_strategy">Chiến lược tên miền</string>
-    <string name="title_pref_routing_mode">Quy tắc được xác định trước</string>
-    <string name="title_pref_routing_custom">Những nguyên tắc tập quán</string>
- 
     <string name="title_pref_remote_dns">DNS từ xa (udp/tcp/https/quic)(Tùy chọn)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -236,14 +231,16 @@
     <string name="tasker_start_service">Bắt đầu dịch vụ</string>
     <string name="tasker_setting_confirm">Xác nhận</string>
  
+    <string name="routing_settings_domain_strategy">Chiến lược miền</string>
     <string name="routing_settings_title">Cài đặt định tuyến</string>
-    <string name="routing_settings_tips">Cách nhau bằng dấu phẩy(,), nhớ lưu lại</string>
+    <string name="routing_settings_tips">Phân cách bằng dấu phẩy(,)</string>
     <string name="routing_settings_save">Cứu</string>
     <string name="routing_settings_delete">Thông thoáng</string>
-    <string name="routing_settings_scan_replace">Quét và thay thế</string>
-    <string name="routing_settings_scan_append">Quét và nối thêm</string>
-    <string name="routing_settings_default_rules">đặt quy tắc định tuyến mặc định</string>
- 
+    <string name="routing_settings_rule_title">Cài đặt quy tắc định tuyến</string>
+    <string name="routing_settings_add_rule">Thêm quy tắc</string>
+    <string name="routing_settings_import_rulesets">Nhập bộ quy tắc</string>
+    <string name="routing_settings_import_rulesets_tip">Bộ quy tắc hiện có sẽ bị xóa, bạn có chắc chắn muốn tiếp tục không?</string>
+
     <string name="connection_test_pending">Kiểm tra kết nối</string>
     <string name="connection_test_testing">Đang thử nghiệm…</string>
     <string name="connection_test_available">Thành công: Kết nối HTTP mất %dms</string>

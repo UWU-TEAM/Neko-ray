@@ -2,8 +2,10 @@ package com.neko.v2ray.util
 
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
+import com.neko.v2ray.AppConfig.PREF_ROUTING_RULESET
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.dto.ProfileItem
+import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerAffiliationInfo
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.SubscriptionItem
@@ -224,5 +226,18 @@ object MmkvManager {
             }
         }
         return null
+    }
+
+    fun decodeRoutingRulesets(): MutableList<RulesetItem>? {
+        val ruleset = settingsStorage.decodeString(PREF_ROUTING_RULESET)
+        if (ruleset.isNullOrEmpty()) return null
+        return Gson().fromJson(ruleset, Array<RulesetItem>::class.java).toMutableList()
+    }
+
+    fun encodeRoutingRulesets(rulesetList: MutableList<RulesetItem>?) {
+        if (rulesetList.isNullOrEmpty())
+            settingsStorage.encode(PREF_ROUTING_RULESET, "")
+        else
+            settingsStorage.encode(PREF_ROUTING_RULESET, Gson().toJson(rulesetList))
     }
 }

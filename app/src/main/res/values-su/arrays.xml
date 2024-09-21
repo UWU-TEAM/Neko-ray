@@ -17,20 +17,6 @@
         <item>Ékspor ka clipboard</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>URL proxy atawa IP</item>
-        <item>URL langsung atanapi IP</item>
-        <item>URL atanapi IP anu diblokir</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>Proksi global</item>
-        <item>Bypassing alamat LAN lajeng proxy</item>
-        <item>Jalankeun alamat daratan teras proxy</item>
-        <item>Ngaliwatan LAN sareng alamat daratan teras proxy</item>
-        <item>Global langsung</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>Proxy wungkul</item>

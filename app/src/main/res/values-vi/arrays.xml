@@ -17,20 +17,6 @@
         <item>Xuất gói vào bảng nhớ tạm</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>Proxy</item>
-        <item>Direct</item>
-        <item>Blocked</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>Proxy toàn cầu</item>
-        <item>Bỏ qua địa chỉ LAN rồi Proxy</item>
-        <item>Bỏ qua địa chỉ nội địa rồi Proxy</item>
-        <item>Bỏ qua LAN và địa chỉ nội địa rồi Proxy</item>
-        <item>Kết nối trực tiếp toàn cầu</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>Chế độ VPN</item>
         <item>Chế độ Proxy</item>

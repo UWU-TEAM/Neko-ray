@@ -17,20 +17,6 @@
         <item>Экспорт в буфер обмена</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>Проксируемые</item>
-        <item>Прямые</item>
-        <item>Блокируемые</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>Все через прокси</item>
-        <item>Все, кроме LAN через прокси</item>
-        <item>Все, кроме Китая через прокси</item>
-        <item>Все, кроме LAN и Китая через прокси</item>
-        <item>Все напрямую</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>Только прокси</item>

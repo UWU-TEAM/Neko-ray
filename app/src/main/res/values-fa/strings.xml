@@ -146,11 +146,6 @@
     <string name="title_pref_prefer_ipv6">IPv6 را ترجیح دهید</string>
     <string name="summary_pref_prefer_ipv6">آدرس و مسیرهای IPv6 را ترجیح دهید</string>
  
-    <string name="title_pref_routing">مسیریابی</string>
-    <string name="title_pref_routing_domain_strategy">استراتژی دامنه</string>
-    <string name="title_pref_routing_mode">قوانین از پیش تعریف شده</string>
-    <string name="title_pref_routing_custom">قوانین سفارشی</string>
- 
     <string name="title_pref_remote_dns">DNS از راه دور (udp/tcp/https/quic) (اختیاری)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -238,13 +233,15 @@
     <string name="tasker_start_service">سرویس را شروع کنید</string>
     <string name="tasker_setting_confirm">تایید</string>
  
+    <string name="routing_settings_domain_strategy">استراتژی دامنه</string>
     <string name="routing_settings_title">تنظیمات مسیریابی</string>
-    <string name="routing_settings_tips">با کاما (،) از هم جدا شده اند، ذخیره را به خاطر بسپارید</string>
+    <string name="routing_settings_tips">جدا شده با کاما(,)</string>
     <string name="routing_settings_save">صرفه جویی</string>
     <string name="routing_settings_delete">پاک کردن</string>
-    <string name="routing_settings_scan_replace">اسکن و جایگزین کنید</string>
-    <string name="routing_settings_scan_append">اسکن و اضافه کنید</string>
-    <string name="routing_settings_default_rules">قوانین مسیریابی پیش فرض را تنظیم کنید</string>
+    <string name="routing_settings_rule_title">قانون مسیریابی تنظیمات</string>
+    <string name="routing_settings_add_rule">افزودن قانون</string>
+    <string name="routing_settings_import_rulesets">وارد کردن مجموعه قوانین</string>
+    <string name="routing_settings_import_rulesets_tip">مجموعه قوانین موجود حذف خواهند شد، آیا مطمئن هستید که ادامه می دهید؟</string>
  
     <string name="connection_test_pending">اتصال را بررسی کنید</string>
     <string name="connection_test_testing">آزمایش کردن…</string>

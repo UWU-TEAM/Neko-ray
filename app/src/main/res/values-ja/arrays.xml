@@ -17,20 +17,6 @@
         <item>クリップボードにエクスポート</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>プロキシ URL と IP アドレス</item>
-        <item>IP アドレスに直接 URL</item>
-        <item>IP でブロックされた URL</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>グローバルプロキシ</item>
-        <item>LANアドレスをバイパスしてからプロキシを使用する</item>
-        <item>本土のアドレスをバイパスしてからプロキシをバイパスする</item>
-        <item>LAN とメインランド アドレスをバイパスしてからプロキシをバイパスする</item>
-        <item>グローバルダイレクト</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>プロキシのみ</item>

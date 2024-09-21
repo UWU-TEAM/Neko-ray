@@ -72,37 +72,6 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/title_pref_routing">
-
-        <ListPreference
-            android:defaultValue="IPIfNonMatch"
-            android:icon="@drawable/uwu_ic_baseline_camera_24"
-            android:entries="@array/routing_domain_strategy"
-            android:layout="@layout/uwu_top"
-            android:entryValues="@array/routing_domain_strategy"
-            android:key="pref_routing_domain_strategy"
-            android:summary="%s"
-            android:title="@string/title_pref_routing_domain_strategy"/>
-
-        <ListPreference
-            android:defaultValue="3"
-            android:icon="@drawable/uwu_ic_predefined_rules"
-            android:entries="@array/routing_mode"
-            android:layout="@layout/uwu_mid"
-            android:entryValues="@array/routing_mode_value"
-            android:key="pref_routing_mode"
-            android:summary="%s"
-            android:title="@string/title_pref_routing_mode"/>
-
-        <Preference
-            android:icon="@drawable/uwu_ic_custom_rules"
-            android:layout="@layout/uwu_bot"
-            android:key="pref_routing_custom"
-            android:summary="@string/title_pref_routing_custom"
-            android:title="@string/title_pref_routing_custom"/>
-
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/title_ui_settings">
 
         <SwitchPreference

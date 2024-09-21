@@ -17,21 +17,6 @@
         <item>导出至剪贴板</item>
     </string-array>
 
-    share_method
-    <string-array name="routing_tag">
-        <item>代理的网址或IP</item>
-        <item>直连的网址或IP</item>
-        <item>阻止的网址或IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>全局代理</item>
-        <item>绕过局域网地址而后代理</item>
-        <item>绕过大陆地址而后代理</item>
-        <item>绕过局域网及大陆地址而后代理</item>
-        <item>全局直连</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>仅代理</item>

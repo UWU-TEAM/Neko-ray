@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">Resep IPv6</string>
     <string name="summary_pref_prefer_ipv6">Resep alamat sareng rute IPv6</string>
  
-    <string name="title_pref_routing">Routing</string>
-    <string name="title_pref_routing_domain_strategy">strategi domain</string>
-    <string name="title_pref_routing_mode">Aturan anu geus ditangtukeun</string>
-    <string name="title_pref_routing_custom">Aturan husus</string>
- 
     <string name="title_pref_remote_dns">DNS jauh (udp/tcp/https/quic)(Pilihan)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -236,14 +231,16 @@
     <string name="tasker_start_service">Mimitian Service</string>
     <string name="tasker_setting_confirm">Konfirmasi</string>
  
+    <string name="routing_settings_domain_strategy">Strategi domain</string>
     <string name="routing_settings_title">Setélan Routing</string>
-    <string name="routing_settings_tips">Dipisahkeun ku koma (,), inget nyimpen</string>
+    <string name="routing_settings_tips">Dipisahkeun ku koma (,)</string>
     <string name="routing_settings_save">Simpen</string>
     <string name="routing_settings_delete">Ngusap</string>
-    <string name="routing_settings_scan_replace">Scan jeung ngaganti</string>
-    <string name="routing_settings_scan_append">Scan jeung tambahkeun</string>
-    <string name="routing_settings_default_rules">set aturan routing standar</string>
- 
+    <string name="routing_settings_rule_title">Routing Rule Setélan</string>
+    <string name="routing_settings_add_rule">Tambahkeun aturan</string>
+    <string name="routing_settings_import_rulesets">Impor set aturan</string>
+    <string name="routing_settings_import_rulesets_tip">Setélan aturan anu aya bakal dipupus, naha anjeun yakin bakal neruskeun?</string>
+
     <string name="connection_test_pending">Pariksa Konéktipitas</string>
     <string name="connection_test_testing">Nguji…</string>
     <string name="connection_test_available">Suksés: Sambungan HTTP nyandak waktos %dms</string>

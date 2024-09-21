@@ -4,10 +4,9 @@ import android.content.Context
 import androidx.multidex.MultiDexApplication
 import androidx.work.Configuration
 import com.tencent.mmkv.MMKV
+import com.neko.v2ray.util.SettingsManager
 
-class AngApplication : MultiDexApplication(), Configuration.Provider {
-    override val workManagerConfiguration: Configuration = Configuration.Builder().setDefaultProcessName("${BuildConfig.APPLICATION_ID}:bg").build()
-
+class AngApplication : MultiDexApplication() {
     companion object {
         lateinit var application: AngApplication
     }
@@ -17,8 +16,13 @@ class AngApplication : MultiDexApplication(), Configuration.Provider {
         application = this
     }
 
+    private val workManagerConfiguration: Configuration = Configuration.Builder()
+        .setDefaultProcessName("${BuildConfig.APPLICATION_ID}:bg")
+        .build()
+
     override fun onCreate() {
         super.onCreate()
         MMKV.initialize(this)
+        SettingsManager.initRoutingRulesets(this)
     }
 }

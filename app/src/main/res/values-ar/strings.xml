@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">تفضل IPv6</string>
     <string name="summary_pref_prefer_ipv6">تفضل عنوان IPv6 والمسارات</string>
  
-    <string name="title_pref_routing">التوجيه</string>
-    <string name="title_pref_routing_domain_strategy">استراتيجية المجال</string>
-    <string name="title_pref_routing_mode">قواعد محددة مسبقا</string>
-    <string name="title_pref_routing_custom">القواعد المخصصة</string>
- 
     <string name="title_pref_remote_dns">DNS البعيد (udp/tcp/https/quic) (اختياري)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -236,13 +231,15 @@
     <string name="tasker_start_service">إبدأ الخدمة</string>
     <string name="tasker_setting_confirm">يتأكد</string>
  
+    <string name="routing_settings_domain_strategy">استراتيجية المجال</string>
     <string name="routing_settings_title">إعدادات التوجيه</string>
-    <string name="routing_settings_tips">مفصولة بفواصل (،)، تذكر الحفظ</string>
+    <string name="routing_settings_tips">مفصولة بفواصل(,)</string>
     <string name="routing_settings_save">يحفظ</string>
     <string name="routing_settings_delete">واضح</string>
-    <string name="routing_settings_scan_replace">مسح واستبدال</string>
-    <string name="routing_settings_scan_append">مسح وإلحاق</string>
-    <string name="routing_settings_default_rules">تعيين قواعد التوجيه الافتراضية</string>
+    <string name="routing_settings_rule_title">إعدادات قواعد التوجيه</string>
+    <string name="routing_settings_add_rule">إضافة القاعدة</string>
+    <string name="routing_settings_import_rulesets">استيراد مجموعة القواعد</string>
+    <string name="routing_settings_import_rulesets_tip">سيتم حذف مجموعات القواعد الحالية، هل أنت متأكد من الاستمرار؟</string>
  
     <string name="connection_test_pending">تحقق من الاتصال</string>
     <string name="connection_test_testing">اختبارات…</string>

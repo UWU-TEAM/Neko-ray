@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">首选 IPv6</string>
     <string name="summary_pref_prefer_ipv6">首选 IPv6 地址和路由</string>
  
-    <string name="title_pref_routing">路由</string>
-    <string name="title_pref_routing_domain_strategy">领域策略</string>
-    <string name="title_pref_routing_mode">预定义规则</string>
-    <string name="title_pref_routing_custom">自定义规则</string>
- 
     <string name="title_pref_remote_dns">远程DNS (udp/tcp/https/quic)(可选)</string>
     <string name="summary_pref_remote_dns">域名系统</string>
  
@@ -236,14 +231,16 @@
     <string name="tasker_start_service">启动服务</string>
     <string name="tasker_setting_confirm">确认</string>
  
+    <string name="routing_settings_domain_strategy">域策略</string>
     <string name="routing_settings_title">路由设置</string>
-    <string name="routing_settings_tips">用逗号(,)分隔，记得保存</string>
+    <string name="routing_settings_tips">以逗号（,）分隔</string>
     <string name="routing_settings_save">节省</string>
     <string name="routing_settings_delete">清除</string>
-    <string name="routing_settings_scan_replace">扫描并替换</string>
-    <string name="routing_settings_scan_append">扫描并追加</string>
-    <string name="routing_settings_default_rules">设置默认路由规则</string>
- 
+    <string name="routing_settings_rule_title">路由规则设置</string>
+    <string name="routing_settings_add_rule">添加规则</string>
+    <string name="routing_settings_import_rulesets">导入规则集</string>
+    <string name="routing_settings_import_rulesets_tip">现有规则集将被删除，确定继续吗？</string>
+
     <string name="connection_test_pending">检查连接性</string>
     <string name="connection_test_testing">测试...</string>
     <string name="connection_test_available">成功：HTTP 连接花费了 %dms</string>

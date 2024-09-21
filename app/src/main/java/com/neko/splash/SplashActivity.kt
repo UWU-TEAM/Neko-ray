@@ -28,7 +28,7 @@ class SplashActivity : BaseActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             val cursor: Cursor? = myDB.bacaSemuaData()
             if (cursor == null || cursor.count == 0) {
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
+                startActivity(Intent(this@SplashActivity, TambahActivity::class.java))
             } else {
                 try {
                     val db = myDB.readableDatabase

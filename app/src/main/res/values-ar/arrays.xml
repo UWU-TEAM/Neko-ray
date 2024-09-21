@@ -17,20 +17,6 @@
         <item>تصدير إلى الحافظة</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>عنوان URL للوكيل أو IP</item>
-        <item>عنوان URL المباشر أو IP</item>
-        <item>عنوان URL المحظور أو IP</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>وكيل عالمي proxy</item>
-        <item>تجاوز عنوان LAN ثم الوكيل proxy</item>
-        <item>تجاوز عنوان البر الرئيسي ثم الوكيل</item>
-        <item>تجاوز عنوان LAN والبر الرئيسي ثم الوكيل proxy</item>
-        <item>عالمي مباشر</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>Proxy فقط</item>

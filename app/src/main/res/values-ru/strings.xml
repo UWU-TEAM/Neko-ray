@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">Предпочитаю IPv6</string>
     <string name="summary_pref_prefer_ipv6">Предпочитаю адрес и маршруты IPv6</string>
  
-    <string name="title_pref_routing">Маршрутизация</string>
-    <string name="title_pref_routing_domain_strategy">Стратегия домена</string>
-    <string name="title_pref_routing_mode">Предопределенные правила</string>
-    <string name="title_pref_routing_custom">Пользовательские правила</string>
- 
     <string name="title_pref_remote_dns">Удаленный DNS (udp/tcp/https/quic) (необязательно)</string>
     <string name="summary_pref_remote_dns">DNS</string>
  
@@ -236,14 +231,16 @@
     <string name="tasker_start_service">Запустить службу</string>
     <string name="tasker_setting_confirm">Подтверждать</string>
  
+    <string name="routing_settings_domain_strategy">Стратегия домена</string>
     <string name="routing_settings_title">Настройки маршрутизации</string>
-    <string name="routing_settings_tips">Через запятую (,), не забудьте сохранить</string>
+    <string name="routing_settings_tips">Разделено запятыми(,)</string>
     <string name="routing_settings_save">Сохранять</string>
     <string name="routing_settings_delete">Прозрачный</string>
-    <string name="routing_settings_scan_replace">Сканировать и заменить</string>
-    <string name="routing_settings_scan_append">Сканировать и добавить</string>
-    <string name="routing_settings_default_rules">установить правила маршрутизации по умолчанию</string>
- 
+    <string name="routing_settings_rule_title">Настройки правила маршрутизации</string>
+    <string name="routing_settings_add_rule">Добавление правила</string>
+    <string name="routing_settings_import_rulesets">Импорт набора правил</string>
+    <string name="routing_settings_import_rulesets_tip">Существующие наборы правил будут удалены. Вы уверены, что хотите продолжить?</string>
+
     <string name="connection_test_pending">Проверьте подключение</string>
     <string name="connection_test_testing">Тестирование…</string>
     <string name="connection_test_available">Успех: HTTP-соединение заняло %dms.</string>

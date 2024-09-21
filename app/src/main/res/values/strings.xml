@@ -146,11 +146,6 @@
     <string name="title_pref_prefer_ipv6">Prefer IPv6</string>
     <string name="summary_pref_prefer_ipv6">Prefer IPv6 address and routes</string>
 
-    <string name="title_pref_routing">Routing</string>
-    <string name="title_pref_routing_domain_strategy">Domain strategy</string>
-    <string name="title_pref_routing_mode">Predefined rules</string>
-    <string name="title_pref_routing_custom">Custom rules</string>
-
     <string name="title_pref_remote_dns">Remote DNS (udp/tcp/https/quic)(Optional)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
@@ -238,13 +233,15 @@
     <string name="tasker_start_service">Start Service</string>
     <string name="tasker_setting_confirm">Confirm</string>
 
+    <string name="routing_settings_domain_strategy">Domain strategy</string>
     <string name="routing_settings_title">Routing Settings</string>
-    <string name="routing_settings_tips">Separated by commas(,),remember to save</string>
+    <string name="routing_settings_tips">Separated by commas(,)</string>
     <string name="routing_settings_save">Save</string>
     <string name="routing_settings_delete">Clear</string>
-    <string name="routing_settings_scan_replace">Scan and replace</string>
-    <string name="routing_settings_scan_append">Scan and append</string>
-    <string name="routing_settings_default_rules"> set default routing rules</string>
+    <string name="routing_settings_rule_title">Routing Rule Settings</string>
+    <string name="routing_settings_add_rule">Add rule</string>
+    <string name="routing_settings_import_rulesets">Import ruleset</string>
+    <string name="routing_settings_import_rulesets_tip">Existing rulesets will be deleted, are you sure to continue?</string>
 
     <string name="connection_test_pending">Check Connectivity</string>
     <string name="connection_test_testing">Testing…</string>

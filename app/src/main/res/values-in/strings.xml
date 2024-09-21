@@ -144,11 +144,6 @@
     <string name="title_pref_prefer_ipv6">Lebih memilih IPv6</string>
     <string name="summary_pref_prefer_ipv6">Lebih memilih alamat dan rute IPv6</string>
 
-    <string name="title_pref_routing">Perutean</string>
-    <string name="title_pref_routing_domain_strategy">Strategi domain</string>
-    <string name="title_pref_routing_mode">Aturan yang telah ditentukan</string>
-    <string name="title_pref_routing_custom">Aturan khusus</string>
-
     <string name="title_pref_remote_dns">DNS jarak jauh (udp/tcp/https/quic)(Opsi)</string>
     <string name="summary_pref_remote_dns">DNS</string>
 
@@ -236,13 +231,15 @@
     <string name="tasker_start_service">Mulai Layanan</string>
     <string name="tasker_setting_confirm">Konfirmasi</string>
 
+    <string name="routing_settings_domain_strategy">Strategi domain</string>
     <string name="routing_settings_title">Pengaturan Perutean</string>
-    <string name="routing_settings_tips">Dipisahkan dengan koma(,),ingat untuk menyimpan</string>
+    <string name="routing_settings_tips">Dipisahkan dengan koma(,)</string>
     <string name="routing_settings_save">Simpan</string>
     <string name="routing_settings_delete">Hapus</string>
-    <string name="routing_settings_scan_replace">Pindai dan ganti</string>
-    <string name="routing_settings_scan_append">Pindai dan tambahkan</string>
-    <string name="routing_settings_default_rules">tetapkan aturan perutean default</string>
+    <string name="routing_settings_rule_title">Pengaturan Aturan Routing</string>
+    <string name="routing_settings_add_rule">Tambah aturan</string>
+    <string name="routing_settings_import_rulesets">Impor rangkaian aturan</string>
+    <string name="routing_settings_import_rulesets_tip">Rangkaian aturan yang ada akan dihapus, apakah Anda yakin untuk melanjutkan?</string>
 
     <string name="connection_test_pending">Periksa Konektivitas</string>
     <string name="connection_test_testing">Pengujian…</string>

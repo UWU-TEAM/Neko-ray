@@ -17,20 +17,6 @@
         <item>خروجی گرفتن در کلیپ‌بورد</item>
     </string-array>
 
-    <string-array name="routing_tag">
-        <item>نشانی اینترنتی یا آی‌پی پروکسی</item>
-        <item>نشانی اینترنتی یا آی‌پی مستقیم</item>
-        <item>نشانی اینترنتی یا آی‌پی مسدود شده</item>
-    </string-array>
-
-    <string-array name="routing_mode">
-        <item>پروکسی سراسری</item>
-        <item>دور زدن آدرس LAN و سپس پروکسی</item>
-        <item>دور زدن آدرس mainland و سپس پروکسی</item>
-        <item>دور زدن LAN و آدرس mainland و سپس پروکسی</item>
-        <item>مستقیم سراسری</item>
-    </string-array>
-
     <string-array name="mode_entries">
         <item>VPN</item>
         <item>فقط پروکسی</item>
