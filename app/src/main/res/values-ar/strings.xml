@@ -28,7 +28,8 @@
     <string name="menu_item_import_config_manually_vless">اكتب يدويًا[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">اكتب يدويًا[Shadowsocks]</string>
     <string name="menu_item_import_config_manually_socks">اكتب يدويًا[الجوارب]</string>
-    <string name="menu_item_import_config_manually_trojan">اكتب يدويًا[حصان طروادة]</string>
+    <string name="menu_item_import_config_manually_http">اكتب يدويًا[HTTP]</string>/
+    <string name="menu_item_import_config_manually_trojan">اكتب يدويًا[Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">اكتب يدويًا[Wireguard]</string>
     <string name="menu_item_import_config_custom">التكوين المخصص</string>
     <string name="menu_item_import_config_custom_clipboard">استيراد التكوين المخصص من الحافظة</string>

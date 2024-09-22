@@ -27,8 +27,9 @@
     <string name="menu_item_import_config_manually_vmess">Введите вручную [Vmess]</string>
     <string name="menu_item_import_config_manually_vless">Введите вручную[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">Введите вручную[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">Введите вручную [Носки]</string>
-    <string name="menu_item_import_config_manually_trojan">Введите вручную [Троян]</string>
+    <string name="menu_item_import_config_manually_socks">Введите вручную [Socks]</string>
+    <string name="menu_item_import_config_manually_http">Введите вручную[HTTP]</string>
+    <string name="menu_item_import_config_manually_trojan">Введите вручную [Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">Введите вручную [Wireguard]</string>
     <string name="menu_item_import_config_custom">Пользовательская конфигурация</string>
     <string name="menu_item_import_config_custom_clipboard">Импортировать пользовательскую конфигурацию из буфера обмена</string>

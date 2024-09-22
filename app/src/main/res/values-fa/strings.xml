@@ -27,7 +27,8 @@
     <string name="menu_item_import_config_manually_vmess">به صورت دستی تایپ کنید[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">به صورت دستی تایپ کنید[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">تایپ دستی [Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">تایپ دستی [جوراب]</string>
+    <string name="menu_item_import_config_manually_socks">تایپ دستی [Socks]</string>
+    <string name="menu_item_import_config_manually_http">به صورت دستی تایپ کنید[HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">به صورت دستی تایپ کنید[Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">به صورت دستی تایپ کنید[Wireguard]</string>
     <string name="menu_item_import_config_custom">پیکربندی سفارشی</string>

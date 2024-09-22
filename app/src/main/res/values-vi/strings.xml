@@ -27,7 +27,8 @@
     <string name="menu_item_import_config_manually_vmess">Nhập thủ công [Vmess]</string>
     <string name="menu_item_import_config_manually_vless">Nhập thủ công[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">Nhập thủ công [Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">Nhập thủ công [Tất]</string>
+    <string name="menu_item_import_config_manually_socks">Nhập thủ công [Socks]</string>
+    <string name="menu_item_import_config_manually_http">Nhập thủ công [HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">Nhập thủ công [Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">Nhập thủ công [Wireguard]</string>
     <string name="menu_item_import_config_custom">Cấu hình tùy chỉnh</string>

@@ -27,8 +27,9 @@
     <string name="menu_item_import_config_manually_vmess">手動輸入[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">手動輸入[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">手動輸入[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">手動輸入[襪子]</string>
-    <string name="menu_item_import_config_manually_trojan">手動輸入[木馬]</string>
+    <string name="menu_item_import_config_manually_socks">手動輸入[Socks]</string>
+    <string name="menu_item_import_config_manually_http">手动输入[HTTP]</string>
+    <string name="menu_item_import_config_manually_trojan">手動輸入[Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">手動輸入[Wireguard]</string>
     <string name="menu_item_import_config_custom">自訂配置</string>
     <string name="menu_item_import_config_custom_clipboard">從剪貼簿匯入自訂配置</string>

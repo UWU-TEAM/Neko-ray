@@ -28,6 +28,7 @@
     <string name="menu_item_import_config_manually_vless">Ketik secara manual[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">Ketik secara manual[Shadowsocks]</string>
     <string name="menu_item_import_config_manually_socks">Ketik secara manual[Socks]</string>
+    <string name="menu_item_import_config_manually_http">Ketik secara manual[HTTP]</string>
     <string name="menu_item_import_config_manually_trojan">Ketik secara manual[Trojan]</string>
     <string name="menu_item_import_config_manually_wireguard">Ketik secara manual[Wireguard ]</string>
     <string name="menu_item_import_config_custom">Config khusus</string>

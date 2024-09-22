@@ -27,9 +27,10 @@
     <string name="menu_item_import_config_manually_vmess">手動で入力[Vmess]</string>
     <string name="menu_item_import_config_manually_vless">手動で入力[VLESS]</string>
     <string name="menu_item_import_config_manually_ss">手動で入力[Shadowsocks]</string>
-    <string name="menu_item_import_config_manually_socks">手動で入力[靴下]</string>
-    <string name="menu_item_import_config_manually_trojan">手動で入力[トロイの木馬]</string>
-    <string name="menu_item_import_config_manually_wireguard">手動で入力[ワイヤーガード]</string>
+    <string name="menu_item_import_config_manually_socks">手動で入力[Socks]</string>
+    <string name="menu_item_import_config_manually_http">手動で入力[HTTP]</string>
+    <string name="menu_item_import_config_manually_trojan">手動で入力[Trojan]</string>
+    <string name="menu_item_import_config_manually_wireguard">手動で入力[Wireguard]</string>
     <string name="menu_item_import_config_custom">カスタム構成</string>
     <string name="menu_item_import_config_custom_clipboard">クリップボードからカスタム構成をインポートする</string>
     <string name="menu_item_import_config_custom_local">カスタム構成をローカルからインポートする</string>
