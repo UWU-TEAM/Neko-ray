@@ -20,9 +20,8 @@ import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.serverRawStorage
-import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
 import com.neko.imageslider.ImageSlider
@@ -109,7 +108,7 @@ class ServerCustomConfigActivity : BaseActivity() {
      */
     private fun bindingServer(config: ServerConfig): Boolean {
         binding.etRemarks.text = Utils.getEditable(config.remarks)
-        val raw = serverRawStorage?.decodeString(editGuid)
+        val raw = MmkvManager.decodeServerRaw(editGuid)
         if (raw.isNullOrBlank()) {
             binding.editor.setTextContent(Utils.getEditable(config.fullConfig?.toPrettyPrinting().orEmpty()))
         } else {
@@ -148,7 +147,7 @@ class ServerCustomConfigActivity : BaseActivity() {
         config.fullConfig = v2rayConfig
 
         MmkvManager.encodeServerConfig(editGuid, config)
-        serverRawStorage?.encode(editGuid, binding.editor.text.toString())
+        MmkvManager.encodeServerRaw(editGuid, binding.editor.text.toString())
         toast(R.string.toast_success)
         finish()
         return true

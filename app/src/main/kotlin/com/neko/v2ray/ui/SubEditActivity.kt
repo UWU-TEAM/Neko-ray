@@ -7,15 +7,13 @@ import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.appbar.MaterialToolbar
-import androidx.lifecycle.lifecycleScope
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.gson.Gson
+import androidx.lifecycle.lifecycleScope
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivitySubEditBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.subStorage
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
@@ -48,9 +46,9 @@ class SubEditActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val json = subStorage?.decodeString(editSubId)
-        if (!json.isNullOrBlank()) {
-            bindingServer(Gson().fromJson(json, SubscriptionItem::class.java))
+        val subItem = MmkvManager.decodeSubscription(editSubId)
+        if (subItem != null) {
+            bindingServer(subItem)
         } else {
             clearServer()
         }
@@ -121,13 +119,7 @@ class SubEditActivity : BaseActivity() {
      * save server config
      */
     private fun saveServer(): Boolean {
-        val subItem: SubscriptionItem
-        val json = subStorage?.decodeString(editSubId)
-        if (!json.isNullOrBlank()) {
-            subItem = Gson().fromJson(json, SubscriptionItem::class.java)
-        } else {
-            subItem = SubscriptionItem()
-        }
+        val subItem = MmkvManager.decodeSubscription(editSubId)?:SubscriptionItem()
 
         subItem.remarks = binding.etRemarks.text.toString()
         subItem.url = binding.etUrl.text.toString()

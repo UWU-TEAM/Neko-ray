@@ -21,7 +21,6 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
 import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
@@ -32,7 +31,6 @@ import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.assetStorage
 import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
@@ -143,7 +141,7 @@ class UserAssetActivity : BaseActivity() {
                         toast(R.string.msg_remark_is_duplicate)
                         return@registerForActivityResult
                     }
-                    assetStorage?.encode(assetId, Gson().toJson(assetItem))
+                    MmkvManager.encodeAsset(assetId, assetItem)
                     copyFile(uri)
                 } catch (e: Exception) {
                     toast(R.string.toast_asset_copy_failed)

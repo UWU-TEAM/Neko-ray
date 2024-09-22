@@ -8,14 +8,13 @@ import android.view.MenuItem
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.gson.Gson
+// import androidx.appcompat.app.AlertDialog
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityUserAssetUrlBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
-import com.neko.v2ray.util.MmkvManager.assetStorage
 import com.neko.v2ray.util.Utils
 import java.io.File
 
@@ -47,9 +46,9 @@ class UserAssetUrlActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val json = assetStorage?.decodeString(editAssetId)
-        if (!json.isNullOrBlank()) {
-            bindingAsset(Gson().fromJson(json, AssetUrlItem::class.java))
+        val assetItem = MmkvManager.decodeAsset(editAssetId)
+        if (assetItem != null) {
+            bindingAsset(assetItem)
         } else {
             clearAsset()
         }
@@ -113,12 +112,9 @@ class UserAssetUrlActivity : BaseActivity() {
      * save asset config
      */
     private fun saveServer(): Boolean {
-        val assetItem: AssetUrlItem
-        val json = assetStorage?.decodeString(editAssetId)
+        var assetItem = MmkvManager.decodeAsset(editAssetId)
         var assetId = editAssetId
-        if (!json.isNullOrBlank()) {
-            assetItem = Gson().fromJson(json, AssetUrlItem::class.java)
-
+        if (assetItem != null) {
             // remove file associated with the asset
             val file = extDir.resolve(assetItem.remarks)
             if (file.exists()) {
@@ -149,7 +145,7 @@ class UserAssetUrlActivity : BaseActivity() {
             return false
         }
 
-        assetStorage?.encode(assetId, Gson().toJson(assetItem))
+        MmkvManager.encodeAsset(assetId, assetItem)
         toast(R.string.toast_success)
         finish()
         return true

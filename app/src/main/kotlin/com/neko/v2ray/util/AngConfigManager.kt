@@ -13,7 +13,6 @@ import com.google.gson.reflect.TypeToken
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
-import com.neko.v2ray.util.MmkvManager.serverRawStorage
 import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.fmt.ShadowsocksFmt
 import com.neko.v2ray.util.fmt.SocksFmt
@@ -177,39 +176,6 @@ object AngConfigManager {
         return 0
     }
 
-//    /**
-//     * upgrade
-//     */
-//    private fun upgradeServerVersion(vmess: AngConfig.VmessBean): Int {
-//        try {
-//            if (vmess.configVersion == 2) {
-//                return 0
-//            }
-//
-//            when (vmess.network) {
-//                "ws", "h2" -> {
-//                    var path = ""
-//                    var host = ""
-//                    val lstParameter = vmess.requestHost.split(";")
-//                    if (lstParameter.isNotEmpty()) {
-//                        path = lstParameter[0].trim()
-//                    }
-//                    if (lstParameter.size > 1) {
-//                        path = lstParameter[0].trim()
-//                        host = lstParameter[1].trim()
-//                    }
-//                    vmess.path = path
-//                    vmess.requestHost = host
-//                }
-//            }
-//            vmess.configVersion = 2
-//            return 0
-//        } catch (e: Exception) {
-//            e.printStackTrace()
-//            return -1
-//        }
-//    }
-
     fun importBatchConfig(server: String?, subid: String, append: Boolean): Pair<Int, Int> {
         var count = parseBatchConfig(Utils.decode(server), subid, append)
         if (count <= 0) {
@@ -324,7 +290,7 @@ object AngConfigManager {
                                 .toString())
                         config.subscriptionId = subid
                         val key = MmkvManager.encodeServerConfig("", config)
-                        serverRawStorage?.encode(key, gson.toJson(srv))
+                        MmkvManager.encodeServerRaw(key, gson.toJson(srv))
                         count += 1
                     }
                     return count
@@ -339,14 +305,14 @@ object AngConfigManager {
             config.fullConfig = Gson().fromJson(server, V2rayConfig::class.java)
             config.remarks = config.fullConfig?.remarks ?: System.currentTimeMillis().toString()
             val key = MmkvManager.encodeServerConfig("", config)
-            serverRawStorage?.encode(key, server)
+            MmkvManager.encodeServerRaw(key, server)
             return 1
         } else if (server.startsWith("[Interface]") && server.contains("[Peer]")) {
             val config = WireguardFmt.parseWireguardConfFile(server)
                 ?: return R.string.toast_incorrect_protocol
             config.fullConfig?.remarks ?: System.currentTimeMillis().toString()
             val key = MmkvManager.encodeServerConfig("", config)
-            serverRawStorage?.encode(key, server)
+            MmkvManager.encodeServerRaw(key, server)
             return 1
         } else {
             return 0

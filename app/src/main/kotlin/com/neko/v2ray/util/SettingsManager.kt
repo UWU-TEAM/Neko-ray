@@ -2,10 +2,12 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
-import android.util.Log
 import com.google.gson.Gson
 import com.neko.v2ray.dto.RulesetItem
-import com.neko.v2ray.util.MmkvManager.subStorage
+import com.neko.v2ray.dto.ServerConfig
+import com.neko.v2ray.util.MmkvManager.decodeProfileConfig
+import com.neko.v2ray.util.MmkvManager.decodeServerConfig
+import com.neko.v2ray.util.MmkvManager.decodeServerList
 import java.util.Collections
 
 object SettingsManager {
@@ -90,5 +92,18 @@ object SettingsManager {
         MmkvManager.encodeSubsList(subsList)
     }
 
+    fun getServerViaRemarks(remarks: String?): ServerConfig? {
+        if (remarks == null) {
+            return null
+        }
+        val serverList = decodeServerList()
+        for (guid in serverList) {
+            val profile = decodeProfileConfig(guid)
+            if (profile != null && profile.remarks == remarks) {
+                return decodeServerConfig(guid)
+            }
+        }
+        return null
+    }
 
 }
