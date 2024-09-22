@@ -8,17 +8,18 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.recyclerview.widget.RecyclerView
-import com.google.gson.Gson
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ItemQrcodeBinding
 import com.neko.v2ray.databinding.ItemRecyclerSubSettingBinding
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager.subStorage
+import com.neko.v2ray.helper.ItemTouchHelperAdapter
+import com.neko.v2ray.helper.ItemTouchHelperViewHolder
+import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.QRCodeDecoder
+import com.neko.v2ray.util.SettingsManager
 import com.neko.v2ray.util.Utils
 
-class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
-    RecyclerView.Adapter<SubSettingRecyclerAdapter.MainViewHolder>() {
+class SubSettingRecyclerAdapter(val activity: SubSettingActivity) : RecyclerView.Adapter<SubSettingRecyclerAdapter.MainViewHolder>(), ItemTouchHelperAdapter {
 
     private var mActivity: SubSettingActivity = activity
 
@@ -44,7 +45,8 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
         }
         holder.itemSubSettingBinding.chkEnable.setOnCheckedChangeListener { _, isChecked ->
             subItem.enabled = isChecked
-            subStorage?.encode(subId, Gson().toJson(subItem))
+            MmkvManager.encodeSubscription(subId, subItem)
+
         }
 
         if (TextUtils.isEmpty(subItem.url)) {
@@ -92,5 +94,28 @@ class SubSettingRecyclerAdapter(val activity: SubSettingActivity) :
     }
 
     class MainViewHolder(val itemSubSettingBinding: ItemRecyclerSubSettingBinding) :
-        RecyclerView.ViewHolder(itemSubSettingBinding.root)
+        BaseViewHolder(itemSubSettingBinding.root), ItemTouchHelperViewHolder
+
+    open class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun onItemSelected() {
+            itemView.setBackgroundColor(Color.LTGRAY)
+        }
+
+        fun onItemClear() {
+            itemView.setBackgroundColor(0)
+        }
+    }
+
+    override fun onItemMove(fromPosition: Int, toPosition: Int): Boolean {
+        SettingsManager.swapSubscriptions(fromPosition, toPosition)
+        notifyItemMoved(fromPosition, toPosition)
+        return true
+    }
+
+    override fun onItemMoveCompleted() {
+        mActivity.refreshData()
+    }
+
+    override fun onItemDismiss(position: Int) {
+    }
 }

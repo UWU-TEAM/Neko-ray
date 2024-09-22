@@ -2,18 +2,20 @@ package com.neko.v2ray.ui
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.appbar.MaterialToolbar
 import android.view.Menu
 import android.view.MenuItem
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.neko.v2ray.R
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.databinding.ActivitySubSettingBinding
 import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.util.AngConfigManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
@@ -27,6 +29,7 @@ class SubSettingActivity : BaseActivity() {
 
     var subscriptions: List<Pair<String, SubscriptionItem>> = listOf()
     private val adapter by lazy { SubSettingRecyclerAdapter(this) }
+    private var mItemTouchHelper: ItemTouchHelper? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,19 +39,20 @@ class SubSettingActivity : BaseActivity() {
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        softInputAssist = SoftInputAssist(this)
 
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
 
-        softInputAssist = SoftInputAssist(this)
+        mItemTouchHelper = ItemTouchHelper(SimpleItemTouchHelperCallback(adapter))
+        mItemTouchHelper?.attachToRecyclerView(binding.recyclerView)
     }
 
     override fun onResume() {
         softInputAssist.onResume()
         super.onResume()
-        subscriptions = MmkvManager.decodeSubscriptions()
-        adapter.notifyDataSetChanged()
+        refreshData()
     }
 
     override fun onPause() {
@@ -96,5 +100,10 @@ class SubSettingActivity : BaseActivity() {
 
         else -> super.onOptionsItemSelected(item)
 
+    }
+
+    fun refreshData() {
+        subscriptions = MmkvManager.decodeSubscriptions()
+        adapter.notifyDataSetChanged()
     }
 }

@@ -3,13 +3,17 @@ package com.neko.v2ray.ui
 import android.content.Intent
 import android.graphics.Color
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.neko.v2ray.databinding.ItemRecyclerRoutingSettingBinding
+import com.neko.v2ray.helper.ItemTouchHelperAdapter
+import com.neko.v2ray.helper.ItemTouchHelperViewHolder
+import com.neko.v2ray.ui.MainRecyclerAdapter.BaseViewHolder
 import com.neko.v2ray.util.SettingsManager
 
-class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) :
-    RecyclerView.Adapter<RoutingSettingRecyclerAdapter.MainViewHolder>() {
+class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : RecyclerView.Adapter<RoutingSettingRecyclerAdapter.MainViewHolder>(),
+    ItemTouchHelperAdapter {
 
     private var mActivity: RoutingSettingActivity = activity
     override fun getItemCount() = mActivity.rulesets.size
@@ -47,5 +51,28 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) :
     }
 
     class MainViewHolder(val itemRoutingSettingBinding: ItemRecyclerRoutingSettingBinding) :
-        RecyclerView.ViewHolder(itemRoutingSettingBinding.root)
+        BaseViewHolder(itemRoutingSettingBinding.root), ItemTouchHelperViewHolder
+
+    open class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        fun onItemSelected() {
+            itemView.setBackgroundColor(Color.LTGRAY)
+        }
+
+        fun onItemClear() {
+            itemView.setBackgroundColor(0)
+        }
+    }
+
+    override fun onItemMove(fromPosition: Int, toPosition: Int): Boolean {
+        SettingsManager.swapRoutingRuleset(fromPosition, toPosition)
+        notifyItemMoved(fromPosition, toPosition)
+        return true
+    }
+
+    override fun onItemMoveCompleted() {
+        mActivity.refreshData()
+    }
+
+    override fun onItemDismiss(position: Int) {
+    }
 }

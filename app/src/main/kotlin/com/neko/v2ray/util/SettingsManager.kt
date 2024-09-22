@@ -2,8 +2,11 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
+import android.util.Log
 import com.google.gson.Gson
 import com.neko.v2ray.dto.RulesetItem
+import com.neko.v2ray.util.MmkvManager.subStorage
+import java.util.Collections
 
 object SettingsManager {
 
@@ -69,6 +72,22 @@ object SettingsManager {
         val rulesetItems = MmkvManager.decodeRoutingRulesets()
         val exist = rulesetItems?.any { it.enabled && it.domain?.contains(":private") == true }
         return exist == true
+    }
+
+    fun swapRoutingRuleset(fromPosition: Int, toPosition: Int) {
+        val rulesetList = MmkvManager.decodeRoutingRulesets()
+        if (rulesetList.isNullOrEmpty()) return
+
+        Collections.swap(rulesetList, fromPosition, toPosition)
+        MmkvManager.encodeRoutingRulesets(rulesetList)
+    }
+
+    fun swapSubscriptions(fromPosition: Int, toPosition: Int) {
+        val subsList = MmkvManager.decodeSubsList()
+        if (subsList.isNullOrEmpty()) return
+
+        Collections.swap(subsList, fromPosition, toPosition)
+        MmkvManager.encodeSubsList(subsList)
     }
 
 

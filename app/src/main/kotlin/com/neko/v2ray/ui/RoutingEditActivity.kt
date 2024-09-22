@@ -126,7 +126,6 @@ class RoutingEditActivity : BaseActivity() {
             return false
         }
 
-        Log.d("====", Gson().toJson(rulesetItem))
         SettingsManager.saveRoutingRuleset(position, rulesetItem)
         toast(R.string.toast_success)
         finish()
