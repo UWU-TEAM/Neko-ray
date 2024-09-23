@@ -6,6 +6,7 @@ import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.Gson
 import com.neko.v2ray.R

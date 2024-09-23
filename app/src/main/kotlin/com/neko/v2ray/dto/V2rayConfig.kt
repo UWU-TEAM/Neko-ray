@@ -7,7 +7,7 @@ import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
 import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
-import com.v2ray.ang.util.Utils
+import com.neko.v2ray.util.Utils
 import java.lang.reflect.Type
 
 data class V2rayConfig(

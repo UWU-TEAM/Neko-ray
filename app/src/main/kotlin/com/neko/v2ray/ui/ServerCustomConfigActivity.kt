@@ -22,6 +22,7 @@ import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.serverRawStorage
 import com.neko.v2ray.util.Utils
+import com.neko.v2ray.util.SoftInputAssist
 import me.drakeet.support.toast.ToastCompat
 
 import com.neko.imageslider.ImageSlider
