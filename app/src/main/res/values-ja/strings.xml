@@ -31,6 +31,7 @@
     <string name="menu_item_import_config_manually_http">手動で入力 <b>[HTTP]</b></string>
     <string name="menu_item_import_config_manually_trojan">手動で入力 <b>[TROJAN]</b></string>
     <string name="menu_item_import_config_manually_wireguard">手動で入力 <b>[WIREGUARD]</b></string>
+    <string name="menu_item_import_config_manually_hysteria2">手動で入力 <b>[HYSTERIA2]</b></string>
     <string name="menu_item_import_config_custom">カスタム構成</string>
     <string name="menu_item_import_config_custom_clipboard">クリップボードからカスタム構成をインポートする</string>
     <string name="menu_item_import_config_custom_local">カスタム構成をローカルからインポートする</string>

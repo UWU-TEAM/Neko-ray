@@ -14,6 +14,7 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
 import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.util.fmt.Hysteria2Fmt
 import com.neko.v2ray.util.fmt.ShadowsocksFmt
 import com.neko.v2ray.util.fmt.SocksFmt
 import com.neko.v2ray.util.fmt.TrojanFmt
@@ -49,6 +50,8 @@ object AngConfigManager {
                 VlessFmt.parseVless(str)
             } else if (str.startsWith(EConfigType.WIREGUARD.protocolScheme)) {
                 WireguardFmt.parseWireguard(str)
+            } else if (str.startsWith(EConfigType.HYSTERIA2.protocolScheme)) {
+                Hysteria2Fmt.parseHysteria2(str)
             } else {
                 null
             }
@@ -91,6 +94,7 @@ object AngConfigManager {
                 EConfigType.VLESS -> VlessFmt.toUri(config)
                 EConfigType.TROJAN -> TrojanFmt.toUri(config)
                 EConfigType.WIREGUARD -> WireguardFmt.toUri(config)
+                EConfigType.HYSTERIA2 -> Hysteria2Fmt.toUri(config)
             }
         } catch (e: Exception) {
             e.printStackTrace()

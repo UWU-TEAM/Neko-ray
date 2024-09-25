@@ -148,6 +148,7 @@ class ServerActivity : BaseActivity() {
             EConfigType.VLESS -> setContentView(R.layout.activity_server_vless)
             EConfigType.TROJAN -> setContentView(R.layout.activity_server_trojan)
             EConfigType.WIREGUARD -> setContentView(R.layout.activity_server_wireguard)
+            EConfigType.HYSTERIA2 -> setContentView(R.layout.activity_server_hysteria2)
         }
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
@@ -467,7 +468,10 @@ class ServerActivity : BaseActivity() {
             && config.configType != EConfigType.HTTP
             && TextUtils.isEmpty(et_id.text.toString())
         ) {
-            if (config.configType == EConfigType.TROJAN || config.configType == EConfigType.SHADOWSOCKS) {
+            if (config.configType == EConfigType.TROJAN
+                || config.configType == EConfigType.SHADOWSOCKS
+                || config.configType == EConfigType.HYSTERIA2
+            ) {
                 toast(R.string.server_lab_id3)
             } else {
                 toast(R.string.server_lab_id)
@@ -499,8 +503,10 @@ class ServerActivity : BaseActivity() {
         wireguard?.peers?.get(0)?.let { _ ->
             savePeer(wireguard, port)
         }
+
         config.outboundBean?.streamSettings?.let {
-            saveStreamSettings(it)
+            val sni = saveStreamSettings(it)
+            saveTls(it, sni)
         }
         if (config.subscriptionId.isEmpty() && !subscriptionId.isNullOrEmpty()) {
             config.subscriptionId = subscriptionId.orEmpty()
@@ -549,7 +555,7 @@ class ServerActivity : BaseActivity() {
                 socksUsersBean.pass = et_id.text.toString().trim()
                 server.users = listOf(socksUsersBean)
             }
-        } else if (config.configType == EConfigType.TROJAN) {
+        } else if (config.configType == EConfigType.TROJAN || config.configType == EConfigType.HYSTERIA2) {
             server.password = et_id.text.toString().trim()
         }
     }
@@ -571,21 +577,13 @@ class ServerActivity : BaseActivity() {
         wireguard.mtu = Utils.parseInt(et_local_mtu?.text.toString())
     }
 
-    private fun saveStreamSettings(streamSetting: V2rayConfig.OutboundBean.StreamSettingsBean) {
-        val network = sp_network?.selectedItemPosition ?: return
-        val type = sp_header_type?.selectedItemPosition ?: return
-        val requestHost = et_request_host?.text?.toString()?.trim() ?: return
-        val path = et_path?.text?.toString()?.trim() ?: return
-        val sniField = et_sni?.text?.toString()?.trim() ?: return
-        val allowInsecureField = sp_allow_insecure?.selectedItemPosition ?: return
-        val streamSecurity = sp_stream_security?.selectedItemPosition ?: return
-        val utlsIndex = sp_stream_fingerprint?.selectedItemPosition ?: return
-        val alpnIndex = sp_stream_alpn?.selectedItemPosition ?: return
-        val publicKey = et_public_key?.text?.toString()?.trim() ?: return
-        val shortId = et_short_id?.text?.toString()?.trim() ?: return
-        val spiderX = et_spider_x?.text?.toString()?.trim() ?: return
+    private fun saveStreamSettings(streamSetting: V2rayConfig.OutboundBean.StreamSettingsBean): String? {
+        val network = sp_network?.selectedItemPosition ?: return null
+        val type = sp_header_type?.selectedItemPosition ?: return null
+        val requestHost = et_request_host?.text?.toString()?.trim() ?: return null
+        val path = et_path?.text?.toString()?.trim() ?: return null
 
-        var sni = streamSetting.populateTransportSettings(
+        val sni = streamSetting.populateTransportSettings(
             transport = networks[network],
             headerType = transportTypes(networks[network])[type],
             host = requestHost,
@@ -597,10 +595,21 @@ class ServerActivity : BaseActivity() {
             serviceName = path,
             authority = requestHost,
         )
-        if (sniField.isNotBlank()) {
-            sni = sniField
-        }
-        val allowInsecure = if (allowinsecures[allowInsecureField].isBlank()) {
+
+        return sni
+    }
+
+    private fun saveTls(streamSetting: V2rayConfig.OutboundBean.StreamSettingsBean, sni: String?) {
+        val streamSecurity = sp_stream_security?.selectedItemPosition ?: return
+        val sniField = et_sni?.text?.toString()?.trim()
+        val allowInsecureField = sp_allow_insecure?.selectedItemPosition
+        val utlsIndex = sp_stream_fingerprint?.selectedItemPosition ?: 0
+        val alpnIndex = sp_stream_alpn?.selectedItemPosition ?: 0
+        val publicKey = et_public_key?.text?.toString()
+        val shortId = et_short_id?.text?.toString()
+        val spiderX = et_spider_x?.text?.toString()
+
+        val allowInsecure = if (allowInsecureField == null || allowinsecures[allowInsecureField].isBlank()) {
             settingsStorage?.decodeBool(PREF_ALLOW_INSECURE) ?: false
         } else {
             allowinsecures[allowInsecureField].toBoolean()
@@ -609,7 +618,7 @@ class ServerActivity : BaseActivity() {
         streamSetting.populateTlsSettings(
             streamSecurity = streamSecuritys[streamSecurity],
             allowInsecure = allowInsecure,
-            sni = sni,
+            sni = sniField ?: sni ?: "",
             fingerprint = uTlsItems[utlsIndex],
             alpns = alpns[alpnIndex],
             publicKey = publicKey,

@@ -31,6 +31,7 @@
     <string name="menu_item_import_config_manually_http">Type manually <b>[HTTP]</b></string>
     <string name="menu_item_import_config_manually_trojan">Type manually <b>[TROJAN]</b></string>
     <string name="menu_item_import_config_manually_wireguard">Type manually <b>[WIREGUARD]</b></string>
+    <string name="menu_item_import_config_manually_hysteria2">Type manually <b>[HYSTERIA2]</b></string>
     <string name="menu_item_import_config_custom">Custom config</string>
     <string name="menu_item_import_config_custom_clipboard">Import custom config from Clipboard</string>
     <string name="menu_item_import_config_custom_local">Import custom config from locally</string>

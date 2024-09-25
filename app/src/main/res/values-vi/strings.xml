@@ -31,6 +31,7 @@
     <string name="menu_item_import_config_manually_http">Nhập thủ công <b>[HTTP]</b></string>
     <string name="menu_item_import_config_manually_trojan">Nhập thủ công <b>[TROJAN]</b></string>
     <string name="menu_item_import_config_manually_wireguard">Nhập thủ công <b>[WIREGUARD]</b></string>
+    <string name="menu_item_import_config_manually_hysteria2">Nhập thủ công <b>[HYSTERIA2]</b></string>
     <string name="menu_item_import_config_custom">Cấu hình tùy chỉnh</string>
     <string name="menu_item_import_config_custom_clipboard">Nhập cấu hình tùy chỉnh từ Clipboard</string>
     <string name="menu_item_import_config_custom_local">Nhập cấu hình tùy chỉnh từ cục bộ</string>

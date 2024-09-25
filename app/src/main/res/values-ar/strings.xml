@@ -31,6 +31,7 @@
     <string name="menu_item_import_config_manually_http">اكتب يدويًا <b>[HTTP]</b></string>/
     <string name="menu_item_import_config_manually_trojan">اكتب يدويًا <b>[TROJAN]</b></string>
     <string name="menu_item_import_config_manually_wireguard">اكتب يدويًا <b>[WIREGUARD]</b></string>
+    <string name="menu_item_import_config_manually_hysteria2">اكتب يدويا <b>[HYSTERIA2]</b></string>
     <string name="menu_item_import_config_custom">التكوين المخصص</string>
     <string name="menu_item_import_config_custom_clipboard">استيراد التكوين المخصص من الحافظة</string>
     <string name="menu_item_import_config_custom_local">استيراد التكوين المخصص من محليا</string>

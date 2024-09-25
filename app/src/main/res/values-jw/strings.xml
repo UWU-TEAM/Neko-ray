@@ -31,6 +31,7 @@
     <string name="menu_item_import_config_manually_http">Ketik manual <b>[HTTP]</b></string>
     <string name="menu_item_import_config_manually_trojan">Ketik manual <b>[TROJAN]</b></string>
     <string name="menu_item_import_config_manually_wireguard">Ketik kanthi manual <b>[WIREGUARD]</b></string>
+    <string name="menu_item_import_config_manually_hysteria2">Ketik kanthi manual <b>[HYSTERIA2]</b></string>
     <string name="menu_item_import_config_custom">Konfigurasi kustom</string>
     <string name="menu_item_import_config_custom_clipboard">Impor konfigurasi khusus saka Clipboard</string>
     <string name="menu_item_import_config_custom_local">Impor konfigurasi kustom saka lokal</string>
