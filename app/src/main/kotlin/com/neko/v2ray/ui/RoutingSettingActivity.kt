@@ -9,6 +9,8 @@ import android.widget.AdapterView
 import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingBinding
@@ -33,8 +35,10 @@ class RoutingSettingActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-
-        title = getString(R.string.routing_settings_title)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)

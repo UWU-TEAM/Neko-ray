@@ -285,11 +285,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/server_lab_remarks"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_remarks"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:hint="@string/server_lab_remarks"
                                     android:inputType="text" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
@@ -303,6 +305,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/routing_settings_domain"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_domain"
@@ -323,6 +326,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="10.0dip"
                                 android:hint="@string/routing_settings_ip"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_ip"
@@ -335,11 +339,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/routing_settings_port"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_port"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
+                                    android:hint="@string/routing_settings_port"
                                     android:inputType="number" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
@@ -353,6 +359,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/routing_settings_protocol"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_protocol"
@@ -372,6 +379,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/routing_settings_network"
+                                app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/et_network"

@@ -21,7 +21,6 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) :
         holder.itemRoutingSettingBinding.domainIp.text = (ruleset.domain ?: ruleset.ip ?: ruleset.port)?.toString()
         holder.itemRoutingSettingBinding.outboundTag.text = ruleset.outboundTag
         holder.itemRoutingSettingBinding.chkEnable.isChecked = ruleset.enabled
-        holder.itemRoutingSettingBinding.autoUpdateCheck.isChecked = ruleset.enabled
         holder.itemView.setBackgroundColor(Color.TRANSPARENT)
 
         holder.itemRoutingSettingBinding.layoutEdit.setOnClickListener {
@@ -32,11 +31,6 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) :
         }
 
         holder.itemRoutingSettingBinding.chkEnable.setOnCheckedChangeListener { _, isChecked ->
-            ruleset.enabled = isChecked
-            SettingsManager.saveRoutingRuleset(position, ruleset)
-        }
-
-        holder.itemRoutingSettingBinding.autoUpdateCheck.setOnCheckedChangeListener { _, isChecked ->
             ruleset.enabled = isChecked
             SettingsManager.saveRoutingRuleset(position, ruleset)
         }

@@ -1,104 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
     android:id="@+id/item_bg"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:gravity="center_vertical">
-
+    android:layout_marginLeft="16.0dip"
+    android:layout_marginTop="4.0dip"
+    android:layout_marginRight="16.0dip"
+    android:layout_marginBottom="4.0dip">
     <androidx.cardview.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:orientation="horizontal"
         android:id="@+id/item_cardview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/cardview_margin"
-        android:orientation="horizontal"
-        card_view:cardCornerRadius="5dp">
-
+        app:cardBackgroundColor="@color/uwu_bg_card"
+        app:cardCornerRadius="24.0dip"
+        app:cardElevation="0.0dip">
         <LinearLayout
-            android:id="@+id/info_container"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/sub_height"
-            android:layout_gravity="center"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="?attr/selectableItemBackground"
             android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:id="@+id/info_container"
+            android:background="?attr/selectableItemBackground"
+            android:focusable="true"
             android:nextFocusRight="@+id/layout_edit"
-            android:orientation="horizontal">
-
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
                 android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
                 android:paddingStart="@dimen/padding_start">
-
                 <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:id="@+id/remarks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
-
+                    android:layout_marginTop="10.0dip" />
                 <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:id="@+id/domainIp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
+                    android:layout_marginTop="10.0dip"
+                    android:lines="1" />
                 <TextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:id="@+id/outboundTag"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:lines="1"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
-
+                    android:layout_marginTop="10.0dip"
+                    android:layout_marginBottom="10.0dip"
+                    android:lines="1" />
             </LinearLayout>
-
-
             <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/sub_height"
-                android:gravity="center"
                 android:paddingStart="@dimen/padding_start"
-                android:paddingEnd="@dimen/padding_end"
-                android:orientation="vertical">
-
+                android:paddingEnd="@dimen/padding_end">
                 <LinearLayout
-                    android:id="@+id/layout_edit"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="?attr/selectableItemBackgroundBorderless"
-                    android:clickable="true"
-                    android:focusable="true"
                     android:gravity="center"
-                    android:nextFocusLeft="@+id/info_container"
                     android:orientation="vertical"
-                    android:padding="@dimen/layout_margin_spacing">
-
+                    android:id="@+id/layout_edit"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/layout_margin_spacing"
+                    android:focusable="true"
+                    android:nextFocusLeft="@+id/info_container"
+                    android:clickable="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
                     <ImageView
                         android:layout_width="@dimen/png_height"
                         android:layout_height="@dimen/png_height"
                         app:srcCompat="@drawable/ic_edit_24dp" />
                 </LinearLayout>
-
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/padding_start"
-                    android:orientation="horizontal">
-
-                    <androidx.appcompat.widget.SwitchCompat
+                    android:layout_marginTop="@dimen/padding_start">
+                    <com.neko.switchbutton.SwitchButton
+                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:id="@+id/chk_enable"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        app:kswAnimationDuration="300"
+                        app:kswBackDrawable="@drawable/uwu_switch_track"
+                        app:kswThumbDrawable="@drawable/uwu_switch_thumb" />
                 </LinearLayout>
             </LinearLayout>
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 </LinearLayout>
