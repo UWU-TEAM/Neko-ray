@@ -55,7 +55,7 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : Recy
 
     open class BaseViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun onItemSelected() {
-            itemView.setBackgroundColor(Color.LTGRAY)
+            itemView.setBackgroundColor(Color.TRANSPARENT)
         }
 
         fun onItemClear() {
