@@ -9,7 +9,7 @@ import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object WireguardFmt {
-    fun parseWireguard(str: String): ServerConfig? {
+    fun parse(str: String): ServerConfig? {
         val uri = URI(Utils.fixIllegalUrl(str))
         if (uri.rawQuery != null) {
             val config = ServerConfig.create(EConfigType.WIREGUARD)
