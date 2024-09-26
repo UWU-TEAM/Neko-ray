@@ -216,6 +216,7 @@
     <string name="title_sub_setting">Berlangganan</string>
     <string name="sub_setting_remarks">keterangan</string>
     <string name="sub_setting_url">URL Opsi</string>
+    <string name="sub_setting_filter">Komentar filter biasa</string>
     <string name="sub_setting_enable">Aktifkan pembaruan</string>
     <string name="sub_auto_update">Aktifkan pembaruan otomatis</string>
     <string name="sub_setting_pre_profile">Pernyataan proksi sebelumnya</string>

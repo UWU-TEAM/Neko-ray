@@ -5,6 +5,7 @@ import android.os.SystemClock
 import android.text.TextUtils
 import android.util.Log
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.responseLength
 import kotlinx.coroutines.isActive
@@ -108,7 +109,7 @@ object SpeedtestUtil {
             conn = url.openConnection(
                 Proxy(
                     Proxy.Type.HTTP,
-                    InetSocketAddress("127.0.0.1", port)
+                    InetSocketAddress(LOOPBACK, port)
                 )
             ) as HttpURLConnection
             conn.connectTimeout = 30000

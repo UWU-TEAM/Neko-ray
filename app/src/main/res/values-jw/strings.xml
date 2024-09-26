@@ -216,6 +216,7 @@
     <string name="title_sub_setting">Langganan</string>
     <string name="sub_setting_remarks">deskripsi</string>
     <string name="sub_setting_url">URL Pilihan</string>
+    <string name="sub_setting_filter">Cathetan filter biasa</string>
     <string name="sub_setting_enable">Aktifake nganyari</string>
     <string name="sub_auto_update">Aktifake nganyari otomatis</string>
     <string name="sub_setting_pre_profile">Komentar proxy sadurunge</string>

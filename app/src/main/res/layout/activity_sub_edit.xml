@@ -448,6 +448,24 @@
                             <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:hint="@string/sub_setting_filter"
+                                style="@style/Outline_TextInputLayout">
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/et_filter"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="text" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_marginBottom="8.0dip">
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
                                 android:hint="@string/sub_setting_pre_profile"
                                 style="@style/Outline_TextInputLayout">
                                 <com.google.android.material.textfield.TextInputEditText

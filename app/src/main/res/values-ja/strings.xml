@@ -216,6 +216,7 @@
     <string name="title_sub_setting">サブスクリプション</string>
     <string name="sub_setting_remarks">備考</string>
     <string name="sub_setting_url">オプションの URL</string>
+    <string name="sub_setting_filter">備考 通常フィルター</string>
     <string name="sub_setting_enable">アップデートを有効にする</string>
     <string name="sub_auto_update">自動更新を有効にする</string>
     <string name="sub_setting_pre_profile">以前の代理人の発言</string>

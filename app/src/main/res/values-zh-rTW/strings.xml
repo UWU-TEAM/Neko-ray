@@ -216,6 +216,7 @@
     <string name="title_sub_setting">訂閱</string>
     <string name="sub_setting_remarks">評論</string>
     <string name="sub_setting_url">可選網址</string>
+    <string name="sub_setting_filter">備註 常規過濾器</string>
     <string name="sub_setting_enable">啟用更新</string>
     <string name="sub_auto_update">啟用自動更新</string>
     <string name="sub_setting_pre_profile">之前的代理備註</string>

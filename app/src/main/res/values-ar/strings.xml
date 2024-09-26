@@ -216,6 +216,7 @@
     <string name="title_sub_setting">الاشتراك</string>
     <string name="sub_setting_remarks">ملاحظات</string>
     <string name="sub_setting_url">عنوان URL اختياري</string>
+    <string name="sub_setting_filter">ملاحظات الفلتر العادي</string>
     <string name="sub_setting_enable">تمكين التحديث</string>
     <string name="sub_auto_update">تمكين التحديث التلقائي</string>
     <string name="sub_setting_pre_profile">تصريحات الوكالة السابقة</string>

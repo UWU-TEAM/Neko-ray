@@ -23,8 +23,9 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.R
-import com.neko.v2ray.databinding.ActivityUserAssetBinding
+import com.neko.v2ray.databinding.ActivitySubSettingBinding
 import com.neko.v2ray.databinding.ItemRecyclerUserAssetBinding
 import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.AssetUrlItem
@@ -218,7 +219,7 @@ class UserAssetActivity : BaseActivity() {
                 URL(item.url).openConnection(
                     Proxy(
                         Proxy.Type.HTTP,
-                        InetSocketAddress("127.0.0.1", httpPort)
+                        InetSocketAddress(LOOPBACK, httpPort)
                     )
                 ) as HttpURLConnection
             }

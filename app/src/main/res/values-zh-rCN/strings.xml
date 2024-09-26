@@ -216,6 +216,7 @@
     <string name="title_sub_setting">订阅</string>
     <string name="sub_setting_remarks">评论</string>
     <string name="sub_setting_url">可选网址</string>
+    <string name="sub_setting_filter">备注常规过滤器</string>
     <string name="sub_setting_enable">启用更新</string>
     <string name="sub_auto_update">启用自动更新</string>
     <string name="sub_setting_pre_profile">先前的代理意见</string>

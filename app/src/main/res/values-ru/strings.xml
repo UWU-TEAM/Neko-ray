@@ -216,6 +216,7 @@
     <string name="title_sub_setting">Подписка</string>
     <string name="sub_setting_remarks">замечания</string>
     <string name="sub_setting_url">Необязательный URL-адрес</string>
+    <string name="sub_setting_filter">Примечания регулярный фильтр</string>
     <string name="sub_setting_enable">Включить обновление</string>
     <string name="sub_auto_update">Включить автоматическое обновление</string>
     <string name="sub_setting_pre_profile">Предыдущие замечания доверенности</string>

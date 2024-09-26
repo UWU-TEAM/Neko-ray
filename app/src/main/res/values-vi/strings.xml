@@ -216,6 +216,7 @@
     <string name="title_sub_setting">Đăng ký</string>
     <string name="sub_setting_remarks">nhận xét</string>
     <string name="sub_setting_url">URL tùy chọn</string>
+    <string name="sub_setting_filter">Nhận xét bộ lọc thông thường</string>
     <string name="sub_setting_enable">Bật cập nhật</string>
     <string name="sub_auto_update">Bật cập nhật tự động</string>
     <string name="sub_setting_pre_profile">Nhận xét ủy quyền trước đó</string>
