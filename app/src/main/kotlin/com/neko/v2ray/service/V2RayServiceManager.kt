@@ -24,6 +24,7 @@ import com.neko.v2ray.ui.MainActivity
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.V2rayConfigUtil
 import go.Seq
@@ -161,6 +162,8 @@ object V2RayServiceManager {
         if (v2rayPoint.isRunning) {
             MessageUtil.sendMsg2UI(service, AppConfig.MSG_STATE_START_SUCCESS, "")
             showNotification()
+
+            PluginUtil.runPlugin(service, config)
         } else {
             MessageUtil.sendMsg2UI(service, AppConfig.MSG_STATE_START_FAILURE, "")
             cancelNotification()
@@ -188,6 +191,7 @@ object V2RayServiceManager {
         } catch (e: Exception) {
             Log.d(ANG_PACKAGE, e.toString())
         }
+        PluginUtil.stopPlugin()
     }
 
     private class ReceiveMessageHandler : BroadcastReceiver() {

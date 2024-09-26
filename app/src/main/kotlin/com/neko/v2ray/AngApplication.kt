@@ -1,6 +1,8 @@
 package com.neko.v2ray
 
 import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
 import androidx.multidex.MultiDexApplication
 import androidx.work.Configuration
 import androidx.work.WorkManager
@@ -27,4 +29,10 @@ class AngApplication : MultiDexApplication() {
         WorkManager.initialize(this, workManagerConfiguration)
         SettingsManager.initRoutingRulesets(this)
     }
+
+    fun getPackageInfo(packageName: String) = packageManager.getPackageInfo(
+        packageName, if (Build.VERSION.SDK_INT >= 28) PackageManager.GET_SIGNING_CERTIFICATES
+        else @Suppress("DEPRECATION") PackageManager.GET_SIGNATURES
+    )!!
+
 }
