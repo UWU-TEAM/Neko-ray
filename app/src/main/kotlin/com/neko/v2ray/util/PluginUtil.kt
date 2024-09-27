@@ -5,6 +5,7 @@ import android.os.SystemClock
 import android.util.Log
 import com.google.gson.Gson
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.util.MmkvManager.settingsStorage
@@ -17,7 +18,7 @@ import java.io.File
 object PluginUtil {
     //private const val HYSTERIA2 = "hysteria2-plugin"
     private const val HYSTERIA2 = "libhysteria2.so"
-    private const val packageName = "PluginUtil"
+    private const val packageName = ANG_PACKAGE
     private lateinit var process: Process
 
 //    fun initPlugin(name: String): PluginManager.InitResult {
