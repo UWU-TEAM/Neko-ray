@@ -1,6 +1,7 @@
 package com.neko.uwu
 
 import android.content.Intent
+import android.database.Cursor
 import android.view.Menu
 import android.view.MenuItem
 import android.os.Bundle
@@ -11,6 +12,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.neko.v2ray.R
 import com.neko.v2ray.ui.BaseActivity
+import com.neko.v2ray.ui.MainActivity
 import com.neko.v2ray.util.SoftInputAssist
 
 import com.neko.imageslider.ImageSlider
@@ -29,6 +31,7 @@ class TambahActivity : BaseActivity() {
     private lateinit var etAge: TextInputEditText
     private lateinit var etHobi: TextInputEditText
     private lateinit var etTgl: TextInputEditText
+    private lateinit var arrID: ArrayList<String>
     private lateinit var softInputAssist: SoftInputAssist
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -137,11 +140,35 @@ class TambahActivity : BaseActivity() {
             else -> {
                 val myDB = MyDatabaseHelper(this@TambahActivity)
                 val eksekusi = myDB.tambahDatabase(getName, getUsername, getEmail, getAge, getHobi, getTgl)
+                val cursor: Cursor? = myDB.bacaSemuaData()
 
                 if (eksekusi == -1L) {
                     Toast.makeText(this@TambahActivity, "Failed", Toast.LENGTH_SHORT).show()
                     etName.requestFocus()
+                } else if (cursor == null || cursor.count == 0) {
+                    // null
                 } else {
+                    try {
+                        val db = myDB.readableDatabase
+                        val query = "SELECT * FROM nekoray"
+                        val rs: Cursor = db.rawQuery(query, null)
+
+                        if (rs.moveToFirst()) {
+                            val arrID = rs.getString(rs.getColumnIndexOrThrow("id"))
+                            val username = rs.getString(rs.getColumnIndexOrThrow("username"))
+                            val posisi = 1
+
+                            val intent = Intent(this@TambahActivity, MainActivity::class.java).apply {
+                                putExtra("varID", arrID)
+                                putExtra("varUsername", username)
+                                putExtra("varPosisi", posisi)
+                            }
+                            startActivity(intent)
+                        }
+                        rs.close()
+                    } finally {
+                        cursor?.close()
+                    }
                     Toast.makeText(this@TambahActivity, "Succeed", Toast.LENGTH_SHORT).show()
                     finish()
                 }

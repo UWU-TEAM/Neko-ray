@@ -15,7 +15,6 @@ class SplashActivity : BaseActivity() {
 
     private lateinit var myDB: MyDatabaseHelper
     private lateinit var arrID: ArrayList<String>
-    private lateinit var arrUsername: ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
