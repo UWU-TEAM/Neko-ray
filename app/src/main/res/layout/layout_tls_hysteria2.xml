@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay_stream_security"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="16.0dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_lab_stream_security" />
+        <Spinner
+            android:entries="@array/streamsecuritys"
+            android:id="@+id/sp_stream_security"
+            android:background="@drawable/uwu_bg_spinner"
+            android:focusable="true"
+            android:nextFocusDown="@+id/et_sni"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_height"
+            android:foreground="?android:selectableItemBackground" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay_sni"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0.0dip"
+        android:layout_marginBottom="8.0dip">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/server_lab_sni"
+            style="@style/Outline_TextInputLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_sni"
+                android:nextFocusDown="@+id/sp_stream_fingerprint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay_allow_insecure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="16.0dip">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/server_lab_allow_insecure" />
+        <Spinner
+            android:entries="@array/allowinsecures"
+            android:id="@+id/sp_allow_insecure"
+            android:background="@drawable/uwu_bg_spinner"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edit_height"
+            android:foreground="?android:selectableItemBackground" />
+    </LinearLayout>
+</LinearLayout>

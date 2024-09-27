@@ -294,7 +294,7 @@
                                     android:inputType="text" />
                             </com.google.android.material.textfield.TextInputLayout>
                         </LinearLayout>
-                        <include layout="@layout/layout_tls" />
+                        <include layout="@layout/layout_tls_hysteria2" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.core.widget.NestedScrollView>
