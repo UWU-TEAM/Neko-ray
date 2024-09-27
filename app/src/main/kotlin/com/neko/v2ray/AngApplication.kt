@@ -3,6 +3,7 @@ package com.neko.v2ray
 import android.content.Context
 import androidx.multidex.MultiDexApplication
 import androidx.work.Configuration
+import androidx.work.WorkManager
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.util.SettingsManager
 
@@ -23,6 +24,7 @@ class AngApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         MMKV.initialize(this)
+        WorkManager.initialize(this, workManagerConfiguration)
         SettingsManager.initRoutingRulesets(this)
     }
 }
