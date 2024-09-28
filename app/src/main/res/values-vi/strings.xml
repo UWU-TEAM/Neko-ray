@@ -370,5 +370,6 @@
     <string name="uwu_date_dialog">Ngày sinh không được để trống</string>
     <string name="uwu_hobi_dialog">Sở thích không thể bỏ trống</string>
     <string name="uwu_email_dialog">Email không được để trống</string>
+    <string name="uwu_daftar_message">Vui lòng điền thông tin cá nhân của bạn để có thể sử dụng ứng dụng Neko-ray.</string>
     <!-- Neko strings --> 
 </resources>

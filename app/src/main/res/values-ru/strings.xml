@@ -370,5 +370,6 @@
     <string name="uwu_date_dialog">Поле «Дата рождения» не может быть пустым.</string>
     <string name="uwu_hobi_dialog">Хобби не может быть пустым</string>
     <string name="uwu_email_dialog">Электронная почта не может быть пустой</string>
+    <string name="uwu_daftar_message">Пожалуйста, заполните ваши персональные данные, чтобы иметь возможность использовать приложение Neko-ray.</string>
     <!-- Neko strings --> 
 </resources> 

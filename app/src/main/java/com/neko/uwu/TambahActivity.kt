@@ -84,6 +84,7 @@ class TambahActivity : BaseActivity() {
                 }
             }
         })
+        infoPendaftaran()
     }
 
     private fun saveDataUwu(): Boolean {
@@ -203,5 +204,13 @@ class TambahActivity : BaseActivity() {
     override fun onDestroy() {
         softInputAssist.onDestroy()
         super.onDestroy()
+    }
+
+    private fun infoPendaftaran() {
+        val builder = MaterialAlertDialogBuilder(this)
+        builder.setMessage(R.string.uwu_daftar_message)
+            .setCancelable(false)
+            .setPositiveButton(R.string.ok, null)
+            .show()
     }
 }

@@ -372,5 +372,6 @@
     <string name="uwu_date_dialog">Tanggal Lahir Tidak Boleh Kosong</string>
     <string name="uwu_hobi_dialog">Hobi Tidak Bisa Kosong</string>
     <string name="uwu_email_dialog">Email Tidak Boleh Kosong</string>
+    <string name="uwu_daftar_message">Silakan isi data pribadi Anda untuk dapat menggunakan aplikasi Neko-ray.</string>
     <!-- Neko strings -->
 </resources>

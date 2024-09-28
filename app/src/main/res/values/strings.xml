@@ -373,5 +373,6 @@
     <string name="uwu_date_dialog">Date of Birth Cannot Be Blank</string>
     <string name="uwu_hobi_dialog">Hobbies Cannot Be Empty</string>
     <string name="uwu_email_dialog">Email Cannot Be Empty</string>
+    <string name="uwu_daftar_message">Please fill in your personal data to be able to use the Neko-ray application.</string>
     <!-- Neko strings -->
 </resources>

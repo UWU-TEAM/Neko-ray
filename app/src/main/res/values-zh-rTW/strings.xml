@@ -370,5 +370,6 @@
     <string name="uwu_date_dialog">出生日期不能為空</string>
     <string name="uwu_hobi_dialog">興趣嗜好不能為空</string>
     <string name="uwu_email_dialog">郵箱不能為空</string>
+    <string name="uwu_daftar_message">請填寫您的個人資料以便能夠使用 Neko-ray 應用程式。</string>
     <!-- Neko strings --> 
 </resources>

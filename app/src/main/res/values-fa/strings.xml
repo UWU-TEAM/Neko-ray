@@ -372,5 +372,6 @@
     <string name="uwu_date_dialog">تاریخ تولد نمی تواند خالی باشد</string>
     <string name="uwu_hobi_dialog">سرگرمی ها نمی توانند خالی باشند</string>
     <string name="uwu_email_dialog">ایمیل نمی تواند خالی باشد</string>
+    <string name="uwu_daftar_message">لطفاً اطلاعات شخصی خود را وارد کنید تا بتوانید از برنامه Neko-ray استفاده کنید.</string>
     <!-- Neko strings --> 
 </resources> 

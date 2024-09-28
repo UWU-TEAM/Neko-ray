@@ -370,5 +370,6 @@
     <string name="uwu_date_dialog">生年月日は空欄にできません</string>
     <string name="uwu_hobi_dialog">趣味は空っぽではいけない</string>
     <string name="uwu_email_dialog">メールアドレスは空欄にできません</string>
+    <string name="uwu_daftar_message">Neko-rayアプリをご利用いただくには、個人情報を入力してください。</string>
     <!-- Neko strings --> 
 </resources> 
