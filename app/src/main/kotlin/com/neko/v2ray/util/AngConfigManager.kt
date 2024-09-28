@@ -11,6 +11,7 @@ import com.google.gson.JsonSerializationContext
 import com.google.gson.JsonSerializer
 import com.google.gson.reflect.TypeToken
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.HY2
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
 import com.neko.v2ray.util.MmkvManager.settingsStorage
@@ -51,7 +52,7 @@ object AngConfigManager {
                 VlessFmt.parse(str)
             } else if (str.startsWith(EConfigType.WIREGUARD.protocolScheme)) {
                 WireguardFmt.parse(str)
-            } else if (str.startsWith(EConfigType.HYSTERIA2.protocolScheme)) {
+            } else if (str.startsWith(EConfigType.HYSTERIA2.protocolScheme) || str.startsWith(HY2)) {
                 Hysteria2Fmt.parse(str)
             } else {
                 null
