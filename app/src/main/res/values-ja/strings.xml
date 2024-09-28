@@ -243,6 +243,7 @@
     <string name="routing_settings_add_rule">ルールを追加する</string>
     <string name="routing_settings_import_rulesets">ルールセットをインポートする</string>
     <string name="routing_settings_import_rulesets_tip">既存のルールセットは削除されます。続行しますか?</string>
+    <string name="routing_settings_locked">ロックされています。プリセットをインポートするときにこのルールを維持します</string>
 
     <string name="connection_test_pending">接続をチェックする</string>
     <string name="connection_test_testing">テスト中…</string>

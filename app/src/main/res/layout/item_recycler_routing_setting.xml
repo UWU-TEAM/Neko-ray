@@ -35,12 +35,37 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
                 android:paddingStart="@dimen/padding_start">
+<<<<<<< HEAD:app/src/main/res/layout/item_recycler_routing_setting.xml
                 <TextView
                     android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                     android:id="@+id/remarks"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10.0dip" />
+=======
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/remarks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <ImageView
+                        android:id="@+id/img_locked"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/padding_start"
+                        android:layout_width="@dimen/padding"
+                        android:layout_height="@dimen/padding"
+                        app:srcCompat="@drawable/ic_lock_24dp" />
+
+                </LinearLayout>
+
+>>>>>>> 9b86ba9e (Add routing rule lock, keep this rule when import presets):V2rayNG/app/src/main/res/layout/item_recycler_routing_setting.xml
                 <TextView
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:id="@+id/domainIp"

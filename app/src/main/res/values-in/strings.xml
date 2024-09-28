@@ -243,6 +243,7 @@
     <string name="routing_settings_add_rule">Tambah aturan</string>
     <string name="routing_settings_import_rulesets">Impor rangkaian aturan</string>
     <string name="routing_settings_import_rulesets_tip">Rangkaian aturan yang ada akan dihapus, apakah Anda yakin untuk melanjutkan?</string>
+    <string name="routing_settings_locked">Terkunci, pertahankan aturan ini saat mengimpor preset</string>
 
     <string name="connection_test_pending">Periksa Konektivitas</string>
     <string name="connection_test_testing">Pengujian…</string>

@@ -245,7 +245,8 @@
     <string name="routing_settings_add_rule">افزودن قانون</string>
     <string name="routing_settings_import_rulesets">وارد کردن مجموعه قوانین</string>
     <string name="routing_settings_import_rulesets_tip">مجموعه قوانین موجود حذف خواهند شد، آیا مطمئن هستید که ادامه می دهید؟</string>
- 
+    <string name="routing_settings_locked">قفل است، این قانون را هنگام وارد کردن از پیش تنظیمات حفظ کنید</string>
+
     <string name="connection_test_pending">اتصال را بررسی کنید</string>
     <string name="connection_test_testing">آزمایش کردن…</string>
     <string name="connection_test_available">موفقیت: اتصال HTTP %dms طول کشید</string>

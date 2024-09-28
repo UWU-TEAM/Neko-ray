@@ -243,6 +243,7 @@
     <string name="routing_settings_add_rule">Добавление правила</string>
     <string name="routing_settings_import_rulesets">Импорт набора правил</string>
     <string name="routing_settings_import_rulesets_tip">Существующие наборы правил будут удалены. Вы уверены, что хотите продолжить?</string>
+    <string name="routing_settings_locked">Заблокировано, сохранить это правило при импорте предустановок</string>
 
     <string name="connection_test_pending">Проверьте подключение</string>
     <string name="connection_test_testing">Тестирование…</string>

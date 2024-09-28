@@ -243,7 +243,8 @@
     <string name="routing_settings_add_rule">إضافة القاعدة</string>
     <string name="routing_settings_import_rulesets">استيراد مجموعة القواعد</string>
     <string name="routing_settings_import_rulesets_tip">سيتم حذف مجموعات القواعد الحالية، هل أنت متأكد من الاستمرار؟</string>
- 
+    <string name="routing_settings_locked">مقفل، حافظ على هذه القاعدة عند استيراد الإعدادات المسبقة</string>
+
     <string name="connection_test_pending">تحقق من الاتصال</string>
     <string name="connection_test_testing">اختبارات…</string>
     <string name="connection_test_available">نجاح: استغرق اتصال HTTP %dms</string>
