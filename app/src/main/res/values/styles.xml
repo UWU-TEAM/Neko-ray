@@ -24,6 +24,7 @@
         <item name="colorText">@color/colorText_ActionBar</item>
         <item name="colorBg">?attr/colorSurfaceVariant</item>
         <item name="changelogStyle">@style/LibChangelog</item>
+        <item name="editTextPreferenceStyle">@style/AppTheme.EditTextPreference</item>
         <item name="elevation">0.0dip</item>
         <item name="materialAlertDialogTheme">@style/Uwu.Material3.MaterialAlertDialog</item>
         <item name="navigationViewStyle">@style/Widget.MaterialComponents.NavigationView</item>
@@ -252,5 +253,10 @@
         <item name="android:windowSoftInputMode">adjustResize</item>
         <item name="bottomSheetStyle">@style/Widget.Material3.BottomSheet.Modal</item>
         <item name="enableEdgeToEdge">true</item>
+    </style>
+
+    <style name="AppTheme.EditTextPreference" parent="@style/Preference.DialogPreference.EditTextPreference.Material">
+        <item name="dialogLayout">@layout/uwu_dialog_edittext</item>
+        <item name="iconSpaceReserved">false</item>
     </style>
 </resources>
