@@ -1,52 +1,50 @@
 package com.neko.ip;
 
 import android.app.Activity;
-
 import java.util.HashMap;
 
 public class RequestNetwork {
-	private HashMap<String, Object> params = new HashMap<>();
-	private HashMap<String, Object> headers = new HashMap<>();
-	
-	private Activity activity;
-	
-	private int requestType = 0;
-	
-	public RequestNetwork(Activity activity) {
-		this.activity = activity;
-	}
-	
-	public void setHeaders(HashMap<String, Object> headers) {
-		this.headers = headers;
-	}
-	
-	public void setParams(HashMap<String, Object> params, int requestType) {
-		this.params = params;
-		this.requestType = requestType;
-	}
-	
-	public HashMap<String, Object> getParams() {
-		return params;
-	}
-	
-	public HashMap<String, Object> getHeaders() {
-		return headers;
-	}
-	
-	public Activity getActivity() {
-		return activity;
-	}
-	
-	public int getRequestType() {
-		return requestType;
-	}
-	
-	public void startRequestNetwork(String method, String url, String tag, RequestListener requestListener) {
-		RequestNetworkController.getInstance().execute(this, method, url, tag, requestListener);
-	}
-	
-	public interface RequestListener {
-		public void onResponse(String tag, String response, HashMap<String, Object> responseHeaders);
-		public void onErrorResponse(String tag, String message);
-	}
+    private Activity activity;
+    private HashMap<String, Object> params = new HashMap<>();
+    private HashMap<String, Object> headers = new HashMap<>();
+    private int requestType = 0;
+
+    public interface RequestListener {
+        void onErrorResponse(String str, String str2);
+
+        void onResponse(String str, String str2, HashMap<String, Object> hashMap);
+    }
+
+    public RequestNetwork(Activity activity) {
+        this.activity = activity;
+    }
+
+    public void setHeaders(HashMap<String, Object> hashMap) {
+        this.headers = hashMap;
+    }
+
+    public void setParams(HashMap<String, Object> hashMap, int i) {
+        this.params = hashMap;
+        this.requestType = i;
+    }
+
+    public HashMap<String, Object> getParams() {
+        return this.params;
+    }
+
+    public HashMap<String, Object> getHeaders() {
+        return this.headers;
+    }
+
+    public Activity getActivity() {
+        return this.activity;
+    }
+
+    public int getRequestType() {
+        return this.requestType;
+    }
+
+    public void startRequestNetwork(String str, String str2, String str3, RequestListener requestListener) {
+        RequestNetworkController.getInstance().execute(this, str, str2, str3, requestListener);
+    }
 }

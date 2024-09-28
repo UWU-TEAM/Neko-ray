@@ -90,19 +90,19 @@ class HostToIpActivity : BaseActivity() {
                     textview12.text = "ISP Provider 3:     ${hostIP["as"]}"
                     textview13.text = "City:     ${hostIP["city"]}"
                 } else {
-                    SketchwareUtil.showMessage(applicationContext, "Failed")
+                    Toast.makeText(this@HostToIpActivity, "Failed", Toast.LENGTH_SHORT).show()
                 }
             }
             override fun onErrorResponse(_param1: String, _param2: String) {
                 val _tag = _param1
                 val _message = _param2
-                SketchwareUtil.showMessage(applicationContext, "Error")
+                Toast.makeText(this@HostToIpActivity, "Error", Toast.LENGTH_SHORT).show()
             }
         }
 
         linear7.setOnClickListener {
             if (edittext1.text.toString().isEmpty()) {
-                SketchwareUtil.showMessage(applicationContext, "Empty")
+                Toast.makeText(this@HostToIpActivity, "Empty", Toast.LENGTH_SHORT).show()
             } else {
                 anichan.startRequestNetwork(
                     RequestNetworkController.GET,
@@ -110,7 +110,7 @@ class HostToIpActivity : BaseActivity() {
                     "A",
                     anichanRequestListener
                 )
-                SketchwareUtil.showMessage(applicationContext, "Pls wait..")
+                Toast.makeText(this@HostToIpActivity, "Pls wait..", Toast.LENGTH_SHORT).show()
             }
         }
     }

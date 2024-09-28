@@ -5,93 +5,87 @@ import android.content.ClipboardManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-
-import com.neko.v2ray.R;
-import com.neko.v2ray.ui.BaseActivity;
-import com.neko.v2ray.util.SoftInputAssist;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-
+import android.widget.Toast;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.neko.ip.RequestNetwork;
+import com.neko.v2ray.R;
+import com.neko.v2ray.ui.BaseActivity;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 public class IpLocation extends BaseActivity {
     private HashMap<String, Object> Map = new HashMap<>();
     private ArrayList<HashMap<String, Object>> Maps = new ArrayList<>();
     private RequestNetwork.RequestListener _req_request_listener;
+    private TextView as;
     private TextView city;
+    private Button copy;
     private TextView country;
-    private EditText edittext1;
-    private LinearLayout linear1;
-    private LinearLayout linear10;
-    private LinearLayout linear11;
-    private LinearLayout linear12;
-    private Button linear2;
-    private LinearLayout linear4;
-    private LinearLayout linear5;
-    private LinearLayout linear6;
-    private LinearLayout linear9;
+    private TextView countryCode;
+    private TextView ip;
+    private TextView isp;
+    private TextView lat;
+    private TextView lon;
+    private TextView org;
     private TextView region;
+    private TextView regionName;
     private RequestNetwork req;
-    private TextView textview2;
-    private TextView textview4;
-    private TextView textview6;
-    private TextView textview7;
-    private TextView textview8;
-    private TextView textview9;
-    private SoftInputAssist softInputAssist;
+    private TextView timezone;
+    private TextView zip;
 
     private void initialize(Bundle bundle) {
-        linear1 = findViewById(getUwU("linear1", "id"));
-        linear11 = findViewById(getUwU("linear11", "id"));
-        linear10 = findViewById(getUwU("linear10", "id"));
-        linear9 = findViewById(getUwU("linear9", "id"));
-        linear2 = findViewById(getUwU("linear2", "id"));
-        linear12 = findViewById(getUwU("linear12", "id"));
-        edittext1 = findViewById(getUwU("edittext1", "id"));
-        textview2 = findViewById(getUwU("textview2", "id"));
-        linear4 = findViewById(getUwU("linear4", "id"));
-        linear6 = findViewById(getUwU("linear6", "id"));
-        linear5 = findViewById(getUwU("linear5", "id"));
-        textview4 = findViewById(getUwU("textview4", "id"));
-        city = findViewById(getUwU("city", "id"));
-        textview6 = findViewById(getUwU("textview6", "id"));
-        region = findViewById(getUwU("region", "id"));
-        textview7 = findViewById(getUwU("textview7", "id"));
-        country = findViewById(getUwU("country", "id"));
-        textview8 = findViewById(getUwU("textview8", "id"));
-        textview9 = findViewById(getUwU("textview9", "id"));
-        req = new RequestNetwork(this);
-        linear11.setOnClickListener(new View.OnClickListener() {
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        this.copy = (Button) findViewById(getUwU("copy", "id"));
+        this.city = (TextView) findViewById(getUwU("city", "id"));
+        this.region = (TextView) findViewById(getUwU("region", "id"));
+        this.country = (TextView) findViewById(getUwU("country", "id"));
+        this.ip = (TextView) findViewById(getUwU("ip", "id"));
+        this.countryCode = (TextView) findViewById(getUwU("countryCode", "id"));
+        this.regionName = (TextView) findViewById(getUwU("regionName", "id"));
+        this.zip = (TextView) findViewById(getUwU("zip", "id"));
+        this.lat = (TextView) findViewById(getUwU("lat", "id"));
+        this.lon = (TextView) findViewById(getUwU("lon", "id"));
+        this.timezone = (TextView) findViewById(getUwU("timezone", "id"));
+        this.isp = (TextView) findViewById(getUwU("isp", "id"));
+        this.org = (TextView) findViewById(getUwU("org", "id"));
+        this.as = (TextView) findViewById(getUwU("as", "id"));
+        this.req = new RequestNetwork(this);
+        this.copy.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 IpLocation ipLocation = IpLocation.this;
-                ((ClipboardManager) getSystemService(getApplicationContext().CLIPBOARD_SERVICE)).setPrimaryClip(ClipData.newPlainText("clipboard", textview9.getText().toString()));
+                IpLocation.this.getApplicationContext();
+                ((ClipboardManager) ipLocation.getSystemService("clipboard")).setPrimaryClip(ClipData.newPlainText("clipboard", IpLocation.this.ip.getText().toString()));
             }
         });
-        linear2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                IpLocation.this._Aniqlash(IpLocation.this.edittext1.getText().toString());
-            }
-        });
-        _req_request_listener = new RequestNetwork.RequestListener() {
+        this._req_request_listener = new RequestNetwork.RequestListener() {
             @Override
             public void onResponse(String str, String str2, HashMap<String, Object> hashMap) {
                 try {
-                    Maps = new Gson().fromJson("[" + str2 + "]", new TypeToken<ArrayList<HashMap<String, Object>>>() {}.getType());
-                    city.setText(Maps.get(0).get("city").toString());
-                    country.setText(Maps.get(0).get("country").toString());
-                    region.setText(Maps.get(0).get("region").toString());
-                    textview9.setText(Maps.get(0).get("ip").toString());
+                    IpLocation.this.Maps = (ArrayList) new Gson().fromJson("[".concat(str2.concat("]")), new TypeToken<ArrayList<HashMap<String, Object>>>() {
+                    }.getType());
+                    IpLocation.this.city.setText(((HashMap) IpLocation.this.Maps.get(0)).get("city").toString());
+                    IpLocation.this.country.setText(((HashMap) IpLocation.this.Maps.get(0)).get("country").toString());
+                    IpLocation.this.region.setText(((HashMap) IpLocation.this.Maps.get(0)).get("region").toString());
+                    IpLocation.this.ip.setText(((HashMap) IpLocation.this.Maps.get(0)).get("query").toString());
+                    IpLocation.this.countryCode.setText(((HashMap) IpLocation.this.Maps.get(0)).get("countryCode").toString());
+                    IpLocation.this.regionName.setText(((HashMap) IpLocation.this.Maps.get(0)).get("regionName").toString());
+                    IpLocation.this.zip.setText(((HashMap) IpLocation.this.Maps.get(0)).get("zip").toString());
+                    IpLocation.this.lat.setText(((HashMap) IpLocation.this.Maps.get(0)).get("lat").toString());
+                    IpLocation.this.lon.setText(((HashMap) IpLocation.this.Maps.get(0)).get("lon").toString());
+                    IpLocation.this.timezone.setText(((HashMap) IpLocation.this.Maps.get(0)).get("timezone").toString());
+                    IpLocation.this.isp.setText(((HashMap) IpLocation.this.Maps.get(0)).get("isp").toString());
+                    IpLocation.this.org.setText(((HashMap) IpLocation.this.Maps.get(0)).get("org").toString());
+                    IpLocation.this.as.setText(((HashMap) IpLocation.this.Maps.get(0)).get("as").toString());
                 } catch (Exception e) {
-                    SketchwareUtil.showMessage(IpLocation.this.getApplicationContext(), "Error!");
+                    Toast.makeText(IpLocation.this, "Failed", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -101,17 +95,11 @@ public class IpLocation extends BaseActivity {
         };
     }
 
-    @Override
     protected void onCreate(Bundle bundle) {
         super.onCreate(bundle);
         setContentView(getUwU("uwu_ip_location", "layout"));
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        CollapsingToolbarLayout toolbarLayout = findViewById(R.id.collapsing_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         initialize(bundle);
         initializeLogic();
-        softInputAssist = new SoftInputAssist(this);
     }
 
     public int getUwU(String str, String str2) {
@@ -119,29 +107,6 @@ public class IpLocation extends BaseActivity {
     }
 
     private void initializeLogic() {
-        req.startRequestNetwork("GET", "https://ipinfo.io/geo", "", _req_request_listener);
-    }
-
-    public void _Aniqlash(String str) {
-        req.setHeaders(Map);
-        req.startRequestNetwork("GET", "https://ipinfo.io/" + str + "/geo", "", _req_request_listener);
-    }
-
-    @Override
-    protected void onResume() {
-        softInputAssist.onResume();
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        softInputAssist.onPause();
-        super.onPause();
-    }
-
-    @Override
-    protected void onDestroy() {
-        softInputAssist.onDestroy();
-        super.onDestroy();
+        this.req.startRequestNetwork(RequestNetworkController.GET, "http://ip-api.com/json/", "", this._req_request_listener);
     }
 }
