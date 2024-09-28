@@ -248,7 +248,7 @@
                                                 android:ellipsize="marquee"
                                                 android:layout_width="wrap_content"
                                                 android:layout_height="wrap_content"
-                                                android:text="Shadowsocks"
+                                                android:text="Hysteria"
                                                 android:singleLine="false" />
                                             <com.neko.marquee.text.AutoMarqueeTextView
                                                 android:textSize="14.0sp"
