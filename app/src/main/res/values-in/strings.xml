@@ -121,6 +121,8 @@
     <string name="title_vpn_settings">Pengaturan VPN</string>
     <string name="title_pref_per_app_proxy">Proxy per aplikasi</string>
     <string name="summary_pref_per_app_proxy">Umum: Aplikasi yang dicentang adalah proxy, koneksi langsung tidak dicentang; \nmode bypass: aplikasi yang dicentang terhubung langsung, proxy yang tidak dicentang. \nPilihan untuk memilih aplikasi proxy secara otomatis di menu</string>
+    <string name="title_pref_is_booted">Mulai otomatis</string>
+    <string name="summary_pref_is_booted">Mulai VPN secara otomatis jika server telah dipilih</string>
 
     <string name="title_mux_settings">Pengaturan Mux</string>
     <string name="title_pref_mux_enabled">Aktifkan Mux</string>

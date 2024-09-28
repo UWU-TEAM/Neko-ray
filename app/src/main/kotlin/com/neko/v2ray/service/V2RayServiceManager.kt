@@ -16,6 +16,7 @@ import androidx.core.app.NotificationCompat
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
+import com.neko.v2ray.AppConfig.VPN
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.extension.toSpeedString
@@ -72,7 +73,7 @@ object V2RayServiceManager {
         } else {
             context.toast(R.string.toast_services_start)
         }
-        val intent = if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
+        val intent = if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
             Intent(context.applicationContext, V2RayVpnService::class.java)
         } else {
             Intent(context.applicationContext, V2RayProxyOnlyService::class.java)

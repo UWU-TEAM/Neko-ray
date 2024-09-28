@@ -31,6 +31,7 @@ import com.google.android.material.navigation.NavigationView
 import com.google.android.material.tabs.TabLayout
 import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.VPN
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
 import com.neko.v2ray.dto.EConfigType
@@ -140,7 +141,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
-            } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: "VPN") == "VPN") {
+            } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()

@@ -2,6 +2,7 @@ package com.neko.v2ray.util
 
 import com.google.gson.Gson
 import com.tencent.mmkv.MMKV
+import com.neko.v2ray.AppConfig.PREF_IS_BOOTED
 import com.neko.v2ray.AppConfig.PREF_ROUTING_RULESET
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.dto.ProfileItem
@@ -307,4 +308,14 @@ object MmkvManager {
     }
 
     //endregion
+
+    //region Others
+    fun encodeStartOnBoot(startOnBoot: Boolean) {
+        settingsStorage.encode(PREF_IS_BOOTED, startOnBoot)
+    }
+    fun decodeStartOnBoot(): Boolean {
+        return settingsStorage.decodeBool(PREF_IS_BOOTED, false)
+    }
+    //endregion
+
 }

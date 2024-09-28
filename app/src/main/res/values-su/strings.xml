@@ -121,7 +121,9 @@
     <string name="title_vpn_settings">Setélan VPN</string>
     <string name="title_pref_per_app_proxy">Proksi per-aplikasi</string>
     <string name="summary_pref_per_app_proxy">Umum: Aplikasi anu dipariksa nyaéta proxy, sambungan langsung henteu dicentang; \nmodeu bypass: aplikasi nu dipariksa langsung nyambung, proxy teu dicentang. \nPilihan pikeun otomatis milih aplikasi proxy dina ménu</string>
- 
+    <string name="title_pref_is_booted">Otomatis ngamimitian</string>
+    <string name="summary_pref_is_booted">Otomatis ngamimitian VPN upami server parantos dipilih</string>
+
     <string name="title_mux_settings">Setélan Mux</string>
     <string name="title_pref_mux_enabled">Aktipkeun Mux</string>
     <string name="summary_pref_mux_enabled">Langkung gancang, tapi tiasa nyababkeun konektipitas teu stabil\nsaluyukeun kumaha TCP, UDP sareng QUIC diatur di handap.</string>

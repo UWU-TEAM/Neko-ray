@@ -121,7 +121,9 @@
     <string name="title_vpn_settings">Cài đặt VPN</string>
     <string name="title_pref_per_app_proxy">Proxy trên mỗi ứng dụng</string>
     <string name="summary_pref_per_app_proxy">Chung: Ứng dụng đã kiểm tra là proxy, kết nối trực tiếp không được kiểm tra; \nchế độ bỏ qua: ứng dụng đã chọn được kết nối trực tiếp, proxy không được chọn. \nTùy chọn tự động chọn ứng dụng proxy trong menu</string>
- 
+    <string name="title_pref_is_booted">Tự động khởi động</string>
+    <string name="summary_pref_is_booted">Tự động khởi động VPN nếu máy chủ đã được chọn</string>
+
     <string name="title_mux_settings">Cài đặt Mux</string>
     <string name="title_pref_mux_enabled">Kích hoạt Mux</string>
     <string name="summary_pref_mux_enabled">Nhanh hơn nhưng có thể khiến kết nối không ổn định\ntùy chỉnh cách xử lý TCP, UDP và QUIC bên dưới</string>

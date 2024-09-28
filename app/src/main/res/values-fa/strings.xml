@@ -123,6 +123,8 @@
     <string name="title_vpn_settings">تنظیمات VPN</string>
     <string name="title_pref_per_app_proxy">پروکسی هر برنامه</string>
     <string name="summary_pref_per_app_proxy">عمومی: برنامه بررسی شده پروکسی است، اتصال مستقیم بدون علامت است. \nحالت دور زدن: برنامه علامت‌گذاری شده مستقیماً متصل است، پراکسی علامت‌گذاری نشده است. \nگزینه انتخاب خودکار برنامه پراکسی در منو</string>
+    <string name="title_pref_is_booted">شروع خودکار</string>
+    <string name="summary_pref_is_booted">اگر سروری قبلاً انتخاب شده باشد، VPN را به طور خودکار راه اندازی کنید</string>
  
     <string name="title_mux_settings">تنظیمات Mux</string>
     <string name="title_pref_mux_enabled">Mux را فعال کنید</string>

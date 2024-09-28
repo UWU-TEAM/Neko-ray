@@ -121,7 +121,9 @@
     <string name="title_vpn_settings">Настройки VPN</string>
     <string name="title_pref_per_app_proxy">Прокси для каждого приложения</string>
     <string name="summary_pref_per_app_proxy">Общее: проверенное приложение является прокси-сервером, не отмечено прямое соединение; \nрежим обхода: проверенное приложение подключено напрямую, прокси-сервер не проверен. \nВозможность автоматического выбора прокси-приложения в меню</string>
- 
+    <string name="title_pref_is_booted">Автоматический запуск</string>
+    <string name="summary_pref_is_booted">Автоматически запускать VPN, если сервер уже выбран</string>
+
     <string name="title_mux_settings">Настройки мультиплексора</string>
     <string name="title_pref_mux_enabled">Включить мультиплексор</string>
     <string name="summary_pref_mux_enabled">Быстрее, но это может привести к нестабильному соединению.\nНастройте способы обработки TCP, UDP и QUIC ниже.</string>

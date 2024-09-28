@@ -121,6 +121,8 @@
     <string name="title_vpn_settings">VPN設定</string>
     <string name="title_pref_per_app_proxy">アプリごとのプロキシ</string>
     <string name="summary_pref_per_app_proxy">一般: チェックされているアプリはプロキシ、チェックされていない場合は直接接続です。 \nバイパス モード: チェックされたアプリが直接接続され、チェックされていないプロキシ。 \nメニューでプロキシ アプリケーションを自動的に選択するオプション</string>
+    <string name="title_pref_is_booted">自動スタート</string>
+    <string name="summary_pref_is_booted">サーバーがすでに選択されている場合はVPNを自動的に開始します</string>
  
     <string name="title_mux_settings">マルチプレクサ設定</string>
     <string name="title_pref_mux_enabled">マルチプレクサを有効にする</string>

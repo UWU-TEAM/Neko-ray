@@ -121,6 +121,8 @@
     <string name="title_vpn_settings">إعدادات VPN</string>
     <string name="title_pref_per_app_proxy">الوكيل لكل تطبيق</string>
     <string name="summary_pref_per_app_proxy">عام: التطبيق المحدد هو وكيل، ولم يتم تحديد اتصال مباشر؛ \nوضع التجاوز: التطبيق المحدد متصل مباشرة، الوكيل غير محدد. \nخيار تحديد تطبيق الوكيل تلقائيًا في القائمة</string>
+    <string name="title_pref_is_booted">بدء التشغيل التلقائي</string>
+    <string name="summary_pref_is_booted">بدء تشغيل VPN تلقائيًا إذا تم تحديد خادم بالفعل</string>
  
     <string name="title_mux_settings">إعدادات مكس</string>
     <string name="title_pref_mux_enabled">تمكين مكس</string>

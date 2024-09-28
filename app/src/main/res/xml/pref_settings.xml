@@ -26,9 +26,17 @@
             android:defaultValue="false"
             android:key="pref_route_only_enabled"
             android:icon="@drawable/uwu_ic_route"
-            android:layout="@layout/uwu_bot_switch"
+            android:layout="@layout/uwu_mid_switch"
             android:summary="@string/summary_pref_route_only_enabled"
             android:title="@string/title_pref_route_only_enabled" />
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_is_booted"
+            android:icon="@drawable/uwu_ic_autobot"
+            android:layout="@layout/uwu_bot_switch"
+            android:summary="@string/summary_pref_is_booted"
+            android:title="@string/title_pref_is_booted" />
 
     </PreferenceCategory>
 

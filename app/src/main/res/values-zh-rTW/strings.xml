@@ -121,7 +121,9 @@
     <string name="title_vpn_settings">VPN 設定</string>
     <string name="title_pref_per_app_proxy">每個應用程式代理</string>
     <string name="summary_pref_per_app_proxy">General：勾選App為代理，不勾選直連； \n繞過模式：選取應用程式直連，未選取代理程式。 \n選單中自動選擇代理應用程式的選項</string>
- 
+    <string name="title_pref_is_booted">自動啟動</string>
+    <string name="summary_pref_is_booted">如果已選擇伺服器，則自動啟動 VPN</string>
+
     <string name="title_mux_settings">多工器設置</string>
     <string name="title_pref_mux_enabled">啟用復用器</string>
     <string name="summary_pref_mux_enabled">更快，但可能會導致連線不穩定\n自訂如何處理下面的 TCP、UDP 和 QUIC</string>
