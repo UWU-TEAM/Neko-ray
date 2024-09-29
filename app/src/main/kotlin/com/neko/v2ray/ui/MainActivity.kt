@@ -874,10 +874,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         requestSubSettingActivity.launch(Intent(this,SubSettingActivity::class.java))
     }
 
-    fun userAssetSetting(view: View) {
-        startActivity(Intent(this, UserAssetActivity::class.java))
-    }
-
     fun UwuAbout(view: View) {
         startActivity(Intent(this, NekoAboutActivity::class.java))
     }

@@ -301,17 +301,11 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8.0dip"
                             android:layout_marginBottom="8.0dip">
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="@string/routing_settings_locked" />
-                            <com.neko.switchbutton.SwitchButton
+                            <com.google.android.material.materialswitch.MaterialSwitch
                                 android:id="@+id/chk_locked"
+                                android:text="@string/routing_settings_locked"
                                 android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                app:kswAnimationDuration="300"
-                                app:kswBackDrawable="@drawable/uwu_switch_track"
-                                app:kswThumbDrawable="@drawable/uwu_switch_thumb" />
+                                android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
                             android:orientation="vertical"

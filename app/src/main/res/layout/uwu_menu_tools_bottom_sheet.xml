@@ -494,47 +494,6 @@
                     android:layout_marginEnd="16.0dip"
                     android:layout_marginTop="1.0dip"
                     android:layout_marginBottom="1.0dip"
-                    android:onClick="userAssetSetting">
-                    <ImageView
-                        android:background="@drawable/uwu_google_shape"
-                        android:padding="12.0dip"
-                        android:layout_width="45.0dip"
-                        android:layout_height="45.0dip"
-                        android:layout_margin="16.0dip"
-                        android:src="@drawable/ic_file_24dp"
-                        android:scaleType="fitCenter"
-                        android:backgroundTint="?attr/colorThemeUwu"
-                        app:tint="?attr/colorIcon" />
-                    <TextView
-                        android:textSize="16.0sp"
-                        android:textColor="?android:textColorPrimary"
-                        android:gravity="left"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/title_user_asset_setting"
-                        android:layout_weight="1.0" />
-                    <ImageView
-                        android:background="@drawable/uwu_bg_circle_arrow"
-                        android:padding="2.0dip"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10.0dip"
-                        android:src="@drawable/uwu_arrow"
-                        android:layout_centerVertical="true"
-                        android:layout_alignParentEnd="true"
-                        android:backgroundTint="@color/uwu_bg_dialog_bottomshet"
-                        app:tint="?android:textColorPrimary" />
-                </LinearLayout>
-                <LinearLayout
-                    android:gravity="center|right"
-                    android:orientation="horizontal"
-                    android:background="@drawable/uwu_bg_mid_bottomsheet"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16.0dip"
-                    android:layout_marginEnd="16.0dip"
-                    android:layout_marginTop="1.0dip"
-                    android:layout_marginBottom="1.0dip"
                     android:onClick="uwuNetworkSwitcher">
                     <ImageView
                         android:background="@drawable/uwu_google_shape"
