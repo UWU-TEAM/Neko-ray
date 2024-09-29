@@ -103,6 +103,7 @@
     <string name="msg_file_not_found">Файл не найден</string>
     <string name="msg_remark_is_duplicate">Замечания уже есть</string>
     <string name="toast_action_not_allowed">Действие не разрешено</string>
+    <string name="server_obfs_password">пароль obfs</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">Загрузка</string>

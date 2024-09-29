@@ -103,6 +103,7 @@
     <string name="msg_file_not_found">File henteu kapendak</string>
     <string name="msg_remark_is_duplicate">Inpormasi parantos aya</string>
     <string name="toast_action_not_allowed">Aksi teu diwenangkeun</string>
+    <string name="server_obfs_password">sandi Obfs</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">ngamuat</string>

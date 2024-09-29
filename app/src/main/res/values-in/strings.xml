@@ -103,6 +103,7 @@
     <string name="msg_file_not_found">File tidak ditemukan</string>
     <string name="msg_remark_is_duplicate">Keterangan sudah ada</string>
     <string name="toast_action_not_allowed">Tindakan tidak diizinkan</string>
+    <string name="server_obfs_password">Kata sandi obfs</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Memuat</string>

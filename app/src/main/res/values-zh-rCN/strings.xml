@@ -103,6 +103,7 @@
     <string name="msg_file_not_found">文件未找到</string>
     <string name="msg_remark_is_duplicate">备注已经存在</string>
     <string name="toast_action_not_allowed">不允许的操作</string>
+    <string name="server_obfs_password">Obfs 密码</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">加载中</string>

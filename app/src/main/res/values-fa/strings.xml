@@ -103,6 +103,7 @@
     <string name="msg_file_not_found">فایل پیدا نشد</string>
     <string name="msg_remark_is_duplicate">اظهارات قبلاً وجود دارد</string>
     <string name="toast_action_not_allowed">اقدام مجاز نیست</string>
+    <string name="server_obfs_password">رمز عبور Obfs</string>
  
  
     <!-- PerAppProxyActivity --> 
