@@ -276,10 +276,22 @@
                         android:layout_marginStart="16.0dip"
                         android:layout_marginEnd="16.0dip">
                         <LinearLayout
-                            android:orientation="vertical"
+                            android:orientation="horizontal"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="16.0dip"
+                            android:layout_marginBottom="8.0dip">
+                            <com.google.android.material.materialswitch.MaterialSwitch
+                                android:id="@+id/chk_locked"
+                                android:text="@string/routing_settings_locked"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
                             android:layout_marginBottom="8.0dip">
                             <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
@@ -294,18 +306,6 @@
                                     android:hint="@string/server_lab_remarks"
                                     android:inputType="text" />
                             </com.google.android.material.textfield.TextInputLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8.0dip"
-                            android:layout_marginBottom="8.0dip">
-                            <com.google.android.material.materialswitch.MaterialSwitch
-                                android:id="@+id/chk_locked"
-                                android:text="@string/routing_settings_locked"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
                         </LinearLayout>
                         <LinearLayout
                             android:orientation="vertical"
@@ -334,9 +334,8 @@
                             android:layout_marginTop="8.0dip"
                             android:layout_marginBottom="8.0dip">
                             <com.google.android.material.textfield.TextInputLayout
-                                android:layout_width="200.0dip"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginRight="10.0dip"
                                 android:hint="@string/routing_settings_ip"
                                 app:expandedHintEnabled="false"
                                 style="@style/Outline_TextInputLayout">
@@ -347,6 +346,13 @@
                                     android:hint="@string/routing_settings_tips"
                                     android:inputType="textMultiLine" />
                             </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8.0dip"
+                            android:layout_marginBottom="8.0dip">
                             <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
