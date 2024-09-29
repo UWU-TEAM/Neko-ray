@@ -246,6 +246,8 @@
     <string name="routing_settings_add_rule">إضافة القاعدة</string>
     <string name="routing_settings_import_rulesets">استيراد مجموعة القواعد</string>
     <string name="routing_settings_import_rulesets_tip">سيتم حذف مجموعات القواعد الحالية، هل أنت متأكد من الاستمرار؟</string>
+    <string name="routing_settings_import_rulesets_from_clipboard">استيراد مجموعة القواعد من الحافظة</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">تصدير مجموعة القواعد إلى الحافظة</string>
     <string name="routing_settings_locked">مقفل، حافظ على هذه القاعدة عند استيراد الإعدادات المسبقة</string>
 
     <string name="connection_test_pending">تحقق من الاتصال</string>

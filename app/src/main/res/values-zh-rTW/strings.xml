@@ -246,6 +246,8 @@
     <string name="routing_settings_add_rule">新增規則</string>
     <string name="routing_settings_import_rulesets">匯入規則集</string>
     <string name="routing_settings_import_rulesets_tip">現有規則集將被刪除，確定繼續嗎？</string>
+    <string name="routing_settings_import_rulesets_from_clipboard">從剪貼簿匯入規則集</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">將規則集匯出到剪貼簿</string>
     <string name="routing_settings_locked">鎖定，匯入預設時保留此規則</string>
 
     <string name="connection_test_pending">檢查連接性</string>

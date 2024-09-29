@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.gson.Gson
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingBinding
@@ -109,6 +110,44 @@ class RoutingSettingActivity : BaseActivity() {
                     //do noting
                 }
                 .show()
+            true
+        }
+
+        R.id.import_rulesets_from_clipboard -> {
+            AlertDialog.Builder(this).setMessage(R.string.routing_settings_import_rulesets_tip)
+                .setPositiveButton(android.R.string.ok) { _, _ ->
+                    try {
+                        val clipboard = Utils.getClipboard(this)
+                        lifecycleScope.launch(Dispatchers.IO) {
+                            val ret = SettingsManager.resetRoutingRulesetsFromClipboard(clipboard)
+                            launch(Dispatchers.Main) {
+                                if (ret) {
+                                    refreshData()
+                                    toast(R.string.toast_success)
+                                } else {
+                                    toast(R.string.toast_failure)
+                                }
+                            }
+                        }
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                    }
+                }
+                .setNegativeButton(android.R.string.no) { _, _ ->
+                    //do noting
+                }
+                .show()
+            true
+        }
+
+        R.id.export_rulesets_to_clipboard -> {
+            val rulesetList = MmkvManager.decodeRoutingRulesets()
+            if (rulesetList.isNullOrEmpty()) {
+                toast(R.string.toast_failure)
+            } else {
+                Utils.setClipboard(this, Gson().toJson(rulesetList))
+                toast(R.string.toast_success)
+            }
             true
         }
 

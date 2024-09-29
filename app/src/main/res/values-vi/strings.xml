@@ -246,6 +246,8 @@
     <string name="routing_settings_add_rule">Thêm quy tắc</string>
     <string name="routing_settings_import_rulesets">Nhập bộ quy tắc</string>
     <string name="routing_settings_import_rulesets_tip">Bộ quy tắc hiện có sẽ bị xóa, bạn có chắc chắn muốn tiếp tục không?</string>
+    <string name="routing_settings_import_rulesets_from_clipboard">Nhập bộ quy tắc từ clipboard</string>
+    <string name="routing_settings_export_rulesets_to_clipboard">Xuất bộ quy tắc vào clipboard</string>
     <string name="routing_settings_locked">Đã khóa, giữ nguyên quy tắc này khi nhập cài đặt trước</string>
 
     <string name="connection_test_pending">Kiểm tra kết nối</string>
