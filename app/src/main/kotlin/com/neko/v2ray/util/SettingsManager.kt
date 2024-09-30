@@ -2,12 +2,15 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
-import com.google.gson.Gson
+import com.google.gson.Gsonl
+import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.util.MmkvManager.decodeProfileConfig
 import com.neko.v2ray.util.MmkvManager.decodeServerConfig
 import com.neko.v2ray.util.MmkvManager.decodeServerList
+import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.util.Utils.parseInt
 import java.util.Collections
 
 object SettingsManager {
@@ -138,6 +141,14 @@ object SettingsManager {
             }
         }
         return null
+    }
+
+    fun getSocksPort(): Int {
+        return parseInt(settingsStorage?.decodeString(AppConfig.PREF_SOCKS_PORT), AppConfig.PORT_SOCKS.toInt())
+    }
+
+    fun getHttpPort(): Int {
+        return parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
     }
 
 }

@@ -14,7 +14,6 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.HY2
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
-import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.fmt.Hysteria2Fmt
 import com.neko.v2ray.util.fmt.ShadowsocksFmt
 import com.neko.v2ray.util.fmt.SocksFmt
@@ -373,19 +372,17 @@ object AngConfigManager {
                 return 0
             }
             Log.d(AppConfig.ANG_PACKAGE, url)
+
             var configText = try {
-                Utils.getUrlContentWithCustomUserAgent(url)
+                val httpPort = SettingsManager.getHttpPort()
+                Utils.getUrlContentWithCustomUserAgent(url, 30000, httpPort)
             } catch (e: Exception) {
                 e.printStackTrace()
                 ""
             }
             if (configText.isEmpty()) {
                 configText = try {
-                    val httpPort = Utils.parseInt(
-                        settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT),
-                        AppConfig.PORT_HTTP.toInt()
-                    )
-                    Utils.getUrlContentWithCustomUserAgent(url, 30000, httpPort)
+                    Utils.getUrlContentWithCustomUserAgent(url)
                 } catch (e: Exception) {
                     e.printStackTrace()
                     ""

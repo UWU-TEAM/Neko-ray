@@ -33,6 +33,7 @@ import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.util.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -182,7 +183,7 @@ class UserAssetActivity : BaseActivity() {
             .show()
         toast(R.string.msg_downloading_content)
 
-        val httpPort = Utils.parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
+        val httpPort = SettingsManager.getHttpPort()
         var assets = MmkvManager.decodeAssetUrls()
         assets = addBuiltInGeoItems(assets)
 
