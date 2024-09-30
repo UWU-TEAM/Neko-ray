@@ -29,7 +29,6 @@ import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.util.V2rayConfigUtil
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -213,14 +212,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         getApplication<AngApplication>().toast(R.string.connection_test_testing)
         viewModelScope.launch(Dispatchers.Default) { // without Dispatchers.Default viewModelScope will launch in main thread
             for (item in serversCopy) {
-                val config = V2rayConfigUtil.getV2rayConfig(getApplication(), item.guid)
-                if (config.status) {
-                    MessageUtil.sendMsg2TestService(
-                        getApplication(),
-                        AppConfig.MSG_MEASURE_CONFIG,
-                        JsonUtil.toJson(config)
-                    )
-                }
+                MessageUtil.sendMsg2TestService(getApplication(), AppConfig.MSG_MEASURE_CONFIG, item.guid)
             }
         }
     }

@@ -3,15 +3,18 @@ package com.neko.v2ray.service
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
+import android.util.Log
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_CANCEL
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
-import com.neko.v2ray.dto.ConfigResult
+import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.serializable
-import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.MessageUtil
+import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
+import com.neko.v2ray.util.V2rayConfigUtil
 import go.Seq
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -33,11 +36,10 @@ class V2RayTestService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.getIntExtra("key", 0)) {
             MSG_MEASURE_CONFIG -> {
-                val content = intent.serializable<String>("content") ?: ""
-                val config = JsonUtil.fromJson(content, ConfigResult::class.java)
+                val guid = intent.serializable<String>("content") ?: ""
                 realTestScope.launch {
-                    val result = SpeedtestUtil.realPing(config.content)
-                    MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_CONFIG_SUCCESS, Pair(config.guid, result))
+                    val result = startRealPing(guid)
+                    MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_CONFIG_SUCCESS, Pair(guid, result))
                 }
             }
 
@@ -50,5 +52,30 @@ class V2RayTestService : Service() {
 
     override fun onBind(intent: Intent?): IBinder? {
         return null
+    }
+
+    private fun startRealPing(guid: String): Long {
+        val retFailure = -1L
+
+        val server = MmkvManager.decodeServerConfig(guid) ?: return retFailure
+        if (server.getProxyOutbound()?.protocol?.equals(EConfigType.HYSTERIA2.name, true) == true) {
+            val socksPort = Utils.findFreePort(listOf(0))
+            PluginUtil.runPlugin(this, server, "0:${socksPort}")
+            Thread.sleep(1000L)
+
+            var delay = SpeedtestUtil.testConnection(this, socksPort)
+            if (delay.first < 0) {
+                Thread.sleep(10L)
+                delay = SpeedtestUtil.testConnection(this, socksPort)
+            }
+            PluginUtil.stopPlugin()
+            return delay.first
+        } else {
+            val config = V2rayConfigUtil.getV2rayConfig(this, guid)
+            if (!config.status) {
+                return retFailure
+            }
+            return SpeedtestUtil.realPing(config.content)
+        }
     }
 }
