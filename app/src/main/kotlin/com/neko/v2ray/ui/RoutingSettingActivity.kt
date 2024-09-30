@@ -12,13 +12,13 @@ import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.gson.Gson
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingBinding
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.SettingsManager
@@ -145,7 +145,7 @@ class RoutingSettingActivity : BaseActivity() {
             if (rulesetList.isNullOrEmpty()) {
                 toast(R.string.toast_failure)
             } else {
-                Utils.setClipboard(this, Gson().toJson(rulesetList))
+                Utils.setClipboard(this, JsonUtil.toJson(rulesetList))
                 toast(R.string.toast_success)
             }
             true

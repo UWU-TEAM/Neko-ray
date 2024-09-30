@@ -3,7 +3,6 @@ package com.neko.v2ray.util
 import android.content.Context
 import android.os.SystemClock
 import android.util.Log
-import com.google.gson.Gson
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
@@ -38,8 +37,8 @@ object PluginUtil {
             Log.d(packageName, "runPlugin ${configFile.absolutePath}")
 
             configFile.parentFile?.mkdirs()
-            configFile.writeText(Gson().toJson(hy2Config))
-            Log.d(packageName, Gson().toJson(hy2Config))
+            configFile.writeText(JsonUtil.toJson(hy2Config))
+            Log.d(packageName, JsonUtil.toJson(hy2Config))
 
             runHy2(context, configFile)
         }

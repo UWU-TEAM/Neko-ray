@@ -3,12 +3,12 @@ package com.neko.v2ray.service
 import android.app.Service
 import android.content.Intent
 import android.os.IBinder
-import com.google.gson.Gson
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_CANCEL
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
 import com.neko.v2ray.dto.ConfigResult
 import com.neko.v2ray.extension.serializable
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
@@ -33,8 +33,8 @@ class V2RayTestService : Service() {
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         when (intent?.getIntExtra("key", 0)) {
             MSG_MEASURE_CONFIG -> {
-                val content = intent.serializable<String>("content")
-                val config = Gson().fromJson(content, ConfigResult::class.java)
+                val content = intent.serializable<String>("content") ?: ""
+                val config = JsonUtil.fromJson(content, ConfigResult::class.java)
                 realTestScope.launch {
                     val result = SpeedtestUtil.realPing(config.content)
                     MessageUtil.sendMsg2UI(this@V2RayTestService, MSG_MEASURE_CONFIG_SUCCESS, Pair(config.guid, result))

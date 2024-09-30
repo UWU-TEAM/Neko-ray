@@ -12,13 +12,14 @@ import com.google.android.material.appbar.MaterialToolbar
 import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.gson.Gson
+
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityServerCustomConfigBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
@@ -135,7 +136,7 @@ class ServerCustomConfigActivity : BaseActivity() {
         }
 
         val v2rayConfig = try {
-            Gson().fromJson(binding.editor.text.toString(), V2rayConfig::class.java)
+            JsonUtil.fromJson(binding.editor.text.toString(), V2rayConfig::class.java)
         } catch (e: Exception) {
             e.printStackTrace()
             ToastCompat.makeText(this, "${getString(R.string.toast_malformed_josn)} ${e.cause?.message}", Toast.LENGTH_LONG).show()

@@ -2,7 +2,6 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
-import com.google.gson.Gsonl
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerConfig
@@ -35,7 +34,7 @@ object SettingsManager {
             return null
         }
 
-        return Gson().fromJson(assets, Array<RulesetItem>::class.java).toMutableList()
+        return JsonUtil.fromJson(assets, Array<RulesetItem>::class.java).toMutableList()
     }
 
     fun resetRoutingRulesets(context: Context, index: Int) {
@@ -49,7 +48,7 @@ object SettingsManager {
         }
 
         try {
-            val rulesetList = Gson().fromJson(content, Array<RulesetItem>::class.java).toMutableList()
+            val rulesetList = JsonUtil.fromJson(content, Array<RulesetItem>::class.java).toMutableList()
             if (rulesetList.isNullOrEmpty()) {
                 return false
             }
