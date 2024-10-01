@@ -2,10 +2,12 @@ name: Xray-core lib
 
 on:
   workflow_dispatch:
+    branches:
+      - dev
     inputs:
       CORE:
         description: 'versi of the Xray-core'
-        required: true
+        required: false
         default: ''
 
 jobs:
@@ -38,17 +40,6 @@ jobs:
         go install golang.org/x/mobile/cmd/gomobile@latest
         echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
 
-    - name: Setup Android SDK Tools
-      uses: android-actions/setup-android@v3.2.0
-      with:
-        cmdline-tools-version: 10406996
-
-    - name: Setup Android NDK
-      uses: nttld/setup-ndk@v1.5.0
-      with:
-        ndk-version: 'r26b'
-        link-to-sdk: true
-
     - name: Build dependencies
       run: |
         cd ${{ github.workspace }}/AndroidLibXrayLite
@@ -67,5 +58,5 @@ jobs:
         git config --global user.name AnGgIt86
         rm -rfd ${{ github.workspace }}/AndroidLibXrayLite/*.jar
         git add -f .
-        git commit -m "Core: Bump ${{ github.event.inputs.CORE }}"
+        git commit -m "Core Update ${{ github.event.inputs.CORE }}"
         git push
