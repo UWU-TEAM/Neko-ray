@@ -15,3 +15,11 @@ updates:
     schedule:
       interval: daily
       timezone: Asia/Jakarta
+
+  - package-ecosystem: gomod
+    labels: []
+    directory: /AndroidLibXrayLite
+    target-branch: main
+    schedule:
+      interval: daily
+      timezone: Asia/Jakarta
