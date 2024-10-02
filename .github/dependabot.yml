@@ -1,25 +1,30 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://help.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
 version: 2
 updates:
-  - package-ecosystem: github-actions
+  - package-ecosystem: "github-actions"
     labels: []
-    directory: /
-    target-branch: dev
+    directory: "/"
+    target-branch: "dev"
     schedule:
-      interval: daily
-      timezone: Asia/Jakarta
+      interval: "daily"
+      timezone: "Asia/Jakarta"
 
-  - package-ecosystem: gradle
+  - package-ecosystem: "gradle"
     labels: []
-    directory: /
-    target-branch: dev
+    directory: "/"
+    target-branch: "dev"
     schedule:
-      interval: daily
-      timezone: Asia/Jakarta
+      interval: "daily"
+      timezone: "Asia/Jakarta"
 
-  - package-ecosystem: gomod
+  - package-ecosystem: "gomod"
     labels: []
-    directory: /AndroidLibXrayLite
-    target-branch: dev
+    directory: "/"
+    target-branch: "dev"
     schedule:
-      interval: daily
-      timezone: Asia/Jakarta
+      interval: "daily"
+      timezone: "Asia/Jakarta"
