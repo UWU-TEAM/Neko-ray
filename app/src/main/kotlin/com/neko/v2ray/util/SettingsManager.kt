@@ -2,7 +2,10 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
+
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
+import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.util.MmkvManager.decodeProfileConfig
@@ -108,7 +111,11 @@ object SettingsManager {
 
     fun routingRulesetsBypassLan(): Boolean {
         val rulesetItems = MmkvManager.decodeRoutingRulesets()
-        val exist = rulesetItems?.any { it.enabled && it.domain?.contains(":private") == true }
+        val exist = rulesetItems?.any {
+            it.enabled
+                    && (it.domain?.contains(GEOSITE_PRIVATE) == true
+                    || it.ip?.contains(GEOIP_PRIVATE) == true)
+        }
         return exist == true
     }
 

@@ -8,7 +8,7 @@
     ]
   },
   {
-    "remarks": "Block udp443",
+    "remarks": "Block udp 443",
     "outboundTag": "block",
     "port": "443",
     "network": "udp"
@@ -21,17 +21,17 @@
     ]
   },
   {
-    "remarks": "Bypass LAN domain name",
-    "outboundTag": "direct",
-    "domain": [
-      "geosite:private"
-    ]
-  },
-  {
     "remarks": "Bypass LAN IP",
     "outboundTag": "direct",
     "ip": [
       "geoip:private"
+    ]
+  },
+  {
+    "remarks": "Bypass LAN domain name",
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:private"
     ]
   },
   {

@@ -40,7 +40,7 @@ class TambahActivity : BaseActivity() {
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
         val toolbarLayout = findViewById<CollapsingToolbarLayout>(R.id.collapsing_toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(false)
         softInputAssist = SoftInputAssist(this)
 
         etName = findViewById(R.id.et_name)
