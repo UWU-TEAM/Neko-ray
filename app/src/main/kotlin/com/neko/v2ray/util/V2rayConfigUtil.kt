@@ -3,9 +3,13 @@ package com.neko.v2ray.util
 import android.content.Context
 import android.text.TextUtils
 import android.util.Log
+
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
+import com.neko.v2ray.AppConfig.GEOIP_CN
+import com.neko.v2ray.AppConfig.GEOSITE_CN
 import com.neko.v2ray.AppConfig.LOOPBACK
+import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.AppConfig.PROTOCOL_FREEDOM
 import com.neko.v2ray.AppConfig.TAG_BLOCKED
 import com.neko.v2ray.AppConfig.TAG_DIRECT
@@ -221,7 +225,9 @@ object V2rayConfigUtil {
         rulesetItems?.forEach { key ->
             if (key != null && key.enabled && key.outboundTag == tag && !key.domain.isNullOrEmpty()) {
                 key.domain?.forEach {
-                    if (it.startsWith("geosite:") || it.startsWith("domain:")) {
+                    if (it != GEOSITE_PRIVATE
+                        && (it.startsWith("geosite:") || it.startsWith("domain:"))
+                    ) {
                         domain.add(it)
                     }
                 }
@@ -234,7 +240,7 @@ object V2rayConfigUtil {
     private fun customLocalDns(v2rayConfig: V2rayConfig): Boolean {
         try {
             if (settingsStorage?.decodeBool(AppConfig.PREF_FAKE_DNS_ENABLED) == true) {
-                val geositeCn = arrayListOf("geosite:cn")
+                val geositeCn = arrayListOf(GEOSITE_CN)
                 val proxyDomain = userRule2Domain(TAG_PROXY)
                 val directDomain = userRule2Domain(TAG_DIRECT)
                 // fakedns with all domains to make it always top priority
@@ -325,8 +331,8 @@ object V2rayConfigUtil {
             // domestic DNS
             val domesticDns = Utils.getDomesticDnsServers()
             val directDomain = userRule2Domain(TAG_DIRECT)
-            val isCnRoutingMode = directDomain.contains("geosite:cn")
-            val geoipCn = arrayListOf("geoip:cn")
+            val isCnRoutingMode = directDomain.contains(GEOSITE_CN)
+            val geoipCn = arrayListOf(GEOIP_CN)
             if (directDomain.size > 0) {
                 servers.add(
                     V2rayConfig.DnsBean.ServersBean(
