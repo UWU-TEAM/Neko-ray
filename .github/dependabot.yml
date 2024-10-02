@@ -3,7 +3,7 @@ updates:
   - package-ecosystem: github-actions
     labels: []
     directory: /
-    target-branch: main
+    target-branch: dev
     schedule:
       interval: daily
       timezone: Asia/Jakarta
@@ -11,7 +11,7 @@ updates:
   - package-ecosystem: gradle
     labels: []
     directory: /
-    target-branch: main
+    target-branch: dev
     schedule:
       interval: daily
       timezone: Asia/Jakarta
@@ -19,7 +19,7 @@ updates:
   - package-ecosystem: gomod
     labels: []
     directory: /AndroidLibXrayLite
-    target-branch: main
+    target-branch: dev
     schedule:
       interval: daily
       timezone: Asia/Jakarta
