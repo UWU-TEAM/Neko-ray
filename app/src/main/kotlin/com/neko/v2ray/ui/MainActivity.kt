@@ -311,6 +311,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     fun startV2Ray() {
         if (MmkvManager.getSelectServer().isNullOrEmpty()) {
+            toast(R.string.title_file_chooser)
             return
         }
         V2RayServiceManager.startV2Ray(this)
