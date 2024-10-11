@@ -216,16 +216,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         appUpdater.start()
 
-        // Show new update with notification
-        val appUpdaterNotification = AppUpdater(this).apply {
-            setUpdateFrom(UpdateFrom.JSON)
-            setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
-            setDisplay(Display.NOTIFICATION)
-            showAppUpdated(false)
-            setCancelable(false)
-        }
-        appUpdaterNotification.start()
-
         myDB = MyDatabaseHelper(this)
         var usernameuwu = intent.getStringExtra("varUsername")
         if (usernameuwu == null) {
