@@ -23,7 +23,7 @@ updates:
 
   - package-ecosystem: "gomod"
     labels: []
-    directory: "/"
+    directory: "/AndroidLibXrayLite"
     target-branch: "dev"
     schedule:
       interval: "daily"
