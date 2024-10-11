@@ -1,19 +1,11 @@
 {
-  "latestVersion": "1.1.11",
-  "latestVersionCode": 1000231,
+  "latestVersion": "1.1.15",
+  "latestVersionCode": 1000235,
   "url": "https://uwu-team.github.io/Neko-ray",
   "releaseNotes": [
     "",
-    "𝒩ℯ𝓀ℴ 𝓋2𝓇𝒶𝓎𝒩𝒢 1.1.11",
-    "𝗕𝘂𝗶𝗹𝗱 𝗗𝗮𝘁𝗲: 02 September 2024",
-    "",
-    "꒰📝~𝗖𝗵𝗮𝗻𝗴𝗲𝗹𝗼𝗴:~꒱ೄྀ࿐ˊˎ-",
-    "• Core Update v1.8.24",
-    "• Remove dialog theme warning",
-    "• Move no internet dialog in Home to check update app",
-    "• Remove datausage, nettraffic, hide show banner (Like old style)",
-    "• Switch to old drawerlayot",
-    "• Add UDP noise",
-    "• Optimized elevation vpn status and fab"
+    "𝒩ℯ𝓀ℴ 𝓋2𝓇𝒶𝓎𝒩𝒢 1.1.15",
+    "𝗕𝘂𝗶𝗹𝗱 𝗗𝗮𝘁𝗲: 11 Oktober 2024",
+    ""
   ]
 }
