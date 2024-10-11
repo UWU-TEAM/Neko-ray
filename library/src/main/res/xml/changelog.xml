@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelog>
     <release
-        date="2024-09-02"
+        date="2024-10-11"
         summary="Neko Ray"
-        version="v1.1.11"
-        versioncode="2000231">
-        <change>Core Update v1.8.24</change>
-        <change>Remove dialog theme warning</change>
-        <change>Move no internet dialog in Home to check update app</change>
-        <change>Remove datausage, nettraffic, hide show banner (Like old style)</change>
-        <change>Switch to old drawerlayot</change>
-        <change>Add UDP noise</change>
-        <change>Optimized elevation vpn status and fab</change>
+        version="v1.1.15"
+        versioncode="2000235">
+        <change>:v</change>
     </release>
 </changelog>
