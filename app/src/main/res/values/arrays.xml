@@ -26,5 +26,6 @@
         <item>China Whitelist</item>
         <item>China Blacklist</item>
         <item>Global</item>
+        <item>Iran Whitelist</item>
     </string-array>
 </resources>
