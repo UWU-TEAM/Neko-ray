@@ -31,6 +31,10 @@ jobs:
       - name: Prepare
         run: |
           sudo apt-get -y install dos2unix
+          git clone --depth 1 https://github.com/UWU-TEAM/AndroidLibXrayLite
+          wget -qO - https://api.github.com/repos/UWU-TEAM/AndroidLibXrayLite/releases/latest \
+          | grep browser_download_url | cut -d '"' -f 4 \
+          | wget -i - -O app/libs/libv2ray.aar
 
       - name: JDK Setup
         uses: actions/setup-java@v4
@@ -47,28 +51,28 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Arm64
-          path: ${{ github.workspace }}/app/build/outputs/apk/debug/*arm64-v8a.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/*arm64-v8a.apk
 
       - name: armeabi-v7a
         uses: actions/upload-artifact@v4
         with:
           name: Armeabi-v7a
-          path: ${{ github.workspace }}/app/build/outputs/apk/debug/*armeabi-v7a.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/*armeabi-v7a.apk
 
       - name: x86
         uses: actions/upload-artifact@v4
         with:
           name: X86
-          path: ${{ github.workspace }}/app/build/outputs/apk/debug/*x86.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/*x86.apk
 
       - name: x86_64
         uses: actions/upload-artifact@v4
         with:
           name: X86_64
-          path: ${{ github.workspace }}/app/build/outputs/apk/debug/*x86_64.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/*x86_64.apk
 
       - name: universal
         uses: actions/upload-artifact@v4
         with:
           name: Universal
-          path: ${{ github.workspace }}/app/build/outputs/apk/debug/*universal.apk
+          path: ${{ github.workspace }}/app/build/outputs/apk/release/*universal.apk

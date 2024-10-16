@@ -23,26 +23,16 @@ jobs:
       - name: Prepare
         run: |
           sudo apt-get -y install dos2unix
+          git clone --depth 1 https://github.com/UWU-TEAM/AndroidLibXrayLite
+          wget -qO - https://api.github.com/repos/UWU-TEAM/AndroidLibXrayLite/releases/latest \
+          | grep browser_download_url | cut -d '"' -f 4 \
+          | wget -i - -O app/libs/libv2ray.aar
 
       - name: JDK Setup
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 17
-
-      - name: Setup Golang
-        uses: actions/setup-go@v5
-        with:
-          go-version: '^1.22.2'
-          cache: false
-
-      - name: Install gomobile
-        run: |
-          go install golang.org/x/mobile/cmd/gomobile@latest
-          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
-
-      - name: Setup Android environment
-        uses: android-actions/setup-android@v3
+          java-version: 1
 
       - name: Build
         run: |
