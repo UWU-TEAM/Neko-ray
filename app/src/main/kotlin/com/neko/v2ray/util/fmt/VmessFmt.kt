@@ -13,7 +13,7 @@ import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
-object VmessFmt {
+object VmessFmt : FmtBase() {
 
     fun parse(str: String): ServerConfig? {
         if (str.indexOf('?') > 0 && str.indexOf('&') > 0) {

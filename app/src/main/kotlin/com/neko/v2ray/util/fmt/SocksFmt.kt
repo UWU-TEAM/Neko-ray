@@ -5,7 +5,7 @@ import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.util.Utils
 
-object SocksFmt {
+object SocksFmt : FmtBase() {
     fun parse(str: String): ServerConfig? {
         val config = ServerConfig.create(EConfigType.SOCKS)
         var result = str.replace(EConfigType.SOCKS.protocolScheme, "")
@@ -52,18 +52,13 @@ object SocksFmt {
 
     fun toUri(config: ServerConfig): String {
         val outbound = config.getProxyOutbound() ?: return ""
-        val remark = "#" + Utils.urlEncode(config.remarks)
+        
         val pw =
             if (outbound.settings?.servers?.get(0)?.users?.get(0)?.user != null)
                 "${outbound.settings?.servers?.get(0)?.users?.get(0)?.user}:${outbound.getPassword()}"
             else
                 ":"
-        val url = String.format(
-            "%s@%s:%s",
-            Utils.encode(pw),
-            Utils.getIpv6Address(outbound.getServerAddress()),
-            outbound.getServerPort()
-        )
-        return url + remark
+
+        return toUri(outbound.getServerAddress(), outbound.getServerPort(), pw, null, config.remarks)
     }
 }
