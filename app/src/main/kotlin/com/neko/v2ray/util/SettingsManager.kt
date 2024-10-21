@@ -7,6 +7,7 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
 import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
+import com.neko.v2ray.dto.RoutingType
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerConfig
 import com.neko.v2ray.util.MmkvManager.decodeProfileConfig
@@ -27,13 +28,7 @@ object SettingsManager {
     }
 
     private fun getPresetRoutingRulesets(context: Context, index: Int = 0): MutableList<RulesetItem>? {
-        val fileName = when (index) {
-            0 -> "custom_routing_white"
-            1 -> "custom_routing_black"
-            2 -> "custom_routing_global"
-            3 -> "custom_routing_white_iran"
-            else -> "custom_routing_white"
-        }
+        val fileName = RoutingType.fromIndex(index).fileName
         val assets = Utils.readTextFromAssets(context, fileName)
         if (TextUtils.isEmpty(assets)) {
             return null
@@ -41,6 +36,7 @@ object SettingsManager {
 
         return JsonUtil.fromJson(assets, Array<RulesetItem>::class.java).toMutableList()
     }
+
 
     fun resetRoutingRulesets(context: Context, index: Int) {
         val rulesetList = getPresetRoutingRulesets(context, index) ?: return
