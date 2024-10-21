@@ -21,6 +21,7 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.BuildConfig
+import com.neko.v2ray.dto.Language
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.service.V2RayServiceManager
@@ -404,24 +405,24 @@ object Utils {
     }
 
     fun getLocale(): Locale {
-        val lang = settingsStorage?.decodeString(AppConfig.PREF_LANGUAGE) ?: "auto"
-        return when (lang) {
-            "auto" -> getSysLocale()
-            "en" -> Locale.ENGLISH
-            "in" -> Locale("in")
-            "su" -> Locale("su")
-            "ja" -> Locale("ja")
-            "jw" -> Locale("jw")
-            "zh-rCN" -> Locale.CHINA
-            "zh-rTW" -> Locale.TRADITIONAL_CHINESE
-            "vi" -> Locale("vi")
-            "ru" -> Locale("ru")
-            "fa" -> Locale("fa")
-            "ar" -> Locale("ar")
-            else -> getSysLocale()
+        val langCode = settingsStorage?.decodeString(AppConfig.PREF_LANGUAGE) ?: Language.AUTO.code
+        val language = Language.fromCode(langCode)
+
+        return when (language) {
+            Language.AUTO -> getSysLocale()
+            Language.ENGLISH -> Locale.ENGLISH
+            Language.INDONESIAN -> Locale("in")
+            Language.SUNDA -> Locale("su")
+            Language.JAPANESE -> Locale("ja")
+            Language.JAWA -> Locale("jw")
+            Language.CHINA -> Locale.CHINA
+            Language.TRADITIONAL_CHINESE -> Locale.TRADITIONAL_CHINESE
+            Language.VIETNAMESE -> Locale("vi")
+            Language.RUSSIAN -> Locale("ru")
+            Language.PERSIAN -> Locale("fa")
+            Language.ARABIC -> Locale("ar")
         }
     }
-
 
     private fun getSysLocale(): Locale = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
         LocaleList.getDefault()[0]
