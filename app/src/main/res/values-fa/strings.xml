@@ -91,6 +91,7 @@
     <string name="server_lab_content">محتوا</string>
     <string name="toast_none_data_clipboard">هیچ داده ای در کلیپ بورد وجود ندارد</string>
     <string name="toast_invalid_url">URL نامعتبر است</string>
+    <string name="toast_insecure_url_protocol">لطفاً از آدرس اشتراک پروتکل HTTP ناامن استفاده نکنید</string>
     <string name="server_lab_need_inbound">اطمینان حاصل کنید که پورت ورودی با تنظیمات مطابقت دارد</string>
     <string name="toast_malformed_josn">پیکربندی نادرست است</string>
     <string name="server_lab_request_host6">میزبان (SNI) (اختیاری)</string>

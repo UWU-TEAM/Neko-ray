@@ -91,6 +91,7 @@
     <string name="server_lab_content">コンテンツ</string>
     <string name="toast_none_data_clipboard">クリップボードにデータがありません</string>
     <string name="toast_invalid_url">無効なURL</string>
+    <string name="toast_insecure_url_protocol">安全でないHTTPプロトコルサブスクリプションアドレスを使用しないでください</string>
     <string name="server_lab_need_inbound">受信ポートが設定と一致していることを確認してください</string>
     <string name="toast_malformed_josn">構成が不正です</string>
     <string name="server_lab_request_host6">ホスト(SNI)(オプション)</string>

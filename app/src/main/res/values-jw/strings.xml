@@ -91,6 +91,7 @@
     <string name="server_lab_content">Content</string>
     <string name="toast_none_data_clipboard">Ora ana data ing clipboard</string>
     <string name="toast_invalid_url">Invalid URL</string>
+    <string name="toast_insecure_url_protocol">Aja nggunakake alamat langganan protokol HTTP sing ora aman</string>
     <string name="server_lab_need_inbound">Pasthekake port mlebu konsisten karo setelan</string>
     <string name="toast_malformed_josn">Config format salah</string>
     <string name="server_lab_request_host6">Host(SNI)(Options)</string>

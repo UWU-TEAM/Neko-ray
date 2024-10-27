@@ -91,6 +91,7 @@
     <string name="server_lab_content">eusi</string>
     <string name="toast_none_data_clipboard">Henteu aya data dina clipboard</string>
     <string name="toast_invalid_url">URL teu valid</string>
+    <string name="toast_insecure_url_protocol">Aja nggunakake alamat langganan protokol HTTP sing ora aman</string>
     <string name="server_lab_need_inbound">Pastikeun port asup konsisten sareng setelan</string>
     <string name="toast_malformed_josn">Format Konfigurasi anu salah</string>
     <string name="server_lab_request_host6">Host(SNI)(Pilihan)</string>

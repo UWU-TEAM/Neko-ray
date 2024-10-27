@@ -91,6 +91,7 @@
     <string name="server_lab_content">Nội dung</string>
     <string name="toast_none_data_clipboard">Không có dữ liệu trong clipboard</string>
     <string name="toast_invalid_url">URL không hợp lệ</string>
+    <string name="toast_insecure_url_protocol">Vui lòng không sử dụng địa chỉ đăng ký giao thức HTTP không an toàn</string>
     <string name="server_lab_need_inbound">Đảm bảo cổng vào phù hợp với cài đặt</string>
     <string name="toast_malformed_josn">Cấu hình không đúng định dạng</string>
     <string name="server_lab_request_host6">Máy chủ(SNI)(Tùy chọn)</string>
