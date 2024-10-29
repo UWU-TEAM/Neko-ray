@@ -17,7 +17,6 @@ import com.mikepenz.aboutlibraries.LibsBuilder
 import com.neko.appupdater.AppUpdater
 import com.neko.appupdater.enums.Display
 import com.neko.appupdater.enums.UpdateFrom
-import com.neko.changelog.Changelog
 import com.neko.nointernet.callbacks.ConnectionCallback
 import com.neko.nointernet.dialogs.signal.NoInternetDialogSignal
 import com.neko.v2ray.AppConfig
@@ -86,7 +85,7 @@ class NekoAboutActivity : BaseActivity() {
     }
 
     fun changelog(view: View) {
-        Changelog.createDialog(this).show()
+        Utils.openUri(this, AppConfig.UWU_CHANGELOG_URL)
     }
 
     private fun startNoInternetDialog() {
