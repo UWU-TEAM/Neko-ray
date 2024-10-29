@@ -19,7 +19,7 @@ android {
     defaultConfig {
         applicationId = "com.neko.v2ray"
         minSdk = 27
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 235
         versionName = "1.1.15"
         multiDexEnabled = true
