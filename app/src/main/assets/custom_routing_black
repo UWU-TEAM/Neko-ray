@@ -15,7 +15,7 @@
     ]
   },
   {
-    "remarks": "Blocking udp 443",
+    "remarks": "Block udp443",
     "outboundTag": "block",
     "port": "443",
     "network": "udp"
@@ -42,15 +42,7 @@
     ]
   },
   {
-    "remarks": "Proxy GFW",
-    "outboundTag": "proxy",
-    "domain": [
-      "geosite:gfw",
-      "geosite:greatfire"
-    ]
-  },
-  {
-    "remarks": "Agent for Google, etc.",
+    "remarks": "Proxy IP",
     "outboundTag": "proxy",
     "ip": [
       "1.0.0.1",
@@ -63,6 +55,14 @@
       "geoip:netflix",
       "geoip:telegram",
       "geoip:twitter"
+    ]
+  },
+  {
+    "remarks": "Proxy GFW",
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:gfw",
+      "geosite:greatfire"
     ]
   },
   {
