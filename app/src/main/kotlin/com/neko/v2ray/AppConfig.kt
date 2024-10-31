@@ -3,7 +3,7 @@ package com.neko.v2ray
 
 object AppConfig {
     /** UWU **/
-    const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/release.json"
+    const val UWU_UPDATE_URL = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/release.json"
     const val UWU_CHANGELOG_URL = "https://github.com/UWU-TEAM/Neko-ray/blob/main/CHANGELOG.md"
 
     /** The application's package name. */
@@ -174,6 +174,12 @@ object AppConfig {
     val DNS_ONE_ONE_ADDRESSES = arrayListOf("1.1.1.1", "1.0.0.1", "2606:4700:4700::1111", "2606:4700:4700::1001")
     val DNS_GOOGLE_ADDRESSES = arrayListOf("8.8.8.8", "8.8.4.4", "2001:4860:4860::8888", "2001:4860:4860::8844")
 
-
+    const val DEFAULT_PORT = 443
+    const val DEFAULT_SECURITY = "auto"
+    const val DEFAULT_LEVEL = 8
+    const val DEFAULT_NETWORK = "tcp"
+    const val TLS = "tls"
+    const val REALITY = "reality"
+    const val HEADER_TYPE_HTTP = "http"
 
 }
