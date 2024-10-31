@@ -37,6 +37,7 @@ webkit = "1.12.1"
 androidGradlePlugin = "8.7.1"
 androidKotlinPlugin = "2.0.21"
 aboutLibraries = "11.2.3"
+mockitoMockitoInline = "4.0.0"
 
 [libraries]
 aboutlibraries-core = { module = "com.mikepenz:aboutlibraries-core", version.ref = "aboutlibrariesCore" }
@@ -81,6 +82,8 @@ work-multiprocess = { module = "androidx.work:work-multiprocess", version.ref = 
 work-runtime = { module = "androidx.work:work-runtime", version.ref = "workRuntimeKtx" }
 work-runtime-ktx = { module = "androidx.work:work-runtime-ktx", version.ref = "workRuntimeKtx" }
 webkit = { module = "androidx.webkit:webkit", version.ref = "webkit" }
+mockito-kotlin = { module = "org.mockito.kotlin:mockito-kotlin", version.ref = "mockitoMockitoInline" }
+org-mockito-mockito-inline = { module = "org.mockito:mockito-inline", version.ref = "mockitoMockitoInline" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }

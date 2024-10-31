@@ -149,6 +149,9 @@ if (file("user.gradle").exists()) {
 
 dependencies {
     testImplementation(libs.junit)
+    testImplementation(libs.org.mockito.mockito.inline)
+    testImplementation(libs.mockito.kotlin)
+
     implementation(libs.flexbox)
 
     // Include Project
