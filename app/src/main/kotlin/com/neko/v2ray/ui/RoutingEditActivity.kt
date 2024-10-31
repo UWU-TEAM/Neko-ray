@@ -1,7 +1,6 @@
 package com.neko.v2ray.ui
 
 import android.os.Bundle
-import android.text.TextUtils
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
@@ -91,7 +90,7 @@ class RoutingEditActivity : BaseActivity() {
 
     private fun bindingServer(rulesetItem: RulesetItem): Boolean {
         binding.etRemarks.text = Utils.getEditable(rulesetItem.remarks)
-        binding.chkLocked.isChecked = rulesetItem.looked ?: false
+        binding.chkLocked.isChecked = rulesetItem.looked == true
         binding.etDomain.text = Utils.getEditable(rulesetItem.domain?.joinToString(","))
         binding.etIp.text = Utils.getEditable(rulesetItem.ip?.joinToString(","))
         binding.etPort.text = Utils.getEditable(rulesetItem.port)
