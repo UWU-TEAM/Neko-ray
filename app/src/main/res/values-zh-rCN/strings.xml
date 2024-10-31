@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">备注已经存在</string>
     <string name="toast_action_not_allowed">不允许的操作</string>
     <string name="server_obfs_password">Obfs 密码</string>
+    <string name="server_lab_port_hop">跳跃端口(会覆盖服务器端口)</string>
+    <string name="server_lab_port_hop_interval">端口跳跃间隔(秒)</string>
+    <string name="server_lab_stream_pinsha256">SHA256证书指纹</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">加载中</string>

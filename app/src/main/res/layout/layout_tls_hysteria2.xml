@@ -52,7 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8.0dip"
-        android:layout_marginBottom="16.0dip">
+        android:layout_marginBottom="8.0dip">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,5 +66,25 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_height"
             android:foreground="?android:selectableItemBackground" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/lay_stream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8.0dip"
+        android:layout_marginBottom="16.0dip">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/server_lab_stream_pinsha256"
+            style="@style/Outline_TextInputLayout">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_pinsha256"
+                android:nextFocusDown="@+id/sp_allow_insecure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 </LinearLayout>

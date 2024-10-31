@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">Nhận xét đã tồn tại</string>
     <string name="toast_action_not_allowed">Hành động không được phép</string>
     <string name="server_obfs_password">Mật khẩu Obfs</string>
+    <string name="server_lab_port_hop">Cảng Hopping</string>
+    <string name="server_lab_port_hop_interval">Khoảng thời gian nhảy cổng</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">Đang tải</string>

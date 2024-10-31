@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">コメントはすでに存在します</string>
     <string name="toast_action_not_allowed">許可されていないアクション</string>
     <string name="server_obfs_password">Obfsパスワード</string>
+    <string name="server_lab_port_hop">港巡り</string>
+    <string name="server_lab_port_hop_interval">ポートホッピング間隔</string>
+    <string name="server_lab_stream_pinsha256">ピンSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">読み込み中</string>
