@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">Deskripsi wis ana</string>
     <string name="toast_action_not_allowed">Tindakan ora diidini</string>
     <string name="server_obfs_password">Obfs sandi</string>
+    <string name="server_lab_port_hop">Port Hopping (bakal override port)</string>
+    <string name="server_lab_port_hop_interval">Port Hopping Interval</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Loading</string>

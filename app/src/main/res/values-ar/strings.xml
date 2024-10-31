@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">الملاحظات موجودة بالفعل</string>
     <string name="toast_action_not_allowed">الإجراء غير مسموح به</string>
     <string name="server_obfs_password">كلمة مرور Obfs</string>
+    <string name="server_lab_port_hop">التنقل بين المنافذ (سيتم تجاوز المنفذ)</string>
+    <string name="server_lab_port_hop_interval">الفاصل الزمني للتنقل بين الموانئ</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">تحميل</string>

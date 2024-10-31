@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content">
     <LinearLayout
         android:orientation="vertical"
         android:id="@+id/lay_stream_security"
@@ -66,5 +65,23 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/edit_height"
             android:foreground="?android:selectableItemBackground" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip"
+            android:layout_marginBottom="0.0dip">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/server_lab_stream_pinsha256"
+                style="@style/Outline_TextInputLayout">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_pinsha256"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

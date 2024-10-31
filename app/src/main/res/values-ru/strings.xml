@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">Замечания уже есть</string>
     <string name="toast_action_not_allowed">Действие не разрешено</string>
     <string name="server_obfs_password">пароль obfs</string>
+    <string name="server_lab_port_hop">Переключение портов (переопределяет порт)</string>
+    <string name="server_lab_port_hop_interval">Интервал переключения портов</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">Загрузка</string>

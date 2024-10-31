@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">Inpormasi parantos aya</string>
     <string name="toast_action_not_allowed">Aksi teu diwenangkeun</string>
     <string name="server_obfs_password">sandi Obfs</string>
+    <string name="server_lab_port_hop">Port Hopping (bakal override port)</string>
+    <string name="server_lab_port_hop_interval">Port Hopping Interval</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">ngamuat</string>

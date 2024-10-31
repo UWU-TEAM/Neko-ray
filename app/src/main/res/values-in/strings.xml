@@ -105,6 +105,9 @@
     <string name="msg_remark_is_duplicate">Keterangan sudah ada</string>
     <string name="toast_action_not_allowed">Tindakan tidak diizinkan</string>
     <string name="server_obfs_password">Kata sandi obfs</string>
+    <string name="server_lab_port_hop">Port Hopping (akan menimpali pelabuhan)</string>
+    <string name="server_lab_port_hop_interval">Interval Perpindahan Pelabuhan</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">Memuat</string>

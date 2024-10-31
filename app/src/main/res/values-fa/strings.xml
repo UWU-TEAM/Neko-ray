@@ -105,7 +105,9 @@
     <string name="msg_remark_is_duplicate">اظهارات قبلاً وجود دارد</string>
     <string name="toast_action_not_allowed">اقدام مجاز نیست</string>
     <string name="server_obfs_password">رمز عبور Obfs</string>
- 
+    <string name="server_lab_port_hop">Port Hopping (پورت را لغو می کند)</string>
+    <string name="server_lab_port_hop_interval">فاصله پرش بندر</string>
+    <string name="server_lab_stream_pinsha256">pinSHA256</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">بارگذاری</string>

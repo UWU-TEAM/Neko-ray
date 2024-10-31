@@ -19,16 +19,16 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.textfield.TextInputLayout
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
+import com.neko.v2ray.AppConfig.DEFAULT_PORT
 import com.neko.v2ray.AppConfig.PREF_ALLOW_INSECURE
+import com.neko.v2ray.AppConfig.REALITY
+import com.neko.v2ray.AppConfig.TLS
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V6
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_MTU
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
-import com.neko.v2ray.AppConfig.DEFAULT_PORT
-import com.neko.v2ray.AppConfig.REALITY
-import com.neko.v2ray.AppConfig.TLS
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.MmkvManager
@@ -132,6 +132,9 @@ class ServerActivity : BaseActivity() {
     private val et_local_address: EditText? by lazy { findViewById(R.id.et_local_address) }
     private val et_local_mtu: EditText? by lazy { findViewById(R.id.et_local_mtu) }
     private val et_obfs_password: EditText? by lazy { findViewById(R.id.et_obfs_password) }
+    private val et_port_hop: EditText? by lazy { findViewById(R.id.et_port_hop) }
+    private val et_port_hop_interval: EditText? by lazy { findViewById(R.id.et_port_hop_interval) }
+    private val et_pinsha256: EditText? by lazy { findViewById(R.id.et_pinsha256) }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -352,6 +355,9 @@ class ServerActivity : BaseActivity() {
             }
         } else if (config.configType == EConfigType.HYSTERIA2) {
             et_obfs_password?.text = Utils.getEditable(config.obfsPassword)
+            et_port_hop?.text = Utils.getEditable(config.portHopping)
+            et_port_hop_interval?.text = Utils.getEditable(config.portHoppingInterval)
+            et_pinsha256?.text = Utils.getEditable(config.pinSHA256)
         }
 
         val securityEncryptions = if (config.configType == EConfigType.SHADOWSOCKS) shadowsocksSecuritys else securitys
@@ -453,13 +459,13 @@ class ServerActivity : BaseActivity() {
             toast(R.string.server_lab_address)
             return false
         }
-        val port = Utils.parseInt(et_port.text.toString())
-        if (port <= 0) {
-            toast(R.string.server_lab_port)
-            return false
+        if (createConfigType != EConfigType.HYSTERIA2) {
+            if (Utils.parseInt(et_port.text.toString()) <= 0) {
+                toast(R.string.server_lab_port)
+                return false
+            }
         }
-        val config =
-            MmkvManager.decodeServerConfig(editGuid) ?: ProfileItem.create(createConfigType)
+        val config = MmkvManager.decodeServerConfig(editGuid) ?: ProfileItem.create(createConfigType)
         if (config.configType != EConfigType.SOCKS
             && config.configType != EConfigType.HTTP
             && TextUtils.isEmpty(et_id.text.toString())
@@ -488,7 +494,7 @@ class ServerActivity : BaseActivity() {
         if (config.subscriptionId.isEmpty() && !subscriptionId.isNullOrEmpty()) {
             config.subscriptionId = subscriptionId.orEmpty()
         }
-        Log.d(ANG_PACKAGE,  JsonUtil.toJsonPretty(config))
+        Log.d(ANG_PACKAGE, JsonUtil.toJsonPretty(config))
         MmkvManager.encodeServerConfig(editGuid, config)
         toast(R.string.toast_success)
         finish()
@@ -521,6 +527,9 @@ class ServerActivity : BaseActivity() {
             config.mtu = Utils.parseInt(et_local_mtu?.text.toString())
         } else if (config.configType == EConfigType.HYSTERIA2) {
             config.obfsPassword = et_obfs_password?.text?.toString()
+            config.portHopping = et_port_hop?.text?.toString()
+            config.portHoppingInterval = et_port_hop_interval?.text?.toString()
+            config.pinSHA256 = et_pinsha256?.text?.toString()
         }
     }
 
