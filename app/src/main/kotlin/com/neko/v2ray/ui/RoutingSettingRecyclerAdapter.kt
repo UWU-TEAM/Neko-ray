@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.neko.v2ray.databinding.ItemRecyclerRoutingSettingBinding
 import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
-import com.neko.v2ray.ui.MainRecyclerAdapter.BaseViewHolder
 import com.neko.v2ray.util.SettingsManager
 
 class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : RecyclerView.Adapter<RoutingSettingRecyclerAdapter.MainViewHolder>(),
@@ -26,7 +25,7 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : Recy
         holder.itemRoutingSettingBinding.domainIp.text = (ruleset.domain ?: ruleset.ip ?: ruleset.port)?.toString()
         holder.itemRoutingSettingBinding.outboundTag.text = ruleset.outboundTag
         holder.itemRoutingSettingBinding.chkEnable.isChecked = ruleset.enabled
-        holder.itemRoutingSettingBinding.imgLocked.isVisible = ruleset.looked ?: false
+        holder.itemRoutingSettingBinding.imgLocked.isVisible = ruleset.looked == true
         holder.itemView.setBackgroundColor(Color.TRANSPARENT)
 
         holder.itemRoutingSettingBinding.layoutEdit.setOnClickListener {
@@ -37,7 +36,7 @@ class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : Recy
         }
 
         holder.itemRoutingSettingBinding.chkEnable.setOnCheckedChangeListener { it, isChecked ->
-            if( !it.isPressed) return@setOnCheckedChangeListener
+            if (!it.isPressed) return@setOnCheckedChangeListener
             ruleset.enabled = isChecked
             SettingsManager.saveRoutingRuleset(position, ruleset)
         }

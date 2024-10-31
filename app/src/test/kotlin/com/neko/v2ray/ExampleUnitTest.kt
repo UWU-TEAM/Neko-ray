@@ -1,11 +1,4 @@
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.util.fmt.Hysteria2Fmt
-import com.neko.v2ray.util.fmt.ShadowsocksFmt
-import com.neko.v2ray.util.fmt.SocksFmt
-import com.neko.v2ray.util.fmt.TrojanFmt
-import com.neko.v2ray.util.fmt.VlessFmt
-import com.neko.v2ray.util.fmt.VmessFmt
-import com.neko.v2ray.util.fmt.WireguardFmt
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

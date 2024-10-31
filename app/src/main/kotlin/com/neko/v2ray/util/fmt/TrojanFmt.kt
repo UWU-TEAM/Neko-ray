@@ -3,7 +3,6 @@ package com.neko.v2ray.util.fmt
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
-import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.util.MmkvManager.settingsStorage
@@ -13,7 +12,7 @@ import kotlin.text.orEmpty
 
 object TrojanFmt : FmtBase() {
     fun parse(str: String): ProfileItem? {
-        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE,false)
+        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE, false)
         val config = ProfileItem.create(EConfigType.TROJAN)
 
         val uri = URI(Utils.fixIllegalUrl(str))
