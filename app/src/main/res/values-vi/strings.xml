@@ -76,7 +76,7 @@
     <string name="server_lab_security4">Người dùng (Tùy chọn)</string>
     <string name="server_lab_encryption">mã hóa</string>
     <string name="server_lab_flow">chảy</string>
-    <string name="server_lab_reserved">Dành riêng (Tùy chọn)</string>
+    <string name="server_lab_reserved">Đã đặt trước (Tùy chọn, phân tách bằng dấu phẩy)</string>
     <string name="server_lab_local_address">Địa chỉ cục bộ (IPv4/IPv6 tùy chọn, được phân tách bằng dấu phẩy)</string>
     <string name="server_lab_local_mtu">Mtu (tùy chọn, mặc định 1420)</string>
     <string name="toast_success">Thành công</string>

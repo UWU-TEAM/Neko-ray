@@ -76,7 +76,7 @@
     <string name="server_lab_security4">使用者（可選）</string>
     <string name="server_lab_encryption">加密</string>
     <string name="server_lab_flow">流動</string>
-    <string name="server_lab_reserved">保留（可選）</string>
+    <string name="server_lab_reserved">Reserved (可選，逗號隔開)</string>
     <string name="server_lab_local_address">本機位址（可選 IPv4/IPv6，以逗號分隔）</string>
     <string name="server_lab_local_mtu">Mtu（可選，預設1420）</string>
     <string name="toast_success">成功</string>

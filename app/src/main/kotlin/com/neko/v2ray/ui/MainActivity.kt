@@ -39,6 +39,7 @@ import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.AngConfigManager
+import com.neko.v2ray.util.MigrateManager
 import com.neko.v2ray.util.MmkvManager
 import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
@@ -178,6 +179,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         initGroupTab()
         setupViewModel()
+        migrateLegacy()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             RxPermissions(this)
@@ -210,7 +212,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Show new update with dialog
         val appUpdater = AppUpdater(this).apply {
             setUpdateFrom(UpdateFrom.JSON)
-            setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
+            setUpdateJSON(AppConfig.UWU_UPDATE_URL)
             setDisplay(Display.DIALOG)
             showAppUpdated(false)
             setCancelable(false)
@@ -275,6 +277,21 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
         mainViewModel.startListenBroadcast()
         mainViewModel.copyAssets(assets)
+    }
+
+    private fun migrateLegacy() {
+        lifecycleScope.launch(Dispatchers.IO) {
+            val result = MigrateManager.migrateServerConfig2Profile()
+            launch(Dispatchers.Main) {
+                if (result) {
+                    toast(getString(R.string.migration_success))
+                    mainViewModel.reloadServerList()
+                } else {
+                    //toast(getString(R.string.migration_fail))
+                }
+            }
+
+        }
     }
 
     private fun initGroupTab() {
@@ -630,6 +647,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                             toast(R.string.toast_success)
                             mainViewModel.reloadServerList()
                         }
+
                         countSub > 0 -> initGroupTab()
                         else -> toast(R.string.toast_failure)
                     }

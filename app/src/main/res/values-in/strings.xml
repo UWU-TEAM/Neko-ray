@@ -76,7 +76,7 @@
     <string name="server_lab_security4">User(Opsi)</string>
     <string name="server_lab_encryption">enkripsi</string>
     <string name="server_lab_flow">flow</string>
-    <string name="server_lab_reserved">Reserved(Opsi)</string>
+    <string name="server_lab_reserved">Dicadangkan (Opsional, dipisahkan dengan koma)</string>
     <string name="server_lab_local_address">Alamat lokal (Opsi IPv4/IPv6, dipisahkan dengan koma)</string>
     <string name="server_lab_local_mtu">Mtu(Opsi, default 1420)</string>
     <string name="toast_success">Sukses</string>

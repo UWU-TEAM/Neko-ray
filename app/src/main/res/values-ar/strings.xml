@@ -76,7 +76,7 @@
     <string name="server_lab_security4">المستخدم (اختياري)</string>
     <string name="server_lab_encryption">التشفير</string>
     <string name="server_lab_flow">تدفق</string>
-    <string name="server_lab_reserved">محجوزة (اختياري)</string>
+    <string name="server_lab_reserved">محجوز (اختياري، مفصول بفواصل)</string>
     <string name="server_lab_local_address">العنوان المحلي (IPv4/IPv6 اختياري، مفصول بفواصل)</string>
     <string name="server_lab_local_mtu">Mtu (اختياري، افتراضي 1420)</string>
     <string name="toast_success">نجاح</string>

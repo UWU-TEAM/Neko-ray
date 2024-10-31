@@ -76,7 +76,7 @@
     <string name="server_lab_security4">ユーザー(オプション)</string>
     <string name="server_lab_encryption">暗号化</string>
     <string name="server_lab_flow">流れ</string>
-    <string name="server_lab_reserved">予約済み(オプション)</string>
+    <string name="server_lab_reserved">予約済み(オプション、カンマ区切り)</string>
     <string name="server_lab_local_address">ローカル アドレス (オプションの IPv4/IPv6、カンマ区切り)</string>
     <string name="server_lab_local_mtu">Mtu (オプション、デフォルトは 1420)</string>
     <string name="toast_success">成功</string>

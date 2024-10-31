@@ -331,16 +331,6 @@
                                     android:layout_width="60.0dip"
                                     android:layout_height="@dimen/edit_height"
                                     android:inputType="number" />
-                                <EditText
-                                    android:id="@+id/et_reserved2"
-                                    android:layout_width="60.0dip"
-                                    android:layout_height="@dimen/edit_height"
-                                    android:inputType="number" />
-                                <EditText
-                                    android:id="@+id/et_reserved3"
-                                    android:layout_width="60.0dip"
-                                    android:layout_height="@dimen/edit_height"
-                                    android:inputType="number" />
                             </LinearLayout>
                         </LinearLayout>
                         <LinearLayout

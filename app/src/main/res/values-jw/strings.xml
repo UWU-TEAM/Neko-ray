@@ -76,7 +76,7 @@
     <string name="server_lab_security4">Panganggo(Opsi)</string>
     <string name="server_lab_encryption">enkripsi</string>
     <string name="server_lab_flow">flow</string>
-    <string name="server_lab_reserved">Reserved(Opsi)</string>
+    <string name="server_lab_reserved">Reserved(Opsional, dipisahake karo koma)</string>
     <string name="server_lab_local_address">Alamat lokal (Pilihan IPv4/IPv6, dipisahake karo koma)</string>
     <string name="server_lab_local_mtu">Mtu(Opsi, standar 1420)</string>
     <string name="toast_success">Sukses</string>

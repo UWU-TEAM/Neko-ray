@@ -300,24 +300,6 @@
                             android:layout_height="wrap_content"
                             android:layout_marginTop="8.0dip"
                             android:layout_marginBottom="8.0dip">
-                            <com.google.android.material.textfield.TextInputLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:hint="@string/server_lab_alterid"
-                                style="@style/Outline_TextInputLayout">
-                                <com.google.android.material.textfield.TextInputEditText
-                                    android:id="@+id/et_alterId"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:inputType="number" />
-                            </com.google.android.material.textfield.TextInputLayout>
-                        </LinearLayout>
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="8.0dip"
-                            android:layout_marginBottom="8.0dip">
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"

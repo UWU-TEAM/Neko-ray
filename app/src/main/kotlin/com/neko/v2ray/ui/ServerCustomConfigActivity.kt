@@ -16,7 +16,7 @@ import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityServerCustomConfigBinding
 import com.neko.v2ray.dto.EConfigType
-import com.neko.v2ray.dto.ServerConfig
+import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.JsonUtil
@@ -107,10 +107,10 @@ class ServerCustomConfigActivity : BaseActivity() {
     /**
      * Binding selected server config
      */
-    private fun bindingServer(config: ServerConfig): Boolean {
+    private fun bindingServer(config: ProfileItem): Boolean {
         binding.etRemarks.text = Utils.getEditable(config.remarks)
         val raw = MmkvManager.decodeServerRaw(editGuid)
-        val configContent = raw ?: config.fullConfig?.toPrettyPrinting().orEmpty()
+        val configContent = raw.orEmpty()
 
         binding.editor.setTextContent(Utils.getEditable(configContent))
         return true
@@ -141,9 +141,8 @@ class ServerCustomConfigActivity : BaseActivity() {
             return false
         }
 
-        val config = MmkvManager.decodeServerConfig(editGuid) ?: ServerConfig.create(EConfigType.CUSTOM)
+        val config = MmkvManager.decodeServerConfig(editGuid) ?: ProfileItem.create(EConfigType.CUSTOM)
         config.remarks = if (binding.etRemarks.text.isNullOrEmpty()) v2rayConfig.remarks.orEmpty() else binding.etRemarks.text.toString()
-        config.fullConfig = v2rayConfig
 
         MmkvManager.encodeServerConfig(editGuid, config)
         MmkvManager.encodeServerRaw(editGuid, binding.editor.text.toString())

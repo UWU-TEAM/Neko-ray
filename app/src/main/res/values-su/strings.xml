@@ -76,7 +76,7 @@
     <string name="server_lab_security4">Pamaké (Pilihan)</string>
     <string name="server_lab_encryption">énkripsi</string>
     <string name="server_lab_flow">ngalir</string>
-    <string name="server_lab_reserved">Dicadangkeun (Pilihan)</string>
+    <string name="server_lab_reserved">Ditangtayungan(Opsional, dipisahkeun ku koma)</string>
     <string name="server_lab_local_address">Alamat lokal (pilihan IPv4/IPv6, dipisahkeun ku koma)</string>
     <string name="server_lab_local_mtu">Mtu(Pilihan, standar 1420)</string>
     <string name="toast_success">Kasuksésan</string>
