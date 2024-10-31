@@ -2,20 +2,19 @@ package com.neko.v2ray.util
 
 import android.content.Context
 import android.text.TextUtils
-
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
 import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
+import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RoutingType
 import com.neko.v2ray.dto.RulesetItem
-import com.neko.v2ray.dto.ServerConfig
-import com.neko.v2ray.util.MmkvManager.decodeProfileConfig
 import com.neko.v2ray.util.MmkvManager.decodeServerConfig
 import com.neko.v2ray.util.MmkvManager.decodeServerList
 import com.neko.v2ray.util.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils.parseInt
 import java.util.Collections
+import kotlin.Int
 
 object SettingsManager {
 
@@ -131,15 +130,15 @@ object SettingsManager {
         MmkvManager.encodeSubsList(subsList)
     }
 
-    fun getServerViaRemarks(remarks: String?): ServerConfig? {
+    fun getServerViaRemarks(remarks: String?): ProfileItem? {
         if (remarks == null) {
             return null
         }
         val serverList = decodeServerList()
         for (guid in serverList) {
-            val profile = decodeProfileConfig(guid)
+            val profile = decodeServerConfig(guid)
             if (profile != null && profile.remarks == remarks) {
-                return decodeServerConfig(guid)
+                return profile
             }
         }
         return null

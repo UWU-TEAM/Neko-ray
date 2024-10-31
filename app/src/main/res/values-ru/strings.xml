@@ -76,7 +76,7 @@
     <string name="server_lab_security4">Пользователь (необязательно)</string>
     <string name="server_lab_encryption">шифрование</string>
     <string name="server_lab_flow">поток</string>
-    <string name="server_lab_reserved">Зарезервировано (необязательно)</string>
+    <string name="server_lab_reserved">Зарезервировано (необязательно, через запятую)</string>
     <string name="server_lab_local_address">Локальный адрес (необязательный IPv4/IPv6, разделенный запятыми)</string>
     <string name="server_lab_local_mtu">Mtu(необязательно, по умолчанию 1420)</string>
     <string name="toast_success">Успех</string>
