@@ -31,7 +31,6 @@ jobs:
       - name: Prepare
         run: |
           sudo apt-get -y install dos2unix
-          git clone --depth 1 https://github.com/UWU-TEAM/AndroidLibXrayLite
           wget -qO - https://api.github.com/repos/UWU-TEAM/AndroidLibXrayLite/releases/latest \
           | grep browser_download_url | cut -d '"' -f 4 \
           | wget -i - -O app/libs/libv2ray.aar
@@ -42,10 +41,13 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
 
+      - name: Setup Android environment
+        uses: android-actions/setup-android@v3
+
       - name: Build
         run: |
           dos2unix ./gradlew
-          ./gradlew assemble
+          ./gradlew assembleRelease
 
       - name: arm64
         uses: actions/upload-artifact@v4
