@@ -20,9 +20,9 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.BuildConfig
 import com.neko.v2ray.R
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.MyContextWrapper
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

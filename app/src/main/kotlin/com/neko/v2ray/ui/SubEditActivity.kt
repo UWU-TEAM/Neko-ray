@@ -13,8 +13,7 @@ import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivitySubEditBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -27,6 +26,8 @@ import com.neko.imageslider.interfaces.ItemChangeListener
 import com.neko.imageslider.interfaces.ItemClickListener
 import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
+
+import com.neko.v2ray.util.SoftInputAssist
 
 class SubEditActivity : BaseActivity() {
     private val binding by lazy {ActivitySubEditBinding.inflate(layoutInflater)}

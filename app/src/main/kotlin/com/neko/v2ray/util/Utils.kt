@@ -21,11 +21,12 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.BuildConfig
-import com.neko.v2ray.dto.Language
 import com.neko.v2ray.R
+import com.neko.v2ray.dto.Language
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import java.io.IOException
 import java.net.*
 import java.util.*

@@ -23,11 +23,11 @@ import com.neko.v2ray.extension.toSpeedString
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.ui.MainActivity
 import com.neko.v2ray.util.MessageUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.util.V2rayConfigUtil
+import com.neko.v2ray.handler.V2rayConfigManager
 import go.Seq
 import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.Disposable
@@ -134,7 +134,7 @@ object V2RayServiceManager {
         if (v2rayPoint.isRunning) {
             return
         }
-        val result = V2rayConfigUtil.getV2rayConfig(service, guid)
+        val result = V2rayConfigManager.getV2rayConfig(service, guid)
         if (!result.status)
             return
 

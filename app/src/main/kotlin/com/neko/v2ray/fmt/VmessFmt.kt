@@ -1,4 +1,4 @@
-package com.neko.v2ray.util.fmt
+package com.neko.v2ray.fmt
 
 import android.text.TextUtils
 import android.util.Log
@@ -10,7 +10,7 @@ import com.neko.v2ray.dto.VmessQRCode
 import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.extension.isNotNullEmpty
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import java.net.URI
 import kotlin.text.orEmpty

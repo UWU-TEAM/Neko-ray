@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.neko.v2ray.databinding.ItemRecyclerRoutingSettingBinding
 import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.SettingsManager
 
 class RoutingSettingRecyclerAdapter(val activity: RoutingSettingActivity) : RecyclerView.Adapter<RoutingSettingRecyclerAdapter.MainViewHolder>(),
     ItemTouchHelperAdapter {

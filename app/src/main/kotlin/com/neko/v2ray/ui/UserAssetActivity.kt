@@ -31,8 +31,8 @@ import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

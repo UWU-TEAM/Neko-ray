@@ -7,7 +7,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.AngConfigManager
+import com.neko.v2ray.handler.AngConfigManager
 
 class ScScannerActivity : BaseActivity() {
 

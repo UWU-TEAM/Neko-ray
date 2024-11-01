@@ -14,8 +14,8 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL
 import com.neko.v2ray.AppConfig.SUBSCRIPTION_UPDATE_CHANNEL_NAME
 import com.neko.v2ray.R
-import com.neko.v2ray.util.AngConfigManager.updateConfigViaSub
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.AngConfigManager.updateConfigViaSub
+import com.neko.v2ray.handler.MmkvManager
 
 object SubscriptionUpdater {
 

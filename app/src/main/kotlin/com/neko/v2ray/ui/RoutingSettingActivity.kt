@@ -10,8 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.appbar.CollapsingToolbarLayout
+
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingBinding
@@ -19,13 +18,16 @@ import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 
 class RoutingSettingActivity : BaseActivity() {
     private val binding by lazy { ActivityRoutingSettingBinding.inflate(layoutInflater) }

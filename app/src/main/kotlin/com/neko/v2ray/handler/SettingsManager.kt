@@ -1,8 +1,7 @@
-package com.neko.v2ray.util
+package com.neko.v2ray.handler
 
 import android.content.Context
 import android.text.TextUtils
-
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
 import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
@@ -10,9 +9,11 @@ import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RoutingType
 import com.neko.v2ray.dto.RulesetItem
-import com.neko.v2ray.util.MmkvManager.decodeServerConfig
-import com.neko.v2ray.util.MmkvManager.decodeServerList
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.decodeServerConfig
+import com.neko.v2ray.handler.MmkvManager.decodeServerList
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.Utils.parseInt
 import java.util.Collections
 import kotlin.Int

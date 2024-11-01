@@ -9,11 +9,11 @@ import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.serializable
 import com.neko.v2ray.util.MessageUtil
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.util.V2rayConfigUtil
+import com.neko.v2ray.handler.V2rayConfigManager
 import go.Seq
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
@@ -61,7 +61,7 @@ class V2RayTestService : Service() {
             val delay = PluginUtil.realPingHy2(this, config)
             return delay
         } else {
-            val config = V2rayConfigUtil.getV2rayConfig(this, guid)
+            val config = V2rayConfigManager.getV2rayConfig(this, guid)
             if (!config.status) {
                 return retFailure
             }

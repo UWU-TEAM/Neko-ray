@@ -20,8 +20,7 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
@@ -33,6 +32,8 @@ import com.neko.imageslider.interfaces.ItemChangeListener
 import com.neko.imageslider.interfaces.ItemClickListener
 import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
+
+import com.neko.v2ray.util.SoftInputAssist
 
 class ServerCustomConfigActivity : BaseActivity() {
     private val binding by lazy { ActivityServerCustomConfigBinding.inflate(layoutInflater) }

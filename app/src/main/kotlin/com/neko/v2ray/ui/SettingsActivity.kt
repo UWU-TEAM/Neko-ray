@@ -23,7 +23,7 @@ import com.neko.v2ray.AppConfig.VPN
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toLongEx
 import com.neko.v2ray.service.SubscriptionUpdater
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.SettingsViewModel
 import java.util.concurrent.TimeUnit

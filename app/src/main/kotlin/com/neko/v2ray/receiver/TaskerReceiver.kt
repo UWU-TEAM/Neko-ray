@@ -6,7 +6,7 @@ import android.content.Intent
 import android.text.TextUtils
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 
 class TaskerReceiver : BroadcastReceiver() {

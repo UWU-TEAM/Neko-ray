@@ -7,7 +7,7 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.service.ProcessService
-import com.neko.v2ray.util.fmt.Hysteria2Fmt
+import com.neko.v2ray.fmt.Hysteria2Fmt
 import java.io.File
 
 object PluginUtil {

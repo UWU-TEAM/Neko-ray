@@ -13,10 +13,6 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Spinner
 import android.widget.TextView
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
-import com.google.android.material.appbar.MaterialToolbar
-import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.google.android.material.textfield.TextInputLayout
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.DEFAULT_PORT
@@ -31,9 +27,8 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
-import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 
 import com.neko.imageslider.ImageSlider
@@ -44,6 +39,12 @@ import com.neko.imageslider.interfaces.ItemChangeListener
 import com.neko.imageslider.interfaces.ItemClickListener
 import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.textfield.TextInputLayout
+import com.neko.v2ray.util.SoftInputAssist
 
 class ServerActivity : BaseActivity() {
 
