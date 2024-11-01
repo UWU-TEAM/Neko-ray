@@ -5,14 +5,14 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object VlessFmt : FmtBase() {
 
     fun parse(str: String): ProfileItem? {
-        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE, false)
+        var allowInsecure = MmkvManager.decodeSettingsBool(AppConfig.PREF_ALLOW_INSECURE, false)
         val config = ProfileItem.create(EConfigType.VLESS)
 
         val uri = URI(Utils.fixIllegalUrl(str))

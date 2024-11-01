@@ -9,18 +9,17 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.appbar.MaterialToolbar
+import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
-import com.google.android.material.appbar.CollapsingToolbarLayout
-
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityServerCustomConfigBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 

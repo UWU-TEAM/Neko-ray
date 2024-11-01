@@ -11,7 +11,6 @@ import com.neko.v2ray.dto.RoutingType
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.handler.MmkvManager.decodeServerConfig
 import com.neko.v2ray.handler.MmkvManager.decodeServerList
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.Utils.parseInt
@@ -147,11 +146,11 @@ object SettingsManager {
     }
 
     fun getSocksPort(): Int {
-        return parseInt(settingsStorage?.decodeString(AppConfig.PREF_SOCKS_PORT), AppConfig.PORT_SOCKS.toInt())
+        return parseInt(MmkvManager.decodeSettingsString(AppConfig.PREF_SOCKS_PORT), AppConfig.PORT_SOCKS.toInt())
     }
 
     fun getHttpPort(): Int {
-        return parseInt(settingsStorage?.decodeString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
+        return parseInt(MmkvManager.decodeSettingsString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
     }
 
 }

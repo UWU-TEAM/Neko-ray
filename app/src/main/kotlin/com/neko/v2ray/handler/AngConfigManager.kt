@@ -4,14 +4,10 @@ import android.content.Context
 import android.graphics.Bitmap
 import android.text.TextUtils
 import android.util.Log
-
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.HY2
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
-import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.QRCodeDecoder
-import com.neko.v2ray.util.Utils
 import com.neko.v2ray.fmt.CustomFmt
 import com.neko.v2ray.fmt.Hysteria2Fmt
 import com.neko.v2ray.fmt.ShadowsocksFmt
@@ -20,6 +16,9 @@ import com.neko.v2ray.fmt.TrojanFmt
 import com.neko.v2ray.fmt.VlessFmt
 import com.neko.v2ray.fmt.VmessFmt
 import com.neko.v2ray.fmt.WireguardFmt
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.util.QRCodeDecoder
+import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object AngConfigManager {

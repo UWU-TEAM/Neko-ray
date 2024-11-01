@@ -10,17 +10,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingSettingBinding
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
-import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -57,14 +55,14 @@ class RoutingSettingActivity : BaseActivity() {
         mItemTouchHelper = ItemTouchHelper(SimpleItemTouchHelperCallback(adapter))
         mItemTouchHelper?.attachToRecyclerView(binding.recyclerView)
 
-        val found = Utils.arrayFind(routing_domain_strategy, settingsStorage?.decodeString(AppConfig.PREF_ROUTING_DOMAIN_STRATEGY) ?: "")
+        val found = Utils.arrayFind(routing_domain_strategy, MmkvManager.decodeSettingsString(AppConfig.PREF_ROUTING_DOMAIN_STRATEGY) ?: "")
         found.let { binding.spDomainStrategy.setSelection(if (it >= 0) it else 0) }
         binding.spDomainStrategy.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onNothingSelected(parent: AdapterView<*>?) {
             }
 
             override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
-                settingsStorage.encode(AppConfig.PREF_ROUTING_DOMAIN_STRATEGY, routing_domain_strategy[position])
+                MmkvManager.encodeSettings(AppConfig.PREF_ROUTING_DOMAIN_STRATEGY, routing_domain_strategy[position])
             }
         }
     }

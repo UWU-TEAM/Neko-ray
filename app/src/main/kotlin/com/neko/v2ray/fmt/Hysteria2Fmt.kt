@@ -8,13 +8,13 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.extension.isNotNullEmpty
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object Hysteria2Fmt : FmtBase() {
     fun parse(str: String): ProfileItem? {
-        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE, false)
+        var allowInsecure = MmkvManager.decodeSettingsBool(AppConfig.PREF_ALLOW_INSECURE, false)
         val config = ProfileItem.create(EConfigType.HYSTERIA2)
 
         val uri = URI(Utils.fixIllegalUrl(str))

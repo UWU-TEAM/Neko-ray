@@ -20,8 +20,8 @@ import com.neko.v2ray.databinding.ActivityBypassListBinding
 import com.neko.v2ray.dto.AppInfo
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.AppManagerUtil
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
@@ -49,7 +49,7 @@ class PerAppProxyActivity : BaseActivity() {
         val dividerItemDecoration = DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
         binding.recyclerView.addItemDecoration(dividerItemDecoration)
 
-        val blacklist = settingsStorage?.decodeStringSet(AppConfig.PREF_PER_APP_PROXY_SET)
+        val blacklist = MmkvManager.decodeSettingsStringSet(AppConfig.PREF_PER_APP_PROXY_SET)
 
         AppManagerUtil.rxLoadNetworkAppList(this)
             .subscribeOn(Schedulers.io())
@@ -140,14 +140,14 @@ class PerAppProxyActivity : BaseActivity() {
          ***/
 
         binding.switchPerAppProxy.setOnCheckedChangeListener { _, isChecked ->
-            settingsStorage.encode(AppConfig.PREF_PER_APP_PROXY, isChecked)
+            MmkvManager.encodeSettings(AppConfig.PREF_PER_APP_PROXY, isChecked)
         }
-        binding.switchPerAppProxy.isChecked = settingsStorage.getBoolean(AppConfig.PREF_PER_APP_PROXY, false)
+        binding.switchPerAppProxy.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_PER_APP_PROXY, false)
 
         binding.switchBypassApps.setOnCheckedChangeListener { _, isChecked ->
-            settingsStorage.encode(AppConfig.PREF_BYPASS_APPS, isChecked)
+            MmkvManager.encodeSettings(AppConfig.PREF_BYPASS_APPS, isChecked)
         }
-        binding.switchBypassApps.isChecked = settingsStorage.getBoolean(AppConfig.PREF_BYPASS_APPS, false)
+        binding.switchBypassApps.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_BYPASS_APPS, false)
 
         /***
         et_search.setOnEditorActionListener { v, actionId, event ->
@@ -183,7 +183,7 @@ class PerAppProxyActivity : BaseActivity() {
     override fun onPause() {
         super.onPause()
         adapter?.let {
-            settingsStorage.encode(AppConfig.PREF_PER_APP_PROXY_SET, it.blacklist)
+            MmkvManager.encodeSettings(AppConfig.PREF_PER_APP_PROXY_SET, it.blacklist)
         }
     }
 
