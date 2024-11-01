@@ -7,8 +7,8 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.ServerConfig
-import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.handler.MmkvManager.decodeServerConfig
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 
 object MigrateManager {

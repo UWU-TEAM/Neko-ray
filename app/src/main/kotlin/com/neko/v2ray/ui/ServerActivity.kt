@@ -30,10 +30,9 @@ import com.neko.v2ray.R
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 
 import com.neko.imageslider.ImageSlider
@@ -563,7 +562,7 @@ class ServerActivity : BaseActivity() {
 
         val allowInsecure =
             if (allowInsecureField == null || allowinsecures[allowInsecureField].isBlank()) {
-                settingsStorage?.decodeBool(PREF_ALLOW_INSECURE) == true
+                MmkvManager.decodeSettingsBool(PREF_ALLOW_INSECURE) == true
             } else {
                 allowinsecures[allowInsecureField].toBoolean()
             }
@@ -604,7 +603,7 @@ class ServerActivity : BaseActivity() {
     private fun deleteServer(): Boolean {
         if (editGuid.isNotEmpty()) {
             if (editGuid != MmkvManager.getSelectServer()) {
-                if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
+                if (MmkvManager.decodeSettingsBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
                     MaterialAlertDialogBuilder(this).setMessage(R.string.del_config_comfirm)
                         .setPositiveButton(android.R.string.ok) { _, _ ->
                             MmkvManager.removeServer(editGuid)

@@ -36,12 +36,11 @@ import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityMainBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
-import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.handler.AngConfigManager
 import com.neko.v2ray.handler.MigrateManager
 import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
+import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.MainViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
@@ -143,7 +142,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.fab.setOnClickListener {
             if (mainViewModel.isRunning.value == true) {
                 Utils.stopVService(this)
-            } else if ((settingsStorage?.decodeString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
+            } else if ((MmkvManager.decodeSettingsString(AppConfig.PREF_MODE) ?: VPN) == VPN) {
                 val intent = VpnService.prepare(this)
                 if (intent == null) {
                     startV2Ray()

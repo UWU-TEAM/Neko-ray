@@ -17,12 +17,11 @@ import com.neko.v2ray.databinding.ItemRecyclerFooterBinding
 import com.neko.v2ray.databinding.ItemRecyclerMainBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.handler.AngConfigManager
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.handler.AngConfigManager
-import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Observable
@@ -139,7 +138,7 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
             }
             holder.itemMainBinding.layoutRemove.setOnClickListener {
                 if (guid != MmkvManager.getSelectServer()) {
-                    if (settingsStorage?.decodeBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
+                    if (MmkvManager.decodeSettingsBool(AppConfig.PREF_CONFIRM_REMOVE) == true) {
                         MaterialAlertDialogBuilder(mActivity).setMessage(R.string.del_config_comfirm)
                             .setPositiveButton(android.R.string.ok) { _, _ ->
                                 removeServer(guid, position)

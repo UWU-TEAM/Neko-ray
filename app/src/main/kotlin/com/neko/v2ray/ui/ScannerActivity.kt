@@ -14,7 +14,7 @@ import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.QRCodeDecoder
 import io.github.g00fy2.quickie.QRResult
 import io.github.g00fy2.quickie.ScanCustomCode
@@ -32,7 +32,7 @@ class ScannerActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        if (settingsStorage?.decodeBool(AppConfig.PREF_START_SCAN_IMMEDIATE) == true) {
+        if (MmkvManager.decodeSettingsBool(AppConfig.PREF_START_SCAN_IMMEDIATE) == true) {
             launchScan()
         }
     }

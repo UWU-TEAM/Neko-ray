@@ -9,8 +9,8 @@ import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.dto.VmessQRCode
 import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.extension.isNotNullEmpty
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import java.net.URI
 import kotlin.text.orEmpty
@@ -21,7 +21,7 @@ object VmessFmt : FmtBase() {
             return parseVmessStd(str)
         }
 
-        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE, false)
+        var allowInsecure = MmkvManager.decodeSettingsBool(AppConfig.PREF_ALLOW_INSECURE, false)
         val config = ProfileItem.create(EConfigType.VMESS)
 
         var result = str.replace(EConfigType.VMESS.protocolScheme, "")
@@ -119,7 +119,7 @@ object VmessFmt : FmtBase() {
     }
 
     fun parseVmessStd(str: String): ProfileItem? {
-        var allowInsecure = settingsStorage.decodeBool(AppConfig.PREF_ALLOW_INSECURE, false)
+        var allowInsecure = MmkvManager.decodeSettingsBool(AppConfig.PREF_ALLOW_INSECURE, false)
         val config = ProfileItem.create(EConfigType.VMESS)
 
         val uri = URI(Utils.fixIllegalUrl(str))

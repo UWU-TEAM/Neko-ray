@@ -19,12 +19,12 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.ServersCache
 import com.neko.v2ray.extension.serializable
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.fmt.CustomFmt
 import com.neko.v2ray.handler.AngConfigManager
-import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.fmt.CustomFmt
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -36,9 +36,9 @@ import java.util.Collections
 
 class MainViewModel(application: Application) : AndroidViewModel(application) {
     private var serverList = MmkvManager.decodeServerList()
-    var subscriptionId: String = MmkvManager.settingsStorage.decodeString(AppConfig.CACHE_SUBSCRIPTION_ID, "").orEmpty()
+    var subscriptionId: String = MmkvManager.decodeSettingsString(AppConfig.CACHE_SUBSCRIPTION_ID, "").orEmpty()
 
-    //var keywordFilter: String = MmkvManager.settingsStorage.decodeString(AppConfig.CACHE_KEYWORD_FILTER, "")?:""
+    //var keywordFilter: String = MmkvManager.MmkvManager.decodeSettingsString(AppConfig.CACHE_KEYWORD_FILTER, "")?:""
     var keywordFilter = ""
     val serversCache = mutableListOf<ServersCache>()
     val isRunning by lazy { MutableLiveData<Boolean>() }
@@ -223,7 +223,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun subscriptionIdChanged(id: String) {
         if (subscriptionId != id) {
             subscriptionId = id
-            MmkvManager.settingsStorage.encode(AppConfig.CACHE_SUBSCRIPTION_ID, subscriptionId)
+            MmkvManager.encodeSettings(AppConfig.CACHE_SUBSCRIPTION_ID, subscriptionId)
             reloadServerList()
         }
     }
@@ -353,7 +353,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             return
         }
         keywordFilter = keyword
-        MmkvManager.settingsStorage.encode(AppConfig.CACHE_KEYWORD_FILTER, keywordFilter)
+        MmkvManager.encodeSettings(AppConfig.CACHE_KEYWORD_FILTER, keywordFilter)
         reloadServerList()
     }
 

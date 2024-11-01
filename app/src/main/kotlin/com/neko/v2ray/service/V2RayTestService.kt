@@ -8,12 +8,12 @@ import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_CANCEL
 import com.neko.v2ray.AppConfig.MSG_MEASURE_CONFIG_SUCCESS
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.extension.serializable
-import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.V2rayConfigManager
+import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
-import com.neko.v2ray.handler.V2rayConfigManager
 import go.Seq
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
