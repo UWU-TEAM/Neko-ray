@@ -7,7 +7,7 @@ import androidx.multidex.MultiDexApplication
 import androidx.work.Configuration
 import androidx.work.WorkManager
 import com.tencent.mmkv.MMKV
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.SettingsManager
 
 class AngApplication : MultiDexApplication() {
     companion object {

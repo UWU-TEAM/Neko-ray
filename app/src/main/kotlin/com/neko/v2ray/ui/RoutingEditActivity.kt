@@ -11,7 +11,7 @@ import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityRoutingEditBinding
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers

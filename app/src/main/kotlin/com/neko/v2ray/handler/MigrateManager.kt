@@ -1,4 +1,4 @@
-package com.neko.v2ray.util
+package com.neko.v2ray.handler
 
 import android.util.Log
 import com.tencent.mmkv.MMKV
@@ -7,7 +7,9 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.ServerConfig
-import com.neko.v2ray.util.MmkvManager.decodeServerConfig
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.handler.MmkvManager.decodeServerConfig
+import com.neko.v2ray.util.Utils
 
 object MigrateManager {
     private const val ID_SERVER_CONFIG = "SERVER_CONFIG"

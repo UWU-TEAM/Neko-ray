@@ -7,7 +7,7 @@ import android.util.Log
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityLogcatBinding
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.AngConfigManager
+import com.neko.v2ray.handler.AngConfigManager
 import java.net.URLDecoder
 
 class UrlSchemeActivity : BaseActivity() {

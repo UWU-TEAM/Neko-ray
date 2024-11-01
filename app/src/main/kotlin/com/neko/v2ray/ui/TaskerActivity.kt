@@ -11,7 +11,7 @@ import android.widget.ListView
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityTaskerBinding
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.MmkvManager
 
 class TaskerActivity : BaseActivity() {
     private val binding by lazy { ActivityTaskerBinding.inflate(layoutInflater) }

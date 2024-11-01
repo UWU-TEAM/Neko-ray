@@ -1,4 +1,4 @@
-package com.neko.v2ray.util
+package com.neko.v2ray.handler
 
 import android.content.Context
 import android.text.TextUtils
@@ -34,17 +34,19 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.V2rayConfig.RoutingBean.RulesBean
-import com.neko.v2ray.util.MmkvManager.settingsStorage
-import com.neko.v2ray.util.fmt.HttpFmt
-import com.neko.v2ray.util.fmt.Hysteria2Fmt
-import com.neko.v2ray.util.fmt.ShadowsocksFmt
-import com.neko.v2ray.util.fmt.SocksFmt
-import com.neko.v2ray.util.fmt.TrojanFmt
-import com.neko.v2ray.util.fmt.VlessFmt
-import com.neko.v2ray.util.fmt.VmessFmt
-import com.neko.v2ray.util.fmt.WireguardFmt
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.util.Utils
+import com.neko.v2ray.fmt.HttpFmt
+import com.neko.v2ray.fmt.Hysteria2Fmt
+import com.neko.v2ray.fmt.ShadowsocksFmt
+import com.neko.v2ray.fmt.SocksFmt
+import com.neko.v2ray.fmt.TrojanFmt
+import com.neko.v2ray.fmt.VlessFmt
+import com.neko.v2ray.fmt.VmessFmt
+import com.neko.v2ray.fmt.WireguardFmt
 
-object V2rayConfigUtil {
+object V2rayConfigManager {
 
     fun getV2rayConfig(context: Context, guid: String): ConfigResult {
         try {

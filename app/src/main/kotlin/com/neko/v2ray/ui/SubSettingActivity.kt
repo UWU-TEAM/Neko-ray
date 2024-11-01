@@ -16,8 +16,8 @@ import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.SubscriptionItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
-import com.neko.v2ray.util.AngConfigManager
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.AngConfigManager
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay

@@ -1,22 +1,24 @@
-package com.neko.v2ray.util
+package com.neko.v2ray.handler
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.text.TextUtils
 import android.util.Log
-
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.HY2
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.*
-import com.neko.v2ray.util.fmt.CustomFmt
-import com.neko.v2ray.util.fmt.Hysteria2Fmt
-import com.neko.v2ray.util.fmt.ShadowsocksFmt
-import com.neko.v2ray.util.fmt.SocksFmt
-import com.neko.v2ray.util.fmt.TrojanFmt
-import com.neko.v2ray.util.fmt.VlessFmt
-import com.neko.v2ray.util.fmt.VmessFmt
-import com.neko.v2ray.util.fmt.WireguardFmt
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.util.QRCodeDecoder
+import com.neko.v2ray.util.Utils
+import com.neko.v2ray.fmt.CustomFmt
+import com.neko.v2ray.fmt.Hysteria2Fmt
+import com.neko.v2ray.fmt.ShadowsocksFmt
+import com.neko.v2ray.fmt.SocksFmt
+import com.neko.v2ray.fmt.TrojanFmt
+import com.neko.v2ray.fmt.VlessFmt
+import com.neko.v2ray.fmt.VmessFmt
+import com.neko.v2ray.fmt.WireguardFmt
 import java.net.URI
 
 object AngConfigManager {
@@ -165,7 +167,7 @@ object AngConfigManager {
     fun shareFullContent2Clipboard(context: Context, guid: String?): Int {
         try {
             if (guid == null) return -1
-            val result = V2rayConfigUtil.getV2rayConfig(context, guid)
+            val result = V2rayConfigManager.getV2rayConfig(context, guid)
             if (result.status) {
                 Utils.setClipboard(context, result.content)
             } else {

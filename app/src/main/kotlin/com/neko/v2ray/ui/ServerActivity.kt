@@ -31,8 +31,8 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 

@@ -1,4 +1,4 @@
-package com.neko.v2ray.util.fmt
+package com.neko.v2ray.fmt
 
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem

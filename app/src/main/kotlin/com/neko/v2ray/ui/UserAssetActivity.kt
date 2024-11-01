@@ -25,14 +25,14 @@ import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.LOOPBACK
 import com.neko.v2ray.R
-import com.neko.v2ray.databinding.ActivityUserAssetBinding
+import com.neko.v2ray.databinding.ActivitySubSettingBinding
 import com.neko.v2ray.databinding.ItemRecyclerUserAssetBinding
 import com.neko.v2ray.databinding.LayoutProgressBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toTrafficString
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

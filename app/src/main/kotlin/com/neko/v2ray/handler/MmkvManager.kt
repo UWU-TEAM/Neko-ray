@@ -1,4 +1,4 @@
-package com.neko.v2ray.util
+package com.neko.v2ray.handler
 
 
 import com.tencent.mmkv.MMKV
@@ -9,6 +9,8 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.ServerAffiliationInfo
 import com.neko.v2ray.dto.SubscriptionItem
+import com.neko.v2ray.util.JsonUtil
+import com.neko.v2ray.util.Utils
 
 object MmkvManager {
 

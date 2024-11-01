@@ -21,7 +21,7 @@ import com.neko.v2ray.dto.AppInfo
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
 import com.neko.v2ray.util.AppManagerUtil
-import com.neko.v2ray.util.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
 import com.neko.v2ray.util.Utils
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers

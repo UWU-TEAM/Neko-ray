@@ -14,9 +14,9 @@ import com.neko.v2ray.databinding.ItemRecyclerSubSettingBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
-import com.neko.v2ray.util.MmkvManager
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.QRCodeDecoder
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 
 class SubSettingRecyclerAdapter(val activity: SubSettingActivity) : RecyclerView.Adapter<SubSettingRecyclerAdapter.MainViewHolder>(), ItemTouchHelperAdapter {

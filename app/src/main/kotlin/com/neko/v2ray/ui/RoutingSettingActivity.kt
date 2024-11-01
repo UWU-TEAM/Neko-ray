@@ -19,9 +19,9 @@ import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.MmkvManager.settingsStorage
-import com.neko.v2ray.util.SettingsManager
+import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.MmkvManager.settingsStorage
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

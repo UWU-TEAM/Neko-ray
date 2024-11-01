@@ -8,13 +8,11 @@ import android.view.MenuItem
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
-// import androidx.appcompat.app.AlertDialog
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityUserAssetUrlBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toast
-import com.neko.v2ray.util.MmkvManager
-import com.neko.v2ray.util.SoftInputAssist
+import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import java.io.File
 
