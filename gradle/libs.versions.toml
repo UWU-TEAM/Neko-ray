@@ -37,7 +37,7 @@ webkit = "1.12.1"
 androidGradlePlugin = "8.7.1"
 androidKotlinPlugin = "2.0.21"
 aboutLibraries = "11.2.3"
-mockitoMockitoInline = "4.0.0"
+mockitoMockitoInline = "5.2.0"
 
 [libraries]
 aboutlibraries-core = { module = "com.mikepenz:aboutlibraries-core", version.ref = "aboutlibrariesCore" }
