@@ -3,7 +3,6 @@ package com.neko.v2ray.dto
 import com.neko.v2ray.AppConfig.TAG_BLOCKED
 import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.TAG_PROXY
-import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 
 data class ProfileItem(
@@ -67,9 +66,10 @@ data class ProfileItem(
         return Utils.getIpv6Address(server) + ":" + serverPort
     }
 
-    fun getKeyProperty(): String {
-        subscriptionId = ""
-        addedTime = 0L
-        return JsonUtil.toJson(this)
+    fun getKeyProperty(): ProfileItem {
+        val copy = this.copy()
+        copy.subscriptionId = ""
+        copy.addedTime = 0L
+        return copy
     }
 }

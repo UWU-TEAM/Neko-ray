@@ -208,6 +208,7 @@ object AngConfigManager {
 
             var count = 0
             servers.lines()
+                .distinct()
                 .forEach { str ->
                     if (Utils.isValidSubUrl(str)) {
                         count += importUrlAsSubscription(str)
@@ -245,6 +246,7 @@ object AngConfigManager {
             val subItem = MmkvManager.decodeSubscription(subid)
             var count = 0
             servers.lines()
+                .distinct()
                 .reversed()
                 .forEach {
                     val resId = parseConfig(it, subid, subItem, removedSelectedServer)
