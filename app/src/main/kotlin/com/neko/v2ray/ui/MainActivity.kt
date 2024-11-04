@@ -275,7 +275,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
         }
         mainViewModel.startListenBroadcast()
-        mainViewModel.copyAssets(assets)
+        mainViewModel.initAssets(assets)
     }
 
     private fun migrateLegacy() {
