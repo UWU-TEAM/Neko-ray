@@ -1,8 +1,11 @@
 package com.neko.v2ray.handler
 
 import android.content.Context
+import android.content.res.AssetManager
 import android.text.TextUtils
+import android.util.Log
 import com.neko.v2ray.AppConfig
+import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
 import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
@@ -14,6 +17,8 @@ import com.neko.v2ray.handler.MmkvManager.decodeServerList
 import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.Utils.parseInt
+import java.io.File
+import java.io.FileOutputStream
 import java.util.Collections
 import kotlin.Int
 
@@ -153,4 +158,29 @@ object SettingsManager {
         return parseInt(MmkvManager.decodeSettingsString(AppConfig.PREF_HTTP_PORT), AppConfig.PORT_HTTP.toInt())
     }
 
+    fun initAssets(context: Context, assets: AssetManager) {
+        val extFolder = Utils.userAssetPath(context)
+
+        try {
+            val geo = arrayOf("geosite.dat", "geoip.dat")
+            assets.list("")
+                ?.filter { geo.contains(it) }
+                ?.filter { !File(extFolder, it).exists() }
+                ?.forEach {
+                    val target = File(extFolder, it)
+                    assets.open(it).use { input ->
+                        FileOutputStream(target).use { output ->
+                            input.copyTo(output)
+                        }
+                    }
+                    Log.i(
+                        ANG_PACKAGE,
+                        "Copied from apk assets folder to ${target.absolutePath}"
+                    )
+                }
+        } catch (e: Exception) {
+            Log.e(ANG_PACKAGE, "asset copy failed", e)
+        }
+
+    }
 }
