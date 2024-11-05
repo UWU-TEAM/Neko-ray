@@ -11,6 +11,7 @@
     <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">قف</string>
     <string name="toast_permission_denied">غير قادر على الحصول على الإذن</string>
+    <string name="toast_permission_denied_notification">غير قادر على الحصول على إذن الإشعار</string>
     <string name="notification_action_more">انقر للمزيد</string>
     <string name="toast_services_start">ابدأ الخدمات</string>
     <string name="toast_services_stop">إيقاف الخدمات</string>

@@ -11,6 +11,7 @@
     <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">Eureun</string>
     <string name="toast_permission_denied">Teu meunang idin</string>
+    <string name="toast_permission_denied_notification">Teu bisa ménta idin bewara</string>
     <string name="notification_action_more">klik pikeun leuwih lengkep</string>
     <string name="toast_services_start">Mimitian Service</string>
     <string name="toast_services_stop">Ngeureunkeun Service</string>

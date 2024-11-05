@@ -11,6 +11,7 @@
     <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">متوقف کردن</string>
     <string name="toast_permission_denied">قادر به دریافت مجوز نیست</string>
+    <string name="toast_permission_denied_notification">دریافت مجوز اعلان امکان پذیر نیست</string>
     <string name="notification_action_more">برای بیشتر کلیک کنید</string>
     <string name="toast_services_start">خدمات را شروع کنید</string>
     <string name="toast_services_stop">توقف خدمات</string>

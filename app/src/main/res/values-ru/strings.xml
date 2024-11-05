@@ -11,6 +11,7 @@
     <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">Останавливаться</string>
     <string name="toast_permission_denied">Не удалось получить разрешение</string>
+    <string name="toast_permission_denied_notification">Не удалось получить разрешение на уведомление.</string>
     <string name="notification_action_more">нажмите, чтобы узнать больше</string>
     <string name="toast_services_start">Запустить службы</string>
     <string name="toast_services_stop">Остановить службы</string>
