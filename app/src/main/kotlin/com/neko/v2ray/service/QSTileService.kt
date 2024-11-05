@@ -9,8 +9,10 @@ import android.graphics.drawable.Icon
 import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
+import androidx.core.content.ContextCompat
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
+import com.neko.v2ray.extension.v2RayApplication
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.Utils
 import java.lang.ref.SoftReference
@@ -32,14 +34,20 @@ class QSTileService : TileService() {
         qsTile?.updateTile()
     }
 
+    /**
+     * Refer to the official documentation for [registerReceiver](https://developer.android.com/reference/androidx/core/content/ContextCompat#registerReceiver(android.content.Context,android.content.BroadcastReceiver,android.content.IntentFilter,int):
+     * `registerReceiver(Context, BroadcastReceiver, IntentFilter, int)`.
+     */
+
     override fun onStartListening() {
         super.onStartListening()
         setState(Tile.STATE_INACTIVE)
         mMsgReceive = ReceiveMessageHandler(this)
+        val mFilter = IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(mMsgReceive, IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY), RECEIVER_EXPORTED)
+            ContextCompat.registerReceiver(applicationContext,mMsgReceive,mFilter,ContextCompat.RECEIVER_EXPORTED)
         } else {
-            registerReceiver(mMsgReceive, IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY), Context.RECEIVER_NOT_EXPORTED)
+            ContextCompat.registerReceiver(applicationContext,mMsgReceive,mFilter,ContextCompat.RECEIVER_NOT_EXPORTED)
         }
 
         MessageUtil.sendMsg2Service(this, AppConfig.MSG_REGISTER_CLIENT, "")
