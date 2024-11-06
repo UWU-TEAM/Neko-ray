@@ -26,6 +26,7 @@ import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
+import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -53,18 +54,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     fun startListenBroadcast() {
         isRunning.value = false
         val mFilter = IntentFilter(AppConfig.BROADCAST_ACTION_ACTIVITY)
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            ContextCompat.registerReceiver(
-                getApplication(), mMsgReceiver, mFilter,
-                ContextCompat.RECEIVER_EXPORTED
-            )
-        } else {
-            ContextCompat.registerReceiver(
-                getApplication(), mMsgReceiver, mFilter,
-                ContextCompat.RECEIVER_NOT_EXPORTED
-            )
-        }
+        ContextCompat.registerReceiver(getApplication(), mMsgReceiver, mFilter, Utils.receiverFlags())
         MessageUtil.sendMsg2Service(getApplication(), AppConfig.MSG_REGISTER_CLIENT, "")
     }
 
