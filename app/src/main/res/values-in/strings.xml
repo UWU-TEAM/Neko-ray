@@ -11,6 +11,7 @@
     <!-- Notifications -->
     <string name="notification_action_stop_v2ray">Berhenti</string>
     <string name="toast_permission_denied">Tidak dapat dapatkan izin</string>
+    <string name="toast_permission_denied_notification">Tidak dapat memperoleh izin notifikasi</string>
     <string name="notification_action_more">klik untuk lebih lanjut</string>
     <string name="toast_services_start">Mulai Layanan</string>
     <string name="toast_services_stop">Hentikan Layanan</string>

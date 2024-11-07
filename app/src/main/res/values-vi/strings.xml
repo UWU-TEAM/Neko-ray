@@ -11,6 +11,7 @@
     <!-- Notifications --> 
     <string name="notification_action_stop_v2ray">Dừng lại</string>
     <string name="toast_permission_denied">Không thể có được sự cho phép</string>
+    <string name="toast_permission_denied_notification">Không thể có được quyền thông báo</string>
     <string name="notification_action_more">bấm vào để biết thêm</string>
     <string name="toast_services_start">Bắt đầu dịch vụ</string>
     <string name="toast_services_stop">Dừng dịch vụ</string>
