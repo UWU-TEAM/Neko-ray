@@ -173,16 +173,33 @@ class ServerActivity : BaseActivity() {
                 sp_header_type_title?.text = if (networks[position] == "grpc")
                     getString(R.string.server_lab_mode_type) else
                     getString(R.string.server_lab_head_type)
-                config?.headerType?.let { it ->
-                    sp_header_type?.setSelection(Utils.arrayFind(types, it))
-                }
-                config?.host?.let { it ->
-                    et_request_host?.text = Utils.getEditable(it)
-                }
-                config?.path?.let { it ->
-                    et_path?.text = Utils.getEditable(it)
-                }
-                tv_request_host?.hint = Utils.getEditable(
+                sp_header_type?.setSelection(
+                    Utils.arrayFind(
+                        types,
+                        when (networks[position]) {
+                            "grpc" -> config?.mode
+                            else -> config?.headerType
+                        }.orEmpty()
+                    )
+                )
+
+                et_request_host?.hint = Utils.getEditable(
+                    when (networks[position]) {
+                        "quic" -> config?.quicSecurity
+                        "grpc" -> config?.authority
+                        else -> config?.host
+                    }.orEmpty()
+                )
+                et_path?.text = Utils.getEditable(
+                    when (networks[position]) {
+                        "kcp" -> config?.seed
+                        "quic" -> config?.quicKey
+                        "grpc" -> config?.serviceName
+                        else -> config?.path
+                    }.orEmpty()
+                )
+
+                tv_request_host?.text = Utils.getEditable(
                     getString(
                         when (networks[position]) {
                             "tcp" -> R.string.server_lab_request_host_http
