@@ -11,16 +11,13 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.appbar.MaterialToolbar
 import com.blacksquircle.ui.editorkit.utils.EditorTheme
 import com.blacksquircle.ui.language.json.JsonLanguage
-import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityServerCustomConfigBinding
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
-import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.extension.toast
+import com.neko.v2ray.fmt.CustomFmt
 import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.util.JsonUtil
-import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import me.drakeet.support.toast.ToastCompat
 
@@ -32,6 +29,7 @@ import com.neko.imageslider.interfaces.ItemChangeListener
 import com.neko.imageslider.interfaces.ItemClickListener
 import com.neko.imageslider.interfaces.TouchListener
 import com.neko.imageslider.models.SlideModel
+import com.neko.v2ray.util.SoftInputAssist
 
 class ServerCustomConfigActivity : BaseActivity() {
     private val binding by lazy { ActivityServerCustomConfigBinding.inflate(layoutInflater) }
@@ -132,8 +130,8 @@ class ServerCustomConfigActivity : BaseActivity() {
             return false
         }
 
-        val v2rayConfig = try {
-            JsonUtil.fromJson(binding.editor.text.toString(), V2rayConfig::class.java)
+        val profileItem = try {
+            CustomFmt.parse(binding.editor.text.toString())
         } catch (e: Exception) {
             e.printStackTrace()
             ToastCompat.makeText(this, "${getString(R.string.toast_malformed_josn)} ${e.cause?.message}", Toast.LENGTH_LONG).show()
@@ -141,7 +139,11 @@ class ServerCustomConfigActivity : BaseActivity() {
         }
 
         val config = MmkvManager.decodeServerConfig(editGuid) ?: ProfileItem.create(EConfigType.CUSTOM)
-        config.remarks = if (binding.etRemarks.text.isNullOrEmpty()) v2rayConfig.remarks.orEmpty() else binding.etRemarks.text.toString()
+        binding.etRemarks.text.let {
+            config.remarks = if (it.isNullOrEmpty()) profileItem?.remarks.orEmpty() else it.toString()
+        }
+        config.server = profileItem?.server
+        config.serverPort = profileItem?.serverPort
 
         MmkvManager.encodeServerConfig(editGuid, config)
         MmkvManager.encodeServerRaw(editGuid, binding.editor.text.toString())
