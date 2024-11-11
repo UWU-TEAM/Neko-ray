@@ -2,13 +2,13 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer_layout"
-    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
         <com.google.android.material.appbar.AppBarLayout
             android:theme="@style/AppTheme.AppBarOverlay"
             android:layout_width="match_parent"
@@ -183,7 +183,6 @@
             </LinearLayout>
         </FrameLayout>
         <RelativeLayout
-            android:fitsSystemWindows="true"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <androidx.coordinatorlayout.widget.CoordinatorLayout
