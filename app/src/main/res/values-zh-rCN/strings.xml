@@ -100,6 +100,7 @@
     <string name="menu_item_add_asset">从此处的 URL 设置您的资产！</string>
     <string name="menu_item_add_file">添加文件</string>
     <string name="menu_item_add_url">添加网址</string>
+    <string name="menu_item_scan_qrcode">扫描 QRcode</string>
     <string name="menu_item_download_file">下载文件</string>
     <string name="title_user_asset_add_url">添加资产网址</string>
     <string name="msg_file_not_found">文件未找到</string>

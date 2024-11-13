@@ -100,6 +100,7 @@
     <string name="menu_item_add_asset">Siapkan aset Anda dari url di sini!</string>
     <string name="menu_item_add_file">Tambahkan file</string>
     <string name="menu_item_add_url">Tambahkan URL</string>
+    <string name="menu_item_scan_qrcode">Pindai kode QR</string>
     <string name="menu_item_download_file">Unduh file</string>
     <string name="title_user_asset_add_url">Tambahkan URL aset</string>
     <string name="msg_file_not_found">File tidak ditemukan</string>

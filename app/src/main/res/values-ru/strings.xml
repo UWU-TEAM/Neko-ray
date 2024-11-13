@@ -100,6 +100,7 @@
     <string name="menu_item_add_asset">Настройте свои активы по URL здесь!</string>
     <string name="menu_item_add_file">Добавить файлы</string>
     <string name="menu_item_add_url">Добавить URL</string>
+    <string name="menu_item_scan_qrcode">Сканировать QR-код</string>
     <string name="menu_item_download_file">Скачать файлы</string>
     <string name="title_user_asset_add_url">Добавить URL ресурса</string>
     <string name="msg_file_not_found">Файл не найден</string>
