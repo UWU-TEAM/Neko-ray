@@ -2,9 +2,9 @@ import java.text.SimpleDateFormat
 import java.util.Date
 
 plugins {
-    id("com.android.application")
-    kotlin("android")
-    id("com.mikepenz.aboutlibraries.plugin")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.aboutlibraries)
 }
 
 configurations {
@@ -36,7 +36,7 @@ android {
                 isUniversalApk = true
             }
         }
-
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         val formattedDate = SimpleDateFormat("dd, MMMM yyyy").format(Date())
         val variant = this
         resValue("string", "neko_build_date", "$formattedDate")
@@ -93,8 +93,6 @@ android {
     sourceSets {
         getByName("main") {
             jniLibs.srcDirs("libs")
-            kotlin.srcDirs("src/main/kotlin")
-            java.srcDirs("src/main/java")
         }
     }
 
@@ -148,53 +146,61 @@ if (file("user.gradle").exists()) {
 }
 
 dependencies {
-    testImplementation(libs.junit)
-    testImplementation(libs.org.mockito.mockito.inline)
-    testImplementation(libs.mockito.kotlin)
-    implementation(libs.flexbox)
+    // Core Libraries
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar", "*.jar"))))
 
     // Include Project
     implementation(project(":library"))
 
-    // Androidx
-    implementation(libs.constraintlayout)
-    implementation(libs.appcompat)
-    implementation(libs.legacy.support.v4)
-    implementation(libs.material)
-    implementation(libs.cardview)
+    // AndroidX Core Libraries
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.preference.ktx)
     implementation(libs.recyclerview)
-    implementation(libs.fragment.ktx)
-    implementation(libs.multidex)
-    implementation(libs.viewpager2)
 
-    // Androidx ktx
-    implementation(libs.activity.ktx)
+    // UI Libraries
+    implementation(libs.material)
+    implementation(libs.toastcompat)
+    implementation(libs.editorkit)
+    implementation(libs.flexbox)
+
+    // Data and Storage Libraries
+    implementation(libs.mmkv.static)
+    implementation(libs.gson)
+
+    // Reactive and Utility Libraries
+    implementation(libs.rxjava)
+    implementation(libs.rxandroid)
+    implementation(libs.rxpermissions.get().toString() + "@aar")
+
+    // Language and Processing Libraries
+    implementation(libs.language.base)
+    implementation(libs.language.json)
+
+    // Intent and Utility Libraries
+    implementation(libs.quickie.bundled)
+    implementation(libs.core)
+
+    // AndroidX Lifecycle and Architecture Components
     implementation(libs.lifecycle.viewmodel.ktx)
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.runtime.ktx)
 
-    // Kotlin
-    implementation(libs.kotlin.reflect)
-    implementation(libs.kotlinx.coroutines.core)
-    implementation(libs.kotlinx.coroutines.android)
-
-    implementation(libs.mmkv.static)
-    implementation(libs.gson)
-    implementation(libs.rxjava)
-    implementation(libs.rxandroid)
-    implementation(libs.rxpermissions.get().toString() + "@aar")
-    implementation(libs.toastcompat)
-    implementation(libs.editorkit)
-    implementation(libs.language.base)
-    implementation(libs.language.json)
-    implementation(libs.quickie.bundled)
-    implementation(libs.core)
-
-    // Updating these 2 dependencies may cause some errors. Be careful.
+    // Background Task Libraries
     implementation(libs.work.runtime.ktx)
-    implementation(libs.work.runtime)
     implementation(libs.work.multiprocess)
+
+    // Multidex Support
+    implementation(libs.multidex)
+
+    // Testing Libraries
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+    testImplementation(libs.org.mockito.mockito.inline)
+    testImplementation(libs.mockito.kotlin)
 
     // Misc
     implementation(libs.okhttp)
@@ -205,5 +211,4 @@ dependencies {
     implementation(libs.fastadapter)
     implementation(libs.navigation.fragment)
     implementation(libs.picasso)
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar", "*.jar"))))
 }

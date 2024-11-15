@@ -1,6 +1,6 @@
 plugins {
-    id("com.android.library")
-    kotlin("android")
+    alias(libs.plugins.android.library)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
@@ -25,13 +25,6 @@ android {
         }
     }
 
-    sourceSets {
-        getByName("main") {
-            kotlin.srcDirs("src/main/kotlin")
-            java.srcDirs("src/main/java")
-        }
-    }
-
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_1_8.toString()
     }
@@ -48,11 +41,11 @@ android {
 }
 
 dependencies {
-    implementation(libs.core.ktx)
-    implementation(libs.appcompat)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
     implementation(libs.preference.ktx)
     implementation(libs.material)
-    implementation(libs.constraintlayout)
+    implementation(libs.androidx.constraintlayout)
     implementation(libs.okhttp)
     implementation(libs.jsoup)
     implementation(libs.picasso)
