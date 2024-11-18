@@ -110,6 +110,7 @@
     <string name="server_lab_port_hop">跳跃端口(会覆盖服务器端口)</string>
     <string name="server_lab_port_hop_interval">端口跳跃间隔(秒)</string>
     <string name="server_lab_stream_pinsha256">SHA256证书指纹</string>
+    <string name="server_lab_xhttp_mode">XHTTP Mode</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">加载中</string>

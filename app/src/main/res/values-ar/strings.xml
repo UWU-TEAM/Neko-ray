@@ -110,6 +110,7 @@
     <string name="server_lab_port_hop">التنقل بين الموانئ</string>
     <string name="server_lab_port_hop_interval">الفاصل الزمني للتنقل بين الموانئ</string>
     <string name="server_lab_stream_pinsha256">دبوسSHA256</string>
+    <string name="server_lab_xhttp_mode">XHTTP Mode</string>
  
     <!-- PerAppProxyActivity --> 
     <string name="msg_dialog_progress">تحميل</string>

@@ -1,6 +1,5 @@
 package com.neko.v2ray.fmt
 
-import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.isNotNullEmpty
@@ -55,9 +54,15 @@ open class FmtBase {
                 config.seed.let { if (it.isNotNullEmpty()) dicQuery["seed"] = it.orEmpty() }
             }
 
-            NetworkType.WS, NetworkType.HTTP_UPGRADE, NetworkType.SPLIT_HTTP, NetworkType.XHTTP -> {
+            NetworkType.WS, NetworkType.HTTP_UPGRADE -> {
                 config.host.let { if (it.isNotNullEmpty()) dicQuery["host"] = it.orEmpty() }
                 config.path.let { if (it.isNotNullEmpty()) dicQuery["path"] = it.orEmpty() }
+            }
+
+            NetworkType.SPLIT_HTTP, NetworkType.XHTTP -> {
+                config.host.let { if (it.isNotNullEmpty()) dicQuery["host"] = it.orEmpty() }
+                config.path.let { if (it.isNotNullEmpty()) dicQuery["path"] = it.orEmpty() }
+                config.xhttpMode.let { if (it.isNotNullEmpty()) dicQuery["mode"] = it.orEmpty() }
             }
 
             NetworkType.HTTP, NetworkType.H2 -> {
