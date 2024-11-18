@@ -7,7 +7,9 @@ import androidx.multidex.MultiDexApplication
 import androidx.work.Configuration
 import androidx.work.WorkManager
 import com.tencent.mmkv.MMKV
+import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.handler.SettingsManager
+import com.neko.v2ray.util.Utils
 
 class AngApplication : MultiDexApplication() {
     companion object {
@@ -20,7 +22,7 @@ class AngApplication : MultiDexApplication() {
     }
 
     private val workManagerConfiguration: Configuration = Configuration.Builder()
-        .setDefaultProcessName("${BuildConfig.APPLICATION_ID}:bg")
+        .setDefaultProcessName("${ANG_PACKAGE}:bg")
         .build()
 
     override fun onCreate() {
