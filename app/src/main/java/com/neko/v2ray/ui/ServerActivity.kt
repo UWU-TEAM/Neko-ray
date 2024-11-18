@@ -185,7 +185,7 @@ class ServerActivity : BaseActivity() {
 
                 et_request_host?.hint = Utils.getEditable(
                     when (networks[position]) {
-                        "quic" -> config?.quicSecurity
+                        //"quic" -> config?.quicSecurity
                         "grpc" -> config?.authority
                         else -> config?.host
                     }.orEmpty()
@@ -193,7 +193,7 @@ class ServerActivity : BaseActivity() {
                 et_path?.hint = Utils.getEditable(
                     when (networks[position]) {
                         "kcp" -> config?.seed
-                        "quic" -> config?.quicKey
+                        //"quic" -> config?.quicKey
                         "grpc" -> config?.serviceName
                         else -> config?.path
                     }.orEmpty()
@@ -207,7 +207,7 @@ class ServerActivity : BaseActivity() {
                             "httpupgrade" -> R.string.server_lab_request_host_httpupgrade
                             "splithttp" -> R.string.server_lab_request_host_splithttp
                             "h2" -> R.string.server_lab_request_host_h2
-                            "quic" -> R.string.server_lab_request_host_quic
+                            //"quic" -> R.string.server_lab_request_host_quic
                             "grpc" -> R.string.server_lab_request_host_grpc
                             else -> R.string.server_lab_request_host
                         }
@@ -222,7 +222,7 @@ class ServerActivity : BaseActivity() {
                             "httpupgrade" -> R.string.server_lab_path_httpupgrade
                             "splithttp" -> R.string.server_lab_path_splithttp
                             "h2" -> R.string.server_lab_path_h2
-                            "quic" -> R.string.server_lab_path_quic
+                            //"quic" -> R.string.server_lab_path_quic
                             "grpc" -> R.string.server_lab_path_grpc
                             else -> R.string.server_lab_path
                         }
@@ -600,7 +600,7 @@ class ServerActivity : BaseActivity() {
                 tcpTypes
             }
 
-            "kcp", "quic" -> {
+            "kcp" -> {
                 kcpAndQuicTypes
             }
 

@@ -46,7 +46,6 @@
         <item>httpupgrade</item>
         <item>splithttp</item>
         <item>h2</item>
-        <item>quic</item>
         <item>grpc</item>
     </string-array>
 
