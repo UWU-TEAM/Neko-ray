@@ -30,6 +30,7 @@ import com.neko.v2ray.R
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
+import com.neko.v2ray.extension.isNotNullEmpty
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.SoftInputAssist
@@ -188,7 +189,7 @@ class ServerActivity : BaseActivity() {
                         types,
                         when (networks[position]) {
                             NetworkType.GRPC.type -> config?.mode
-                            NetworkType.SPLIT_HTTP.type,  NetworkType.XHTTP.type -> config?.xhttpMode
+                            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> config?.xhttpMode
                             else -> config?.headerType
                         }.orEmpty()
                     )
@@ -241,7 +242,7 @@ class ServerActivity : BaseActivity() {
                 )
                 et_extra?.text = Utils.getEditable(
                     when (networks[position]) {
-                        NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> JsonUtil.toJsonPretty(JsonUtil.parseString(config?.xhttpExtra))
+                        NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> config?.xhttpExtra
                         else -> null
                     }.orEmpty()
                 )
@@ -524,6 +525,12 @@ class ServerActivity : BaseActivity() {
                 return false
             }
         }
+        if (et_extra?.text?.toString().isNotNullEmpty()) {
+            if (JsonUtil.parseString(et_extra?.text?.toString()) == null) {
+                toast(R.string.server_lab_xhttp_extra)
+                return false
+            }
+        }
 
         saveCommon(config)
         saveStreamSettings(config)
@@ -633,7 +640,7 @@ class ServerActivity : BaseActivity() {
                 grpcModes
             }
 
-            NetworkType.SPLIT_HTTP.type,  NetworkType.XHTTP.type -> {
+            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> {
                 xhttpMode
             }
 
