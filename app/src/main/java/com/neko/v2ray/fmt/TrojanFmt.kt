@@ -2,6 +2,7 @@ package com.neko.v2ray.fmt
 
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.EConfigType
+import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
@@ -22,7 +23,7 @@ object TrojanFmt : FmtBase() {
         config.password = uri.userInfo
 
         if (uri.rawQuery.isNullOrEmpty()) {
-            config.network = "tcp"
+            config.network = NetworkType.TCP.type
             config.security = AppConfig.TLS
             config.insecure = allowInsecure
         } else {

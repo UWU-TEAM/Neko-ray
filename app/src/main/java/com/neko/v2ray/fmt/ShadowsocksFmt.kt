@@ -1,6 +1,7 @@
 package com.neko.v2ray.fmt
 
 import com.neko.v2ray.dto.EConfigType
+import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
@@ -38,7 +39,7 @@ object ShadowsocksFmt : FmtBase() {
             val queryParam = getQueryParam(uri)
 
             if (queryParam["plugin"] == "obfs-local" && queryParam["obfs"] == "http") {
-                config.network = "tcp"
+                config.network = NetworkType.TCP.type
                 config.headerType = "http"
                 config.host = queryParam["obfs-host"]
                 config.path = queryParam["path"]

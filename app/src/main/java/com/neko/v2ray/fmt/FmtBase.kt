@@ -1,6 +1,5 @@
 package com.neko.v2ray.fmt
 
-import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.isNotNullEmpty
@@ -31,7 +30,9 @@ open class FmtBase {
     }
 
     fun getItemFormQuery(config: ProfileItem, queryParam: Map<String, String>, allowInsecure: Boolean) {
-        config.network = queryParam["type"] ?: "tcp"
+        config.network = queryParam["type"] ?: NetworkType.TCP.type
+        //TODO
+        if (config.network == NetworkType.SPLIT_HTTP.type) config.network = NetworkType.XHTTP.type
         config.headerType = queryParam["headerType"]
         config.host = queryParam["host"]
         config.path = queryParam["path"]
