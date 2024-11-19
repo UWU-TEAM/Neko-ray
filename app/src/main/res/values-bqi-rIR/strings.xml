@@ -107,6 +107,7 @@
     <string name="menu_item_add_asset">ازاف کردن دارایی</string>
     <string name="menu_item_add_file">ازاف کردن فایل</string>
     <string name="menu_item_add_url">ازاف کردن آدرس اینترنتی</string>
+    <string name="menu_item_scan_qrcode">Scan QRcode</string>
     <string name="title_url">آدرس اینترنتی</string>
     <string name="menu_item_download_file">دانلود فایلا</string>
     <string name="title_user_asset_add_url">آدرس اینترنتی دارایین ازاف کۊنین</string>
@@ -118,6 +119,7 @@
     <string name="server_lab_port_hop_interval">فاسله پورت گوم (سانیه)</string>
     <string name="server_lab_stream_pinsha256">pinSHA256</string>
     <string name="server_lab_xhttp_mode">XHTTP Mode</string>
+    <string name="server_lab_xhttp_extra">XHTTP Extra raw JSON, format: { XHTTPObject }</string>
 
     <!-- PerAppProxyActivity -->
     <string name="msg_dialog_progress">هون بارونی بۊ</string>
@@ -296,33 +298,117 @@
     <string name="title_pref_fragment_interval">Fragment Interval (min-max)</string>
     <string name="title_pref_fragment_enabled">فعال کردن Fragment</string>
 
-    <string-array name="share_method">
-        <item>QRcode</item>
-        <item>و در کشیڌن من کلیپ بورد</item>
-        <item>و در کشیڌن پوی کانفیگ من کلیپ بورد</item>
-    </string-array>
+    <string name="title_theme_settings">Theme Settings</string>
+    <string name="title_choose_theme">Choose Color Theme</string>
+    <string name="uwu_header_title">Hi, </string>
+    <string name="uwu_edit">Edit</string>
+    <string name="uwu_credits">Credits</string>
+    <string name="uwu_about">About Apps</string>
+    <string name="uwu_tools">Tools</string>
+    <string name="uwu_information_cat">Information</string>
+    <string name="uwu_neko_version">App Version</string>
+    <string name="uwu_build_type">Build Type</string>
+    <string name="uwu_build_date">Build Date</string>
+    <string name="uwu_recommended_os_cat">Recommended OS</string>
+    <string name="uwu_version_sdk_minimum">Min SDK Version</string>
+    <string name="uwu_version_sdk_target">Target SDK Version</string>
+    <string name="uwu_package_name">Package name</string>
+    <string name="uwu_speedtest_title">SpeedTest</string>
+    <string name="uwu_speedtest_summary">Speed Network</string>
+    <string name="uwu_status_connection_title">Status</string>
+    <string name="uwu_network_switcher_title">Network Switcher</string>
+    <string name="uwu_host_to_ip_title">Host to ip</string>
+    <string name="uwu_ip_location_title">IP Location</string>
+    <string name="uwu_exit_title">Exit</string>
+    <string name="uwu_maintainer_title">This app is under maintenance</string>
+    <string name="uwu_border_about_title">Additional Options</string>
+    <string name="uwu_border_about_summary">Tap the arrow icon on the side</string>
+    <string name="uwu_devicename_title">Device Name</string>
+    <string name="uwu_board_title">Board</string>
+    <string name="uwu_osversion_title">Os Version</string>
+    <string name="uwu_brand_title">Brand</string>
+    <string name="uwu_buildid_title">Build ID</string>
+    <string name="uwu_baseband_title">Baseband Version</string>
+    <string name="uwu_github_title">Github</string>
+    <string name="uwu_github_summary">Source code repository</string>
+    <string name="uwu_credit_title">Credits</string>
+    <string name="uwu_updater_title">Check Update</string>
+    <string name="uwu_changrlog_title">Changelog</string>
+    <string name="uwu_feetback_title">Feetback</string>
+    <string name="uwu_modder_title">Modders</string>
+    <string name="uwu_exit_message">Are you sure you want to leave this application?</string>
+    <string name="uwu_text_yes">Yes</string>
+    <string name="uwu_text_no">No</string>
+    <string name="uwu_ignore_battery_optimization_summary">Apply for the necessary permissions in order for the VPN to function properly.\n\nIf you are using a device made by a Chinese company, the card may not disappear after the permission is granted.</string>
+    <string name="uwu_ignore_battery_optimization_title">Ignore battery optimizations</string>
+    <string name="read_more">Read More</string>
+    <string name="default_title">No Internet</string>
+    <string name="default_message">Check your Internet connection and try again.</string>
+    <string name="please_turn_on">Please turn on</string>
+    <string name="wifi">Wifi</string>
+    <string name="mobile_data">Mobile data</string>
+    <string name="default_snackbar_message">No active Internet connection!</string>
+    <string name="settings">Settings</string>
+    <string name="ok">OK</string>
+    <string name="please_turn_off">Please turn off</string>
+    <string name="airplane_mode">Airplane mode</string>
+    <string name="default_airplane_mode_message">You have turned on the airplane mode.</string>
+    <string name="neko_setup_config">Set up your config here!</string>
+    
+    <string name="homepage_widget_battery_percent">percent</string>
+    <string name="homepage_widget_battery_charge">Charging</string>
+    <string name="homepage_widget_battery_discharge">Discharging</string>
+    <string name="homepage_widget_battery_title">Battery</string>
+    <string name="homepage_widget_storage_title">Storage</string>
+    <string name="changelog_title">Changelog</string>
 
-    <string-array name="share_sub_method">
-        <item>QRcode</item>
-        <item>و در کشیڌن من کلیپ بورد</item>
-    </string-array>
-
-    <string-array name="mode_entries">
-        <item>VPN</item>
-        <item>تینا پروکسی</item>
-    </string-array>
-
-    <string-array name="ui_mode_night">
-        <item>و دین کردن سیستم</item>
-        <item>رۊشنا</item>
-        <item>تاریک</item>
-    </string-array>
-
-    <string-array name="preset_rulesets">
-        <item>نومگه اسبؽڌ چین</item>
-        <item>نومگه شه چین</item>
-        <item>جهۊوی (Global)</item>
-        <item>نومگه اسبؽڌ ایران</item>
-    </string-array>
+    <string name="appupdater_update_available">New update available!</string>
+    <string name="appupdater_update_available_description_dialog">Update %1$s is available to download. By downloading the latest update you will get the latest features, improvements and bug fixes for %2$s.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Update %1$s is available to download.\n\nYou can get these new features:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">Update %1$s is available!</string>
+    <string name="appupdater_update_available_description_notification">Update %1$s of %2$s is available to download</string>
+    <string name="appupdater_update_not_available">No updates available</string>
+    <string name="appupdater_update_not_available_description">You are already on the latest version %s!</string>
+    <string name="appupdater_btn_update">Update</string>
+    <string name="appupdater_btn_disable">Don\'t show again</string>
+    <string name="appupdater_btn_dismiss">Dismiss</string>
+    <string name="appupdater_channel_name">Update notifications</string>
+    <string name="uwu_host_checker">Host checker</string>
+    <string name="uwu_license_title">License</string>
+    <string name="version">Version</string>
+    <string name="uwu_group">Group</string>
+    <string name="uwu_fokus_today">Let\'s focus on today!</string>
+    <string name="uwu_theme">Theme</string>
+    <string name="uwu_theme_desc">Choose the accent color yourself</string>
+    <string name="uwu_theme_mode_default">System default</string>
+    <string name="uwu_theme_mode_light">Light</string>
+    <string name="uwu_theme_mode_dark">Dark</string>
+    <string name="uwu_theme_botton_text">Change theme</string>
+    <string name="uwu_subscription">Subscription</string>
+    <string name="uwu_subscription_desc">Setup your subscription group here!</string>
+    <string name="uwu_summary_dashboard_tools">Welcome to Neko-ray advanced settings</string>
+    <string name="uwu_name">Name :</string>
+    <string name="uwu_name_summary">Name</string>
+    <string name="uwu_username">User Name :</string>
+    <string name="uwu_username_summary">User Name</string>
+    <string name="uwu_age">Age :</string>
+    <string name="uwu_age_summary">Age</string>
+    <string name="uwu_date">Date Of Birth :</string>
+    <string name="uwu_date_summary">Date Of Birth</string>
+    <string name="uwu_hobi">Hobby :</string>
+    <string name="uwu_hobi_summary">Hobby</string>
+    <string name="uwu_email">Email :</string>
+    <string name="uwu_email_summary">Email</string>
+    <string name="uwu_userid">User ID :</string>
+    <string name="uwu_userid_summary">User ID</string>
+    <string name="uwu_profile_update_tittle">Update Profile</string>
+    <string name="uwu_profile_edit_tittle">Edit Profile</string>
+    <string name="uwu_name_dialog">Name Cannot Be Empty</string>
+    <string name="uwu_username_dialog">User Name Cannot Be Empty</string>
+    <string name="uwu_age_dialog">Age Cannot Be Empty</string>
+    <string name="uwu_date_dialog">Date of Birth Cannot Be Blank</string>
+    <string name="uwu_hobi_dialog">Hobbies Cannot Be Empty</string>
+    <string name="uwu_email_dialog">Email Cannot Be Empty</string>
+    <string name="uwu_daftar_message">Please fill in your personal data to be able to use the Neko-ray application.</string>
 
 </resources>

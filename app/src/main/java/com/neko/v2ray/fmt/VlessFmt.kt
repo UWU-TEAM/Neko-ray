@@ -6,6 +6,7 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.V2rayConfig.OutboundBean
 import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 import java.net.URI
 
@@ -37,6 +38,7 @@ object VlessFmt : FmtBase() {
         config.serviceName = queryParam["serviceName"]
         config.authority = queryParam["authority"]
         config.xhttpMode = queryParam["mode"]
+        config.xhttpExtra = queryParam["extra"]
 
         config.security = queryParam["security"]
         config.insecure = if (queryParam["allowInsecure"].isNullOrEmpty()) {
@@ -87,6 +89,7 @@ object VlessFmt : FmtBase() {
             profileItem.authority,
         )
         outboundBean?.streamSettings?.xhttpSettings?.mode = profileItem.xhttpMode
+        outboundBean?.streamSettings?.xhttpSettings?.extra = JsonUtil.parseString(profileItem.xhttpExtra)
 
         outboundBean?.streamSettings?.populateTlsSettings(
             profileItem.security.orEmpty(),
