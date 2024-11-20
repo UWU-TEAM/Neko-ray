@@ -253,9 +253,10 @@
     <string name="routing_settings_delete">清除</string>
     <string name="routing_settings_rule_title">路由规则设置</string>
     <string name="routing_settings_add_rule">添加规则</string>
-    <string name="routing_settings_import_rulesets">导入规则集</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
     <string name="routing_settings_import_rulesets_tip">现有规则集将被删除，确定继续吗？</string>
     <string name="routing_settings_import_rulesets_from_clipboard">从剪贴板导入规则集</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">将规则集导出到剪贴板</string>
     <string name="routing_settings_locked">已锁定，导入预设时保留此规则</string>
 

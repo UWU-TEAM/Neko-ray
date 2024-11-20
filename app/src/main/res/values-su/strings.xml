@@ -253,9 +253,10 @@
     <string name="routing_settings_delete">Ngusap</string>
     <string name="routing_settings_rule_title">Routing Rule Setélan</string>
     <string name="routing_settings_add_rule">Tambahkeun aturan</string>
-    <string name="routing_settings_import_rulesets">Impor set aturan</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
     <string name="routing_settings_import_rulesets_tip">Setélan aturan anu aya bakal dipupus, naha anjeun yakin bakal neruskeun?</string>
     <string name="routing_settings_import_rulesets_from_clipboard">Impor set aturan tina clipboard</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">Ékspor aturan ka clipboard</string>
     <string name="routing_settings_locked">Dikonci, jaga aturan ieu nalika impor preset</string>
 

@@ -253,9 +253,10 @@
     <string name="routing_settings_delete">Hapus</string>
     <string name="routing_settings_rule_title">Pengaturan Aturan Routing</string>
     <string name="routing_settings_add_rule">Tambah aturan</string>
-    <string name="routing_settings_import_rulesets">Impor rangkaian aturan</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
     <string name="routing_settings_import_rulesets_tip">Rangkaian aturan yang ada akan dihapus, apakah Anda yakin untuk melanjutkan?</string>
     <string name="routing_settings_import_rulesets_from_clipboard">Impor set aturan dari papan klip</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset dari QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">Ekspor set aturan ke papan klip</string>
     <string name="routing_settings_locked">Terkunci, pertahankan aturan ini saat mengimpor preset</string>
 

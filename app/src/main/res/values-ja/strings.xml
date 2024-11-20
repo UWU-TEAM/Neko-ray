@@ -253,9 +253,10 @@
     <string name="routing_settings_delete">クリア</string>
     <string name="routing_settings_rule_title">ルーティングルール設定</string>
     <string name="routing_settings_add_rule">ルールを追加する</string>
-    <string name="routing_settings_import_rulesets">ルールセットをインポートする</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
     <string name="routing_settings_import_rulesets_tip">既存のルールセットは削除されます。続行しますか?</string>
     <string name="routing_settings_import_rulesets_from_clipboard">クリップボードからルールセットをインポート</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">ルールセットをクリップボードにエクスポート</string>
     <string name="routing_settings_locked">ロックされています。プリセットをインポートするときにこのルールを維持します</string>
 

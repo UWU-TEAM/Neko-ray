@@ -254,9 +254,10 @@
     <string name="routing_settings_delete">پاک کردن</string>
     <string name="routing_settings_rule_title">قانون مسیریابی تنظیمات</string>
     <string name="routing_settings_add_rule">افزودن قانون</string>
-    <string name="routing_settings_import_rulesets">وارد کردن مجموعه قوانین</string>
+    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
     <string name="routing_settings_import_rulesets_tip">مجموعه قوانین موجود حذف خواهند شد، آیا مطمئن هستید که ادامه می دهید؟</string>
     <string name="routing_settings_import_rulesets_from_clipboard">وارد کردن مجموعه قوانین از کلیپ بورد</string>
+    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
     <string name="routing_settings_export_rulesets_to_clipboard">صادر کردن مجموعه قوانین به کلیپ بورد</string>
     <string name="routing_settings_locked">قفل است، این قانون را هنگام وارد کردن از پیش تنظیمات حفظ کنید</string>
 
