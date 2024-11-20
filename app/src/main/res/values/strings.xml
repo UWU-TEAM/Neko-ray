@@ -77,6 +77,7 @@
     <string name="server_lab_security4">User(Optional)</string>
     <string name="server_lab_encryption">encryption</string>
     <string name="server_lab_flow">flow</string>
+    <string name="server_lab_preshared_key">PreSharedKey(optional)</string>
     <string name="server_lab_reserved">Reserved(Optional, separated by commas)</string>
     <string name="server_lab_local_address">Local address (optional IPv4/IPv6, separated by commas)</string>
     <string name="server_lab_local_mtu">Mtu(optional, default 1420)</string>
