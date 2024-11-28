@@ -190,7 +190,10 @@
  
     <string name="title_pref_start_scan_immediate">Mimitian nyeken langsung</string>
     <string name="summary_pref_start_scan_immediate">Buka kaméra pikeun langsung nyeken dina ngamimitian, disebutkeun Anjeun bisa milih pikeun nyeken kode atawa milih poto dina toolbar</string>
- 
+
+    <string name="title_pref_append_http_proxy">Append HTTP Proxy to VPN</string>
+    <string name="summary_pref_append_http_proxy">HTTP proxy will be used directly from (browser/ some supported apps), without going through the virtual NIC device (Android 10+)</string>
+
     <string name="title_pref_feedback">Eupan balik</string>
     <string name="summary_pref_feedback">Perbaikan eupan balik atanapi bug kana GitHub</string>
     <string name="summary_pref_tg_group">Miluan Grup Telegram</string>

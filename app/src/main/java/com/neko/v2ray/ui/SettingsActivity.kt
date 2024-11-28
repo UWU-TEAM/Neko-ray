@@ -52,6 +52,11 @@ class SettingsActivity : BaseActivity() {
         private val perAppProxy by lazy { findPreference<SwitchPreference>(AppConfig.PREF_PER_APP_PROXY) }
         private val localDns by lazy { findPreference<SwitchPreference>(AppConfig.PREF_LOCAL_DNS_ENABLED) }
         private val fakeDns by lazy { findPreference<SwitchPreference>(AppConfig.PREF_FAKE_DNS_ENABLED) }
+        private val appendHttpProxy by lazy { findPreference<SwitchPreference>(AppConfig.PREF_APPEND_HTTP_PROXY) }
+        private val perAppProxy by lazy { findPreference<CheckBoxPreference>(AppConfig.PREF_PER_APP_PROXY) }
+        private val localDns by lazy { findPreference<CheckBoxPreference>(AppConfig.PREF_LOCAL_DNS_ENABLED) }
+        private val fakeDns by lazy { findPreference<CheckBoxPreference>(AppConfig.PREF_FAKE_DNS_ENABLED) }
+
         private val localDnsPort by lazy { findPreference<EditTextPreference>(AppConfig.PREF_LOCAL_DNS_PORT) }
         private val vpnDns by lazy { findPreference<EditTextPreference>(AppConfig.PREF_VPN_DNS) }
 
@@ -198,6 +203,7 @@ class SettingsActivity : BaseActivity() {
             updateMode(MmkvManager.decodeSettingsString(AppConfig.PREF_MODE, VPN))
             localDns?.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_LOCAL_DNS_ENABLED, false)
             fakeDns?.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_FAKE_DNS_ENABLED, false)
+            appendHttpProxy?.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_APPEND_HTTP_PROXY, false)
             localDnsPort?.summary = MmkvManager.decodeSettingsString(AppConfig.PREF_LOCAL_DNS_PORT, AppConfig.PORT_LOCAL_DNS)
             vpnDns?.summary = MmkvManager.decodeSettingsString(AppConfig.PREF_VPN_DNS, AppConfig.DNS_VPN)
 
@@ -287,6 +293,7 @@ class SettingsActivity : BaseActivity() {
             perAppProxy?.isChecked = MmkvManager.decodeSettingsBool(AppConfig.PREF_PER_APP_PROXY, false)
             localDns?.isEnabled = vpn
             fakeDns?.isEnabled = vpn
+            appendHttpProxy?.isEnabled = vpn
             localDnsPort?.isEnabled = vpn
             vpnDns?.isEnabled = vpn
             if (vpn) {

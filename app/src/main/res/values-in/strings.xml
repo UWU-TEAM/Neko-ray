@@ -191,6 +191,9 @@
     <string name="title_pref_start_scan_immediate">Segera mulai memindai</string>
     <string name="summary_pref_start_scan_immediate">Buka kamera untuk segera memindai saat startup, jika tidak, Anda dapat memilih untuk memindai kode atau memilih foto di toolbar</string>
 
+    <string name="title_pref_append_http_proxy">Tambahkan Proxy HTTP ke VPN</string>
+    <string name="summary_pref_append_http_proxy">Proksi HTTP akan digunakan langsung dari (browser/beberapa aplikasi yang didukung), tanpa melalui perangkat NIC virtual (Android 10+)</string>
+
     <string name="title_pref_feedback">Umpan Balik</string>
     <string name="summary_pref_feedback">Umpan balik penyempurnaan atau bug ke GitHub</string>
     <string name="summary_pref_tg_group">Bergabung dengan Grup Telegram</string>

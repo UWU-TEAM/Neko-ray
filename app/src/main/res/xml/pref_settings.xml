@@ -63,6 +63,13 @@
             android:summary="@string/summary_pref_fake_dns_enabled"
             android:title="@string/title_pref_fake_dns_enabled"/>
 
+        <SwitchPreference
+            android:icon="@drawable/uwu_ic_lan"
+            android:layout="@layout/uwu_mid_switch"
+            android:key="pref_append_http_proxy"
+            android:summary="@string/summary_pref_append_http_proxy"
+            android:title="@string/title_pref_append_http_proxy"/>
+
         <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid"

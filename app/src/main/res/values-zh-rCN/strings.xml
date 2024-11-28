@@ -190,7 +190,10 @@
  
     <string name="title_pref_start_scan_immediate">立即开始扫描</string>
     <string name="summary_pref_start_scan_immediate">启动时立即打开相机扫描，否则可以选择扫码或在工具栏中选择照片</string>
- 
+
+    <string name="title_pref_append_http_proxy">追加 HTTP 代理至 VPN</string>
+    <string name="summary_pref_append_http_proxy">浏览器 / 一些支持的应用 将直接使用 HTTP 代理, 而不经过虚拟网卡设备 (Android 10+)</string>
+
     <string name="title_pref_feedback">反馈</string>
     <string name="summary_pref_feedback">向 GitHub 反馈增强功能或错误</string>
     <string name="summary_pref_tg_group">加入电报群</string>
