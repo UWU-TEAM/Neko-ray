@@ -1,5 +1,6 @@
 package com.neko.v2ray.fmt
 
+import com.neko.v2ray.AppConfig
 import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.isNotNullEmpty
@@ -47,6 +48,9 @@ open class FmtBase {
         config.xhttpExtra = queryParam["extra"]
 
         config.security = queryParam["security"]
+        if (config.security != AppConfig.TLS && config.security != AppConfig.REALITY) {
+            config.security = null
+        }
         config.insecure = if (queryParam["allowInsecure"].isNullOrEmpty()) {
             allowInsecure
         } else {
