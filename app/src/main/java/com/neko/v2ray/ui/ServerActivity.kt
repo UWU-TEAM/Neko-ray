@@ -182,7 +182,7 @@ class ServerActivity : BaseActivity() {
                 sp_header_type_title?.text =
                     when (networks[position]) {
                         NetworkType.GRPC.type -> getString(R.string.server_lab_mode_type)
-                        NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> getString(R.string.server_lab_xhttp_mode)
+                        NetworkType.XHTTP.type -> getString(R.string.server_lab_xhttp_mode)
                         else -> getString(R.string.server_lab_head_type)
                     }.orEmpty()
                 sp_header_type?.setSelection(
@@ -190,7 +190,7 @@ class ServerActivity : BaseActivity() {
                         types,
                         when (networks[position]) {
                             NetworkType.GRPC.type -> config?.mode
-                            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> config?.xhttpMode
+                            NetworkType.XHTTP.type -> config?.xhttpMode
                             else -> config?.headerType
                         }.orEmpty()
                     )
@@ -218,7 +218,7 @@ class ServerActivity : BaseActivity() {
                             NetworkType.TCP.type -> R.string.server_lab_request_host_http
                             NetworkType.WS.type -> R.string.server_lab_request_host_ws
                             NetworkType.HTTP_UPGRADE.type -> R.string.server_lab_request_host_httpupgrade
-                            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> R.string.server_lab_request_host_xhttp
+                            NetworkType.XHTTP.type -> R.string.server_lab_request_host_xhttp
                             NetworkType.H2.type -> R.string.server_lab_request_host_h2
                             //"quic" -> R.string.server_lab_request_host_quic
                             NetworkType.GRPC.type -> R.string.server_lab_request_host_grpc
@@ -233,7 +233,7 @@ class ServerActivity : BaseActivity() {
                             NetworkType.KCP.type -> R.string.server_lab_path_kcp
                             NetworkType.WS.type -> R.string.server_lab_path_ws
                             NetworkType.HTTP_UPGRADE.type -> R.string.server_lab_path_httpupgrade
-                            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> R.string.server_lab_path_xhttp
+                            NetworkType.XHTTP.type -> R.string.server_lab_path_xhttp
                             NetworkType.H2.type -> R.string.server_lab_path_h2
                             //"quic" -> R.string.server_lab_path_quic
                             NetworkType.GRPC.type -> R.string.server_lab_path_grpc
@@ -243,14 +243,14 @@ class ServerActivity : BaseActivity() {
                 )
                 et_extra?.hint = Utils.getEditable(
                     when (networks[position]) {
-                        NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> config?.xhttpExtra
+                        NetworkType.XHTTP.type -> config?.xhttpExtra
                         else -> null
                     }.orEmpty()
                 )
 
                 layout_extra?.visibility =
                     when (networks[position]) {
-                        NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> View.VISIBLE
+                        NetworkType.XHTTP.type -> View.VISIBLE
                         else -> View.GONE
                     }
             }
@@ -634,7 +634,7 @@ class ServerActivity : BaseActivity() {
                 grpcModes
             }
 
-            NetworkType.SPLIT_HTTP.type, NetworkType.XHTTP.type -> {
+            NetworkType.XHTTP.type -> {
                 xhttpMode
             }
 
