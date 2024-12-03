@@ -178,10 +178,7 @@
  
     <string name="title_pref_socks_port">SOCKS5-прокси-порт</string>
     <string name="summary_pref_socks_port">SOCKS5-прокси-порт</string>
- 
-    <string name="title_pref_http_port">HTTP-прокси-порт</string>
-    <string name="summary_pref_http_port">HTTP-прокси-порт</string>
- 
+
     <string name="title_pref_local_dns_port">Локальный DNS-порт</string>
     <string name="summary_pref_local_dns_port">Локальный DNS-порт</string>
  

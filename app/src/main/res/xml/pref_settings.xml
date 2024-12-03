@@ -248,14 +248,6 @@
             android:title="@string/title_pref_socks_port"/>
 
         <EditTextPreference
-            android:icon="@drawable/uwu_ic_access_point_network"
-            android:layout="@layout/uwu_mid"
-            android:key="pref_http_port"
-            android:summary="10809"
-            android:inputType="number"
-            android:title="@string/title_pref_http_port"/>
-
-        <EditTextPreference
             android:icon="@drawable/uwu_ic_action_dns"
             android:layout="@layout/uwu_mid"
             android:key="pref_remote_dns"

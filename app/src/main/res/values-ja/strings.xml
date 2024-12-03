@@ -178,10 +178,7 @@
  
     <string name="title_pref_socks_port">SOCKS5 プロキシ ポート</string>
     <string name="summary_pref_socks_port">SOCKS5 プロキシ ポート</string>
- 
-    <string name="title_pref_http_port">HTTPプロキシポート</string>
-    <string name="summary_pref_http_port">HTTPプロキシポート</string>
- 
+
     <string name="title_pref_local_dns_port">ローカルDNSポート</string>
     <string name="summary_pref_local_dns_port">ローカルDNSポート</string>
  
