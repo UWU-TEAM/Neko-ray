@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">Pariksa Konéktipitas</string>
     <string name="connection_test_testing">Nguji…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">Suksés: Sambungan HTTP nyandak waktos %dms</string>
     <string name="connection_test_error">Gagal ngadeteksi sambungan internét: %s</string>
     <string name="connection_test_fail">Internét Teu Aya</string>

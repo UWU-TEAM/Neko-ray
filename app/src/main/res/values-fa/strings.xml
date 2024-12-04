@@ -267,6 +267,7 @@
 
     <string name="connection_test_pending">اتصال را بررسی کنید</string>
     <string name="connection_test_testing">آزمایش کردن…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">موفقیت: اتصال HTTP %dms طول کشید</string>
     <string name="connection_test_error">اتصال اینترنت شناسایی نشد: %s</string>
     <string name="connection_test_fail">اینترنت در دسترس نیست</string>

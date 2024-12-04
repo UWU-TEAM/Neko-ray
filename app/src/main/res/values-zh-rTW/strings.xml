@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">檢查連接性</string>
     <string name="connection_test_testing">測試...</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">成功：HTTP 連線花費了 %dms</string>
     <string name="connection_test_error">無法偵測網路連線：%s</string>
     <string name="connection_test_fail">無法上網</string>

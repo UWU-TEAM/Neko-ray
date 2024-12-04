@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">Проверьте подключение</string>
     <string name="connection_test_testing">Тестирование…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">Успех: HTTP-соединение заняло %dms.</string>
     <string name="connection_test_error">Не удалось обнаружить подключение к Интернету: %s</string>
     <string name="connection_test_fail">Интернет недоступен</string>

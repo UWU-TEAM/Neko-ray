@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">Kiểm tra kết nối</string>
     <string name="connection_test_testing">Đang thử nghiệm…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">Thành công: Kết nối HTTP mất %dms</string>
     <string name="connection_test_error">Không phát hiện được kết nối internet: %s</string>
     <string name="connection_test_fail">Internet không có sẵn</string>

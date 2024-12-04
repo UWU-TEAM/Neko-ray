@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">接続をチェックする</string>
     <string name="connection_test_testing">テスト中…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">成功: HTTP 接続に %dms かかりました</string>
     <string name="connection_test_error">インターネット接続の検出に失敗しました: %s</string>
     <string name="connection_test_fail">インターネットが利用できない</string>

@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">تحقق من الاتصال</string>
     <string name="connection_test_testing">اختبارات…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">نجاح: استغرق اتصال HTTP %dms</string>
     <string name="connection_test_error">فشل الكشف عن الاتصال بالإنترنت: %s</string>
     <string name="connection_test_fail">الإنترنت غير متوفر</string>

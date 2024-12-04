@@ -266,6 +266,7 @@
 
     <string name="connection_test_pending">Priksa Konektivitas</string>
     <string name="connection_test_testing">Tes…</string>
+    <string name="connection_test_testing_count">Testing %d configurations…</string>
     <string name="connection_test_available">Sukses: Sambungan HTTP butuh wektu %dms</string>
     <string name="connection_test_error">Gagal ndeteksi sambungan internet: %s</string>
     <string name="connection_test_fail">Internet Ora Ana</string>
