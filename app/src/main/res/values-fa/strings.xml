@@ -243,6 +243,7 @@
     <string name="title_filter_config">فایل پیکربندی فیلتر</string>
     <string name="filter_config_all">جميع المجموعات</string>
     <string name="title_del_duplicate_config_count">%d پیکربندی تکراری را حذف کنید</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
  
     <string name="tasker_start_service">سرویس را شروع کنید</string>
     <string name="tasker_setting_confirm">تایید</string>

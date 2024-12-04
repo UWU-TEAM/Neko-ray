@@ -242,6 +242,7 @@
     <string name="title_filter_config">Файл конфигурации фильтра</string>
     <string name="filter_config_all">Все группы</string>
     <string name="title_del_duplicate_config_count">Удалить %d повторяющихся конфигураций</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
  
     <string name="tasker_start_service">Запустить службу</string>
     <string name="tasker_setting_confirm">Подтверждать</string>

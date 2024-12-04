@@ -242,6 +242,7 @@
     <string name="title_filter_config">Lọc tập tin cấu hình</string>
     <string name="filter_config_all">tất cả nhóm</string>
     <string name="title_del_duplicate_config_count">Xóa %d cấu hình trùng lặp</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
  
     <string name="tasker_start_service">Bắt đầu dịch vụ</string>
     <string name="tasker_setting_confirm">Xác nhận</string>

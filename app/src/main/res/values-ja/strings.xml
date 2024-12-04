@@ -242,6 +242,7 @@
     <string name="title_filter_config">フィルタ設定ファイル</string>
     <string name="filter_config_all">すべてのグループ</string>
     <string name="title_del_duplicate_config_count">%d 個の重複構成を削除します</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
  
     <string name="tasker_start_service">サービス開始</string>
     <string name="tasker_setting_confirm">確認する</string>

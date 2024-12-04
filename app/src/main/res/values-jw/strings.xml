@@ -242,6 +242,7 @@
     <string name="title_filter_config">Filter Config file</string>
     <string name="filter_config_all">Kabeh grup</string>
     <string name="title_del_duplicate_config_count">Busak %d duplikat Configs</string>
+    <string name="title_del_config_count">Delete %d configurations</string>
 
     <string name="tasker_start_service">Mulai Layanan</string>
     <string name="tasker_setting_confirm">Konfirmasi</string>
