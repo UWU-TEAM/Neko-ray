@@ -243,6 +243,9 @@
     <string name="filter_config_all">すべてのグループ</string>
     <string name="title_del_duplicate_config_count">%d 個の重複構成を削除します</string>
     <string name="title_del_config_count">Delete %d configurations</string>
+    <string name="title_import_config_count">Import %d configurations</string>
+    <string name="title_export_config_count">Export %d configurations</string>
+    <string name="title_update_config_count">Update %d configurations</string>
  
     <string name="tasker_start_service">サービス開始</string>
     <string name="tasker_setting_confirm">確認する</string>

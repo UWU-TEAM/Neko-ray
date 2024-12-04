@@ -243,6 +243,9 @@
     <string name="filter_config_all">جميع مجموعات الاشتراك</string>
     <string name="title_del_duplicate_config_count">حذف %d تكوينات مكررة</string>
     <string name="title_del_config_count">Delete %d configurations</string>
+    <string name="title_import_config_count">Import %d configurations</string>
+    <string name="title_export_config_count">Export %d configurations</string>
+    <string name="title_update_config_count">Update %d configurations</string>
  
     <string name="tasker_start_service">إبدأ الخدمة</string>
     <string name="tasker_setting_confirm">يتأكد</string>
