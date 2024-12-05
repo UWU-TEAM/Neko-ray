@@ -176,8 +176,8 @@
     <string name="title_pref_allow_insecure">РазрешитьНебезопасно</string>
     <string name="summary_pref_allow_insecure">При TLS по умолчанию используется параметрallowInsecure.</string>
  
-    <string name="title_pref_socks_port">SOCKS5-прокси-порт</string>
-    <string name="summary_pref_socks_port">SOCKS5-прокси-порт</string>
+    <string name="title_pref_socks_port">local-прокси-порт</string>
+    <string name="summary_pref_socks_port">local-прокси-порт</string>
 
     <string name="title_pref_local_dns_port">Локальный DNS-порт</string>
     <string name="summary_pref_local_dns_port">Локальный DNS-порт</string>

@@ -176,8 +176,8 @@
     <string name="title_pref_allow_insecure">允許不安全</string>
     <string name="summary_pref_allow_insecure">TLS時，預設allowInsecure</string>
  
-    <string name="title_pref_socks_port">SOCKS5代理端口</string>
-    <string name="summary_pref_socks_port">SOCKS5代理端口</string>
+    <string name="title_pref_socks_port">local代理端口</string>
+    <string name="summary_pref_socks_port">local代理端口</string>
 
     <string name="title_pref_local_dns_port">本地 DNS 連接埠</string>
     <string name="summary_pref_local_dns_port">本地 DNS 連接埠</string>

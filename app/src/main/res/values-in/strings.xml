@@ -176,8 +176,8 @@
     <string name="title_pref_allow_insecure">allowInsecure</string>
     <string name="summary_pref_allow_insecure">Saat TLS, defaultnya adalah AllowInsecure</string>
 
-    <string name="title_pref_socks_port">SOCKS5 port proxy</string>
-    <string name="summary_pref_socks_port">SOCKS5 port proxy</string>
+    <string name="title_pref_socks_port">lokal port proxy</string>
+    <string name="summary_pref_socks_port">lokal port proxy</string>
 
     <string name="title_pref_local_dns_port">Port DNS lokal</string>
     <string name="summary_pref_local_dns_port">Port DNS lokal</string>

@@ -176,8 +176,8 @@
     <string name="title_pref_allow_insecure">ngidinanInsecure</string>
     <string name="summary_pref_allow_insecure">Nalika TLS, standarna nyaéta AllowInsecure</string>
  
-    <string name="title_pref_socks_port">port proxy SOCKS5</string>
-    <string name="summary_pref_socks_port">port proxy SOCKS5</string>
+    <string name="title_pref_socks_port">port proxy local</string>
+    <string name="summary_pref_socks_port">port proxy local</string>
 
     <string name="title_pref_local_dns_port">port DNS lokal</string>
     <string name="summary_pref_local_dns_port">port DNS lokal</string>

@@ -176,8 +176,8 @@
     <string name="title_pref_allow_insecure">許可しない安全でない</string>
     <string name="summary_pref_allow_insecure">TLS の場合、デフォルトのallowInsecure</string>
  
-    <string name="title_pref_socks_port">SOCKS5 プロキシ ポート</string>
-    <string name="summary_pref_socks_port">SOCKS5 プロキシ ポート</string>
+    <string name="title_pref_socks_port">local プロキシ ポート</string>
+    <string name="summary_pref_socks_port">local プロキシ ポート</string>
 
     <string name="title_pref_local_dns_port">ローカルDNSポート</string>
     <string name="summary_pref_local_dns_port">ローカルDNSポート</string>

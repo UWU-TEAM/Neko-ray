@@ -177,8 +177,8 @@
     <string name="title_pref_allow_insecure">اجازه ناامن</string>
     <string name="summary_pref_allow_insecure">هنگامی که TLS، به طور پیش فرض allowInsecure</string>
  
-    <string name="title_pref_socks_port">پورت پروکسی SOCKS5</string>
-    <string name="summary_pref_socks_port">پورت پروکسی SOCKS5</string>
+    <string name="title_pref_socks_port">پورت پروکسی local</string>
+    <string name="summary_pref_socks_port">پورت پروکسی local</string>
 
     <string name="title_pref_local_dns_port">پورت DNS محلی</string>
     <string name="summary_pref_local_dns_port">پورت DNS محلی</string>
