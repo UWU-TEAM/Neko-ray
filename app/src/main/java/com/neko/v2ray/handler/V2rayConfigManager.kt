@@ -34,6 +34,7 @@ import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V4
 import com.neko.v2ray.AppConfig.WIREGUARD_LOCAL_ADDRESS_V6
 import com.neko.v2ray.dto.ConfigResult
 import com.neko.v2ray.dto.EConfigType
+import com.neko.v2ray.dto.NetworkType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.V2rayConfig
@@ -425,6 +426,8 @@ object V2rayConfigManager {
             } else if (protocol.equals(EConfigType.VLESS.name, true)
                 && outbound.settings?.vnext?.first()?.users?.first()?.flow?.isNotEmpty() == true
             ) {
+                muxEnabled = false
+            } else if (outbound.streamSettings?.network == NetworkType.XHTTP.type) {
                 muxEnabled = false
             }
             if (muxEnabled == true) {
