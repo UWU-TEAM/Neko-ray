@@ -39,6 +39,7 @@ import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RulesetItem
 import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.dto.V2rayConfig.RoutingBean.RulesBean
+import com.neko.v2ray.extension.isNotNullEmpty
 import com.neko.v2ray.fmt.HttpFmt
 import com.neko.v2ray.fmt.Hysteria2Fmt
 import com.neko.v2ray.fmt.ShadowsocksFmt
@@ -333,7 +334,7 @@ object V2rayConfigManager {
             remoteDns.forEach {
                 servers.add(it)
             }
-            if (proxyDomain.size > 0) {
+            if (proxyDomain.isNotEmpty()) {
                 servers.add(
                     V2rayConfig.DnsBean.ServersBean(
                         address = remoteDns.first(),
@@ -347,7 +348,7 @@ object V2rayConfigManager {
             val directDomain = userRule2Domain(TAG_DIRECT)
             val isCnRoutingMode = directDomain.contains(GEOSITE_CN)
             val geoipCn = arrayListOf(GEOIP_CN)
-            if (directDomain.size > 0) {
+            if (directDomain.isNotEmpty()) {
                 servers.add(
                     V2rayConfig.DnsBean.ServersBean(
                         address = domesticDns.first(),
@@ -369,9 +370,23 @@ object V2rayConfigManager {
                 )
             }
 
+            //User DNS hosts
+            try {
+                val userHosts = MmkvManager.decodeSettingsString(AppConfig.PREF_DNS_HOSTS)
+                if (userHosts.isNotNullEmpty()) {
+                    var userHostsMap = userHosts?.split(",")
+                        ?.filter { it.isNotEmpty() }
+                        ?.filter { it.contains(":") }
+                        ?.associate { it.split(":").let { (k, v) -> k to v } }
+                    if (userHostsMap != null) hosts.putAll(userHostsMap)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
             //block dns
             val blkDomain = userRule2Domain(TAG_BLOCKED)
-            if (blkDomain.size > 0) {
+            if (blkDomain.isNotEmpty()) {
                 hosts.putAll(blkDomain.map { it to LOOPBACK })
             }
 

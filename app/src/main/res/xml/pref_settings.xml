@@ -262,6 +262,13 @@
             android:title="@string/title_pref_domestic_dns"/>
 
         <EditTextPreference
+            android:key="pref_dns_hosts"
+            android:icon="@drawable/uwu_ic_package_variant"
+            android:layout="@layout/uwu_mid"
+            android:summary="@string/summary_pref_dns_hosts"
+            android:title="@string/title_pref_dns_hosts" />
+
+        <EditTextPreference
             android:key="pref_delay_test_url"
             android:icon="@drawable/uwu_ic_delay"
             android:layout="@layout/uwu_mid"

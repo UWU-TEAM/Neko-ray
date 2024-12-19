@@ -165,7 +165,10 @@
  
     <string name="title_pref_domestic_dns">國內DNS（可選）</string>
     <string name="summary_pref_domestic_dns">域名系統</string>
- 
+
+    <string name="title_pref_dns_hosts">DNS hosts (Format: domain:address,…)</string>
+    <string name="summary_pref_dns_hosts">domain:address,…</string>
+
     <string name="title_pref_delay_test_url">真實延遲測試網址 (http/https)</string>
     <string name="summary_pref_delay_test_url">Url</string>
  
