@@ -339,7 +339,7 @@ class UserAssetActivity : BaseActivity() {
                         MmkvManager.removeAssetUrl(item.first)
                         initAssets()
                     }
-                    .setNegativeButton(android.R.string.no) { _, _ ->
+                    .setNegativeButton(android.R.string.cancel) { _, _ ->
                         //do noting
                     }
                     .show()

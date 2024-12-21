@@ -163,7 +163,7 @@ class ServerCustomConfigActivity : BaseActivity() {
                     MmkvManager.removeServer(editGuid)
                     finish()
                 }
-                .setNegativeButton(android.R.string.no) {_, _ ->
+                .setNegativeButton(android.R.string.cancel) { _, _ ->
                     // do nothing
                 }
                 .show()
