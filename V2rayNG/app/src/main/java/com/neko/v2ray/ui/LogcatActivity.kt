@@ -22,9 +22,8 @@ import kotlinx.coroutines.withContext
 import java.io.IOException
 
 class LogcatActivity : BaseActivity() {
-    private val binding by lazy {
-        ActivityLogcatBinding.inflate(layoutInflater)
-    }
+    private val binding by lazy { ActivityLogcatBinding.inflate(layoutInflater) }
+    private val throttleManager = ThrottleManager()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,6 +33,32 @@ class LogcatActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         logcat(false)
+    }
+
+    class ThrottleManager {
+        private val throttleMap = mutableMapOf<String, Long>()
+
+        companion object {
+            private const val THROTTLE_DURATION = 1000L
+        }
+
+        @Synchronized
+        fun shouldProcess(key: String): Boolean {
+            val currentTime = System.currentTimeMillis()
+            val lastProcessTime = throttleMap[key] ?: 0L
+
+            return if (currentTime - lastProcessTime > THROTTLE_DURATION) {
+                throttleMap[key] = currentTime
+                true
+            } else {
+                false
+            }
+        }
+
+        @Synchronized
+        fun reset(key: String) {
+            throttleMap.remove(key)
+        }
     }
 
     private fun logcat(shouldFlushLog: Boolean) {
@@ -48,20 +73,23 @@ class LogcatActivity : BaseActivity() {
                         process.waitFor()
                     }
                 }
+
                 val lst = linkedSetOf(
                     "logcat", "-d", "-v", "time", "-s",
                     "GoLog,tun2socks,$ANG_PACKAGE,AndroidRuntime,System.err"
                 )
+
                 val process = withContext(Dispatchers.IO) {
                     Runtime.getRuntime().exec(lst.toTypedArray())
                 }
-                val allText = process.inputStream.bufferedReader().use { it.readText() }
+
+                val allLogs = process.inputStream.bufferedReader().use { it.readLines() }
+                val filteredLogs = processLogs(allLogs)
+
                 withContext(Dispatchers.Main) {
-                    binding.tvLogcat.text = allText
-                    binding.tvLogcat.movementMethod = ScrollingMovementMethod()
-                    binding.pbWaiting.visibility = View.GONE
-                    Handler(Looper.getMainLooper()).post { binding.svLogcat.fullScroll(View.FOCUS_DOWN) }
+                    updateLogDisplay(filteredLogs)
                 }
+
             } catch (e: IOException) {
                 withContext(Dispatchers.Main) {
                     binding.pbWaiting.visibility = View.GONE
@@ -72,6 +100,36 @@ class LogcatActivity : BaseActivity() {
         }
     }
 
+    private fun processLogs(logs: List<String>): List<String> {
+        val processedLogs = mutableListOf<String>()
+        var isNotMatch = false
+
+        for (line in logs) {
+            when {
+                line.contains("zxing.NotFoundException", ignoreCase = true) -> {
+                    if (!isNotMatch) {
+                        if (throttleManager.shouldProcess("NotFoundException")) {
+                            processedLogs.add(line)
+                            isNotMatch = true
+                        }
+                    }
+                }
+                else -> processedLogs.add(line)
+            }
+        }
+
+        return processedLogs.take(500)
+    }
+
+    private fun updateLogDisplay(logs: List<String>) {
+        binding.tvLogcat.text = logs.joinToString("\n")
+        binding.tvLogcat.movementMethod = ScrollingMovementMethod()
+        binding.pbWaiting.visibility = View.GONE
+
+        Handler(Looper.getMainLooper()).post {
+            binding.svLogcat.fullScroll(View.FOCUS_DOWN)
+        }
+    }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.menu_logcat, menu)
@@ -84,12 +142,11 @@ class LogcatActivity : BaseActivity() {
             toast(R.string.toast_success)
             true
         }
-
         R.id.clear_all -> {
+            throttleManager.reset("zxing.NotFoundException")
             logcat(true)
             true
         }
-
         else -> super.onOptionsItemSelected(item)
     }
 }
