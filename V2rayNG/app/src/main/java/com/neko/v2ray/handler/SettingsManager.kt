@@ -9,9 +9,11 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.GEOIP_PRIVATE
 import com.neko.v2ray.AppConfig.GEOSITE_PRIVATE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
+import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.dto.RoutingType
 import com.neko.v2ray.dto.RulesetItem
+import com.neko.v2ray.dto.V2rayConfig
 import com.neko.v2ray.handler.MmkvManager.decodeServerConfig
 import com.neko.v2ray.handler.MmkvManager.decodeServerList
 import com.neko.v2ray.util.JsonUtil
@@ -91,8 +93,10 @@ object SettingsManager {
     fun saveRoutingRuleset(index: Int, ruleset: RulesetItem?) {
         if (ruleset == null) return
 
-        val rulesetList = MmkvManager.decodeRoutingRulesets()
-        if (rulesetList.isNullOrEmpty()) return
+        var rulesetList = MmkvManager.decodeRoutingRulesets()
+        if (rulesetList.isNullOrEmpty()) {
+            rulesetList = mutableListOf()
+        }
 
         if (index < 0 || index >= rulesetList.count()) {
             rulesetList.add(0, ruleset)
@@ -113,12 +117,23 @@ object SettingsManager {
     }
 
     fun routingRulesetsBypassLan(): Boolean {
+        val guid = MmkvManager.getSelectServer() ?: return false
+        val config = MmkvManager.decodeServerConfig(guid) ?: return false
+        if (config.configType == EConfigType.CUSTOM) {
+            val raw = MmkvManager.decodeServerRaw(guid) ?: return false
+            val v2rayConfig = JsonUtil.fromJson(raw, V2rayConfig::class.java)
+            val exist = v2rayConfig.routing.rules.filter { it.outboundTag == TAG_DIRECT }?.any {
+                it.domain?.contains(GEOSITE_PRIVATE) == true || it.ip?.contains(GEOIP_PRIVATE) == true
+            }
+            return exist == true
+        }
+
         val rulesetItems = MmkvManager.decodeRoutingRulesets()
         val exist = rulesetItems?.filter { it.enabled && it.outboundTag == TAG_DIRECT }?.any {
             it.domain?.contains(GEOSITE_PRIVATE) == true || it.ip?.contains(GEOIP_PRIVATE) == true
         }
         return exist == true
-    }
+        }
 
     fun swapRoutingRuleset(fromPosition: Int, toPosition: Int) {
         val rulesetList = MmkvManager.decodeRoutingRulesets()
