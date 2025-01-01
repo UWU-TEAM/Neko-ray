@@ -56,6 +56,7 @@ class SettingsActivity : BaseActivity() {
 
         private val localDnsPort by lazy { findPreference<EditTextPreference>(AppConfig.PREF_LOCAL_DNS_PORT) }
         private val vpnDns by lazy { findPreference<EditTextPreference>(AppConfig.PREF_VPN_DNS) }
+        private val vpnBypassLan by lazy { findPreference<ListPreference>(AppConfig.PREF_VPN_BYPASS_LAN) }
 
         private val mux by lazy { findPreference<SwitchPreference>(AppConfig.PREF_MUX_ENABLED) }
         private val muxConcurrency by lazy { findPreference<EditTextPreference>(AppConfig.PREF_MUX_CONCURRENCY) }
@@ -270,6 +271,7 @@ class SettingsActivity : BaseActivity() {
             }
 
             listOf(
+                AppConfig.PREF_VPN_BYPASS_LAN,
                 AppConfig.PREF_ROUTING_DOMAIN_STRATEGY,
                 AppConfig.PREF_MUX_XUDP_QUIC,
                 AppConfig.PREF_FRAGMENT_PACKETS,
@@ -293,6 +295,8 @@ class SettingsActivity : BaseActivity() {
             appendHttpProxy?.isEnabled = vpn
             localDnsPort?.isEnabled = vpn
             vpnDns?.isEnabled = vpn
+            vpnBypassLan?.isEnabled = vpn
+            vpn
             if (vpn) {
                 updateLocalDns(
                     MmkvManager.decodeSettingsBool(
