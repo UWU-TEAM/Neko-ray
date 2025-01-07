@@ -1,5 +1,7 @@
 package com.neko.v2ray.dto
 
+import com.neko.v2ray.AppConfig.LOOPBACK
+import com.neko.v2ray.AppConfig.PORT_SOCKS
 import com.neko.v2ray.AppConfig.TAG_BLOCKED
 import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.TAG_PROXY
@@ -66,6 +68,9 @@ data class ProfileItem(
     }
 
     fun getServerAddressAndPort(): String {
+        if (server.isNullOrEmpty() && configType == EConfigType.CUSTOM) {
+            return "$LOOPBACK:$PORT_SOCKS"
+        }
         return Utils.getIpv6Address(server) + ":" + serverPort
     }
 

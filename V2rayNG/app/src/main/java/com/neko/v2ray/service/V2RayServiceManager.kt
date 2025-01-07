@@ -20,6 +20,7 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.TAG_DIRECT
 import com.neko.v2ray.AppConfig.VPN
 import com.neko.v2ray.R
+import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.toSpeedString
 import com.neko.v2ray.extension.toast
@@ -68,7 +69,10 @@ object V2RayServiceManager {
         if (v2rayPoint.isRunning) return
         val guid = MmkvManager.getSelectServer() ?: return
         val config = MmkvManager.decodeServerConfig(guid) ?: return
-        if (!Utils.isValidUrl(config.server) && !Utils.isIpAddress(config.server)) return
+        if (config.configType != EConfigType.CUSTOM
+            && !Utils.isValidUrl(config.server)
+            && !Utils.isIpAddress(config.server)
+        ) return
 //        val result = V2rayConfigUtil.getV2rayConfig(context, guid)
 //        if (!result.status) return
 
