@@ -4,11 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
@@ -21,7 +21,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.IOException
 
-class LogcatActivity : BaseActivity() {
+
+class LogcatActivity : BaseActivity(), SwipeRefreshLayout.OnRefreshListener {
     private val binding by lazy { ActivityLogcatBinding.inflate(layoutInflater) }
 
     var logsetsAll: MutableList<String> = mutableListOf()
@@ -39,15 +40,17 @@ class LogcatActivity : BaseActivity() {
         binding.recyclerView.setHasFixedSize(true)
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.adapter = adapter
-        binding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
+        binding.recyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
-        getLogcat()
+        binding.refreshLayout.setOnRefreshListener(this)
+
+        logsets.add(getString(R.string.pull_down_to_refresh))
     }
 
     private fun getLogcat() {
 
         try {
-            binding.pbWaiting.visibility = View.VISIBLE
+            binding.refreshLayout.isRefreshing = true
 
             lifecycleScope.launch(Dispatchers.Default) {
                 val lst = LinkedHashSet<String>()
@@ -66,7 +69,7 @@ class LogcatActivity : BaseActivity() {
                     logsetsAll = allText.toMutableList()
                     logsets = allText.toMutableList()
                     adapter.notifyDataSetChanged()
-                    binding.pbWaiting.visibility = View.GONE
+                    binding.refreshLayout.isRefreshing = false
                 }
             }
         } catch (e: IOException) {
@@ -143,5 +146,9 @@ class LogcatActivity : BaseActivity() {
 
         adapter?.notifyDataSetChanged()
         return true
+    }
+
+    override fun onRefresh() {
+        getLogcat()
     }
 }

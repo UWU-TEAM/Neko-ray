@@ -160,6 +160,7 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.preference.ktx)
     implementation(libs.recyclerview)
+    implementation(libs.androidx.swiperefreshlayout)
 
     // UI Libraries
     implementation(libs.material)
