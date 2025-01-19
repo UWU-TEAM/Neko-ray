@@ -98,7 +98,7 @@ jobs:
       if: steps.cache-libhysteria2-restore.outputs.cache-hit != 'true'
       uses: actions/setup-go@v5
       with:
-        go-mod-file: 'AndroidLibXrayLite/go.mod'
+        go-version-file: 'AndroidLibXrayLite/go.mod'
 
     - name: Build libhysteria2
       if: steps.cache-libhysteria2-restore.outputs.cache-hit != 'true'
