@@ -4,10 +4,15 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
+import androidx.lifecycle.lifecycleScope
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.ActivityLogcatBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.AngConfigManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.net.URLDecoder
 
 class UrlSchemeActivity : BaseActivity() {
@@ -66,11 +71,15 @@ class UrlSchemeActivity : BaseActivity() {
                 decodedUrl += "#${fragment}"
             }
             Log.d("UrlScheme-decodedUrl", decodedUrl)
-            val (count, countSub) = AngConfigManager.importBatchConfig(decodedUrl, "", false)
-            if (count + countSub > 0) {
-                toast(R.string.import_subscription_success)
-            } else {
-                toast(R.string.import_subscription_failure)
+            lifecycleScope.launch(Dispatchers.IO) {
+                val (count, countSub) = AngConfigManager.importBatchConfig(decodedUrl, "", false)
+                withContext(Dispatchers.Main) {
+                    if (count + countSub > 0) {
+                        toast(R.string.import_subscription_success)
+                    } else {
+                        toast(R.string.import_subscription_failure)
+                    }
+                }
             }
         }
     }
