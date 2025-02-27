@@ -4,7 +4,7 @@ on:
   schedule: [{cron: "0 16 * * *"}]
   workflow_dispatch:
     branches:
-      - dev
+      - main
 
 permissions:
   contents: write # to be able to publish a GitHub release
