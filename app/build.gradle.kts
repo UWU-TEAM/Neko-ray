@@ -42,7 +42,7 @@ android {
         resValue("string", "neko_build_date", "$formattedDate")
         resValue("string", "neko_app_version", "${variant.versionName} (${variant.versionCode})")
         resValue("string", "neko_min_sdk_version", "${variant.minSdk} (Android 8, Oreo)")
-        resValue("string", "neko_target_sdk_version", "${variant.targetSdk} (Android 14, upside down cake)")
+        resValue("string", "neko_target_sdk_version", "${variant.targetSdk} (Android 15, Vanilla Ice Cream)")
         resValue("string", "neko_packagename", "${variant.applicationId}")
     }
 
