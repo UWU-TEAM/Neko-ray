@@ -13,6 +13,7 @@ import com.neko.v2ray.databinding.ActivityUserAssetUrlBinding
 import com.neko.v2ray.dto.AssetUrlItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.util.SoftInputAssist
 import com.neko.v2ray.util.Utils
 import java.io.File
 
