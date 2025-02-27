@@ -181,7 +181,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.rxjava)
     implementation(libs.rxandroid)
-    implementation(libs.rxpermissions)
+    implementation(libs.rxpermissions.get().toString() + "@aar")
     implementation(libs.toastcompat)
     implementation(libs.editorkit)
     implementation(libs.language.base)
