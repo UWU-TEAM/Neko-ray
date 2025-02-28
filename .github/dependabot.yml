@@ -10,7 +10,7 @@ updates:
     directory: "/"
     target-branch: "main"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       timezone: "Asia/Jakarta"
 
   - package-ecosystem: "gradle"
@@ -18,5 +18,5 @@ updates:
     directory: "/"
     target-branch: "main"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       timezone: "Asia/Jakarta"
