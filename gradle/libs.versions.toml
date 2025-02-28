@@ -1,5 +1,5 @@
 [versions]
-aboutlibrariesCore = "11.2.3"
+aboutlibrariesCore = "11.6.3"
 activityKtx = "1.9.3"
 appcompat = "1.7.0"
 barcodeScanning = "17.3.0"
