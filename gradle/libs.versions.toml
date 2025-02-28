@@ -1,6 +1,6 @@
 [versions]
 aboutlibrariesCore = "11.6.3"
-activityKtx = "1.9.3"
+activityKtx = "1.10.1"
 appcompat = "1.7.0"
 barcodeScanning = "17.3.0"
 cardview = "1.0.0"
