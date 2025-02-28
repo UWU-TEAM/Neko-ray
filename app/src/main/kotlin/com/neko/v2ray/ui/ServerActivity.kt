@@ -190,7 +190,7 @@ class ServerActivity : BaseActivity() {
                         else -> config?.host
                     }.orEmpty()
                 )
-                et_path?.text = Utils.getEditable(
+                et_path?.hint = Utils.getEditable(
                     when (networks[position]) {
                         "kcp" -> config?.seed
                         "quic" -> config?.quicKey
@@ -199,7 +199,7 @@ class ServerActivity : BaseActivity() {
                     }.orEmpty()
                 )
 
-                tv_request_host?.text = Utils.getEditable(
+                tv_request_host?.hint = Utils.getEditable(
                     getString(
                         when (networks[position]) {
                             "tcp" -> R.string.server_lab_request_host_http
