@@ -13,8 +13,8 @@ configurations {
 
 android {
     namespace = "com.neko.v2ray"
-    compileSdk = 34
-    buildToolsVersion = "34.0.0"
+    compileSdk = 35
+    buildToolsVersion = "35.0.0"
 
     defaultConfig {
         applicationId = "com.neko.v2ray"
