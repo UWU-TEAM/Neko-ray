@@ -7,7 +7,7 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 [![Release](https://img.shields.io/github/v/release/UWU-TEAM/Neko-ray?display_name=tag&style=flat&logo=github&labelColor=21262d&color=1f6feb)](https://github.com/UWU-TEAM/Neko-ray/releases/latest)
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/UWU-TEAM/Neko-ray?style=flat&logo=Github)](https://github.com/UWU-TEAM/Neko-ray/commits/main)
 [![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/UWU-TEAM/Neko-ray/total?style=flat&logo=Github&label=Download%40latest&color=green)](https://github.com/UWU-TEAM/Neko-ray/releases)
-[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/uwuresourceguide)
+[![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=flat&logo=telegram&logoColor=white)](https://t.me/neko_ray_uwu)
 
 ![Banner](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/uwu_banner.png)
 
