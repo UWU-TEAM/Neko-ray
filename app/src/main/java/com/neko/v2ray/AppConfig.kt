@@ -3,7 +3,7 @@ package com.neko.v2ray
 
 object AppConfig {
     /** UWU **/
-    const val UWU_UPDAYE_URL = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/release.json"
+    const val UWU_UPDATE_URL = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/release.json"
     const val UWU_CHANGELOG_URL = "https://github.com/UWU-TEAM/Neko-ray/blob/main/CHANGELOG.md"
 
     /** The application's package name. */
@@ -99,7 +99,7 @@ object AppConfig {
     const val v2rayNGPrivacyPolicy = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/CR.md"
     const val PromotionUrl = "https://9.234456.xyz/abc.html?t=1703789826882"
     const val GeoUrl = "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/"
-    const val TgChannelUrl = "https://t.me/uwuresourceguide"
+    const val TgChannelUrl = "https://t.me/neko_ray_uwu"
     const val DelayTestUrl = "https://www.gstatic.com/generate_204"
     const val DelayTestUrl2 = "https://www.google.com/generate_204"
 

@@ -211,7 +211,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         // Show new update with dialog
         val appUpdater = AppUpdater(this).apply {
             setUpdateFrom(UpdateFrom.JSON)
-            setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
+            setUpdateJSON(AppConfig.UWU_UPDATE_URL)
             setDisplay(Display.DIALOG)
             showAppUpdated(false)
             setCancelable(false)

@@ -40,7 +40,7 @@ class NekoAboutActivity : BaseActivity() {
         startNoInternetDialog()
         val appUpdater = AppUpdater(this)
         appUpdater.setUpdateFrom(UpdateFrom.JSON)
-        appUpdater.setUpdateJSON(AppConfig.UWU_UPDAYE_URL)
+        appUpdater.setUpdateJSON(AppConfig.UWU_UPDATE_URL)
         appUpdater.setDisplay(Display.DIALOG)
         appUpdater.showAppUpdated(true)
         appUpdater.setCancelable(false)
