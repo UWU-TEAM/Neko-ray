@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="mux_xudp_quic_entries">
-        <item>reject</item>
-        <item>allow</item>
-        <item>skip</item>
+        <item>رڌ کردن</item>
+        <item>موجاز</item>
+        <item>گوم زیڌن</item>
     </string-array>
 
     <string-array name="share_method">
