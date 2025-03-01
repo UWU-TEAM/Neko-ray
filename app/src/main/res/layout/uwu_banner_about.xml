@@ -12,7 +12,7 @@
         android:clipToPadding="false"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="0.0dip"
+        android:layout_marginTop="8.0dip"
         android:layout_marginBottom="8.0dip"
         android:baselineAligned="false"
         android:minHeight="?android:listPreferredItemHeightSmall"
@@ -52,7 +52,7 @@
                     android:layout_height="10.0dip"
                     android:layout_marginTop="5.0dip"
                     android:src="@drawable/uwu_signal"
-                    android:layout_marginStart="5.0dip"
+                    android:layout_marginStart="10.0dip"
                     app:tint="@android:color/white" />
                 <ImageView
                     android:gravity="start|center|top"
@@ -101,7 +101,7 @@
                     android:layout_height="10.0dip"
                     android:layout_marginTop="5.0dip"
                     android:src="@drawable/uwu_battery_50"
-                    android:layout_marginEnd="5.0dip"
+                    android:layout_marginEnd="10.0dip"
                     app:tint="@android:color/white" />
             </LinearLayout>
             <LinearLayout
