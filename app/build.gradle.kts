@@ -47,6 +47,7 @@ android {
     }
 
     compileOptions {
+        isCoreLibraryDesugaringEnabled = true
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
@@ -180,7 +181,7 @@ dependencies {
     implementation(libs.language.json)
 
     // Intent and Utility Libraries
-    implementation(libs.quickie.bundled)
+    implementation(libs.quickie.foss)
     implementation(libs.core)
 
     // AndroidX Lifecycle and Architecture Components
@@ -201,6 +202,7 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     testImplementation(libs.org.mockito.mockito.inline)
     testImplementation(libs.mockito.kotlin)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     // Misc
     implementation(libs.okhttp)
