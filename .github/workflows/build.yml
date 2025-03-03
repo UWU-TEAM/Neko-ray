@@ -127,6 +127,7 @@ jobs:
       - name: Build
         run: |
           cd ${{ github.workspace }}/V2rayNG
+          chmod 755 gradlew
           ./gradlew assemble
 
       - name: arm64
