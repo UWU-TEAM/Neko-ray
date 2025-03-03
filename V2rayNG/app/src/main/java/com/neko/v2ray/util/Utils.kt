@@ -489,7 +489,7 @@ object Utils {
         ContextCompat.RECEIVER_NOT_EXPORTED
     }
 
-    fun isXray(): Boolean = (ANG_PACKAGE.startsWith == "com.neko.v2ray")
+    fun isXray(): Boolean = (ANG_PACKAGE.startsWith("com.neko.v2ray"))
 
 }
 
