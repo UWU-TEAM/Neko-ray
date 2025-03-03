@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cv_database"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="16.0dip"
+    android:layout_marginEnd="16.0dip"
+    app:cardBackgroundColor="@color/uwu_transparent"
+    app:cardCornerRadius="0.0dip"
+    app:cardElevation="0.0dip"
+    app:strokeWidth="0.0dip">
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/ll_database"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_account"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_name"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_name"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_gender"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_age"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_age"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_date"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_date"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_tgl"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_hobi"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_hobi"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_hobi"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_id"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User ID :"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_id"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_email"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_email"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/tv_email"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:background="@drawable/uwu_layout_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+            <ImageView
+                android:layout_width="35.0dip"
+                android:layout_height="35.0dip"
+                android:layout_margin="10.0dip"
+                android:scaleType="fitCenter"
+                android:src="@drawable/uwu_id"
+                app:tint="?attr/colorPrimary" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textSize="16.0sp"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uwu_userid"
+                    android:singleLine="false" />
+                <TextView
+                    android:textSize="16.0sp"
+                    android:id="@+id/uwu_id"
+                    android:textColor="?android:textColorPrimary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not Found"
+                    android:singleLine="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

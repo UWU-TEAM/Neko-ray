@@ -1,402 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?> 
-<resources> 
-    <string name="app_widget_name">تعویض</string>
-    <string name="app_tile_name">تعویض</string>
-    <string name="app_tile_first_use">اولین استفاده از این ویژگی، لطفا از برنامه برای افزودن سرور استفاده کنید</string>
-    <string name="navigation_drawer_open">کشوی ناوبری را باز کنید</string>
-    <string name="navigation_drawer_close">کشوی ناوبری را ببندید</string>
-    <string name="migration_success">موفقیت در انتقال داده!</string>
-    <string name="migration_fail">انتقال داده انجام نشد!</string>
- 
-    <!-- Notifications --> 
-    <string name="notification_action_stop_v2ray">متوقف کردن</string>
-    <string name="toast_permission_denied">قادر به دریافت مجوز نیست</string>
-    <string name="toast_permission_denied_notification">دریافت مجوز اعلان امکان پذیر نیست</string>
-    <string name="notification_action_more">برای بیشتر کلیک کنید</string>
-    <string name="toast_services_start">خدمات را شروع کنید</string>
-    <string name="toast_services_stop">توقف خدمات</string>
-    <string name="toast_services_success">شروع موفقیت در خدمات</string>
-    <string name="toast_services_failure">شروع خدمات خراب است</string>
- 
-    <!--ServerActivity--> 
-    <string name="title_server">فایل پیکربندی</string>
-    <string name="menu_item_add_config">تنظیمات را اضافه کنید</string>
-    <string name="menu_item_save_config">ذخیره تنظیمات</string>
-    <string name="menu_item_del_config">تنظیمات را حذف کنید</string>
-    <string name="menu_item_import_config_qrcode">پیکربندی را از QRcode وارد کنید</string>
-    <string name="menu_item_import_config_clipboard">پیکربندی را از کلیپ بورد وارد کنید</string>
-    <string name="menu_item_import_config_manually_vmess">به صورت دستی تایپ کنید <b>[VMESS]</b></string>
-    <string name="menu_item_import_config_manually_vless">به صورت دستی تایپ کنید <b>[VLESS]</b></string>
-    <string name="menu_item_import_config_manually_ss">تایپ دستی <b>[SHADOWSOCKS]</b></string>
-    <string name="menu_item_import_config_manually_socks">تایپ دستی <b>[SOCKS]</b></string>
-    <string name="menu_item_import_config_manually_http">به صورت دستی تایپ کنید <b>[HTTP]</b></string>
-    <string name="menu_item_import_config_manually_trojan">به صورت دستی تایپ کنید <b>[TROJAN]</b></string>
-    <string name="menu_item_import_config_manually_wireguard">به صورت دستی تایپ کنید <b>[WIREGUARD]</b></string>
-    <string name="menu_item_import_config_manually_hysteria2">به صورت دستی تایپ کنید <b>[HYSTERIA2]</b></string>
-    <string name="menu_item_import_config_custom">پیکربندی سفارشی</string>
-    <string name="menu_item_import_config_custom_clipboard">پیکربندی سفارشی را از کلیپ بورد وارد کنید</string>
-    <string name="menu_item_import_config_custom_local">پیکربندی سفارشی را از محلی وارد کنید</string>
-    <string name="menu_item_import_config_custom_url">پیکربندی سفارشی را از URL وارد کنید</string>
-    <string name="menu_item_import_config_custom_url_scan">URL اسکن پیکربندی سفارشی را وارد کنید</string>
-    <string name="del_config_comfirm">تایید حذف؟</string>
-    <string name="del_invalid_config_comfirm">لطفا قبل از حذف تست کنید! تایید حذف؟</string>
-    <string name="server_lab_remarks">ملاحظات</string>
-    <string name="server_lab_address">نشانی</string>
-    <string name="server_lab_port">بندر</string>
-    <string name="server_lab_id">شناسه</string>
-    <string name="server_lab_alterid">alterId</string>
-    <string name="server_lab_security">امنیت</string>
-    <string name="server_lab_network">شبکه</string>
-    <string name="server_lab_more_function">حمل و نقل</string>
-    <string name="server_lab_head_type">نوع سر</string>
-    <string name="server_lab_mode_type">حالت gRPC</string>
-    <string name="server_lab_request_host">host</string>
-    <string name="server_lab_request_host_http">http host</string>
-    <string name="server_lab_request_host_ws">ws host</string>
-    <string name="server_lab_request_host_httpupgrade">httpupgrade host</string>
-    <string name="server_lab_request_host_xhttp">xhttp host</string>
-    <string name="server_lab_request_host_h2">h2 host</string>
-    <string name="server_lab_request_host_quic">QUIC security</string>
-    <string name="server_lab_request_host_grpc">gRPC Authority</string>
-    <string name="server_lab_path">path</string>
-    <string name="server_lab_path_ws">ws path</string>
-    <string name="server_lab_path_httpupgrade">httpupgrade path</string>
-    <string name="server_lab_path_xhttp">مسیر xhttp</string>
-    <string name="server_lab_path_h2">h2 path</string>
-    <string name="server_lab_path_quic">QUIC key</string>
-    <string name="server_lab_path_kcp">kcp seed</string>
-    <string name="server_lab_path_grpc">gRPC serviceName</string>
-    <string name="server_lab_stream_security">TLS</string>
-    <string name="server_lab_allow_insecure">اجازه ناامن</string>
-    <string name="server_lab_sni">SNI</string>
-    <string name="server_lab_address3">نشانی</string>
-    <string name="server_lab_port3">بندر</string>
-    <string name="server_lab_id3">کلمه عبور</string>
-    <string name="server_lab_security3">امنیت</string>
-    <string name="server_lab_id4">رمز عبور (اختیاری)</string>
-    <string name="server_lab_security4">کاربر (اختیاری)</string>
-    <string name="server_lab_encryption">رمزگذاری</string>
-    <string name="server_lab_flow">جریان</string>
-    <string name="server_lab_preshared_key">PreSharedKey(optional)</string>
-    <string name="server_lab_reserved">رزرو شده (اختیاری)</string>
-    <string name="server_lab_local_address">آدرس محلی (IPv4/IPv6 اختیاری، جدا شده با کاما)</string>
-    <string name="server_lab_local_mtu">Mtu (اختیاری، پیش‌فرض 1420)</string>
-    <string name="toast_success">موفقیت</string>
-    <string name="toast_failure">شکست</string>
-    <string name="toast_none_data">چیزی نیست</string>
-    <string name="toast_incorrect_protocol">پروتکل نادرست</string>
-    <string name="toast_decoding_failed">رمزگشایی انجام نشد</string>
-    <string name="title_file_chooser">یک فایل پیکربندی را انتخاب کنید</string>
-    <string name="toast_require_file_manager">لطفا یک مدیر فایل نصب کنید.</string>
-    <string name="server_customize_config">پیکربندی را سفارشی کنید</string>
-    <string name="toast_config_file_invalid">پیکربندی نامعتبر است</string>
-    <string name="server_lab_content">محتوا</string>
-    <string name="toast_none_data_clipboard">هیچ داده ای در کلیپ بورد وجود ندارد</string>
-    <string name="toast_invalid_url">URL نامعتبر است</string>
-    <string name="toast_insecure_url_protocol">لطفاً از آدرس اشتراک پروتکل HTTP ناامن استفاده نکنید</string>
-    <string name="server_lab_need_inbound">اطمینان حاصل کنید که پورت ورودی با تنظیمات مطابقت دارد</string>
-    <string name="toast_malformed_josn">پیکربندی نادرست است</string>
-    <string name="server_lab_request_host6">میزبان (SNI) (اختیاری)</string>
-    <string name="toast_asset_copy_failed">کپی فایل انجام نشد، لطفا از مدیر فایل استفاده کنید</string>
-    <string name="menu_item_add_asset">دارایی های خود را از آدرس اینترنتی اینجا تنظیم کنید!</string>
-    <string name="menu_item_add_file">فایل ها را اضافه کنید</string>
-    <string name="menu_item_add_url">اضافه کردن URL</string>
-    <string name="menu_item_scan_qrcode">اسکن QRcode</string>
-    <string name="menu_item_download_file">دانلود فایل ها</string>
-    <string name="title_user_asset_add_url">URL دارایی را اضافه کنید</string>
-    <string name="msg_file_not_found">فایل پیدا نشد</string>
-    <string name="msg_remark_is_duplicate">اظهارات قبلاً وجود دارد</string>
-    <string name="toast_action_not_allowed">اقدام مجاز نیست</string>
-    <string name="server_obfs_password">رمز عبور Obfs</string>
-    <string name="server_lab_port_hop">بندر پرش</string>
-    <string name="server_lab_port_hop_interval">فاصله پرش بندر</string>
-    <string name="server_lab_stream_pinsha256">pinSHA256</string>
-    <string name="server_lab_xhttp_mode">XHTTP Mode</string>
-    <string name="server_lab_xhttp_extra">XHTTP Extra raw JSON, format: { XHTTPObject }</string>
- 
-    <!-- PerAppProxyActivity --> 
-    <string name="msg_dialog_progress">بارگذاری</string>
-    <string name="menu_item_search">جستجو کردن</string>
-    <string name="menu_item_select_all">انتخاب همه</string>
-    <string name="msg_enter_keywords">کلیدواژه ها را وارد کنید</string>
-    <string name="switch_bypass_apps_mode">حالت دور زدن</string>
-    <string name="menu_item_select_proxy_app">انتخاب خودکار برنامه پروکسی</string>
-    <string name="msg_downloading_content">دانلود محتوا</string>
-    <string name="menu_item_export_proxy_app">صادرات به کلیپ بورد</string>
-    <string name="menu_item_import_proxy_app">وارد کردن از کلیپ بورد</string>
- 
- 
-    <!-- Preferences --> 
-    <string name="title_settings">تنظیمات</string>
-    <string name="title_advanced">تنظیمات پیشرفته</string>
-    <string name="title_vpn_settings">تنظیمات VPN</string>
-    <string name="title_pref_per_app_proxy">پروکسی هر برنامه</string>
-    <string name="summary_pref_per_app_proxy">عمومی: برنامه بررسی شده پروکسی است، اتصال مستقیم بدون علامت است. \nحالت دور زدن: برنامه علامت‌گذاری شده مستقیماً متصل است، پراکسی علامت‌گذاری نشده است. \nگزینه انتخاب خودکار برنامه پراکسی در منو</string>
-    <string name="title_pref_is_booted">شروع خودکار</string>
-    <string name="summary_pref_is_booted">اگر سروری قبلاً انتخاب شده باشد، VPN را به طور خودکار راه اندازی کنید</string>
- 
-    <string name="title_mux_settings">تنظیمات Mux</string>
-    <string name="title_pref_mux_enabled">Mux را فعال کنید</string>
-    <string name="summary_pref_mux_enabled">سریع‌تر، اما ممکن است باعث اتصال ناپایدار شود\nنحوه مدیریت TCP، UDP و QUIC را در زیر سفارشی کنید</string>
-    <string name="title_pref_mux_concurency">اتصالات TCP (محدوده -1 تا 1024)</string>
-    <string name="title_pref_mux_xudp_concurency">اتصالات XUDP (محدوده -1 تا 1024)</string>
-    <string name="title_pref_mux_xudp_quic">مدیریت QUIC در تونل mux</string>
- 
-    <string name="title_pref_speed_enabled">نمایش سرعت را فعال کنید</string>
-    <string name="summary_pref_speed_enabled">سرعت فعلی را در اعلان نمایش دهید.\nنماد اعلان براساس میزان استفاده تغییر می‌کند.</string>
- 
-    <string name="title_pref_sniffing_enabled">Sniffing را فعال کنید</string>
-    <string name="summary_pref_sniffing_enabled">دامنه sniff را از بسته امتحان کنید (پیش‌فرض روشن)</string>
-    <string name="title_pref_route_only_enabled">routeOnly را فعال کنید</string>
-    <string name="summary_pref_route_only_enabled">از نام دامنه شناسایی شده فقط برای مسیریابی استفاده کنید و آدرس مورد نظر را به عنوان آدرس IP نگه دارید.</string>
-
-    <string name="title_pref_local_dns_enabled">DNS محلی را فعال کنید</string>
-    <string name="summary_pref_local_dns_enabled">DNS پردازش شده توسط ماژول DNS هسته (توصیه می شود، در صورت نیاز مسیریابی دور زدن LAN و آدرس سرزمین اصلی)</string>
- 
-    <string name="title_pref_fake_dns_enabled">DNS جعلی را فعال کنید</string>
-    <string name="summary_pref_fake_dns_enabled">DNS محلی آدرس IP جعلی را برمی گرداند (سریع تر، اما ممکن است برای برخی از برنامه ها کار نکند)</string>
- 
-    <string name="title_pref_prefer_ipv6">IPv6 را ترجیح دهید</string>
-    <string name="summary_pref_prefer_ipv6">آدرس و مسیرهای IPv6 را ترجیح دهید</string>
- 
-    <string name="title_pref_remote_dns">DNS از راه دور (udp/tcp/https/quic) (اختیاری)</string>
-    <string name="summary_pref_remote_dns">DNS</string>
- 
-    <string name="title_pref_vpn_dns">VPN DNS (فقط IPv4/v6)</string>
- 
-    <string name="title_pref_domestic_dns">DNS داخلی (اختیاری)</string>
-    <string name="summary_pref_domestic_dns">DNS</string>
-
-    <string name="title_pref_dns_hosts">DNS hosts (Format: domain:address,…)</string>
-    <string name="summary_pref_dns_hosts">domain:address,…</string>
-
-    <string name="title_pref_delay_test_url">آدرس اینترنتی آزمایش تاخیر واقعی (http/https)</string>
-    <string name="summary_pref_delay_test_url">Url</string>
- 
-    <string name="title_pref_proxy_sharing_enabled">اتصالات از LAN را مجاز کنید</string>
-    <string name="summary_pref_proxy_sharing_enabled">سایر دستگاه‌ها می‌توانند از طریق آدرس IP شما از طریق جوراب/http به پروکسی متصل شوند، فقط در شبکه قابل اعتماد فعال شود تا از اتصال غیرمجاز جلوگیری شود.</string>
-    <string name="toast_warning_pref_proxysharing_short">اتصالات از LAN را مجاز کنید، مطمئن شوید که در یک شبکه قابل اعتماد هستید</string>
- 
-    <string name="title_pref_allow_insecure">اجازه ناامن</string>
-    <string name="summary_pref_allow_insecure">هنگامی که TLS، به طور پیش فرض allowInsecure</string>
- 
-    <string name="title_pref_socks_port">پورت پروکسی local</string>
-    <string name="summary_pref_socks_port">پورت پروکسی local</string>
-
-    <string name="title_pref_local_dns_port">پورت DNS محلی</string>
-    <string name="summary_pref_local_dns_port">پورت DNS محلی</string>
- 
-    <string name="title_pref_confirm_remove">حذف تاییدیه فایل پیکربندی</string>
-    <string name="summary_pref_confirm_remove">اینکه آیا برای حذف فایل پیکربندی نیاز به تایید دوم توسط کاربر است</string>
- 
-    <string name="title_pref_start_scan_immediate">فورا اسکن را شروع کنید</string>
-    <string name="summary_pref_start_scan_immediate">دوربین را برای اسکن بلافاصله در هنگام راه اندازی باز کنید، در غیر این صورت می توانید کد را اسکن کنید یا عکسی را در نوار ابزار انتخاب کنید.</string>
-
-    <string name="title_pref_append_http_proxy">Append HTTP Proxy to VPN</string>
-    <string name="summary_pref_append_http_proxy">HTTP proxy will be used directly from (browser/ some supported apps), without going through the virtual NIC device (Android 10+)</string>
-
-    <string name="title_pref_feedback">بازخورد</string>
-    <string name="summary_pref_feedback">بهبود بازخورد یا اشکالات GitHub</string>
-    <string name="summary_pref_tg_group">عضویت در گروه تلگرام</string>
-    <string name="toast_tg_app_not_found">برنامه تلگرام پیدا نشد</string>
-    <string name="title_privacy_policy">سیاست حفظ حریم خصوصی</string>
-    <string name="title_about">در باره</string>
-    <string name="title_source_code">کد منبع</string>
-    <string name="title_tg_channel">کانال تلگرام</string>
-    <string name="title_configuration_backup">پیکربندی پشتیبان</string>
-    <string name="summary_configuration_backup">مکان ذخیره سازی: [%s]، پس از حذف نصب برنامه یا پاک کردن فضای ذخیره، نسخه پشتیبان پاک می شود</string>
-    <string name="title_configuration_restore">بازیابی تنظیمات</string>
-    <string name="title_configuration_share">پیکربندی را به اشتراک بگذارید</string>
- 
-    <string name="title_pref_promotion">ترویج</string>
-    <string name="summary_pref_promotion">تبلیغات، برای جزئیات کلیک کنید (اهدای مالی قابل حذف است)</string>
- 
-    <string name="title_pref_auto_update_subscription">اشتراک های به روز رسانی خودکار</string>
-    <string name="summary_pref_auto_update_subscription">اشتراک های خود را به طور خودکار با فاصله زمانی در پس زمینه به روز کنید. بسته به دستگاه، این ویژگی ممکن است همیشه کار نکند</string>
-    <string name="title_pref_auto_update_interval">فاصله به‌روزرسانی خودکار (دقیقه، حداقل مقدار 15)</string>
- 
-    <string name="title_core_loglevel">سطح ورود به سیستم</string>
-    <string name="title_mode">حالت</string>
-    <string name="title_mode_help">برای راهنمایی بیشتر روی من کلیک کنید</string>
-    <string name="title_language">زبان</string>
-    <string name="title_ui_settings">تنظیمات رابط کاربری</string>
- 
-    <string name="title_logcat">Logcat</string>
-    <string name="logcat_copy">کپی 🀄</string>
-    <string name="logcat_clear">پاک کردن</string>
-    <string name="title_service_restart">راه اندازی مجدد سرویس</string>
-    <string name="title_del_all_config">حذف تكوين المجموعة الحالية</string>
-    <string name="title_del_duplicate_config">حذف تكوين المجموعة الحالية المكرر</string>
-    <string name="title_del_invalid_config">حذف تكوين المجموعة الحالية غير الصحيح</string>
-    <string name="title_export_all">تصدير تكوينات المجموعة الحالية غير المخصصة إلى الحافظة</string>
-    <string name="title_sub_setting">اشتراک</string>
-    <string name="sub_setting_remarks">ملاحظات</string>
-    <string name="sub_setting_url">URL اختیاری</string>
-    <string name="sub_setting_filter">اظهارات فیلتر معمولی</string>
-    <string name="sub_setting_enable">فعال کردن آپدیت</string>
-    <string name="sub_auto_update">فعال کردن به روز رسانی خودکار</string>
-    <string name="sub_setting_pre_profile">اظهارات نیابتی قبلی</string>
-    <string name="sub_setting_next_profile">اظهارات پروکسی بعدی</string>
-    <string name="sub_setting_pre_profile_tip">اظهارات وجود دارد و منحصر به فرد است</string>
-    <string name="title_sub_update">تحديث اشتراك المجموعة الحالية</string>
-    <string name="title_ping_all_server">تكوين المجموعة الحالية Tcping</string>
-    <string name="title_real_ping_all_server">تأخير حقيقي لتكوين المجموعة الحالية</string>
-    <string name="title_user_asset_setting">فایل های دارایی جغرافیایی</string>
-    <string name="title_sort_by_test_results">مرتب سازی بر اساس نتایج آزمون</string>
-    <string name="title_filter_config">فایل پیکربندی فیلتر</string>
-    <string name="filter_config_all">جميع المجموعات</string>
-    <string name="title_del_duplicate_config_count">%d پیکربندی تکراری را حذف کنید</string>
-    <string name="title_del_config_count">Delete %d configurations</string>
-    <string name="title_import_config_count">Import %d configurations</string>
-    <string name="title_export_config_count">Export %d configurations</string>
-    <string name="title_update_config_count">Update %d configurations</string>
- 
-    <string name="tasker_start_service">سرویس را شروع کنید</string>
-    <string name="tasker_setting_confirm">تایید</string>
- 
-    <string name="routing_settings_domain_strategy">استراتژی دامنه</string>
-    <string name="routing_settings_title">تنظیمات مسیریابی</string>
-    <string name="routing_settings_tips">جدا شده با کاما(,)</string>
-    <string name="routing_settings_save">صرفه جویی</string>
-    <string name="routing_settings_delete">پاک کردن</string>
-    <string name="routing_settings_rule_title">قانون مسیریابی تنظیمات</string>
-    <string name="routing_settings_add_rule">افزودن قانون</string>
-    <string name="routing_settings_import_predefined_rulesets">Import predefined rulesets</string>
-    <string name="routing_settings_import_rulesets_tip">مجموعه قوانین موجود حذف خواهند شد، آیا مطمئن هستید که ادامه می دهید؟</string>
-    <string name="routing_settings_import_rulesets_from_clipboard">وارد کردن مجموعه قوانین از کلیپ بورد</string>
-    <string name="routing_settings_import_rulesets_from_qrcode">Import ruleset from QRcode</string>
-    <string name="routing_settings_export_rulesets_to_clipboard">صادر کردن مجموعه قوانین به کلیپ بورد</string>
-    <string name="routing_settings_locked">قفل است، این قانون را هنگام وارد کردن از پیش تنظیمات حفظ کنید</string>
-
-    <string name="connection_test_pending">اتصال را بررسی کنید</string>
-    <string name="connection_test_testing">آزمایش کردن…</string>
-    <string name="connection_test_testing_count">Testing %d configurations…</string>
-    <string name="connection_test_available">موفقیت: اتصال HTTP %dms طول کشید</string>
-    <string name="connection_test_error">اتصال اینترنت شناسایی نشد: %s</string>
-    <string name="connection_test_fail">اینترنت در دسترس نیست</string>
-    <string name="connection_test_error_status_code">کد خطا: #%d</string>
-    <string name="connection_connected">متصل است، برای بررسی اتصال ضربه بزنید</string>
-    <string name="connection_not_connected">متصل نیست</string>
- 
-    <string name="import_subscription_success">اشتراک با موفقیت وارد شد</string>
-    <string name="import_subscription_failure">وارد کردن اشتراک انجام نشد</string>
-    <string name="title_fragment_settings">تنظیمات قطعه</string>
-    <string name="title_pref_fragment_packets">بسته های قطعه ای</string>
-    <string name="title_pref_fragment_length">طول قطعه (حداقل-حداکثر)</string>
-    <string name="title_pref_fragment_interval">فاصله قطعه (حداقل-حداکثر)</string>
-    <string name="title_pref_fragment_enabled">Fragment را فعال کنید</string>
-
-    <!-- Neko strings --> 
-    <string name="title_theme_settings">تنظیمات پوسته</string>
-    <string name="title_choose_theme">تم رنگی را انتخاب کنید</string>
-    <string name="uwu_header_title">سلام، </string>
-    <string name="uwu_edit">ویرایش کنید</string>
-    <string name="uwu_credits">وام</string>
-    <string name="uwu_about">درباره برنامه ها</string>
-    <string name="uwu_tools">ابزار</string>
-    <string name="uwu_information_cat">اطلاعات</string>
-    <string name="uwu_neko_version">نسخه برنامه</string>
-    <string name="uwu_build_type">نوع ساخت</string>
-    <string name="uwu_build_date">تاریخ ساخت</string>
-    <string name="uwu_recommended_os_cat">سیستم عامل توصیه شده</string>
-    <string name="uwu_version_sdk_minimum">حداقل نسخه SDK</string>
-    <string name="uwu_version_sdk_target">نسخه SDK هدف</string>
-    <string name="uwu_package_name">نام بسته</string>
-    <string name="uwu_speedtest_title">تست سرعت</string>
-    <string name="uwu_speedtest_summary">شبکه سرعت</string>
-    <string name="uwu_status_connection_title">وضعیت</string>
-    <string name="uwu_network_switcher_title">سوئیچر شبکه</string>
-    <string name="uwu_host_to_ip_title">هاست به ip</string>
-    <string name="uwu_ip_location_title">مکان IP</string>
-    <string name="uwu_exit_title">خارج شوید</string>
-    <string name="uwu_maintainer_title">این برنامه در دست تعمیر است</string>
-    <string name="uwu_border_about_title">گزینه های اضافی</string>
-    <string name="uwu_border_about_summary">روی نماد فلش کناری ضربه بزنید</string>
-    <string name="uwu_devicename_title">نام دستگاه</string>
-    <string name="uwu_board_title">هیئت مدیره</string>
-    <string name="uwu_osversion_title">نسخه Os</string>
-    <string name="uwu_brand_title">نام تجاری</string>
-    <string name="uwu_buildid_title">شناسه ساخت</string>
-    <string name="uwu_baseband_title">نسخه بیس باند</string>
-    <string name="uwu_github_title">Github</string>
-    <string name="uwu_github_summary">مخزن کد منبع</string>
-    <string name="uwu_credit_title">وام</string>
-    <string name="uwu_updater_title">به روز رسانی را بررسی کنید</string>
-    <string name="uwu_changrlog_title">تغییرات</string>
-    <string name="uwu_feetback_title">بازخورد</string>
-    <string name="uwu_modder_title">مدرسان</string>
-    <string name="uwu_exit_message">آیا مطمئن هستید که می خواهید این برنامه را ترک کنید؟</string>
-    <string name="uwu_text_yes">آره</string>
-    <string name="uwu_text_no">خیر</string>
-    <string name="uwu_ignore_battery_optimization_summary">برای اینکه VPN به درستی کار کند، مجوزهای لازم را درخواست کنید.\n\nاگر از دستگاهی استفاده می کنید که توسط یک شرکت چینی ساخته شده است، ممکن است کارت پس از اعطای مجوز ناپدید نشود.</string>
-    <string name="uwu_ignore_battery_optimization_title">بهینه سازی باتری را نادیده بگیرید</string>
-    <string name="read_more">ادامه مطلب</string>
-    <string name="default_title">بدون اینترنت</string>
-    <string name="default_message">اتصال اینترنت خود را بررسی کنید و دوباره امتحان کنید.</string>
-    <string name="please_turn_on">لطفا روشن کنید</string>
-    <string name="wifi">وای فای</string>
-    <string name="mobile_data">داده های موبایل</string>
-    <string name="default_snackbar_message">بدون اتصال اینترنتی فعال!</string>
-    <string name="settings">تنظیمات</string>
-    <string name="ok">خوب</string>
-    <string name="please_turn_off">لطفا خاموش کن</string>
-    <string name="airplane_mode">حالت هواپیما</string>
-    <string name="default_airplane_mode_message">شما حالت هواپیما را روشن کرده اید.</string>
-    <string name="neko_setup_config">تنظیمات خود را در اینجا تنظیم کنید!</string>
-     
-    <string name="homepage_widget_battery_percent">درصد</string>
-    <string name="homepage_widget_battery_charge">شارژ کردن</string>
-    <string name="homepage_widget_battery_discharge">تخلیه</string>
-    <string name="homepage_widget_battery_title">باتری</string>
-    <string name="homepage_widget_storage_title">ذخیره سازی</string>
-    <string name="changelog_title">تغییرات</string>
- 
-    <string name="appupdater_update_available">بروز رسانی جدیدی در دسترس قرار گرفته است!</string>
-    <string name="appupdater_update_available_description_dialog">به‌روزرسانی %1$s برای بارگیری در دسترس است. با دانلود آخرین به‌روزرسانی، آخرین ویژگی‌ها، بهبودها و رفع اشکال‌ها را برای %2$s دریافت خواهید کرد.</string>
-    <string name="appupdater_update_available_description_dialog_before_release_notes">به‌روزرسانی %1$s برای بارگیری در دسترس است.\n\nمی‌توانید این ویژگی‌های جدید را دریافت کنید:\n%2$s</string>
-    <string name="appupdater_update_available_description_snackbar">به‌روزرسانی %1$s موجود است!</string>
-    <string name="appupdater_update_available_description_notification">به‌روزرسانی %1$s از %2$s برای دانلود در دسترس است</string>
-    <string name="appupdater_update_not_available">هیچ به روز رسانی در دسترس نیست</string>
-    <string name="appupdater_update_not_available_description">شما در حال حاضر در آخرین نسخه %s هستید!</string>
-    <string name="appupdater_btn_update">به روز رسانی</string>
-    <string name="appupdater_btn_disable">دیگر نشان داده نشود</string>
-    <string name="appupdater_btn_dismiss">رد</string>
-    <string name="appupdater_channel_name">به روز رسانی اعلان ها</string>
-    <string name="uwu_host_checker">جستجوگر میزبان</string>
-    <string name="uwu_license_title">مجوز</string>
-    <string name="version">نسخه</string>
-    <string name="uwu_group">گروه</string>
-    <string name="uwu_fokus_today">بیایید روی امروز تمرکز کنیم!</string>
-    <string name="uwu_theme">موضوع</string>
-    <string name="uwu_theme_desc">رنگ تاکیدی را خودتان انتخاب کنید</string>
-    <string name="uwu_theme_mode_default">پیش فرض سیستم</string>
-    <string name="uwu_theme_mode_light">سبک</string>
-    <string name="uwu_theme_mode_dark">تاریک</string>
-    <string name="uwu_theme_botton_text">تغییر زمینه</string>
-    <string name="uwu_subscription">اشتراک، ابونمان</string>
-    <string name="uwu_subscription_desc">گروه اشتراک خود را در اینجا راه اندازی کنید!</string>
-    <string name="uwu_name">نام :</string>
-    <string name="uwu_name_summary">نام</string>
-    <string name="uwu_username">نام کاربری :</string>
-    <string name="uwu_username_summary">نام کاربری</string>
-    <string name="uwu_age">سن :</string>
-    <string name="uwu_age_summary">سن</string>
-    <string name="uwu_date">تاریخ تولد :</string>
-    <string name="uwu_date_summary">تاریخ تولد</string>
-    <string name="uwu_hobi">سرگرمی :</string>
-    <string name="uwu_hobi_summary">سرگرمی</string>
-    <string name="uwu_email">ایمیل :</string>
-    <string name="uwu_email_summary">ایمیل</string>
-    <string name="uwu_userid">شناسه کاربری :</string>
-    <string name="uwu_userid_summary">شناسه کاربری</string>
-    <string name="uwu_profile_update_tittle">به روز رسانی نمایه</string>
-    <string name="uwu_profile_edit_tittle">ویرایش نمایه</string>
-    <string name="uwu_name_dialog">نام نمی تواند خالی باشد</string>
-    <string name="uwu_username_dialog">نام کاربری نمی تواند خالی باشد</string>
-    <string name="uwu_age_dialog">سن نمی تواند خالی باشد</string>
-    <string name="uwu_date_dialog">تاریخ تولد نمی تواند خالی باشد</string>
-    <string name="uwu_hobi_dialog">سرگرمی ها نمی توانند خالی باشند</string>
-    <string name="uwu_email_dialog">ایمیل نمی تواند خالی باشد</string>
-    <string name="uwu_daftar_message">لطفاً اطلاعات شخصی خود را وارد کنید تا بتوانید از برنامه Neko-ray استفاده کنید.</string>
-    <!-- Neko strings --> 
-</resources> 

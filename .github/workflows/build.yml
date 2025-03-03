@@ -17,51 +17,144 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Prepare
+      - name: Prepare build dir
         run: |
-          sudo apt-get -y install dos2unix
-          git clone --depth 1 https://github.com/UWU-TEAM/AndroidLibXrayLite
-          wget -qO - https://api.github.com/repos/UWU-TEAM/AndroidLibXrayLite/releases/latest \
-          | grep browser_download_url | cut -d '"' -f 4 \
-          | wget -i - -O app/libs/libv2ray.aar
+          mkdir ${{ github.workspace }}/build
 
-      - name: JDK Setup
+      - name: Fetch AndroidLibV2rayLite
+        run: |
+          cd ${{ github.workspace }}/build
+          git clone --depth=1 -b master https://github.com/2dust/AndroidLibV2rayLite.git
+          cd AndroidLibV2rayLite
+          git submodule update --init
+
+      - name: Restore cached libtun2socks
+        id: cache-libtun2socks-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ github.workspace }}/build/AndroidLibV2rayLite/libs
+          key: libtun2socks-${{ runner.os }}-${{ hashFiles('build/AndroidLibV2rayLite/.gitmodules') }}-${{ hashFiles('build/AndroidLibV2rayLite/.git/modules/badvpn/HEAD') }}-${{ hashFiles('build/AndroidLibV2rayLite/.git/modules/libancillary/HEAD') }}
+
+      - name: Setup Android NDK
+        if: steps.cache-libtun2socks-restore.outputs.cache-hit != 'true'
+        uses: nttld/setup-ndk@v1
+        id: setup-ndk
+        # Same version as https://gitlab.com/fdroid/fdroiddata/metadata/com.v2ray.ang.yml
+        with:
+          ndk-version: r27
+
+      - name: Build libtun2socks
+        if: steps.cache-libtun2socks-restore.outputs.cache-hit != 'true'
+        run: |
+          cd ${{ github.workspace }}/build/AndroidLibV2rayLite
+          bash compile-tun2socks.sh
+          tar -xvzf libtun2socks.so.tgz
+          cp -r libs/* ${{ github.workspace }}/V2rayNG/app/libs/
+        env:
+          NDK_HOME: ${{ steps.setup-ndk.outputs.ndk-path }}
+
+      - name: Save libtun2socks
+        if: steps.cache-libtun2socks-restore.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ github.workspace }}/build/AndroidLibV2rayLite/libs
+          key: libtun2socks-${{ runner.os }}-${{ hashFiles('build/AndroidLibV2rayLite/.gitmodules') }}-${{ hashFiles('build/AndroidLibV2rayLite/.git/modules/badvpn/HEAD') }}-${{ hashFiles('build/AndroidLibV2rayLite/.git/modules/libancillary/HEAD') }}
+
+      - name: Copy libtun2socks
+        run: |
+          cp -r ${{ github.workspace }}/build/AndroidLibV2rayLite/libs/* ${{ github.workspace }}/V2rayNG/app/libs/
+
+      - name: Fetch AndroidLibXrayLite
+        run: |
+          cd ${{ github.workspace }}/build
+          git clone --depth=1 -b main https://github.com/2dust/AndroidLibXrayLite.git
+
+      - name: Restore cached libv2ray
+        id: cache-libv2ray-restore
+        uses: actions/cache/restore@v4
+        with:
+          path: ${{ github.workspace }}/build/AndroidLibXrayLite/
+          key: libv2ray-${{ runner.os }}-${{ hashFiles('build/AndroidLibXrayLite/.git/refs/heads/main') }}
+
+      - name: Setup Golang
+        if: steps.cache-libv2ray-restore.outputs.cache-hit != 'true'
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.23.4'
+          cache: false
+
+      - name: Patch Go use 600296
+        if: steps.cache-libv2ray-restore.outputs.cache-hit != 'true'
+        #https://go-review.googlesource.com/c/go/+/600296
+        run: |
+          cd "$(go env GOROOT)"
+          curl "https://go-review.googlesource.com/changes/go~600296/revisions/5/patch" | base64 -d | patch --verbose -p 1
+
+      - name: Install gomobile
+        if: steps.cache-libv2ray-restore.outputs.cache-hit != 'true'
+        run: |
+          go install golang.org/x/mobile/cmd/gomobile@v0.0.0-20240806205939-81131f6468ab
+          echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
+
+      - name: Build libv2ray
+        if: steps.cache-libv2ray-restore.outputs.cache-hit != 'true'
+        run: |
+          cd ${{ github.workspace }}/build/AndroidLibXrayLite
+          gomobile init
+          go mod tidy -v
+          gomobile bind -v -androidapi 27 -ldflags='-s -w' ./
+
+      - name: Save libv2ray
+        if: steps.cache-libv2ray-restore.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: ${{ github.workspace }}/build/AndroidLibXrayLite/
+          key: libv2ray-${{ runner.os }}-${{ hashFiles('build/AndroidLibXrayLite/.git/refs/heads/main') }}
+
+      - name: Copy libv2ray
+        run: |
+          cp -r ${{ github.workspace }}/build/AndroidLibXrayLite/*.aar ${{ github.workspace }}/V2rayNG/app/libs/
+
+      - name: Setup Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
+
+      - name: Setup Android environment
+        uses: android-actions/setup-android@v3
 
       - name: Build
         run: |
-          dos2unix ./gradlew
+          cd ${{ github.workspace }}/V2rayNG
           ./gradlew assemble
 
       - name: arm64
         uses: actions/upload-artifact@v4
         with:
           name: Arm64
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/*arm64-v8a.apk
+          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
 
       - name: armeabi-v7a
         uses: actions/upload-artifact@v4
         with:
           name: Armeabi-v7a
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/*armeabi-v7a.apk
+          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
 
       - name: x86
         uses: actions/upload-artifact@v4
         with:
           name: X86
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/*x86.apk
+          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86.apk
 
       - name: x86_64
         uses: actions/upload-artifact@v4
         with:
           name: X86_64
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/*x86_64.apk
+          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86_64.apk
 
       - name: universal
         uses: actions/upload-artifact@v4
         with:
           name: Universal
-          path: ${{ github.workspace }}/app/build/outputs/apk/release/*universal.apk
+          path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*universal.apk
