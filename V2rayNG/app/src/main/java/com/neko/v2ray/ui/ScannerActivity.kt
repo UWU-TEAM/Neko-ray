@@ -2,6 +2,7 @@ package com.neko.v2ray.ui
 
 import android.Manifest
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.BitmapFactory
 import android.os.Build
 import android.os.Bundle
@@ -10,7 +11,8 @@ import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.tbruyelle.rxpermissions3.RxPermissions
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
@@ -23,6 +25,37 @@ import io.github.g00fy2.quickie.config.ScannerConfig
 class ScannerActivity : BaseActivity() {
 
     private val scanQrCode = registerForActivityResult(ScanCustomCode(), ::handleResult)
+    private val chooseFile = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
+        val uri = it.data?.data
+        if (it.resultCode == RESULT_OK && uri != null) {
+            try {
+                val inputStream = contentResolver.openInputStream(uri)
+                val bitmap = BitmapFactory.decodeStream(inputStream)
+                inputStream?.close()
+
+                val text = QRCodeDecoder.syncDecodeQRCode(bitmap)
+                if (text.isNullOrEmpty()) {
+                    toast(R.string.toast_decoding_failed)
+                } else {
+                    finished(text)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+                toast(R.string.toast_decoding_failed)
+            }
+        }
+    }
+
+    private val requestPermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { isGranted: Boolean ->
+            if (isGranted) {
+                showFileChooser()
+            } else {
+                toast(R.string.toast_permission_denied)
+            }
+        }
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -79,15 +112,12 @@ class ScannerActivity : BaseActivity() {
             } else {
                 Manifest.permission.READ_EXTERNAL_STORAGE
             }
-            RxPermissions(this)
-                .request(permission)
-                .subscribe { granted ->
-                    if (granted) {
-                        showFileChooser()
-                    } else {
-                        toast(R.string.toast_permission_denied)
-                    }
-                }
+
+            if (ContextCompat.checkSelfPermission(this, permission) == PackageManager.PERMISSION_GRANTED) {
+                showFileChooser()
+            } else {
+                requestPermissionLauncher.launch(permission)
+            }
             true
         }
 
@@ -107,26 +137,4 @@ class ScannerActivity : BaseActivity() {
             toast(R.string.toast_require_file_manager)
         }
     }
-
-    private val chooseFile = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        val uri = it.data?.data
-        if (it.resultCode == RESULT_OK && uri != null) {
-            try {
-                val inputStream = contentResolver.openInputStream(uri)
-                val bitmap = BitmapFactory.decodeStream(inputStream)
-                inputStream?.close()
-
-                val text = QRCodeDecoder.syncDecodeQRCode(bitmap)
-                if (text.isNullOrEmpty()) {
-                    toast(R.string.toast_decoding_failed)
-                } else {
-                    finished(text)
-                }
-            } catch (e: Exception) {
-                e.printStackTrace()
-                toast(R.string.toast_decoding_failed)
-            }
-        }
-    }
-
 }

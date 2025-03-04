@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.RecyclerView
 import com.neko.v2ray.AngApplication.Companion.application
 import com.neko.v2ray.AppConfig
@@ -23,9 +24,9 @@ import com.neko.v2ray.helper.ItemTouchHelperAdapter
 import com.neko.v2ray.helper.ItemTouchHelperViewHolder
 import com.neko.v2ray.service.V2RayServiceManager
 import com.neko.v2ray.util.Utils
-import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
-import io.reactivex.rxjava3.core.Observable
-import java.util.concurrent.TimeUnit
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import java.util.*
 
 class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<MainRecyclerAdapter.BaseViewHolder>(), ItemTouchHelperAdapter {
     companion object {
@@ -165,11 +166,14 @@ class MainRecyclerAdapter(val activity: MainActivity) : RecyclerView.Adapter<Mai
                     notifyItemChanged(mActivity.mainViewModel.getPosition(guid))
                     if (isRunning) {
                         Utils.stopVService(mActivity)
-                        Observable.timer(500, TimeUnit.MILLISECONDS)
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribe {
+                        mActivity.lifecycleScope.launch {
+                            try {
+                                delay(500)
                                 V2RayServiceManager.startV2Ray(mActivity)
+                            } catch (e: Exception) {
+                                e.printStackTrace()
                             }
+                        }
                     }
                 }
             }

@@ -4,12 +4,22 @@ import android.Manifest
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.result.contract.ActivityResultContracts
-import com.tbruyelle.rxpermissions3.RxPermissions
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.AngConfigManager
 
 class ScScannerActivity : BaseActivity() {
+
+    private val requestCameraPermissionLauncher = registerForActivityResult(
+        ActivityResultContracts.RequestPermission()
+    ) { isGranted: Boolean ->
+        if (isGranted) {
+            scanQRCode.launch(Intent(this, ScannerActivity::class.java))
+        } else {
+            toast(R.string.toast_permission_denied)
+            finish()
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,18 +28,9 @@ class ScScannerActivity : BaseActivity() {
     }
 
     fun importQRcode(): Boolean {
-        RxPermissions(this)
-            .request(Manifest.permission.CAMERA)
-            .subscribe { granted ->
-                if (granted) {
-                    scanQRCode.launch(Intent(this, ScannerActivity::class.java))
-                } else {
-                    toast(R.string.toast_permission_denied)
-                }
-            }
+        requestCameraPermissionLauncher.launch(Manifest.permission.CAMERA)
         return true
     }
-
 
     private val scanQRCode = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == RESULT_OK) {
@@ -46,5 +47,4 @@ class ScScannerActivity : BaseActivity() {
         }
         finish()
     }
-
 }

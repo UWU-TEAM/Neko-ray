@@ -31,10 +31,11 @@ import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.PluginUtil
 import com.neko.v2ray.util.Utils
 import go.Seq
-import io.reactivex.rxjava3.core.Observable
-import io.reactivex.rxjava3.disposables.Disposable
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import libv2ray.Libv2ray
 import libv2ray.V2RayPoint
@@ -62,7 +63,7 @@ object V2RayServiceManager {
 
     private var lastQueryTime = 0L
     private var mBuilder: NotificationCompat.Builder? = null
-    private var mDisposable: Disposable? = null
+    private var speedNotificationJob: Job? = null
     private var mNotificationManager: NotificationManager? = null
 
     fun startV2Ray(context: Context) {
@@ -366,8 +367,8 @@ object V2RayServiceManager {
         }
 
         mBuilder = null
-        mDisposable?.dispose()
-        mDisposable = null
+        speedNotificationJob?.cancel()
+        speedNotificationJob = null
     }
 
     private fun updateNotification(contentText: String?, proxyTraffic: Long, directTraffic: Long) {
@@ -394,7 +395,7 @@ object V2RayServiceManager {
     }
 
     private fun startSpeedNotification() {
-        if (mDisposable == null &&
+        if (speedNotificationJob == null &&
             v2rayPoint.isRunning &&
             MmkvManager.decodeSettingsBool(AppConfig.PREF_SPEED_ENABLED) == true
         ) {
@@ -402,8 +403,8 @@ object V2RayServiceManager {
             val outboundTags = currentConfig?.getAllOutboundTags()
             outboundTags?.remove(TAG_DIRECT)
 
-            mDisposable = Observable.interval(3, java.util.concurrent.TimeUnit.SECONDS)
-                .subscribe {
+            speedNotificationJob = CoroutineScope(Dispatchers.IO).launch {
+                while (isActive) {
                     val queryTime = System.currentTimeMillis()
                     val sinceLastQueryInSeconds = (queryTime - lastQueryTime) / 1000.0
                     var proxyTotal = 0L
@@ -431,7 +432,9 @@ object V2RayServiceManager {
                     }
                     lastZeroSpeed = zeroSpeed
                     lastQueryTime = queryTime
+                    delay(3000)
                 }
+            }
         }
     }
 
@@ -446,27 +449,10 @@ object V2RayServiceManager {
     }
 
     private fun stopSpeedNotification() {
-        mDisposable?.let {
-            it.dispose() //stop queryStats
-            mDisposable = null
+        speedNotificationJob?.let {
+            it.cancel() 
+            speedNotificationJob = null
             updateNotification(currentConfig?.remarks, 0, 0)
         }
-    }
-
-    private fun getPendingIntent(
-        context: Context,
-        requestCode: Int,
-        intent: Intent
-    ): PendingIntent {
-        return PendingIntent.getService(
-            context,
-            requestCode,
-            intent,
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
-            } else {
-                PendingIntent.FLAG_UPDATE_CURRENT
-            }
-        )
     }
 }
