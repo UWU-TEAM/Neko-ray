@@ -51,7 +51,6 @@ import me.drakeet.support.toast.ToastCompat
 import java.util.concurrent.TimeUnit
 
 import android.content.Context
-import android.content.pm.PackageManager
 import android.view.View
 import androidx.annotation.ColorInt
 import androidx.annotation.AttrRes

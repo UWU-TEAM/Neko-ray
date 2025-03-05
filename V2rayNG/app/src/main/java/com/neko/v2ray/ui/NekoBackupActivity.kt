@@ -5,17 +5,18 @@ import android.content.Intent
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.content.FileProvider
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import com.tbruyelle.rxpermissions3.RxPermissions
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.BuildConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.UwuBackupBinding
-import com.neko.v2ray.extension.toast
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.ZipUtil
@@ -24,8 +25,21 @@ import java.text.SimpleDateFormat
 import java.util.Locale
 
 class NekoBackupActivity : BaseActivity() {
+
     private lateinit var binding: UwuBackupBinding
     private val extDir by lazy { File(Utils.backupPath(this)) }
+    private val requestPermissionLauncher =
+        registerForActivityResult(ActivityResultContracts.RequestPermission()) { isGranted ->
+            if (isGranted) {
+                try {
+                    showFileChooser()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            } else {
+                toast(R.string.toast_permission_denied)
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +53,7 @@ class NekoBackupActivity : BaseActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         binding.tvBackupSummary.text = this.getString(R.string.summary_configuration_backup, extDir)
+        
         binding.layoutBackup.setOnClickListener {
             val ret = backupConfiguration(extDir.absolutePath)
             if (ret.first) {
@@ -56,7 +71,8 @@ class NekoBackupActivity : BaseActivity() {
                         Intent(Intent.ACTION_SEND).setType("application/zip")
                             .setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
                             .putExtra(
-                                Intent.EXTRA_STREAM, FileProvider.getUriForFile(
+                                Intent.EXTRA_STREAM,
+                                FileProvider.getUriForFile(
                                     this, BuildConfig.APPLICATION_ID + ".cache", File(ret.second)
                                 )
                             ), getString(R.string.title_configuration_share)
@@ -68,23 +84,22 @@ class NekoBackupActivity : BaseActivity() {
         }
 
         binding.layoutRestore.setOnClickListener {
-            val permission = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-                Manifest.permission.READ_MEDIA_IMAGES
-            } else {
-                Manifest.permission.READ_EXTERNAL_STORAGE
-            }
-            RxPermissions(this)
-                .request(permission)
-                .subscribe {
-                    if (it) {
-                        try {
-                            showFileChooser()
-                        } catch (e: Exception) {
-                            e.printStackTrace()
-                        }
-                    } else
-                        toast(R.string.toast_permission_denied)
+            val permission =
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    Manifest.permission.READ_MEDIA_IMAGES
+                } else {
+                    Manifest.permission.READ_EXTERNAL_STORAGE
                 }
+
+            if (ContextCompat.checkSelfPermission(this, permission) == android.content.pm.PackageManager.PERMISSION_GRANTED) {
+                try {
+                    showFileChooser()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+            } else {
+                requestPermissionLauncher.launch(permission)
+            }
         }
     }
 
@@ -135,9 +150,9 @@ class NekoBackupActivity : BaseActivity() {
     }
 
     private val chooseFile =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-            val uri = it.data?.data
-            if (it.resultCode == RESULT_OK && uri != null) {
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            val uri = result.data?.data
+            if (result.resultCode == RESULT_OK && uri != null) {
                 try {
                     val targetFile =
                         File(this.cacheDir.absolutePath, "${System.currentTimeMillis()}.zip")
@@ -157,4 +172,8 @@ class NekoBackupActivity : BaseActivity() {
                 }
             }
         }
+
+    private fun toast(messageResId: Int) {
+        Toast.makeText(this, getString(messageResId), Toast.LENGTH_SHORT).show()
+    }
 }
