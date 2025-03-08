@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>رڌ کردن</item>
+        <item>موجاز</item>
+        <item>گوم زیڌن</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QRcode</item>
+        <item>و در کشیڌن من کلیپ بورد</item>
+        <item>و در کشیڌن پوی کانفیگ من کلیپ بورد</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QRcode</item>
+        <item>و در کشیڌن من کلیپ بورد</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>تینا پروکسی</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>نومگه اسبؽڌ چین</item>
+        <item>نومگه شه چین</item>
+        <item>جهۊوی (Global)</item>
+        <item>نومگه اسبؽڌ ایران</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>پؽش فرز کانفیگ</item>
+        <item>دور زیڌه بۊ</item>
+        <item>دور زیڌه نبۊ</item>
+    </string-array>
+</resources>

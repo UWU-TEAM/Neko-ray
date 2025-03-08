@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>Từ chối</item>
+        <item>Cho phép</item>
+        <item>Bỏ qua</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>Xuất ra mã QR (Chụp màn hình để lưu)</item>
+        <item>Sao chép vào Clipboard</item>
+        <item>Sao chép thành cấu hình tùy chỉnh</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>Xuất gói ra mã QR (Chụp màn hình để lưu)</item>
+        <item>Xuất gói vào Clipboard</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>Chế độ VPN</item>
+        <item>Chế độ Proxy</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>Danh sách trắng của Trung Quốc</item>
+        <item>Danh sách đen Trung Quốc</item>
+        <item>Toàn cầu</item>
+        <item>Danh sách trắng của Iran</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>Follow config</item>
+        <item>Bypass</item>
+        <item>Not Bypass</item>
+    </string-array>
+</resources>

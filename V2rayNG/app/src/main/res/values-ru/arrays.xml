@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>отклонять</item>
+        <item>разрешать</item>
+        <item>пропускать</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QR-код</item>
+        <item>Экспорт в буфер обмена</item>
+        <item>Экспорт всей конфигурации в буфер обмена</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QR-код</item>
+        <item>Экспорт в буфер обмена</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>Прокси</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>Белый список Китая</item>
+        <item>Чёрный список Китая</item>
+        <item>Общие</item>
+        <item>Белый список Ирана</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>Как в профиле</item>
+        <item>Пропускает</item>
+        <item>Не пропускает</item>
+    </string-array>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>不代理</item>
+        <item>多路复用</item>
+        <item>原生</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>二维码</item>
+        <item>导出至剪贴板</item>
+        <item>导出完整配置至剪贴板</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>二维码</item>
+        <item>导出至剪贴板</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>仅代理</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>绕过大陆(Whitelist)</item>
+        <item>黑名单(Blacklist)</item>
+        <item>全局(Global)</item>
+        <item>伊朗(Iran)</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>跟随配置文件</item>
+        <item>绕过</item>
+        <item>不绕过</item>
+    </string-array>
+</resources>

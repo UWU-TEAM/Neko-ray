@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>رفض</item>
+        <item>سماح</item>
+        <item>تخطي</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>رمز استجابة سريعة (QRcode)</item>
+        <item>تصدير إلى الحافظة</item>
+        <item>تصدير التكوين الكامل إلى الحافظة</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>رمز استجابة سريعة (QRcode)</item>
+        <item>تصدير إلى الحافظة</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>بروكسي فقط</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>القائمة البيضاء للصين</item>
+        <item>القائمة السوداء للصين</item>
+        <item>عالمي</item>
+        <item>القائمة البيضاء لإيران</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>Follow config</item>
+        <item>Bypass</item>
+        <item>Not Bypass</item>
+    </string-array>
+</resources>

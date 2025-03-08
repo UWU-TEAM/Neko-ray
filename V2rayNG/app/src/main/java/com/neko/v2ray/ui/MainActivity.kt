@@ -184,7 +184,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             bottomSheetDialog.setContentView(view)
             bottomSheetDialog.show()
         }
-        title = getString(R.string.app_title_name)
+        title = getString(R.string.app_name)
         setSupportActionBar(binding.toolbar)
         expandableConnection = findViewById(R.id.uwu_connection_expanded)
         expandableConnection.setExpansion(false)

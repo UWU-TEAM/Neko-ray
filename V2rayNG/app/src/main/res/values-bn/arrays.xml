@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>অস্বীকার করুন</item>
+        <item>অনুমতি দিন</item>
+        <item>এড়িয়ে যান</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QR কোড</item>
+        <item>ক্লিপবোর্ডে রপ্তানি করুন</item>
+        <item>পূর্ণ কনফিগারেশন ক্লিপবোর্ডে রপ্তানি করুন</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QR কোড</item>
+        <item>ক্লিপবোর্ডে রপ্তানি করুন</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>শুধুমাত্র প্রোক্সি</item>
+    </string-array>
+
+    <string-array name="preset_rulesets">
+        <item>চায়না হোয়াইটলিস্ট</item>
+        <item>চায়না ব্ল্যাকলিস্ট</item>
+        <item>গ্লোবাল</item>
+        <item>ইরান হোয়াইটলিস্ট</item>
+    </string-array>
+
+    <string-array name="vpn_bypass_lan">
+        <item>Follow config</item>
+        <item>Bypass</item>
+        <item>Not Bypass</item>
+    </string-array>
+</resources>
