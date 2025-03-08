@@ -1,0 +1,18 @@
+# This file contains the template for the "auto-generated release notes"
+
+changelog:
+  exclude:
+    labels:
+      - "build(deps): *"
+    authors:
+      - dependabot
+  categories:
+    - title: "🏕 Features"
+      labels:
+        - "feat: *"
+    - title: "🐛 Bug fixes"
+      labels:
+        - "fix: *"
+    - title:
+      labels:
+        - "*"
