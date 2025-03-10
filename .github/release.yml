@@ -1,18 +1,24 @@
-# This file contains the template for the "auto-generated release notes"
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
 
 changelog:
   exclude:
     labels:
-      - "build(deps): *"
-    authors:
-      - dependabot
+      - ignore-for-release
   categories:
-    - title: "🏕 Features"
+    - title: Breaking Changes 🛠
       labels:
-        - "feat: *"
-    - title: "🐛 Bug fixes"
+        - breaking-change
+    - title: Exciting New Features 🎉
       labels:
-        - "fix: *"
-    - title:
+        - enhancement
+    - title: Bug fixes 🧑‍🔧 🐞
+      labels:
+        - bug 
+    - title: Doc improvements 📚
+      labels:
+        - docs
+        - documentation
+    - title: Other Changes
       labels:
         - "*"
