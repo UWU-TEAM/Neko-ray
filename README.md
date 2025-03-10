@@ -11,6 +11,16 @@ A V2Ray client for Android, support [Xray core](https://github.com/XTLS/Xray-cor
 
 ![Banner](https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/image/uwu_banner.png)
 
+> [!NOTE]
+>
+> Neko-ray is a redesigned application from [V2rayNG](https://github.com/2dust/v2rayNG)
+
+> [!WARNING]
+>
+> Neko-ray is being worked on unofficially, and the official one is on [V2rayNG](https://github.com/2dust/v2rayNG)
+> If you want to install Neko-ray, it would be better to disable your Google Play Protect first. Because Neko-ray does not have a special signature from Google
+
+
 <details>
   <summary>ScreenShoot</summary>
 
