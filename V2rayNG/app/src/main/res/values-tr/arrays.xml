@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mux_xudp_quic_entries">
+        <item>reddet</item>
+        <item>izin ver</item>
+        <item>atla</item>
+    </string-array>
+
+    <string-array name="share_method">
+        <item>QR kod</item>
+        <item>Panoya aktar</item>
+        <item>Tam yapılandırmayı panoya aktar</item>
+    </string-array>
+
+    <string-array name="share_sub_method">
+        <item>QR kod</item>
+        <item>Panoya aktar</item>
+    </string-array>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>Sadece Proxy</item>
+    </string-array>
+</resources>
