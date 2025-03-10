@@ -173,6 +173,7 @@
         <item>عربي</item>
         <item>বাংলা</item>
         <item>لۊری بختیاری</item>
+        <item>Türkçe</item>
     </string-array>
 
     <string-array name="language_select_value" translatable="false">
@@ -186,6 +187,7 @@
         <item>ar</item>
         <item>bn</item>
         <item>bqi-rIR</item>
+        <item>tr</item>
     </string-array>
 
     <string-array name="mux_xudp_quic_value" translatable="false">
