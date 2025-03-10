@@ -136,44 +136,48 @@ jobs:
 
     - name: arm64
       uses: actions/upload-artifact@v4
-      if: ${{  success() }}
+      if: github.event.inputs.release_tag == ''
       with:
         name: Arm64
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
 
     - name: armeabi-v7a
       uses: actions/upload-artifact@v4
-      if: ${{  success() }}
+      if: github.event.inputs.release_tag == ''
       with:
         name: Armeabi-v7a
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
 
     - name: x86
       uses: actions/upload-artifact@v4
-      if: ${{  success() }}
+      if: github.event.inputs.release_tag == ''
       with:
         name: X86
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86.apk
 
     - name: x86_64
       uses: actions/upload-artifact@v4
-      if: ${{  success() }}
+      if: github.event.inputs.release_tag == ''
       with:
         name: X86_64
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86_64.apk
 
     - name: universal
       uses: actions/upload-artifact@v4
-      if: ${{  success() }}
+      if: github.event.inputs.release_tag == ''
       with:
         name: Universal
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*universal.apk
 
     - name: Upload to release
-      uses: svenstaro/upload-release-action@v2
+      uses: softprops/action-gh-release@v2
       if: github.event.inputs.release_tag != ''
       with:
-        file: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*.apk
-        tag: ${{ github.event.inputs.release_tag }}
-        file_glob: true
-        prerelease: true
+        files: |
+          ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
+          ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
+          ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86.apk
+          ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86_64.apk
+          ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*universal.apk
+        tag_name: ${{ github.event.inputs.release_tag }}
+        make_latest: true
