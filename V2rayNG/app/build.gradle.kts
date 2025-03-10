@@ -20,8 +20,8 @@ android {
         applicationId = "com.neko.v2ray"
         minSdk = 27
         targetSdk = 35
-        versionCode = 237
-        versionName = "1.1.17"
+        versionCode = 636
+        versionName = "1.9.39"
         multiDexEnabled = true
         vectorDrawables.useSupportLibrary = true
         splits {

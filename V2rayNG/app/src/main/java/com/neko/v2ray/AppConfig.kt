@@ -4,7 +4,7 @@ package com.neko.v2ray
 object AppConfig {
     /** UWU **/
     const val UWU_UPDATE_URL = "https://raw.githubusercontent.com/UWU-TEAM/Neko-ray/main/release.json"
-    const val UWU_CHANGELOG_URL = "https://github.com/UWU-TEAM/Neko-ray/blob/main/CHANGELOG.md"
+    const val UWU_CHANGELOG_URL = "https://github.com/UWU-TEAM/Neko-ray/releases/tag/v1.9.39"
 
     /** The application's package name. */
     const val ANG_PACKAGE = BuildConfig.APPLICATION_ID
