@@ -53,14 +53,14 @@
     <string name="server_lab_request_host_http">http ana bilgisayarı</string>
     <string name="server_lab_request_host_ws">ws ana bilgisayarı</string>
     <string name="server_lab_request_host_httpupgrade">httpupgrade ana bilgisayarı</string>
-    <string name="server_lab_request_host_splithttp">splithttp ana bilgisayarı</string>
+    
     <string name="server_lab_request_host_h2">h2 ana bilgisayarı</string>
     <string name="server_lab_request_host_quic">QUIC güvenliği</string>
     <string name="server_lab_request_host_grpc">gRPC Yetkisi</string>
     <string name="server_lab_path">yol</string>
     <string name="server_lab_path_ws">ws yolu</string>
     <string name="server_lab_path_httpupgrade">httpupgrade yolu</string>
-    <string name="server_lab_path_splithttp">splithttp yolu</string>
+    
     <string name="server_lab_path_h2">h2 yolu</string>
     <string name="server_lab_path_quic">QUIC anahtarı</string>
     <string name="server_lab_path_kcp">kcp seed</string>
@@ -172,8 +172,7 @@
     <string name="title_pref_socks_port">SOCKS5 proxy portu</string>
     <string name="summary_pref_socks_port">SOCKS5 proxy portu</string>
 
-    <string name="title_pref_http_port">HTTP proxy portu</string>
-    <string name="summary_pref_http_port">HTTP proxy portu</string>
+ 
 
     <string name="title_pref_local_dns_port">Yerel DNS portu</string>
     <string name="summary_pref_local_dns_port">Yerel DNS portu</string>
@@ -247,7 +246,7 @@
     <string name="routing_settings_rule_title">Yönlendirme Kuralı Ayarları</string>
     <string name="routing_settings_add_rule">Kural ekle</string>
     <string name="routing_settings_import_rulesets">Kural seti içe aktar</string>
-    <string name="routing_settings_import_rulesets_tip">Mevcut kural setleri silinecek, devam etmek istediğinizden emin misiniz?</string>
+    
     <string name="routing_settings_import_rulesets_from_clipboard">Panodan kural seti içe aktar</string>
     <string name="routing_settings_export_rulesets_to_clipboard">Kural setini panoya dışa aktar</string>
     <string name="routing_settings_locked">Kilitlendi, ön ayarları içe aktarırken bu kuralı koru</string>
@@ -361,8 +360,8 @@
 <string name="uwu_summary_dashboard_tools">Neko-ray gelişmiş ayarlarına hoş geldiniz</string>
 <string name="uwu_name">İsim :</string>
 <string name="uwu_name_summary">İsim</string>
-<string name="uwu_username">Kullanıcı Adı :</string>
-<string name="uwu_username_summary">Kullanıcı Adı</string>
+
+    
 <string name="uwu_age">Yaş :</string>
 <string name="uwu_age_summary">Yaş</string>
 <string name="uwu_date">Doğum Tarihi :</string>
@@ -377,7 +376,7 @@
 <string name="uwu_profile_edit_tittle">Profili Düzenle</string>
 <string name="uwu_name_dialog">İsim Boş Olamaz</string>
 <string name="uwu_username_dialog">Kullanıcı Adı Boş Olamaz</string>
-<string name="uwu_age_dialog">Yaş Boş Olamaz</string>
+
 <string name="uwu_date_dialog">Doğum Tarihi Boş Olamaz</string>
 <string name="uwu_hobi_dialog">Hobiler Boş Olamaz</string>
 <string name="uwu_email_dialog">E-posta Boş Olamaz</string>
