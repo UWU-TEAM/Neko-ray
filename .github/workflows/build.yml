@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build
 
 on:
   pull_request:
@@ -7,10 +7,6 @@ on:
       release_tag:
         required: false
         type: string
-
-concurrency:
-  group: ${{ github.head_ref || github.run_id }}
-  cancel-in-progress: false
 
 jobs:
   build:
