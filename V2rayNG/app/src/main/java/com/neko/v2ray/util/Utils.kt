@@ -430,6 +430,7 @@ object Utils {
             Language.ARABIC -> Locale("ar")
             Language.BANGLA -> Locale("bn")
             Language.BAKHTIARI -> Locale("bqi", "IR")
+            Language.TURKISH -> Locale("tr")
         }
     }
 
