@@ -34,20 +34,20 @@ class Grettings : AppCompatTextView {
         when (language) {
             "ar" -> {
                 when {
-                    timeOfDay in 4..8 -> sb.append("🌤 صباح الخير...")
-                    timeOfDay in 9..15 -> sb.append("⛅ مساء الخير...")
-                    timeOfDay in 16..20 -> sb.append("🌥️ مساء الخير...")
-                    timeOfDay in 21..23 -> sb.append("🌙 طاب مساؤك...")
-                    else -> sb.append("💤 حان الوقت للذهاب الى النوم...")
+                    timeOfDay in 4..8 -> sb.append("...صباح الخير 🌤")
+                    timeOfDay in 9..15 -> sb.append("...مساء الخير ⛅")
+                    timeOfDay in 16..20 -> sb.append("...مساء الخير 🌥️")
+                    timeOfDay in 21..23 -> sb.append("...طاب مساؤك 🌙")
+                    else -> sb.append("...حان الوقت للذهاب الى النوم 💤")
                 }
             }
             "fa" -> {
                 when {
-                    timeOfDay in 4..8 -> sb.append("🌤 صباح الخير...")
-                    timeOfDay in 9..15 -> sb.append("⛅ مساء الخير...")
-                    timeOfDay in 16..20 -> sb.append("🌥️ مساء الخير...")
-                    timeOfDay in 21..23 -> sb.append("🌙 طاب مساؤك...")
-                    else -> sb.append("💤 حان الوقت للذهاب الى النوم...")
+                    timeOfDay in 4..8 -> sb.append("...صباح الخير 🌤")
+                    timeOfDay in 9..15 -> sb.append("...مساء الخير ⛅")
+                    timeOfDay in 16..20 -> sb.append("...مساء الخير 🌥️")
+                    timeOfDay in 21..23 -> sb.append("...طاب مساؤك 🌙")
+                    else -> sb.append("...حان الوقت للذهاب الى النوم 💤")
                 }
             }
             "in" -> {
@@ -120,6 +120,15 @@ class Grettings : AppCompatTextView {
                     timeOfDay in 16..20 -> sb.append("🌥️ 午安...")
                     timeOfDay in 21..23 -> sb.append("🌙 晚安...")
                     else -> sb.append("💤 是時候去睡覺了...")
+                }
+            }
+            "bn" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 শুভ সকাল...")
+                    timeOfDay in 9..15 -> sb.append("⛅ শুভ বিকাল...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ শুভ সন্ধ্যা...")
+                    timeOfDay in 21..23 -> sb.append("🌙 শুভ রাত্রি...")
+                    else -> sb.append("💤 ঘুমাতে যাওয়ার সময় হয়েছে।...")
                 }
             }
             else -> {
