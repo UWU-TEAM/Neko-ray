@@ -131,6 +131,15 @@ class Grettings : AppCompatTextView {
                     else -> sb.append("💤 ঘুমাতে যাওয়ার সময় হয়েছে।...")
                 }
             }
+            "tr" -> {
+                when {
+                    timeOfDay in 4..8 -> sb.append("🌤 Günaydın...")
+                    timeOfDay in 9..15 -> sb.append("⛅ Tünaydın...")
+                    timeOfDay in 16..20 -> sb.append("🌥️ İyi akşamlar...")
+                    timeOfDay in 21..23 -> sb.append("🌙 İyi geceler...")
+                    else -> sb.append("💤 Uyuma zamanı geldi...")
+                }
+            }
             else -> {
                 when {
                     timeOfDay in 4..8 -> sb.append("🌤 Good Morning...")
