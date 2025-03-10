@@ -311,7 +311,7 @@
 <string name="uwu_exit_message">Bu uygulamadan çıkmak istediğinizden emin misiniz?</string>
 <string name="uwu_text_yes">Evet</string>
 <string name="uwu_text_no">Hayır</string>
-<string name="uwu_ignore_battery_optimization_summary">VPN'in düzgün çalışması için gerekli izinleri uygulayın. Çin menşeli bir cihaz kullanıyorsanız, izin verildikten sonra kart kaybolmayabilir </string>
+<string name="uwu_ignore_battery_optimization_summary">VPN düzgün çalışması için gerekli izinleri uygulayın. Çin menşeli bir cihaz kullanıyorsanız, izin verildikten sonra kart kaybolmayabilir </string>
 <string name="uwu_ignore_battery_optimization_title">Pil optimizasyonlarını yoksay</string>
 <string name="read_more">Daha Fazla Oku</string>
 <string name="default_title">İnternet Bağlantısı Yok</string>
