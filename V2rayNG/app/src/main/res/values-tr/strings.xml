@@ -133,163 +133,183 @@
     <string name="menu_item_export_proxy_app">Panoya Dışa Aktar</string>
     <string name="menu_item_import_proxy_app">Panodan İçe Aktar</string>
 
-    <!-- Preferences -->
-    <string name="title_settings">Ayarlar</string>
-    <string name="title_advanced">Gelişmiş Ayarlar</string>
-    <string name="title_vpn_settings">VPN Ayarları</string>
-    <string name="title_pref_per_app_proxy">Uygulama başına proxy</string>
-    <string name="title_pref_is_booted">Otomatik başlatma</string>
-    <string name="summary_pref_is_booted">Sunucu seçilmişse VPN\'i otomatik olarak başlat</string>
+<!-- Tercihler -->
+<string name="title_settings">Ayarlar</string>
+<string name="title_advanced">Gelişmiş Ayarlar</string>
+<string name="title_vpn_settings">VPN Ayarları</string>
+<string name="title_pref_per_app_proxy">Uygulama başına proxy</string>
+<string name="summary_pref_per_app_proxy">Genel: İşaretli uygulama proxy kullanır, işaretsiz doğrudan bağlanır; \nbypass modu: işaretli uygulama doğrudan bağlanır, işaretsiz proxy kullanır. \nMenüden proxy uygulamasını otomatik seçme seçeneği</string>
+<string name="title_pref_is_booted">Başlangıçta otomatik bağlan</string>
+<string name="summary_pref_is_booted">Başlangıçta seçilen sunucuya otomatik olarak bağlanır, bu başarısız olabilir</string>
 
-    <string name="summary_pref_per_app_proxy">Genel: İşaretli Uygulama proxy kullanır, işaretlenmemiş doğrudan bağlanır; \nbypass modu: işaretli uygulama doğrudan bağlanır, işaretlenmemiş proxy kullanır. \nMenüde proxy uygulamasını otomatik seçme seçeneği</string>
+<string name="title_mux_settings">Mux Ayarları</string>
+<string name="title_pref_mux_enabled">Mux'ı Etkinleştir</string>
+<string name="summary_pref_mux_enabled">Daha hızlı, ancak kararsız bağlantıya neden olabilir\naşağıdan TCP, UDP ve QUIC'in nasıl işleneceğini özelleştirebilirsiniz</string>
+<string name="title_pref_mux_concurency">TCP bağlantıları (aralık -1 ila 1024)</string>
+<string name="title_pref_mux_xudp_concurency">XUDP bağlantıları (aralık -1 ila 1024)</string>
+<string name="title_pref_mux_xudp_quic">Mux tünelinde QUIC'in işlenmesi</string>
 
-    <string name="title_mux_settings">Mux Ayarları</string>
-    <string name="title_pref_mux_enabled">Mux\'ı Etkinleştir</string>
-    <string name="summary_pref_mux_enabled">Daha hızlı, ancak kararsız bağlantıya neden olabilir\nTCP, UDP ve QUIC\'in nasıl işleneceğini aşağıdan özelleştirin</string>
-    <string name="title_pref_mux_concurency">TCP bağlantıları (aralık -1 ila 1024)</string>
-    <string name="title_pref_mux_xudp_concurency">XUDP bağlantıları (aralık -1 ila 1024)</string>
-    <string name="title_pref_mux_xudp_quic">Mux tünelinde QUIC\'in işlenmesi</string>
+<string name="title_pref_speed_enabled">Hız göstergesini etkinleştir</string>
+<string name="summary_pref_speed_enabled">Bildirimde mevcut hızı gösterir.\nBildirim simgesi kullanıma göre değişecektir.</string>
 
-    <string name="title_pref_speed_enabled">Hız göstergesini etkinleştir</string>
-    <string name="summary_pref_speed_enabled">Bildirimde mevcut hızı görüntüle.\nBildirim simgesi kullanıma göre değişecektir.</string>
+<string name="title_pref_sniffing_enabled">Sniffing'i Etkinleştir</string>
+<string name="summary_pref_sniffing_enabled">Paketten domain'i algılamaya çalışır (varsayılan açık)</string>
+<string name="title_pref_route_only_enabled">routeOnly'i Etkinleştir</string>
+<string name="summary_pref_route_only_enabled">Algılanan domain adını sadece yönlendirme için kullanır ve hedef adresi IP adresi olarak korur.</string>
 
-    <string name="title_pref_sniffing_enabled">Koklama Etkinleştir</string>
-    <string name="summary_pref_sniffing_enabled">Paketten alan adı koklamayı dene (varsayılan açık)</string>
-    <string name="title_pref_route_only_enabled">routeOnly\'yi Etkinleştir</string>
-    <string name="summary_pref_route_only_enabled">Koklanan alan adını yalnızca yönlendirme için kullan ve hedef adresi IP adresi olarak tut.</string>
+<string name="title_pref_local_dns_enabled">Yerel DNS'i etkinleştir</string>
+<string name="summary_pref_local_dns_enabled">DNS çekirdeğin DNS modülü tarafından işlenir (Önerilir, eğer LAN ve ana karasal adresleri atlamak için yönlendirmeye ihtiyaç duyulursa)</string>
 
-    <string name="title_pref_local_dns_enabled">Yerel DNS\'yi etkinleştir</string>
-    <string name="summary_pref_local_dns_enabled">DNS, çekirdeğin DNS modülü tarafından işlenir (Önerilir, LAN ve ana karada yönlendirme Baypası gerekiyorsa)</string>
+<string name="title_pref_fake_dns_enabled">Sahte DNS'i etkinleştir</string>
+<string name="summary_pref_fake_dns_enabled">Yerel DNS sahte IP adresi döndürür (daha hızlı, ancak bazı uygulamalar için çalışmayabilir)</string>
 
-    <string name="title_pref_fake_dns_enabled">Sahte DNS\'yi etkinleştir</string>
-    <string name="summary_pref_fake_dns_enabled">Yerel DNS sahte IP adresi döndürür (daha hızlı, ancak bazı uygulamalar için çalışmayabilir)</string>
+<string name="title_pref_prefer_ipv6">IPv6'yı tercih et</string>
+<string name="summary_pref_prefer_ipv6">IPv6 adresini ve rotalarını tercih eder</string>
 
-    <string name="title_pref_prefer_ipv6">IPv6\'yı tercih et</string>
-    <string name="summary_pref_prefer_ipv6">IPv6 adresini ve rotaları tercih et</string>
+<string name="title_pref_remote_dns">Uzak DNS (udp/tcp/https/quic)(İsteğe bağlı)</string>
+<string name="summary_pref_remote_dns">DNS</string>
 
-    <string name="title_pref_remote_dns">Uzak DNS (udp/tcp/https/quic)(İsteğe bağlı)</string>
-    <string name="summary_pref_remote_dns">DNS</string>
+<string name="title_pref_vpn_dns">VPN DNS (sadece IPv4/v6)</string>
+<string name="title_pref_vpn_bypass_lan">VPN LAN'ı atlasın mı</string>
 
-    <string name="title_pref_vpn_dns">VPN DNS (yalnızca IPv4/v6)</string>
+<string name="title_pref_domestic_dns">Yerel DNS (İsteğe bağlı)</string>
+<string name="summary_pref_domestic_dns">DNS</string>
 
-    <string name="title_pref_domestic_dns">Yerel DNS (İsteğe bağlı)</string>
-    <string name="summary_pref_domestic_dns">DNS</string>
+<string name="title_pref_dns_hosts">DNS hosts (Format: domain:adres,…)</string>
+<string name="summary_pref_dns_hosts">domain:adres,…</string>
 
-    <string name="title_pref_delay_test_url">Gerçek gecikme test URL\'si (http/https)</string>
-    <string name="summary_pref_delay_test_url">Url</string>
+<string name="title_pref_delay_test_url">Gerçek gecikme test URL'i (http/https)</string>
+<string name="summary_pref_delay_test_url">URL</string>
 
-    <string name="title_pref_proxy_sharing_enabled">LAN\'dan bağlantılara izin ver</string>
-    <string name="summary_pref_proxy_sharing_enabled">Diğer cihazlar socks/http aracılığıyla IP adresinizi kullanarak proxy\'ye bağlanabilir, yetkisiz bağlantıyı önlemek için yalnızca güvenilir ağda etkinleştirin</string>
-    <string name="toast_warning_pref_proxysharing_short">LAN\'dan bağlantılara izin ver, güvenilir bir ağda olduğunuzdan emin olun</string>
+<string name="title_pref_proxy_sharing_enabled">LAN'dan bağlantılara izin ver</string>
+<string name="summary_pref_proxy_sharing_enabled">Diğer cihazlar yerel proxy üzerinden IP adresinizi kullanarak proxy'ye bağlanabilir, yetkisiz bağlantıları önlemek için sadece güvenilir ağlarda etkinleştirin</string>
+<string name="toast_warning_pref_proxysharing_short">LAN'dan bağlantılara izin veriliyor, güvenilir bir ağda olduğunuzdan emin olun</string>
 
-    <string name="title_pref_allow_insecure">güvensiz izin ver</string>
-    <string name="summary_pref_allow_insecure">TLS olduğunda, varsayılan güvensiz izin ver</string>
+<string name="title_pref_allow_insecure">allowInsecure</string>
+<string name="summary_pref_allow_insecure">TLS kullanıldığında, varsayılan allowInsecure</string>
 
-    <string name="title_pref_socks_port">SOCKS5 proxy portu</string>
-    <string name="summary_pref_socks_port">SOCKS5 proxy portu</string>
+<string name="title_pref_socks_port">Yerel proxy portu</string>
+<string name="summary_pref_socks_port">Yerel proxy portu</string>
 
- 
+<string name="title_pref_local_dns_port">Yerel DNS portu</string>
+<string name="summary_pref_local_dns_port">Yerel DNS portu</string>
 
-    <string name="title_pref_local_dns_port">Yerel DNS portu</string>
-    <string name="summary_pref_local_dns_port">Yerel DNS portu</string>
+<string name="title_pref_confirm_remove">Yapılandırma dosyasını silme onayı</string>
+<string name="summary_pref_confirm_remove">Yapılandırma dosyasının silinmesi için kullanıcıdan ikinci bir onay gerekip gerekmediği</string>
 
-    <string name="title_pref_confirm_remove">Yapılandırma dosyasını silme onayı</string>
-    <string name="summary_pref_confirm_remove">Yapılandırma dosyasını silmenin kullanıcı tarafından ikinci bir onay gerektirip gerektirmediği</string>
+<string name="title_pref_start_scan_immediate">Taramayı hemen başlat</string>
+<string name="summary_pref_start_scan_immediate">Başlangıçta hemen tarama için kamerayı açar, aksi takdirde araç çubuğundan kod tarama veya fotoğraf seçme seçeneğini seçebilirsiniz</string>
 
-    <string name="title_pref_start_scan_immediate">Taramayı hemen başlat</string>
-    <string name="summary_pref_start_scan_immediate">Başlangıçta hemen tarama için kamerayı aç, aksi takdirde araç çubuğunda kod tarama veya fotoğraf seçme seçeneğini seçebilirsiniz</string>
+<string name="title_pref_append_http_proxy">VPN'e HTTP Proxy ekle</string>
+<string name="summary_pref_append_http_proxy">HTTP proxy doğrudan (tarayıcı/ bazı desteklenen uygulamalar) tarafından kullanılacak, sanal NIC cihazından geçmeden (Android 10+)</string>
 
-    <string name="title_pref_feedback">Geri Bildirim</string>
-    <string name="summary_pref_feedback">İyileştirmeleri veya hataları GitHub\'a bildirin</string>
-    <string name="summary_pref_tg_group">Telegram Grubuna Katılın</string>
-    <string name="toast_tg_app_not_found">Telegram uygulaması bulunamadı</string>
-    <string name="title_privacy_policy">Gizlilik politikası</string>
-    <string name="title_about">Hakkında</string>
-    <string name="title_source_code">Kaynak kodu</string>
-    <string name="title_tg_channel">Telegram kanalı</string>
-    <string name="title_configuration_backup">Yapılandırma yedekleme</string>
-    <string name="summary_configuration_backup">Depolama konumu: [%s], Yedek, uygulama kaldırıldıktan veya depolama temizlendikten sonra silinecektir</string>
-    <string name="title_configuration_restore">Yapılandırmayı geri yükle</string>
-    <string name="title_configuration_share">Yapılandırmayı paylaş</string>
+<string name="title_pref_feedback">Geri bildirim</string>
+<string name="summary_pref_feedback">İyileştirmeler veya hatalar için GitHub'a geri bildirimde bulunun</string>
+<string name="summary_pref_tg_group">Telegram Grubuna Katılın</string>
+<string name="toast_tg_app_not_found">Telegram uygulaması bulunamadı</string>
+<string name="title_privacy_policy">Gizlilik politikası</string>
+<string name="title_about">Hakkında</string>
+<string name="title_source_code">Kaynak kodu</string>
+<string name="title_oss_license">Açık Kaynak lisansları</string>
+<string name="title_tg_channel">Telegram kanalı</string>
+<string name="title_configuration_backup">Yapılandırma yedeklemesi</string>
+<string name="summary_configuration_backup">Depolama konumu: [%s], Yedekleme, uygulamayı kaldırdıktan veya depolamayı temizledikten sonra silinecektir</string>
+<string name="title_configuration_restore">Yapılandırmayı geri yükle</string>
+<string name="title_configuration_share">Yapılandırmayı paylaş</string>
 
-    <string name="title_pref_promotion">Promosyon</string>
-    <string name="summary_pref_promotion">Promosyon, detaylar için tıklayın (Bağış kaldırılabilir)</string>
+<string name="title_pref_promotion">Promosyon</string>
+<string name="summary_pref_promotion">Promosyon, detaylar için tıklayın (Bağış yaparak kaldırılabilir)</string>
 
-    <string name="title_pref_auto_update_subscription">Abonelikleri otomatik güncelle</string>
-    <string name="summary_pref_auto_update_subscription">Aboneliklerinizi arka planda bir aralıkla otomatik olarak güncelleyin. Cihaza bağlı olarak bu özellik her zaman çalışmayabilir</string>
-    <string name="title_pref_auto_update_interval">Otomatik Güncelleme Aralığı (Dakika, Min değer 15)</string>
+<string name="title_pref_auto_update_subscription">Abonelikleri otomatik güncelle</string>
+<string name="summary_pref_auto_update_subscription">Aboneliklerinizi arka planda belirli aralıklarla otomatik olarak güncelleyin. Cihaza bağlı olarak, bu özellik her zaman çalışmayabilir</string>
+<string name="title_pref_auto_update_interval">Otomatik Güncelleme Aralığı (Dakika, Minimum değer 15)</string>
 
-    <string name="title_core_loglevel">Günlük Seviyesi</string>
-    <string name="title_mode">Mod</string>
-    <string name="title_mode_help">Daha fazla yardım için bana tıklayın</string>
-    <string name="title_language">Dil</string>
-    <string name="title_ui_settings">Arayüz ayarları</string>
+<string name="title_core_loglevel">Günlük Seviyesi</string>
+<string name="title_mode">Mod</string>
+<string name="title_mode_help">Daha fazla yardım için bana tıklayın</string>
+<string name="title_language">Dil</string>
+<string name="title_ui_settings">Arayüz ayarları</string>
+<string name="title_pref_ui_mode_night">Arayüz modu ayarları</string>
 
-    <string name="title_logcat">Logcat</string>
-    <string name="logcat_copy">Kopyala</string>
-    <string name="logcat_clear">Temizle</string>
-    <string name="title_service_restart">Hizmet yeniden başlatma</string>
-    <string name="title_del_all_config">Mevcut grup yapılandırmasını sil</string>
-    <string name="title_del_duplicate_config">Mevcut grup yinelenen yapılandırmasını sil</string>
-    <string name="title_del_invalid_config">Mevcut grup geçersiz yapılandırmasını sil</string>
-    <string name="title_export_all">Mevcut grup özel olmayan yapılandırmaları panoya dışa aktar</string>
-    <string name="title_sub_setting">Abonelik</string>
-    <string name="sub_setting_remarks">açıklamalar</string>
-    <string name="sub_setting_url">İsteğe bağlı URL</string>
-    <string name="sub_setting_filter">Açıklamalar düzenli filtresi</string>
-    <string name="sub_setting_enable">Güncellemeyi etkinleştir</string>
-    <string name="sub_auto_update">Otomatik güncellemeyi etkinleştir</string>
-    <string name="sub_setting_pre_profile">Önceki proxy açıklamaları</string>
-    <string name="sub_setting_next_profile">Sonraki proxy açıklamaları</string>
-    <string name="sub_setting_pre_profile_tip">Açıklamalar var ve benzersiz</string>
-    <string name="title_sub_update">Mevcut grup aboneliğini güncelle</string>
-    <string name="title_ping_all_server">Mevcut grup yapılandırmasını Tcping yap</string>
-    <string name="title_real_ping_all_server">Mevcut grup yapılandırmasının gerçek gecikmesi</string>
-    <string name="title_user_asset_setting">Coğrafi varlık dosyaları</string>
-    <string name="title_sort_by_test_results">Test sonuçlarına göre sıralama</string>
-    <string name="title_filter_config">Yapılandırma dosyasını filtrele</string>
-    <string name="filter_config_all">Tüm gruplar</string>
-    <string name="title_del_duplicate_config_count">%d yinelenen yapılandırmayı sil</string>
+<string name="title_logcat">Logcat</string>
+<string name="logcat_copy">Kopyala</string>
+<string name="logcat_clear">Temizle</string>
+<string name="title_service_restart">Servisi yeniden başlat</string>
+<string name="title_del_all_config">Mevcut grup yapılandırmasını sil</string>
+<string name="title_del_duplicate_config">Mevcut grup yinelenen yapılandırmasını sil</string>
+<string name="title_del_invalid_config">Mevcut grup geçersiz yapılandırmasını sil</string>
+<string name="title_export_all">Mevcut grubun özel olmayan yapılandırmalarını panoya aktar</string>
+<string name="title_sub_setting">Abonelik grubu ayarı</string>
+<string name="sub_setting_remarks">açıklamalar</string>
+<string name="sub_setting_url">İsteğe bağlı URL</string>
+<string name="sub_setting_filter">Açıklamalar düzenli filtresi</string>
+<string name="sub_setting_enable">Güncellemeyi etkinleştir</string>
+<string name="sub_auto_update">Otomatik güncellemeyi etkinleştir</string>
+<string name="sub_setting_pre_profile">Önceki proxy açıklamaları</string>
+<string name="sub_setting_next_profile">Sonraki proxy açıklamaları</string>
+<string name="sub_setting_pre_profile_tip">Açıklama mevcut ve benzersiz</string>
+<string name="title_sub_update">Mevcut grup aboneliğini güncelle</string>
+<string name="title_ping_all_server">Mevcut grup yapılandırmasını Tcping ile test et</string>
+<string name="title_real_ping_all_server">Mevcut grup yapılandırmasının gerçek gecikmesini ölç</string>
+<string name="title_user_asset_setting">Coğrafi varlık dosyaları</string>
+<string name="title_sort_by_test_results">Test sonuçlarına göre sırala</string>
+<string name="title_filter_config">Yapılandırma dosyasını filtrele</string>
+<string name="filter_config_all">Tüm gruplar</string>
+<string name="title_del_duplicate_config_count">%d yinelenen yapılandırmayı sil</string>
+<string name="title_del_config_count">%d yapılandırmayı sil</string>
+<string name="title_import_config_count">%d yapılandırmayı içe aktar</string>
+<string name="title_export_config_count">%d yapılandırmayı dışa aktar</string>
+<string name="title_update_config_count">%d yapılandırmayı güncelle</string>
 
-    <string name="tasker_start_service">Hizmeti Başlat</string>
-    <string name="tasker_setting_confirm">Onayla</string>
+<string name="tasker_start_service">Servisi Başlat</string>
+<string name="tasker_setting_confirm">Onayla</string>
 
-    <string name="routing_settings_domain_strategy">Alan adı stratejisi</string>
-    <string name="routing_settings_title">Yönlendirme Ayarları</string>
-    <string name="routing_settings_tips">Virgülle ayrılmış(,), alan adı veya ip seçin</string>
-    <string name="routing_settings_save">Kaydet</string>
-    <string name="routing_settings_delete">Temizle</string>
-    <string name="routing_settings_rule_title">Yönlendirme Kuralı Ayarları</string>
-    <string name="routing_settings_add_rule">Kural ekle</string>
-    <string name="routing_settings_import_rulesets">Kural seti içe aktar</string>
-    
-    <string name="routing_settings_import_rulesets_from_clipboard">Panodan kural seti içe aktar</string>
-    <string name="routing_settings_export_rulesets_to_clipboard">Kural setini panoya dışa aktar</string>
-    <string name="routing_settings_locked">Kilitlendi, ön ayarları içe aktarırken bu kuralı koru</string>
+<string name="routing_settings_domain_strategy">Domain stratejisi</string>
+<string name="routing_settings_title">Yönlendirme Ayarları</string>
+<string name="routing_settings_tips">Virgüllerle (,) ayrılmış, domain veya ip seçin</string>
+<string name="routing_settings_save">Kaydet</string>
+<string name="routing_settings_delete">Temizle</string>
+<string name="routing_settings_rule_title">Yönlendirme Kuralı Ayarları</string>
+<string name="routing_settings_add_rule">Kural ekle</string>
+<string name="routing_settings_import_predefined_rulesets">Önceden tanımlanmış kural setlerini içe aktar</string>
+<string name="routing_settings_import_rulesets_tip">Mevcut kural setleri silinecek, devam etmek istediğinizden emin misiniz?</string>
+<string name="routing_settings_import_rulesets_from_clipboard">Kural setini panodan içe aktar</string>
+<string name="routing_settings_import_rulesets_from_qrcode">Kural setini QR kodundan içe aktar</string>
+<string name="routing_settings_export_rulesets_to_clipboard">Kural setini panoya aktar</string>
+<string name="routing_settings_locked">Kilitli, ön ayarları içe aktarırken bu kuralı koru</string>
+<string name="routing_settings_domain" translatable="false">domain</string>
+<string name="routing_settings_ip" translatable="false">ip</string>
+<string name="routing_settings_port" translatable="false">port</string>
+<string name="routing_settings_protocol" translatable="false">protocol</string>
+<string name="routing_settings_protocol_tip" translatable="false">[http,tls,bittorrent]</string>
+<string name="routing_settings_network" translatable="false">network</string>"[udp|tcp]"
+<string name="routing_settings_network_tip" translatable="false">[udp|tcp]</string>
+<string name="routing_settings_outbound_tag" translatable="false">outboundTag</string>
 
-    <string name="connection_test_pending">Bağlantıyı Kontrol Et</string>
-    <string name="connection_test_testing">Test ediliyor…</string>
-    <string name="connection_test_available">Başarılı: HTTP bağlantısı %dms sürdü</string>
-    <string name="connection_test_error">İnternet bağlantısı algılanamadı: %s</string>
-    <string name="connection_test_fail">İnternet Kullanılamıyor</string>
-    <string name="connection_test_error_status_code">Hata kodu: #%d</string>
-    <string name="connection_connected">Bağlandı, bağlantıyı kontrol etmek için dokunun</string>
-    <string name="connection_not_connected">Bağlı değil</string>
+<string name="connection_test_pending">Bağlantıyı Kontrol Et</string>
+<string name="connection_test_testing">Test ediliyor…</string>
+<string name="connection_test_testing_count">%d yapılandırması test ediliyor…</string>
+<string name="connection_test_available">Başarılı: HTTP bağlantısı %dms sürdü</string>
+<string name="connection_test_error">İnternet bağlantısı tespit edilemedi: %s</string>
+<string name="connection_test_fail">İnternet Kullanılamıyor</string>
+<string name="connection_test_error_status_code">Hata kodu: #%d</string>
+<string name="connection_connected">Bağlandı, bağlantıyı kontrol etmek için dokunun</string>
+<string name="connection_not_connected">Bağlı değil</string>
 
-    <string name="import_subscription_success">Abonelik Başarıyla İçe Aktarıldı</string>
-    <string name="import_subscription_failure">Abonelik içe aktarma başarısız oldu</string>
-    <string name="title_fragment_settings">Fragment Ayarları</string>
-    <string name="title_pref_fragment_packets">Fragment Paketleri</string>
-    <string name="title_pref_fragment_length">Fragment Uzunluğu (min-max)</string>
-    <string name="title_pref_fragment_interval">Fragment Aralığı (min-max)</string>
-    <string name="title_pref_fragment_enabled">Fragment Etkinleştir</string>
+<string name="import_subscription_success">Abonelik başarıyla içe aktarıldı</string>
+<string name="import_subscription_failure">Abonelik içe aktarılamadı</string>
+<string name="title_fragment_settings">Fragment Ayarları</string>
+<string name="title_pref_fragment_packets">Fragment Paketleri</string>
+<string name="title_pref_fragment_length">Fragment Uzunluğu (min-max)</string>
+<string name="title_pref_fragment_interval">Fragment Aralığı (min-max)</string>
+<string name="title_pref_fragment_enabled">Fragment'i Etkinleştir</string>
 
     <!-- Neko strings -->
     <string name="title_theme_settings">Tema Ayarları</string>
     <string name="title_choose_theme">Renk Teması Seç</string>
     <string name="uwu_header_title">Merhaba, </string>
     <string name="uwu_edit">Düzenle</string>
-    <string name="uwu_credits">Katkılar</string>
+    <string name="uwu_credits">Emeği Geçenler</string>
     <string name="uwu_about">Uygulama Hakkında</string>
     <string name="uwu_tools">Araçlar</string>
     <string name="uwu_information_cat">Bilgi</string>
@@ -297,14 +317,14 @@
     <string name="uwu_build_type">Derleme Türü</string>
     <string name="uwu_build_date">Derleme Tarihi</string>
     <string name="uwu_recommended_os_cat">Önerilen İşletim Sistemi</string>
-    <string name="uwu_version_sdk_minimum">Min SDK Sürümü</string>
+    <string name="uwu_version_sdk_minimum">Minimum SDK Sürümü</string>
     <string name="uwu_version_sdk_target">Hedef SDK Sürümü</string>
     <string name="uwu_package_name">Paket adı</string>
     <string name="uwu_speedtest_title">Hız Testi</string>
     <string name="uwu_speedtest_summary">Ağ Hızı</string>
     <string name="uwu_status_connection_title">Durum</string>
-     <string name="uwu_network_switcher_title">Ağ Değiştirici</string>
-    <string name="uwu_host_to_ip_title">Ana bilgisayardan IP\'ye</string>
+    <string name="uwu_network_switcher_title">Ağ Değiştirici</string>
+    <string name="uwu_host_to_ip_title">Host'tan IP'ye</string>
     <string name="uwu_ip_location_title">IP Konumu</string>
     <string name="uwu_exit_title">Çıkış</string>
     <string name="uwu_maintainer_title">Bu uygulama bakım altındadır</string>
@@ -314,88 +334,86 @@
     <string name="uwu_board_title">Anakart</string>
     <string name="uwu_osversion_title">İşletim Sistemi Sürümü</string>
     <string name="uwu_brand_title">Marka</string>
-<string name="uwu_buildid_title">Build ID</string>
-<string name="uwu_baseband_title">Baseband Sürümü</string>
-<string name="uwu_github_title">Github</string>
-<string name="uwu_github_summary">Kaynak kod deposu</string>
-<string name="uwu_credit_title">Katkıda Bulunanlar</string>
-<string name="uwu_updater_title">Güncelleme Kontrol Et</string>
-<string name="uwu_changrlog_title">Değişiklik Günlüğü</string>
-<string name="uwu_feetback_title">Geri Bildirim</string>
-<string name="uwu_modder_title">Düzenleyenler</string>
-<string name="uwu_exit_message">Bu uygulamadan çıkmak istediğinizden emin misiniz?</string>
-<string name="uwu_text_yes">Evet</string>
-<string name="uwu_text_no">Hayır</string>
-<string name="uwu_ignore_battery_optimization_summary">VPN'in düzgün çal\u0131\u015Fmas\u0131 i\u00E7in gerekli izinleri uygulay\u0131n. \u00C7in men\u015Feli bir cihaz kullan\u0131yorsan\u0131z, izin verildikten sonra kart kaybolmayabilir</string>
-<string name="uwu_ignore_battery_optimization_title">Pil optimizasyonlarını yoksay</string>
-<string name="read_more">Daha Fazla Oku</string>
-<string name="default_title">İnternet Bağlantısı Yok</string>
-<string name="default_message">İnternet bağlantınızı kontrol edin ve tekrar deneyin.</string>
-<string name="please_turn_on">Lütfen açın</string>
-<string name="wifi">Wifi</string>
-<string name="mobile_data">Mobil veri</string>
-<string name="default_snackbar_message">Aktif internet bağlantısı yok!</string>
-<string name="settings">Ayarlar</string>
-<string name="ok">Tamam</string>
-<string name="please_turn_off">Lütfen kapatın</string>
-<string name="airplane_mode">Uçak modu</string>
-<string name="default_airplane_mode_message">Uçak modunu açtınız.</string>
-<string name="neko_setup_config">Yapılandırmanızı buradan ayarlayın!</string>
-
-<string name="homepage_widget_battery_percent">yüzde</string>
-<string name="homepage_widget_battery_charge">Şarj oluyor</string>
-<string name="homepage_widget_battery_discharge">Deşarj oluyor</string>
-<string name="homepage_widget_battery_title">Pil</string>
-<string name="homepage_widget_storage_title">Depolama</string>
-<string name="changelog_title">Değişiklik Günlüğü</string>
-
-<string name="appupdater_update_available">Yeni güncelleme mevcut!</string>
-<string name="appupdater_update_available_description_dialog">%1$s güncellemesi indirilebilir. En son güncellemeyi indirerek %2$s için en son özellikleri, iyileştirmeleri ve hata düzeltmelerini edineceksiniz.</string>
-<string name="appupdater_update_available_description_dialog_before_release_notes">%1$s güncellemesi indirilebilir.\n\nŞu yeni özellikleri elde edebilirsiniz:\n%2$s</string>
-<string name="appupdater_update_available_description_snackbar">%1$s güncellemesi mevcut!</string>
-<string name="appupdater_update_available_description_notification">%2$s uygulamasının %1$s güncellemesi indirilebilir</string>
-<string name="appupdater_update_not_available">Güncelleme mevcut değil</string>
-<string name="appupdater_update_not_available_description">Zaten en son %s sürümündesiniz!</string>
-<string name="appupdater_btn_update">Güncelle</string>
-<string name="appupdater_btn_disable">Bir daha gösterme</string>
-<string name="appupdater_btn_dismiss">Kapat</string>
-<string name="appupdater_channel_name">Güncelleme bildirimleri</string>
-<string name="uwu_host_checker">Host denetleyici</string>
-<string name="uwu_license_title">Lisans</string>
-<string name="version">Sürüm</string>
-<string name="uwu_group">Grup</string>
-<string name="uwu_fokus_today">Bugüne odaklanalım!</string>
-<string name="uwu_theme">Tema</string>
-<string name="uwu_theme_desc">Vurgu rengini kendiniz seçin</string>
-<string name="uwu_theme_mode_default">Sistem varsayılanı</string>
-<string name="uwu_theme_mode_light">Açık</string>
-<string name="uwu_theme_mode_dark">Koyu</string>
-<string name="uwu_theme_botton_text">Temayı değiştir</string>
-<string name="uwu_subscription">Abonelik</string>
-<string name="uwu_subscription_desc">Abonelik grubunuzu buradan ayarlayın!</string>
-<string name="uwu_summary_dashboard_tools">Neko-ray gelişmiş ayarlarına hoş geldiniz</string>
-<string name="uwu_name">İsim :</string>
-<string name="uwu_name_summary">İsim</string>
-
+    <string name="uwu_buildid_title">Derleme Kimliği</string>
+    <string name="uwu_baseband_title">Baseband Sürümü</string>
+    <string name="uwu_github_title">Github</string>
+    <string name="uwu_github_summary">Kaynak kodu deposu</string>
+    <string name="uwu_credit_title">Emeği Geçenler</string>
+    <string name="uwu_updater_title">Güncelleme Kontrol Et</string>
+    <string name="uwu_changrlog_title">Değişiklik Günlüğü</string>
+    <string name="uwu_feetback_title">Geri Bildirim</string>
+    <string name="uwu_modder_title">Geliştiriciler</string>
+    <string name="uwu_exit_message">Bu uygulamadan çıkmak istediğinizden emin misiniz?</string>
+    <string name="uwu_text_yes">Evet</string>
+    <string name="uwu_text_no">Hayır</string>
+    <string name="uwu_ignore_battery_optimization_summary">VPN'in düzgün çalışması için gerekli izinleri verin.\n\nÇin yapımı bir cihaz kullanıyorsanız, izin verildikten sonra kart kaybolmayabilir.</string>
+    <string name="uwu_ignore_battery_optimization_title">Pil optimizasyonlarını yoksay</string>
+    <string name="read_more">Daha Fazla Oku</string>
+    <string name="default_title">İnternet Bağlantısı Yok</string>
+    <string name="default_message">İnternet bağlantınızı kontrol edin ve tekrar deneyin.</string>
+    <string name="please_turn_on">Lütfen açın</string>
+    <string name="wifi">Wifi</string>
+    <string name="mobile_data">Mobil veri</string>
+    <string name="default_snackbar_message">Aktif internet bağlantısı yok!</string>
+    <string name="settings">Ayarlar</string>
+    <string name="ok">Tamam</string>
+    <string name="please_turn_off">Lütfen kapatın</string>
+    <string name="airplane_mode">Uçak modu</string>
+    <string name="default_airplane_mode_message">Uçak modunu açtınız.</string>
+    <string name="neko_setup_config">Yapılandırmanızı buradan ayarlayın!</string>
     
-<string name="uwu_age">Yaş :</string>
-<string name="uwu_age_summary">Yaş</string>
-<string name="uwu_date">Doğum Tarihi :</string>
-<string name="uwu_date_summary">Doğum Tarihi</string>
-<string name="uwu_hobi">Hobi :</string>
-<string name="uwu_hobi_summary">Hobi</string>
-<string name="uwu_email">E-posta :</string>
-<string name="uwu_email_summary">E-posta</string>
-<string name="uwu_userid">Kullanıcı ID :</string>
-<string name="uwu_userid_summary">Kullanıcı ID</string>
-<string name="uwu_profile_update_tittle">Profili Güncelle</string>
-<string name="uwu_profile_edit_tittle">Profili Düzenle</string>
-<string name="uwu_name_dialog">İsim Boş Olamaz</string>
-<string name="uwu_username_dialog">Kullanıcı Adı Boş Olamaz</string>
+    <string name="homepage_widget_battery_percent">yüzde</string>
+    <string name="homepage_widget_battery_charge">Şarj oluyor</string>
+    <string name="homepage_widget_battery_discharge">Şarj boşalıyor</string>
+    <string name="homepage_widget_battery_title">Pil</string>
+    <string name="homepage_widget_storage_title">Depolama</string>
+    <string name="changelog_title">Değişiklik Günlüğü</string>
 
-<string name="uwu_date_dialog">Doğum Tarihi Boş Olamaz</string>
-<string name="uwu_hobi_dialog">Hobiler Boş Olamaz</string>
-<string name="uwu_email_dialog">E-posta Boş Olamaz</string>
-<string name="uwu_daftar_message">Neko-ray uygulamasını kullanabilmek için lütfen kişisel bilgilerinizi doldurun.</string>    
-<!-- Neko strings -->
+    <string name="appupdater_update_available">Yeni güncelleme mevcut!</string>
+    <string name="appupdater_update_available_description_dialog">Güncelleme %1$s indirilmeye hazır. En son güncellemeyi indirerek %2$s için en yeni özellikleri, iyileştirmeleri ve hata düzeltmelerini elde edeceksiniz.</string>
+    <string name="appupdater_update_available_description_dialog_before_release_notes">Güncelleme %1$s indirilmeye hazır.\n\nBu yeni özellikleri elde edebilirsiniz:\n%2$s</string>
+    <string name="appupdater_update_available_description_snackbar">Güncelleme %1$s mevcut!</string>
+    <string name="appupdater_update_available_description_notification">%2$s için %1$s güncellemesi indirilmeye hazır</string>
+    <string name="appupdater_update_not_available">Güncelleme mevcut değil</string>
+    <string name="appupdater_update_not_available_description">Zaten en son sürüm %s kullanıyorsunuz!</string>
+    <string name="appupdater_btn_update">Güncelle</string>
+    <string name="appupdater_btn_disable">Tekrar gösterme</string>
+    <string name="appupdater_btn_dismiss">Kapat</string>
+    <string name="appupdater_channel_name">Güncelleme bildirimleri</string>
+    <string name="uwu_host_checker">Host kontrolcüsü</string>
+    <string name="uwu_license_title">Lisans</string>
+    <string name="version">Sürüm</string>
+    <string name="uwu_group">Grup</string>
+    <string name="uwu_fokus_today">Bugüne odaklanalım!</string>
+    <string name="uwu_theme">Tema</string>
+    <string name="uwu_theme_desc">Vurgu rengini kendiniz seçin</string>
+    <string name="uwu_theme_mode_default">Sistem varsayılanı</string>
+    <string name="uwu_theme_mode_light">Açık</string>
+    <string name="uwu_theme_mode_dark">Koyu</string>
+    <string name="uwu_theme_botton_text">Temayı değiştir</string>
+    <string name="uwu_subscription">Abonelik</string>
+    <string name="uwu_subscription_desc">Abonelik grubunuzu buradan ayarlayın!</string>
+    <string name="uwu_summary_dashboard_tools">Neko-ray gelişmiş ayarlarına hoş geldiniz</string>
+    <string name="uwu_name">İsim :</string>
+    <string name="uwu_name_summary">İsim</string>
+    <string name="uwu_age">Yaş :</string>
+    <string name="uwu_age_summary">Yaş</string>
+    <string name="uwu_date">Doğum Tarihi :</string>
+    <string name="uwu_date_summary">Doğum Tarihi</string>
+    <string name="uwu_hobi">Hobi :</string>
+    <string name="uwu_hobi_summary">Hobi</string>
+    <string name="uwu_email">E-posta :</string>
+    <string name="uwu_email_summary">E-posta</string>
+    <string name="uwu_userid">Kullanıcı Kimliği :</string>
+    <string name="uwu_userid_summary">Kullanıcı Kimliği</string>
+    <string name="uwu_profile_update_tittle">Profili Güncelle</string>
+    <string name="uwu_profile_edit_tittle">Profili Düzenle</string>
+    <string name="uwu_name_dialog">İsim Boş Olamaz</string>
+    <string name="uwu_age_dialog">Yaş Boş Olamaz</string>
+    <string name="uwu_date_dialog">Doğum Tarihi Boş Olamaz</string>
+    <string name="uwu_hobi_dialog">Hobiler Boş Olamaz</string>
+    <string name="uwu_email_dialog">E-posta Boş Olamaz</string>
+    <string name="uwu_daftar_message">Neko-ray uygulamasını kullanabilmek için lütfen kişisel bilgilerinizi doldurun.</string>
+    <!-- Neko strings -->
+    
 </resources>
