@@ -11,10 +11,10 @@
             <solid
                 android:color="@color/uwu_bg_card" />
             <corners
-                android:topLeftRadius="4.0dip"
-                android:topRightRadius="4.0dip"
-                android:bottomLeftRadius="24.0dip"
-                android:bottomRightRadius="24.0dip" />
+                android:topLeftRadius="24.0dip"
+                android:topRightRadius="24.0dip"
+                android:bottomLeftRadius="0.0dip"
+                android:bottomRightRadius="0.0dip" />
         </shape>
     </item>
 </ripple>
