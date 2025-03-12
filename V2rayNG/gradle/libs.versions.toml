@@ -33,7 +33,7 @@ webkit = "1.12.1"
 barcodeScanning = "17.3.0"
 picasso = "2.71828"
 fastadapter = "5.7.0"
-navigationFragment = "2.8.8"
+navigationFragment = "2.8.9"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
