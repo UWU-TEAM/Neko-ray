@@ -409,6 +409,12 @@
     <string name="uwu_hobi_dialog">Hobbies Cannot Be Empty</string>
     <string name="uwu_email_dialog">Email Cannot Be Empty</string>
     <string name="uwu_daftar_message">Please fill in your personal data to be able to use the Neko-ray application.</string>
+    <string name="uwu_settings_summary">Neko-ray Settings vpn for your phone</string>
+    <string name="uwu_logcat_summary">Logcat For Neko-ray</string>
+    <string name="uwu_network_summary">Change your network type in phone info</string>
+    <string name="uwu_backup_summary">Backup, Restore, or Share your config</string>
+    <string name="uwu_hostip_summary">Host to IP conversion</string>
+    <string name="uwu_issue_summary">Report your issue</string>
     <!-- Neko strings -->
 
 </resources>
