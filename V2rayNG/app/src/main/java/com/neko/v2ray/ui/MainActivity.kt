@@ -242,8 +242,9 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 if (binding.drawerLayout.isDrawerOpen(GravityCompat.START)) {
                     binding.drawerLayout.closeDrawer(GravityCompat.START)
                 } else {
-                    //super.onBackPressed()
+                    isEnabled = false
                     onBackPressedDispatcher.onBackPressed()
+                    isEnabled = true
                 }
             }
         })
