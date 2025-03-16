@@ -15,7 +15,7 @@ updates:
 
   - package-ecosystem: "gradle"
     labels: []
-    directory: "V2rayNG"
+    directory: "/V2rayNG"
     target-branch: "main"
     schedule:
       interval: "daily"
