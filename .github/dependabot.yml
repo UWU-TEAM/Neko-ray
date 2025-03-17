@@ -10,7 +10,7 @@ updates:
     directory: "/"
     target-branch: "main"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       timezone: "Asia/Jakarta"
 
   - package-ecosystem: "gradle"
@@ -18,7 +18,7 @@ updates:
     directory: "/V2rayNG"
     target-branch: "main"
     schedule:
-      interval: "daily"
+      interval: "weekly"
       timezone: "Asia/Jakarta"
     ignore:
       - dependency-name: "com.tencent:mmkv-static*"
