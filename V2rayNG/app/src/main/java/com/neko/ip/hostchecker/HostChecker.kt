@@ -79,7 +79,7 @@ class HostChecker : BaseActivity() {
     }
 
     override fun onCreate(bundle: Bundle?) {
-        ADRTLogCatReader.onContext(this, "com.aide.ui.fagmmmu")
+        ADRTLogCatReader.onContext(this, "com.neko.v2ray")
         super.onCreate(bundle)
         setContentView(R.layout.uwu_activity_hostchecker)
         initialize(bundle)
