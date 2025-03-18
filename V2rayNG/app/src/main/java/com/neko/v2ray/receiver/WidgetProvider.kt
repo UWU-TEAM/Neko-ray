@@ -11,7 +11,6 @@ import android.widget.RemoteViews
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.service.V2RayServiceManager
-import com.neko.v2ray.util.Utils
 
 class WidgetProvider : AppWidgetProvider() {
     /**
@@ -58,9 +57,9 @@ class WidgetProvider : AppWidgetProvider() {
         super.onReceive(context, intent)
         if (AppConfig.BROADCAST_ACTION_WIDGET_CLICK == intent.action) {
             if (V2RayServiceManager.v2rayPoint.isRunning) {
-                Utils.stopVService(context)
+                V2RayServiceManager.stopVService(context)
             } else {
-                Utils.startVServiceFromToggle(context)
+                V2RayServiceManager.startVServiceFromToggle(context)
             }
         } else if (AppConfig.BROADCAST_ACTION_ACTIVITY == intent.action) {
             AppWidgetManager.getInstance(context)?.let { manager ->
