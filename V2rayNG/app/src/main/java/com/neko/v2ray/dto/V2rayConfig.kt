@@ -8,8 +8,10 @@ import com.google.gson.JsonSerializer
 import com.google.gson.annotations.SerializedName
 import com.google.gson.reflect.TypeToken
 import com.neko.v2ray.AppConfig
-import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.*
-import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.VnextBean.*
+import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.ServersBean
+import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.VnextBean
+import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.VnextBean.UsersBean
+import com.neko.v2ray.dto.V2rayConfig.OutboundBean.OutSettingsBean.WireGuardBean
 import com.neko.v2ray.util.Utils
 import java.lang.reflect.Type
 

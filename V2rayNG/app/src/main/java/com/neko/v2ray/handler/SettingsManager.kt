@@ -22,7 +22,6 @@ import com.neko.v2ray.util.Utils.parseInt
 import java.io.File
 import java.io.FileOutputStream
 import java.util.Collections
-import kotlin.Int
 
 object SettingsManager {
 

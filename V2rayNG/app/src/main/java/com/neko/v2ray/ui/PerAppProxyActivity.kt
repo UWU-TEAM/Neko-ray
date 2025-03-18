@@ -22,12 +22,12 @@ import com.neko.v2ray.extension.toast
 import com.neko.v2ray.extension.v2RayApplication
 import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.AppManagerUtil
+import com.neko.v2ray.util.HttpUtil
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.Collator
-import com.v2ray.ang.util.HttpUtil
 
 class PerAppProxyActivity : BaseActivity() {
     private val binding by lazy {

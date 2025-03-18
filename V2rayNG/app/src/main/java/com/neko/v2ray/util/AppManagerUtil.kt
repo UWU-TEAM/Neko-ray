@@ -4,8 +4,8 @@ import android.content.Context
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import com.neko.v2ray.dto.AppInfo
-import kotlinx.coroutines.withContext
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 object AppManagerUtil {
     suspend fun loadNetworkAppList(context: Context): ArrayList<AppInfo> =

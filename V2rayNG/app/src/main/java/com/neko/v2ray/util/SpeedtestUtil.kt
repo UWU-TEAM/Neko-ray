@@ -7,7 +7,6 @@ import android.util.Log
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.extension.responseLength
-import com.neko.v2ray.util.HttpUtil
 import kotlinx.coroutines.isActive
 import libv2ray.Libv2ray
 import java.io.IOException

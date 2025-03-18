@@ -9,7 +9,6 @@ import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.Utils
 import java.net.URI
-import kotlin.text.orEmpty
 
 object TrojanFmt : FmtBase() {
     fun parse(str: String): ProfileItem? {

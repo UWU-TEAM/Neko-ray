@@ -14,7 +14,6 @@ import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.Utils
 import java.net.URI
-import kotlin.text.orEmpty
 
 object VmessFmt : FmtBase() {
     fun parse(str: String): ProfileItem? {

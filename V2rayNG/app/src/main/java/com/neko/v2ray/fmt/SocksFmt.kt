@@ -7,7 +7,6 @@ import com.neko.v2ray.extension.idnHost
 import com.neko.v2ray.extension.isNotNullEmpty
 import com.neko.v2ray.util.Utils
 import java.net.URI
-import kotlin.text.orEmpty
 
 object SocksFmt : FmtBase() {
     fun parse(str: String): ProfileItem? {

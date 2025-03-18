@@ -10,7 +10,6 @@ import com.neko.v2ray.databinding.ActivityLogcatBinding
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.AngConfigManager
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.net.URLDecoder

@@ -11,7 +11,6 @@ import android.view.MenuItem
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.appbar.CollapsingToolbarLayout
-import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.R
