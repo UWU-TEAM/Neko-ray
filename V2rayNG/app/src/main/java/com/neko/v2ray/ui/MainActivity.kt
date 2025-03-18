@@ -837,7 +837,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             // jika pilih yes
             .setPositiveButton(R.string.uwu_text_yes) { _, _ ->
                 if (mainViewModel.isRunning.value == true) {
-                    Utils.stopVService(this)
+                    V2RayServiceManager.stopVService(this)
                 }
                 this@MainActivity.finish()
             }
