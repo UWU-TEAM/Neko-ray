@@ -16,6 +16,7 @@ import com.neko.v2ray.fmt.TrojanFmt
 import com.neko.v2ray.fmt.VlessFmt
 import com.neko.v2ray.fmt.VmessFmt
 import com.neko.v2ray.fmt.WireguardFmt
+import com.neko.v2ray.util.HttpUtil
 import com.neko.v2ray.util.JsonUtil
 import com.neko.v2ray.util.QRCodeDecoder
 import com.neko.v2ray.util.Utils
@@ -345,7 +346,7 @@ object AngConfigManager {
             if (!it.second.enabled) {
                 return 0
             }
-            val url = Utils.idnToASCII(it.second.url)
+            val url = HttpUtil.idnToASCII(it.second.url)
             if (!Utils.isValidUrl(url)) {
                 return 0
             }
@@ -353,7 +354,7 @@ object AngConfigManager {
 
             var configText = try {
                 val httpPort = SettingsManager.getHttpPort()
-                Utils.getUrlContentWithCustomUserAgent(url, 30000, httpPort)
+                HttpUtil.getUrlContentWithUserAgent(url, 30000, httpPort)
             } catch (e: Exception) {
                 Log.e(AppConfig.ANG_PACKAGE, "Update subscription: proxy not ready or other error, try……")
                 //e.printStackTrace()
@@ -361,7 +362,7 @@ object AngConfigManager {
             }
             if (configText.isEmpty()) {
                 configText = try {
-                    Utils.getUrlContentWithCustomUserAgent(url)
+                    HttpUtil.getUrlContentWithUserAgent(url)
                 } catch (e: Exception) {
                     e.printStackTrace()
                     ""

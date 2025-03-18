@@ -21,7 +21,6 @@ import androidx.core.content.ContextCompat
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.AppConfig.LOOPBACK
-import com.neko.v2ray.BuildConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.dto.Language
 import com.neko.v2ray.extension.toast
@@ -337,6 +336,7 @@ object Utils {
         return Base64.encodeToString(androidId.copyOf(32), Base64.NO_PADDING.or(Base64.URL_SAFE))
     }
 
+<<<<<<< HEAD:V2rayNG/app/src/main/java/com/neko/v2ray/util/Utils.kt
     fun getUrlContext(url: String, timeout: Int): String {
         var result: String
         var conn: HttpURLConnection? = null
@@ -421,6 +421,11 @@ object Utils {
     // fun getDarkModeStatus(context: Context): Boolean {
         // return context.resources.configuration.uiMode and UI_MODE_NIGHT_MASK != UI_MODE_NIGHT_NO
     // }
+=======
+    fun getDarkModeStatus(context: Context): Boolean {
+        return context.resources.configuration.uiMode and UI_MODE_NIGHT_MASK != UI_MODE_NIGHT_NO
+    }
+>>>>>>> 1972f83b8 (Add HttpUtil, refactor the network connection function):V2rayNG/app/src/main/java/com/v2ray/ang/util/Utils.kt
 
     // fun setNightMode(context: Context) {
         // when (settingsStorage?.decodeString(AppConfig.PREF_UI_MODE_NIGHT, "0")) {
@@ -475,12 +480,6 @@ object Utils {
 
     fun removeWhiteSpace(str: String?): String? {
         return str?.replace(" ", "")
-    }
-
-    fun idnToASCII(str: String): String {
-        val url = URL(str)
-        return URL(url.protocol, IDN.toASCII(url.host, IDN.ALLOW_UNASSIGNED), url.port, url.file)
-            .toExternalForm()
     }
 
     fun isTv(context: Context): Boolean =

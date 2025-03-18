@@ -1,7 +1,6 @@
 package com.neko.v2ray.ui
 
 import android.Manifest
-import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
@@ -41,6 +40,7 @@ import com.neko.v2ray.handler.MigrateManager
 import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.helper.SimpleItemTouchHelperCallback
 import com.neko.v2ray.service.V2RayServiceManager
+import com.neko.v2ray.util.HttpUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.viewmodel.MainViewModel
 import kotlinx.coroutines.Dispatchers
@@ -48,7 +48,6 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import me.drakeet.support.toast.ToastCompat
-import java.util.concurrent.TimeUnit
 
 import android.content.Context
 import android.view.View
@@ -748,7 +747,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             }
             lifecycleScope.launch(Dispatchers.IO) {
                 val configText = try {
-                    Utils.getUrlContentWithCustomUserAgent(url)
+                    HttpUtil.getUrlContentWithUserAgent(url)
                 } catch (e: Exception) {
                     e.printStackTrace()
                     ""
