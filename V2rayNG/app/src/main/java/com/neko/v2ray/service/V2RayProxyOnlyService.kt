@@ -6,8 +6,8 @@ import android.content.Intent
 import android.os.Build
 import android.os.IBinder
 import androidx.annotation.RequiresApi
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.MyContextWrapper
-import com.neko.v2ray.util.Utils
 import java.lang.ref.SoftReference
 
 class V2RayProxyOnlyService : Service(), ServiceControl {
@@ -49,7 +49,7 @@ class V2RayProxyOnlyService : Service(), ServiceControl {
     @RequiresApi(Build.VERSION_CODES.N)
     override fun attachBaseContext(newBase: Context?) {
         val context = newBase?.let {
-            MyContextWrapper.wrap(newBase, Utils.getLocale())
+            MyContextWrapper.wrap(newBase, SettingsManager.getLocale())
         }
         super.attachBaseContext(context)
     }

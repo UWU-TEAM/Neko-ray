@@ -7,7 +7,6 @@ import androidx.work.WorkManager
 import com.tencent.mmkv.MMKV
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.handler.SettingsManager
-import com.neko.v2ray.util.Utils
 
 class AngApplication : MultiDexApplication() {
     companion object {
@@ -26,6 +25,9 @@ class AngApplication : MultiDexApplication() {
     override fun onCreate() {
         super.onCreate()
         MMKV.initialize(this)
+
+        // SettingsManager.setNightMode()
+        // Initialize WorkManager with the custom configuration
         WorkManager.initialize(this, workManagerConfiguration)
         SettingsManager.initRoutingRulesets(this)
     }

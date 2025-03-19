@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.view.MenuItem
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
+import com.neko.themeengine.ThemeEngine
+import androidx.core.view.WindowCompat
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.MyContextWrapper
 import com.neko.v2ray.util.Utils
-import com.neko.themeengine.ThemeEngine
 
 abstract class BaseActivity : AppCompatActivity() {
 
@@ -31,6 +33,6 @@ abstract class BaseActivity : AppCompatActivity() {
 
     @RequiresApi(Build.VERSION_CODES.N)
     override fun attachBaseContext(newBase: Context?) {
-        super.attachBaseContext(MyContextWrapper.wrap(newBase ?: return, Utils.getLocale()))
+        super.attachBaseContext(MyContextWrapper.wrap(newBase ?: return, SettingsManager.getLocale()))
     }
 }

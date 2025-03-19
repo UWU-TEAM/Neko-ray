@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.preference.PreferenceManager
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.handler.MmkvManager
-import com.neko.v2ray.util.Utils
+import com.neko.v2ray.handler.SettingsManager
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application),
     SharedPreferences.OnSharedPreferenceChangeListener {
@@ -82,8 +82,8 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
 //                MmkvManager.encodeSettings(key, sharedPreferences.getStringSet(key, setOf()))
 //            }
         }
-//        if (key == AppConfig.PREF_UI_MODE_NIGHT) {
-//            Utils.setNightMode(getApplication())
-//        }
+        // if (key == AppConfig.PREF_UI_MODE_NIGHT) {
+            // SettingsManager.setNightMode()
+        // }
     }
 }

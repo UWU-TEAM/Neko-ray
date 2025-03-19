@@ -15,6 +15,7 @@ import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.extension.toast
 import com.neko.v2ray.handler.MmkvManager
+import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.handler.V2rayConfigManager
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.PluginUtil
@@ -176,14 +177,14 @@ object V2RayServiceManager {
             var errstr = ""
             if (v2rayPoint.isRunning) {
                 try {
-                    time = v2rayPoint.measureDelay(Utils.getDelayTestUrl())
+                    time = v2rayPoint.measureDelay(SettingsManager.getDelayTestUrl())
                 } catch (e: Exception) {
                     Log.d(ANG_PACKAGE, "measureV2rayDelay: $e")
                     errstr = e.message?.substringAfter("\":") ?: "empty message"
                 }
                 if (time == -1L) {
                     try {
-                        time = v2rayPoint.measureDelay(Utils.getDelayTestUrl(true))
+                        time = v2rayPoint.measureDelay(SettingsManager.getDelayTestUrl(true))
                     } catch (e: Exception) {
                         Log.d(ANG_PACKAGE, "measureV2rayDelay: $e")
                         errstr = e.message?.substringAfter("\":") ?: "empty message"
