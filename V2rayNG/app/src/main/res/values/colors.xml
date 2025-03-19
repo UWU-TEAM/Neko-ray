@@ -11,6 +11,7 @@
     <color name="color_secondary">#727272</color>
     <color name="colorSelected">#ffffffff</color>
     <color name="colorUnselected">@android:color/transparent</color>
+    <color name="divider_color_light">#E0E0E0</color>
 
     <color name="colorPrimary">#FFFFFF</color>
     <color name="colorPrimaryDark">#000000</color>

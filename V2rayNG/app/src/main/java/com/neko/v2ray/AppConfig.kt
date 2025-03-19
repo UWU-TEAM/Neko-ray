@@ -15,7 +15,6 @@ object AppConfig {
 
     /** Legacy configuration keys. */
     const val ANG_CONFIG = "ang_config"
-    const val PREF_INAPP_BUY_IS_PREMIUM = "pref_inapp_buy_is_premium"
     const val PREF_IGNORE_BATTERY_OPTIMIZATION = "pref_ignore_battery_optimization"
 
     /** Preferences mapped to MMKV storage. */

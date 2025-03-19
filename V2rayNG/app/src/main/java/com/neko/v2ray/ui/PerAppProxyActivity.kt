@@ -46,8 +46,7 @@ class PerAppProxyActivity : BaseActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        val dividerItemDecoration = DividerItemDecoration(this, LinearLayoutManager.VERTICAL)
-        binding.recyclerView.addItemDecoration(dividerItemDecoration)
+        addCustomDividerToRecyclerView(binding.recyclerView, this, R.drawable.custom_divider)
 
         val blacklist = MmkvManager.decodeSettingsStringSet(AppConfig.PREF_PER_APP_PROXY_SET)
 
