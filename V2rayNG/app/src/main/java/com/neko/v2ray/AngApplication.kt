@@ -13,6 +13,10 @@ class AngApplication : MultiDexApplication() {
         lateinit var application: AngApplication
     }
 
+    /**
+     * Attaches the base context to the application.
+     * @param base The base context.
+     */
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
         application = this
@@ -22,8 +26,12 @@ class AngApplication : MultiDexApplication() {
         .setDefaultProcessName("${ANG_PACKAGE}:bg")
         .build()
 
+    /**
+     * Initializes the application.
+     */
     override fun onCreate() {
         super.onCreate()
+
         MMKV.initialize(this)
 
         // SettingsManager.setNightMode()
@@ -31,5 +39,4 @@ class AngApplication : MultiDexApplication() {
         WorkManager.initialize(this, workManagerConfiguration)
         SettingsManager.initRoutingRulesets(this)
     }
-
 }
