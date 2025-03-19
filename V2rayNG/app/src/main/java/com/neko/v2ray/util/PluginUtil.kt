@@ -7,6 +7,7 @@ import com.neko.v2ray.AppConfig.ANG_PACKAGE
 import com.neko.v2ray.dto.EConfigType
 import com.neko.v2ray.dto.ProfileItem
 import com.neko.v2ray.fmt.Hysteria2Fmt
+import com.neko.v2ray.handler.SpeedtestManager
 import com.neko.v2ray.service.ProcessService
 import java.io.File
 
@@ -49,7 +50,7 @@ object PluginUtil {
             val proc = ProcessService()
             proc.runProcess(context, cmd)
             Thread.sleep(1000L)
-            val delay = SpeedtestUtil.testConnection(context, socksPort)
+            val delay = SpeedtestManager.testConnection(context, socksPort)
             proc.stopProcess()
 
             return delay.first

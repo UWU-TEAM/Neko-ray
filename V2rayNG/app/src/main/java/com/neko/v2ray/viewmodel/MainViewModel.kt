@@ -11,6 +11,7 @@ import androidx.core.content.ContextCompat
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
+<<<<<<< HEAD:V2rayNG/app/src/main/java/com/neko/v2ray/viewmodel/MainViewModel.kt
 import com.neko.v2ray.AngApplication
 import com.neko.v2ray.AppConfig
 import com.neko.v2ray.AppConfig.ANG_PACKAGE
@@ -26,6 +27,23 @@ import com.neko.v2ray.handler.SettingsManager
 import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
+=======
+import com.v2ray.ang.AngApplication
+import com.v2ray.ang.AppConfig
+import com.v2ray.ang.AppConfig.ANG_PACKAGE
+import com.v2ray.ang.R
+import com.v2ray.ang.dto.ProfileItem
+import com.v2ray.ang.dto.ServersCache
+import com.v2ray.ang.extension.serializable
+import com.v2ray.ang.extension.toast
+import com.v2ray.ang.fmt.CustomFmt
+import com.v2ray.ang.handler.AngConfigManager
+import com.v2ray.ang.handler.MmkvManager
+import com.v2ray.ang.handler.SettingsManager
+import com.v2ray.ang.util.MessageUtil
+import com.v2ray.ang.handler.SpeedtestManager
+import com.v2ray.ang.util.Utils
+>>>>>>> 172d9fd09 (Migrate SpeedtestUtil to SpeedtestManager):V2rayNG/app/src/main/java/com/v2ray/ang/viewmodel/MainViewModel.kt
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -60,7 +78,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
     override fun onCleared() {
         getApplication<AngApplication>().unregisterReceiver(mMsgReceiver)
         tcpingTestScope.coroutineContext[Job]?.cancelChildren()
-        SpeedtestUtil.closeAllTcpSockets()
+        SpeedtestManager.closeAllTcpSockets()
         Log.i(ANG_PACKAGE, "Main ViewModel is cleared")
         super.onCleared()
     }
@@ -174,7 +192,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun testAllTcping() {
         tcpingTestScope.coroutineContext[Job]?.cancelChildren()
-        SpeedtestUtil.closeAllTcpSockets()
+        SpeedtestManager.closeAllTcpSockets()
         MmkvManager.clearAllTestDelayResults(serversCache.map { it.guid }.toList())
         //updateListAction.value = -1 // update all
 
@@ -185,7 +203,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 val serverPort = outbound.serverPort
                 if (serverAddress != null && serverPort != null) {
                     tcpingTestScope.launch {
-                        val testResult = SpeedtestUtil.tcping(serverAddress, serverPort.toInt())
+                        val testResult = SpeedtestManager.tcping(serverAddress, serverPort.toInt())
                         launch(Dispatchers.Main) {
                             MmkvManager.encodeServerTestDelayMillis(item.guid, testResult)
                             updateListAction.value = getPosition(item.guid)
