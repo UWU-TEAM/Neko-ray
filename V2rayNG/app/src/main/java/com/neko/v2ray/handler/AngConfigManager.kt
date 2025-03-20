@@ -23,84 +23,6 @@ import com.neko.v2ray.util.Utils
 import java.net.URI
 
 object AngConfigManager {
-    /**
-     * parse config form qrcode or...
-     */
-    private fun parseConfig(
-        str: String?,
-        subid: String,
-        subItem: SubscriptionItem?,
-        removedSelectedServer: ProfileItem?
-    ): Int {
-        try {
-            if (str == null || TextUtils.isEmpty(str)) {
-                return R.string.toast_none_data
-            }
-            val config = if (str.startsWith(EConfigType.VMESS.protocolScheme)) {
-                VmessFmt.parse(str)
-            } else if (str.startsWith(EConfigType.SHADOWSOCKS.protocolScheme)) {
-                ShadowsocksFmt.parse(str)
-            } else if (str.startsWith(EConfigType.SOCKS.protocolScheme)) {
-                SocksFmt.parse(str)
-            } else if (str.startsWith(EConfigType.TROJAN.protocolScheme)) {
-                TrojanFmt.parse(str)
-            } else if (str.startsWith(EConfigType.VLESS.protocolScheme)) {
-                VlessFmt.parse(str)
-            } else if (str.startsWith(EConfigType.WIREGUARD.protocolScheme)) {
-                WireguardFmt.parse(str)
-            } else if (str.startsWith(EConfigType.HYSTERIA2.protocolScheme) || str.startsWith(HY2)) {
-                Hysteria2Fmt.parse(str)
-            } else {
-                null
-            }
-
-            if (config == null) {
-                return R.string.toast_incorrect_protocol
-            }
-            //filter
-            if (subItem?.filter != null && subItem.filter?.isNotEmpty() == true && config.remarks.isNotEmpty()) {
-                val matched = Regex(pattern = subItem.filter ?: "")
-                    .containsMatchIn(input = config.remarks)
-                if (!matched) return -1
-            }
-
-            config.subscriptionId = subid
-            val guid = MmkvManager.encodeServerConfig("", config)
-            if (removedSelectedServer != null &&
-                config.server == removedSelectedServer.server && config.serverPort == removedSelectedServer.serverPort
-            ) {
-                MmkvManager.setSelectServer(guid)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return -1
-        }
-        return 0
-    }
-
-    /**
-     * share config
-     */
-    private fun shareConfig(guid: String): String {
-        try {
-            val config = MmkvManager.decodeServerConfig(guid) ?: return ""
-
-            return config.configType.protocolScheme + when (config.configType) {
-                EConfigType.VMESS -> VmessFmt.toUri(config)
-                EConfigType.CUSTOM -> ""
-                EConfigType.SHADOWSOCKS -> ShadowsocksFmt.toUri(config)
-                EConfigType.SOCKS -> SocksFmt.toUri(config)
-                EConfigType.HTTP -> ""
-                EConfigType.VLESS -> VlessFmt.toUri(config)
-                EConfigType.TROJAN -> TrojanFmt.toUri(config)
-                EConfigType.WIREGUARD -> WireguardFmt.toUri(config)
-                EConfigType.HYSTERIA2 -> Hysteria2Fmt.toUri(config)
-            }
-        } catch (e: Exception) {
-            e.printStackTrace()
-            return ""
-        }
-    }
 
     /**
      * share2Clipboard
@@ -188,6 +110,41 @@ object AngConfigManager {
         return 0
     }
 
+    /**
+     * Shares the configuration.
+     *
+     * @param guid The GUID of the configuration.
+     * @return The configuration string.
+     */
+    private fun shareConfig(guid: String): String {
+        try {
+            val config = MmkvManager.decodeServerConfig(guid) ?: return ""
+
+            return config.configType.protocolScheme + when (config.configType) {
+                EConfigType.VMESS -> VmessFmt.toUri(config)
+                EConfigType.CUSTOM -> ""
+                EConfigType.SHADOWSOCKS -> ShadowsocksFmt.toUri(config)
+                EConfigType.SOCKS -> SocksFmt.toUri(config)
+                EConfigType.HTTP -> ""
+                EConfigType.VLESS -> VlessFmt.toUri(config)
+                EConfigType.TROJAN -> TrojanFmt.toUri(config)
+                EConfigType.WIREGUARD -> WireguardFmt.toUri(config)
+                EConfigType.HYSTERIA2 -> Hysteria2Fmt.toUri(config)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return ""
+        }
+    }
+
+    /**
+     * Imports a batch of configurations.
+     *
+     * @param server The server string.
+     * @param subid The subscription ID.
+     * @param append Whether to append the configurations.
+     * @return A pair containing the number of configurations and subscriptions imported.
+     */
     fun importBatchConfig(server: String?, subid: String, append: Boolean): Pair<Int, Int> {
         var count = parseBatchConfig(Utils.decode(server), subid, append)
         if (count <= 0) {
@@ -208,7 +165,13 @@ object AngConfigManager {
         return count to countSub
     }
 
-    fun parseBatchSubscription(servers: String?): Int {
+    /**
+     * Parses a batch of subscriptions.
+     *
+     * @param servers The servers string.
+     * @return The number of subscriptions parsed.
+     */
+    private fun parseBatchSubscription(servers: String?): Int {
         try {
             if (servers == null) {
                 return 0
@@ -229,7 +192,15 @@ object AngConfigManager {
         return 0
     }
 
-    fun parseBatchConfig(servers: String?, subid: String, append: Boolean): Int {
+    /**
+     * Parses a batch of configurations.
+     *
+     * @param servers The servers string.
+     * @param subid The subscription ID.
+     * @param append Whether to append the configurations.
+     * @return The number of configurations parsed.
+     */
+    private fun parseBatchConfig(servers: String?, subid: String, append: Boolean): Int {
         try {
             if (servers == null) {
                 return 0
@@ -269,7 +240,14 @@ object AngConfigManager {
         return 0
     }
 
-    fun parseCustomConfigServer(server: String?, subid: String): Int {
+    /**
+     * Parses a custom configuration server.
+     *
+     * @param server The server string.
+     * @param subid The subscription ID.
+     * @return The number of configurations parsed.
+     */
+    private fun parseCustomConfigServer(server: String?, subid: String): Int {
         if (server == null) {
             return 0
         }
@@ -322,6 +300,73 @@ object AngConfigManager {
         }
     }
 
+    /**
+     * Parses the configuration from a QR code or string.
+     *
+     * @param str The configuration string.
+     * @param subid The subscription ID.
+     * @param subItem The subscription item.
+     * @param removedSelectedServer The removed selected server.
+     * @return The result code.
+     */
+    private fun parseConfig(
+        str: String?,
+        subid: String,
+        subItem: SubscriptionItem?,
+        removedSelectedServer: ProfileItem?
+    ): Int {
+        try {
+            if (str == null || TextUtils.isEmpty(str)) {
+                return R.string.toast_none_data
+            }
+
+            val config = if (str.startsWith(EConfigType.VMESS.protocolScheme)) {
+                VmessFmt.parse(str)
+            } else if (str.startsWith(EConfigType.SHADOWSOCKS.protocolScheme)) {
+                ShadowsocksFmt.parse(str)
+            } else if (str.startsWith(EConfigType.SOCKS.protocolScheme)) {
+                SocksFmt.parse(str)
+            } else if (str.startsWith(EConfigType.TROJAN.protocolScheme)) {
+                TrojanFmt.parse(str)
+            } else if (str.startsWith(EConfigType.VLESS.protocolScheme)) {
+                VlessFmt.parse(str)
+            } else if (str.startsWith(EConfigType.WIREGUARD.protocolScheme)) {
+                WireguardFmt.parse(str)
+            } else if (str.startsWith(EConfigType.HYSTERIA2.protocolScheme) || str.startsWith(HY2)) {
+                Hysteria2Fmt.parse(str)
+            } else {
+                null
+            }
+
+            if (config == null) {
+                return R.string.toast_incorrect_protocol
+            }
+            //filter
+            if (subItem?.filter != null && subItem.filter?.isNotEmpty() == true && config.remarks.isNotEmpty()) {
+                val matched = Regex(pattern = subItem.filter ?: "")
+                    .containsMatchIn(input = config.remarks)
+                if (!matched) return -1
+            }
+
+            config.subscriptionId = subid
+            val guid = MmkvManager.encodeServerConfig("", config)
+            if (removedSelectedServer != null &&
+                config.server == removedSelectedServer.server && config.serverPort == removedSelectedServer.serverPort
+            ) {
+                MmkvManager.setSelectServer(guid)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            return -1
+        }
+        return 0
+    }
+
+    /**
+     * Updates the configuration via all subscriptions.
+     *
+     * @return The number of configurations updated.
+     */
     fun updateConfigViaSubAll(): Int {
         var count = 0
         try {

@@ -23,8 +23,8 @@ import com.neko.v2ray.fmt.CustomFmt
 import com.neko.v2ray.handler.AngConfigManager
 import com.neko.v2ray.handler.MmkvManager
 import com.neko.v2ray.handler.SettingsManager
-import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.handler.SpeedtestManager
+import com.neko.v2ray.util.MessageUtil
 import com.neko.v2ray.util.Utils
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
