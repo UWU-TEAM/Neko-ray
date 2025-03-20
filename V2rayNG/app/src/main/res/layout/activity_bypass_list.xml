@@ -29,7 +29,7 @@
             app:maxLines="3"
             app:scrimAnimationDuration="50"
             app:statusBarScrim="@null"
-            app:title="@string/title_pref_per_app_proxy"
+            app:title="@string/per_app_proxy_settings"
             app:titleCollapseMode="scale"
             app:toolbarId="@+id/toolbar">
             <com.google.android.material.appbar.MaterialToolbar
@@ -146,7 +146,7 @@
                                             android:textAppearance="@style/TextAppearance.AppCompat.Small"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:text="@string/title_pref_per_app_proxy"
+                                            android:text="@string/per_app_proxy_settings_enable"
                                             android:layout_below="@+id/switch_per_app_proxy" />
                                     </LinearLayout>
                                 </FrameLayout>

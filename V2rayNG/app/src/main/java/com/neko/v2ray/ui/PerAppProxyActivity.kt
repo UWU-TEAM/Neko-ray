@@ -46,8 +46,6 @@ class PerAppProxyActivity : BaseActivity() {
 
         addCustomDividerToRecyclerView(binding.recyclerView, this, R.drawable.custom_divider)
 
-        val blacklist = MmkvManager.decodeSettingsStringSet(AppConfig.PREF_PER_APP_PROXY_SET)
-
         lifecycleScope.launch {
             try {
                 binding.pbWaiting.show()
