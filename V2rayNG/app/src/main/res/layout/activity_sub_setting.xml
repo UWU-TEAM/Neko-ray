@@ -62,6 +62,13 @@
             app:cardBackgroundColor="#00000000"
             app:cardCornerRadius="28.0dip"
             app:cardElevation="0.0dip">
+            <com.google.android.material.progressindicator.LinearProgressIndicator
+                android:id="@+id/pb_waiting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:indeterminate="true"
+                android:visibility="invisible"
+                app:indicatorColor="?attr/colorThemeUwu" />
             <androidx.core.widget.NestedScrollView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
