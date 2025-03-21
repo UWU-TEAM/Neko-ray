@@ -16,6 +16,12 @@
         android:paddingBottom="@dimen/layout_margin_spacing">
 
         <androidx.appcompat.widget.AppCompatTextView
+             android:id="@+id/log_tag"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/log_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
