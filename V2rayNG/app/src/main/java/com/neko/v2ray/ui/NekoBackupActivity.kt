@@ -17,7 +17,6 @@ import com.neko.v2ray.AppConfig
 import com.neko.v2ray.BuildConfig
 import com.neko.v2ray.R
 import com.neko.v2ray.databinding.UwuBackupBinding
-import com.neko.v2ray.util.SpeedtestUtil
 import com.neko.v2ray.util.Utils
 import com.neko.v2ray.util.ZipUtil
 import java.io.File

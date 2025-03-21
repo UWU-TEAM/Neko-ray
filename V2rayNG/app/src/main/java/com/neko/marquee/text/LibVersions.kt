@@ -3,14 +3,14 @@ package com.neko.marquee.text
 import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
-import com.neko.v2ray.util.SpeedtestUtil
+import com.neko.v2ray.handler.SpeedtestManager
 
 class LibVersions(context: Context) : AppCompatTextView(context) {
     private var memekVersion: String? = null
 
     private fun JupokInfoSlur() {
         val sb = StringBuilder()
-        sb.append(SpeedtestUtil.getLibVersion())
+        sb.append(SpeedtestManager.getLibVersion())
         text = sb.toString()
     }
 
