@@ -7,7 +7,7 @@
         android:top="0dp">
         <shape>
             <size android:height="1dp" />
-            <solid android:color="@color/divider_color_light" />
+            <solid android:color="@color/uwu_transparent" />
         </shape>
     </item>
 </layer-list>
