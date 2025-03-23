@@ -1027,19 +1027,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         // Handle navigation view item clicks here.
-        when (item.itemId) {
-            R.id.sub_setting -> requestSubSettingActivity.launch(Intent(this, SubSettingActivity::class.java))
-            R.id.settings -> startActivity(
-                Intent(this, SettingsActivity::class.java)
-                    .putExtra("isRunning", mainViewModel.isRunning.value == true)
-            )
+        // when (item.itemId) {
+            // R.id.sub_setting -> requestSubSettingActivity.launch(Intent(this, SubSettingActivity::class.java))
+            // R.id.settings -> startActivity(
+                // Intent(this, SettingsActivity::class.java)
+                    // .putExtra("isRunning", mainViewModel.isRunning.value == true)
+            // )
 
-            R.id.per_app_proxy_settings -> startActivity(Intent(this, PerAppProxyActivity::class.java))
-            R.id.routing_setting -> requestSubSettingActivity.launch(Intent(this, RoutingSettingActivity::class.java))
-            R.id.promotion -> Utils.openUri(this, "${Utils.decode(AppConfig.PromotionUrl)}?t=${System.currentTimeMillis()}")
-            R.id.logcat -> startActivity(Intent(this, LogcatActivity::class.java))
-            R.id.about -> startActivity(Intent(this, AboutActivity::class.java))
-        }
+            // R.id.per_app_proxy_settings -> startActivity(Intent(this, PerAppProxyActivity::class.java))
+            // R.id.routing_setting -> requestSubSettingActivity.launch(Intent(this, RoutingSettingActivity::class.java))
+            // R.id.promotion -> Utils.openUri(this, "${Utils.decode(AppConfig.PromotionUrl)}?t=${System.currentTimeMillis()}")
+            // R.id.logcat -> startActivity(Intent(this, LogcatActivity::class.java))
+            // R.id.about -> startActivity(Intent(this, AboutActivity::class.java))
+        // }
 
         binding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
