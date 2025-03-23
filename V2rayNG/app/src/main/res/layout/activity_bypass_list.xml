@@ -66,6 +66,12 @@
                 android:id="@+id/pb_waiting"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:paddingTop="0.0dip"
+                android:paddingBottom="0.0dip"
+                android:paddingStart="8.0dip"
+                android:paddingEnd="8.0dip"
+                android:layout_marginStart="20.0dip"
+                android:layout_marginEnd="20.0dip"
                 android:indeterminate="true"
                 android:visibility="invisible"
                 app:indicatorColor="?attr/colorThemeUwu" />
