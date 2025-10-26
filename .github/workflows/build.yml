@@ -127,35 +127,35 @@ jobs:
         ./gradlew assemble
 
     - name: arm64
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: github.event.inputs.release_tag == ''
       with:
         name: Arm64
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*arm64-v8a.apk
 
     - name: armeabi-v7a
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: github.event.inputs.release_tag == ''
       with:
         name: Armeabi-v7a
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*armeabi-v7a.apk
 
     - name: x86
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: github.event.inputs.release_tag == ''
       with:
         name: X86
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86.apk
 
     - name: x86_64
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: github.event.inputs.release_tag == ''
       with:
         name: X86_64
         path: ${{ github.workspace }}/V2rayNG/app/build/outputs/apk/release/*x86_64.apk
 
     - name: universal
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v5
       if: github.event.inputs.release_tag == ''
       with:
         name: Universal
