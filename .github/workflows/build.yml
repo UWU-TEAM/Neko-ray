@@ -39,7 +39,7 @@ jobs:
 
     - name: Restore cached libtun2socks
       id: cache-libtun2socks-restore
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v5
       with:
         path: ${{ github.workspace }}/libs
         key: libtun2socks-${{ runner.os }}-${{ env.NDK_HOME }}-${{ hashFiles('.git/modules/badvpn/HEAD') }}-${{ hashFiles('.git/modules/libancillary/HEAD') }}
@@ -51,7 +51,7 @@ jobs:
 
     - name: Save libtun2socks
       if: steps.cache-libtun2socks-restore.outputs.cache-hit != 'true'
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v5
       with:
         path: ${{ github.workspace }}/libs
         key: libtun2socks-${{ runner.os }}-${{ env.NDK_HOME }}-${{ hashFiles('.git/modules/badvpn/HEAD') }}-${{ hashFiles('.git/modules/libancillary/HEAD') }}
@@ -78,7 +78,7 @@ jobs:
 
     - name: Restore cached libhysteria2
       id: cache-libhysteria2-restore
-      uses: actions/cache/restore@v4
+      uses: actions/cache/restore@v5
       with:
         path: ${{ github.workspace }}/hysteria/libs
         key: libhysteria2-${{ runner.os }}-${{ env.NDK_HOME }}-${{ hashFiles('.git/modules/hysteria/HEAD') }}-${{ hashFiles('libhysteria2.sh') }}
@@ -97,7 +97,7 @@ jobs:
 
     - name: Save libhysteria2
       if: steps.cache-libhysteria2-restore.outputs.cache-hit != 'true'
-      uses: actions/cache/save@v4
+      uses: actions/cache/save@v5
       with:
         path: ${{ github.workspace }}/hysteria/libs
         key: libhysteria2-${{ runner.os }}-${{ env.NDK_HOME }}-${{ hashFiles('.git/modules/hysteria/HEAD') }}-${{ hashFiles('libhysteria2.sh') }}
